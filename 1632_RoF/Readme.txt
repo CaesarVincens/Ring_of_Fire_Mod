@@ -11,10 +11,11 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 Currently in Early Alpha; expect to find bugs and oddities
 
-Alpha 0.1.0 - Oct. ,2017
+Alpha 0.1.0 - Oct. 10, 2017
 Added Mercenary Infantry and Cavalry, which take 1/10 manpower and 10X infantry equipment, also slightly worse than regulars
 Adjusted dates to 1631 start date; technology dates adjusted to match for now.
 Some events added for NUS
+Fix missing and misplaced countries
 
 Alpha 0.0.3 - Oct. 7, 2017
 First portraits, taken from historical paintings
