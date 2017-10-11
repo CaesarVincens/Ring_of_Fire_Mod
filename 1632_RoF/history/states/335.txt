@@ -1,0 +1,28 @@
+state={
+	id=335
+	name= "STATE_335"
+	manpower = 513096
+
+	resources={
+		aluminium = 4
+		oil = 19
+		steel = 6
+	}
+	state_category = large_town
+
+	history={
+		owner = PER
+		victory_points = { 8117 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = PER
+	}
+
+	provinces={
+		1986 2039 4966 5089 8117 10881 10913 11249 12780 12809 12863 12895 
+	}
+}

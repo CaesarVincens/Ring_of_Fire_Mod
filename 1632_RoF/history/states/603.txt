@@ -1,0 +1,27 @@
+state={
+	id=603
+	name= "STATE_603"
+	manpower = 936400
+
+	resources={
+		chromium = 160
+		steel = 4
+	}
+	state_category = rural
+
+	history={
+		owner = NSP
+		victory_points = { 7622 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NSP
+	}
+
+	provinces={
+		1550 4476 4600 7451 7546 7590 7622 10374 10498 12347 
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=293
+	name= "STATE_293"
+	manpower = 800000
+
+	resources={
+		aluminium = 1
+		tungsten = 6
+	}
+	state_category = pastoral
+
+	history={
+		owner = MUG
+		victory_points = { 4072 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MUG
+	}
+
+	provinces={
+		4072 7177 10019 
+	}
+}

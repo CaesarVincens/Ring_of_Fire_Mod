@@ -1,0 +1,23 @@
+state={
+	id=522
+	name= "STATE_522"
+	manpower = 951400
+
+	state_category = large_town
+
+	history={
+		owner = TUR
+		victory_points = { 7140 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = TUR
+	}
+
+	provinces={
+		901 1088 1549 1578 1606 1634 3942 6883 7140 7671 10087 10882 12029 12473 
+	}
+}

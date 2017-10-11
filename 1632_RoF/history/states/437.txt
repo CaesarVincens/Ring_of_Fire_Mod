@@ -1,0 +1,28 @@
+state={
+	id=437
+	name= "STATE_437"
+	manpower = 1274800
+
+	resources={
+		aluminium = 69
+		steel = 2
+		tungsten = 3
+	}
+	state_category = large_town
+
+	history={
+		owner = SPR
+		victory_points = { 758 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		729 758 3729 3744 3761 6734 6749 6764 6955 9686 9689 9699 9703 9719 11675 11677 11684 11688 11692 11707 11710 
+	}
+}

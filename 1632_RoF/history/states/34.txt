@@ -1,0 +1,29 @@
+state={
+	id=34
+	name= "STATE_34"
+	manpower = 1248000
+
+	resources={
+		aluminium = 0
+		rubber = 0
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = BEN
+		victory_points = { 10831 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BEN
+		add_core_of = NUP
+	}
+
+	provinces={
+		10831 
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=597
+	name= "STATE_597"
+	manpower = 627440
+
+	state_category = pastoral
+
+	history={
+		owner = NSP
+		victory_points = { 12753 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NSP
+	}
+
+	provinces={
+		1900 2021 4904 4965 12715 12753 12867 
+	}
+}

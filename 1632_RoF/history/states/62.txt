@@ -1,0 +1,26 @@
+state={
+	id=62
+	name= "STATE_62"
+	manpower = 686400
+
+	resources={
+		steel = 1
+	}
+	state_category = pastoral
+
+	history={
+		owner = BUR
+		victory_points = { 12335 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BUR
+	}
+
+	provinces={
+		1082 1197 1934 4087 4318 4425 4588 4996 7469 8063 10486 10920 12335 12464 12492 
+	}
+}

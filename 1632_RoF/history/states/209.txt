@@ -1,0 +1,23 @@
+state={
+	id=209
+	name= "STATE_209"
+	manpower = 120000
+
+	state_category = rural
+
+	history={
+		owner = KNI
+		victory_points = { 12003 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KNI
+	}
+
+	provinces={
+		12003 
+	}
+}

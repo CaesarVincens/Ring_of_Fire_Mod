@@ -1,0 +1,28 @@
+state={
+	id=122
+	name= "STATE_122"
+	manpower = 1393000
+
+	resources={
+		aluminium = 4
+		steel = 2
+	}
+	state_category = town
+
+	history={
+		owner = ENG
+		victory_points = { 11293 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = IRE
+		add_core_of = ENG
+	}
+
+	provinces={
+		303 369 3342 3359 11293 11303 
+	}
+}

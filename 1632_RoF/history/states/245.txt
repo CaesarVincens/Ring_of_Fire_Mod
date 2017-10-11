@@ -1,0 +1,28 @@
+state={
+	id=245
+	name= "STATE_245"
+	manpower = 785100
+
+	resources={
+		rubber = 15
+		steel = 2
+		tungsten = 2
+	}
+	state_category = pastoral
+
+	history={
+		owner = LXA
+		victory_points = { 12402 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = LXA
+	}
+
+	provinces={
+		1535 1548 4511 7516 7601 10384 12360 12402 12417 12431 
+	}
+}

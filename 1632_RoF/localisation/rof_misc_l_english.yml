@@ -1,0 +1,7 @@
+l_english:
+ RING_OF_FIRE_NAME:0 "The Ring of Fire"
+ RING_OF_FIRE_DESC:0 "A supernatural event has brought a West Virgina mining town from the year 2000 to central Germany in the year 1631. The arrival of these time-displaced Americans, along with their knowledge and technology has changed the course of history. The Wars of Religion have been ongoing for 15 years and the recent entry of Sweden has invigorated the Protestants. Into this cauldron, come an unlikely set of folk, who may just up-end the entire system."
+ mercenary:0 "Mercenary Infantry"
+ mercenary_desc:0 "Fights for gold. Don't rely on them too much."
+ merc_cavalry:0 "Mercenary Cavalry"
+ merc_cavalry_desc:0 "Horse mounted mercenaries. More expensive, but with good mobility. Don't rely on them too much."

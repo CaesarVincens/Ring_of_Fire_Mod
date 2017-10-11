@@ -1,0 +1,28 @@
+state={
+	id=275
+	name= "STATE_275"
+	manpower = 5283000
+
+	resources={
+		oil = 10
+		rubber = 155
+		steel = 3
+	}
+	state_category = large_town
+
+	history={
+		owner = MAT
+		victory_points = { 4434 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = MAT
+	}
+
+	provinces={
+		1209 1386 1413 4306 4390 4434 4608 7223 7642 7654 10135 10479 10491 12277 12293 12472 
+	}
+}

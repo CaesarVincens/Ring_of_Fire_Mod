@@ -1,0 +1,27 @@
+state={
+	id=506
+	name= "STATE_506"
+	manpower = 388000
+
+	resources={
+		chromium = 6
+		steel = 7
+	}
+	state_category = rural
+
+	history={
+		owner = TUR
+		victory_points = { 841 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = TUR
+	}
+
+	provinces={
+		841 936 966 3844 3980 9837 
+	}
+}

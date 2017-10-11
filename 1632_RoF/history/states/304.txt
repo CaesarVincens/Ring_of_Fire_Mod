@@ -1,0 +1,26 @@
+state={
+	id=304
+	name= "STATE_304"
+	manpower = 40000
+
+	resources={
+		rubber = 0
+	}
+	state_category = rural
+
+	history={
+		owner = NUB
+		victory_points = { 12881 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NUB
+	}
+
+	provinces={
+		4963 12796 12826 12881 
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=159
+	name= "STATE_159"
+	manpower = 164000
+
+	resources={
+		oil = 4
+	}
+	state_category = rural
+
+	history={
+		owner = GEO
+		victory_points = { 3668 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = GEO
+	}
+
+	provinces={
+		3668 7554 9645 
+	}
+}

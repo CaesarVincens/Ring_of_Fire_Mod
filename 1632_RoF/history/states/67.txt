@@ -1,0 +1,26 @@
+state={
+	id=67
+	name= "STATE_67"
+	manpower = 116000
+
+	resources={
+		steel = 31
+	}
+	state_category = rural
+
+	history={
+		owner = CHE
+		victory_points = { 913 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CHE
+	}
+
+	provinces={
+		913 7791 8014 10657 
+	}
+}

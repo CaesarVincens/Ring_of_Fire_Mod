@@ -1,0 +1,26 @@
+state={
+	id=439
+	name= "STATE_439"
+	manpower = 580000
+
+	resources={
+		tungsten = 30
+	}
+	state_category = large_town
+
+	history={
+		owner = SPR
+		victory_points = { 6954 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		931 985 6866 6902 6954 9770 9839 9877 9917 9925 11756 11780 11798 11851 
+	}
+}

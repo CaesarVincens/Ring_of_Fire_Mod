@@ -1,0 +1,27 @@
+state={
+	id=488
+	name= "STATE_488"
+	manpower = 476408
+
+	resources={
+		aluminium = 1
+		rubber = 2
+	}
+	state_category = rural
+
+	history={
+		owner = TVC
+		victory_points = { 1321 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = TVC
+	}
+
+	provinces={
+		1321 
+	}
+}

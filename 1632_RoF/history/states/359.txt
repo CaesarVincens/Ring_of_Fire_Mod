@@ -1,0 +1,29 @@
+state={
+	id=359
+	name= "STATE_359"
+	manpower = 2922808
+
+	resources={
+		aluminium = 2
+		tungsten = 4
+	}
+	state_category = town
+
+	history={
+		owner = POR
+		victory_points = { 1349 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 0
+		}
+		add_core_of = VIJ
+		add_core_of = AMD
+		add_core_of = BIJ
+	}
+
+	provinces={
+		1273 1349 7013 
+	}
+}

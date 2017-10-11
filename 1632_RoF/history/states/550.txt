@@ -1,0 +1,27 @@
+state={
+	id=550
+	name= "STATE_550"
+	manpower = 108000
+
+	resources={
+		rubber = 1
+	}
+	state_category = rural
+
+	history={
+		owner = TUR
+		victory_points = { 1977 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NUB
+		add_core_of = TUR
+	}
+
+	provinces={
+		1977 2003 12725 
+	}
+}

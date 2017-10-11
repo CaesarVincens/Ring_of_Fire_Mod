@@ -1,0 +1,23 @@
+state={
+	id=154
+	name= "STATE_154"
+	manpower = 66244
+
+	state_category = large_town
+
+	history={
+		owner = FRK
+		victory_points = { 6488 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = FRK
+	}
+
+	provinces={
+		6488 
+	}
+}

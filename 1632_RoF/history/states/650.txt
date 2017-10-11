@@ -1,0 +1,28 @@
+state={
+	id=650
+	name= "STATE_650"
+	manpower = 64000
+
+	resources={
+		aluminium = 2
+		rubber = 0
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 10812 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = SON
+		add_core_of = MAC
+	}
+
+	provinces={
+		10771 10812 
+	}
+}

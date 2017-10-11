@@ -1,0 +1,28 @@
+
+state={
+	id=227
+	name="STATE_227"
+
+	history={
+		owner = LAU
+		victory_points = {
+			9320 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = LAU
+
+	}
+
+	provinces={
+		9320 
+	}
+	manpower=148600
+	buildings_max_level_factor=1.000
+	state_category=town
+}

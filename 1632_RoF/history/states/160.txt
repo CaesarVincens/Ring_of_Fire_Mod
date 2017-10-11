@@ -1,0 +1,27 @@
+state={
+	id=160
+	name= "STATE_160"
+	manpower = 648600
+
+	resources={
+		chromium = 39
+	}
+	state_category = rural
+
+	history={
+		owner = GEO
+		victory_points = { 11664 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = GEO
+		add_core_of = PER
+	}
+
+	provinces={
+		654 666 672 685 772 1455 1530 1599 3656 3658 3667 3698 4534 6436 6669 6671 6674 6692 6721 9626 9632 9649 9663 9674 9702 11599 11609 11614 11617 11647 11664 12441 
+	}
+}

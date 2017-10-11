@@ -1,0 +1,31 @@
+state={
+	id=157
+	name= "STATE_157"
+	manpower = 248000
+
+	resources={
+		aluminium = 3
+		rubber = 1
+		steel = 1
+	}
+	state_category = rural
+
+	history={
+		owner = FUL
+		victory_points = { 2012 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MLI
+		add_core_of = SON
+		add_core_of = MAC
+		add_core_of = FUL
+	}
+
+	provinces={
+		2012 10829 10915 
+	}
+}

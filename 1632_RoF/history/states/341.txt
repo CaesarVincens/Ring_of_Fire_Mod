@@ -1,0 +1,26 @@
+state={
+	id=341
+	name= "STATE_341"
+	manpower = 500000
+
+	resources={
+		steel = 1
+	}
+	state_category = pastoral
+
+	history={
+		owner = POL
+		victory_points = { 9275 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		265 310 3194 3255 3296 3319 3525 6222 6322 6342 6459 9262 9275 11246 11358 
+	}
+}

@@ -1,0 +1,28 @@
+state={
+	id=450
+	name= "STATE_450"
+	manpower = 3838736
+
+	resources={
+		aluminium = 10
+		steel = 14
+	}
+	state_category = city
+
+	history={
+		owner = SPR
+		victory_points = { 819 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			dockyard = 1
+			air_base = 0
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		819 851 923 955 3901 3958 3968 6972 9826 9856 9990 10027 11846 12066 12098 
+	}
+}

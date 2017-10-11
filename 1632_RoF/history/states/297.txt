@@ -1,0 +1,26 @@
+state={
+	id=297
+	name= "STATE_297"
+	manpower = 200000
+
+	resources={
+		steel = 6
+	}
+	state_category = town
+
+	history={
+		owner = NAS
+		victory_points = { 529 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = NAS
+	}
+
+	provinces={
+		529 
+	}
+}

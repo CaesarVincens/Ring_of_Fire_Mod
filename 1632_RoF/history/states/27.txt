@@ -1,0 +1,29 @@
+state={
+	id=27
+	name= "STATE_27"
+	manpower = 1210000
+
+	resources={
+		aluminium = 4
+		oil = 9
+		rubber = 83
+		steel = 2
+	}
+	state_category = rural
+
+	history={
+		owner = BAN
+		victory_points = { 1342 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BAN
+	}
+
+	provinces={
+		1246 1274 1313 1342 1401 4276 4320 4361 7308 7440 10150 10322 12138 12165 12209 12268 12296 
+	}
+}

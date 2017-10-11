@@ -1,0 +1,32 @@
+
+state={
+	id=390
+	name="STATE_390"
+	resources={
+		steel=8.000
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			11282 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 0
+
+		}
+		add_core_of = POL
+		add_core_of = SOV
+
+	}
+
+	provinces={
+		246 274 288 315 335 343 352 366 371 382 398 401 3226 3263 3279 3306 3308 3327 3335 3345 3358 3364 3377 3390 3391 6252 6305 6330 6365 6386 6411 9261 9272 9301 9302 9318 9382 9399 11229 11235 11254 11282 11284 11298 11300 11325 11369 11384 
+	}
+	manpower=3144908
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,28 @@
+state={
+	id=294
+	name= "STATE_294"
+	manpower = 2116000
+
+	resources={
+		aluminium = 0
+		rubber = 6
+	}
+	state_category = town
+
+	history={
+		owner = MYS
+		victory_points = { 10808 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MAD
+		add_core_of = MYS
+	}
+
+	provinces={
+		7363 8067 10130 10274 10808 12275 
+	}
+}

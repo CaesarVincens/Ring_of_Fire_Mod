@@ -1,0 +1,27 @@
+state={
+	id=433
+	name= "STATE_433"
+	manpower = 352400
+
+	resources={
+		aluminium = 4
+		rubber = 2
+		steel = 2
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 2068 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = SON
+	}
+
+	provinces={
+		1975 2056 2068 5101 8028 12707 
+	}
+}

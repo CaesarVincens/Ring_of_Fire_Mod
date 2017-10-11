@@ -1,0 +1,26 @@
+state={
+	id=213
+	name= "STATE_213"
+	manpower = 1255000
+
+	resources={
+		steel = 6
+	}
+	state_category = large_town
+
+	history={
+		owner = COL
+		victory_points = { 11346 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = COL
+	}
+
+	provinces={
+		405 495 3355 3398 3512 6535 6622 9509 11346 
+	}
+}

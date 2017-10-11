@@ -1,0 +1,52 @@
+﻿capital = 265
+
+oob = "MDA_OOB"
+
+# Starting tech
+set_technology = {
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+if = {
+    limit = {has_dlc = "Together for Victory" }
+
+    add_to_tech_sharing_group = TUR_research
+}
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 89
+        }
+        democratic = {
+            popularity = 9
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	}
+set_national_unity = 0.7222
+create_country_leader = {
+    name = "Eugen Cihoski"
+    desc = "POLITICS_EUGEN_CIHOSKI_DESC"
+    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

@@ -1,0 +1,27 @@
+state={
+	id=138
+	name= "STATE_138"
+	manpower = 576400
+
+	resources={
+		aluminium = 2
+	}
+	state_category = large_town
+
+	history={
+		owner = FRA
+		victory_points = { 3546 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = FRA
+		add_core_of = LOR
+	}
+
+	provinces={
+		680 3546 3560 5291 6531 6545 9505 
+	}
+}

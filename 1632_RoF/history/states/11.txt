@@ -1,0 +1,26 @@
+state={
+	id=11
+	name= "STATE_11"
+	manpower = 120000
+
+	resources={
+		aluminium = 1
+		rubber = 0
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 12785 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = ASH
+	}
+
+	provinces={
+		12785 
+	}
+}

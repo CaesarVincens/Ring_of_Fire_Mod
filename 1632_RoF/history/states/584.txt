@@ -1,0 +1,36 @@
+
+state={
+	id=584
+	name="STATE_584"
+	resources={
+		aluminium=1.000
+		steel=9.000
+	}
+
+	history={
+		owner = C13
+		victory_points = {
+			12459 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			3732 = {
+				naval_base = 2
+
+			}
+			air_base = 5
+
+		}
+		add_core_of = C13
+
+	}
+
+	provinces={
+		1338 1619 3712 3732 7462 12459 
+	}
+	manpower=750052
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

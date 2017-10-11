@@ -1,0 +1,26 @@
+state={
+	id=22
+	name= "STATE_22"
+	manpower = 474100
+
+	state_category = rural
+
+	history={
+		owner = AUS
+		victory_points = { 6626 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CRO
+		add_core_of = SVN
+		add_core_of = VEN
+		add_core_of = AUS
+	}
+
+	provinces={
+		599 6626 11595 
+	}
+}

@@ -1,0 +1,11 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_report_event_scottish_mercenaries"
+		texturefile = "gfx/event_pictures/report_event_scots_merc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_scottish_mercenaries"
+		texturefile = "gfx/event_pictures/news_event_scots_merc.dds"
+	}

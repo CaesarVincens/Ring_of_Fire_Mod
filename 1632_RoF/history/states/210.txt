@@ -1,0 +1,27 @@
+state={
+	id=210
+	name= "STATE_210"
+	manpower = 808800
+
+	resources={
+		aluminium = 1
+		rubber = 2
+	}
+	state_category = rural
+
+	history={
+		owner = KOC
+		victory_points = { 1238 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KOC
+	}
+
+	provinces={
+		1238 
+	}
+}

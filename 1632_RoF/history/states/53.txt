@@ -1,0 +1,23 @@
+state={
+	id=53
+	name= "STATE_53"
+	manpower = 80000
+
+	state_category = rural
+
+	history={
+		owner = BRU
+		victory_points = { 4429 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BRU
+	}
+
+	provinces={
+		4429 7419 10145 
+	}
+}

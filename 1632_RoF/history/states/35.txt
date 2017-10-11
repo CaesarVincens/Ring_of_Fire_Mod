@@ -1,0 +1,26 @@
+state={
+	id=35
+	name= "STATE_35"
+	manpower = 784400
+
+	resources={
+		chromium = 1
+	}
+	state_category = pastoral
+
+	history={
+		owner = BIJ
+		victory_points = { 5104 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BIJ
+	}
+
+	provinces={
+		5104 10324 12226 
+	}
+}

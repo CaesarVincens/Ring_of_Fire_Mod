@@ -1,0 +1,32 @@
+
+state={
+	id=322
+	name="STATE_322"
+	resources={
+		aluminium=30.000
+	}
+
+	history={
+		owner = VAT
+		victory_points = {
+			958 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = FRA
+		add_core_of = VAT
+
+	}
+
+	provinces={
+		958 
+	}
+	manpower=222000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,28 @@
+state={
+	id=333
+	name= "STATE_333"
+	manpower = 700808
+
+	resources={
+		aluminium = 8
+		oil = 16
+		steel = 8
+	}
+	state_category = rural
+
+	history={
+		owner = PER
+		victory_points = { 12756 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = PER
+	}
+
+	provinces={
+		1963 1982 2026 2065 4928 4983 5067 8031 8074 10828 12756 
+	}
+}

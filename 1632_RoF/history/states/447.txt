@@ -1,0 +1,30 @@
+state={
+	id=447
+	name= "STATE_447"
+	manpower = 528000
+
+	resources={
+		aluminium = 9
+		chromium = 1
+		steel = 14
+		tungsten = 0
+	}
+	state_category = pastoral
+
+	history={
+		owner = SPR
+		victory_points = { 11570 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPR
+		add_core_of = MLO
+	}
+
+	provinces={
+		771 3782 9741 11570 11723 11730 
+	}
+}

@@ -1,0 +1,29 @@
+state={
+	id=14
+	name= "STATE_14"
+	manpower = 397600
+
+	resources={
+		aluminium = 1
+		oil = 4
+		rubber = 58
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = ATJ
+		victory_points = { 10194 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = ATJ
+	}
+
+	provinces={
+		1277 1533 7327 7368 7463 10194 10354 10382 12168 12181 12302 12415 
+	}
+}

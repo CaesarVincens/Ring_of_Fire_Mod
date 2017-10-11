@@ -1,0 +1,33 @@
+
+state={
+	id=586
+	name="STATE_586"
+	resources={
+		aluminium=6.000
+		rubber=2.000
+		steel=6.000
+	}
+
+	history={
+		owner = BRZ
+		victory_points = {
+			5107 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = BRZ
+
+	}
+
+	provinces={
+		2132 2175 2178 2228 5107 8179 10933 
+	}
+	manpower=472000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

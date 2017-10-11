@@ -1,0 +1,27 @@
+state={
+	id=320
+	name= "STATE_320"
+	manpower = 557600
+
+	resources={
+		aluminium = 8
+		steel = 34
+	}
+	state_category = town
+
+	history={
+		owner = PAL
+		victory_points = { 3558 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = PAL
+	}
+
+	provinces={
+		563 3558 11547 
+	}
+}

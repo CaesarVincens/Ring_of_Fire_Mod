@@ -1,0 +1,27 @@
+state={
+	id=318
+	name= "STATE_318"
+	manpower = 304800
+
+	resources={
+		aluminium = 0
+		rubber = 0
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 12817 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = OYO
+	}
+
+	provinces={
+		12817 
+	}
+}

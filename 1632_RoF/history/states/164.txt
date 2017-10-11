@@ -1,0 +1,29 @@
+state={
+	id=164
+	name= "STATE_164"
+	manpower = 984000
+
+	resources={
+		aluminium = 5
+		chromium = 0
+		steel = 7
+		tungsten = 0
+	}
+	state_category = town
+
+	history={
+		owner = GEN
+		victory_points = { 6788 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = GEN
+	}
+
+	provinces={
+		3772 6788 11891 
+	}
+}

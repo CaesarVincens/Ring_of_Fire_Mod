@@ -1,0 +1,23 @@
+state={
+	id=296
+	name= "STATE_296"
+	manpower = 402400
+
+	state_category = large_town
+
+	history={
+		owner = NAS
+		victory_points = { 6444 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NAS
+	}
+
+	provinces={
+		6444 9486 
+	}
+}

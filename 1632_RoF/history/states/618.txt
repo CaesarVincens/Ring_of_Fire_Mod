@@ -1,0 +1,27 @@
+state={
+	id=618
+	name= "STATE_618"
+	manpower = 844048
+
+	resources={
+		oil = 2
+		rubber = 12
+	}
+	state_category = pastoral
+
+	history={
+		owner = SPU
+		victory_points = { 12798 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPU
+	}
+
+	provinces={
+		5051 5120 8047 8075 8252 10888 11020 12798 
+	}
+}

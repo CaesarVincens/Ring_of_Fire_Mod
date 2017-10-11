@@ -1,0 +1,27 @@
+state={
+	id=295
+	name= "STATE_295"
+	manpower = 872000
+
+	resources={
+		chromium = 3
+		tungsten = 17
+	}
+	state_category = rural
+
+	history={
+		owner = MYS
+		victory_points = { 4315 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = MYS
+	}
+
+	provinces={
+		4315 4344 12146 
+	}
+}

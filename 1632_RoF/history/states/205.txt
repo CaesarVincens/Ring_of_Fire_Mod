@@ -1,0 +1,28 @@
+state={
+	id=205
+	name= "STATE_205"
+	manpower = 1553600
+
+	resources={
+		chromium = 8
+		tungsten = 45
+	}
+	state_category = rural
+
+	history={
+		owner = KEL
+		victory_points = { 1412 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = VIJ
+		add_core_of = KEL
+	}
+
+	provinces={
+		1412 5032 7244 7391 7395 8100 10190 10208 
+	}
+}

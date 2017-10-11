@@ -1,0 +1,33 @@
+
+state={
+	id=305
+	name="STATE_305"
+	resources={
+		chromium=2.000
+		oil=1.000
+		steel=0.000
+	}
+
+	history={
+		owner = NUB
+		victory_points = {
+			10900 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = NUB
+
+	}
+
+	provinces={
+		2016 4961 8084 10827 10900 12836 
+	}
+	manpower=360416
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

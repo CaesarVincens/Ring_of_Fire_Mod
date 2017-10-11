@@ -1,0 +1,30 @@
+state={
+	id=428
+	name= "STATE_428"
+	manpower = 2376208
+
+	resources={
+		aluminium = 58
+		oil = 1
+		steel = 172
+	}
+	state_category = town
+
+	history={
+		owner = SIL
+		victory_points = { 6464 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = POL
+		add_core_of = SIL
+		add_core_of = AUS
+	}
+
+	provinces={
+		479 552 3283 3438 3485 3510 3545 6462 6464 6512 6534 6595 9457 9470 9511 9570 11467 11517 
+	}
+}

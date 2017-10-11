@@ -1,0 +1,26 @@
+state={
+	id=32
+	name= "STATE_32"
+	manpower = 88400
+
+	resources={
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = BAL
+		victory_points = { 5075 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BAL
+	}
+
+	provinces={
+		5075 8013 12761 
+	}
+}

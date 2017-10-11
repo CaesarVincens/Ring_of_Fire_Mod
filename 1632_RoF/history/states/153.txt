@@ -1,0 +1,25 @@
+state={
+	id=153
+	name= "STATE_153"
+	manpower = 17000
+
+	resources={
+		aluminium = 52
+	}
+	state_category = rural
+
+	history={
+		owner = FRA
+		victory_points = { 12885 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+	}
+
+	provinces={
+		12885 
+	}
+}

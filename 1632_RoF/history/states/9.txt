@@ -1,0 +1,31 @@
+
+state={
+	id=9
+	name="STATE_9"
+	resources={
+		aluminium=2.000
+	}
+
+	history={
+		owner = ANS
+		victory_points = {
+			9545 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = ANS
+
+	}
+
+	provinces={
+		6555 9545 11529 
+	}
+	manpower=344000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

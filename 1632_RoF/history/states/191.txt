@@ -1,0 +1,26 @@
+state={
+	id=191
+	name= "STATE_191"
+	manpower = 617200
+
+	resources={
+		oil = 3
+	}
+	state_category = rural
+
+	history={
+		owner = KAC
+		victory_points = { 10090 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KAC
+	}
+
+	provinces={
+		1553 1581 10090 10514 
+	}
+}

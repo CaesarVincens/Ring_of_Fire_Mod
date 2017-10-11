@@ -1,0 +1,25 @@
+state={
+	id=176
+	name= "STATE_176"
+	manpower = 52000
+
+	state_category = rural
+
+	history={
+		owner = HUN
+		victory_points = { 11564 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CRO
+		add_core_of = HUN
+		add_core_of = VEN
+	}
+
+	provinces={
+		11564 
+	}
+}

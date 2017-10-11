@@ -1,0 +1,28 @@
+
+state={
+	id=306
+	name="STATE_306"
+
+	history={
+		owner = NUR
+		victory_points = {
+			11544 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = NUR
+
+	}
+
+	provinces={
+		11544 
+	}
+	manpower=903800
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,23 @@
+state={
+	id=463
+	name= "STATE_463"
+	manpower = 464400
+
+	state_category = rural
+
+	history={
+		owner = KEN
+		victory_points = { 2196 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = KEN
+	}
+
+	provinces={
+		2196 8183 
+	}
+}

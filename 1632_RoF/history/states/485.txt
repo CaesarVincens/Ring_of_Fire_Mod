@@ -1,0 +1,26 @@
+state={
+	id=485
+	name= "STATE_485"
+	manpower = 292400
+
+	resources={
+		rubber = 10
+	}
+	state_category = rural
+
+	history={
+		owner = TAN
+		victory_points = { 1419 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = TAN
+	}
+
+	provinces={
+		1289 1351 1419 7311 7413 10141 10153 10169 10197 
+	}
+}

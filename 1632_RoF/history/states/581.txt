@@ -1,0 +1,27 @@
+state={
+	id=581
+	name= "STATE_581"
+	manpower = 968000
+
+	resources={
+		aluminium = 0
+	}
+	state_category = large_town
+
+	history={
+		owner = WRT
+		victory_points = { 9517 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = WRT
+		add_core_of = AUS
+	}
+
+	provinces={
+		9517 11486 11499 
+	}
+}

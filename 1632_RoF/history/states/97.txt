@@ -1,0 +1,23 @@
+state={
+	id=97
+	name= "STATE_97"
+	manpower = 548000
+
+	state_category = rural
+
+	history={
+		owner = CNT
+		victory_points = { 9303 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = CNT
+	}
+
+	provinces={
+		3396 9303 9369 11287 
+	}
+}

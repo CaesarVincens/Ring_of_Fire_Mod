@@ -1,0 +1,31 @@
+state={
+	id=186
+	name= "STATE_186"
+	manpower = 408400
+
+	resources={
+		aluminium = 3
+		rubber = 1
+		steel = 1
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 7930 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = MLI
+		add_core_of = SON
+		add_core_of = MAC
+		add_core_of = JEN
+		add_core_of = MSS
+	}
+
+	provinces={
+		4927 7930 7954 
+	}
+}

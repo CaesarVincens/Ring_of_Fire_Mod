@@ -1,0 +1,26 @@
+state={
+	id=323
+	name= "STATE_323"
+	manpower = 843600
+
+	resources={
+		aluminium = 9
+	}
+	state_category = pastoral
+
+	history={
+		owner = VAT
+		victory_points = { 6606 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = VAT
+	}
+
+	provinces={
+		782 6606 6793 6985 9924 11734 
+	}
+}

@@ -1,0 +1,25 @@
+state={
+	id=427
+	name= "STATE_427"
+	manpower = 856032
+
+	state_category = pastoral
+
+	history={
+		owner = TRA
+		victory_points = { 11536 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = HUN
+		add_core_of = SLO
+		add_core_of = TRA
+	}
+
+	provinces={
+		3548 6571 9563 11536 11691 
+	}
+}

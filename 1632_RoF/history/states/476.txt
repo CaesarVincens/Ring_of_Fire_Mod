@@ -1,0 +1,27 @@
+state={
+	id=476
+	name= "STATE_476"
+	manpower = 756408
+
+	resources={
+		aluminium = 16
+		steel = 72
+	}
+	state_category = large_town
+
+	history={
+		owner = TRI
+		victory_points = { 11435 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = TRI
+	}
+
+	provinces={
+		3423 3547 9575 11435 11470 11494 11531 
+	}
+}

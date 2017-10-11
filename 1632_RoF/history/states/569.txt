@@ -1,0 +1,23 @@
+state={
+	id=569
+	name= "STATE_569"
+	manpower = 194000
+
+	state_category = rural
+
+	history={
+		owner = VEN
+		victory_points = { 11735 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = VEN
+	}
+
+	provinces={
+		11735 
+	}
+}

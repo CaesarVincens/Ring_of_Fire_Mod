@@ -1,0 +1,26 @@
+state={
+	id=56
+	name= "STATE_56"
+	manpower = 824600
+
+	resources={
+		chromium = 17
+	}
+	state_category = pastoral
+
+	history={
+		owner = BUK
+		victory_points = { 7682 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BUK
+	}
+
+	provinces={
+		756 1573 1632 4629 7639 7682 7775 9605 10671 12722 
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=600
+	name= "STATE_600"
+	manpower = 776200
+
+	resources={
+		chromium = 2
+	}
+	state_category = pastoral
+
+	history={
+		owner = NSP
+		victory_points = { 12865 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NSP
+	}
+
+	provinces={
+		2031 8017 12823 12865 13093 
+	}
+}

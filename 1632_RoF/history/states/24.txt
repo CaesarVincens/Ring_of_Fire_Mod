@@ -1,0 +1,26 @@
+state={
+	id=24
+	name= "STATE_24"
+	manpower = 16400
+
+	resources={
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 10868 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SON
+		add_core_of = AIR
+	}
+
+	provinces={
+		10868 
+	}
+}

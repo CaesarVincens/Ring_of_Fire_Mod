@@ -1,0 +1,27 @@
+state={
+	id=337
+	name= "STATE_337"
+	manpower = 601096
+
+	resources={
+		aluminium = 4
+		chromium = 21
+	}
+	state_category = pastoral
+
+	history={
+		owner = PER
+		victory_points = { 12739 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = PER
+	}
+
+	provinces={
+		1521 1888 1957 2000 5029 5073 7573 7990 8009 10351 10759 10806 10873 10890 11671 12739 12748 12852 
+	}
+}

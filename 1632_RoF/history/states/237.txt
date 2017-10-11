@@ -1,0 +1,27 @@
+state={
+	id=237
+	name= "STATE_237"
+	manpower = 88400
+
+	resources={
+		aluminium = 1
+		rubber = 1
+	}
+	state_category = rural
+
+	history={
+		owner = LNG
+		victory_points = { 8193 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = LNG
+	}
+
+	provinces={
+		2192 8193 12975 
+	}
+}

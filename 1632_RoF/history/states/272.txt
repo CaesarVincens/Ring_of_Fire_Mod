@@ -1,0 +1,26 @@
+state={
+	id=272
+	name= "STATE_272"
+	manpower = 329196
+
+	resources={
+		rubber = 0
+	}
+	state_category = rural
+
+	history={
+		owner = MRH
+		victory_points = { 12812 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MRH
+	}
+
+	provinces={
+		12757 12812 
+	}
+}

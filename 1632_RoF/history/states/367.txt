@@ -1,0 +1,31 @@
+
+state={
+	id=367
+	name="STATE_367"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = POR
+		victory_points = {
+			8248 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = NDG
+
+	}
+
+	provinces={
+		5158 8248 
+	}
+	manpower=176760
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

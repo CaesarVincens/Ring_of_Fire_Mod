@@ -1,0 +1,26 @@
+state={
+	id=203
+	name= "STATE_203"
+	manpower = 107996
+
+	resources={
+		rubber = 3
+		tungsten = 2
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 12795 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KIK
+	}
+
+	provinces={
+		1516 1968 12795 
+	}
+}

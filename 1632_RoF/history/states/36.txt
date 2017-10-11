@@ -1,0 +1,31 @@
+state={
+	id=36
+	name= "STATE_36"
+	manpower = 3171008
+
+	resources={
+		aluminium = 1
+		chromium = 10
+		tungsten = 65
+	}
+	state_category = city
+
+	history={
+		owner = BIJ
+		victory_points = { 1359 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = POR
+		add_core_of = VIJ
+		add_core_of = BIJ
+		add_core_of = KEL
+	}
+
+	provinces={
+		1359 4278 4291 4353 4395 5063 7232 7250 7411 10210 10259 10270 10799 12105 12142 12182 12208 12269 12295 
+	}
+}

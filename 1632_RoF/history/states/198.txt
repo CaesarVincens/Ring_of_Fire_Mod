@@ -1,0 +1,27 @@
+state={
+	id=198
+	name= "STATE_198"
+	manpower = 636000
+
+	resources={
+		aluminium = 0
+		rubber = 2
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 4997 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KAN
+	}
+
+	provinces={
+		4997 5028 
+	}
+}

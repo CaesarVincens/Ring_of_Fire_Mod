@@ -1,0 +1,31 @@
+
+state={
+	id=543
+	name="STATE_543"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = TUR
+		victory_points = {
+			9992 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = TUR
+
+	}
+
+	provinces={
+		1127 1130 1198 1204 4047 4057 4120 4136 4151 4200 7076 7082 7136 8069 9992 10046 10117 10120 10123 11954 12088 12094 13073 
+	}
+	manpower=427740
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

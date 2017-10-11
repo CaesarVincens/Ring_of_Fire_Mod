@@ -1,0 +1,10 @@
+on_actions = {
+	#Not run on a specific country.
+	on_startup = {
+		effect = {
+			NUS = {
+				country_event = { id = RoF.000 }
+			}
+		}
+	}
+}

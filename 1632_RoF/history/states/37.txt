@@ -1,0 +1,24 @@
+state={
+	id=37
+	name= "STATE_37"
+	manpower = 5719212
+
+	state_category = metropolis
+
+	history={
+		owner = BOH
+		victory_points = { 11542 4 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 0
+		}
+		add_core_of = BOH
+		add_core_of = AUS
+	}
+
+	provinces={
+		424 445 469 494 543 583 3418 3462 3585 5283 6418 6440 6470 6592 7857 9414 9421 9429 9541 9555 9569 11401 11414 11432 11525 11542 11556 
+	}
+}

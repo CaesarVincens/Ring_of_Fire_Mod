@@ -1,0 +1,31 @@
+
+state={
+	id=348
+	name="STATE_348"
+	resources={
+		steel=22.000
+	}
+
+	history={
+		owner = POL
+		victory_points = {
+			493 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		493 506 562 584 3458 3497 3586 6416 9439 9508 9546 11428 11430 11532 11558 
+	}
+	manpower=1825112
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

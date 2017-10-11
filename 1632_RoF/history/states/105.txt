@@ -1,0 +1,27 @@
+state={
+	id=105
+	name= "STATE_105"
+	manpower = 546800
+
+	resources={
+		aluminium = 16
+		chromium = 2
+	}
+	state_category = pastoral
+
+	history={
+		owner = DEN
+		victory_points = { 3090 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = DEN
+	}
+
+	provinces={
+		14 53 65 100 122 137 199 3049 3059 3090 3094 3114 3129 3188 3192 6072 6080 6145 6151 6176 6184 6216 9036 9047 9096 9170 9174 9196 9204 9296 11029 11101 11176 11198 11367 
+	}
+}

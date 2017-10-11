@@ -1,0 +1,28 @@
+state={
+	id=558
+	name= "STATE_558"
+	manpower = 1372400
+
+	resources={
+		aluminium = 0
+		rubber = 1
+	}
+	state_category = rural
+
+	history={
+		owner = UPS
+		victory_points = { 7447 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = VIJ
+		add_core_of = KEL
+	}
+
+	provinces={
+		7447 
+	}
+}

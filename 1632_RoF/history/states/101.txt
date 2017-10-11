@@ -1,0 +1,27 @@
+state={
+	id=101
+	name= "STATE_101"
+	manpower = 164400
+
+	resources={
+		chromium = 2
+		oil = 0
+	}
+	state_category = rural
+
+	history={
+		owner = DAR
+		victory_points = { 10739 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = DAR
+	}
+
+	provinces={
+		8052 10739 
+	}
+}

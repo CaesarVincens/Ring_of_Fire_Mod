@@ -1,0 +1,30 @@
+state={
+	id=307
+	name= "STATE_307"
+	manpower = 1024000
+
+	resources={
+		aluminium = 0
+		rubber = 1
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = NUP
+		victory_points = { 12900 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = BEN
+		add_core_of = NUP
+		add_core_of = OYO
+	}
+
+	provinces={
+		1992 12900 
+	}
+}

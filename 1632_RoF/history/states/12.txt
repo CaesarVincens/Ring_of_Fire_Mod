@@ -1,0 +1,26 @@
+state={
+	id=12
+	name= "STATE_12"
+	manpower = 393200
+
+	resources={
+		oil = 1
+	}
+	state_category = rural
+
+	history={
+		owner = ASS
+		victory_points = { 1525 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = ASS
+	}
+
+	provinces={
+		1525 
+	}
+}

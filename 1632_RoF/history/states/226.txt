@@ -1,0 +1,27 @@
+state={
+	id=226
+	name= "STATE_226"
+	manpower = 1088008
+
+	resources={
+		chromium = 9
+	}
+	state_category = rural
+
+	history={
+		owner = KAZ
+		victory_points = { 10601 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = KAZ
+		add_core_of = BUK
+	}
+
+	provinces={
+		1459 1554 1623 4499 4636 7501 7507 7777 10187 10366 10470 10488 10601 12161 
+	}
+}

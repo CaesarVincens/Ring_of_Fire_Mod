@@ -1,0 +1,28 @@
+state={
+	id=217
+	name= "STATE_217"
+	manpower = 2840528
+
+	resources={
+		steel = 5
+		tungsten = 2
+	}
+	state_category = large_town
+
+	history={
+		owner = KOR
+		victory_points = { 7125 9 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KOR
+		add_core_of = MAN
+	}
+
+	provinces={
+		1100 1148 4004 4103 4126 7021 7125 7175 7204 7221 9936 10036 10115 11912 11958 11992 12011 
+	}
+}

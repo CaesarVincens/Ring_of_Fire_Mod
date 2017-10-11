@@ -1,0 +1,26 @@
+state={
+	id=406
+	name= "STATE_406"
+	manpower = 61000
+
+	resources={
+		aluminium = 2
+	}
+	state_category = rural
+
+	history={
+		owner = RAV
+		victory_points = { 694 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = RAV
+	}
+
+	provinces={
+		519 694 
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=495
+	name="STATE_495"
+
+	history={
+		owner = TUR
+		victory_points = {
+			624 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CRO
+		add_core_of = HUN
+		add_core_of = TUR
+
+	}
+
+	provinces={
+		624 3596 3627 6614 6619 6647 9595 9608 11594 
+	}
+	manpower=416400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

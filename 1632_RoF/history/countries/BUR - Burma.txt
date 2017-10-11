@@ -1,0 +1,68 @@
+﻿capital = 60
+
+oob = "BUR_OOB"
+
+# Starting tech
+set_technology = {
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+# DIPLOMACY
+if = {
+    limit = {
+        has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+        target = LNA
+        autonomous_state = autonomy_dominion
+        freedom_level = 0.4
+    }
+    else = {
+        puppet = LNA
+    }
+}
+
+if = {
+    limit = {has_dlc = "Together for Victory" }
+
+    add_to_tech_sharing_group = BUR_research
+}
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 78
+        }
+        democratic = {
+            popularity = 19
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+		low_economic_mobilisation
+}
+set_national_unity = 0.7078
+create_country_leader = {
+    name = "Zeya Bandula"
+    desc = "POLITICS_ZEYA_BANDULA_DESC"
+    picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=619
+	name="STATE_619"
+
+	history={
+		owner = SPU
+		victory_points = {
+			8213 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = SPU
+
+	}
+
+	provinces={
+		8149 10942 10970 
+	}
+	manpower=92000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

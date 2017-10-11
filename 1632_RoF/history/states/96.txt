@@ -1,0 +1,27 @@
+state={
+	id=96
+	name= "STATE_96"
+	manpower = 144200
+
+	resources={
+		chromium = 7
+		oil = 9
+	}
+	state_category = rural
+
+	history={
+		owner = CIR
+		victory_points = { 9647 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CIR
+	}
+
+	provinces={
+		670 683 3672 3682 6689 9628 9647 11632 
+	}
+}

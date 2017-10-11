@@ -1,0 +1,26 @@
+state={
+	id=215
+	name= "STATE_215"
+	manpower = 180400
+
+	resources={
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = KGO
+		victory_points = { 8219 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KGO
+	}
+
+	provinces={
+		8219 
+	}
+}

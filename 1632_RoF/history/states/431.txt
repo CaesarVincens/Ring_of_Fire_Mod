@@ -1,0 +1,23 @@
+state={
+	id=431
+	name= "STATE_431"
+	manpower = 768400
+
+	state_category = rural
+
+	history={
+		owner = SLI
+		victory_points = { 9321 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = SLI
+	}
+
+	provinces={
+		9255 9321 11238 11371 
+	}
+}

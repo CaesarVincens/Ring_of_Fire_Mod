@@ -1,0 +1,33 @@
+
+state={
+	id=432
+	name="STATE_432"
+	resources={
+		aluminium=1.000
+		steel=5.000
+		tungsten=6.000
+	}
+
+	history={
+		owner = SAL
+		victory_points = {
+			688 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = SAL
+
+	}
+
+	provinces={
+		688 3675 6691 
+	}
+	manpower=137700
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

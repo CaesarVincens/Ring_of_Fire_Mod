@@ -1,0 +1,28 @@
+state={
+	id=575
+	name= "STATE_575"
+	manpower = 708000
+
+	resources={
+		chromium = 1
+		tungsten = 11
+	}
+	state_category = pastoral
+
+	history={
+		owner = VIJ
+		victory_points = { 8011 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = VIJ
+		add_core_of = MYS
+	}
+
+	provinces={
+		8011 12734 
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=606
+	name= "STATE_606"
+	manpower = 405600
+
+	state_category = small_island
+
+	history={
+		owner = NSP
+		victory_points = { 4155 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NSP
+	}
+
+	provinces={
+		1440 4155 
+	}
+}

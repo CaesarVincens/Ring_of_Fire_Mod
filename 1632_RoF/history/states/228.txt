@@ -1,0 +1,27 @@
+state={
+	id=228
+	name= "STATE_228"
+	manpower = 724396
+
+	resources={
+		rubber = 5
+		tungsten = 4
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 1817 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = KIK
+		add_core_of = LBA
+	}
+
+	provinces={
+		191 1817 1929 4515 12907 
+	}
+}

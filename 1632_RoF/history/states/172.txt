@@ -1,0 +1,23 @@
+state={
+	id=172
+	name= "STATE_172"
+	manpower = 128000
+
+	state_category = large_town
+
+	history={
+		owner = HES
+		victory_points = { 9443 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = HES
+	}
+
+	provinces={
+		9443 11431 
+	}
+}

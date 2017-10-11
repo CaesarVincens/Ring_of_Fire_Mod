@@ -1,0 +1,29 @@
+state={
+	id=63
+	name= "STATE_63"
+	manpower = 501704
+
+	resources={
+		rubber = 2
+		steel = 4
+		tungsten = 4
+	}
+	state_category = pastoral
+
+	history={
+		owner = BUR
+		victory_points = { 1315 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BUR
+		add_core_of = SIA
+	}
+
+	provinces={
+		1296 1315 1385 1403 4275 4408 7295 10217 12125 12238 12292 
+	}
+}

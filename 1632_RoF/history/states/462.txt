@@ -1,0 +1,32 @@
+
+state={
+	id=462
+	name="STATE_462"
+	resources={
+		aluminium=1.000
+		steel=7.000
+	}
+
+	history={
+		owner = SPN
+		victory_points = {
+			11606 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = SPN
+
+	}
+
+	provinces={
+		3516 3576 9536 11606 13081 
+	}
+	manpower=280396
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

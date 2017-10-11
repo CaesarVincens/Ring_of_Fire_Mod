@@ -1,0 +1,24 @@
+state={
+	id=407
+	name= "STATE_407"
+	manpower = 406572
+
+	state_category = rural
+
+	history={
+		owner = RYU
+		victory_points = { 1123 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = JAP
+		add_core_of = RYU
+	}
+
+	provinces={
+		1123 7115 10124 11932 
+	}
+}

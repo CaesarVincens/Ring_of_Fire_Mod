@@ -1,0 +1,30 @@
+state={
+	id=568
+	name= "STATE_568"
+	manpower = 2057200
+
+	resources={
+		aluminium = 18
+		steel = 32
+	}
+	state_category = city
+
+	history={
+		owner = VEN
+		victory_points = { 11584 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			11584 = {
+				naval_base = 2
+			}
+			air_base = 5
+		}
+		add_core_of = VEN
+	}
+
+	provinces={
+		603 628 3604 3657 6656 9582 9613 11584 
+	}
+}

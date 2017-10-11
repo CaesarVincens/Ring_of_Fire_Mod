@@ -1,0 +1,38 @@
+bookmarks = {
+	bookmark = {
+		name = "RING_OF_FIRE_NAME"
+		desc = "RING_OF_FIRE_DESC"
+		date = 1631.5.25.12
+		picture = "GFX_select_date_1631"
+		default_country = "NUS"
+		default = yes
+		
+
+		"NUS"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		"SWE"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		"AUS"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		"FRA"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		"TUR"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		"POL"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		"SPR"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=240
+	name= "STATE_240"
+	manpower = 849600
+
+	resources={
+		steel = 18
+	}
+	state_category = rural
+
+	history={
+		owner = LOR
+		victory_points = { 11516 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = FRA
+		add_core_of = LOR
+	}
+
+	provinces={
+		521 11488 11516 11642 
+	}
+}

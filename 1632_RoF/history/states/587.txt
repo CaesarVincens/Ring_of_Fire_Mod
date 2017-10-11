@@ -1,0 +1,34 @@
+
+state={
+	id=587
+	name="STATE_587"
+	resources={
+		aluminium=4.000
+		chromium=4.000
+		steel=5.000
+		tungsten=2.000
+	}
+
+	history={
+		owner = BRZ
+		victory_points = {
+			2227 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = BRZ
+
+	}
+
+	provinces={
+		1446 1524 2227 5182 7561 8143 10939 10967 10989 10998 12961 
+	}
+	manpower=506116
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

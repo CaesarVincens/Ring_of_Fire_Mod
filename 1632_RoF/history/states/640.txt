@@ -1,0 +1,25 @@
+state={
+	id=640
+	name= "STATE_640"
+	manpower = 112000
+
+	resources={
+		steel = 1
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 7548 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = YAK
+	}
+
+	provinces={
+		7548 
+	}
+}

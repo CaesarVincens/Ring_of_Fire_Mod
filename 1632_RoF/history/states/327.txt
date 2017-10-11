@@ -1,0 +1,25 @@
+state={
+	id=327
+	name= "STATE_327"
+	manpower = 269696
+
+	state_category = rural
+
+	history={
+		owner = PER
+		victory_points = { 12320 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = ARM
+		add_core_of = PER
+		add_core_of = TUR
+	}
+
+	provinces={
+		3564 4660 6642 6997 11708 12320 12380 12450 
+	}
+}

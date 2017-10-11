@@ -1,0 +1,32 @@
+
+state={
+	id=412
+	name="STATE_412"
+	resources={
+		aluminium=9.000
+	}
+
+	history={
+		owner = SAX
+		victory_points = {
+			478 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = SAX
+		add_core_of = AUS
+
+	}
+
+	provinces={
+		478 3572 11415 
+	}
+	manpower=340000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

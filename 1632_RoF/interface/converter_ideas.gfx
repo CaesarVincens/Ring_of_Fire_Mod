@@ -1,0 +1,2307 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_ALB_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALB_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALB_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARM_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARM_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARM_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AZR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BRU_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BRU_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BRU_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BUR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BUR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BUR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CAM_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CAM_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CAM_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRO_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRO_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CRO_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CZE_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CZE_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CZE_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ETH_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ETH_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ETH_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEO_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEO_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GEO_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HUN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HUN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_HUN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KAZ_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KAZ_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KAZ_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KEN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KEN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KEN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LKA_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LKA_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LKA_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MAR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MDA_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MDA_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MDA_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MLI_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MON_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MON_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MON_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NEP_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NEP_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NEP_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUB_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUB_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUB_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUS_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUS_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUS_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OMA_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OMA_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OMA_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PAK_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PAK_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PAK_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PER_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PER_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PER_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SCO_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SCO_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SCO_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SER_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SER_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SER_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIA_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIA_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIA_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIK_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIK_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIK_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SLO_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SLO_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SLO_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SVN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SVN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SVN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWE_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWE_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWE_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWI_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWI_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SWI_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TAN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TIB_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TIB_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TIB_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKM_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKM_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TKM_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TUR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TUR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TUR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_U72_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_U72_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_U72_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_U73_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_U73_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_U73_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UPS_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UPS_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UPS_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAT_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAT_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VAT_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VIN_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VIN_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_VIN_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W00_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W00_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W00_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W01_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W01_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W01_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W02_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W02_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W02_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W03_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W03_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W03_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W04_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W04_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W04_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W05_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W05_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W05_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W06_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W06_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W06_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W07_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W07_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W07_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W08_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W08_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W08_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W09_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W09_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W09_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W10_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W10_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W10_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W11_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W11_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W11_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W12_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W12_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W12_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W13_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W13_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W13_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W14_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W14_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W14_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W15_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W15_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W15_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W16_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W16_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W16_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W17_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W17_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W17_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W18_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W18_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W18_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W19_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W19_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W19_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W20_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W20_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W20_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W21_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W21_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W21_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W22_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W22_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W22_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W23_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W23_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W23_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W24_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W24_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W24_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W25_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W25_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W25_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W26_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W26_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W26_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W27_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W27_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W27_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W28_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W28_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W28_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W29_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W29_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W29_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W30_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W30_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W30_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W31_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W31_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W31_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W32_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W32_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W32_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W33_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W33_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W33_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W34_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W34_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_W34_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X00_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X00_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X00_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X01_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X01_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X01_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X02_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X02_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X02_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X03_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X03_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X03_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X04_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X04_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X04_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X05_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X05_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X05_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X06_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X06_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X06_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X07_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X07_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X07_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X08_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X08_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X08_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X09_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X09_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X09_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X10_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X10_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X10_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X11_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X11_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X11_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X12_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X12_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X12_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X13_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X13_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X13_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X14_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X14_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X14_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X15_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X15_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X15_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X16_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X16_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X16_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X17_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X17_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X17_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X18_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X18_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X18_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X19_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X19_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X19_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X20_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X20_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X20_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X21_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X21_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X21_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X22_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X22_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X22_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X23_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X23_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X23_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X24_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X24_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X24_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X25_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X25_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X25_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X26_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X26_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X26_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X27_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X27_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X27_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X28_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X28_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X28_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X29_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X29_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X29_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X30_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X30_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X30_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X31_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X31_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X31_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X32_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X32_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X32_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X33_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X33_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X33_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X34_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X34_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X34_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X35_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X35_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X35_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X36_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X36_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X36_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X37_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X37_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X37_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X38_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X38_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X38_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X39_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X39_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X39_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X40_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X40_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X40_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X41_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X41_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X41_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X42_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X42_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X42_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X43_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X43_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X43_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X44_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X44_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X44_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X45_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X45_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X45_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X46_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X46_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X46_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X47_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X47_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X47_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X48_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X48_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X48_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X49_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X49_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X49_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X50_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X50_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X50_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X51_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X51_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X51_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X52_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X52_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X52_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X53_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X53_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X53_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X54_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X54_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X54_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X55_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X55_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X55_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X56_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X56_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X56_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X57_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X57_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X57_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X58_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X58_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X58_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X59_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X59_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X59_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X60_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X60_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X60_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X61_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X61_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X61_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X62_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X62_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X62_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X63_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X63_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X63_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X64_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X64_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X64_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X65_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X65_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X65_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X66_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X66_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X66_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X67_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X67_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X67_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X68_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X68_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X68_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X69_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X69_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X69_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X70_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X70_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X70_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X71_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X71_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X71_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X72_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X72_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X72_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X73_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X73_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X73_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X74_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X74_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X74_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X75_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X75_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X75_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X76_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X76_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X76_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X77_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X77_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X77_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X78_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X78_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X78_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X79_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X79_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X79_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X80_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X80_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X80_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X81_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X81_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X81_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X82_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X82_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X82_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X83_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X83_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X83_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X84_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X84_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_raj_quit_india_movement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X84_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X85_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X85_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X85_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X86_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X86_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X86_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X87_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X87_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X87_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X88_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X88_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X88_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X89_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X89_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X89_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X90_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X90_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X90_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X91_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X91_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X91_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X92_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X92_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X92_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X93_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X93_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X93_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X94_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X94_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X94_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X95_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X95_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X95_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X96_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X96_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X96_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X97_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X97_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X97_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X98_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X98_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X98_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X99_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X99_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_X99_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YEM_communist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YEM_democratic_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_YEM_fascist_advisor"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+
+}

@@ -1,0 +1,27 @@
+state={
+	id=594
+	name= "STATE_594"
+	manpower = 790500
+
+	resources={
+		steel = 18
+		tungsten = 8
+	}
+	state_category = pastoral
+
+	history={
+		owner = NSP
+		victory_points = { 12873 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NSP
+	}
+
+	provinces={
+		2051 5052 12746 12873 13089 
+	}
+}

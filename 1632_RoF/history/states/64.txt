@@ -1,0 +1,23 @@
+state={
+	id=64
+	name= "STATE_64"
+	manpower = 628400
+
+	state_category = rural
+
+	history={
+		owner = CAM
+		victory_points = { 7432 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = CAM
+	}
+
+	provinces={
+		1324 1353 4330 4359 4639 7319 7376 7404 7432 10289 12191 12260 12475 
+	}
+}

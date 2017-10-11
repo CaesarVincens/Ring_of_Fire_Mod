@@ -1,0 +1,24 @@
+state={
+	id=246
+	name= "STATE_246"
+	manpower = 84000
+
+	state_category = rural
+
+	history={
+		owner = LXA
+		victory_points = { 12167 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CAM
+		add_core_of = LXA
+	}
+
+	provinces={
+		1620 7645 10204 12150 12167 
+	}
+}

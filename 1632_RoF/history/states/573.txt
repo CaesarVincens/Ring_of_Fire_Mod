@@ -1,0 +1,26 @@
+state={
+	id=573
+	name= "STATE_573"
+	manpower = 216000
+
+	resources={
+		oil = 2
+	}
+	state_category = town
+
+	history={
+		owner = VER
+		victory_points = { 374 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = VER
+	}
+
+	provinces={
+		374 3271 6349 
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=195
+	name= "STATE_195"
+	manpower = 36000
+
+	state_category = rural
+
+	history={
+		victory_points = { 1956 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = AIR
+		add_core_of = KAN
+	}
+
+	provinces={
+		1956 
+	}
+}

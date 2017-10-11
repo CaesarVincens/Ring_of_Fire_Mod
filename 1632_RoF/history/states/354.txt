@@ -1,0 +1,25 @@
+state={
+	id=354
+	name= "STATE_354"
+	manpower = 1402408
+
+	state_category = rural
+
+	history={
+		owner = POL
+		victory_points = { 462 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = POL
+		add_core_of = UKR
+		add_core_of = RUT
+	}
+
+	provinces={
+		422 462 474 513 572 3412 3430 3457 3511 6429 6435 6509 6546 6557 11441 11543 
+	}
+}

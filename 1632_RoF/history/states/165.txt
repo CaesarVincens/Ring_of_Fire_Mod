@@ -1,0 +1,26 @@
+state={
+	id=165
+	name= "STATE_165"
+	manpower = 3315640
+
+	resources={
+		chromium = 4
+	}
+	state_category = city
+
+	history={
+		owner = GOL
+		victory_points = { 1317 9 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = GOL
+	}
+
+	provinces={
+		1275 1317 4280 4472 8087 
+	}
+}

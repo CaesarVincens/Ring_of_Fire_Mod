@@ -1,0 +1,22 @@
+state={
+	id=562
+	name= "STATE_562"
+	manpower = 2976000
+
+	state_category = town
+
+	history={
+		owner = UPS
+		victory_points = { 12068 1 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+	}
+
+	provinces={
+		1091 1175 4096 7186 7214 9955 11914 11959 12027 12068 
+	}
+}

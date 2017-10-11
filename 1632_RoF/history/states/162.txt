@@ -1,0 +1,26 @@
+state={
+	id=162
+	name= "STATE_162"
+	manpower = 952400
+
+	resources={
+		chromium = 0
+	}
+	state_category = pastoral
+
+	history={
+		owner = GRW
+		victory_points = { 7374 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = GRW
+	}
+
+	provinces={
+		7374 10825 
+	}
+}

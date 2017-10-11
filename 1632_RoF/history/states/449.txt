@@ -1,0 +1,27 @@
+state={
+	id=449
+	name= "STATE_449"
+	manpower = 1924400
+
+	resources={
+		aluminium = 6
+		steel = 10
+	}
+	state_category = town
+
+	history={
+		owner = SPR
+		victory_points = { 9838 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		883 963 3910 3923 3966 6831 6843 6939 6979 6980 9784 9838 11803 11837 11882 11998 
+	}
+}

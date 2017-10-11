@@ -1,0 +1,28 @@
+state={
+	id=652
+	name= "STATE_652"
+	manpower = 483800
+
+	resources={
+		chromium = 28
+		steel = 6
+		tungsten = 6
+	}
+	state_category = rural
+
+	history={
+		owner = MUT
+		victory_points = { 1688 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = MUT
+	}
+
+	provinces={
+		1688 1874 2151 2216 4851 7842 10929 
+	}
+}

@@ -1,0 +1,25 @@
+add_namespace = RoF
+
+country_event = {
+	id = RoF.105
+	title = RoF.105.t
+	picture = GFX_report_event_scottish_mercenaries
+	fire_only_once = yes
+	desc = RoF.105.d
+
+	trigger = {
+		tag = NUS
+		date > 1631.5.26
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = RoF.105.a
+		hidden_effect = {
+			set_country_flag = mackays_cavalry
+			load_oob = "NUS_Mackay_Cav"
+		}
+	}
+}
+

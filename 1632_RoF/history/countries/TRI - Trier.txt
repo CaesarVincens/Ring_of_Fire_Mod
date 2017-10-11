@@ -1,0 +1,48 @@
+﻿capital = 476
+
+oob = "TRI_OOB"
+
+# Starting tech
+set_technology = {
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 78
+        }
+        democratic = {
+            popularity = 19
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	partial_economic_mobilisation
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Adelbert von Mecklenburg-Strelitz"
+    desc = "POLITICS_ADELBERT_VON MECKLENBURG-STRELITZ_DESC"
+    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

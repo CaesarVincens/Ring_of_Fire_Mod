@@ -1,0 +1,85 @@
+﻿capital = 20
+set_research_slots = 3
+
+oob = "AUS_OOB"
+
+# Starting tech
+set_technology = {
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+# DIPLOMACY
+if = {
+    limit = {
+        has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+        target = BOH
+        autonomous_state = autonomy_dominion
+        freedom_level = 0.4
+    }
+    set_autonomy = {
+        target = HUN
+        autonomous_state = autonomy_dominion
+        freedom_level = 0.4
+    }
+    else = {
+        puppet = BOH
+        puppet = HUN
+    }
+}
+
+if = {
+    limit = {has_dlc = "Together for Victory" }
+
+    add_to_tech_sharing_group = AUS_research
+}
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 78
+        }
+        democratic = {
+            popularity = 19
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+create_faction = "Catholic League"
+add_to_faction = AUS
+add_to_faction = BOH
+add_to_faction = HUN
+add_to_faction = SPR
+add_to_faction = BAV
+add_to_faction = WRZ
+add_to_faction = MNZ
+add_to_faction = COL
+
+add_ideas = {
+	partial_economic_mobilisation
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Ferdinand II von Habsburg"
+    desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

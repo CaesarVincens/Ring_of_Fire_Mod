@@ -1,0 +1,35 @@
+
+state={
+	id=308
+	name="STATE_308"
+	resources={
+		chromium=1.000
+		steel=3.000
+		tungsten=1.000
+	}
+
+	history={
+		owner = NUS
+		victory_points = {
+			9497 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = NUS
+		add_core_of = SAX
+		add_core_of = SXW
+
+	}
+
+	provinces={
+		9497 
+	}
+	manpower=208400
+	buildings_max_level_factor=1.000
+	state_category=city
+}

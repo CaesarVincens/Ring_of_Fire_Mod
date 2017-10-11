@@ -1,0 +1,28 @@
+state={
+	id=340
+	name= "STATE_340"
+	manpower = 124000
+
+	resources={
+		chromium = 8
+	}
+	state_category = rural
+
+	history={
+		owner = PER
+		victory_points = { 8098 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MUG
+		add_core_of = PER
+		add_core_of = BAL
+	}
+
+	provinces={
+		1107 4990 5105 7847 7903 7975 8044 8098 10813 
+	}
+}

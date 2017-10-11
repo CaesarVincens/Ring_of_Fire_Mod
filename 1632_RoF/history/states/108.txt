@@ -1,0 +1,27 @@
+state={
+	id=108
+	name= "STATE_108"
+	manpower = 767064
+
+	resources={
+		steel = 2
+	}
+	state_category = town
+
+	history={
+		owner = DEN
+		victory_points = { 383 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = DEN
+		add_core_of = SWE
+	}
+
+	provinces={
+		171 383 408 3307 6120 6258 6310 6345 6412 9279 9300 9362 11160 11215 11327 11376 
+	}
+}

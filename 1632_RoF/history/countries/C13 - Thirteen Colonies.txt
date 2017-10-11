@@ -1,0 +1,53 @@
+﻿capital = 584
+
+oob = "C13_OOB"
+
+# Starting tech
+set_technology = {
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+if = {
+    limit = {has_dlc = "Together for Victory" }
+
+    add_to_tech_sharing_group = ENG_research
+}
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 14
+        }
+        democratic = {
+            popularity = 83
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = democratic
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+
+add_ideas = {
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Henry Hooker"
+    desc = "POLITICS_HENRY_HOOKER_DESC"
+    picture = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+    expire = "1660.1.1"
+    ideology = liberalism
+    traits = {
+    }
+}

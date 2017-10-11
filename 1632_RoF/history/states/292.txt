@@ -1,0 +1,28 @@
+state={
+	id=292
+	name= "STATE_292"
+	manpower = 7808640
+
+	resources={
+		aluminium = 6
+		oil = 4
+	}
+	state_category = city
+
+	history={
+		owner = MUG
+		victory_points = { 9975 4 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			dockyard = 2
+			air_base = 0
+		}
+		add_core_of = MUG
+	}
+
+	provinces={
+		1061 1103 1144 1190 4064 4090 4132 4187 7020 7150 7165 7207 9975 10118 11952 12037 12092 
+	}
+}

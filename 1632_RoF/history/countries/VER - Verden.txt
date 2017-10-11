@@ -1,0 +1,48 @@
+﻿capital = 573
+
+oob = "VER_OOB"
+
+# Starting tech
+set_technology = {
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 14
+        }
+        democratic = {
+            popularity = 84
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = democratic
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+
+add_ideas = {
+	low_economic_mobilisation
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Otto von Sachsen-Altenburg"
+    desc = "POLITICS_OTTO_VON SACHSEN-ALTENBURG_DESC"
+    picture = "gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+    expire = "1660.1.1"
+    ideology = conservatism
+    traits = {
+    }
+}

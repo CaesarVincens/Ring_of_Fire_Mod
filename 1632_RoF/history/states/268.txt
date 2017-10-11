@@ -1,0 +1,23 @@
+state={
+	id=268
+	name= "STATE_268"
+	manpower = 108400
+
+	state_category = rural
+
+	history={
+		owner = MAR
+		victory_points = { 4097 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MAR
+	}
+
+	provinces={
+		989 1111 4097 7116 7173 
+	}
+}

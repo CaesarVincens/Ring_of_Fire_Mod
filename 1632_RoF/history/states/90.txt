@@ -1,0 +1,23 @@
+state={
+	id=90
+	name= "STATE_90"
+	manpower = 15220272
+
+	state_category = large_town
+
+	history={
+		owner = CHI
+		victory_points = { 10480 5 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 1
+		}
+		add_core_of = CHI
+	}
+
+	provinces={
+		1027 1034 1203 1438 1519 1531 1575 4074 4174 4469 4538 4634 7571 10367 10421 10480 10507 12078 12300 12344 12432 
+	}
+}

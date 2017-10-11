@@ -1,0 +1,29 @@
+﻿start_equipment_factor = 0
+
+division_template = {
+	name = "Green Regiment"
+
+	regiments = {
+		merc_cavalry = { x = 0 y = 0 }
+		merc_cavalry = { x = 0 y = 1 }
+		merc_cavalry = { x = 0 y = 2 }
+		merc_cavalry = { x = 1 y = 0 }
+		merc_cavalry = { x = 1 y = 1 }
+		merc_cavalry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+
+#Starting Units
+units = {
+	division = {
+		name = "Mackay's Regiment"
+		location = 9497 #Grantville
+		division_template = "Green Regiment"
+		force_equipment_variants = { infantry_equipment_0 = { owner = NUS } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}
+

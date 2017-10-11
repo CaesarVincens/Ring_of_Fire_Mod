@@ -1,0 +1,27 @@
+state={
+	id=654
+	name= "STATE_654"
+	manpower = 68168
+
+	resources={
+		aluminium = 1
+		rubber = 2
+		steel = 1
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 1932 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = ZAZ
+	}
+
+	provinces={
+		1932 2025 
+	}
+}

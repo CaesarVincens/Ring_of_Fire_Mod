@@ -1,0 +1,47 @@
+﻿capital = 261
+
+oob = "MON_OOB"
+
+# Starting tech
+set_technology = {
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 68
+        }
+        democratic = {
+            popularity = 29
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+		low_economic_mobilisation
+}
+set_national_unity = 0.802
+create_country_leader = {
+    name = "Khorloogiin Choibalsan"
+    desc = "POLITICS_KHORLOOGIIN_CHOIBALSAN_DESC"
+    picture = "gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

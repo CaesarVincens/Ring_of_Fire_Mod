@@ -1,0 +1,27 @@
+state={
+	id=414
+	name= "STATE_414"
+	manpower = 1619400
+
+	resources={
+		steel = 74
+	}
+	state_category = city
+
+	history={
+		owner = SAX
+		victory_points = { 514 9 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 5
+		}
+		add_core_of = SAX
+		add_core_of = AUS
+	}
+
+	provinces={
+		514 573 3514 3535 6559 9441 9471 9535 11481 
+	}
+}

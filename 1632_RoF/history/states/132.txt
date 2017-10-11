@@ -1,0 +1,26 @@
+state={
+	id=132
+	name= "STATE_132"
+	manpower = 2491100
+
+	resources={
+		rubber = 1
+	}
+	state_category = large_town
+
+	history={
+		owner = ETH
+		victory_points = { 5097 9 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = ETH
+	}
+
+	provinces={
+		1984 2040 2072 4954 5041 5097 7944 
+	}
+}

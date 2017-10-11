@@ -1,0 +1,8 @@
+can_lose_democracy_support = {
+	absolutist < 0.18
+	communism < 0.18
+	democratic > 0.65
+	fascism < 0.18
+	neutrality < 0.18
+	radical < 0.18
+}

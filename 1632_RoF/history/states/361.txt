@@ -1,0 +1,27 @@
+state={
+	id=361
+	name= "STATE_361"
+	manpower = 52808
+
+	resources={
+		rubber = 34
+		steel = 1
+		tungsten = 12
+	}
+	state_category = enclave
+
+	history={
+		owner = POR
+		victory_points = { 7427 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+	}
+
+	provinces={
+		7427 
+	}
+}

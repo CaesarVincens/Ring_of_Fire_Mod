@@ -1,0 +1,27 @@
+state={
+	id=461
+	name= "STATE_461"
+	manpower = 1048000
+
+	resources={
+		aluminium = 7
+		steel = 31
+	}
+	state_category = large_town
+
+	history={
+		owner = SPN
+		victory_points = { 11483 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPN
+	}
+
+	provinces={
+		3476 3536 6504 11483 
+	}
+}

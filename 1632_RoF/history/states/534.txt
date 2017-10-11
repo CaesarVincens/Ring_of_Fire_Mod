@@ -1,0 +1,32 @@
+
+state={
+	id=534
+	name="STATE_534"
+	resources={
+		oil=7.000
+		tungsten=9.000
+	}
+
+	history={
+		owner = TUR
+		victory_points = {
+			6783 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = TUR
+
+	}
+
+	provinces={
+		750 765 3734 3752 3765 6741 6755 6783 9744 11729 
+	}
+	manpower=136200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

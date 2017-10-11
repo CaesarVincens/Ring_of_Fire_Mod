@@ -1,0 +1,32 @@
+
+state={
+	id=472
+	name="STATE_472"
+
+	history={
+		owner = SWE
+		victory_points = {
+			6282 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+			6282 = {
+				naval_base = 2
+			}
+
+		}
+		add_core_of = SWE
+		add_core_of = POM
+
+	}
+
+	provinces={
+		6282 
+	}
+	manpower=538800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

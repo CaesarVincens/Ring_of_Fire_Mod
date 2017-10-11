@@ -1,0 +1,28 @@
+state={
+	id=150
+	name= "STATE_150"
+	manpower = 1846840
+
+	resources={
+		aluminium = 18
+		steel = 40
+	}
+	state_category = large_town
+
+	history={
+		owner = FRA
+		victory_points = { 9737 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = FRA
+		add_core_of = SPR
+	}
+
+	provinces={
+		743 929 3740 6621 6759 6762 6775 6777 9710 9717 9737 9882 9884 11565 11697 11699 11720 
+	}
+}

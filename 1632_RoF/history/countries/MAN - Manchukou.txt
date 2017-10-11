@@ -1,0 +1,46 @@
+﻿capital = 253
+
+oob = "MAN_OOB"
+
+# Starting tech
+set_technology = {
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 70
+        }
+        democratic = {
+            popularity = 28
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+		low_economic_mobilisation
+}
+set_national_unity = 0.7026
+create_country_leader = {
+    name = "Mingzhu Zhanshan"
+    desc = "POLITICS_MINGZHU_ZHANSHAN_DESC"
+    picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

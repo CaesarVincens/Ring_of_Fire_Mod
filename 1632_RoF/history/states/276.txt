@@ -1,0 +1,26 @@
+state={
+	id=276
+	name= "STATE_276"
+	manpower = 637500
+
+	resources={
+		rubber = 1
+	}
+	state_category = pastoral
+
+	history={
+		owner = MAT
+		victory_points = { 4273 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MAT
+	}
+
+	provinces={
+		4273 
+	}
+}

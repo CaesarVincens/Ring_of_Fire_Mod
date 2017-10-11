@@ -1,0 +1,26 @@
+state={
+	id=396
+	name= "STATE_396"
+	manpower = 277892
+
+	resources={
+		chromium = 11
+	}
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = { 9726 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		748 3748 6750 6753 9688 9705 9707 9722 9726 9742 11678 11694 11696 11727 
+	}
+}

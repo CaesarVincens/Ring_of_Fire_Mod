@@ -1,0 +1,45 @@
+﻿capital = 23
+
+oob = "SVN_OOB"
+
+# Starting tech
+set_technology = {
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 73
+        }
+        democratic = {
+            popularity = 25
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	low_economic_mobilisation
+}
+create_country_leader = {
+    name = "Lojze Gobec"
+    desc = "POLITICS_LOJZE_GOBEC_DESC"
+    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

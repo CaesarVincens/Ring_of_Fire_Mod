@@ -1,0 +1,26 @@
+state={
+	id=16
+	name= "STATE_16"
+	manpower = 424400
+
+	resources={
+		steel = 59
+	}
+	state_category = rural
+
+	history={
+		owner = AUS
+		victory_points = { 678 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		678 6529 
+	}
+}

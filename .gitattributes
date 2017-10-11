@@ -4,6 +4,10 @@
 # Custom for Visual Studio
 *.cs     diff=csharp
 
+#image files
+*.tga binary
+*.dds binary
+
 # Standard to msysgit
 *.doc	 diff=astextplain
 *.DOC	 diff=astextplain

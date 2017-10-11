@@ -1,0 +1,28 @@
+state={
+	id=641
+	name= "STATE_641"
+	manpower = 604000
+
+	resources={
+		aluminium = 3
+		rubber = 0
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		victory_points = { 12851 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = YAT
+		add_core_of = MSS
+	}
+
+	provinces={
+		8071 8116 12851 
+	}
+}

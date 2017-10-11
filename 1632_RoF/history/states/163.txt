@@ -1,0 +1,23 @@
+state={
+	id=163
+	name= "STATE_163"
+	manpower = 210400
+
+	state_category = rural
+
+	history={
+		owner = GEN
+		victory_points = { 11804 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = GEN
+	}
+
+	provinces={
+		3838 9851 11804 
+	}
+}

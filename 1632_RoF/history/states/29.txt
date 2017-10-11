@@ -1,0 +1,28 @@
+state={
+	id=29
+	name= "STATE_29"
+	manpower = 1256600
+
+	resources={
+		aluminium = 3
+		chromium = 9
+		steel = 12
+	}
+	state_category = rural
+
+	history={
+		owner = BAS
+		victory_points = { 7428 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = BAS
+	}
+
+	provinces={
+		1622 7372 7428 7465 7574 10171 10401 10469 12241 12420 12490 
+	}
+}

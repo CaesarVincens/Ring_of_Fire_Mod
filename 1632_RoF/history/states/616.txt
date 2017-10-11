@@ -1,0 +1,26 @@
+state={
+	id=616
+	name= "STATE_616"
+	manpower = 86800
+
+	resources={
+		oil = 32
+	}
+	state_category = rural
+
+	history={
+		owner = SPU
+		victory_points = { 4942 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SPU
+	}
+
+	provinces={
+		4892 4942 5000 5056 8024 8080 
+	}
+}

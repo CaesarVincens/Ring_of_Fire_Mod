@@ -1,0 +1,50 @@
+﻿capital = 308
+set_research_slots = 4
+
+oob = "NUS_OOB"
+
+# Starting tech
+set_technology = {
+#advanced_infantry_weapons = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 4
+        }
+        democratic = {
+            popularity = 94
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = democratic
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+
+add_ideas = {
+	people_out_of_time
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Michael Stearns"
+    desc = "POLITICS_JOSHUA_HANCOCK_DESC"
+    picture = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
+    expire = "1660.1.1"
+    ideology = liberalism
+    traits = {
+		union_man
+		experienced_negiotiator 
+    }
+}

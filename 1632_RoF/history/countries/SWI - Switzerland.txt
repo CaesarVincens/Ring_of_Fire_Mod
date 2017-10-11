@@ -1,0 +1,48 @@
+﻿capital = 475
+
+oob = "SWI_OOB"
+
+# Starting tech
+set_technology = {
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 12
+        }
+        democratic = {
+            popularity = 85
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = democratic
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+
+add_ideas = {
+	low_economic_mobilisation
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Marc Comtesse"
+    desc = "POLITICS_MARC_COMTESSE_DESC"
+    picture = "gfx/leaders/SWI/Portrait_Switzerland_Federal_council.dds"
+    expire = "1660.1.1"
+    ideology = liberalism
+    traits = {
+    }
+}

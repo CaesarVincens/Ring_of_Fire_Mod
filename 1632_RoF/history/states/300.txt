@@ -1,0 +1,28 @@
+state={
+	id=300
+	name= "STATE_300"
+	manpower = 1039600
+
+	resources={
+		chromium = 2
+		steel = 1
+		tungsten = 1
+	}
+	state_category = rural
+
+	history={
+		owner = NEP
+		victory_points = { 4435 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = NEP
+	}
+
+	provinces={
+		4386 4435 4987 5310 10910 12892 
+	}
+}

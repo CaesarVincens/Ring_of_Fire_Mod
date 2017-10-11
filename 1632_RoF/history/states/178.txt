@@ -1,0 +1,27 @@
+state={
+	id=178
+	name= "STATE_178"
+	manpower = 916000
+
+	resources={
+		aluminium = 2
+		steel = 15
+	}
+	state_category = rural
+
+	history={
+		owner = IRO
+		victory_points = { 9708 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = IRO
+	}
+
+	provinces={
+		598 734 1436 3602 3702 3733 3747 6707 6778 6795 6916 9664 9708 9721 9754 10381 11654 11662 11722 
+	}
+}

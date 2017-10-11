@@ -1,0 +1,29 @@
+state={
+	id=570
+	name= "STATE_570"
+	manpower = 345800
+
+	resources={
+		aluminium = 10
+		chromium = 3
+	}
+	state_category = rural
+
+	history={
+		owner = VEN
+		victory_points = { 3924 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SER
+		add_core_of = TUR
+		add_core_of = VEN
+	}
+
+	provinces={
+		3924 3943 3974 9821 11816 
+	}
+}

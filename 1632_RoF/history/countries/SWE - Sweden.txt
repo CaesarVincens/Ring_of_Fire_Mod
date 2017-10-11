@@ -1,0 +1,78 @@
+﻿capital = 466
+set_research_slots = 3
+
+oob = "SWE_OOB"
+
+# Starting tech
+set_technology = {
+early_destroyer = 1
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+# DIPLOMACY
+if = {
+    limit = {
+        has_dlc = "Together for Victory"
+    }
+    set_autonomy = {
+        target = POM
+        autonomous_state = autonomy_dominion
+        freedom_level = 0.4
+    }
+    else = {
+        puppet = POM
+    }
+}
+
+if = {
+    limit = {has_dlc = "Together for Victory" }
+
+    add_to_tech_sharing_group = SWE_research
+}
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 88
+        }
+        democratic = {
+            popularity = 9
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+create_faction = "Protestant Union"
+add_to_faction = SWE
+add_to_faction = POM
+add_to_faction = BRA
+add_to_faction = SAX
+add_to_faction = BRS
+add_to_faction = HES
+
+add_ideas = {
+	partial_economic_mobilisation
+}
+set_national_unity = 0.7054
+create_country_leader = {
+    name = "Gustavus II Adolphus Vasa"
+    desc = "POLITICS_ALBRECHT_GYNDESTOLPE_DESC"
+    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

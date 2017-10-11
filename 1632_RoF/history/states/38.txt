@@ -1,0 +1,28 @@
+state={
+	id=38
+	name= "STATE_38"
+	manpower = 1476008
+
+	resources={
+		oil = 1
+		steel = 12
+	}
+	state_category = rural
+
+	history={
+		owner = BOH
+		victory_points = { 3553 9 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = BOH
+		add_core_of = AUS
+	}
+
+	provinces={
+		557 569 3553 3569 6562 6576 6590 11511 
+	}
+}

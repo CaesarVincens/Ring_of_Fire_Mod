@@ -1,0 +1,24 @@
+state={
+	id=645
+	name= "STATE_645"
+	manpower = 92000
+
+	state_category = rural
+
+	history={
+		owner = YAR
+		victory_points = { 8027 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SIK
+		add_core_of = YAR
+	}
+
+	provinces={
+		8027 10417 12805 
+	}
+}

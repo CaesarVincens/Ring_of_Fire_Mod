@@ -1,0 +1,23 @@
+add_namespace = RoF
+country_event = {
+	id = RoF.000
+	title = RoF.000.t
+	picture = GFX_report_event_scottish_mercenaries #placeholder
+	is_triggered_only = yes
+	fire_only_once = yes
+	desc = RoF.000.d
+
+	immediate = {
+		NUS = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 500
+				producer = NUS
+			}
+		}
+	}
+	option = {
+		name = RoF.000.a
+
+	}
+}

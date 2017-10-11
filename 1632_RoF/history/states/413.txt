@@ -1,0 +1,26 @@
+state={
+	id=413
+	name= "STATE_413"
+	manpower = 445000
+
+	resources={
+		steel = 16
+	}
+	state_category = rural
+
+	history={
+		owner = SAX
+		victory_points = { 6441 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SAX
+	}
+
+	provinces={
+		6441 11545 
+	}
+}

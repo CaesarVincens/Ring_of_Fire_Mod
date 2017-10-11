@@ -1,0 +1,29 @@
+state={
+	id=646
+	name= "STATE_646"
+	manpower = 6048000
+
+	resources={
+		steel = 2
+		tungsten = 2
+	}
+	state_category = town
+
+	history={
+		owner = YAR
+		victory_points = { 12820 4 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CHI
+		add_core_of = YAR
+		add_core_of = OIR
+	}
+
+	provinces={
+		1778 2028 2053 2099 5076 5100 7971 12596 12820 
+	}
+}

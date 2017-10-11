@@ -1,0 +1,27 @@
+state={
+	id=72
+	name= "STATE_72"
+	manpower = 11061564
+
+	resources={
+		aluminium = 0
+		steel = 3
+	}
+	state_category = large_town
+
+	history={
+		owner = CHI
+		victory_points = { 10040 4 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CHI
+	}
+
+	provinces={
+		4066 4079 7085 7094 7126 7540 7656 9937 9958 9995 10040 10079 10098 10364 10434 10446 11916 12036 12426 
+	}
+}

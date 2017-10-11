@@ -1,0 +1,29 @@
+
+state={
+	id=343
+	name="STATE_343"
+
+	history={
+		owner = POL
+		victory_points = {
+			362 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = POL
+		add_core_of = PRU
+
+	}
+
+	provinces={
+		334 362 389 3324 3380 6402 9263 
+	}
+	manpower=399000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

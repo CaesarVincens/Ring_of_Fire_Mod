@@ -1,0 +1,48 @@
+﻿capital = 240
+
+oob = "LOR_OOB"
+
+# Starting tech
+set_technology = {
+gw_artillery = 1
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 14
+        }
+        democratic = {
+            popularity = 84
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = democratic
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+
+add_ideas = {
+	partial_economic_mobilisation
+}
+set_national_unity = 0.75
+create_country_leader = {
+    name = "Augustin Cousin-Mountauban"
+    desc = "POLITICS_AUGUSTIN_COUSIN-MOUNTAUBAN_DESC"
+    picture = "gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+    expire = "1660.1.1"
+    ideology = conservatism
+    traits = {
+    }
+}

@@ -1,0 +1,23 @@
+state={
+	id=552
+	name= "STATE_552"
+	manpower = 1712400
+
+	state_category = city
+
+	history={
+		owner = TUS
+		victory_points = { 9907 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = TUS
+	}
+
+	provinces={
+		910 1616 6875 9750 9879 9907 11833 11889 
+	}
+}

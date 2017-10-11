@@ -1,0 +1,27 @@
+state={
+	id=221
+	name= "STATE_221"
+	manpower = 914600
+
+	resources={
+		rubber = 102
+	}
+	state_category = rural
+
+	history={
+		owner = LKA
+		victory_points = { 12258 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = LKA
+		add_core_of = POR
+	}
+
+	provinces={
+		1213 4219 7260 7344 10229 10287 12258 
+	}
+}

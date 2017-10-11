@@ -1,0 +1,23 @@
+state={
+	id=577
+	name= "STATE_577"
+	manpower = 248000
+
+	state_category = large_town
+
+	history={
+		owner = WRZ
+		victory_points = { 11445 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = WRZ
+	}
+
+	provinces={
+		3397 11445 
+	}
+}

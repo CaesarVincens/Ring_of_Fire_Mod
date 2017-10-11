@@ -1,0 +1,26 @@
+state={
+	id=26
+	name= "STATE_26"
+	manpower = 632008
+
+	resources={
+		aluminium = 3
+	}
+	state_category = large_town
+
+	history={
+		owner = BAD
+		victory_points = { 6542 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = BAD
+	}
+
+	provinces={
+		3530 6542 6568 
+	}
+}

@@ -1,0 +1,28 @@
+state={
+	id=66
+	name= "STATE_66"
+	manpower = 1848000
+
+	resources={
+		aluminium = 2
+		chromium = 2
+		steel = 2
+	}
+	state_category = rural
+
+	history={
+		owner = CHA
+		victory_points = { 4557 9 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 5
+		}
+		add_core_of = CHA
+	}
+
+	provinces={
+		4557 4883 7619 
+	}
+}

@@ -1,0 +1,46 @@
+﻿capital = 94
+
+oob = "CHI_OOB"
+
+# Starting tech
+set_technology = {
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 68
+        }
+        democratic = {
+            popularity = 29
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	}
+set_national_unity = 0.7056
+create_country_leader = {
+    name = "Liao Dong"
+    desc = "POLITICS_LIAO_DONG_DESC"
+    picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

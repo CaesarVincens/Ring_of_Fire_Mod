@@ -1,0 +1,28 @@
+state={
+	id=418
+	name= "STATE_418"
+	manpower = 56800
+
+	resources={
+		aluminium = 2
+		oil = 1
+		steel = 3
+	}
+	state_category = rural
+
+	history={
+		owner = SHA
+		victory_points = { 10870 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SHA
+	}
+
+	provinces={
+		5093 8004 8030 8060 10870 12768 12870 
+	}
+}

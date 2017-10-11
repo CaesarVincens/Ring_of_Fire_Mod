@@ -1,0 +1,23 @@
+state={
+	id=273
+	name= "STATE_273"
+	manpower = 303604
+
+	state_category = rural
+
+	history={
+		owner = MRH
+		victory_points = { 1966 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = MRH
+	}
+
+	provinces={
+		1905 1966 5068 8094 10833 10891 10921 12759 12814 
+	}
+}

@@ -1,0 +1,28 @@
+state={
+	id=482
+	name= "STATE_482"
+	manpower = 5324000
+
+	resources={
+		oil = 2
+		steel = 1
+		tungsten = 1
+	}
+	state_category = large_town
+
+	history={
+		owner = TIB
+		victory_points = { 9966 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 0
+		}
+		add_core_of = TIB
+	}
+
+	provinces={
+		531 1257 1918 1999 2045 2067 4313 4375 4403 4407 4999 5193 7294 7397 7988 8104 9966 10726 10787 10841 10856 10903 12724 12837 
+	}
+}

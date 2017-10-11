@@ -1,0 +1,23 @@
+state={
+	id=68
+	name= "STATE_68"
+	manpower = 236900
+
+	state_category = rural
+
+	history={
+		owner = CHE
+		victory_points = { 12384 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = CHE
+	}
+
+	provinces={
+		968 5090 9949 9996 12384 
+	}
+}

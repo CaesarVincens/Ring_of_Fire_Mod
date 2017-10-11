@@ -1,0 +1,27 @@
+state={
+	id=6
+	name= "STATE_6"
+	manpower = 1196000
+
+	resources={
+		aluminium = 1
+		tungsten = 6
+	}
+	state_category = rural
+
+	history={
+		owner = AMD
+		victory_points = { 7119 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = AMD
+	}
+
+	provinces={
+		1405 7060 7119 
+	}
+}

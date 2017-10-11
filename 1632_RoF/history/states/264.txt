@@ -1,0 +1,26 @@
+state={
+	id=264
+	name= "STATE_264"
+	manpower = 484000
+
+	resources={
+		aluminium = 3
+	}
+	state_category = large_town
+
+	history={
+		owner = MOD
+		victory_points = { 9752 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = MOD
+	}
+
+	provinces={
+		3976 9752 
+	}
+}

@@ -1,0 +1,28 @@
+state={
+	id=599
+	name= "STATE_599"
+	manpower = 460400
+
+	resources={
+		chromium = 4
+		rubber = 6
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = NSP
+		victory_points = { 10886 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = NSP
+	}
+
+	provinces={
+		10842 10886 13085 
+	}
+}

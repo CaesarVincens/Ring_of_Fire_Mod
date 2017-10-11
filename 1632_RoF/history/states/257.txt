@@ -1,0 +1,28 @@
+state={
+	id=257
+	name= "STATE_257"
+	manpower = 3168000
+
+	resources={
+		aluminium = 3
+		rubber = 11
+	}
+	state_category = city
+
+	history={
+		owner = MAD
+		victory_points = { 7402 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = VIJ
+		add_core_of = MAD
+	}
+
+	provinces={
+		1381 1409 4327 4416 7265 7288 7402 10246 12247 
+	}
+}

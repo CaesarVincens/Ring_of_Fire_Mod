@@ -1,0 +1,32 @@
+
+state={
+	id=398
+	name="STATE_398"
+	resources={
+		aluminium=6.000
+		chromium=40.000
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			13076 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = SOV
+
+	}
+
+	provinces={
+		237 278 307 361 1233 1292 1294 1327 1387 1543 1704 1744 1750 1771 1775 1808 1821 1841 1880 3169 3280 4209 4242 4659 4746 4754 4758 4774 4813 4824 7228 7285 7320 7774 7778 7796 7833 7846 7895 9292 9512 9553 10133 10136 10142 10170 10189 10213 10329 10542 10648 10716 10720 11223 11307 12102 12106 12117 12157 12287 12502 12521 12567 12584 12696 13076 
+	}
+	manpower=696800
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

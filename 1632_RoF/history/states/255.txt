@@ -1,0 +1,26 @@
+state={
+	id=255
+	name= "STATE_255"
+	manpower = 8200
+
+	resources={
+		oil = 4
+	}
+	state_category = rural
+
+	history={
+		owner = MAN
+		victory_points = { 1742 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = MAN
+	}
+
+	provinces={
+		855 1322 1742 1755 1820 12446 
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=189
+	name= "STATE_189"
+	manpower = 148400
+
+	resources={
+		steel = 1
+	}
+	state_category = rural
+
+	history={
+		owner = JOL
+		victory_points = { 4948 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = JOL
+	}
+
+	provinces={
+		4948 
+	}
+}

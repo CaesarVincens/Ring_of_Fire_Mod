@@ -1,0 +1,28 @@
+state={
+	id=420
+	name= "STATE_420"
+	manpower = 323200
+
+	resources={
+		rubber = 18
+		steel = 0
+		tungsten = 0
+	}
+	state_category = rural
+
+	history={
+		owner = SIA
+		victory_points = { 12345 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = SIA
+	}
+
+	provinces={
+		4566 7312 7338 7353 7544 7559 7572 10398 10411 12173 12345 
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=481
+	name= "STATE_481"
+	manpower = 432000
+
+	state_category = rural
+
+	history={
+		owner = TIB
+		victory_points = { 8037 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = TIB
+	}
+
+	provinces={
+		4914 4964 8037 12899 
+	}
+}

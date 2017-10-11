@@ -1,0 +1,28 @@
+state={
+	id=491
+	name= "STATE_491"
+	manpower = 2021640
+
+	resources={
+		aluminium = 194
+		steel = 12
+	}
+	state_category = town
+
+	history={
+		owner = TUR
+		victory_points = { 9660 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = HUN
+		add_core_of = TUR
+	}
+
+	provinces={
+		679 684 699 716 3713 3731 6670 6700 6716 6751 9656 9660 9690 11520 11625 11644 11646 
+	}
+}

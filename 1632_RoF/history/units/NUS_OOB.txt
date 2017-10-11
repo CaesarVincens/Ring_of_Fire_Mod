@@ -1,0 +1,34 @@
+﻿division_template = {
+	name = "Militia"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "NUS"
+		}
+		requested_factories = 1
+		progress = 0.88
+		efficiency = 100
+	}
+	add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 500 producer = NUS }
+}
+
+#Starting Units
+units = {
+	division = {
+		name = "UMWA Volunteer Militia"
+		location = 9497 #Grantville
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_3 = { owner = NUS } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

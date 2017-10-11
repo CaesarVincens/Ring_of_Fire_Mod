@@ -1,0 +1,32 @@
+
+state={
+	id=152
+	name="STATE_152"
+	resources={
+		aluminium=83.000
+		steel=12.000
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			11834 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = FRA
+
+	}
+
+	provinces={
+		911 956 3928 11834 11849 11875 11877 
+	}
+	manpower=865600
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,29 @@
+state={
+	id=416
+	name= "STATE_416"
+	manpower = 1621600
+
+	resources={
+		aluminium = 2
+		chromium = 1
+		steel = 36
+		tungsten = 4
+	}
+	state_category = rural
+
+	history={
+		owner = SCO
+		victory_points = { 9392 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = SCO
+	}
+
+	provinces={
+		159 284 3273 3373 6320 6350 6385 6395 9237 9314 9350 9383 9392 11218 11378 
+	}
+}

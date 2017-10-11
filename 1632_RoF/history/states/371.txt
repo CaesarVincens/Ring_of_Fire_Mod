@@ -1,0 +1,25 @@
+state={
+	id=371
+	name= "STATE_371"
+	manpower = 100000
+
+	resources={
+		steel = 0
+	}
+	state_category = rural
+
+	history={
+		owner = POR
+		victory_points = { 10976 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+	}
+
+	provinces={
+		10976 
+	}
+}

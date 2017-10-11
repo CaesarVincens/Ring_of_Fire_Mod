@@ -1,0 +1,27 @@
+state={
+	id=107
+	name= "STATE_107"
+	manpower = 44400
+
+	resources={
+		aluminium = 3
+		steel = 21
+	}
+	state_category = rural
+
+	history={
+		owner = DEN
+		victory_points = { 9171 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = DEN
+	}
+
+	provinces={
+		46 113 168 202 3039 3111 3162 3191 6010 6129 6185 6207 9066 9154 9171 9229 11049 11052 11116 11123 11187 
+	}
+}

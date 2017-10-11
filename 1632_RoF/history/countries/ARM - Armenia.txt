@@ -1,0 +1,44 @@
+﻿capital = 327
+
+oob = "ARM_OOB"
+
+# Starting tech
+set_technology = {
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 73
+        }
+        democratic = {
+            popularity = 25
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	}
+create_country_leader = {
+    name = "Artem Khatchaturiants"
+    desc = "POLITICS_ARTEM_KHATCHATURIANTS_DESC"
+    picture = "gfx/leaders/ITA/Portrait_Italy_Victor_Emmanuel_III.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

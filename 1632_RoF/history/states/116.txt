@@ -1,0 +1,23 @@
+state={
+	id=116
+	name= "STATE_116"
+	manpower = 84000
+
+	state_category = town
+
+	history={
+		owner = EFR
+		victory_points = { 11360 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = EFR
+	}
+
+	provinces={
+		11360 
+	}
+}

@@ -1,0 +1,29 @@
+state={
+	id=345
+	name= "STATE_345"
+	manpower = 2577224
+
+	resources={
+		aluminium = 16
+		oil = 34
+	}
+	state_category = large_town
+
+	history={
+		owner = POL
+		victory_points = { 9468 8 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+		}
+		add_core_of = POL
+		add_core_of = UKR
+		add_core_of = RUT
+	}
+
+	provinces={
+		438 491 536 3434 3483 3562 3743 6431 6460 6483 9425 9454 9468 9558 11411 11427 11479 11550 
+	}
+}

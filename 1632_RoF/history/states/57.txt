@@ -1,0 +1,26 @@
+state={
+	id=57
+	name= "STATE_57"
+	manpower = 320000
+
+	resources={
+		chromium = 15
+	}
+	state_category = rural
+
+	history={
+		owner = BUK
+		victory_points = { 7224 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = BUK
+	}
+
+	provinces={
+		1216 1384 1919 4542 7224 10205 11687 12218 12239 12250 12430 
+	}
+}

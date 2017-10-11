@@ -1,0 +1,46 @@
+﻿capital = 220
+
+oob = "CRN_OOB"
+
+# Starting tech
+set_technology = {
+tech_mountaineers = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 78
+        }
+        democratic = {
+            popularity = 19
+        }
+        neutrality = {
+            popularity = 3
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	}
+set_national_unity = 0.7166
+create_country_leader = {
+    name = "Chidambaram Dalawa"
+    desc = "POLITICS_CHIDAMBARAM_DALAWA_DESC"
+    picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

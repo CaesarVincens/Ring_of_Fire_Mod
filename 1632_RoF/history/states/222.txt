@@ -1,0 +1,22 @@
+state={
+	id=222
+	name= "STATE_222"
+	manpower = 139996
+
+	state_category = rural
+
+	history={
+		victory_points = { 10758 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		add_core_of = KAT
+	}
+
+	provinces={
+		10758 
+	}
+}
