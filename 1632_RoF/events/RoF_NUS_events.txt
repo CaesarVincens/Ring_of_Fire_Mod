@@ -3,17 +3,19 @@ add_namespace = RoF
 country_event = {
 	id = RoF.105
 	title = RoF.105.t
+	desc = RoF.105.d
 	picture = GFX_report_event_scottish_mercenaries
 	fire_only_once = yes
-	desc = RoF.105.d
 
 	trigger = {
 		tag = NUS
 		date > 1631.5.26
 	}
+	
 	mean_time_to_happen = {
 		days = 5
 	}
+	
 	option = {
 		name = RoF.105.a
 		hidden_effect = {
@@ -23,3 +25,63 @@ country_event = {
 	}
 }
 
+#NUS wants to incorporate SXW
+country_event = {
+	id = RoF.125
+	title = RoF.125.t
+	desc = RoF.125.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF.125.a
+		ai_chance = { factor = 100 }
+		NUS = {
+			country_event = { id = RoF.127 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF.125.b
+		NUS = {
+			country_event = { id = RoF.126 }
+		}
+	}
+}
+
+# Saxe-Weimar declines the offer
+country_event = {
+	id = RoF.126
+	title = RoF.126.t
+	desc = RoF.126.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF.126.a
+	}
+}
+
+# Saxe-Weimar accepts the offer
+country_event = {
+	id = RoF.127
+	title = RoF.127.t
+	desc = RoF.127.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF.127.a
+		annex_country = { target = SXW }
+		add_state_core = 579
+		add_state_core = 580
+		hidden_effect = {
+			NUS = {
+				country_event = { days = 1 id = RoF_news.10 }
+			}
+		}
+	}
+}

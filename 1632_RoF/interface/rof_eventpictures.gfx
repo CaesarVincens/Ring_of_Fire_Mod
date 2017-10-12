@@ -1,11 +1,41 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_report_event_rof_placeholder"
+		texturefile = "gfx/event_pictures/report_event_richelieu.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_scottish_mercenaries"
 		texturefile = "gfx/event_pictures/report_event_scots_merc.dds"
 	}
 
 	spriteType = {
+		name = "GFX_report_event_richelieu"
+		texturefile = "gfx/event_pictures/report_event_richelieu.dds"
+	}
+
+	spriteType = {
 		name = "GFX_news_event_scottish_mercenaries"
 		texturefile = "gfx/event_pictures/news_event_scots_merc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_landscape_urban_1"
+		texturefile = "gfx/event_pictures/news_event_landscape_urban_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_landscape_rural_1"
+		texturefile = "gfx/event_pictures/news_event_landscape_rural_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_landscape_port"
+		texturefile = "gfx/event_pictures/news_event_landscape_port.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_landscape_london"
+		texturefile = "gfx/event_pictures/news_event_landscape_london.dds"
 	}

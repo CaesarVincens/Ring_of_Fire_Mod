@@ -1592,7 +1592,10 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_ideas = refuge_from_the_storm
+			swap_ideas = {
+				remove_idea = people_out_of_time
+				add_ideas = refuge_from_the_storm
+			}
 			hidden_effect = { set_country_flag = NUS_welcome_refugees_flag }
 		}
 		ai_will_do = {
@@ -1610,6 +1613,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
+			add_ideas = new_american_revolution
 		}
 		ai_will_do = {
 			factor = 19
@@ -1646,6 +1650,40 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	focus = {
+		id = invite_thuringian_cities
+		icon = GFX_goal_improve_relations
+		prerequisite = { focus = NUS_election_of_1631 }
+		x = 21
+		y = 4
+		cost = 5
+		available_if_capitulated = no
+		available = {
+		}
+		completion_reward = {
+			hidden_effect = {
+				579 = { set_state_flag = NUS_thur_inv }
+				580 = { set_state_flag = NUS_thur_inv }
+			}
+			if ={
+				limit = {
+					country_exists = SXW
+					SXW = {
+						every_owned_state = { has_state_flag = NUS_thur_inv }
+					}
+				}
+				SXW = { country_event = { id = RoF.125 } }
+				else = {
+					NUS = {
+						transfer_state = 579
+						add_state_core = 579
+						transfer_state = 580
+						add_state_core = 580
+					}
+				}
+			}
 		}
 	}
 }

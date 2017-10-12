@@ -1,0 +1,26 @@
+﻿add_namespace = RoF_news
+
+# NUS incorporates SXW
+news_event = {
+	id = RoF_news.10
+	title = RoF_news.10.t
+	desc = RoF_news.10.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.10.a
+		trigger = {
+			NOT = {
+				TAG = NUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.10.b
+		trigger = { TAG = NUS }
+	}
+}

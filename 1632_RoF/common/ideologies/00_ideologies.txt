@@ -321,3 +321,8 @@ ideologies = {
 
 
 }
+
+#catholic
+#protestant
+#secular
+#muslim

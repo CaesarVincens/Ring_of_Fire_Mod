@@ -9,27 +9,42 @@ bookmarks = {
 		
 
 		"NUS"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "NUS_RING_OF_FIRE_DESC"
 		}
 
 		"SWE"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "SWE_RING_OF_FIRE_DESC"
 		}
 		"AUS"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "AUS_RING_OF_FIRE_DESC"
 		}
 		"FRA"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "FRA_RING_OF_FIRE_DESC"
 		}
 		"TUR"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-		"POL"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "TUR_RING_OF_FIRE_DESC"
 		}
 		"SPR"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "SPR_RING_OF_FIRE_DESC"
 		}
+		"UPS"={
+			history = "UPS_RING_OF_FIRE_DESC"
+		}
+		"---"={
+			history = "RING_OF_FIRE_DESC"
+		}
+		"POL"={
+			minor = yes
+			history = "RING_OF_FIRE_DESC"
+		}
+		"BOH"={
+			minor = yes
+			history = "RING_OF_FIRE_DESC"
+		}
+		"SOV"={
+			minor = yes
+			history = "RING_OF_FIRE_DESC"
+		}		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

@@ -11,6 +11,14 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 Currently in Early Alpha; expect to find bugs and oddities
 
+Alpha 0.1.1 - Oct. 11, 2017
+Additions to NUS focus tree
+Events tied into NUS focus tree
+Add some new event pictures including Cardinal Richelieu as a placeholder
+
+Alpha 0.1.0b - Oct. 10, 2017
+Fix localisation encoding
+
 Alpha 0.1.0 - Oct. 10, 2017
 Added Mercenary Infantry and Cavalry, which take 1/10 manpower and 10X infantry equipment, also slightly worse than regulars
 Adjusted dates to 1631 start date; technology dates adjusted to match for now.
