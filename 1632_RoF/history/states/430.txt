@@ -1,28 +1,27 @@
+
 state={
 	id=430
-	name= "STATE_430"
-	manpower = 208000
-
+	name="STATE_430"
 	resources={
-		oil = 1
-		steel = 1
+		oil=1.000
+		steel=1.000
 	}
-	state_category = rural
 
 	history={
-		owner = SIL
-		victory_points = { 9412 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = POL
-		add_core_of = SIL
+
 	}
 
 	provinces={
-		9412 
+		703 709 720 751 870 926 954 1527 1560 1595 1604 1655 1760 1881 4166 4437 4508 4527 4531 4590 4738 4834 4854 5205 6713 6737 7551 7611 7626 7829 7831 9450 9653 9654 9657 9678 9682 9796 9810 10339 10341 10393 10448 10457 10461 10599 11589 11621 11635 11637 12305 12312 12357 12365 12368 12437 12456 12497 12697 
 	}
+	manpower=208000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

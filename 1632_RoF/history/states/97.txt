@@ -1,23 +1,28 @@
+
 state={
 	id=97
-	name= "STATE_97"
-	manpower = 548000
-
-	state_category = rural
+	name="STATE_97"
 
 	history={
-		owner = CNT
-		victory_points = { 9303 8 }
+		owner = ENG
+		victory_points = {
+			9303 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
-		add_core_of = CNT
+		add_core_of = ENG
+		add_core_of = IRE
 	}
 
 	provinces={
-		3396 9303 9369 11287 
+		3396 9255 9303 9321 9369 11238 11287 11371 
 	}
+	manpower=548000
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

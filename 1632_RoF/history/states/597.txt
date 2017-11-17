@@ -1,23 +1,28 @@
+
 state={
 	id=597
-	name= "STATE_597"
-	manpower = 627440
-
-	state_category = pastoral
+	name="STATE_597"
 
 	history={
 		owner = NSP
-		victory_points = { 12753 3 }
+		victory_points = {
+			12753 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = NSP
+
 	}
 
 	provinces={
-		1900 2021 4904 4965 12715 12753 12867 
+		1900 2021 2077 4904 4965 4991 12715 12753 12867 
 	}
+	manpower=627440
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

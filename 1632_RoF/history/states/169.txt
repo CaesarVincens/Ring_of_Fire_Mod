@@ -1,31 +1,36 @@
+
 state={
 	id=169
-	name= "STATE_169"
-	manpower = 1132500
-
+	name="STATE_169"
 	resources={
-		aluminium = 1
-		rubber = 2
-		steel = 1
+		aluminium=1.000
+		rubber=2.000
+		steel=1.000
 	}
-	state_category = rural
 
 	history={
-		victory_points = { 1969 8 }
+		victory_points = {
+			1969 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = MLI
 		add_core_of = SON
 		add_core_of = ZAZ
 		add_core_of = HAS
 		add_core_of = KAT
+
 	}
 
 	provinces={
-		1891 1969 
+		492 860 1587 4594 4622 4756 5059 7422 7480 7640 10192 10352 10380 10407 10520 11509 11942 12325 12470 12498 12735 12803 
 	}
+	manpower=1132500
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

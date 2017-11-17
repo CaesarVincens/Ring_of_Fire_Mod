@@ -7,14 +7,14 @@ state={
 		aluminium = 16
 		chromium = 2
 	}
-	state_category = pastoral
+	state_category = large_town
 
 	history={
 		owner = DEN
 		victory_points = { 3090 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}

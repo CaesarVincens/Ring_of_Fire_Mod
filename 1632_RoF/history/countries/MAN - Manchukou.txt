@@ -4,6 +4,11 @@ oob = "MAN_OOB"
 
 # Starting tech
 set_technology = {
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -16,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 70
         }
-        democratic = {
+        liberal = {
             popularity = 28
         }
         neutrality = {
@@ -32,13 +37,13 @@ set_politics = {
 
 
 add_ideas = {
-		low_economic_mobilisation
+		balanced_eco
 }
 set_national_unity = 0.7026
 create_country_leader = {
-    name = "Mingzhu Zhanshan"
+    name = "Hong Taiji Qing"
     desc = "POLITICS_MINGZHU_ZHANSHAN_DESC"
-    picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+    picture = "gfx/leaders/MAN/Portrait_Manchu_Hong_Taiji.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

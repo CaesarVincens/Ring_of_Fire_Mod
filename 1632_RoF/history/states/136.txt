@@ -1,27 +1,35 @@
+
 state={
 	id=136
-	name= "STATE_136"
-	manpower = 1341600
-
+	name="STATE_136"
 	resources={
-		aluminium = 8
-		steel = 49
+		aluminium=8.000
+		steel=49.000
 	}
-	state_category = large_town
 
 	history={
 		owner = FRA
-		victory_points = { 9500 3 }
+		victory_points = {
+			9500 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
 			air_base = 0
+			11548 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = FRA
+
 	}
 
 	provinces={
-		454 485 575 6569 6585 9500 11420 11548 
+		454 485 6569 6585 9500 11420 11548 
 	}
+	manpower=1341600
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

@@ -1,28 +1,28 @@
+
 state={
 	id=637
-	name= "STATE_637"
-	manpower = 24000
-
+	name="STATE_637"
 	resources={
-		aluminium = 2
-		steel = 2
-		tungsten = 8
+		aluminium=2.000
+		steel=2.000
+		tungsten=8.000
 	}
-	state_category = rural
 
 	history={
-		owner = SPU
-		victory_points = { 5143 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = SPU
+
 	}
 
 	provinces={
-		5143 8255 
+		2106 2152 2194 2195 2208 2209 5165 5213 8169 8203 10973 10986 11023 12901 12922 12943 
 	}
+	manpower=24000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

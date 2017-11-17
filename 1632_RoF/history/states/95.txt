@@ -15,9 +15,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 
 		}
 		add_core_of = CIR
@@ -26,9 +26,9 @@ state={
 	}
 
 	provinces={
-		714 717 719 731 735 3717 3720 3760 6702 6718 6733 6736 6738 6768 6781 9691 9694 9696 9709 11633 11661 11668 11681 11690 11693 
+		714 717 719 735 3698 3717 3720 3760 6692 6718 6721 6733 6736 6738 6768 6781 9649 9663 9674 9691 9694 9696 9709 11617 11633 11647 11664 11668 11681 
 	}
 	manpower=333200
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=town
 }

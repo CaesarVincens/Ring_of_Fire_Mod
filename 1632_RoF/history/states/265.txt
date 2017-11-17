@@ -1,23 +1,28 @@
+
 state={
 	id=265
-	name= "STATE_265"
-	manpower = 1815700
-
-	state_category = rural
+	name="STATE_265"
 
 	history={
 		owner = MDA
-		victory_points = { 6747 8 }
+		victory_points = {
+			6747 8 
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = MDA
+
 	}
 
 	provinces={
-		577 723 744 3728 3741 6584 6706 6729 6747 6761 9548 9701 9716 11534 11652 11655 11672 11689 
+		723 744 3728 3741 6584 6706 6729 6747 6761 9548 9701 9716 11534 11652 11655 11672 11689 
 	}
+	manpower=1815700
+	buildings_max_level_factor=1.000
+	state_category=town
 }

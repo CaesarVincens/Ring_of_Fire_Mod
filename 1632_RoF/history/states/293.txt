@@ -1,27 +1,27 @@
+
 state={
 	id=293
-	name= "STATE_293"
-	manpower = 800000
-
+	name="STATE_293"
 	resources={
-		aluminium = 1
-		tungsten = 6
+		aluminium=1.000
+		tungsten=6.000
 	}
-	state_category = pastoral
 
 	history={
-		owner = MUG
-		victory_points = { 4072 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = MUG
+
 	}
 
 	provinces={
-		4072 7177 10019 
+		515 736 1262 1671 1763 1788 1804 1848 1873 2407 3010 3481 3498 3706 3721 3769 3800 4218 4272 4426 4739 4765 4790 4872 5119 6726 6754 6779 7348 7696 7718 7766 7782 7787 7820 7830 7858 8653 9669 10527 10552 10611 10656 10684 10703 11440 12145 12166 12534 12593 12603 12636 12663 12682 12688 13075 13163 13167 13183 13185 13192 
 	}
+	manpower=800000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

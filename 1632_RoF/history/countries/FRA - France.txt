@@ -4,12 +4,15 @@ oob = "FRA_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 150
 
 
 set_politics = {
@@ -18,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        democratic = {
+        liberal = {
             popularity = 19
         }
         neutrality = {
@@ -34,6 +37,8 @@ set_politics = {
 
 
 add_ideas = {
+	FRA_cardinal_richelieu
+	anti_habsburg_diplomacy
 }
 set_national_unity = 0.7
 create_country_leader = {
@@ -44,4 +49,11 @@ create_country_leader = {
     ideology = absolute_monarchy
     traits = {
     }
+}
+
+create_corps_commander = {
+	name = "Vicomte de Turenne"
+	picture = "Portrait_France_Turenne.dds"
+	traits = { }
+	skill = 3
 }

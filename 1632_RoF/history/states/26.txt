@@ -1,26 +1,31 @@
+
 state={
 	id=26
-	name= "STATE_26"
-	manpower = 632008
-
+	name="STATE_26"
 	resources={
-		aluminium = 3
+		aluminium=3.000
 	}
-	state_category = large_town
 
 	history={
 		owner = BAD
-		victory_points = { 6542 8 }
+		victory_points = {
+			6542 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = BAD
+
 	}
 
 	provinces={
-		3530 6542 6568 
+		3530 6542 
 	}
+	manpower=632008
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

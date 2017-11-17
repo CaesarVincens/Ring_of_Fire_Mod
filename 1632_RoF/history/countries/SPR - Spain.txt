@@ -5,12 +5,15 @@ oob = "SPR_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 250
 
 
 # DIPLOMACY
@@ -18,11 +21,11 @@ if = {
     limit = {
         has_dlc = "Together for Victory"
     }
-    set_autonomy = {
-        target = SPN
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
-    }
+    #set_autonomy = {
+    #    target = SPN
+    #    autonomous_state = autonomy_dominion
+    #    freedom_level = 0.4
+    #}
     set_autonomy = {
         target = NSP
         autonomous_state = autonomy_dominion
@@ -34,7 +37,7 @@ if = {
         freedom_level = 0.4
     }
     else = {
-        puppet = SPN
+        #puppet = SPN
         puppet = NSP
         puppet = SPU
     }
@@ -52,7 +55,7 @@ set_politics = {
         absolutist = {
             popularity = 88
         }
-        democratic = {
+        constitutionalist = {
             popularity = 9
         }
         neutrality = {
@@ -67,7 +70,8 @@ set_politics = {
 }
 
 add_ideas = {
-	partial_economic_mobilisation
+	military_focus_eco
+	habsburg_cousins
 }
 set_national_unity = 0.7018
 create_country_leader = {

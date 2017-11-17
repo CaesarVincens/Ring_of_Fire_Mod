@@ -3,15 +3,15 @@ state={
 	name= "STATE_115"
 	manpower = 24000
 
-	state_category = tiny_island
+	state_category = rural
 
 	history={
 		victory_points = { 4967 8 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 		}
 		add_core_of = MAL
 	}

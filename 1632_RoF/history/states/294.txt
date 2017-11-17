@@ -1,28 +1,33 @@
+
 state={
 	id=294
-	name= "STATE_294"
-	manpower = 2116000
-
+	name="STATE_294"
 	resources={
-		aluminium = 0
-		rubber = 6
+		aluminium=0.000
+		rubber=6.000
 	}
-	state_category = town
 
 	history={
 		owner = MYS
-		victory_points = { 10808 3 }
+		victory_points = {
+			10808 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = MAD
 		add_core_of = MYS
+
 	}
 
 	provinces={
-		7363 8067 10130 10274 10808 12275 
+		1238 7363 8067 10130 10274 10808 12275 
 	}
+	manpower=2116000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

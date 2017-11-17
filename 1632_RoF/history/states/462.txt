@@ -12,11 +12,15 @@ state={
 		victory_points = {
 			11606 3 
 		}
+		victory_points = {
+			575 3
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
-			arms_factory = 0
+			industrial_complex = 1
+			arms_factory = 1
 			air_base = 0
+			575 = { naval_base = 1 }
 
 		}
 		add_core_of = SPN
@@ -24,7 +28,7 @@ state={
 	}
 
 	provinces={
-		3516 3576 9536 11606 13081 
+		575 3476 3516 3536 3576 6504 9536 11483 11606 13081 
 	}
 	manpower=280396
 	buildings_max_level_factor=1.000

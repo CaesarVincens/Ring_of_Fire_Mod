@@ -4,27 +4,23 @@ state={
 	name="STATE_489"
 
 	history={
-		owner = TUR
 		victory_points = {
-			6586 3 
+			96 3 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 0
+			infrastructure = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = HUN
-		add_core_of = SLO
-		add_core_of = TUR
 
 	}
 
 	provinces={
-		3565 3581 6573 6586 6604 
+		1823 1839 1863 4728 4744 5264 7878 12207 12522 13063 13067 13204 
 	}
 	manpower=714528
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category=wasteland
 }

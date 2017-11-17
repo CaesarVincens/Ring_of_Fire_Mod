@@ -1,28 +1,33 @@
+
 state={
 	id=317
-	name= "STATE_317"
-	manpower = 1408000
-
+	name="STATE_317"
 	resources={
-		aluminium = 0
-		rubber = 1
-		steel = 0
+		aluminium=0.000
+		rubber=1.000
+		steel=0.000
 	}
-	state_category = rural
 
 	history={
-		victory_points = { 2050 8 }
+		victory_points = {
+			2050 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = BEN
 		add_core_of = OYO
+
 	}
 
 	provinces={
-		2050 12731 
+		1951 2050 8039 8096 10919 12731 12785 12787 12843 
 	}
+	manpower=1408000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

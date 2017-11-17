@@ -13,9 +13,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 
 		}
 		add_core_of = NDG
@@ -23,7 +23,7 @@ state={
 	}
 
 	provinces={
-		5158 8248 
+		5158 8248 12958 
 	}
 	manpower=176760
 	buildings_max_level_factor=1.000

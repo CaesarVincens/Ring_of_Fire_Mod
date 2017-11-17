@@ -1,0 +1,67 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_leader_AUS_Ferdinand_2"
+		texturefile = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_AUS_Ferdinand_III"
+		texturefile = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_III.dds"
+	}
+
+	spriteType = {
+		name = "GFX_commander_AUS_Piccolomini"
+		texturefile = "gfx/leaders/AUS/Portrait_Austria_Piccolomini.dds"
+	}
+
+	spriteType = {
+		name = "GFX_commander_AUS_Tilly"
+		texturefile = "gfx/leaders/AUS/Portrait_Austria_Tilly.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_BAV_Maximilian"
+		texturefile = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_leader_BAV_Albrecht_VI"
+		texturefile = "gfx/leaders/BAV/Portrait_Bavaria_Albrecht_VI.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_leader_BOH_Wallenstein"
+		texturefile = "gfx/leaders/BOH/Portrait_Bohemia_Albrecht_Wallenstein.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_commander_BOH_Pappenheim"
+		texturefile = "gfx/leaders/BOH/Portrait_Bohemia_Pappenheim.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_NUS_Michael_Stearns"
+		texturefile = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_leader_NUS_John_Simpson"
+		texturefile = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_commander_NUS_Frank_Jackson"
+		texturefile = "gfx/leaders/USA/Portrait_USA_Generic_land_4.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_SPN_Don_Fernando"
+		texturefile = "gfx/leaders/SPN/Portrait_Spanish_Netherlands_Don_Fernando.dds"
+	}
+
+	spriteType = {
+		name = "GFX_admiral_UPS_Maarten_Tromp"
+		texturefile = "gfx/leaders/UPS/Portrait_Netherlands_Maarten_Tromp"
+	}
+
+}

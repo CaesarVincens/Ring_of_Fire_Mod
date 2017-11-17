@@ -1,26 +1,31 @@
+
 state={
 	id=406
-	name= "STATE_406"
-	manpower = 61000
-
+	name="STATE_406"
 	resources={
-		aluminium = 2
+		aluminium=2.000
 	}
-	state_category = rural
 
 	history={
-		owner = RAV
-		victory_points = { 694 8 }
+		owner = BRA
+		victory_points = {
+			694 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
-		add_core_of = RAV
+		add_core_of = BRA
+
 	}
 
 	provinces={
-		519 694 
+		9238 11219 11359 
 	}
+	manpower=61000
+	buildings_max_level_factor=1.000
+	state_category=city
 }

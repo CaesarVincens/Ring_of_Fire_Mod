@@ -1,27 +1,32 @@
+
 state={
 	id=82
-	name= "STATE_82"
-	manpower = 14127060
-
+	name="STATE_82"
 	resources={
-		rubber = 1
-		steel = 2
+		rubber=1.000
+		steel=2.000
 	}
-	state_category = large_town
 
 	history={
 		owner = CHI
-		victory_points = { 12467 5 }
+		victory_points = {
+			12467 5 
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 4
 			arms_factory = 0
-			air_base = 1
+			air_base = 0
+
 		}
 		add_core_of = CHI
+
 	}
 
 	provinces={
-		1036 4619 7167 7580 7637 9934 9959 10462 12467 
+		4009 7167 7580 7625 7637 9934 9959 10462 
 	}
+	manpower=14127060
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

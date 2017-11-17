@@ -1,27 +1,32 @@
+
 state={
 	id=320
-	name= "STATE_320"
-	manpower = 557600
-
+	name="STATE_320"
 	resources={
-		aluminium = 8
-		steel = 34
+		aluminium=8.000
+		steel=34.000
 	}
-	state_category = town
 
 	history={
 		owner = PAL
-		victory_points = { 3558 3 }
+		victory_points = {
+			3558 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = PAL
+
 	}
 
 	provinces={
-		563 3558 11547 
+		563 3423 3558 11547 
 	}
+	manpower=557600
+	buildings_max_level_factor=1.000
+	state_category=town
 }

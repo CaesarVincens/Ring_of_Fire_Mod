@@ -1,26 +1,31 @@
+
 state={
 	id=1
-	name= "STATE_1"
-	manpower = 399600
-
+	name="STATE_1"
 	resources={
-		steel = 6
+		steel=6.000
 	}
-	state_category = town
 
 	history={
 		owner = AAC
-		victory_points = { 9522 8 }
+		victory_points = {
+			9522 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = AAC
+
 	}
 
 	provinces={
-		9522 
+		3512 
 	}
+	manpower=399600
+	buildings_max_level_factor=1.000
+	state_category=city
 }

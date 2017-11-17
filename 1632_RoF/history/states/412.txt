@@ -9,24 +9,39 @@ state={
 	history={
 		owner = SAX
 		victory_points = {
-			478 3 
+			3535 3 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
 			air_base = 0
+			9471 = {
+				bunker = 1
+
+			}
+			9441 = {
+				bunker = 1
+
+			}
+			6559 = {
+				bunker = 1
+
+			}
+			3535 = {
+				bunker = 1
+
+			}
 
 		}
 		add_core_of = SAX
-		add_core_of = AUS
 
 	}
 
 	provinces={
-		478 3572 11415 
+		3535 6559 9441 9471 11481 11545 
 	}
 	manpower=340000
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }

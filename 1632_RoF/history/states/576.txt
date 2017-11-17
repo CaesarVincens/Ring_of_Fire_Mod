@@ -7,16 +7,16 @@ state={
 		chromium = 1
 		oil = 58
 	}
-	state_category = rural
+	state_category = town
 
 	history={
 		owner = WAL
 		victory_points = { 3663 8 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 		}
 		add_core_of = WAL
 	}

@@ -1,11 +1,14 @@
-﻿capital = 38
+﻿capital = 37
 
 oob = "BOH_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -13,62 +16,49 @@ set_convoys = 0
 
 
 # DIPLOMACY
-if = {
-    limit = {
-        has_dlc = "Together for Victory"
-    }
-    set_autonomy = {
-        target = SIL
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
-    }
-    else = {
-        puppet = SIL
-    }
-}
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = BOH_research
-}
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = AUS_research
-}
 
 set_politics = {
 
-    parties = {
-        absolutist = {
-            popularity = 78
-        }
-        democratic = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
-    last_election = "1631.1.1"
-    election_frequency = 48
-    elections_allowed = no
+	parties = {
+		absolutist = {
+			popularity = 28
+		}
+		constitutionalist = {
+			popularity = 58
+		}
+		liberal = {
+			popularity = 10
+		}
+		neutrality = {
+			popularity = 4
+		}
+	}
+	
+	ruling_party = constitutionalist
+	last_election = "1631.1.1"
+	election_frequency = 48
+	elections_allowed = no
 }
 
 add_ideas = {
-	low_economic_mobilisation
+	balanced_eco
 }
 set_national_unity = 0.7
-create_country_leader = {
-    name = "Ferdinand II von Habsburg"
-    desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
-    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
+	create_country_leader = {
+		name = "Albrecht von Wallenstein"
+		desc = "POLITICS_WALLENSTEIN_DESC"
+		picture = "GFX_leader_BOH_Wallenstein"
+		ideology = constitutional_monarchy
+		traits = {
+		}
+	}
+	create_country_leader = {
+	name = "Ferdinand II von Habsburg"
+	desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
+	picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
+	expire = "1660.1.1"
+	ideology = absolute_monarchy
+	traits = {
+		stand_against_ottoman
+   }
 }

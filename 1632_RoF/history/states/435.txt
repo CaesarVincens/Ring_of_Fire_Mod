@@ -7,14 +7,14 @@ state={
 		aluminium = 20
 		steel = 35
 	}
-	state_category = rural
+	state_category = town
 
 	history={
 		owner = SPR
 		victory_points = { 3646 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}

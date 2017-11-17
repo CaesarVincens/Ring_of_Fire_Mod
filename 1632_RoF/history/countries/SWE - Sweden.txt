@@ -5,23 +5,34 @@ oob = "SWE_OOB"
 
 # Starting tech
 set_technology = {
-early_destroyer = 1
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+early_flintlock_tech = 1
+heavy_artillery_1 = 1
+light_artillery_1  = 1
+transport = 1
+}
+
+add_named_threat = { threat = 10 name = swedish_intervention }
+
+declare_war_on = {
+	target = AUS
+	type = annex_everything 
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 100
 
 
 # DIPLOMACY
 if = {
     limit = {
-        has_dlc = "Together for Victory"
+        #has_dlc = "Together for Victory"
     }
     set_autonomy = {
         target = POM
-        autonomous_state = autonomy_dominion
+        autonomous_state = autonomy_rof_vassal
         freedom_level = 0.4
     }
     else = {
@@ -35,13 +46,15 @@ if = {
     add_to_tech_sharing_group = SWE_research
 }
 
+diplomatic_relation = { country = SOV relation = non_aggression_pact }
+
 set_politics = {
 
     parties = {
-        absolutist = {
+        constitutionalist = {
             popularity = 88
         }
-        democratic = {
+        liberal = {
             popularity = 9
         }
         neutrality = {
@@ -49,7 +62,7 @@ set_politics = {
         }
     }
     
-    ruling_party = absolutist
+    ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
@@ -64,15 +77,41 @@ add_to_faction = BRS
 add_to_faction = HES
 
 add_ideas = {
-	partial_economic_mobilisation
+	military_focus_eco
+	extensive_conscription
+	SWE_FRA_support
+	SWE_UPS_support
+	SWE_lion_of_the_north
 }
-set_national_unity = 0.7054
+set_national_unity = 0.70
 create_country_leader = {
     name = "Gustavus II Adolphus Vasa"
     desc = "POLITICS_ALBRECHT_GYNDESTOLPE_DESC"
     picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = constitutional_monarchy
     traits = {
+		golden_king
     }
+}
+
+create_field_marshal = {
+	name = "Gustav Horn"
+	picture = "Portrait_Sweden_Gustav_Horn.dds"
+	traits = { }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Gustavus II Adolphus Vasa"
+	picture = "Portrait_Sweden_Gustavus_Adolphus.dds"
+	traits = { }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Johan Baner"
+	picture = "Portrait_Sweden_Johan_Baner.dds"
+	traits = { }
+	skill = 4
 }

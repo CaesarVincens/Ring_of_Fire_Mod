@@ -16,6 +16,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_breitenfeld"
+		texturefile = "gfx/event_pictures/report_event_breitenfeld.dds"
+	}
+
+	spriteType = {
 		name = "GFX_news_event_scottish_mercenaries"
 		texturefile = "gfx/event_pictures/news_event_scots_merc.dds"
 	}
@@ -39,3 +44,25 @@ spriteTypes = {
 		name = "GFX_news_event_landscape_london"
 		texturefile = "gfx/event_pictures/news_event_landscape_london.dds"
 	}
+
+	spriteType = {
+		name = "GFX_news_event_breitenfeld"
+		texturefile = "gfx/event_pictures/news_event_breitenfeld.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_destruction"
+		texturefile = "gfx/event_pictures/news_event_destruction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_battle_SPR"
+		texturefile = "gfx/event_pictures/news_event_battle_SPR.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_battle_sea"
+		texturefile = "gfx/event_pictures/news_event_battle_sea.dds"
+	}
+
+}

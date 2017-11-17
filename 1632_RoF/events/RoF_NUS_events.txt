@@ -1,9 +1,50 @@
-add_namespace = RoF
+﻿add_namespace = RoF_NUS
 
 country_event = {
-	id = RoF.105
-	title = RoF.105.t
-	desc = RoF.105.d
+	id = RoF_NUS.100
+	title = RoF_NUS.100.t
+	desc = RoF_NUS.100.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NUS.100.a
+		custom_effect_tooltip = NUS_uptime_knowledge
+		hidden_effect = {
+			set_country_flag = accepted_uptimers
+			add_ideas = NUS_uptime_knowledge_idea
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				is_historical_focus_on = yes
+				tag = SPR
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = RoF_NUS.100.b
+		hidden_effect = {
+			set_country_flag = rejected_uptimers
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				is_historical_focus_on = yes
+				tag = SWE
+				factor = 0
+			}
+		}
+	}
+}
+
+#mackays_cavalry
+country_event = {
+	id = RoF_NUS.105
+	title = RoF_NUS.105.t
+	desc = RoF_NUS.105.d
 	picture = GFX_report_event_scottish_mercenaries
 	fire_only_once = yes
 
@@ -13,11 +54,11 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 5
+		days = 3
 	}
 	
 	option = {
-		name = RoF.105.a
+		name = RoF_NUS.105.a
 		hidden_effect = {
 			set_country_flag = mackays_cavalry
 			load_oob = "NUS_Mackay_Cav"
@@ -25,63 +66,1003 @@ country_event = {
 	}
 }
 
+#battle of the crapper
+country_event = {
+	id = RoF_NUS.110
+	title = RoF_NUS.110.t
+	desc = RoF_NUS.110.d
+	picture = GFX_report_event_scottish_mercenaries
+	fire_only_once = yes
+
+	trigger = {
+		tag = NUS
+		date > 1631.6.28
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_battle_of_crapper
+		}
+		army_experience = 15
+	}
+	option = {
+		name = RoF_NUS.110.a
+		add_ideas = refuge_from_the_storm
+		add_manpower = 6000
+		hidden_effect = {
+			set_country_flag = NUS_welcome_refugees_flag
+		}
+		ai_chance = { base = 75 }
+	}
+	option = {
+		name = RoF_NUS.110.b
+		add_ideas = americans_first
+		add_manpower = 6000
+		hidden_effect = {
+			set_country_flag = NUS_conscript_refugees_flag
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#battle of Jena
+country_event = {
+	id = RoF_NUS.112
+	title = RoF_NUS.112.t
+	desc = RoF_NUS.112.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NUS
+		date > 1631.10.5
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_battle_of_jena
+			set_country_flag = NUS_start_CoC
+		}
+	}
+
+	option = {
+		name = RoF_NUS.112.a
+	}
+}
+
 #NUS wants to incorporate SXW
 country_event = {
-	id = RoF.125
-	title = RoF.125.t
-	desc = RoF.125.d
+	id = RoF_NUS.120
+	title = {
+		text = RoF_NUS.120.ta
+		trigger = {
+			NUS = { has_completed_focus = NUS_demand_thuringia }
+		}
+	}
+	title = {
+		text = RoF_NUS.120.tb
+		trigger = {
+			NUS = { has_completed_focus = NUS_invite_thuringian_cities }
+		}
+	}
+	desc = {
+		text = RoF_NUS.120.da
+		trigger = {
+			NUS = { has_completed_focus = NUS_demand_thuringia }
+		}
+	}
+	desc = {
+		text = RoF_NUS.120.db
+		trigger = {
+			NUS = { has_completed_focus = NUS_invite_thuringian_cities }
+		}
+	}
 	picture = GFX_report_event_rof_placeholder
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF.125.a
+		name =  RoF_NUS.120.a
+		trigger = {
+			NUS = { has_completed_focus = NUS_demand_thuringia }
+		}
 		ai_chance = { factor = 100 }
+		set_country_flag = SXW_accept_demand
 		NUS = {
-			country_event = { id = RoF.127 }
+			country_event = { id = RoF_NUS.121 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 	option = { # Refuse
-		name =  RoF.125.b
+		trigger = {
+			NUS = { has_completed_focus = NUS_demand_thuringia }
+		}
+		name =  RoF_NUS.120.b
+		set_country_flag = SXW_refuse_demand
 		NUS = {
-			country_event = { id = RoF.126 }
+			country_event = { id = RoF_NUS.121 }
+		}
+	}
+	option = { # Accept
+		name =  RoF_NUS.120.c
+		trigger = {
+			NUS = { has_completed_focus = NUS_invite_thuringian_cities }
+		}
+		ai_chance = { factor = 100 }
+		set_country_flag = SXW_accept_invite
+		NUS = {
+			country_event = { id = RoF_NUS.121 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF_NUS.120.d
+		trigger = {
+			NUS = { has_completed_focus = NUS_invite_thuringian_cities }
+		}
+		set_country_flag = SXW_refuse_invite
+		NUS = {
+			country_event = { id = RoF_NUS.121 }
 		}
 	}
 }
 
-# Saxe-Weimar declines the offer
+# Saxe-Weimar responds the offer
 country_event = {
-	id = RoF.126
-	title = RoF.126.t
-	desc = RoF.126.d
-	picture = GFX_report_event_rof_placeholder
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = RoF.126.a
+	id = RoF_NUS.121
+	title = RoF_NUS.121.t
+	desc = {
+		text = RoF_NUS.121.da
+		trigger = {
+			SXW = { has_country_flag = SXW_refuse_demand }
+		}
 	}
-}
-
-# Saxe-Weimar accepts the offer
-country_event = {
-	id = RoF.127
-	title = RoF.127.t
-	desc = RoF.127.d
+	desc = {
+		text = RoF_NUS.121.db
+		trigger = {
+			SXW = { has_country_flag = SXW_accept_demand }
+		}
+	}
+	desc = {
+		text = RoF_NUS.121.dc
+		trigger = {
+			SXW = { has_country_flag = SXW_refuse_invite }
+		}
+	}
+	desc = {
+		text = RoF_NUS.121.dd
+		trigger = {
+			SXW = { has_country_flag = SXW_accept_invite }
+		}
+	}
 	picture = GFX_report_event_rof_placeholder
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = RoF.127.a
+		name = RoF_NUS.121.a
+		trigger = {
+			SXW = { has_country_flag = SXW_refuse_demand }
+		}
+		create_wargoal = {
+			target = SXW
+			type = annex_everything
+		}
+	}
+	option = {
+		name = RoF_NUS.121.b
+		trigger = {
+			SXW = { has_country_flag = SXW_accept_demand }
+		}
 		annex_country = { target = SXW }
 		add_state_core = 579
 		add_state_core = 580
 		hidden_effect = {
 			NUS = {
-				country_event = { days = 1 id = RoF_news.10 }
+				news_event = { days = 1 id = RoF_news.10 }
 			}
+		}
+	}
+	option = {
+		name = RoF_NUS.121.c
+		trigger = {
+			SXW = { has_country_flag = SXW_refuse_invite }
+		}
+	}
+	option = {
+		name = RoF_NUS.121.d
+		trigger = {
+			SXW = { has_country_flag = SXW_accept_invite }
+		}
+		annex_country = { target = SXW transfer_troops = yes }
+		add_state_core = 579
+		add_state_core = 580
+		hidden_effect = {
+			NUS = {
+				news_event = { days = 1 id = RoF_news.11 }
+			}
+		}
+	}
+}
+
+# NUS wants to Annex Magdeburg
+country_event = {
+	id = RoF_NUS.122
+	title = RoF_NUS.122.t
+	desc = RoF_NUS.122.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.122.a
+		ai_chance = { factor = 100 }
+		set_country_flag = MAG_accept_demand
+		NUS = {
+			country_event = { id = RoF_NUS.123 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF_NUS.122.b
+		set_country_flag = MAG_refuse_demand
+		NUS = {
+			country_event = { id = RoF_NUS.123 }
+		}
+	}
+}
+
+# Magdeburg Responds
+country_event = {
+	id = RoF_NUS.123
+	title = RoF_NUS.123.t
+	desc = {
+		text = RoF_NUS.123.da
+		trigger = {
+			MAG = { has_country_flag = MAG_refuse_demand }
+		}
+	}
+	desc = {
+		text = RoF_NUS.123.db
+		trigger = {
+			MAG = { has_country_flag = MAG_accept_demand }
+		}
+	}
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NUS.123.a
+		trigger = {
+			MAG = { has_country_flag = MAG_refuse_demand }
+		}
+		create_wargoal = {
+			target = MAG
+			type = annex_everything
+		}
+	}
+	option = {
+		name = RoF_NUS.123.b
+		trigger = {
+			MAG = { has_country_flag = MAG_accept_demand }
+		}
+		annex_country = { target = MAG }
+		#add_state_core = 247
+		hidden_effect = {
+			NUS = {
+				news_event = { days = 1 id = RoF_news.12 }
+			}
+		}
+	}
+}
+
+# NUS wants to Annex Leipzig
+country_event = {
+	id = RoF_NUS.124
+	title = RoF_NUS.124.t
+	desc = RoF_NUS.124.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.124.a
+		ai_chance = { factor = 100 }
+		set_country_flag = SAX_accept_demand
+		NUS = {
+			country_event = { id = RoF_NUS.125 }
+		}
+	}
+	option = { # Refuse
+		name =  RoF_NUS.124.b
+		set_country_flag = SAX_refuse_demand
+		NUS = {
+			country_event = { id = RoF_NUS.125 }
+		}
+	}
+}
+
+# Saxony Responds
+country_event = {
+	id = RoF_NUS.125
+	title = RoF_NUS.125.t
+	desc = {
+		text = RoF_NUS.125.da
+		trigger = {
+			SAX = { has_country_flag = SAX_refuse_demand }
+		}
+	}
+	desc = {
+		text = RoF_NUS.125.db
+		trigger = {
+			SAX = { has_country_flag = SAX_accept_demand }
+		}
+	}
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NUS.125.a
+		trigger = {
+			SAX = { has_country_flag = SAX_refuse_demand }
+		}
+		create_wargoal = {
+			target = SAX
+			type = take_claimed_state
+			generator = { 412 }
+		}
+	}
+	option = {
+		name = RoF_NUS.125.b
+		trigger = {
+			SAX = { has_country_flag = SAX_accept_demand }
+		}
+		transfer_state = 412
+		#add_state_core = 412
+		hidden_effect = {
+			NUS = {
+				news_event = { days = 1 id = RoF_news.13 }
+			}
+		}
+	}
+}
+
+# NUS wants to Annex Franconia
+country_event = {
+	id = RoF_NUS.126
+	title = RoF_NUS.126.t
+	desc = RoF_NUS.126.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.126.a
+		ai_chance = { factor = 100 }
+		set_country_flag = WRZ_accept_demand
+		NUS = {
+			country_event = { id = RoF_NUS.127 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF_NUS.126.b
+		set_country_flag = WRZ_refuse_demand
+		NUS = {
+			country_event = { id = RoF_NUS.127 }
+		}
+	}
+}
+
+# Wurzburg Responds
+country_event = {
+	id = RoF_NUS.127
+	title = RoF_NUS.127.t
+	desc = {
+		text = RoF_NUS.127.da
+		trigger = {
+			WRZ = { has_country_flag = WRZ_refuse_demand }
+		}
+	}
+	desc = {
+		text = RoF_NUS.127.db
+		trigger = {
+			WRZ = { has_country_flag = WRZ_accept_demand }
+		}
+	}
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NUS.127.a
+		trigger = {
+			WRZ = { has_country_flag = WRZ_refuse_demand }
+		}
+		create_wargoal = {
+			target = WRZ
+			type = annex_everything
+		}
+	}
+	option = {
+		name = RoF_NUS.127.b
+		trigger = {
+			WRZ = { has_country_flag = WRZ_accept_demand }
+		}
+		annex_country = { target = WRZ }
+		add_state_core = 247
+		hidden_effect = {
+			NUS = {
+				news_event = { days = 1 id = RoF_news.14 }
+			}
+		}
+	}
+}
+
+#Constitutional Convention Opener
+country_event = {
+	id = RoF_NUS.130
+	title = RoF_NUS.130.t
+	desc = RoF_NUS.130.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.130.a
+		#ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = { id = RoF_NUS.131 days = 12 }
+			country_event = { id = RoF_NUS.132 days = 25 }
+			country_event = { id = RoF_NUS.133 days = 38 }
+			country_event = { id = RoF_NUS.134 days = 51 }
+			country_event = { id = RoF_NUS.135 days = 64 }
+			set_country_flag = {
+				flag = NUS_constitution_flag
+				value = 0
+			}
+			if = {
+				limit = {
+					has_completed_focus = NUS_new_american_revolution
+				}
+				modify_country_flag = {
+					flag = NUS_constitution_flag
+					value = 5
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = NUS_fortress_america
+				}
+				modify_country_flag = {
+					flag = NUS_constitution_flag
+					value = -5
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = NUS_establish_committees_of_correspondance
+				}
+				modify_country_flag = {
+					flag = NUS_constitution_flag
+					value = 5
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = NUS_new_american_empire
+				}
+				modify_country_flag = {
+					flag = NUS_constitution_flag
+					value = -5
+				}
+			}
+		}
+	}
+}
+
+#German Citizens
+country_event = {
+	id = RoF_NUS.131
+	title = RoF_NUS.131.t
+	desc = RoF_NUS.131.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Liberal
+		name =  RoF_NUS.131.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			set_country_flag = NUS_full_citizens
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = 5
+			}
+			add_popularity = { ideology = liberal popularity = 0.05 }
+		}
+	}
+	option = { # Absolutist
+		name =  RoF_NUS.131.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_non_citizens
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = -5
+			}
+			add_popularity = { ideology = absolutist popularity = 0.05 }
+		}
+	}
+	option = { # Constitutionalist
+		name =  RoF_NUS.131.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_limited_citizens
+			add_popularity = { ideology = constitutionalist popularity = 0.05 }
+		}
+	}
+}
+
+#Economy
+country_event = {
+	id = RoF_NUS.132
+	title = RoF_NUS.132.t
+	desc = RoF_NUS.132.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Free
+		name =  RoF_NUS.132.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			set_country_flag = NUS_free_economy
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = 5
+			}
+			add_popularity = { ideology = liberal popularity = 0.05 }
+		}
+	}
+	option = { # Control
+		name =  RoF_NUS.132.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_govt_controled_economy
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = -5
+			}
+			add_popularity = { ideology = absolutist popularity = 0.05 }
+		}
+	}
+	option = { # Control
+		name =  RoF_NUS.132.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_govt_influenced_economy
+			add_popularity = { ideology = constitutionalist popularity = 0.05 }
+		}
+	}
+}
+
+#Military
+country_event = {
+	id = RoF_NUS.133
+	title = RoF_NUS.133.t
+	desc = RoF_NUS.133.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.133.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_civilian_first
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = 5
+			}
+			add_popularity = { ideology = liberal popularity = 0.05 }
+		}
+	}
+	option = { # Accept
+		name =  RoF_NUS.133.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_military_first
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = -5
+			}
+			add_popularity = { ideology = absolutist popularity = 0.05 }
+		}
+	}
+	option = { # Accept
+		name =  RoF_NUS.133.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_civ_mil_balance
+			add_popularity = { ideology = constitutionalist popularity = 0.05 }
+		}
+	}
+}
+
+#Legislature Structure
+country_event = {
+	id = RoF_NUS.134
+	title = RoF_NUS.134.t
+	desc = RoF_NUS.134.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Elected
+		name =  RoF_NUS.134.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			set_country_flag = NUS_elected_congress
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = 5
+			}
+			add_popularity = { ideology = liberal popularity = 0.05 }
+		}
+	}
+	option = { # Appointed
+		name =  RoF_NUS.134.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_appointed_congress
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = -5
+			}
+			add_popularity = { ideology = absolutist popularity = 0.05 }
+		}
+	}
+	option = { # Appointed
+		name =  RoF_NUS.134.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_mixed_congress
+			add_popularity = { ideology = constitutionalist popularity = 0.05 }
+		}
+	}
+}
+
+#Election
+country_event = {
+	id = RoF_NUS.135
+	title = RoF_NUS.135.t
+	desc = RoF_NUS.135.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = NUS_first_election
+	}
+	option = { # Accept
+		name =  RoF_NUS.135.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			set_country_flag = NUS_stearns
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = 5
+			}
+			add_popularity = { ideology = liberal popularity = 0.05 }
+		}
+	}
+	option = { # Accept
+		name =  RoF_NUS.135.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = NUS_constitution_flag
+					value > -25
+				}
+			}
+			add_popularity = { ideology = constitutionalist popularity = 0.6 }
+			set_party_name = {
+				ideology = constitutionalist
+				long_name = NUS_conservatives
+				name = NUS_conservatives
+			}
+			create_country_leader = {
+				name = "John Chandler Simpson"
+				desc = "POLITICS_JOHN_SIMPSON_DESC"
+				picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
+				expire = "1660.1.1"
+				ideology = constitutional_republic
+				traits = {
+					grand_fleet_proponent
+				}
+			}
+			ELSE = {
+				set_politics = {
+					ruling_party = absolutist
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = NUS_simpson
+			modify_country_flag = {
+				flag = NUS_constitution_flag
+				value = -5
+			}
+			add_popularity = { ideology = absolutist popularity = 0.05 }
+		}
+	}
+}
+
+#battle of Grantville
+country_event = {
+	id = RoF_NUS.145
+	title = RoF_NUS.145.t
+	desc = RoF_NUS.145.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = RoF_NUS.145.a
+	}
+}
+
+#battle of Grantville
+country_event = {
+	id = RoF_NUS.149
+	title = RoF_NUS.149.t
+	desc = RoF_NUS.149.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NUS
+		NOT = { has_country_flag = NUS_battle_of_grantville }
+		date > 1632.10.1
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_start_CPoE
+		}
+	}
+
+	option = {
+		name = RoF_NUS.149.a
+	}
+}
+
+#battle of Grantville
+country_event = {
+	id = RoF_NUS.150
+	title = RoF_NUS.150.t
+	desc = RoF_NUS.150.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_battle_of_grantville
+			set_country_flag = NUS_start_CPoE
+		}
+	}
+
+	option = {
+		name = RoF_NUS.150.a
+	}
+}
+
+country_event = {
+	id = RoF_NUS.151
+	title = RoF_NUS.151.t
+	desc = RoF_NUS.151.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_in_faction_with = SWE
+			}
+			set_country_flag = member_protestant_union
+		}
+	}
+
+	option = {
+		name = RoF_NUS.151.a
+		dismantle_faction = yes
+		create_faction = "Confederated Principalities of Europe"
+		NUS = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				remove_from_faction = NUS
+			}
+		}
+		add_named_threat = { threat = 5 name = cpoe.1.t }
+		add_to_faction = NUS
+		every_country = {
+			limit = {
+				has_country_flag = member_protestant_union
+			}
+			SWE = {
+				add_to_faction = PREV
+			}
+		}
+		add_to_faction = MAG
+		puppet = MAG
+		add_to_faction = MKL
+		puppet = MKL
+		add_to_faction = LUB
+	}
+}
+
+country_event = {
+	id = RoF_NUS.155
+	title = RoF_NUS.155.t
+	desc = RoF_NUS.155.d
+	
+	picture = GFX_report_event_rof_placeholder
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NUS
+		NUS = {
+			OR = {
+				controls_state = 578
+				any_allied_country = {
+					controls_state = 578
+				}
+			}	
+		}
+		WRZ = { has_capitulated = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = RoF_NUS.155.a
+		NUS = { annex_country = { target = WRZ } }
+	}
+}
+
+#battle of Alte Veste
+country_event = {
+	id = RoF_NUS.160
+	title = RoF_NUS.160.t
+	desc = RoF_NUS.160.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_battle_of_alte_veste
+		}
+	}
+
+	option = {
+		name = RoF_NUS.160.a
+		hidden_effect = {
+			AUS = { country_event = { id = RoF_AUS.111 } }
 		}
 	}
 }

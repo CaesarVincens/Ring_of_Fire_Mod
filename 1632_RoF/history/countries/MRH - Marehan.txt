@@ -4,7 +4,10 @@ oob = "MRH_OOB"
 
 # Starting tech
 set_technology = {
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -17,7 +20,7 @@ set_politics = {
         absolutist = {
             popularity = 79
         }
-        democratic = {
+        liberal = {
             popularity = 19
         }
         neutrality = {

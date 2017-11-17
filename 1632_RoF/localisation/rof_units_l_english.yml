@@ -1,0 +1,16 @@
+﻿l_english:
+ mercenary:0 "Mercenary Infantry"
+ mercenary_desc:0 "Fights for gold. Don't rely on them too much."
+ merc_cavalry:0 "Mercenary Cavalry"
+ merc_cavalry_desc:0 "Horse mounted mercenaries. More expensive, but with good mobility. Don't rely on them too much."
+ spear_infantry:0 "Spearmen"
+ spear_infantry_desc:0 "Spearmen have been the core of many armies for centuries. They generally fight in close formations, using their spears both for attack and defense."
+ tercio_infantry:0 "Tercio"
+ tercio_infantry_desc:0 "Tercios expanded on the power of pike formations by adding firearms. Although the arquebusiers make up only a small percentage of the formation, their volleys add a great punch to the attack."
+ line_infantry:0 "Line Infantry"
+ line_infantry_desc:0 "As firearms have become more effective, the number of pikemen in a company has gone down to maximize the offensive power of the firearms. With the introduction of bayonets, pikes can be eliminated altogether."
+ light_artillery_brigade:0 "Light Artillery"
+ light_artillery_brigade_desc:0 "Light field cannons offer better integration with new infantry tactics. They are quicker and easier to maneuver and fire allowing for better and more shots against enemy formations. Although they do little against fortifications because of their lighter shot, they have plenty of punch against infantry."
+ heavy_artillery_brigade:0 "Heavy Artillery"
+ heavy_artillery_brigade_desc:0 "Heavy artillery excels against fortifications with its heavy shot making short work of all but the toughest of walls. However, it's massive weight makes it cumbersome to move reducing its effective against field formations."
+ 

@@ -1,28 +1,33 @@
+
 state={
 	id=289
-	name= "STATE_289"
-	manpower = 1940400
-
+	name="STATE_289"
 	resources={
-		aluminium = 2
-		chromium = 2
-		steel = 1
+		aluminium=2.000
+		chromium=2.000
+		steel=1.000
 	}
-	state_category = town
 
 	history={
 		owner = MUG
-		victory_points = { 1510 3 }
+		victory_points = {
+			1510 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = MUG
+
 	}
 
 	provinces={
-		1510 7430 8120 10030 12781 
+		1510 4072 7177 7430 8120 10019 10030 12781 
 	}
+	manpower=1940400
+	buildings_max_level_factor=1.000
+	state_category=town
 }

@@ -5,34 +5,18 @@ oob = "AUS_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 50
 
 
 # DIPLOMACY
-if = {
-    limit = {
-        has_dlc = "Together for Victory"
-    }
-    set_autonomy = {
-        target = BOH
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
-    }
-    set_autonomy = {
-        target = HUN
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
-    }
-    else = {
-        puppet = BOH
-        puppet = HUN
-    }
-}
 
 if = {
     limit = {has_dlc = "Together for Victory" }
@@ -46,7 +30,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        democratic = {
+        constitutionalist = {
             popularity = 19
         }
         neutrality = {
@@ -62,16 +46,19 @@ set_politics = {
 
 create_faction = "Catholic League"
 add_to_faction = AUS
-add_to_faction = BOH
-add_to_faction = HUN
-add_to_faction = SPR
+#add_to_faction = SPR
 add_to_faction = BAV
 add_to_faction = WRZ
 add_to_faction = MNZ
 add_to_faction = COL
+add_to_faction = TRI
+add_to_faction = ALS
+add_to_faction = MEM
 
 add_ideas = {
-	partial_economic_mobilisation
+	military_focus_eco
+	extensive_conscription
+	hre_emperor
 }
 set_national_unity = 0.7
 create_country_leader = {
@@ -81,5 +68,48 @@ create_country_leader = {
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {
+		stand_against_ottoman
     }
+}
+
+create_country_leader = {
+    name = "Ferdinand II von Habsburg"
+    desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+		stand_against_ottoman
+    }
+}
+
+create_corps_commander = {
+	name = "Abrecht von Wallenstein"
+	gfx = "GFX_leader_BOH_Wallenstein"
+	traits = { }
+	skill = 5
+	id = 1001
+}
+
+create_corps_commander = {
+	name = "Gottfried zu Pappenheim"
+	gfx = "GFX_commander_BOH_Pappenheim"
+	traits = { }
+	skill = 4
+	id = 1002
+}
+
+create_field_marshal = {
+	name = "Johann Tserclaes von Tilly"
+	picture = "Portrait_Austria_Tilly.dds"
+	traits = { }
+	skill = 4
+	id = 1003
+}
+
+create_corps_commander = {
+	name = "Ottavio Piccolomini"
+	picture = "Portrait_Austria_Piccolomini.dds"
+	traits = { }
+	skill = 4
 }

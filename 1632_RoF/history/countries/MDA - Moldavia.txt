@@ -4,7 +4,11 @@ oob = "MDA_OOB"
 
 # Starting tech
 set_technology = {
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -23,7 +27,7 @@ set_politics = {
         absolutist = {
             popularity = 89
         }
-        democratic = {
+        liberal = {
             popularity = 9
         }
         neutrality = {
@@ -42,9 +46,9 @@ add_ideas = {
 	}
 set_national_unity = 0.7222
 create_country_leader = {
-    name = "Eugen Cihoski"
+    name = "Vasile Lupu Coci"
     desc = "POLITICS_EUGEN_CIHOSKI_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/TUR/Portrait_Moldavia_Vasile_Lupu.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

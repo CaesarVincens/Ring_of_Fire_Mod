@@ -1,5 +1,132 @@
 ﻿add_namespace = RoF_news
 
+#Breitenfeld
+news_event = {
+	id = RoF_news.01
+	title = RoF_news.01.t
+	desc = RoF_news.01.d
+	picture = GFX_news_event_breitenfeld
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.01.a
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = NUS
+				is_in_faction_with = SWE
+			}
+		}
+	}
+	option = {
+		name = RoF_news.01.b
+		trigger = {
+			OR = {
+				tag = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.01.c
+		trigger = { 
+			NOT = { tag = SWE }
+			NOT = { tag = NUS }
+			NOT = { tag = AUS }
+			NOT = { is_in_faction_with = AUS }
+			NOT = { is_in_faction_with = SWE }
+		}
+	}
+}
+
+#Wallenstein Revolts
+news_event = {
+	id = RoF_news.02
+	title = RoF_news.02.t
+	desc = RoF_news.02.d
+	picture = GFX_news_event_destruction
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.02.a
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = NUS
+				tag = BOH
+				is_in_faction_with = SWE
+			}
+		}
+	}
+	option = {
+		name = RoF_news.02.b
+		trigger = {
+			OR = {
+				tag = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.02.c
+		trigger = { 
+			NOT = { tag = SWE }
+			NOT = { tag = NUS }
+			NOT = { tag = AUS }
+			NOT = { is_in_faction_with = AUS }
+			NOT = { is_in_faction_with = SWE }
+		}
+	}
+}
+
+#Rain am Lech
+news_event = {
+	id = RoF_news.03
+	title = RoF_news.03.t
+	desc = RoF_news.03.d
+	picture = GFX_news_event_breitenfeld
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.03.a
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = NUS
+				is_in_faction_with = SWE
+			}
+		}
+	}
+	option = {
+		name = RoF_news.03.b
+		trigger = {
+			OR = {
+				tag = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.03.c
+		trigger = { 
+			NOT = { tag = SWE }
+			NOT = { tag = NUS }
+			NOT = { tag = AUS }
+			NOT = { is_in_faction_with = AUS }
+			NOT = { is_in_faction_with = SWE }
+		}
+	}
+}
+
 # NUS incorporates SXW
 news_event = {
 	id = RoF_news.10
@@ -14,13 +141,66 @@ news_event = {
 	option = {
 		name = RoF_news.10.a
 		trigger = {
-			NOT = {
-				TAG = NUS
-			}
+			NOT = { tag = NUS }
 		}
 	}
 	option = {
 		name = RoF_news.10.b
-		trigger = { TAG = NUS }
+		trigger = { tag = NUS }
 	}
+}
+
+# NUS incorporates SXW
+news_event = {
+	id = RoF_news.11
+	title = RoF_news.11.t
+	desc = RoF_news.11.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.11.a
+		trigger = {
+			NOT = {
+				tag = NUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.11.b
+		trigger = { tag = NUS }
+	}
+}
+
+# Dunkirk
+news_event = {
+	id = RoF_news.20
+	title = RoF_news.20.t
+	desc = RoF_news.20.d
+	picture = GFX_news_event_battle_sea
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.20.a
+		trigger = {
+			NOT = { tag = UPS }
+			NOT = { tag = SPN }
+			NOT = { tag = SPR }
+		}
+	}
+	option = {
+		name = RoF_news.20.b
+		trigger = { tag = UPS }
+	}
+	option = {
+		name = RoF_news.20.c
+		trigger = { OR = { tag = SPR tag = SPN } }
+	}
+	
 }

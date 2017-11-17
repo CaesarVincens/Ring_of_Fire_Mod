@@ -1,25 +1,30 @@
+
 state={
 	id=498
-	name= "STATE_498"
-	manpower = 761400
-
-	state_category = large_town
+	name="STATE_498"
 
 	history={
 		owner = TUR
-		victory_points = { 11577 3 }
+		victory_points = {
+			11577 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = HUN
 		add_core_of = SER
 		add_core_of = TUR
+
 	}
 
 	provinces={
-		614 619 3614 3617 3623 6643 9621 11577 11580 11787 
+		614 619 646 662 3614 3617 3623 3649 6643 9606 9621 11577 11580 11592 11608 11787 
 	}
+	manpower=761400
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

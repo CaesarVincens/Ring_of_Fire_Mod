@@ -1,5 +1,17 @@
 ideas = {
 	country = {
+		#political ideas
+		NUS_uptime_knowledge_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_time_factor = -0.05
+				liberal_drift = 0.01
+			}
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
 		people_out_of_time = {
 			allowed = {
 				always = no
@@ -8,35 +20,35 @@ ideas = {
 				monthly_population = -0.25
 			}
 			removal_cost = -1
-			picture = generic_morale_bonus
+			picture = generic_disjointed_gov
 		}
 		refuge_from_the_storm = {
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
-				has_government = democratic
+				has_government = liberal
 			}
 			modifier = {
 				conscription = 0.01
 				monthly_population = 0.1
 			}
 			removal_cost = -1
-			picture = generic_democratic_drift_bonus
+			picture = generic_morale_bonus
 		}
 		new_american_revolution = {
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
-				has_government = democratic
+				has_government = liberal
 			}
 			modifier = {
-				democratic_drift = 0.01
-				subversive_activities_upkeep = -0.01
+				liberal_drift = 0.025
+				subversive_activites_upkeep = -0.05
 			}
 			removal_cost = -1
-			picture = FRA_fortification_bonus
+			picture = generic_democratic_drift_bonus
 		}
 		americans_first = {
 			allowed = {
@@ -46,10 +58,157 @@ ideas = {
 				has_government = absolutist
 			}
 			modifier = {
+				absolutist_drift = 0.1
 				production_speed_buildings_factor = 0.1
 			}
 			removal_cost = -1
 			picture = generic_manpower_bonus
+		}
+		NUS_CoC_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			modifier = {
+				conscription = 0.015
+				subversive_activites_upkeep = -0.1
+				monthly_population = 0.05
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+		}
+		NUS_CoC_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			modifier = {
+				conscription = 0.02
+				subversive_activites_upkeep = -0.15
+				monthly_population = 0.1
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+		}
+		NUS_CoC_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			modifier = {
+				conscription = 0.025
+				subversive_activites_upkeep = -0.2
+				monthly_population = 0.15
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+		}
+		NUS_liberal_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				liberal_drift = 0.05
+				enemy_partisan_effect = -0.1
+			}
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+		}
+		NUS_conservative_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				drift_defence_factor = 0.25
+				min_export = -0.1
+			}
+			removal_cost = -1
+			picture = neutrality_idea
+		}
+		NUS_absolutist_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				absolutist_drift = 0.2
+				production_speed_buildings_factor = 0.2				
+			}
+			removal_cost = -1
+			picture = generic_fascism_drift_bonus
+		}
+		#tech/production ideas
+		NUS_gearing_down_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+		NUS_gearing_down_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+		NUS_gearing_down_3 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				min_export = -0.05
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+		}
+		Grantville_National_Library = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_time_factor = -0.05
+			}
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		#army ideas
+		NUS_down_timer_army = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				monthly_population = 0.2
+			}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+		}
+		NUS_up_timer_army = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
 		}
 	}
 	
@@ -60,7 +219,7 @@ ideas = {
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.absolutist.1
+				country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -72,51 +231,17 @@ ideas = {
 				factor = 0
 			}
 		}
-		NUS_communist_advisor = {
-			allowed = {
-				original_tag = NUS
-			}
-			traits = { communism_minister }
-			on_add = {
-				country_event = conv.political.communist.7
-			}
-			do_effect = {
-				NOT = {
-					has_government = communist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
 		NUS_democratic_advisor = {
 			allowed = {
 				original_tag = NUS
 			}
-			traits = { democratic_minister }
+			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.democratic.13
+				country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
-					has_government = democratic
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		NUS_fascist_advisor = {
-			allowed = {
-				original_tag = NUS
-			}
-			traits = { fascism_minister }
-			on_add = {
-				country_event = conv.political.fascist.19
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascist
+					has_government = liberal
 				}
 			}
 			ai_will_do = {
@@ -132,24 +257,6 @@ ideas = {
 			do_effect = {
 				NOT = {
 					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		NUS_radical_advisor = {
-			allowed = {
-				original_tag = NUS
-			}
-			traits = { radical_minister }
-			on_add = {
-				country_event = conv.political.radical.25
-			}
-			picture = generic_goods_red_bonus
-			do_effect = {
-				NOT = {
-					has_government = radical
 				}
 			}
 			ai_will_do = {

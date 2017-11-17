@@ -4,8 +4,11 @@ oob = "SIL_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -24,7 +27,7 @@ set_politics = {
         absolutist = {
             popularity = 70
         }
-        democratic = {
+        liberal = {
             popularity = 28
         }
         neutrality = {
@@ -40,7 +43,7 @@ set_politics = {
 
 
 add_ideas = {
-	low_economic_mobilisation
+	balanced_eco
 }
 set_national_unity = 0.7
 create_country_leader = {

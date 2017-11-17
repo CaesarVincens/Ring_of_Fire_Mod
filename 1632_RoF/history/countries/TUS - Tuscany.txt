@@ -4,8 +4,11 @@ oob = "TUS_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -18,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        democratic = {
+        liberal = {
             popularity = 19
         }
         neutrality = {
@@ -34,13 +37,13 @@ set_politics = {
 
 
 add_ideas = {
-	low_economic_mobilisation
+	balanced_eco
 }
 set_national_unity = 0.7
 create_country_leader = {
-    name = "Andrea di Savoia"
+    name = "Ferdinando II de' Medici"
     desc = "POLITICS_ANDREA_DI SAVOIA_DESC"
-    picture = "gfx/leaders/ITA/Portrait_Italy_Victor_Emmanuel_III.dds"
+    picture = "gfx/leaders/Italies/Portrait_Tuscany_Ferdinando_II.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

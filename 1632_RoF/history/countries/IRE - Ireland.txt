@@ -4,6 +4,11 @@ oob = "IRE_OOB"
 
 # Starting tech
 set_technology = {
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -16,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 9
         }
-        democratic = {
+        liberal = {
             popularity = 89
         }
         neutrality = {
@@ -24,7 +29,7 @@ set_politics = {
         }
     }
     
-    ruling_party = democratic
+    ruling_party = liberal
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -38,7 +43,7 @@ create_country_leader = {
     desc = "POLITICS_HARRY_PLUNKET_DESC"
     picture = "gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
     expire = "1660.1.1"
-    ideology = liberalism
+    ideology = democracy
     traits = {
     }
 }

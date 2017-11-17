@@ -1,24 +1,28 @@
+
 state={
 	id=349
-	name= "STATE_349"
-	manpower = 983308
-
-	state_category = rural
+	name="STATE_349"
 
 	history={
 		owner = POL
-		victory_points = { 11216 3 }
+		victory_points = {
+			11216 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = POL
-		add_core_of = SOV
+
 	}
 
 	provinces={
-		215 216 294 304 331 360 386 3203 3267 3293 3350 3507 3759 6232 6319 6373 6556 9249 9554 11216 11313 11370 11453 
+		215 216 277 304 331 360 386 3203 3293 3350 3378 3507 3759 6292 6319 6373 9249 11216 11313 11370 
 	}
+	manpower=983308
+	buildings_max_level_factor=1.000
+	state_category=town
 }

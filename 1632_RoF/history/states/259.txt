@@ -1,26 +1,31 @@
+
 state={
 	id=259
-	name= "STATE_259"
-	manpower = 364800
-
+	name="STATE_259"
 	resources={
-		aluminium = 4
+		aluminium=4.000
 	}
-	state_category = large_town
 
 	history={
 		owner = MEM
-		victory_points = { 11638 8 }
+		victory_points = {
+			11638 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = MEM
+
 	}
 
 	provinces={
-		9666 11638 
+		708 9666 11638 
 	}
+	manpower=364800
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

@@ -1,23 +1,23 @@
+
 state={
 	id=632
-	name= "STATE_632"
-	manpower = 68000
-
-	state_category = rural
+	name="STATE_632"
 
 	history={
-		owner = SPU
-		victory_points = { 2173 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = SPU
+
 	}
 
 	provinces={
-		2173 
+		1529 1583 2109 2185 4533 4548 4587 5156 5178 5186 7589 7636 8148 8181 8210 8226 8239 10360 10405 10947 10994 11003 11008 12334 12438 12466 12479 12937 12972 
 	}
+	manpower=68000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

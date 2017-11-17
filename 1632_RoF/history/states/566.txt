@@ -14,9 +14,12 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			5168 = {
+				naval_base = 1
+			}
 
 		}
 		add_core_of = BRZ

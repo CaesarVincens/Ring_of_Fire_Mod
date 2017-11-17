@@ -1,27 +1,32 @@
+
 state={
 	id=96
-	name= "STATE_96"
-	manpower = 144200
-
+	name="STATE_96"
 	resources={
-		chromium = 7
-		oil = 9
+		chromium=7.000
+		oil=9.000
 	}
-	state_category = rural
 
 	history={
 		owner = CIR
-		victory_points = { 9647 3 }
+		victory_points = {
+			9647 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = CIR
+
 	}
 
 	provinces={
-		670 683 3672 3682 6689 9628 9647 11632 
+		670 685 3672 9628 9647 11614 
 	}
+	manpower=144200
+	buildings_max_level_factor=1.000
+	state_category=town
 }

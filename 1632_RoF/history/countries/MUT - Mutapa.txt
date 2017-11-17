@@ -4,6 +4,10 @@ oob = "MUT_OOB"
 
 # Starting tech
 set_technology = {
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -22,7 +26,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        democratic = {
+        liberal = {
             popularity = 19
         }
         neutrality = {
@@ -38,7 +42,7 @@ set_politics = {
 
 
 add_ideas = {
-		low_economic_mobilisation
+		balanced_eco
 }
 set_national_unity = 0.7222
 create_country_leader = {

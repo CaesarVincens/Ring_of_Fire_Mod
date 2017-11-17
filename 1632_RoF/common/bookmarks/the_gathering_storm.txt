@@ -10,25 +10,49 @@ bookmarks = {
 
 		"NUS"={
 			history = "NUS_RING_OF_FIRE_DESC"
+			ideology = liberal
+			ideas = {
+				people_out_of_time
+			}
+			focuses = {
+				NUS_new_american_revolution
+				NUS_form_CPoE
+			}
 		}
 
 		"SWE"={
 			history = "SWE_RING_OF_FIRE_DESC"
+			ideology = constitutionalist
+			ideas = {
+				SWE_lion_of_the_north
+			}
 		}
 		"AUS"={
 			history = "AUS_RING_OF_FIRE_DESC"
+			ideology = absolutist
 		}
 		"FRA"={
 			history = "FRA_RING_OF_FIRE_DESC"
+			ideology = absolutist
+			ideas = {
+				anti_habsburg_diplomacy
+			}
+			focuses = {
+				FRA_ostend_league_focus
+				FRA_new_model_army
+			}
 		}
 		"TUR"={
 			history = "TUR_RING_OF_FIRE_DESC"
+			ideology = absolutist
 		}
 		"SPR"={
 			history = "SPR_RING_OF_FIRE_DESC"
+			ideology = absolutist
 		}
 		"UPS"={
 			history = "UPS_RING_OF_FIRE_DESC"
+			ideology = constitutionalist
 		}
 		"---"={
 			history = "RING_OF_FIRE_DESC"

@@ -1,27 +1,27 @@
+
 state={
 	id=236
-	name= "STATE_236"
-	manpower = 32068
-
+	name="STATE_236"
 	resources={
-		aluminium = 0
-		rubber = 0
+		aluminium=0.000
+		rubber=0.000
 	}
-	state_category = rural
 
 	history={
-		owner = LNG
-		victory_points = { 8207 8 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
-		add_core_of = LNG
+
 	}
 
 	provinces={
-		8207 
+		801 951 3823 3941 3975 4627 6823 6929 6958 6971 7466 7588 7646 9923 10441 11873 11888 
 	}
+	manpower=32068
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

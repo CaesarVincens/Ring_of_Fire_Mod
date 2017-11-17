@@ -7,16 +7,20 @@ state={
 		oil = 0
 		steel = 37
 	}
-	state_category = town
+	state_category = city
 
 	history={
 		owner = SPN
 		victory_points = { 516 8 }
+		victory_points = { 480 3 }
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
-			arms_factory = 0
-			air_base = 5
+			arms_factory = 2
+			air_base = 0
+			6598 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = SPN
 		add_core_of = UPS

@@ -1,0 +1,28 @@
+spriteTypes = {	
+
+	### ECONOMY LAWS
+	spriteType = {
+		name = "GFX_idea_full_civilian_eco"
+		texturefile = "gfx/interface/ideas/idea_full_civilian_eco.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civilian_focus_eco"
+		texturefile = "gfx/interface/ideas/idea_civilian_focus_eco.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_balanced_eco"
+		texturefile = "gfx/interface/ideas/idea_balanced_eco.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military_focus_eco"
+		texturefile = "gfx/interface/ideas/idea_military_focus_eco.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_full_military_eco"
+		texturefile = "gfx/interface/ideas/idea_full_military_eco.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_richelieu_pic"
+		texturefile = "gfx/interface/ideas/idea_richelieu_pic.dds"
+	}
+}

@@ -1,24 +1,23 @@
+
 state={
 	id=496
-	name= "STATE_496"
-	manpower = 52000
-
-	state_category = rural
+	name="STATE_496"
 
 	history={
-		owner = TUR
-		victory_points = { 6889 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = CRO
-		add_core_of = TUR
+
 	}
 
 	provinces={
-		3868 6889 
+		691 695 3766 6710 6769 6782 7420 9684 9724 9746 9747 10233 10303 11641 11656 11669 11685 11714 11731 
 	}
+	manpower=52000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

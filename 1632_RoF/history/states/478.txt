@@ -1,24 +1,29 @@
+
 state={
 	id=478
-	name= "STATE_478"
-	manpower = 15944
-
-	state_category = rural
+	name="STATE_478"
 
 	history={
 		owner = MAR
-		victory_points = { 8088 3 }
+		victory_points = {
+			8088 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = MAR
 		add_core_of = TAF
+
 	}
 
 	provinces={
-		1095 1958 7041 8088 
+		1095 1115 1958 7041 8088 
 	}
+	manpower=15944
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

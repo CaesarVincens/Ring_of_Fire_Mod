@@ -1,0 +1,54 @@
+SPR_habsburg_cousins = {
+	enable = {
+		original_tag = SPR
+		country_exists = AUS
+	}
+	abort = {
+		NOT = { country_exists = AUS }
+	}
+	ai_strategy = {
+		type = befriend
+		id = "AUS"
+		value = 2000
+	}
+	ai_strategy = {
+		type = support
+		id = "AUS"
+		value = 2000
+	}
+}
+
+SPR_anti_dutch = {
+	enable = {
+		original_tag = SPR
+		country_exists = UPS
+	}
+	abort = {
+		NOT = { country_exists = UPS }
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "UPS"
+		value = 2000
+	}
+}
+
+SPR_support_SPN = {
+	enable = {
+		original_tag = SPR
+		country_exists = SPN
+	}
+	abort = {
+		NOT = { country_exists = SPN }
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SPN"
+		value = 2000
+	}
+	ai_strategy = {
+		type = support
+		id = "SPN"
+		value = 2000
+	}
+}

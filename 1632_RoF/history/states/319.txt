@@ -1,23 +1,28 @@
+
 state={
 	id=319
-	name= "STATE_319"
-	manpower = 261000
-
-	state_category = town
+	name="STATE_319"
 
 	history={
 		owner = PAL
-		victory_points = { 3574 8 }
+		victory_points = {
+			6568 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = PAL
+
 	}
 
 	provinces={
-		3574 
+		3574 6568 
 	}
+	manpower=261000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

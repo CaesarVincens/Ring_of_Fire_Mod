@@ -4,8 +4,11 @@ oob = "SWI_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -18,15 +21,15 @@ set_politics = {
         absolutist = {
             popularity = 12
         }
-        democratic = {
-            popularity = 85
+        liberal = {
+            popularity = 15
         }
         neutrality = {
-            popularity = 3
+            popularity = 73
         }
     }
     
-    ruling_party = democratic
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -34,15 +37,15 @@ set_politics = {
 
 
 add_ideas = {
-	low_economic_mobilisation
+	balanced_eco
 }
 set_national_unity = 0.7
 create_country_leader = {
-    name = "Marc Comtesse"
+    name = "Federal Diet"
     desc = "POLITICS_MARC_COMTESSE_DESC"
     picture = "gfx/leaders/SWI/Portrait_Switzerland_Federal_council.dds"
     expire = "1660.1.1"
-    ideology = liberalism
+    ideology = republican_neutral
     traits = {
     }
 }

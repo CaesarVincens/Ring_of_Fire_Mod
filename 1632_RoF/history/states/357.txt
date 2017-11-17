@@ -1,26 +1,35 @@
+
 state={
 	id=357
-	name= "STATE_357"
-	manpower = 1060800
-
+	name="STATE_357"
 	resources={
-		tungsten = 68
+		tungsten=68.000
 	}
-	state_category = city
 
 	history={
 		owner = POR
-		victory_points = { 11805 9 }
+		victory_points = {
+			11805 9 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+			11805 = {
+				naval_base = 1
+
+			}
+
 		}
 		add_core_of = POR
+
 	}
 
 	provinces={
-		799 844 924 970 980 3861 6924 11768 11805 
+		799 845 889 924 938 3798 3861 3969 6818 6924 6996 9787 11805 11885 
 	}
+	manpower=1060800
+	buildings_max_level_factor=1.000
+	state_category=city
 }

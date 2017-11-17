@@ -128,16 +128,7 @@ technologies = {
 	
 		xor={
 			armored_spearhead
-		}
-		motorized = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mechanized = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		
+		}		
 		
 		path = {
 			leads_to_tech = mass_motorization 
@@ -207,14 +198,7 @@ technologies = {
 	
 	mechanised_offensive = {
 
-		motorized = {
-			max_organisation = 15
-			
-		}
-		mechanized = {
-			max_organisation = 15
-		}
-		
+	
 		category_tanks = {
 			max_organisation = 3
 		}
@@ -353,13 +337,6 @@ technologies = {
 		
 		enable_tactic = tactic_breakthrough
 		
-		motorized = {
-			max_organisation = 5
-		}
-		mechanized = {
-			max_organisation = 5
-		}		
-
 		
 		path = {
 			leads_to_tech = kampfgruppe 
@@ -1417,12 +1394,6 @@ technologies = {
 			infantry_offensive
 		}
 	
-		motorized = {
-			max_organisation = 5
-		}
-		mechanized = {
-			max_organisation = 5
-		}
 		
 		enable_tactic = tactic_blitz
 		enable_tactic = tactic_elastic_defense
@@ -2088,11 +2059,6 @@ technologies = {
 
 		supply_consumption_factor = -0.10
 		
-		infantry = {
-			combat_width = -0.4
-		}
-
-		
 		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
@@ -2172,15 +2138,6 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.1
 		}
-		
-		mechanized = {
-			max_organisation = 10
-			default_morale = 0.1
-		}
-		motorized = {
-			max_organisation = 10
-			default_morale = 0.1
-		}		
 		
 		path = {
 			leads_to_tech = continuous_offensive
@@ -2286,11 +2243,6 @@ technologies = {
 	
 	human_infantry_offensive = {
 
-		infantry = {
-			default_morale = 0.30
-		}
-		
-		
 		
 		path = {
 			leads_to_tech = large_front_offensive
@@ -2362,13 +2314,7 @@ technologies = {
 
 
 		conscription = 0.05
-				
-		infantry = {
-			combat_width = -0.4
-		}
-
-		
-		
+						
 		path = {
 			leads_to_tech = guerilla_warfare
 			research_cost_coeff = 1

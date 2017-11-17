@@ -1,4 +1,4 @@
-add_namespace = RoF
+﻿add_namespace = RoF
 country_event = {
 	id = RoF.000
 	title = RoF.000.t
@@ -8,16 +8,66 @@ country_event = {
 	desc = RoF.000.d
 
 	immediate = {
-		NUS = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_3
-				amount = 500
-				producer = NUS
+		hidden_effect = {
+			SWE = {
+				country_event = { id = RoF.002 }
+			}
+			UPS = {
+				every_owned_state = {
+					set_state_flag = UPS_original_state
+				}
 			}
 		}
 	}
 	option = {
 		name = RoF.000.a
 
+	}
+}
+
+country_event = {
+	id = RoF.002
+	title = RoF.002.t
+	picture = GFX_report_event_scottish_mercenaries #placeholder
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	desc = RoF.002.d
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_in_faction_with = SWE
+				NOT = { tag = SWE }
+				NOT = { is_subject_of = SWE }
+			}
+			add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+			SWE = { add_opinion_modifier = { target = PREV modifier = SWE_tyw_support } }
+		}
+	}
+	option = {
+		name = RoF.002.a
+	}
+}
+
+country_event = {
+	id = RoF.003
+	title = RoF.003.t
+	picture = GFX_report_event_scottish_mercenaries #placeholder
+	hidden = yes
+	desc = RoF.003.d
+	trigger = {
+		has_opinion_modifier = SWE_tyw_support
+		NOT = { is_in_faction_with = SWE }
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	immediate = {
+		remove_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+		SWE = { remove_opinion_modifier = { target = ROOT modifier = SWE_tyw_support } }
+	}
+	option = {
+		name = RoF.003.a
 	}
 }

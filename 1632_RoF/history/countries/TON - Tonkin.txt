@@ -4,7 +4,10 @@ oob = "TON_OOB"
 
 # Starting tech
 set_technology = {
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -17,7 +20,7 @@ set_politics = {
         absolutist = {
             popularity = 87
         }
-        democratic = {
+        liberal = {
             popularity = 10
         }
         neutrality = {
@@ -33,7 +36,7 @@ set_politics = {
 
 
 add_ideas = {
-		partial_economic_mobilisation
+		military_focus_eco
 }
 set_national_unity = 0.74
 create_country_leader = {

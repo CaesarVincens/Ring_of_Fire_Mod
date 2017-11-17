@@ -1,27 +1,32 @@
+
 state={
 	id=207
-	name= "STATE_207"
-	manpower = 95800
-
+	name="STATE_207"
 	resources={
-		aluminium = 1
-		rubber = 0
-		steel = 0
+		aluminium=1.000
+		rubber=0.000
+		steel=0.000
 	}
-	state_category = rural
 
 	history={
-		victory_points = { 5070 3 }
+		victory_points = {
+			5070 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = KON
+
 	}
 
 	provinces={
-		5070 
+		4180 7112 7195 10048 12021 
 	}
+	manpower=95800
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

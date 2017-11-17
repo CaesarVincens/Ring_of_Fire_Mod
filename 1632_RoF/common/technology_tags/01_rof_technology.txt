@@ -1,0 +1,13 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+technology_categories = {
+	firearms_weapons
+	cat_pike_weapons
+	up_time_weaponry
+	light_artillery
+	heavy_artillery
+	cavalry_tech
+}
+
+ 

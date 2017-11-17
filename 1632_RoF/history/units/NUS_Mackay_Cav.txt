@@ -21,7 +21,7 @@ units = {
 		name = "Mackay's Regiment"
 		location = 9497 #Grantville
 		division_template = "Green Regiment"
-		force_equipment_variants = { infantry_equipment_0 = { owner = NUS } }
+		force_equipment_variants = { arquebus_equipment = { owner = NUS } }
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}

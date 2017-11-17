@@ -1,26 +1,26 @@
+
 state={
 	id=276
-	name= "STATE_276"
-	manpower = 637500
-
+	name="STATE_276"
 	resources={
-		rubber = 1
+		rubber=1.000
 	}
-	state_category = pastoral
 
 	history={
-		owner = MAT
-		victory_points = { 4273 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = MAT
+
 	}
 
 	provinces={
-		4273 
+		1428 1437 1574 4211 7293 7369 7384 7396 10191 10342 10409 12126 12162 12219 12234 
 	}
+	manpower=637500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

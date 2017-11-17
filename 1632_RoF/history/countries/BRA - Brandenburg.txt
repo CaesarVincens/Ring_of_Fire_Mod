@@ -4,8 +4,11 @@ oob = "BRA_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -18,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 79
         }
-        democratic = {
+        liberal = {
             popularity = 19
         }
         neutrality = {
@@ -32,14 +35,18 @@ set_politics = {
     elections_allowed = no
 }
 
+add_to_war = {
+	targeted_alliance = SWE
+	enemy = AUS
+}
 
 add_ideas = {
 }
-set_national_unity = 0.7726
+set_national_unity = 0.75
 create_country_leader = {
-    name = "Nikolaus von Hindenburg"
+    name = "George William von Hohenzollern"
     desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

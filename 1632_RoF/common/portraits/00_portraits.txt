@@ -42,17 +42,22 @@ continent = {
 	}
 	
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
 		}
-		fascism = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			}
+		}
+		constitutionalist = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
 			}
@@ -87,17 +92,22 @@ continent = {
 	}
 
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
 		}
-		fascism = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			}
+		}
+		constitutionalist = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
 			}
@@ -132,17 +142,22 @@ continent = {
 	}
 	
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/South America/Portrait_South_America_Generic_2.dds" 
 			}
 		}
-		fascism = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/South America/Portrait_South_America_Generic_3.dds" 
+			}
+		}
+		constitutionalist = {
 				male = { 
 					"gfx/leaders/South America/Portrait_South_America_Generic_3.dds" 
 			}
@@ -177,17 +192,22 @@ continent = {
 	}
 	
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
 			}
 		}
-		fascism = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			}
+		}
+		constitutionalist = {
 				male = { 
 					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
 			}
@@ -220,17 +240,22 @@ continent = {
 	}
 	
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_2.dds" 
 			}
 		}
-		fascism = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
+			}
+		}
+		constitutionalist = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
 			}
@@ -266,19 +291,24 @@ continent = {
 	}
 
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
 			}
 		}
-		fascism = {
+		absolutist = {
 				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds" 
+					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
+			}
+		}
+		constitutionalist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
 			}
 		}
 		neutrality = {
@@ -309,17 +339,22 @@ continent = {
 	}
 	
 	political = {
-		communism = {
+		radical = {
 				male = { 
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
 			}
 		}
-		democratic = {
+		liberal = {
 				male = { 
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
 			}
 		}
-		fascism = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+			}
+		}
+		constitutionalist = {
 				male = { 
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
 			}

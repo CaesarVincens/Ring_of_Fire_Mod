@@ -13,12 +13,11 @@ state={
 		victory_points = { 3546 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
 			air_base = 0
 		}
 		add_core_of = FRA
-		add_core_of = LOR
 	}
 
 	provinces={

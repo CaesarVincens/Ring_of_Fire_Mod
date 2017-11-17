@@ -1,0 +1,87 @@
+FRA_anti_habsburg = {
+	enable = {
+		original_tag = FRA
+		country_exists = AUS
+		has_idea = anti_habsburg_diplomacy
+	}
+	abort = {
+		NOT = { country_exists = AUS }
+		NOT = { has_idea = anti_habsburg_diplomacy }
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "AUS"
+		value = 2000
+	}
+	ai_strategy = {
+		type = contain
+		id = "AUS"
+		value = 2000
+	}
+}
+
+FRA_anti_habsburg_SPR = {
+	enable = {
+		original_tag = FRA
+		country_exists = SPR
+		NOT = { has_idea = anti_habsburg_diplomacy }
+	}
+	abort = {
+		NOT = { country_exists = SPR }
+		has_idea = anti_habsburg_diplomacy
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SPR"
+		value = 2000
+	}
+	ai_strategy = {
+		type = contain
+		id = "SPR"
+		value = 2000
+	}
+}
+
+FRA_support_swe = {
+	enable = {
+		original_tag = FRA
+		country_exists = SWE
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SWE }
+			has_completed_focus = FRA_countermeasures_focus
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 2000
+	}
+	ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 2000
+	}
+}
+
+FRA_anti_grantville = {
+	enable = {
+		original_tag = FRA
+		country_exists = NUS
+		has_completed_focus = FRA_countermeasures_focus
+	}
+	abort = {
+		NOT = { country_exists = NUS }
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NUS"
+		value = 2000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SWE"
+		value = 2000
+	}
+}

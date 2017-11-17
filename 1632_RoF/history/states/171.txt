@@ -1,23 +1,23 @@
+
 state={
 	id=171
-	name= "STATE_171"
-	manpower = 200000
-
-	state_category = large_town
+	name="STATE_171"
 
 	history={
-		owner = HES
-		victory_points = { 3524 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = HES
+
 	}
 
 	provinces={
-		3524 9547 11533 
+		490 602 777 1299 1769 1782 3911 4775 4784 4869 4875 6740 7366 7794 7899 9480 9740 10621 10718 11571 11682 11902 12278 12582 12701 13094 13161 
 	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

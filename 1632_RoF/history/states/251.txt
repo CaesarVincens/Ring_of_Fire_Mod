@@ -1,27 +1,32 @@
+
 state={
 	id=251
-	name= "STATE_251"
-	manpower = 136000
-
+	name="STATE_251"
 	resources={
-		aluminium = 1
-		rubber = 0
-		steel = 0
+		aluminium=1.000
+		rubber=0.000
+		steel=0.000
 	}
-	state_category = rural
 
 	history={
-		victory_points = { 5045 8 }
+		victory_points = {
+			5045 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = MLI
+
 	}
 
 	provinces={
-		5045 
+		1892 1904 1945 2069 4898 4908 4977 5071 7935 7964 8012 8033 8119 10765 10848 12461 12736 12833 12859 
 	}
+	manpower=136000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

@@ -1,30 +1,30 @@
 ﻿start_equipment_factor = 0
 
 division_template = {
-	name = "Light Infantry Division"
+	name = "Tercio"
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
+		tercio_infantry = { x = 0 y = 0 }
+		tercio_infantry = { x = 0 y = 1 }
+		tercio_infantry = { x = 0 y = 2 }
+		tercio_infantry = { x = 1 y = 0 }
+		tercio_infantry = { x = 1 y = 1 }
+		tercio_infantry = { x = 1 y = 2 }
+		tercio_infantry = { x = 2 y = 0 }
+		tercio_infantry = { x = 2 y = 1 }
+		tercio_infantry = { x = 2 y = 2 }
 	}
 	support = {
 	}
 }
 
 division_template = {
-	name = "Light Infantry Brigade"
+	name = "Tercio Detachment"
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
+		tercio_infantry = { x = 0 y = 0 }
+		tercio_infantry = { x = 0 y = 1 }
+		tercio_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}
@@ -64,7 +64,7 @@ division_template = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = arquebus_equipment
 			creator = "TRA"
 		}
 		requested_factories = 1
@@ -76,7 +76,7 @@ units = {
 	division = {
 		name = "1. Infantry Brigade"
 		location = 11639
-		division_template = "Light Infantry Brigade"
+		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 }

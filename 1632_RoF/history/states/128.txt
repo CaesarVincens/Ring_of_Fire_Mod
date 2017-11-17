@@ -13,9 +13,13 @@ state={
 		victory_points = { 6103 13 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
-			arms_factory = 0
-			air_base = 10
+			industrial_complex = 6
+			arms_factory = 2
+			dockyard = 1
+			air_base = 0
+			3501 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = ENG
 	}

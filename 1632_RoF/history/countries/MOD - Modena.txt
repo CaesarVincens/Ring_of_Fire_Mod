@@ -4,8 +4,11 @@ oob = "MOD_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -18,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 68
         }
-        democratic = {
+        liberal = {
             popularity = 29
         }
         neutrality = {
@@ -37,9 +40,9 @@ add_ideas = {
 }
 set_national_unity = 0.7
 create_country_leader = {
-    name = "Matteo La Màrmora"
+    name = "Francesco d'Este"
     desc = "POLITICS_MATTEO_LA MàRMORA_DESC"
-    picture = "gfx/leaders/ITA/Portrait_Italy_Victor_Emmanuel_III.dds"
+    picture = "gfx/leaders/Italies/Portrait_Modena_Francesco_dEste.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

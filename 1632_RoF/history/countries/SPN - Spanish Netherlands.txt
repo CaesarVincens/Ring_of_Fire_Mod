@@ -4,12 +4,15 @@ oob = "SPN_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 100
 
 
 if = {
@@ -24,7 +27,7 @@ set_politics = {
         absolutist = {
             popularity = 88
         }
-        democratic = {
+        constitutionalist = {
             popularity = 9
         }
         neutrality = {

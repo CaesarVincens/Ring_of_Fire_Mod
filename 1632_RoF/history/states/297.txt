@@ -1,26 +1,26 @@
+
 state={
 	id=297
-	name= "STATE_297"
-	manpower = 200000
-
+	name="STATE_297"
 	resources={
-		steel = 6
+		steel=6.000
 	}
-	state_category = town
 
 	history={
-		owner = NAS
-		victory_points = { 529 8 }
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
-		add_core_of = NAS
+
 	}
 
 	provinces={
-		529 
+		1707 1727 1762 1810 1829 4797 4815 7838 10524 10543 10596 10661 12525 12540 12647 
 	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

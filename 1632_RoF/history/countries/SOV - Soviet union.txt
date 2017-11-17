@@ -5,7 +5,11 @@ oob = "SOV_OOB"
 
 # Starting tech
 set_technology = {
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -16,14 +20,17 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 83
+            popularity = 73
         }
-        democratic = {
+        liberal = {
             popularity = 15
         }
         neutrality = {
             popularity = 2
         }
+		constitutionalist = {
+			popularity = 10
+		}
     }
     
     ruling_party = absolutist
@@ -34,7 +41,7 @@ set_politics = {
 
 
 add_ideas = {
-	partial_economic_mobilisation
+	military_focus_eco
 }
 set_national_unity = 0.7118
 create_country_leader = {
@@ -43,6 +50,16 @@ create_country_leader = {
     picture = "gfx/leaders/SOV/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Romanov"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/SOV/Portrait_Russia_Mikhail_Romanov.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
     traits = {
     }
 }

@@ -1,23 +1,28 @@
+
 state={
 	id=211
-	name= "STATE_211"
-	manpower = 306200
-
-	state_category = large_town
+	name="STATE_211"
 
 	history={
 		owner = COL
-		victory_points = { 11388 3 }
+		victory_points = {
+			11388 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = COL
+
 	}
 
 	provinces={
-		247 9281 11233 11264 11388 
+		247 405 9281 11233 11264 11388 
 	}
+	manpower=306200
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

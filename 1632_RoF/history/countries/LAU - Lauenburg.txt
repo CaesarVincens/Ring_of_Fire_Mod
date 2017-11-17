@@ -4,12 +4,13 @@ oob = "LAU_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 200
 
 
 set_politics = {
@@ -18,7 +19,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        democratic = {
+        liberal = {
             popularity = 19
         }
         neutrality = {
@@ -34,7 +35,7 @@ set_politics = {
 
 
 add_ideas = {
-	partial_economic_mobilisation
+	military_focus_eco
 }
 set_national_unity = 0.7
 create_country_leader = {

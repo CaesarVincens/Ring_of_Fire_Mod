@@ -13,19 +13,17 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 4
 			arms_factory = 1
-			air_base = 5
+			air_base = 0
 
 		}
-		add_core_of = POL
-		add_core_of = AUS
 		add_core_of = BRA
 
 	}
 
 	provinces={
-		375 537 3207 3258 3312 3367 3473 3499 6521 9428 9496 11219 11444 11505 
+		375 3207 3258 3312 3367 3499 6521 9428 9496 11444 11505 
 	}
 	manpower=1491500
 	buildings_max_level_factor=1.000

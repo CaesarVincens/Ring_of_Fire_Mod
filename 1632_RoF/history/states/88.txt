@@ -1,28 +1,33 @@
+
 state={
 	id=88
-	name= "STATE_88"
-	manpower = 20369596
-
+	name="STATE_88"
 	resources={
-		aluminium = 3
-		steel = 3
+		aluminium=3.000
+		steel=3.000
 	}
-	state_category = large_town
 
 	history={
 		owner = CHI
-		victory_points = { 12062 5 }
+		victory_points = {
+			12062 5 
+		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 3
 			dockyard = 1
-			air_base = 1
+			air_base = 0
+
 		}
 		add_core_of = CHI
+
 	}
 
 	provinces={
-		1069 1084 1169 1188 4010 4037 4058 4114 7055 7092 7129 7160 7189 9987 10043 10072 10119 11933 11944 11962 11980 12015 12045 12062 12069 
+		1069 1084 1139 1169 1188 4010 4037 4058 4114 4144 7055 7074 7092 7129 7160 7189 9987 10043 10072 10119 11933 11944 11962 11980 12015 12045 12062 12069 
 	}
+	manpower=20369596
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

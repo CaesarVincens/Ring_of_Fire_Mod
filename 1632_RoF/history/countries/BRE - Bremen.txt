@@ -4,8 +4,11 @@ oob = "BRE_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -18,15 +21,15 @@ set_politics = {
         absolutist = {
             popularity = 14
         }
-        democratic = {
-            popularity = 84
+        liberal = {
+            popularity = 14
         }
         neutrality = {
-            popularity = 2
+            popularity = 72
         }
     }
     
-    ruling_party = democratic
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -34,15 +37,15 @@ set_politics = {
 
 
 add_ideas = {
-	partial_economic_mobilisation
+	military_focus_eco
 }
 set_national_unity = 0.7
 create_country_leader = {
-    name = "Manfred von Sachsen-Weimar-Eisenach"
+    name = "Stadtrat"
     desc = "POLITICS_MANFRED_VON SACHSEN-WEIMAR-EISENACH_DESC"
-    picture = "gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Bremen_City_Council.dds"
     expire = "1660.1.1"
-    ideology = conservatism
+    ideology = republican_neutral
     traits = {
     }
 }

@@ -10,9 +10,9 @@ state={
 		victory_points = { 7432 8 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 		}
 		add_core_of = CAM
 	}

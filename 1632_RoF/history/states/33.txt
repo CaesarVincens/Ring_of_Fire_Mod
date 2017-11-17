@@ -15,9 +15,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 
 		}
 		add_core_of = BEN
@@ -25,7 +25,7 @@ state={
 	}
 
 	provinces={
-		4952 8034 
+		4952 8034 10831 
 	}
 	manpower=572400
 	buildings_max_level_factor=1.000

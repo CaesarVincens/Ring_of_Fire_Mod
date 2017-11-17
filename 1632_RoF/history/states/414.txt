@@ -1,27 +1,40 @@
+
 state={
 	id=414
-	name= "STATE_414"
-	manpower = 1619400
-
+	name="STATE_414"
 	resources={
-		steel = 74
+		steel=74.000
 	}
-	state_category = city
 
 	history={
 		owner = SAX
-		victory_points = { 514 9 }
+		victory_points = {
+			514 9 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 4
 			arms_factory = 1
-			air_base = 5
+			air_base = 0
+			573 = {
+				bunker = 1
+			}
+			3514 = {
+				bunker = 1
+			}
+			514 = {
+				bunker = 2
+			}
+
 		}
 		add_core_of = SAX
-		add_core_of = AUS
+
 	}
 
 	provinces={
-		514 573 3514 3535 6559 9441 9471 9535 11481 
+		478 514 573 3514 3572 6441 9535 11415 
 	}
+	manpower=1619400
+	buildings_max_level_factor=1.000
+	state_category=city
 }

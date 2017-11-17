@@ -4,8 +4,11 @@ oob = "PRU_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -22,20 +25,20 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 4
+            popularity = 74
         }
-        democratic = {
-            popularity = 94
+        liberal = {
+            popularity = 24
         }
         neutrality = {
             popularity = 2
         }
     }
     
-    ruling_party = democratic
+    ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
-    elections_allowed = yes
+    elections_allowed = no
 }
 
 
@@ -43,11 +46,11 @@ add_ideas = {
 }
 set_national_unity = 0.775
 create_country_leader = {
-    name = "Manfred Vogel von Falkenstein"
-    desc = "POLITICS_MANFRED_VOGEL VON FALKENSTEIN_DESC"
-    picture = "gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+    name = "George William von Hohenzollern"
+    desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
     expire = "1660.1.1"
-    ideology = liberalism
+    ideology = absolute_monarchy
     traits = {
     }
 }

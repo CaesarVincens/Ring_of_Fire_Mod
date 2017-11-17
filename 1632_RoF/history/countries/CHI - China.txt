@@ -4,7 +4,11 @@ oob = "CHI_OOB"
 
 # Starting tech
 set_technology = {
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -17,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 68
         }
-        democratic = {
+        liberal = {
             popularity = 29
         }
         neutrality = {
@@ -36,9 +40,9 @@ add_ideas = {
 	}
 set_national_unity = 0.7056
 create_country_leader = {
-    name = "Liao Dong"
+    name = "Chongzhen Ming"
     desc = "POLITICS_LIAO_DONG_DESC"
-    picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+    picture = "gfx/leaders/CHI/Portrait_China_Ming_Chongzhen.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

@@ -6,18 +6,17 @@ state={
 	resources={
 		aluminium = 21
 	}
-	state_category = large_town
+	state_category = city
 
 	history={
 		owner = SWI
 		victory_points = { 9620 8 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			arms_factory = 0
-			air_base = 5
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 0
 		}
-		add_core_of = FRA
 		add_core_of = SWI
 	}
 

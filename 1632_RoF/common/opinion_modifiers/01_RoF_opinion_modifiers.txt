@@ -1,0 +1,12 @@
+opinion_modifiers = {
+
+	SWE_tyw_support = {
+		value = 50
+	}
+	hates_AUS = {
+		value = -100
+	}
+	hates_BOH = {
+		value = -100
+	}
+}

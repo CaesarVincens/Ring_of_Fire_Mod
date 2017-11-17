@@ -7,14 +7,14 @@ state={
 		aluminium = 9
 		steel = 9
 	}
-	state_category = pastoral
+	state_category = city
 
 	history={
 		owner = SAV
 		victory_points = { 6609 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 3
 			arms_factory = 0
 			air_base = 0
 		}

@@ -1,23 +1,28 @@
+
 state={
 	id=25
-	name= "STATE_25"
-	manpower = 100000
-
-	state_category = rural
+	name="STATE_25"
 
 	history={
-		victory_points = { 4913 8 }
+		victory_points = {
+			4913 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = SON
 		add_core_of = AIR
+
 	}
 
 	provinces={
-		4913 7939 10917 
+		1956 2068 4902 4913 5136 7939 8128 10758 10780 10805 10893 10917 
 	}
+	manpower=100000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

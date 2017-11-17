@@ -1,4 +1,17 @@
 ideas = {
+	country = {
+		ENG_FRA_payment = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_time_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
+	}
 	political_advisor = {
 		ENG_absolutist_advisor = {
 			allowed = {
@@ -6,7 +19,7 @@ ideas = {
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.absolutist.1
+				country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -18,51 +31,17 @@ ideas = {
 				factor = 0
 			}
 		}
-		ENG_communist_advisor = {
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { communism_minister }
-			on_add = {
-				country_event = conv.political.communist.7
-			}
-			do_effect = {
-				NOT = {
-					has_government = communist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
 		ENG_democratic_advisor = {
 			allowed = {
 				original_tag = ENG
 			}
-			traits = { democratic_minister }
+			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.democratic.13
+				country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
-					has_government = democratic
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		ENG_fascist_advisor = {
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { fascism_minister }
-			on_add = {
-				country_event = conv.political.fascist.19
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascist
+					has_government = liberal
 				}
 			}
 			ai_will_do = {
@@ -78,24 +57,6 @@ ideas = {
 			do_effect = {
 				NOT = {
 					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		ENG_radical_advisor = {
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { radical_minister }
-			on_add = {
-				country_event = conv.political.radical.25
-			}
-			picture = generic_goods_red_bonus
-			do_effect = {
-				NOT = {
-					has_government = radical
 				}
 			}
 			ai_will_do = {

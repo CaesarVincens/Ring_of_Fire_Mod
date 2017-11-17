@@ -14,9 +14,12 @@ state={
 		victory_points = { 3924 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			9821 = { naval_base = 1 }
+			3943 = { naval_base = 1 }
+
 		}
 		add_core_of = SER
 		add_core_of = TUR

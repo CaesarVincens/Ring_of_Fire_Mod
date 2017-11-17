@@ -1,27 +1,36 @@
+
 state={
 	id=554
-	name= "STATE_554"
-	manpower = 1708932
-
+	name="STATE_554"
 	resources={
-		aluminium = 1
-		steel = 6
+		aluminium=1.000
+		steel=6.000
 	}
-	state_category = rural
 
 	history={
 		owner = UPS
-		victory_points = { 3878 3 }
+		victory_points = {
+			3878 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 2
 			arms_factory = 0
 			dockyard = 1
 			air_base = 0
+			3878 = {
+				naval_base = 2
+
+			}
+
 		}
+
 	}
 
 	provinces={
-		859 3806 3878 3894 6911 9693 11665 
+		706 859 3806 3878 3894 6911 9673 9693 9774 11665 
 	}
+	manpower=1708932
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

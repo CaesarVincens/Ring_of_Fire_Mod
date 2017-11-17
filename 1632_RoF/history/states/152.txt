@@ -14,8 +14,9 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
 			air_base = 0
 
 		}
@@ -28,5 +29,5 @@ state={
 	}
 	manpower=865600
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category=large_town
 }

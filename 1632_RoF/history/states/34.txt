@@ -1,29 +1,31 @@
+
 state={
 	id=34
-	name= "STATE_34"
-	manpower = 1248000
-
+	name="STATE_34"
 	resources={
-		aluminium = 0
-		rubber = 0
-		steel = 0
+		aluminium=0.000
+		rubber=0.000
+		steel=0.000
 	}
-	state_category = rural
 
 	history={
-		owner = BEN
-		victory_points = { 10831 3 }
+		victory_points = {
+			10831 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = BEN
-		add_core_of = NUP
+
 	}
 
 	provinces={
-		10831 
+		988 1516 1552 1731 1817 1929 1968 2024 2080 2126 3109 4128 4515 4735 5036 5054 5139 6008 6039 7219 7548 7716 7931 8016 8048 8054 8138 8202 8244 9137 9986 10071 10858 10883 10948 10951 10966 11012 12391 12741 12775 12795 12824 12985 
 	}
+	manpower=1248000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

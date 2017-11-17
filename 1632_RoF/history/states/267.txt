@@ -1,23 +1,28 @@
+
 state={
 	id=267
-	name= "STATE_267"
-	manpower = 548200
-
-	state_category = pastoral
+	name="STATE_267"
 
 	history={
 		owner = MAR
-		victory_points = { 10070 3 }
+		victory_points = {
+			10070 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = MAR
+
 	}
 
 	provinces={
-		1079 1194 4084 7100 10013 10070 11987 12042 
+		1079 1194 4084 7100 10013 10070 10113 11987 12042 12087 
 	}
+	manpower=548200
+	buildings_max_level_factor=1.000
+	state_category=town
 }

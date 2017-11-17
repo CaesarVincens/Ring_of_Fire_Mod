@@ -1,28 +1,32 @@
+
 state={
 	id=492
-	name= "STATE_492"
-	manpower = 1342900
-
+	name="STATE_492"
 	resources={
-		aluminium = 6
-		chromium = 6
+		aluminium=6.000
+		chromium=6.000
 	}
-	state_category = rural
 
 	history={
-		owner = TUR
-		victory_points = { 646 3 }
+		owner = SPR
+		victory_points = {
+			9793 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = HUN
-		add_core_of = TUR
+		add_core_of = SPR
+		add_core_of = CAT
 	}
 
 	provinces={
-		646 662 3649 9606 11592 11608 
+		7114 9793 9845 
 	}
+	manpower=342900
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

@@ -1,26 +1,31 @@
+
 state={
 	id=502
-	name= "STATE_502"
-	manpower = 736128
-
+	name="STATE_502"
 	resources={
-		chromium = 16
+		chromium=16.000
 	}
-	state_category = large_town
 
 	history={
 		owner = TUR
-		victory_points = { 11818 3 }
+		victory_points = {
+			11818 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = TUR
+
 	}
 
 	provinces={
 		895 3526 3936 6990 9791 9930 10163 11774 11818 11905 
 	}
+	manpower=736128
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

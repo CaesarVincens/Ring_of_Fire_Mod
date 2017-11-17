@@ -9,14 +9,14 @@ state={
 		steel = 14
 		tungsten = 0
 	}
-	state_category = pastoral
+	state_category = city
 
 	history={
 		owner = SPR
 		victory_points = { 11570 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}

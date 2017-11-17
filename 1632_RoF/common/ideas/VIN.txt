@@ -6,7 +6,7 @@ ideas = {
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.absolutist.1
+				country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -18,51 +18,17 @@ ideas = {
 				factor = 0
 			}
 		}
-		VIN_communist_advisor = {
-			allowed = {
-				original_tag = VIN
-			}
-			traits = { communism_minister }
-			on_add = {
-				country_event = conv.political.communist.7
-			}
-			do_effect = {
-				NOT = {
-					has_government = communist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
 		VIN_democratic_advisor = {
 			allowed = {
 				original_tag = VIN
 			}
-			traits = { democratic_minister }
+			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.democratic.13
+				country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
-					has_government = democratic
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		VIN_fascist_advisor = {
-			allowed = {
-				original_tag = VIN
-			}
-			traits = { fascism_minister }
-			on_add = {
-				country_event = conv.political.fascist.19
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascist
+					has_government = liberal
 				}
 			}
 			ai_will_do = {
@@ -78,24 +44,6 @@ ideas = {
 			do_effect = {
 				NOT = {
 					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		VIN_radical_advisor = {
-			allowed = {
-				original_tag = VIN
-			}
-			traits = { radical_minister }
-			on_add = {
-				country_event = conv.political.radical.25
-			}
-			picture = generic_goods_red_bonus
-			do_effect = {
-				NOT = {
-					has_government = radical
 				}
 			}
 			ai_will_do = {

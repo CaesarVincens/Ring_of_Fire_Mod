@@ -1,25 +1,30 @@
+
 state={
 	id=370
-	name= "STATE_370"
-	manpower = 100400
-
+	name="STATE_370"
 	resources={
-		steel = 0
+		steel=0.000
 	}
-	state_category = rural
 
 	history={
 		owner = POR
-		victory_points = { 5210 3 }
+		victory_points = {
+			5210 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
+
 	}
 
 	provinces={
-		5210 
+		5210 10976 
 	}
+	manpower=100400
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

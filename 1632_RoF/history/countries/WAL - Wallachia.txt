@@ -4,7 +4,11 @@ oob = "WAL_OOB"
 
 # Starting tech
 set_technology = {
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -23,7 +27,7 @@ set_politics = {
         absolutist = {
             popularity = 89
         }
-        democratic = {
+        liberal = {
             popularity = 9
         }
         neutrality = {
@@ -42,9 +46,9 @@ add_ideas = {
 	}
 set_national_unity = 0.7
 create_country_leader = {
-    name = "Artur Averescu"
+    name = "Matei Baserab"
     desc = "POLITICS_ARTUR_AVERESCU_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/TUR/Portrait_Wallachia_Matei_Baserab.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

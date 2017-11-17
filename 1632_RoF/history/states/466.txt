@@ -1,31 +1,37 @@
+
 state={
 	id=466
-	name= "STATE_466"
-	manpower = 1193200
-
+	name="STATE_466"
 	resources={
-		aluminium = 11
-		steel = 61
+		aluminium=11.000
+		steel=61.000
 	}
-	state_category = large_town
 
 	history={
 		owner = SWE
-		victory_points = { 161 13 }
+		victory_points = {
+			161 13 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			arms_factory = 0
+			industrial_complex = 4
+			arms_factory = 2
 			dockyard = 2
-			air_base = 10
+			air_base = 0
 			161 = {
 				naval_base = 2
+
 			}
+
 		}
 		add_core_of = SWE
+
 	}
 
 	provinces={
-		35 69 77 114 147 156 161 3005 3070 3106 3128 3141 3148 3182 6028 6050 6084 6093 6123 6127 6147 6164 6188 6195 6209 6311 6397 9054 9068 9109 9117 9138 9148 9149 9173 9182 9185 9193 9209 9218 9308 9393 11044 11053 11070 11082 11114 11163 11188 11197 11278 11289 11380 
+		35 114 156 161 3005 3106 3148 3182 6050 6084 6093 6123 6127 6147 6164 6188 6209 6311 6397 9068 9109 9117 9148 9149 9173 9182 9185 9193 9209 9308 9393 11044 11053 11082 11163 11188 11197 11278 11289 11380 13097 13098 13099 
 	}
+	manpower=1193200
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

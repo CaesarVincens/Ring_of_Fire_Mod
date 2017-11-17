@@ -9,7 +9,7 @@
 
 democratic_peace = {
 	enable = {
-		has_government = democratic
+		has_government = liberal
 	}
 
 	annex_randomness = 0 #100
@@ -55,7 +55,7 @@ democratic_peace = {
 			factor = 10
 
 			FROM = {
-				has_government = democratic
+				has_government = liberal
 			}
 		}
 		modifier = {
@@ -111,14 +111,14 @@ democratic_peace = {
 			factor = 5
 
 			FROM = {
-				has_government = democratic
+				has_government = liberal
 			}
 		}
 
 		modifier = {
 			factor = 10
 			FROM = {
-				NOT = { has_government = democratic }
+				NOT = { has_government = liberal }
 			}
 		}
 
@@ -483,7 +483,7 @@ democratic_peace = {
 			factor = -1
 
 			FROM = {
-				has_government = democratic
+				has_government = liberal
 			}
 		}
 	}

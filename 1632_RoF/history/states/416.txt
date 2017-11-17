@@ -9,7 +9,7 @@ state={
 		steel = 36
 		tungsten = 4
 	}
-	state_category = rural
+	state_category = city
 
 	history={
 		owner = SCO
@@ -18,7 +18,7 @@ state={
 			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 		}
 		add_core_of = SCO
 	}

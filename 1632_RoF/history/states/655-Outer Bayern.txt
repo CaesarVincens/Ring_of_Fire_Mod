@@ -12,6 +12,8 @@ state={
 			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 0
+			6540 = { bunker = 1 }
+			586 = { bunker = 1 }
 
 		}
 		add_core_of = BAV

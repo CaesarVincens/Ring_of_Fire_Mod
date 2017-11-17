@@ -4,8 +4,11 @@ oob = "C13_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -24,15 +27,15 @@ set_politics = {
         absolutist = {
             popularity = 14
         }
-        democratic = {
-            popularity = 83
+        liberal = {
+            popularity = 13
         }
         neutrality = {
-            popularity = 3
+            popularity = 73
         }
     }
     
-    ruling_party = democratic
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -47,7 +50,7 @@ create_country_leader = {
     desc = "POLITICS_HENRY_HOOKER_DESC"
     picture = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
     expire = "1660.1.1"
-    ideology = liberalism
+    ideology = colony_neutral
     traits = {
     }
 }

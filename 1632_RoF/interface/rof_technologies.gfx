@@ -1,0 +1,90 @@
+spriteTypes = {	
+
+	## Archetypes
+	
+	SpriteType = {
+		name = "GFX_archetype_pike_equipment_medium"
+		texturefile = "gfx/interface/archetype_pike.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_archetype_firearm_equipment_medium"
+		texturefile = "gfx/interface/archetype_firearm.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_pike_weapons_medium"
+		texturefile = "gfx/interface/technologies/pike.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_arquebus_weapons_medium"
+		texturefile = "gfx/interface/technologies/arquebus.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_early_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/early_flintlock.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_srg_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_srg_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_rifle.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_cardinal_rifle_tech_medium"
+		texturefile = "gfx/interface/technologies/cardinal_rifle.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ak3_rifle_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_up_time_weapons_tech_medium"
+		texturefile = "gfx/interface/technologies/up_time_weapons.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_light_artillery_1_medium"
+		texturefile = "gfx/interface/technologies/light_art_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_light_artillery_2_medium"
+		texturefile = "gfx/interface/technologies/light_art_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_light_artillery_3_medium"
+		texturefile = "gfx/interface/technologies/light_art_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_heavy_artillery_1_medium"
+		texturefile = "gfx/interface/technologies/heavy_art_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_heavy_artillery_2_medium"
+		texturefile = "gfx/interface/technologies/heavy_art_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_heavy_artillery_3_medium"
+		texturefile = "gfx/interface/technologies/heavy_art_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_subtech_tercio"
+		textureFile = "gfx/interface/technologies/subtech_tercio.dds"
+	}
+
+}

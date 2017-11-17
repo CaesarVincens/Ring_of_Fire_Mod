@@ -1,23 +1,26 @@
+
 state={
 	id=431
-	name= "STATE_431"
-	manpower = 768400
-
-	state_category = rural
+	name="STATE_431"
 
 	history={
-		owner = SLI
-		victory_points = { 9321 8 }
+		victory_points = {
+			9321 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
-		add_core_of = SLI
+
 	}
 
 	provinces={
-		9255 9321 11238 11371 
+		2188 13019 
 	}
+	manpower=768400
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

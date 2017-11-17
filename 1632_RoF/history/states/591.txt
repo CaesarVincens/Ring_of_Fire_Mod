@@ -1,23 +1,31 @@
+
 state={
 	id=591
-	name= "STATE_591"
-	manpower = 59880
-
-	state_category = rural
+	name="STATE_591"
 
 	history={
 		owner = NSP
-		victory_points = { 12381 8 }
+		victory_points = {
+			12381 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+			12381 = {
+				naval_base = 2
+			}
+
 		}
 		add_core_of = NSP
+
 	}
 
 	provinces={
-		1556 1572 1584 12353 12381 12439 
+		1433 1480 1556 1572 1584 11975 12353 12381 12439 
 	}
+	manpower=59880
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

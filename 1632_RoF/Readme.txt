@@ -1,8 +1,9 @@
-1632 - The Ring of Fire brings the world of Eric Flint's 1632 series to Hearts of Iron IV.
+﻿1632 - The Ring of Fire brings the world of Eric Flint's 1632 series to Hearts of Iron IV.
 
 Play an alternate history set in the middle of the Thirty Years war where a town from the USA in the year 2000 has been transported to Germany in 1631. Play as the time-stranded Americans and find allies to survive the war raging around you, or play another country and see what advantage technology from the future can bring you in this turbulant time.
 
 Lead Developer: CaesarVincens
+Focus Tree Contributions: Principality of Lichenstein
 
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
@@ -10,6 +11,38 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 
 Currently in Early Alpha; expect to find bugs and oddities
+
+Alpha - Ostend League 0.3.0 - Nov.  , 2017
+Beginning of Tech Overhaul; new infantry and artillery techs
+many more portraits and rulers updated for history with thanks again to Vlade and others for contributions
+Continued work on events and NUS focus tree
+Beginning of focus tree for FRA
+updates to ideologies, new ministers for Radicalism and Constitutionalism
+
+Alpha 0.2.1 - Oct. 26, 2017
+Removed unused ideologies and added new ones.
+Revamped political part of Generic Focus Tree.
+Added many factories to all countries.
+Added basic techs to all countries.
+Many more changes to the map.
+More events and additions to the NUS focus tree.
+SWE and AUS start at war.
+
+Alpha 0.2.0 - Oct. 16, 2017
+Added new portraits for several rulers. Thanks to Vlade, HeLPmYDOg, and Testoviron for contributions
+Added new loading screens from period artwork.
+Many changes to NUS focus tree, new events including for the constitution and first election.
+Massive changes to states, and strategic areas. Fix for naval invasions and paradrops
+Added some starting tech for NUS
+Save games likely broken
+
+Alpha 0.1.2 - Oct. 12, 2017
+Added temporary focuses for NUS to declare on various majors
+Changed New American Empire branch to add absolutist party popularity
+
+Alpha 0.1.1b - Oct. 12, 2017
+Fix for crash
+Added localisation for new focus
 
 Alpha 0.1.1 - Oct. 11, 2017
 Additions to NUS focus tree

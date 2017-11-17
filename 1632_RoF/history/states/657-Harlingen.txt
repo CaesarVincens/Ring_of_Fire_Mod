@@ -1,0 +1,26 @@
+state={
+	id=657
+	name="STATE_657"
+	history = {
+		owner = UPS
+		victory_points = {
+			13205 1 
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 0
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = UPS
+
+	}
+	provinces={
+		13205 
+	}
+	manpower=5000
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

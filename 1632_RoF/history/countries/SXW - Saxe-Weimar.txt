@@ -4,8 +4,11 @@ oob = "SXW_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -18,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 73
         }
-        democratic = {
+        liberal = {
             popularity = 25
         }
         neutrality = {
@@ -39,7 +42,7 @@ set_national_unity = 0.75
 create_country_leader = {
     name = "Wilhelm Wettin"
     desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-    picture = "gfx/leaders/SXW/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

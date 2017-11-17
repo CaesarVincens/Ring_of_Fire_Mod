@@ -1,28 +1,33 @@
+
 state={
 	id=328
-	name= "STATE_328"
-	manpower = 339700
-
+	name="STATE_328"
 	resources={
-		oil = 130
-		steel = 6
+		oil=130.000
+		steel=6.000
 	}
-	state_category = rural
 
 	history={
 		owner = PER
-		victory_points = { 7661 8 }
+		victory_points = {
+			7661 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = AZR
 		add_core_of = PER
+
 	}
 
 	provinces={
-		1467 1536 1539 1610 4458 4473 4477 4545 4605 4614 6763 7495 7661 9715 11645 11674 11704 12309 12434 
+		1467 1536 1539 1610 4458 4477 4545 4614 7495 7661 9715 11645 11674 11704 
 	}
+	manpower=339700
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

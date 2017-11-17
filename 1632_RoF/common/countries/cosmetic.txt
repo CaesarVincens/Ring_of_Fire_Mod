@@ -3,3 +3,6 @@ USE = {
     color = rgb { 185 40 30 }
     color_ui = rgb { 255 55 41 }
 }
+AUH = {
+	color = rgb { 236 215 215 }
+	color_ui = rgb { 236 215 215 }}

@@ -1,24 +1,23 @@
+
 state={
 	id=256
-	name= "STATE_256"
-	manpower = 44000
-
-	state_category = rural
+	name="STATE_256"
 
 	history={
-		owner = MAN
-		victory_points = { 12657 3 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = CHI
-		add_core_of = MAN
+
 	}
 
 	provinces={
-		1730 1739 4731 4847 7754 10678 12591 12657 
+		1135 1830 4833 4848 7855 7884 10679 10694 10707 12661 13069 13090 13091 13202 13203 
 	}
+	manpower=44000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

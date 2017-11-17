@@ -1,26 +1,31 @@
+
 state={
 	id=13
-	name= "STATE_13"
-	manpower = 836000
-
+	name="STATE_13"
 	resources={
-		tungsten = 54
+		tungsten=54.000
 	}
-	state_category = pastoral
 
 	history={
 		owner = ASS
-		victory_points = { 12730 3 }
+		victory_points = {
+			12730 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = ASS
+
 	}
 
 	provinces={
-		1116 1996 10810 12322 12730 
+		1116 1525 1996 10810 12322 12730 
 	}
+	manpower=836000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

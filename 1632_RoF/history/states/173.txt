@@ -7,26 +7,26 @@ state={
 	}
 
 	history={
-		owner = HUN
+		owner = AUS
 		victory_points = {
 			686 9 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			arms_factory = 0
-			air_base = 5
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 0
 
 		}
 		add_core_of = HUN
-		add_core_of = TUR
+		add_claim_by = TUR
 
 	}
 
 	provinces={
-		686 701 3670 3683 6720 11627 
+		686 701 3670 3683 6672 6720 11627 
 	}
 	manpower=962408
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }

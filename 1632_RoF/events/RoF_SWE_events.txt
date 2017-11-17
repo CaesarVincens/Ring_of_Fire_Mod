@@ -1,0 +1,51 @@
+﻿add_namespace = RoF_SWE
+
+#Breitenfeld
+country_event = {
+	id = RoF_SWE.100
+	title = RoF_SWE.100.t
+	picture = GFX_report_event_breitenfeld
+	desc = RoF_SWE.100.d
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		date > 1631.9.16
+	}
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.100.a
+		hidden_effect = {
+			news_event = { id = RoF_news.01 days = 1 }
+			AUS = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
+			BAV = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
+		}
+	}
+}
+
+#Rain am Lech
+country_event = {
+	id = RoF_SWE.105
+	title = RoF_SWE.105.t
+	picture = GFX_report_event_breitenfeld
+	desc = RoF_SWE.105.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.105.a
+		hidden_effect = {
+			NUS = { country_event = { id = RoF_NUS.145 } }
+			AUS = { country_event = { id = RoF_AUS.110 days = 2 } }
+			news_event = { id = RoF_news.03 days = 1 }
+		}
+	}
+}
+

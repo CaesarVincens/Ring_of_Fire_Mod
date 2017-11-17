@@ -28,7 +28,7 @@ sub_units = {
 		max_organisation = 70
 		max_strength = 25
 		default_morale = 0.3
-		manpower = 1000
+		manpower = 400
 
 		#Misc Abilities
 		maximum_speed = 0.6
@@ -41,7 +41,7 @@ sub_units = {
 		suppression = 2
 	
 		need = {
-			infantry_equipment = 120
+			firearm_equipment = 120
 		}
 
 		forest = {
@@ -108,7 +108,7 @@ sub_units = {
 		suppression = 2
 	
 		need = {
-			infantry_equipment = 1200
+			firearm_equipment = 600
 		}
 
 		forest = {

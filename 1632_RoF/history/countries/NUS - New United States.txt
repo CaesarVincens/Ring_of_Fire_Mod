@@ -6,6 +6,17 @@ oob = "NUS_OOB"
 # Starting tech
 set_technology = {
 #advanced_infantry_weapons = 1
+electronic_mechanical_engineering = 1
+radio = 1
+mechanical_computing = 1
+basic_machine_tools = 1
+construction1 = 1
+up_time_weapons_tech = 1
+superior_firepower = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+early_flintlock_tech = 1
 }
 
 # Research Bonuses
@@ -16,17 +27,23 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 4
+            popularity = 10
         }
-        democratic = {
-            popularity = 94
+		constitutionalist = {
+			popularity = 21
+		}
+        liberal = {
+            popularity = 61
         }
+		radical = {
+			popularity = 2
+		}
         neutrality = {
-            popularity = 2
+            popularity = 6
         }
     }
     
-    ruling_party = democratic
+    ruling_party = liberal
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -39,12 +56,30 @@ add_ideas = {
 set_national_unity = 0.7
 create_country_leader = {
     name = "Michael Stearns"
-    desc = "POLITICS_JOSHUA_HANCOCK_DESC"
+    desc = "POLITICS_MICHAEL_STEARNS_DESC"
     picture = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
     expire = "1660.1.1"
-    ideology = liberalism
+    ideology = democracy
     traits = {
 		union_man
 		experienced_negiotiator 
     }
+}
+
+create_country_leader = {
+	name = "John Chandler Simpson"
+	desc = "POLITICS_JOHN_SIMPSON_DESC"
+	picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
+	expire = "1660.1.1"
+	ideology = constitutional_republic 
+	traits = {
+		grand_fleet_proponent
+	}
+}
+
+create_corps_commander = {
+	name = "Frank Jackson"
+	gfx = "GFX_commander_NUS_Frank_Jackson"
+	traits = { }
+	skill = 1
 }

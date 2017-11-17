@@ -1,23 +1,28 @@
+
 state={
 	id=403
-	name= "STATE_403"
-	manpower = 2200
-
-	state_category = rural
+	name="STATE_403"
 
 	history={
 		owner = SOV
-		victory_points = { 3336 3 }
+		victory_points = {
+			3336 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = SOV
+
 	}
 
 	provinces={
-		3336 
+		2900 2923 2972 3336 4692 4733 4859 9224 10607 10635 11122 11261 11328 11827 12643 12687 13060 13064 13065 
 	}
+	manpower=2200
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

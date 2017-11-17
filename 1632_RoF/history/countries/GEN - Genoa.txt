@@ -4,8 +4,11 @@ oob = "GEN_OOB"
 
 # Starting tech
 set_technology = {
-gw_artillery = 1
-tech_mountaineers = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
 }
 
 # Research Bonuses
@@ -16,19 +19,19 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 4
+            popularity = 14
         }
-        democratic = {
-            popularity = 93
+        liberal = {
+            popularity = 13
         }
-        neutrality = {
-            popularity = 3
+        constitutionalist = {
+            popularity = 73
         }
     }
     
-    ruling_party = democratic
-    last_election = "1631.1.1"
-    election_frequency = 48
+    ruling_party = constitutionalist
+    last_election = "1629.6.26"
+    election_frequency = 24
     elections_allowed = yes
 }
 
@@ -37,11 +40,11 @@ add_ideas = {
 }
 set_national_unity = 0.7124
 create_country_leader = {
-    name = "Oreste Pellion di Persano"
+    name = "Andrea Spinola"
     desc = "POLITICS_ORESTE_PELLION DI PERSANO_DESC"
     picture = "gfx/leaders/ITA/Portrait_Italy_Generic_2.dds"
     expire = "1660.1.1"
-    ideology = liberalism
+    ideology = constitutional_republic
     traits = {
     }
 }

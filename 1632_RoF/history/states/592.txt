@@ -1,23 +1,28 @@
+
 state={
 	id=592
-	name= "STATE_592"
-	manpower = 200000
-
-	state_category = rural
+	name="STATE_592"
 
 	history={
-		owner = NSP
-		victory_points = { 11975 3 }
+		owner = UPS
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
 			air_base = 0
+			11456 = {
+				bunker = 2
+			}
+
 		}
-		add_core_of = NSP
+		add_core_of = UPS
+
 	}
 
 	provinces={
-		1433 1480 11975 
+		6241 9363 11456 
 	}
+	manpower=286200
+	buildings_max_level_factor=1.000
+	state_category=city
 }

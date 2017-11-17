@@ -1,7 +1,23 @@
 ideas = {
 
 	hidden_ideas = {
+		
+		idea_support_SWE = {
+			allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				constitutionalist_acceptance = 50
+			}
+		}
+		
 		idea_continuous_naval_production = {
 			allowed = {
 				always = no
@@ -97,6 +113,117 @@ ideas = {
 	
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+		keep_traditions_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				drift_defence_factor = 0.2
+				absolutist_drift = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.125
+			}
+		}
+		absolutism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			removal_cost = -1
+			picture = FRA_matignon_agreements
+			modifier = {
+				absolutist_drift = 0.1
+				min_export = -0.05
+				opinion_gain_monthly_same_ideology_factor = 0.25
+			}
+		}
+		royal_dictatorship_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			
+			removal_cost = -1
+
+			picture = Hun_hungarian_monarchy_habsburg
+	
+			modifier = {
+				absolutist_drift = 0.15
+				min_export = -0.1
+				conscription = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.5
+			}
+		}
+		strike_democracy_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			removal_cost = -1
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				training_time_factor = -0.1
+				ai_get_ally_desire_factor = 100
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+
+		moderate_ethos_focus = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = neutrality_idea
+	
+			modifier = {
+				drift_defence_factor = 0.4
+				absolutist_drift = -0.05
+				liberal_drift = -0.05
+				radical_drift = -0.1
+			}
+		}
+		
+		constitutionalism_idea = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = neutrality_idea
+	
+			modifier = {
+				constitutionalist_drift = 0.1
+				conscription = 0.01
+				enemy_partisan_effect = -0.1
+				opinion_gain_monthly_factor = 0.5
+			}
+		}
+		
 		# Generic Focus Ideas
 		liberty_ethos_focus = {
 						
@@ -105,7 +232,10 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = democratic
+				OR = {
+					has_government = liberal
+					has_government = radical
+				}
 			}
 			
 			removal_cost = -1
@@ -113,100 +243,79 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 	
 			modifier = {
+				liberal_drift = 0.1
+				radical_drift = 0.05
 				trade_opinion_factor = 0.2
 			}
 		}
 	
-		militarism_focus = {
-			
-			
+		up_time_knowledge_ideas = {
+						
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
+				OR = {
+					has_government = liberal
+					has_government = radical
+				}
 			}
 			
 			removal_cost = -1
 
-			picture = generic_manpower_bonus
+			picture = generic_research_bonus
 	
 			modifier = {
+				research_time_factor = -0.1
+			}
+		}
+		
+		republicanism_ideas = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+	
+			modifier = {
+				liberal_drift = 0.1
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+				unity_factor = 0.10
+			}
+		}
+
+		radical_revolution = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = radical
+			}
+			
+			removal_cost = -1
+
+			picture = nkvd_2
+	
+			modifier = {
+				radical_drift = 0.1
+				consumer_goods_factor = -0.1
 				conscription = 0.05
-				enemy_partisan_effect = -0.1
+				unity_factor = 0.15
+				ai_focus_aggressive_factor = 0.5
 			}
 		}
-	
-		military_youth_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
 
-			allowed_civil_war = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
-			
-			removal_cost = -1
-
-			picture = generic_manpower_bonus
-	
-			modifier = {
-				conscription = 0.02
-			}
-		}
-	
-		paramilitarism_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
-			
-			removal_cost = -1
-
-			picture = generic_infantry_bonus
-	
-			modifier = {
-				training_time_army_factor = -0.1
-			}
-		}
-	
-		indoctrination_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
-			
-			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
-	
-			modifier = {
-				unity_factor = 0.05
-			}
-		}
-	
 		ideological_fanaticism_focus = {
 			
 			
@@ -233,46 +342,6 @@ ideas = {
 			}
 		}
 
-		political_commissars_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			removal_cost = -1
-
-			picture = generic_morale_bonus
-	
-			modifier = {
-				army_morale_factor = 0.1
-			}
-		}
-		
-		royal_dictatorship_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = absolutist
-			}
-			
-			removal_cost = -1
-
-			picture = Hun_hungarian_monarchy_habsburg
-	
-			modifier = {
-				drift_defence_factor = 0.2
-			}
-		}
-
 		historical_claims_focus = {
 			
 			
@@ -291,66 +360,6 @@ ideas = {
 			modifier = {
 				justify_war_goal_time = -0.5
 				take_states_cost_factor = 0.5
-			}
-		}
-		
-		private_channels_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = radical
-			}
-			
-			removal_cost = -1
-
-			picture = can_wartime_prices_and_trade_board
-	
-			modifier = {
-				trade_opinion_factor = 0.2
-			}
-		}
-
-		hardfought_market_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = radical
-			}
-			
-			removal_cost = -1
-
-			picture = generic_license_production
-	
-			modifier = {
-				production_factory_max_efficiency_factor = 0.05
-			}
-		}
-		
-		army_provides_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = radical
-			}
-			
-			removal_cost = -1
-
-			picture = generic_manpower_bonus
-	
-			modifier = {
-				conscription = 0.025
 			}
 		}
 		
@@ -725,6 +734,101 @@ ideas = {
 	}
 
 	political_advisor = {
+		absolutist_advisor = {
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = absolutist_minister limit = 1 }
+				}
+			}
+			traits = { absolutist_minister }
+			on_add = {
+				country_event = conv.political.01
+			}
+			picture = triumphant_will
+			do_effect = {
+				NOT = {
+					has_government = absolutist
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		constitutionalist_advisor = {
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = constitutionalist_minister limit = 1 }
+				}
+			}
+			traits = { constitutionalist_minister }
+			on_add = {
+				country_event = conv.political.07
+			}
+			picture = brittish_stoicism
+			do_effect = {
+				NOT = {
+					has_government = constitutionalist
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		liberal_advisor = {
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = liberal_minister limit = 1 }
+				}
+			}
+			traits = { liberal_minister }
+			on_add = {
+				country_event = conv.political.25
+			}
+			do_effect = {
+				NOT = {
+					has_government = liberal
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		radical_advisor = {
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = radical_minister limit = 1 }
+				}
+			}
+			traits = { radical_minister }
+			on_add = {
+				country_event = conv.political.19
+			}
+			do_effect = {
+				NOT = {
+					has_government = radical
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		neutrality_advisor = {
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = neutrality_minister limit = 1 }
+				}
+			}
+			traits = { neutrality_minister }
+			picture = neutrality_idea
+			do_effect = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
 
 		generic_captain_of_industry = {
 

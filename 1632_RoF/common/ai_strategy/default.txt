@@ -19,7 +19,22 @@ default_unit_production = {
 	enable = {
 		always = yes
 	}
-	
+	ai_strategy = {
+		type = role_ratio
+		id = spears
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = tercio
+		value = 40
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = line_inf
+		value = 80
+	}
+
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
@@ -42,12 +57,6 @@ default_unit_production = {
 		type = role_ratio
 		id = armor
 		value = 2
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 80
 	}
 	
 	#Air unit factors
@@ -379,10 +388,10 @@ default_stockpile_management = {
 
 DEFAULT_template_design = {
 	enable = {
-		date < 1940.1.1				
+		date < 1631.1.1				
 	}
 	abort = { 
-		date > 1940.1.1
+		date > 1635.1.1
 	}
 
 	ai_strategy = {
@@ -430,7 +439,7 @@ DEFAULT_template_design = {
 
 DEFAULT_template_design = {
 	enable = {
-		date > 1940.1.1				
+		date > 1635.1.1				
 	}
 
 	ai_strategy = {
@@ -442,7 +451,7 @@ DEFAULT_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = cavalry
-		value = -100
+		value = 10
 	}
 	
 	ai_strategy = {

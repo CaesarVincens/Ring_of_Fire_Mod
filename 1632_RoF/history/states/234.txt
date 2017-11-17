@@ -1,29 +1,34 @@
+
 state={
 	id=234
-	name= "STATE_234"
-	manpower = 601000
-
+	name="STATE_234"
 	resources={
-		rubber = 13
-		steel = 4
-		tungsten = 4
+		rubber=13.000
+		steel=4.000
+		tungsten=4.000
 	}
-	state_category = rural
 
 	history={
 		owner = LNA
-		victory_points = { 1488 8 }
+		victory_points = {
+			1488 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = BUR
 		add_core_of = LNA
+
 	}
 
 	provinces={
-		1253 1488 1990 4496 7492 7675 10371 
+		1253 1488 1990 4496 7492 7531 7675 8045 10371 
 	}
+	manpower=601000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

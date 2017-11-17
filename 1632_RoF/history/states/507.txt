@@ -1,29 +1,34 @@
+
 state={
 	id=507
-	name= "STATE_507"
-	manpower = 1132036
-
+	name="STATE_507"
 	resources={
-		aluminium = 19
-		chromium = 14
-		steel = 13
-		tungsten = 7
+		aluminium=19.000
+		chromium=14.000
+		steel=13.000
+		tungsten=7.000
 	}
-	state_category = rural
 
 	history={
 		owner = TUR
-		victory_points = { 3973 3 }
+		victory_points = {
+			3973 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = TUR
+
 	}
 
 	provinces={
-		863 3914 3973 6930 9805 9916 11786 
+		841 863 966 3844 3914 3973 3980 6930 9805 9916 11786 
 	}
+	manpower=1132036
+	buildings_max_level_factor=1.000
+	state_category=town
 }

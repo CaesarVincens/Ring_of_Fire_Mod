@@ -6,16 +6,16 @@ state={
 	resources={
 		steel = 18
 	}
-	state_category = rural
+	state_category = city
 
 	history={
 		owner = LOR
 		victory_points = { 11516 8 }
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 		}
 		add_core_of = FRA
 		add_core_of = LOR

@@ -15,13 +15,12 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			arms_factory = 0
-			air_base = 5
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 0
 
 		}
 		add_core_of = NUS
-		add_core_of = SAX
 		add_core_of = SXW
 
 	}

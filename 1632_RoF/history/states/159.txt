@@ -1,26 +1,31 @@
+
 state={
 	id=159
-	name= "STATE_159"
-	manpower = 164000
-
+	name="STATE_159"
 	resources={
-		oil = 4
+		oil=4.000
 	}
-	state_category = rural
 
 	history={
 		owner = GEO
-		victory_points = { 3668 3 }
+		victory_points = {
+			3668 3 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = GEO
+
 	}
 
 	provinces={
-		3668 7554 9645 
+		666 1455 3667 3668 3682 3711 4605 6436 6689 6763 7554 9645 
 	}
+	manpower=164000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

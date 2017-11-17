@@ -8,23 +8,18 @@ state={
 	}
 
 	history={
-		owner = SPU
-		victory_points = {
-			12872 3 
-		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = SPU
 
 	}
 
 	provinces={
-		7936 7991 10846 
+		873 3917 3957 6846 6892 6984 9758 9786 11892 
 	}
 	manpower=284400
 	buildings_max_level_factor=1.000

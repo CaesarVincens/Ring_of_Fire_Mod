@@ -8,25 +8,24 @@ state={
 	}
 
 	history={
-		owner = HUN
+		owner = AUS
 		victory_points = {
 			11581 8 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 0
+			industrial_complex = 1
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
 
 		}
 		add_core_of = CRO
 		add_core_of = HUN
-		add_core_of = AUS
 
 	}
 
 	provinces={
-		591 984 3592 3601 6611 9611 11581 11901 
+		591 984 3592 3601 6611 9611 11564 11581 11901 
 	}
 	manpower=689600
 	buildings_max_level_factor=1.000

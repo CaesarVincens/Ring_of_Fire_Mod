@@ -2,7 +2,8 @@
 	name = "Militia"
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
 	}
 	support = {
 	}
@@ -11,14 +12,14 @@
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = early_flintlock
 			creator = "NUS"
 		}
 		requested_factories = 1
 		progress = 0.88
-		efficiency = 100
+		efficiency = 80
 	}
-	add_equipment_to_stockpile = { type = infantry_equipment_3 amount = 500 producer = NUS }
+	add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = NUS }
 }
 
 #Starting Units
@@ -27,7 +28,7 @@ units = {
 		name = "UMWA Volunteer Militia"
 		location = 9497 #Grantville
 		division_template = "Militia"
-		force_equipment_variants = { infantry_equipment_3 = { owner = NUS } }
+		#force_equipment_variants = { up_time_weapons = { owner = "NUS" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}

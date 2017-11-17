@@ -1,12 +1,63 @@
 ideas = {
+	country = {
+		anti_habsburg_diplomacy = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				constitutionalist_acceptance = 50
+				send_volunteer_divisions_required = -0.75
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+		FRA_ally_grantville = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				liberal_acceptance = 50
+				research_time_factor = -0.05
+				constitutionalist_drift = 0.1
+			}
+		}
+		FRA_promote_future = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				army_leader_start_level = 1
+				military_leader_cost_factor = -0.25
+			}
+		}
+	}
 	political_advisor = {
+		FRA_cardinal_richelieu = {
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				richelieu_trait
+			}
+			picture = richelieu_pic
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		FRA_absolutist_advisor = {
 			allowed = {
 				original_tag = FRA
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.absolutist.1
+				country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -18,51 +69,17 @@ ideas = {
 				factor = 0
 			}
 		}
-		FRA_communist_advisor = {
-			allowed = {
-				original_tag = FRA
-			}
-			traits = { communism_minister }
-			on_add = {
-				country_event = conv.political.communist.7
-			}
-			do_effect = {
-				NOT = {
-					has_government = communist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
 		FRA_democratic_advisor = {
 			allowed = {
 				original_tag = FRA
 			}
-			traits = { democratic_minister }
+			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.democratic.13
+				country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
-					has_government = democratic
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		FRA_fascist_advisor = {
-			allowed = {
-				original_tag = FRA
-			}
-			traits = { fascism_minister }
-			on_add = {
-				country_event = conv.political.fascist.19
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascist
+					has_government = liberal
 				}
 			}
 			ai_will_do = {
@@ -78,24 +95,6 @@ ideas = {
 			do_effect = {
 				NOT = {
 					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		FRA_radical_advisor = {
-			allowed = {
-				original_tag = FRA
-			}
-			traits = { radical_minister }
-			on_add = {
-				country_event = conv.political.radical.25
-			}
-			picture = generic_goods_red_bonus
-			do_effect = {
-				NOT = {
-					has_government = radical
 				}
 			}
 			ai_will_do = {

@@ -1,0 +1,50 @@
+﻿capital = 242
+
+oob = "LUB_OOB"
+
+# Starting tech
+set_technology = {
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 14
+        }
+        liberal = {
+            popularity = 13
+        }
+        neutrality = {
+            popularity = 73
+        }
+    }
+    
+    ruling_party = neutrality
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+
+
+add_ideas = {
+}
+set_national_unity = 0.7
+create_country_leader = {
+    name = "Stadtrat"
+    desc = "POLITICS_DIETER_GROENER_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Lubeck_City_Council.dds"
+    expire = "1660.1.1"
+    ideology = republican_neutral
+    traits = {
+    }
+}

@@ -1,27 +1,32 @@
+
 state={
 	id=228
-	name= "STATE_228"
-	manpower = 724396
-
+	name="STATE_228"
 	resources={
-		rubber = 5
-		tungsten = 4
+		rubber=5.000
+		tungsten=4.000
 	}
-	state_category = rural
 
 	history={
-		victory_points = { 1817 8 }
+		victory_points = {
+			1817 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 0
-			air_base = 5
+			air_base = 0
+
 		}
 		add_core_of = KIK
 		add_core_of = LBA
+
 	}
 
 	provinces={
-		191 1817 1929 4515 12907 
+		1833 4528 4584 4696 4822 7576 10415 10442 10697 12419 12547 12589 12692 
 	}
+	manpower=724396
+	buildings_max_level_factor=1.000
+	state_category=rural
 }
