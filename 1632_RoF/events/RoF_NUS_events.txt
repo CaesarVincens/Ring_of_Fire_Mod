@@ -125,10 +125,6 @@ country_event = {
 		tag = NUS
 		date > 1631.10.5
 	}
-	
-	mean_time_to_happen = {
-		days = 0
-	}
 
 	immediate = {
 		hidden_effect = {
@@ -178,7 +174,7 @@ country_event = {
 		trigger = {
 			NUS = { has_completed_focus = NUS_demand_thuringia }
 		}
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		set_country_flag = SXW_accept_demand
 		NUS = {
 			country_event = { id = RoF_NUS.121 }
@@ -200,7 +196,7 @@ country_event = {
 		trigger = {
 			NUS = { has_completed_focus = NUS_invite_thuringian_cities }
 		}
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		set_country_flag = SXW_accept_invite
 		NUS = {
 			country_event = { id = RoF_NUS.121 }
@@ -308,7 +304,7 @@ country_event = {
 	
 	option = { # Accept
 		name =  RoF_NUS.122.a
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		set_country_flag = MAG_accept_demand
 		NUS = {
 			country_event = { id = RoF_NUS.123 }
@@ -380,7 +376,7 @@ country_event = {
 	
 	option = { # Accept
 		name =  RoF_NUS.124.a
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		set_country_flag = SAX_accept_demand
 		NUS = {
 			country_event = { id = RoF_NUS.125 }
@@ -452,7 +448,7 @@ country_event = {
 	
 	option = { # Accept
 		name =  RoF_NUS.126.a
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		set_country_flag = WRZ_accept_demand
 		NUS = {
 			country_event = { id = RoF_NUS.127 }
@@ -502,6 +498,14 @@ country_event = {
 		name = RoF_NUS.127.b
 		trigger = {
 			WRZ = { has_country_flag = WRZ_accept_demand }
+		}
+		if = {
+			limit = {
+				HES = {
+					has_capitulated = no
+				}
+				HES = { transfer_state = 577 }
+			}
 		}
 		annex_country = { target = WRZ }
 		add_state_core = 247
@@ -587,7 +591,7 @@ country_event = {
 	option = { # Liberal
 		name =  RoF_NUS.131.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		hidden_effect = {
 			set_country_flag = NUS_full_citizens
@@ -644,7 +648,7 @@ country_event = {
 	option = { # Free
 		name =  RoF_NUS.132.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		hidden_effect = {
 			set_country_flag = NUS_free_economy
@@ -702,10 +706,6 @@ country_event = {
 		name =  RoF_NUS.133.a
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
 		}
 		hidden_effect = {
 			set_country_flag = NUS_civilian_first
@@ -762,7 +762,7 @@ country_event = {
 	option = { # Elected
 		name =  RoF_NUS.134.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		hidden_effect = {
 			set_country_flag = NUS_elected_congress
@@ -822,7 +822,7 @@ country_event = {
 	option = { # Accept
 		name =  RoF_NUS.135.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		hidden_effect = {
 			set_country_flag = NUS_stearns
@@ -850,21 +850,6 @@ country_event = {
 				}
 			}
 			add_popularity = { ideology = constitutionalist popularity = 0.6 }
-			set_party_name = {
-				ideology = constitutionalist
-				long_name = NUS_conservatives
-				name = NUS_conservatives
-			}
-			create_country_leader = {
-				name = "John Chandler Simpson"
-				desc = "POLITICS_JOHN_SIMPSON_DESC"
-				picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_republic
-				traits = {
-					grand_fleet_proponent
-				}
-			}
 			ELSE = {
 				set_politics = {
 					ruling_party = absolutist
@@ -997,14 +982,13 @@ country_event = {
 			limit = {
 				has_country_flag = member_protestant_union
 			}
+			clr_country_flag = member_protestant_union
 			SWE = {
 				add_to_faction = PREV
 			}
 		}
 		add_to_faction = MAG
 		puppet = MAG
-		add_to_faction = MKL
-		puppet = MKL
 		add_to_faction = LUB
 	}
 }
@@ -1064,5 +1048,27 @@ country_event = {
 		hidden_effect = {
 			AUS = { country_event = { id = RoF_AUS.111 } }
 		}
+	}
+}
+
+country_event = {
+	id = RoF_NUS.170
+	title = RoF_NUS.170.t
+	desc = RoF_NUS.170.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_national_fervor_flag
+		}
+	}
+
+	option = {
+		name = RoF_NUS.170.a
 	}
 }

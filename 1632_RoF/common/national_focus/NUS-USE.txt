@@ -20,7 +20,7 @@ focus_tree = {
 	focus = {
 		id = NUS_build_an_army
 		icon = GFX_goal_generic_army_doctrines
-		x = 2
+		x = 1
 		y = 0
 		cost = 5
 		available = {
@@ -132,7 +132,7 @@ focus_tree = {
 		id = NUS_brown_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5.00
-		x = 5
+		x = 4
 		y = 0
 		available = {
 			custom_trigger_tooltip = {
@@ -171,7 +171,7 @@ focus_tree = {
 	focus = {
 		id = NUS_grantville_national_library
 		icon = GFX_focus_research
-		x = 9
+		x = 8
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -185,31 +185,6 @@ focus_tree = {
 			add_ideas = Grantville_National_Library
 		}
 		
-	}
-	
-	focus = {
-		id = NUS_disseminate_knowledge
-		prerequisite = { focus = NUS_grantville_national_library }
-		icon = GFX_focus_research
-		x = 0
-		y = 1
-		cost = 5
-		relative_position_id = NUS_grantville_national_library
-		available_if_capitulated = yes
-		available = {
-			always = no
-		}
-		completion_reward = {
-			every_country = {
-				limit = {
-					NOT = { tag = NUS }
-					capital_scope = {
-						is_on_continent = europe
-					}
-				}
-				country_event = { id = RoF_NUS.100 }
-			}
-		}
 	}
 	
 	focus = {
@@ -233,6 +208,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = NUS_las_vegas_belle
 		icon = GFX_goal_generic_air_fighter
@@ -248,18 +224,19 @@ focus_tree = {
 				name = fighter_bonus
 				bonus = 0.5
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
+				technology = first_plane
+				technology = single_plane_tech_1
 			}
 		}
 
 	}
+	
 	focus = {
 		id = NUS_promote_radio
-		prerequisite = { focus = NUS_encourage_reinvention }
+		prerequisite = { focus = NUS_grantville_national_library }
 		icon = GFX_focus_research
-		x = 1
-		y = 2
+		x = -2
+		y = 1
 		cost = 5
 		relative_position_id = NUS_grantville_national_library
 		available_if_capitulated = yes
@@ -272,6 +249,105 @@ focus_tree = {
 				uses = 2
 				category = radar_tech
 				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = NUS_lessons_of_history
+		prerequisite = { focus = NUS_encourage_reinvention }
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = NUS_grantville_national_library
+		available_if_capitulated = yes
+		available = {
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = NUS_steam_engine_focus
+		prerequisite = { focus = NUS_encourage_reinvention }
+		prerequisite = { focus = NUS_upgrade_techniques }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 2
+		cost = 5
+		relative_position_id = NUS_grantville_national_library
+		available_if_capitulated = yes
+		available = {
+		
+		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -351,7 +427,7 @@ focus_tree = {
 	focus = {
 		id = NUS_upgrade_techniques
 		prerequisite = { focus = NUS_gearing_down }
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_goal_generic_production
 		x = -1
 		y = 1
 		cost = 5
@@ -534,12 +610,75 @@ focus_tree = {
 			factor = 17
 		}
 	}
+	focus = {
+		id = NUS_steel_production
+		prerequisite = { focus = NUS_revitalize_mining }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 2
+		cost = 5
+		relative_position_id = NUS_gearing_down
+		available = {
+			num_of_controlled_states > 2
+		}
+		complete_tooltip = {
+			add_resource = {
+				type = steel
+				ammount = 4
+				state = 308
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+				completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 308
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
 	
 	focus = {
 		id = NUS_wietze_oil
 		prerequisite = { focus = NUS_revitalize_mining }
 		icon = GFX_goal_generic_oil_refinery
-		x = 1
+		x = 3
 		y = 2
 		cost = 5
 		relative_position_id = NUS_gearing_down
@@ -610,7 +749,7 @@ focus_tree = {
 		id = NUS_fortress_america
 		icon = GFX_goal_generic_fortify_city
 		mutually_exclusive = { focus = NUS_new_american_revolution }
-		x = 20
+		x = 22
 		y = 0
 		cost = 5
 		available = {
@@ -635,7 +774,12 @@ focus_tree = {
 					limit = { date > 1631.6.26 date < 1631.6.28}
 					country_event = { id = RoF_NUS.110 days = 3}
 				}
-			}		}
+				if = {
+					limit = { date < 1631.6.27}
+					country_event = { id = RoF_NUS.110 days = 4}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -701,6 +845,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = absolutist popularity = 0.05 }
+			if = {
+				limit = { absolutist > 0.4 }
+				set_politics = { ruling_party = absolutist }
+			}
 			add_political_power = 60
 		}
 		ai_will_do = {
@@ -723,9 +871,13 @@ focus_tree = {
 					580 = { is_owned_by = NUS }
 				}
 				SXW = { exists = no }
-			}		
+			}
 		}
 		available = {
+			strength_ratio = {
+				tag = SXW
+				ratio > 1
+			}
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -772,9 +924,11 @@ focus_tree = {
 			}		
 		}
 		available = {
-			AND = {
-				579 = { is_owned_by = NUS }
-				580 = { is_owned_by = NUS }
+			579 = { is_owned_by = NUS }
+			580 = { is_owned_by = NUS }
+			strength_ratio = {
+				tag = MAG
+				ratio > 1
 			}
 		}
 		completion_reward = {
@@ -785,7 +939,7 @@ focus_tree = {
 				limit = {
 					country_exists = MAG
 					MAG = {
-						all_owned_state = { has_state_flag = NUS_magd_inv }
+		``				all_owned_state = { has_state_flag = NUS_magd_inv }
 					}
 				}
 				MAG = { country_event = { id = RoF_NUS.122 } }
@@ -816,9 +970,11 @@ focus_tree = {
 			}		
 		}
 		available = {
-			AND = {
-				579 = { is_owned_by = NUS }
-				580 = { is_owned_by = NUS }
+			579 = { is_owned_by = NUS }
+			580 = { is_owned_by = NUS }
+			strength_ratio = {
+				tag = SXW
+				ratio > 1
 			}
 		}
 		completion_reward = {
@@ -864,9 +1020,11 @@ focus_tree = {
 			}		
 		}
 		available = {
-			AND = {
-				247 = { is_owned_by = NUS }
-				412 = { is_owned_by = NUS }
+			247 = { is_owned_by = NUS }
+			412 = { is_owned_by = NUS }
+			strength_ratio = {
+				tag = WRZ
+				ratio > 1
 			}
 		}
 		completion_reward = {
@@ -901,7 +1059,7 @@ focus_tree = {
 		id = NUS_new_american_revolution
 		icon = GFX_goal_support_democracy
 		mutually_exclusive = { focus = NUS_fortress_america }
-		x = 18
+		x = 20
 		y = 0
 		cost = 5
 		available = {
@@ -925,6 +1083,10 @@ focus_tree = {
 				if = {
 					limit = { date > 1631.6.26 date < 1631.6.28}
 					country_event = { id = RoF_NUS.110 days = 3}
+				}
+				if = {
+					limit = { date < 1631.6.27}
+					country_event = { id = RoF_NUS.110 days = 4}
 				}
 			}
 		}
@@ -976,6 +1138,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = NUS_CoC_1
+			add_popularity = { ideology = radical popularity = 0.05}
 		}
 		ai_will_do = {
 			factor = 15
@@ -1012,6 +1175,7 @@ focus_tree = {
 				remove_idea = NUS_CoC_1
 				add_idea = NUS_CoC_2
 			}
+			add_popularity = { ideology = radical popularity = 0.05}
 		}
 	}
 	focus = {
@@ -1035,6 +1199,7 @@ focus_tree = {
 				remove_idea = NUS_CoC_2
 				add_idea = NUS_CoC_3
 			}
+			add_popularity = { ideology = radical popularity = 0.05}
 		}
 
 	}
@@ -1207,7 +1372,7 @@ focus_tree = {
 		relative_position_id = NUS_new_american_revolution
 		available = {
 			custom_trigger_tooltip ={
-				tooltip = NUS_form_CPoE_tt
+				tooltip = NUS_form_CPoE.tt
 				has_country_flag = NUS_start_CPoE
 			}
 		}
@@ -1229,11 +1394,29 @@ focus_tree = {
 		prerequisite = {
 			focus = NUS_form_CPoE
 		}
-		x = -2
+		x = 0
 		y = 7
 		relative_position_id = NUS_new_american_revolution
 		completion_reward = {
 			country_event = { id = RoF_NUS.160 }
+		}
+	}
+	focus = {
+		id = NUS_baltic_relief
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		prerequisite = { focus = NUS_alte_veste }
+		x = 0
+		y = 8
+		relative_position_id = NUS_new_american_revolution
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NUS_baltic_war.tt
+				OR = { has_war_with = DEN has_war_with = FRA }
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_NUS.170 }
 		}
 	}
 	focus = {
@@ -1243,7 +1426,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NUS_form_CPoE
 		}
-		x = 0
+		x = -2
 		y = 7
 		relative_position_id = NUS_new_american_revolution
 		available = {
@@ -1264,6 +1447,35 @@ focus_tree = {
 			add_state_core = 461
 			add_state_core = 578
 			add_state_core = 577
+		}
+	}
+	focus = {
+		id = NUS_national_fervor
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = { focus = NUS_form_CPoE }
+		x = -4
+		y = 7
+		relative_position_id = NUS_new_american_revolution
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NUS_national_fervor.tt
+				has_country_flag = NUS_national_fervor_flag
+			}
+		}
+		select_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_in_faction_with = NUS
+						NOT = { tag = NUS }
+					}
+					country_event = { id = RoF_USE.101 }
+				}
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_USE.100 }
 		}
 	}
 

@@ -18,6 +18,7 @@ many more portraits and rulers updated for history with thanks again to Vlade an
 Continued work on events and NUS focus tree
 Beginning of focus tree for FRA
 updates to ideologies, new ministers for Radicalism and Constitutionalism
+New autonomy levels replacing vanilla autonomy
 
 Alpha 0.2.1 - Oct. 26, 2017
 Removed unused ideologies and added new ones.

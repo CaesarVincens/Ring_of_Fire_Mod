@@ -23,10 +23,10 @@ default_peace = {
 		factor = 500
 
 		modifier = {
-			factor = 0
-			NOT = {
-				has_annex_war_goal = FROM
-			}
+			factor = 0.1
+			#NOT = {
+			#	has_annex_war_goal = FROM
+			#}
 			FROM = {
 				any_owned_state = { 
 					NOT = {

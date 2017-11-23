@@ -1,0 +1,26 @@
+sub_units = {
+	single_plane = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = { fighter cas naval_bomber interceptor }
+		need = { single_plane_equipment = 1 }
+	}
+	
+	multi_plane = {
+		sprite = medium_plane
+		priority = 1
+		active = yes
+		type = { tactical_bomber }
+		need = { multi_plane_equipment = 1 }
+	}
+
+	airship = {
+		sprite = heavy_plane
+		priority = 1
+		active = yes
+		type = { strategic_bomber }
+		need = { airship_equipment = 1 }
+	}
+
+}

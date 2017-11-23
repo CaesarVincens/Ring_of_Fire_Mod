@@ -79,6 +79,46 @@ spriteTypes = {
 		textureFile = "gfx/interface/autonomy/autonomy_level_button.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_autonomy_reichskommissariat_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichskommissariat_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_reichsprotectorate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichsprotectorate_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_satellite_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_satellite.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_rof_colony_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_colony_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_rof_protectorate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_dominion_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_rof_union_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_rof_union_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_rof_vassal_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_puppet_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_rof_federal_state_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_integrated_puppet_icon.dds"
+	}
+	
 	#-------------
 
 	spriteType = {
@@ -332,7 +372,7 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_liberal_group"
+		name = "GFX_ideology_democratic_group"
 		texturefile = "gfx/interface/ideologies/democratic_group.dds"
 	}
 	

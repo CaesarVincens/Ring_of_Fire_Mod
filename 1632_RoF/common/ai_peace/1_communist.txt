@@ -9,7 +9,7 @@
 
 communist_peace = {
 	enable = {
-		has_government = absolutist
+		always = no
 	}
 
 	annex_randomness = 0 #200

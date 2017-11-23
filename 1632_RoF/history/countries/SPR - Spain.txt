@@ -17,29 +17,20 @@ set_convoys = 250
 
 
 # DIPLOMACY
-if = {
-    limit = {
-        has_dlc = "Together for Victory"
-    }
     #set_autonomy = {
     #    target = SPN
-    #    autonomous_state = autonomy_dominion
+    #    autonomous_state = autonomy_rof_protectorate
     #    freedom_level = 0.4
     #}
     set_autonomy = {
         target = NSP
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
+        autonomous_state = autonomy_rof_colony
+        freedom_level = 0.75
     }
     set_autonomy = {
         target = SPU
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
-    }
-    else = {
-        #puppet = SPN
-        puppet = NSP
-        puppet = SPU
+        autonomous_state = autonomy_rof_colony
+        freedom_level = 0.75
     }
 }
 

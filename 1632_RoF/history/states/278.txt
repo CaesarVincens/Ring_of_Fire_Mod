@@ -1,27 +1,32 @@
+
 state={
 	id=278
-	name= "STATE_278"
-	manpower = 747600
-
+	name="STATE_278"
 	resources={
-		steel = 4
+		steel=4.000
 	}
-	state_category = pastoral
 
 	history={
 		owner = MUG
-		victory_points = { 5043 3 }
+		victory_points = {
+			5043 3 
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = MUG
 		add_core_of = BAL
+
 	}
 
 	provinces={
-		1179 1978 4998 5043 7917 8066 12717 12774 
+		1179 5043 7917 8066 12774 
 	}
+	manpower=747600
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

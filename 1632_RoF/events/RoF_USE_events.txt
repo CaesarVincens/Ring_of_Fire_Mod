@@ -1,0 +1,194 @@
+﻿add_namespace = RoF_USE
+
+#formation of USE
+country_event = {
+	id = RoF_USE.100
+	title = RoF_USE.100.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_USE.100.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			NUS = { transfer_state = 472 }
+			every_country = {
+				limit = {
+					has_country_flag = USE_annex_country
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = PREV
+						NOT = { is_owned_by = PREV }
+						has_state_flag = USE_control_state
+					}
+					NUS = { set_state_controller = PREV }
+				}
+				NUS = {
+					annex_country = { target = PREV transfer_troops = yes }
+				}
+			}
+			set_cosmetic_tag = USE
+			set_country_flag = USE_formed
+		}
+	}
+	option = {
+		name = RoF_USE.100.a
+		effect_tooltip = {
+			set_cosmetic_tag = USE
+			every_country = {
+				limit = { has_country_flag = USE_annex_country }
+				NUS = { annex_country = { target = PREV transfer_troops = yes } }
+			}
+		}
+		hidden_effect = {
+			news_event = { id = RoF_news.05 days = 1 }
+		}
+	}
+}
+
+#Integrate to USE?
+country_event = {
+	id = RoF_USE.101
+	title = RoF_USE.101.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_USE.101.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = RoF_USE.101.a
+		custom_effect_tooltip = GAME_OVER_TT
+		every_owned_state = {
+			set_state_flag = USE_annex_state
+		}
+		every_state = {
+			limit = {
+				is_controlled_by = ROOT
+				NOT = { is_owned_by = ROOT }
+			}
+			set_state_flag = USE_control_state
+		}
+		set_country_flag = USE_annex_country
+		trigger = {
+			NOT = { tag = SWE }
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					tag = BRA
+					tag = SAX
+				}
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.1
+				num_of_controlled_states > 4
+			}
+		}
+	}
+	
+	option = {
+		name = RoF_USE.101.b
+		trigger = { tag = SWE }
+		472 = {
+			set_state_flag = USE_annex_state
+		}
+		every_state = {
+			limit = {
+				is_controlled_by = ROOT
+				NOT = { is_owned_by = ROOT }
+				NOT = { is_core_of = DEN }
+			}
+			set_state_flag = USE_control_state
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = RoF_USE.101.c
+		set_country_flag = USE_rejected_country
+		if = {
+			limit = { is_in_faction_with = NUS }
+			every_country = {
+				limit = { is_faction_leader = yes is_in_faction_with = NUS }
+				remove_from_faction = ROOT
+			}
+		}
+		if = {
+			limit = { has_war_together_with = NUS }
+			every_enemy_country = {
+				limit = { has_war_with = NUS has_war_with = ROOT }
+				white_peace = ROOT
+			}
+		}
+		every_owned_state = {
+			add_claim_by = NUS
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					tag = BRA
+					tag = SAX
+				}
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				add = 10
+				num_of_controlled_states > 4
+			}
+		}
+	}
+}
+
+#fate of ROOT
+country_event = {
+	id = RoF_USE.105
+	title = RoF_USE.105.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_USE.105.d
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = RoF_USE.105.a
+		NUS = { country_event = { id = RoF_USE.106 } }
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_USE.105.b
+		add_political_power = -100
+	}
+}
+
+#fate of FROM
+country_event = {
+	id = RoF_USE.106
+	title = RoF_USE.106.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_USE.106.d
+
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = RoF_USE.106.a
+		add_political_power = -100
+		annex_country = { target = FROM }
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_USE.106.b
+	}
+}

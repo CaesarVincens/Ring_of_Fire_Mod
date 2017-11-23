@@ -1,28 +1,33 @@
+
 state={
 	id=288
-	name= "STATE_288"
-	manpower = 8082096
-
+	name="STATE_288"
 	resources={
-		aluminium = 2
-		chromium = 2
-		steel = 1
+		aluminium=2.000
+		chromium=2.000
+		steel=1.000
 	}
-	state_category = large_city
 
 	history={
 		owner = MUG
-		victory_points = { 12854 4 }
+		victory_points = {
+			12854 4 
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 1
 			air_base = 0
+
 		}
 		add_core_of = MUG
+
 	}
 
 	provinces={
-		1949 2092 2105 4106 4410 4950 4953 5040 5096 7080 7205 7938 8076 10801 10816 10872 11993 11995 12080 12799 12854 
+		1949 2092 2105 4106 4410 4950 4953 5040 5096 7080 7205 7938 8076 8120 10801 10816 10872 11993 11995 12080 12799 12854 
 	}
+	manpower=8082096
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

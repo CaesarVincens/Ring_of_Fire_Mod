@@ -126,6 +126,30 @@ news_event = {
 		}
 	}
 }
+# NUS forms USE
+news_event = {
+	id = RoF_news.05
+	title = RoF_news.05.t
+	desc = RoF_news.05.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.05.a
+		trigger = {
+			NOT = { original_tag = NUS }
+			NOT = { tag = SWE }
+			NOT = { tag = UPS }
+		}
+	}
+	option = {
+		name = RoF_news.05.b
+		trigger = { OR = { original_tag = NUS tag = SWE tag = UPS } }
+	}
+}
 
 # NUS incorporates SXW
 news_event = {
@@ -201,6 +225,36 @@ news_event = {
 	option = {
 		name = RoF_news.20.c
 		trigger = { OR = { tag = SPR tag = SPN } }
+	}
+	
+}
+
+news_event = {
+	id = RoF_news.21
+	title = RoF_news.21.t
+	desc = RoF_news.21.d
+	picture = GFX_news_event_battle_sea
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.21.a
+		trigger = { OR = { tag = NUS is_in_faction_with = NUS } }
+	}
+	option = {
+		name = RoF_news.21.b
+		trigger = { OR = { tag = FRA is_in_faction_with = FRA } }
+	}
+	option = {
+		name = RoF_news.21.c
+		trigger = {
+			NOT = { tag = FRA }
+			NOT = { is_in_faction_with = FRA }
+			NOT = { tag = NUS }
+			NOT = { is_in_faction_with = NUS }
+		}
 	}
 	
 }

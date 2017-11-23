@@ -17,25 +17,16 @@ set_convoys = 150
 
 
 # DIPLOMACY
-if = {
-    limit = {
-        has_dlc = "Together for Victory"
-    }
     set_autonomy = {
         target = SCO
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
+        autonomous_state = autonomy_rof_union
+        freedom_level = 0.5
     }
     set_autonomy = {
         target = C13
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
+        autonomous_state = autonomy_rof_colony
+        freedom_level = 0.75
     }
-    else = {
-        puppet = SCO
-        puppet = C13
-    }
-}
 
 if = {
     limit = {has_dlc = "Together for Victory" }
@@ -49,7 +40,7 @@ set_politics = {
         absolutist = {
             popularity = 60
         }
-        liberal = {
+        constitutionalist = {
             popularity = 33
         }
         neutrality = {

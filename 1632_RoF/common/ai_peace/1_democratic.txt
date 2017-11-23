@@ -9,7 +9,7 @@
 
 democratic_peace = {
 	enable = {
-		has_government = liberal
+		always = no
 	}
 
 	annex_randomness = 0 #100

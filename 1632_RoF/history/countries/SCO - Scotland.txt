@@ -41,7 +41,7 @@ set_politics = {
     elections_allowed = no
 }
 
-
+set_country_flag = crown_union_flag
 add_ideas = {
 }
 set_national_unity = 0.7

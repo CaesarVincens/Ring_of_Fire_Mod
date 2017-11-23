@@ -1,0 +1,29 @@
+is_german_state = {
+	has_state_flag = german_state_flag
+}
+
+is_german = {
+	has_country_flag = german_tag_flag
+}
+
+NUS_or_war_ally = {
+	OR = {
+		tag = NUS
+		AND = {
+			has_war_together_with = NUS
+			is_in_faction_with = NUS
+		}
+	}
+}
+
+USE_or_war_ally = {
+	OR = {
+		tag = NUS
+		NUS = { has_country_flag = USE_formed }
+		AND = {
+			has_war_together_with = NUS
+			is_in_faction_with = NUS
+		}
+	}
+
+}

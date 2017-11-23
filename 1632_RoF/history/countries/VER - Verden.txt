@@ -36,6 +36,7 @@ set_politics = {
 }
 
 
+set_country_flag = german_state_flag
 add_ideas = {
 	balanced_eco
 }

@@ -3,7 +3,7 @@ autonomy_state = {
 	
 	is_puppet = yes
 	
-	min_freedom_level = 0.25
+	min_freedom_level = 0.5
 	
 	rule = {
 		can_not_declare_war = no
@@ -34,16 +34,17 @@ autonomy_state = {
 
 	allowed = {
 		NOT = { has_country_flag = crown_union_flag }
+		NOT = { has_country_flag = federal_state }
 		has_country_flag = colony_flag
 	}
 
 	can_take_level = {
-		has_country_flag = colony_flag
+		has_country_flag = RoF_go_free
 		#trigger here
 	}
 
 	can_lose_level = {
-		has_country_flag = colony_flag
+		has_country_flag = RoF_annex_puppet
 		#trigger here
 	}
 }

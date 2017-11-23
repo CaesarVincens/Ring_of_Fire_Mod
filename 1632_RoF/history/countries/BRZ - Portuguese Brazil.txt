@@ -41,7 +41,7 @@ set_politics = {
     elections_allowed = yes
 }
 
-
+set_country_flag = colony_flag
 add_ideas = {
 }
 set_national_unity = 0.7

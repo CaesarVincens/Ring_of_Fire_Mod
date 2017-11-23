@@ -14,7 +14,7 @@ ideas = {
 				can_send_volunteers = yes
 			}
 		}
-		FRA_ally_grantville = {
+		FRA_ally_grantville_liberal = {
 			allowed = {
 				always = no
 			}
@@ -24,6 +24,17 @@ ideas = {
 				liberal_acceptance = 50
 				research_time_factor = -0.05
 				constitutionalist_drift = 0.1
+			}
+		}
+		FRA_ally_grantville_absolutist = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				research_time_factor = -0.05
+				constitutionalist_drift = 0.05
 			}
 		}
 		FRA_promote_future = {

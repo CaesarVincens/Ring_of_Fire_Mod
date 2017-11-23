@@ -11,10 +11,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		FRA = {	set_country_flag = ostend_leader } #create_faction = "Ostend League" }
-		DEN = {	country_event = { id = RoF_FRA.102 } }
-		ENG = {	country_event = { id = RoF_FRA.101 } }
-		SPR = {	country_event = { id = RoF_FRA.103 } }
+		FRA = { set_country_flag = ostend_leader } #create_faction = "Ostend League" }
+		DEN = { country_event = { id = RoF_FRA.102 } }
+		ENG = { country_event = { id = RoF_FRA.101 } }
+		SPR = { country_event = { id = RoF_FRA.103 } }
 	}
 	option = {
 		name = RoF_FRA.100.a
@@ -41,7 +41,7 @@ country_event = {
 			country_event = { id = RoF_FRA.105 }
 		}
 		add_timed_idea = { idea = ENG_FRA_payment days = 180 }
-		set_country_flag = ostend_member
+		#set_country_flag = ostend_member
 		effect_tooltip = {
 			end_puppet = C13
 			FRA = { puppet = C13 }
@@ -164,9 +164,32 @@ country_event = {
 	}
 	option = {
 		name = RoF_FRA.120.a
+		country_event = { id = RoF_FRA.121 days = 30 }
 	}
 }
 
+#Declare on NUS/SWE
+country_event = {
+	id = RoF_FRA.121
+	title = RoF_FRA.121.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_FRA.121.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FRA = {
+			declare_war_on = {
+				target = NUS
+				type = annex_everything
+			}
+		}
+	}
+	option = {
+		name = RoF_FRA.121.a
+		news_event = { id = RoF_news.21 days = 1 }
+	}
+}
 #join NUS
 country_event = {
 	id = RoF_FRA.130

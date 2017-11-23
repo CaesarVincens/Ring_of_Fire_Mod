@@ -84,7 +84,57 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_subtech_tercio"
-		textureFile = "gfx/interface/technologies/subtech_tercio.dds"
+		texturefile = "gfx//interface//technologies//subtech_tercio.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_first_plane_medium"
+		texturefile = "gfx/interface/technologies/early_fighter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_single_plane_tech_1_medium"
+		texturefile = "gfx/interface/technologies/fighter1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_single_plane_tech_2_medium"
+		texturefile = "gfx/interface/technologies/fighter2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_single_plane_tech_3_medium"
+		texturefile = "gfx/interface/technologies/fighter3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_multi_plane_tech_1_medium"
+		texturefile = "gfx/interface/technologies/strategic_bomber1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_multi_plane_tech_2_medium"
+		texturefile = "gfx/interface/technologies/strategic_bomber2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_multi_plane_tech_3_medium"
+		texturefile = "gfx/interface/technologies/strategic_bomber3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_first_airship_medium"
+		texturefile = "gfx/interface/technologies/airship_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_airship_tech_2_medium"
+		texturefile = "gfx/interface/technologies/airship_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_airship_tech_3_medium"
+		texturefile = "gfx/interface/technologies/airship_equipment_1.dds"
 	}
 
 }

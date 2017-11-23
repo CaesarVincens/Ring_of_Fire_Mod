@@ -26,17 +26,15 @@ set_convoys = 100
 
 
 # DIPLOMACY
-if = {
-    limit = {
-        #has_dlc = "Together for Victory"
-    }
     set_autonomy = {
         target = POM
         autonomous_state = autonomy_rof_vassal
-        freedom_level = 0.4
+        freedom_level = 0.6
     }
-    else = {
-        puppet = POM
+    set_autonomy = {
+        target = MKL
+        autonomous_state = autonomy_rof_vassal
+        freedom_level = 0.6
     }
 }
 
@@ -71,6 +69,7 @@ set_politics = {
 create_faction = "Protestant Union"
 add_to_faction = SWE
 add_to_faction = POM
+add_to_faction = MKL
 add_to_faction = BRA
 add_to_faction = SAX
 add_to_faction = BRS

@@ -2,8 +2,8 @@
 supply_area={
 	id=109
 	name="SUPPLYAREA_109"
-	value=4
+	value=15
 	states={
-		539 
+		153 565 610 608 609 
 	}
 }

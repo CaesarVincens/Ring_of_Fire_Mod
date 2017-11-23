@@ -329,13 +329,13 @@ focus_tree = {
 				name = fighter_bonus
 				bonus = 0.5
 				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = first_plane
+				technology = single_plane_tech_1
+				technology = single_plane_tech_2
+				technology = single_plane_tech_2
+				technology = multi_plane_tech_1
+				technology = multi_plane_tech_2
+				technology = multi_plane_tech_3
 			}
 		}
 
@@ -358,10 +358,9 @@ focus_tree = {
 				name = bomber_bonus
 				bonus = 0.5
 				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
-				category = tactical_bomber
+				technology = first_airship
+				technology = airship_tech_2
+				technology = airship_tech_3
 			}
 		}
 
@@ -462,30 +461,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = CAS_effort
-		icon = GFX_goal_generic_CAS
-		cost = 10.00
-		prerequisite = {
-			focus = aviation_effort_2
-		}
-		prerequisite = {
-			focus = motorization_effort
-		}
-		x = 4
-		y = 3
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = CAS_bonus
-				bonus = 0.5
-				ahead_reduction = 1
-				uses = 1
-				category = cas_bomber
-			}
-		}
-
-	}
-	focus = {
 		id = rocket_effort
 		icon = GFX_focus_rocketry
 		cost = 10.00
@@ -512,30 +487,6 @@ focus_tree = {
 			modifier = {
 				factor = 0.25
 				always = yes
-			}
-		}
-
-	}
-	focus = {
-		id = NAV_effort
-		icon = GFX_goal_generic_air_naval_bomber
-		cost = 10.00
-		prerequisite = {
-			focus = aviation_effort_2
-		}
-		prerequisite = {
-			focus = flexible_navy
-		}
-		x = 6
-		y = 3
-		available_if_capitulated = yes
-		completion_reward = {
-			add_tech_bonus = {
-				name = nav_bomber_bonus
-				bonus = 0.5
-				ahead_reduction = 1
-				uses = 1
-				category = naval_bomber
 			}
 		}
 

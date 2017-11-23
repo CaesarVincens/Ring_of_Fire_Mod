@@ -1,8 +1,9 @@
+
 supply_area={
 	id=59
-	name= "SUPPLYAREA_59"
-	value = 16
+	name="SUPPLYAREA_59"
+	value=15
 	states={
-		126 
+		333 334 331 332 329 330 
 	}
 }

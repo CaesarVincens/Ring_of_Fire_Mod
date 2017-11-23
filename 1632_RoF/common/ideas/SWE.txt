@@ -47,7 +47,7 @@ ideas = {
 				army_attack_factor = 0.1
 				army_artillery_attack_factor = 0.1
 			}
-			picture = brittish_stoicism	
+			picture = stiff_upper_lip	
 			rule = {
 				can_create_factions = yes
 			}

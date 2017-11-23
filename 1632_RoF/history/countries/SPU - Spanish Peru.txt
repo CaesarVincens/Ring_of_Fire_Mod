@@ -12,14 +12,8 @@ transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 50
 
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = SPR_research
-}
 
 set_politics = {
 
@@ -27,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 14
         }
-        liberal = {
+        constitutionalist = {
             popularity = 13
         }
         neutrality = {
@@ -41,7 +35,7 @@ set_politics = {
     elections_allowed = yes
 }
 
-
+set_country_flag = colony_flag
 add_ideas = {
 }
 set_national_unity = 0.7

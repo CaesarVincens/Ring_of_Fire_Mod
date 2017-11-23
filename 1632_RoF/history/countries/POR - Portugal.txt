@@ -16,31 +16,21 @@ set_convoys = 0
 
 
 # DIPLOMACY
-if = {
-    limit = {
-        has_dlc = "Together for Victory"
-    }
     set_autonomy = {
         target = KEN
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
+        autonomous_state = autonomy_rof_protectorate
+        freedom_level = 0.8
     }
     set_autonomy = {
         target = BRZ
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
+        autonomous_state = autonomy_rof_colony
+        freedom_level = 0.75
     }
     set_autonomy = {
         target = MUT
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
+        autonomous_state = autonomy_rof_protectorate
+        freedom_level = 0.8
     }
-    else = {
-        puppet = KEN
-        puppet = BRZ
-        puppet = MUT
-    }
-}
 
 if = {
     limit = {has_dlc = "Together for Victory" }
