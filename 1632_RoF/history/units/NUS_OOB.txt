@@ -12,7 +12,7 @@
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = early_flintlock
+			type = arquebus_equipment
 			creator = "NUS"
 		}
 		requested_factories = 1

@@ -12,7 +12,9 @@ country_event = {
 		tag = SWE
 		date > 1631.9.16
 	}
-	
+	mean_time_to_happen = {
+		days = 1
+	}
 	immediate = {
 		
 	}
@@ -48,4 +50,142 @@ country_event = {
 		}
 	}
 }
+#alte_veste
+country_event = {
+	id = RoF_SWE.110
+	title = RoF_SWE.110.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.110.d
+	fire_only_once = yes
 
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.110.a
+		effect_tooltip = {
+			set_autonomy = { target = NUR autonomy_state = autonomy_rof_nominal_vassal }
+		}
+	}
+}
+
+# SWE demands Kalmar
+country_event = {
+	id = RoF_SWE.120
+	title = RoF_SWE.120.t
+	desc = RoF_SWE.120.d
+	picture = GFX_report_event_swe_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_SWE.120.a
+		#set_country_flag = attending_congress_of_copenhagen
+		set_country_flag = demand_kalmar_union
+		custom_effect_tooltip = SWE_kalmar.tt
+		add_political_power = -50
+		DEN = { country_event = { id = RoF_DEN.151 days = 7 } }
+		ai_chance = { base = 100 }
+	}
+	option = { # Refuse
+		name =  RoF_SWE.120.b
+		set_country_flag = demand_scania_gotland
+		custom_effect_tooltip = SWE_scania_gotland.tt
+		add_political_power = -100
+		DEN = { country_event = { id = RoF_DEN.151 days = 7 } }
+		ai_chance = { base = 0 }
+	}
+}
+
+#Denmark responds
+country_event = {
+	id = RoF_SWE.121
+	title = RoF_SWE.121.t
+	picture = GFX_report_event_rof_placeholder
+	desc = {
+		text = RoF_SWE.121.da
+		trigger = {
+			has_country_flag = demand_kalmar_union
+			DEN = { has_country_flag = accept_union }
+		}
+	}
+	desc = {
+		text = RoF_SWE.121.db
+		trigger = {
+			has_country_flag = demand_scania_gotland
+			DEN = { has_country_flag = accept_union }
+		}
+	}
+	desc = {
+		text = RoF_SWE.121.dc
+		trigger = {
+			has_country_flag = demand_scania_gotland
+			DEN = { has_country_flag = give_scania_gotland }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = SWE_demand_met
+		if = {
+			limit = { DEN = { NOT = { has_country_flag = crown_union_flag } } }
+			DEN = { set_country_flag = crown_union_flag }
+		}
+	}
+
+	option = {
+		name = RoF_SWE.121.a
+		trigger = {
+			has_country_flag = demand_kalmar_union
+			DEN = { has_country_flag = accept_union }
+		}
+		set_autonomy = { target = DEN autonomy_state = autonomy_rof_union }
+		DEN = {
+			add_ideas = DEN_kalmar_junior
+			add_ideas = DEN_ulrik_kristina
+			clr_country_flag = accept_union
+		}
+		clr_country_flag = demand_kalmar_union
+	}
+	option = {
+		name = RoF_SWE.121.b
+		trigger = {
+			has_country_flag = demand_scania_gotland
+			DEN = { has_country_flag = accept_union }
+		}
+		set_autonomy = { target = DEN autonomy_state = autonomy_rof_union }
+		DEN = {
+			add_ideas = DEN_kalmar_junior
+			add_ideas = DEN_ulrik_kristina
+			clr_country_flag = accept_union
+		}
+		clr_country_flag = demand_scania_gotland
+	}
+	option = {
+		name = RoF_SWE.121.c
+		trigger = {
+			has_country_flag = demand_scania_gotland
+			DEN = { has_country_flag = give_scania_gotland }
+		}
+		set_autonomy = { target = DEN autonomy_state = autonomy_rof_union }
+		transfer_state = 107
+		add_state_core = 107
+		transfer_state = 108
+		add_state_core = 108
+		transfer_state = 656
+		add_state_core = 656
+		transfer_state = 659
+		add_state_core = 659
+		transfer_state = 109
+		add_state_core = 109
+		DEN = {
+			add_ideas = DEN_kalmar_concessions
+			add_ideas = DEN_ulrik_kristina
+			clr_country_flag = give_scania_gotland
+		}
+		clr_country_flag = demand_scania_gotland
+	}
+}

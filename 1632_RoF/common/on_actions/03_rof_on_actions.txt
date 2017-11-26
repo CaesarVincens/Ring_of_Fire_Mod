@@ -13,13 +13,21 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					is_german_state = yes
+					is_german = yes
 					has_war_with = NUS
 					FROM = {
 						USE_or_war_ally = yes
 					}
 				}
 				country_event = { id = RoF_USE.105 }
+			}
+			if = {
+				limit = {
+					tag = DEN
+					is_in_faction_with = FRA
+					FROM = { OR = { tag = NUS tag = SWE } }
+				}
+				#country_event = { id = RoF_DEN.150 }
 			}
 		}
 	}

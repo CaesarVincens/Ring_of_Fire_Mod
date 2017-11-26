@@ -1,0 +1,25 @@
+state={
+	id=661
+	name="STATE_661"
+	history={
+		owner = MKL
+		victory_points = {
+			11305 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = MKL
+
+	}
+	provinces={
+		9294 9320 11305 
+	}
+	manpower=241828
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

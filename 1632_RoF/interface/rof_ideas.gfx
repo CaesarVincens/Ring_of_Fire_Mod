@@ -25,4 +25,8 @@ spriteTypes = {
 		name = "GFX_idea_richelieu_pic"
 		texturefile = "gfx/interface/ideas/idea_richelieu_pic.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_lion_of_the_north"
+		texturefile = "gfx/interface/ideas/idea_lion_of_the_north.dds"
+	}
 }

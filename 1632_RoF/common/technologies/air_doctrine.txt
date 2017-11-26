@@ -893,7 +893,7 @@ technologies = {
 	keypoint_bombing = {
 
 		# EFFECT ########
-		tac_bomber = {
+		multi_plane = {
 			air_bombing = 0.10
 		}
 		###########
@@ -1371,7 +1371,7 @@ technologies = {
 	carousel_bombing = {
 
 		# EFFECT ########
-		tac_bomber = {
+		multi_plane = {
 			air_bombing = 0.1
 		}
 		###########

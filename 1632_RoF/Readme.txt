@@ -12,13 +12,14 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 Currently in Early Alpha; expect to find bugs and oddities
 
-Alpha - Ostend League 0.3.0 - Nov.  , 2017
+Alpha 0.3.0 - Ostend League - Nov. 25, 2017
 Beginning of Tech Overhaul; new infantry and artillery techs
 many more portraits and rulers updated for history with thanks again to Vlade and others for contributions
 Continued work on events and NUS focus tree
 Beginning of focus tree for FRA
 updates to ideologies, new ministers for Radicalism and Constitutionalism
 New autonomy levels replacing vanilla autonomy
+Events and Focuses for NUS (and some others) through the Congress of Copenhagen
 
 Alpha 0.2.1 - Oct. 26, 2017
 Removed unused ideologies and added new ones.

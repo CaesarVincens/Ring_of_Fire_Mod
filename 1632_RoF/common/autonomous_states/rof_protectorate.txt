@@ -1,7 +1,7 @@
 autonomy_state = {
 	id = autonomy_rof_protectorate
 	
-	min_freedom_level = 0.75
+	min_freedom_level = 0.5
 	
 	rule = {
 		can_not_declare_war = yes
@@ -36,7 +36,7 @@ autonomy_state = {
 	}
 
 	can_take_level = {
-		has_country_flag = RoF_go_free
+		has_country_flag = RoF_raise_autonomy
 		#trigger here
 	}
 

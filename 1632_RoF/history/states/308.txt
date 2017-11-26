@@ -11,7 +11,7 @@ state={
 	history={
 		owner = NUS
 		victory_points = {
-			9497 8 
+			9497 20 
 		}
 		buildings = {
 			infrastructure = 3

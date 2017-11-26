@@ -9,7 +9,28 @@ ai_historical_focus_list_NUS = {
 		NUS_new_constitution
 		NUS_invite_thuringian_cities
 		NUS_support_SWE
+		NUS_build_an_army
+		NUS_integrate_down_timers
+		NUS_encourage_reinvention
 		NUS_form_CPoE
+		NUS_alte_veste
+		NUS_steam_engine_focus
+		NUS_brown_navy
+		NUS_army_reforms
+		NUS_magdeburg_committee
+		NUS_srg_design
+		NUS_ironclads_focus
+		NUS_las_vegas_belle
+		NUS_wietze_oil
+		NUS_steel_production
+		NUS_baltic_relief
+		NUS_national_fervor
+		NUS_integrate_franconia
+		NUS_german_committees
+		NUS_force_hamburg
+		NUS_relieve_lubeck
+		NUS_little_germanies
+		NUS_congress_of_copenhagen
 	}
 }
 
@@ -19,6 +40,7 @@ ai_focus_defense_NUS = {
 		radar_tech = 1.0
 		construction_tech = 2.0
 		artillery = 2.0
+		light_artillery = 2
 	}
 }
 
@@ -44,7 +66,9 @@ ai_focus_military_equipment_NUS = {
 	research = {
 		infantry_weapons = 50.0
 		infantry_tech = 15.0
+		firearms_weapons = 50
 		artillery = 8.0
+		light_artillery = 8
 		support_tech = 6.5
 	}
 }
@@ -60,7 +84,7 @@ ai_focus_military_advancements_NUS = {
 		decryption_tech = 7.5
 		synth_resources = 3.0
 		motorized_equipment = 4.0
-		nuclear = 10.0
+		#nuclear = 10.0
 		night_vision = 5.0
 	}
 }

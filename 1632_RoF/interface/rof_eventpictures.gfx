@@ -16,6 +16,31 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_nus_flag"
+		texturefile = "gfx/event_pictures/report_event_nus_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_use_flag"
+		texturefile = "gfx/event_pictures/report_event_use_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_swe_flag"
+		texturefile = "gfx/event_pictures/report_event_swe_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_fra_flag"
+		texturefile = "gfx/event_pictures/report_event_fra_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_spr_flag"
+		texturefile = "gfx/event_pictures/report_event_spr_flag.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_breitenfeld"
 		texturefile = "gfx/event_pictures/report_event_breitenfeld.dds"
 	}

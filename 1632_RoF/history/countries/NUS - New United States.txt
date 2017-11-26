@@ -13,10 +13,11 @@ basic_machine_tools = 1
 construction1 = 1
 up_time_weapons_tech = 1
 superior_firepower = 1
-pike_weapons = 1
-tercio_formation_tech = 1
+#pike_weapons = 1
+#tercio_formation_tech = 1
 arquebus_weapons = 1
-early_flintlock_tech = 1
+#early_flintlock_tech = 1
+NUS_line_infantry_tech = 1
 }
 
 # Research Bonuses

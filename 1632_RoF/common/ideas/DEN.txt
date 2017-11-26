@@ -1,4 +1,36 @@
 ideas = {
+	country = {
+		DEN_kalmar_junior = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				
+			}
+			removal_cost = -1
+			picture = kalmar_junior
+		}
+		DEN_kalmar_concessions = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				
+			}
+			removal_cost = -1
+			picture = kalmar_junior		
+		}
+		DEN_ulrik_kristina = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				unity_factor = 0.1
+			}
+			removal_cost = -1
+			picture = ulrik_kristina
+		}
+	}
 	political_advisor = {
 		DEN_absolutist_advisor = {
 			allowed = {

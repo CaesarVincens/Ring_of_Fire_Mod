@@ -6,7 +6,7 @@ state={
 	history={
 		owner = MAG
 		victory_points = {
-			3522 8 
+			3522 30 
 		}
 		buildings = {
 			infrastructure = 3

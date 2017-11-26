@@ -12,6 +12,7 @@ early_flintlock_tech = 1
 heavy_artillery_1 = 1
 light_artillery_1  = 1
 transport = 1
+early_destroyer = 1
 }
 
 add_named_threat = { threat = 10 name = swedish_intervention }
@@ -36,7 +37,6 @@ set_convoys = 100
         autonomous_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
-}
 
 if = {
     limit = {has_dlc = "Together for Victory" }

@@ -18,7 +18,7 @@ ideas = {
 			}
 		}
 		
-		idea_continuous_naval_production = {
+		continuous_naval_production = {
 			allowed = {
 				always = no
 			}
@@ -35,7 +35,7 @@ ideas = {
 		}
 
 
-		idea_continuous_air_production = {
+		continuous_air_production = {
 			allowed = {
 				always = no
 			}

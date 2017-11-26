@@ -1,0 +1,25 @@
+state={
+	id=662
+	name="STATE_662"
+	history={
+		owner = DEN
+		victory_points = {
+			6389 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = DEN
+
+	}
+	provinces={
+		3231 3368 6257 6389 13207
+	}
+	manpower=296208
+	buildings_max_level_factor=1.000
+	state_category=town
+}

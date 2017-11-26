@@ -9,7 +9,7 @@ state={
 	history={
 		owner = DEN
 		victory_points = {
-			6389 3 
+			317 3 
 		}
 		buildings = {
 			infrastructure = 3
@@ -23,9 +23,9 @@ state={
 	}
 
 	provinces={
-		317 332 3231 3368 6257 6389 11251 11366 
+		317 332 11251 11366 
 	}
-	manpower=592416
+	manpower=296208
 	buildings_max_level_factor=1.000
 	state_category=town
 }

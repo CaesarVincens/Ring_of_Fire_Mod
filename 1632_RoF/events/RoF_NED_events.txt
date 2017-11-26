@@ -4,7 +4,7 @@
 country_event = {
 	id = RoF_NED.100
 	title = RoF_NED.100.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_spr_flag
 	desc = RoF_NED.100.d
 	fire_only_once = yes
 
@@ -14,7 +14,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_NED.100.a
-		set_country_flag = SPN_don_fernando_arrives
+		news_event = { id = RoF_news.20 days = 2 }
 	}
 }
 
@@ -39,7 +39,7 @@ country_event = {
 country_event = {
 	id = RoF_NED.102
 	title = RoF_NED.102.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_spr_flag
 	desc = RoF_NED.102.d
 	fire_only_once = yes
 
@@ -70,31 +70,45 @@ country_event = {
 				traits = {
 				}
 			}
-			create_corps_commander = {
-				name = "Fernando von Habsburg"
-				gfx = "GFX_leader_SPN_Don_Fernando"
-				traits = {}
-				skill = 3
-			}
 		}
 	}
 	
 	#join
+	#don't join
 	option = {
-		name = RoF_NED.102.a
+		name = RoF_NED.102.1
+		if = {
+			limit = { NOT = { has_government = constitutionalist } }
+			add_popularity = { ideology = constitutionalist popularity = 0.4 }
+			set_politics = { ruling_party = constitutionalist }
+		}
+		effect_tooltip = {
+			create_country_leader = {
+				name = "Fernando von Habsburg"
+				desc = "POLITICS_DON_FERNANDO_DESC"
+				picture = "GFX_leader_SPN_Don_Fernando"
+				ideology = constitutional_monarchy
+				traits = {
+				}
+			}		
+		}
+	}
+	option = {
+		name = RoF_NED.102.b
 		if = {
 			limit = { NOT = { has_government = absolutist } }
 			add_popularity = { ideology = absolutist popularity = 0.4 }
 			set_politics = { ruling_party = absolutist }
 		}
-	}
-	#don't join
-	option = {
-		name = RoF_NED.102.b
-		if = {
-			limit = { NOT = { has_government = constitutionalist } }
-			add_popularity = { ideology = constitutionalist popularity = 0.4 }
-			set_politics = { ruling_party = constitutionalist }
+		effect_tooltip = {
+			create_country_leader = {
+				name = "Fernando von Habsburg"
+				desc = "POLITICS_DON_FERNANDO_DESC"
+				picture = "GFX_leader_SPN_Don_Fernando"
+				ideology = absolute_monarchy
+				traits = {
+				}
+			}		
 		}
 	}
 }
@@ -103,7 +117,7 @@ country_event = {
 country_event = {
 	id = RoF_NED.110
 	title = RoF_NED.110.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_spr_flag
 	desc = RoF_NED.110.d
 
 	is_triggered_only = yes
@@ -118,8 +132,8 @@ country_event = {
 			limit = { has_state_flag = UPS_original_state }
 			UPS = { transfer_state = PREV }
 		}
-		puppet = UPS
 		white_peace = UPS
+		set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }
 	}
 	option = {
 		name = RoF_NED.110.b
@@ -133,7 +147,7 @@ country_event = {
 country_event = {
 	id = RoF_NED.111
 	title = RoF_NED.111.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_spr_flag
 	desc = RoF_NED.111.d
 
 	is_triggered_only = yes
@@ -148,12 +162,115 @@ country_event = {
 			limit = { has_state_flag = UPS_original_state }
 			UPS = { transfer_state = PREV }
 		}
-		puppet = UPS
+		set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }
 	}
 	option = {
 		name = RoF_NED.110.b
 		ai_chance = { base = 0 }
 		set_country_flag = take_UPS
 		add_political_power = -150
+	}
+}
+# SPN gobbles up border states
+country_event = {
+	id = RoF_NED.115
+	title = RoF_NED.115.t
+	desc = RoF_NED.115.d
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NED.115.a
+		ai_chance = { base = 100 }
+		set_country_flag = @ROOT_accept_demand
+		SPN = {
+			country_event = { id = RoF_NED.116 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF_NED.115.b
+		set_country_flag = @ROOT_refuse_demand
+		SPN = {
+			country_event = { id = RoF_NED.116 }
+		}
+	}
+}
+
+# SPN gobbles up border states
+country_event = {
+	id = RoF_NED.116
+	title = RoF_NED.116.t
+	desc = {
+		text = RoF_NED.116.da
+		trigger = {
+			FROM = { has_country_flag = @FROM_refuse_demand }
+		}
+	}
+	desc = {
+		text = RoF_NED.116.db
+		trigger = {
+			FROM = { has_country_flag = @FROM_accept_demand }
+		}
+	}
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.116.a
+		trigger = {
+			FROM = { has_country_flag = @FROM_refuse_demand }
+		}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+	option = {
+		name = RoF_NED.116.b
+		trigger = {
+			FROM = { has_country_flag = @FROM_accept_demand }
+		}
+		annex_country = { target = FROM }
+	}
+}
+
+# UPS goes to Congress of Copenhagen
+country_event = {
+	id = RoF_NED.120
+	title = RoF_NED.120.t
+	desc = RoF_NED.120.d
+	picture = GFX_report_event_rof_placeholder
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NED.120.a
+		set_country_flag = attending_congress_of_copenhagen
+		ai_chance = { base = 100 }
+	}
+	option = { # Refuse
+		name =  RoF_NED.120.b
+	}
+}
+
+# SPN goes to Congress of Copenhagen
+country_event = {
+	id = RoF_NED.121
+	title = RoF_NED.121.t
+	desc = RoF_NED.121.d
+	picture = GFX_report_event_spr_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NED.121.a
+		set_country_flag = attending_congress_of_copenhagen
+		ai_chance = { base = 100 }
+	}
+	option = { # Refuse
+		name =  RoF_NED.121.b
 	}
 }

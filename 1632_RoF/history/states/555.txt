@@ -29,9 +29,13 @@ state={
 				bunker = 2
 			}
 			68 = {
+				naval_base = 2
 				bunker = 2
 			}
 			391 = {
+				bunker = 2
+			}
+			3314 = {
 				bunker = 2
 			}
 			9431 = {

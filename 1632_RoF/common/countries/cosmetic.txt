@@ -5,4 +5,13 @@ USE = {
 }
 AUH = {
 	color = rgb { 236 215 215 }
-	color_ui = rgb { 236 215 215 }}
+	color_ui = rgb { 236 215 215 }
+}
+NFR = {
+	color = rgb { 90 110 230 }
+	color_ui = rgb { 90 110 230 }
+}
+NEN = {
+	color = rgb { 225 90 80 }
+	color_ui = rgb { 225 90 80 }
+}

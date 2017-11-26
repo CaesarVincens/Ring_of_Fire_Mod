@@ -199,6 +199,81 @@ news_event = {
 	}
 }
 
+# NUS incorporates MAG
+news_event = {
+	id = RoF_news.12
+	title = RoF_news.12.t
+	desc = RoF_news.12.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.12.a
+		trigger = {
+			NOT = {
+				tag = NUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.12.b
+		trigger = { tag = NUS }
+	}
+}
+
+# NUS incorporates Leipzig
+news_event = {
+	id = RoF_news.13
+	title = RoF_news.13.t
+	desc = RoF_news.13.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.13.a
+		trigger = {
+			NOT = {
+				tag = NUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.13.b
+		trigger = { tag = NUS }
+	}
+}
+
+# NUS incorporates WRZ
+news_event = {
+	id = RoF_news.14
+	title = RoF_news.14.t
+	desc = RoF_news.14.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.14.a
+		trigger = {
+			NOT = {
+				tag = NUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.14.b
+		trigger = { tag = NUS }
+	}
+}
+
 # Dunkirk
 news_event = {
 	id = RoF_news.20

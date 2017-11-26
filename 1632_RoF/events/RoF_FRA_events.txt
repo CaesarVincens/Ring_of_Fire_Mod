@@ -12,9 +12,9 @@ country_event = {
 	
 	immediate = {
 		FRA = { set_country_flag = ostend_leader } #create_faction = "Ostend League" }
-		DEN = { country_event = { id = RoF_FRA.102 } }
-		ENG = { country_event = { id = RoF_FRA.101 } }
-		SPR = { country_event = { id = RoF_FRA.103 } }
+		DEN = { country_event = { id = RoF_FRA.102 days = 7 } }
+		ENG = { country_event = { id = RoF_FRA.101 days = 7 } }
+		SPR = { country_event = { id = RoF_FRA.103 days = 7 } }
 	}
 	option = {
 		name = RoF_FRA.100.a
@@ -38,13 +38,13 @@ country_event = {
 		name = RoF_FRA.101.a
 		FRA = {
 			#add_to_faction = ENG
-			country_event = { id = RoF_FRA.105 }
+			country_event = { id = RoF_FRA.105 days = 14 }
 		}
 		add_timed_idea = { idea = ENG_FRA_payment days = 180 }
 		#set_country_flag = ostend_member
 		effect_tooltip = {
 			end_puppet = C13
-			FRA = { puppet = C13 }
+			FRA = { set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony } }
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -122,7 +122,11 @@ country_event = {
 		ENG = {
 			end_puppet = C13
 		}
-		puppet = C13
+		C13 = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = NFR
+		}
+		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
 	}
 	option = {
 		name = RoF_FRA.105.a
@@ -142,8 +146,8 @@ country_event = {
 	
 	immediate = {
 		FRA = {
+			set_global_flag = ostend_war_begins
 			create_faction = "League of Ostend"
-			news_event = { id = RoF_news.20 days = 1 }
 		}
 		every_country = {
 			limit = { has_country_flag = ostend_member }
@@ -152,15 +156,15 @@ country_event = {
 			}
 		}
 		SPN = {
-			declare_war_on = {
-				target = UPS
-				type = annex_everything
-			}
-			country_event = { id = RoF_NED.100 }
+			#declare_war_on = {
+			#	target = UPS
+			#	type = annex_everything
+			#}
+			#country_event = { id = RoF_NED.100 }
 		}
-		UPS = {
-			country_event = { id = RoF_NED.101 }
-		}
+		#UPS = {
+		#	country_event = { id = RoF_NED.101 }
+		#}
 	}
 	option = {
 		name = RoF_FRA.120.a
@@ -190,11 +194,28 @@ country_event = {
 		news_event = { id = RoF_news.21 days = 1 }
 	}
 }
+#Raid Wietze
+country_event = {
+	id = RoF_FRA.125
+	title = RoF_FRA.125.t
+	picture = GFX_report_event_fra_flag
+	desc = RoF_FRA.125.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_FRA.125.a
+	}
+}
+
 #join NUS
 country_event = {
 	id = RoF_FRA.130
 	title = RoF_FRA.130.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_nus_flag
 	desc = RoF_FRA.130.d
 	fire_only_once = yes
 

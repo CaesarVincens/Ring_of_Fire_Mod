@@ -3,6 +3,9 @@ opinion_modifiers = {
 	SWE_tyw_support = {
 		value = 50
 	}
+	rejected_USE = {
+		value = -50
+	}
 	hates_AUS = {
 		value = -100
 	}

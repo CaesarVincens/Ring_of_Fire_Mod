@@ -47,7 +47,7 @@ ideas = {
 				army_attack_factor = 0.1
 				army_artillery_attack_factor = 0.1
 			}
-			picture = stiff_upper_lip	
+			picture = lion_of_the_north	
 			rule = {
 				can_create_factions = yes
 			}

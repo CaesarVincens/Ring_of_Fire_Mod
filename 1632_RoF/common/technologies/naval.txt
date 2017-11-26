@@ -278,6 +278,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 1000
+				has_completed_focus = NUS_ironclads_focus
+			}
 		}
 		
 		categories = {
@@ -313,6 +317,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 1000
+				has_completed_focus = NUS_ironclads_focus
+			}
 		}
 		
 		categories = {
@@ -469,6 +477,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 1000
+				has_completed_focus = NUS_ironclads_focus
+			}
 		}
 		
 		categories = {
@@ -503,6 +515,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 1000
+				has_completed_focus = NUS_ironclads_focus
+			}
 		}
 		
 		categories = {

@@ -13,20 +13,7 @@ technologies = {
 				NOT = {	has_template_containing_unit = medium_armor }
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
+				load_oob = "unlock_tanks"
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
@@ -92,20 +79,7 @@ technologies = {
 				NOT = {	has_template_containing_unit = medium_armor }
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
+				load_oob = "unlock_tanks"
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
@@ -1141,20 +1115,7 @@ technologies = {
 				NOT = {	has_template_containing_unit = medium_armor }
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = motorised_infantry
-					}
-
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry }
-					}
-
-					load_oob = "unlock_tanks"
-				}
+				load_oob = "unlock_tanks"
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE

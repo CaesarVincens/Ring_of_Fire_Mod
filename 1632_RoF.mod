@@ -1,4 +1,4 @@
-name="1632 - The Ring of Fire - Early Alpha"
+name="1632 - The Ring of Fire"
 path="mod/1632_RoF/"
 user_dir="1632_RoF_user_dir"
 tags={

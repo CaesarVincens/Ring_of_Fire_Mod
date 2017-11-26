@@ -1,0 +1,197 @@
+﻿add_namespace = RoF_DEN
+
+#Congress of Copenhagen - USE Demands
+country_event = {
+	id = RoF_DEN.150
+	title = RoF_DEN.150.t
+	picture = GFX_report_event_rof_placeholder
+	desc = {
+		text = RoF_DEN.150.da
+		trigger = {
+			NUS = { has_country_flag = demand_holstein }
+		}
+	}
+	desc = {
+		text = RoF_DEN.150.db
+		trigger = {
+			NUS = { has_country_flag = demand_jutland }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = RoF_DEN.150.a
+		trigger = {
+			NUS = { has_country_flag = demand_holstein }
+		}
+		effect_tooltip = {
+			NUS = {
+				transfer_state = 662
+				add_state_core = 662
+			    transfer_ship = {
+			        prefer_name = "SSIM President"
+			        type = battleship
+			        target = DEN
+			    }
+			}
+		}
+		set_country_flag = give_holstein
+		NUS = { country_event = { id = RoF_USE.121 days = 7 } }
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_DEN.150.b
+		trigger = {
+			NUS = { has_country_flag = demand_jutland }
+		}
+		effect_tooltip = {
+			NUS = {
+				transfer_state = 662
+				add_state_core = 662
+			    transfer_ship = {
+			        prefer_name = "SSIM President"
+			        type = battleship
+			        target = DEN
+			    }
+			}
+		}
+		set_country_flag = give_holstein
+		add_political_power = -100
+		NUS = { country_event = { id = RoF_USE.121 days = 7 } }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = RoF_DEN.150.c
+		trigger = {
+			NUS = { has_country_flag = demand_jutland }
+		}
+		effect_tooltip = {
+			NUS = {
+				transfer_state = 662
+				add_state_core = 662
+				transfer_state = 111
+				add_state_core = 111
+				transfer_state = 110
+				add_state_core = 110
+			    transfer_ship = {
+			        prefer_name = "SSIM President"
+			        type = battleship
+			        target = DEN
+			    }
+			    transfer_ship = {
+			        prefer_name = "SSIM Achilles"
+			        type = heavy_cruiser
+			        target = DEN
+			    }
+			}
+		}
+		set_country_flag = give_jutland
+		NUS = { country_event = { id = RoF_USE.121 days = 7 } }
+		ai_chance = { base = 10 }
+	}
+}
+
+#Congress of Copenhagen - SWE Demands
+country_event = {
+	id = RoF_DEN.151
+	title = RoF_DEN.151.t
+	picture = GFX_report_event_rof_placeholder
+	desc = {
+		text = RoF_DEN.151.da
+		trigger = {
+			SWE = { has_country_flag = demand_kalmar_union }
+		}
+	}
+	desc = {
+		text = RoF_DEN.151.db
+		trigger = {
+			SWE = { has_country_flag = demand_scania_gotland }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = crown_union_flag
+		hidden_effect = {
+			create_country_leader = {
+				name = "Christian IV von Oldenburg"
+				desc = "POLITICS_HANNIBAL_OXHOLM_DESC"
+				picture = "gfx/leaders/DEN/Portrait_Denmark_Christian_IV.dds"
+				expire = "1660.1.1"
+				ideology = constitutional_monarchy
+				traits = {
+				}
+			}
+			set_politics = { ruling_party = constitutionalist }
+			FRA = { remove_from_faction = DEN }
+			#white_peace = NUS
+			#NUS = { white_peace = DEN }
+		}
+	}
+
+	option = {
+		name = RoF_DEN.151.a
+		trigger = {
+			SWE = { has_country_flag = demand_kalmar_union }
+		}
+		set_country_flag = accept_union
+		effect_tooltip = {
+			SWE = {
+				set_autonomy = { target = DEN autonomy_state = autonomy_rof_union }
+			}
+			add_ideas = DEN_kalmar_junior
+			add_ideas = DEN_ulrik_kristina
+		}
+		SWE = { country_event = { id = RoF_SWE.121 days = 7 } }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = RoF_DEN.151.b
+		trigger = {
+			SWE = { has_country_flag = demand_scania_gotland }
+		}
+		set_country_flag = accept_union
+		add_political_power = -100
+		effect_tooltip = {
+			SWE = {
+				set_autonomy = { target = DEN autonomy_state = autonomy_rof_union }
+			}
+			add_ideas = DEN_kalmar_junior
+			add_ideas = DEN_ulrik_kristina
+		}
+		SWE = { country_event = { id = RoF_SWE.121 days = 7 } }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = RoF_DEN.151.c
+		trigger = {
+			SWE = { has_country_flag = demand_scania_gotland }
+		}
+		set_country_flag = give_scania_gotland
+		effect_tooltip = {
+			SWE = {
+				set_autonomy = { target = DEN autonomy_state = autonomy_rof_union }
+				transfer_state = 107
+				add_state_core = 107
+				transfer_state = 108
+				add_state_core = 108
+				transfer_state = 656
+				add_state_core = 656
+				transfer_state = 659
+				add_state_core = 659
+				transfer_state = 109
+				add_state_core = 109
+			}
+			add_ideas = DEN_kalmar_concessions
+			add_ideas = DEN_ulrik_kristina
+		}
+		SWE = { country_event = { id = RoF_SWE.121 days = 7 } }
+		ai_chance = { base = 10 }
+	}
+}

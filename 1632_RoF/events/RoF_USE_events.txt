@@ -4,15 +4,15 @@
 country_event = {
 	id = RoF_USE.100
 	title = RoF_USE.100.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_use_flag
 	desc = RoF_USE.100.d
 	fire_only_once = yes
 
 	is_triggered_only = yes
-	
+
 	immediate = {
 		hidden_effect = {
-			NUS = { transfer_state = 472 }
+			NUS = { transfer_state = 472 transfer_state = 406 }
 			every_country = {
 				limit = {
 					has_country_flag = USE_annex_country
@@ -23,23 +23,49 @@ country_event = {
 						NOT = { is_owned_by = PREV }
 						has_state_flag = USE_control_state
 					}
+					clr_state_flag = USE_control_state
 					NUS = { set_state_controller = PREV }
 				}
+				clr_country_flag = USE_annex_country
 				NUS = {
-					annex_country = { target = PREV transfer_troops = yes }
+					annex_country = { target = PREV }
 				}
+			}
+			every_owned_state = {
+				limit = {
+					has_state_flag = USE_annex_state
+					NOT = { is_core_of = NUS }
+				}
+				add_core_of = NUS
+				clr_state_flag = USE_annex_state
+			}
+			every_country = {
+				limit = { has_country_flag = USE_fed_prov }
+				NUS = { set_autonomy = { target = PREV autonomy_state = autonomy_rof_federal_state } }
 			}
 			set_cosmetic_tag = USE
 			set_country_flag = USE_formed
+			if = {
+				limit = { owns_state = 247 }
+				set_capital = 247
+			}
 		}
 	}
 	option = {
 		name = RoF_USE.100.a
 		effect_tooltip = {
 			set_cosmetic_tag = USE
+			if = {
+				limit = { owns_state = 247 }
+				set_capital = 247
+			}
 			every_country = {
 				limit = { has_country_flag = USE_annex_country }
 				NUS = { annex_country = { target = PREV transfer_troops = yes } }
+			}
+			every_country = {
+				limit = { has_country_flag = USE_fed_prov }
+				NUS = { set_autonomy = { target = PREV autonomy_state = autonomy_rof_federal_state } }
 			}
 		}
 		hidden_effect = {
@@ -52,15 +78,15 @@ country_event = {
 country_event = {
 	id = RoF_USE.101
 	title = RoF_USE.101.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_use_flag
 	desc = RoF_USE.101.d
 
 	is_triggered_only = yes
-	
+
 	immediate = {
-	
+
 	}
-	
+
 	option = {
 		name = RoF_USE.101.a
 		custom_effect_tooltip = GAME_OVER_TT
@@ -81,6 +107,17 @@ country_event = {
 		ai_chance = {
 			base = 100
 			modifier = {
+				factor = 5
+				OR = {
+					tag = HES
+					tag = BRS
+					tag = MAG
+					tag = POM
+					tag = MKL
+				}
+				is_historical_focus_on = yes
+			}
+			modifier = {
 				factor = 0
 				OR = {
 					tag = BRA
@@ -94,7 +131,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = RoF_USE.101.b
 		trigger = { tag = SWE }
@@ -115,7 +152,17 @@ country_event = {
 	}
 	option = {
 		name = RoF_USE.101.c
+		trigger = {
+			NOT = { tag = SWE }
+		}
 		set_country_flag = USE_rejected_country
+		if = {
+			limit = { has_opinion_modifier = SWE_tyw_support }
+			remove_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+			SWE = { remove_opinion_modifier = { target = ROOT modifier = SWE_tyw_support } }
+		}
+		reverse_add_opinion_modifier = { target = SWE modifier = rejected_USE }
+		reverse_add_opinion_modifier = { target = NUS modifier = rejected_USE }
 		if = {
 			limit = { is_in_faction_with = NUS }
 			every_country = {
@@ -149,18 +196,183 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = RoF_USE.101.do
+		trigger = { is_ai = no }
+		set_country_flag = USE_fed_prov
+		effect_tooltip = {
+			NUS = {
+				set_autonomy = { target = ROOT autonomy_state = autonomy_rof_federal_state }
+			}
+		}
+	}
+}
+
+#little germanies - neutral
+country_event = {
+	id = RoF_USE.102
+	title = RoF_USE.102.t
+	picture = GFX_report_event_use_flag
+	desc = RoF_USE.102.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = RoF_USE.102.a
+		custom_effect_tooltip = GAME_OVER_TT
+		every_owned_state = {
+			set_state_flag = USE_annex_state
+		}
+		every_state = {
+			limit = {
+				is_controlled_by = ROOT
+				NOT = { is_owned_by = ROOT }
+			}
+			set_state_flag = USE_control_state
+		}
+		set_country_flag = USE_annex_country
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					tag = NUR
+					tag = OLD
+					tag = BRA
+					tag = SAX
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_USE.102.b
+		set_country_flag = USE_rejected_country
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					tag = NUR
+					tag = OLD
+					tag = BRA
+					tag = SAX
+				}
+			}
+		}
+	}
+}
+
+#little germanies - enemy
+country_event = {
+	id = RoF_USE.103
+	title = RoF_USE.103.t
+	picture = GFX_report_event_use_flag
+	desc = RoF_USE.103.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = RoF_USE.103.a
+		custom_effect_tooltip = GAME_OVER_TT
+		every_owned_state = {
+			set_state_flag = USE_annex_state
+		}
+		every_state = {
+			limit = {
+				is_controlled_by = ROOT
+				NOT = { is_owned_by = ROOT }
+			}
+			set_state_flag = USE_control_state
+		}
+		set_country_flag = USE_annex_country
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					tag = NUR
+					tag = OLD
+					tag = BRA
+					tag = SAX
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_USE.103.b
+		set_country_flag = USE_rejected_country
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					tag = NUR
+					tag = OLD
+					tag = BRA
+					tag = SAX
+				}
+			}
+		}
+	}
+}
+
+#fate of FROM
+country_event = {
+	id = RoF_USE.104
+	title = RoF_USE.104.t
+	picture = GFX_report_event_use_flag
+	desc = RoF_USE.104.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = RoF_USE.104.a
+		every_country = {
+			limit = {
+				has_country_flag = USE_annex_country
+			}
+			every_state = {
+				limit = {
+					is_controlled_by = PREV
+					NOT = { is_owned_by = PREV }
+					has_state_flag = USE_control_state
+				}
+				clr_state_flag = USE_control_state
+				NUS = { set_state_controller = PREV }
+			}
+			clr_country_flag = USE_annex_country
+			NUS = {
+				annex_country = { target = PREV transfer_troops = yes }
+			}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = USE_annex_state
+				NOT = { is_core_of = NUS }
+			}
+			add_core_of = NUS
+			clr_state_flag = USE_annex_state
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_USE.104.b
+	}
 }
 
 #fate of ROOT
 country_event = {
 	id = RoF_USE.105
 	title = RoF_USE.105.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_use_flag
 	desc = RoF_USE.105.d
 
 	is_triggered_only = yes
-	
-	
+
+
 	option = {
 		name = RoF_USE.105.a
 		NUS = { country_event = { id = RoF_USE.106 } }
@@ -176,12 +388,12 @@ country_event = {
 country_event = {
 	id = RoF_USE.106
 	title = RoF_USE.106.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_use_flag
 	desc = RoF_USE.106.d
 
 	is_triggered_only = yes
-	
-	
+
+
 	option = {
 		name = RoF_USE.106.a
 		add_political_power = -100
@@ -190,5 +402,254 @@ country_event = {
 	}
 	option = {
 		name = RoF_USE.106.b
+	}
+}
+
+# USE wants to Annex Hamburg
+country_event = {
+	id = RoF_USE.110
+	title = RoF_USE.110.t
+	desc = RoF_USE.110.d
+	picture = GFX_report_event_use_flag
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name =  RoF_USE.110.a
+		ai_chance = { base = 100 }
+		set_country_flag = HAM_accept_demand
+		NUS = {
+			country_event = { id = RoF_USE.111 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF_USE.110.b
+		set_country_flag = HAM_refuse_demand
+		NUS = {
+			country_event = { id = RoF_USE.111 }
+		}
+	}
+}
+
+# Hamburg Responds
+country_event = {
+	id = RoF_USE.111
+	title = RoF_USE.111.t
+	desc = {
+		text = RoF_USE.111.da
+		trigger = {
+			HAM = { has_country_flag = HAM_refuse_demand }
+		}
+	}
+	desc = {
+		text = RoF_USE.111.db
+		trigger = {
+			HAM = { has_country_flag = HAM_accept_demand }
+		}
+	}
+	picture = GFX_report_event_use_flag
+
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.111.a
+		trigger = {
+			HAM = { has_country_flag = HAM_refuse_demand }
+		}
+		create_wargoal = {
+			target = HAM
+			type = annex_everything
+		}
+	}
+	option = {
+		name = RoF_USE.111.b
+		trigger = {
+			HAM = { has_country_flag = HAM_accept_demand }
+		}
+		annex_country = { target = HAM }
+		add_state_core = 168
+		load_oob = "NUS_Hamburg_navy"
+		hidden_effect = {
+			NUS = {
+				#news_event = { days = 1 id = RoF_news.12 }
+			}
+		}
+	}
+}
+
+news_event = {
+	id = RoF_USE.115
+	title = RoF_USE.115.t
+	desc = RoF_USE.115.d
+
+	picture = GFX_news_event_battle_sea
+
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.115.a
+		hidden_effect = {
+			news_event = { id = RoF_USE.116 hours = 6 }
+		}
+	}
+}
+
+news_event = {
+	id = RoF_USE.116
+	title = RoF_USE.116.t
+	desc = RoF_USE.116.d
+
+	picture = GFX_news_event_battle_sea
+
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.116.a
+		set_province_controller = 6287
+	}
+}
+
+# USE Demands at congress of copenhagen
+country_event = {
+	id = RoF_USE.120
+	title = RoF_USE.120.t
+	desc = RoF_USE.120.d
+	picture = GFX_report_event_use_flag
+
+	is_triggered_only = yes
+	immediate ={
+		hidden_effect ={
+			SWE = { country_event = { id = RoF_SWE.120 days = 1 } }
+		}
+	}
+
+	option = { # Accept
+		name =  RoF_USE.120.a
+		#set_country_flag = attending_congress_of_copenhagen
+		set_country_flag = demand_holstein
+		custom_effect_tooltip = USE_holstein.tt
+		add_political_power = -25
+		DEN = { country_event = { id = RoF_DEN.150 days = 7 } }
+		ai_chance = { base = 100 }
+	}
+	option = { # Accept
+		name =  RoF_USE.120.b
+		#set_country_flag = attending_congress_of_copenhagen
+		set_country_flag = demand_jutland
+		custom_effect_tooltip = USE_jutland.tt
+		add_political_power = -100
+		DEN = { country_event = { id = RoF_DEN.150 days = 7 } }
+		ai_chance = { base = 0 }
+	}
+}
+
+#Denmark responds
+country_event = {
+	id = RoF_USE.121
+	title = RoF_USE.121.t
+	picture = GFX_report_event_rof_placeholder
+	desc = {
+		text = RoF_USE.121.da
+		trigger = {
+			has_country_flag = demand_holstein
+			DEN = { has_country_flag = give_holstein }
+		}
+	}
+	desc = {
+		text = RoF_USE.121.db
+		trigger = {
+			has_country_flag = demand_jutland
+			DEN = { has_country_flag = give_holstein }
+		}
+	}
+	desc = {
+		text = RoF_USE.121.dc
+		trigger = {
+			has_country_flag = demand_jutland
+			DEN = { has_country_flag = give_jutland }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USE_demand_met
+	}
+
+	option = {
+		name = RoF_USE.121.a
+		trigger = {
+			has_country_flag = demand_holstein
+			DEN = { has_country_flag = give_holstein }
+		}
+		transfer_state = 662
+		add_state_core = 662
+		transfer_ship = {
+			prefer_name = "SSIM President"
+			type = battleship
+			target = DEN
+		}
+		DEN = { clr_country_flag = give_holstein }
+		clr_country_flag = demand_holstein
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_USE.121.b
+		trigger = {
+			has_country_flag = demand_jutland
+			DEN = { has_country_flag = give_holstein }
+		}
+		transfer_state = 662
+		add_state_core = 662
+		transfer_ship = {
+			prefer_name = "SSIM President"
+			type = battleship
+			target = DEN
+		}
+		DEN = { clr_country_flag = give_holstein }
+		clr_country_flag = demand_jutland
+	}
+	option = {
+		name = RoF_USE.121.c
+		trigger = {
+			has_country_flag = demand_jutland
+			DEN = { has_country_flag = give_jutland }
+		}
+		transfer_state = 662
+		add_state_core = 662
+		transfer_state = 111
+		add_state_core = 111
+		transfer_state = 110
+		add_state_core = 110
+		transfer_ship = {
+			prefer_name = "SSIM President"
+			type = battleship
+			target = DEN
+		}
+		transfer_ship = {
+			prefer_name = "SSIM Achilles"
+			type = heavy_cruiser
+			target = DEN
+		}
+		DEN = { clr_country_flag = give_jutland }
+		clr_country_flag = demand_jutland
+	}
+}
+
+#end of the Ostend War
+country_event = {
+	id = RoF_USE.130
+	title = RoF_USE.130.t
+	desc = RoF_USE.130.d
+	picture = GFX_report_event_use_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_USE.130.a
+		white_peace = FRA
+		SWE = { white_peace = FRA }
+		FRA = { dismantle_faction = yes }
 	}
 }
