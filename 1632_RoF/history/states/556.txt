@@ -8,6 +8,7 @@ state={
 	}
 
 	history={
+		owner = WNA
 		victory_points = {
 			12505 3 
 		}

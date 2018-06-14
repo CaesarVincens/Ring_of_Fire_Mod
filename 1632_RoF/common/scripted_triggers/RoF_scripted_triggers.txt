@@ -2,8 +2,38 @@ is_german_state = {
 	has_state_flag = german_state_flag
 }
 
-is_german = {
-	has_country_flag = german_tag_flag
+is_german_tag = {
+	OR = {
+		has_country_flag = german_tag_flag
+		tag = ALS
+		tag = ANS
+		tag = BAD
+		tag = BRA
+		tag = BRE
+		tag = BRS
+		tag = COL
+		tag = FRK
+		tag = HES
+		tag = LAU
+		tag = LUB
+		tag = MAG
+		tag = MEM
+		tag = MKL
+		tag = MNZ
+		tag = NAS
+		tag = NUR
+		tag = OLD
+		tag = PAL
+		tag = POM
+		tag = RAV
+		tag = SAX
+		tag = SXW
+		tag = TRI
+		tag = ULM
+		tag = VER
+		tag = WRT
+		tag = WRZ
+	}
 }
 
 NUS_or_war_ally = {
@@ -25,5 +55,28 @@ USE_or_war_ally = {
 			is_in_faction_with = NUS
 		}
 	}
+
+}
+
+ROOT_has_core_or_claim = {
+	OR = {
+		is_core_of = ROOT
+		is_claimed_by = ROOT
+	}
+}
+
+check_has_focus_tree_to_switch_to_absolutist = {
+
+}
+
+check_has_focus_tree_to_switch_to_liberal = {
+
+}
+
+check_has_focus_tree_to_switch_to_radical = {
+
+}
+
+check_has_focus_tree_to_switch_to_constitutionalist = {
 
 }

@@ -1,0 +1,375 @@
+equipments = {
+
+	apc_equipment = {
+		year = 1631
+
+		is_archetype = yes
+		picture = archetype_motorized_equipment		
+		is_buildable = no
+		type = {
+			#infantry #Removing inf type 
+			mechanized
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		maximum_speed = 8
+		reliability = 0.8
+		
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 4
+		hardness = 0.5
+		armor_value = 10
+
+		#Offensive Abilities
+		ap_attack = 11
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 5
+		
+		build_cost_ic = 12 
+		resources = {
+			steel = 2
+			oil = 1
+			combustion_engine = 1
+		}
+	}
+
+	# ~1636
+	apc_equipment_1 = {
+		year = 1635
+
+		archetype = apc_equipment
+		priority = 40
+		visual_level = 0
+	}
+
+	# ~1638
+	apc_equipment_2 = {
+		year = 1637
+
+		archetype = apc_equipment
+		parent = apc_equipment_1
+		priority = 40
+		visual_level = 1
+
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 30
+		breakthrough = 5
+		hardness = 0.6
+		armor_value = 15
+
+		#Offensive Abilities
+		ap_attack = 16
+		
+		build_cost_ic = 13
+		resources = {
+			steel = 3
+			combustion_engine = 1
+			oil = 1
+		}
+	}
+
+	# ~1640
+	apc_equipment_3 = {
+		year = 1639
+
+		archetype = apc_equipment
+		parent = apc_equipment_2
+		priority = 40
+		visual_level = 2
+		
+		maximum_speed = 12
+
+		#Defensive Abilities
+		defense = 34
+		breakthrough = 6
+		hardness = 0.7
+		armor_value = 20
+
+		#Offensive Abilities
+		ap_attack = 21
+		
+		build_cost_ic = 14
+		resources = {
+			steel = 4
+			combustion_engine = 1
+			oil = 2
+		}
+	}
+	
+	gas_tank_equipment = {
+		year = 1629
+	
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_light_tank_equipment			
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 26
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 4
+		ap_attack = 10
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+		
+		build_cost_ic = 8
+		resources = {
+			oil = 1
+			steel = 1
+			combustion_engine = 1
+		}
+
+	}
+
+	# WW1 tank
+	gas_tank_equipment_0 = {
+		year = 1914
+	
+		archetype = gas_tank_equipment
+		priority = 5
+		visual_level = 0
+		
+		upgrades = {  # no upgrades for GW tank :'(
+		}
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0
+
+		build_cost_ic = 7 #gw tanks are clunky
+	}
+
+	gas_tank_equipment_1 = {
+		year = 1629
+		
+		archetype = gas_tank_equipment
+		parent = gas_tank_equipment_0
+		priority = 10
+		visual_level = 0
+		is_convertable = yes
+	}
+
+	gas_tank_equipment_2 = {
+		year = 1631
+		
+		archetype = gas_tank_equipment
+		parent = gas_tank_equipment_1
+		priority = 10
+		visual_level = 1
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 12
+
+		#Defensive Abilities
+		defense = 5
+		breakthrough = 36
+		armor_value = 15
+
+		#Offensive Abilities
+		soft_attack = 14
+		hard_attack = 6
+		ap_attack = 30
+		air_attack = 0		
+		
+		build_cost_ic = 9
+		resources = {
+			oil = 1
+			steel = 2
+			combustion_engine = 1
+		}
+	}
+
+	gas_tank_equipment_3 = {
+		year = 1636
+	
+		archetype = gas_tank_equipment
+		parent = gas_tank_equipment_2
+		priority = 10
+		visual_level = 2
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 14
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 46
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 18
+		hard_attack = 9
+		ap_attack = 50
+		air_attack = 0	
+		
+		build_cost_ic = 10 
+		resources = {
+			oil = 2
+			steel = 3
+			combustion_engine = 1
+		}
+	}
+
+	steam_tank_equipment = {
+		year = 1629
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_heavy_tank_equipment
+		is_buildable = no
+		is_convertable = yes
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+		
+		#Misc Abilities
+		maximum_speed = 5
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 36
+		hardness = 0.95
+		armor_value = 70
+
+		#Offensive Abilities
+		soft_attack = 12
+		hard_attack = 12
+		ap_attack = 35
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 14
+		
+		build_cost_ic = 25 
+		resources = {
+			oil = 1
+			steel = 3
+			chromium = 1
+		}
+		
+	}
+
+	# 1629
+	steam_tank_equipment_1 = {
+		year = 1629
+
+		archetype = steam_tank_equipment		
+		priority = 90
+		visual_level = 0
+		is_convertable = yes
+	}
+
+	# 1636
+	steam_tank_equipment_2 = {
+		year = 1636
+
+		archetype = steam_tank_equipment
+		parent = steam_tank_equipment_1
+		priority = 90
+		visual_level = 1
+		is_convertable = yes
+		
+		#Misc Abilities
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 52
+		armor_value = 110
+
+		#Offensive Abilities
+		soft_attack = 22
+		hard_attack = 30
+		ap_attack = 111
+		
+		build_cost_ic = 27 
+		resources = {
+			oil = 1
+			steel = 3
+			chromium = 1
+		}
+	}
+
+	# 1638
+	steam_tank_equipment_3 = {
+		year = 1638
+
+		archetype = steam_tank_equipment
+		parent = steam_tank_equipment_2
+		priority = 90
+		visual_level = 2
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 9
+		breakthrough = 67
+		armor_value = 130
+
+		#Offensive Abilities
+		soft_attack = 28
+		hard_attack = 40
+		ap_attack = 131
+		
+		build_cost_ic = 30
+		resources = {
+			oil = 1
+			steel = 4
+			chromium = 2
+		}
+	}
+
+}

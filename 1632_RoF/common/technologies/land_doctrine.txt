@@ -1,5 +1,78 @@
 technologies = {
 
+	# COMBINED ARMS, LINE TACTICS AND UP-TIME INNOVATIONS
+	combined_arms_doctrine = {
+		xor = { pike_and_shot cavalry_supremacy mass_offensive }
+		
+		doctrine = yes	
+		research_cost = 3
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			land_doctrine
+			cat_combined_arms
+		}
+		
+	}
+	
+	# TERCIO FORMATIONS AND TRADITIONAL EUROPEAN TACTICS
+	pike_and_shot = {
+		xor = { combined_arms_doctrine cavalry_supremacy mass_offensive }
+		doctrine = yes	
+		research_cost = 3
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			land_doctrine
+			cat_pike_and_shot
+		}
+		
+	}
+	
+	# CAVALRY TACTICS
+	cavalry_supremacy = {
+		xor = { combined_arms_doctrine pike_and_shot mass_offensive }
+		doctrine = yes	
+		research_cost = 3
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			land_doctrine
+			cat_cavalry_supremacy
+		}
+		
+	}
+	
+	# MASS INFANTRY
+	mass_offensive = {
+		xor = { combined_arms_doctrine pike_and_shot mass_offensive }
+		doctrine = yes	
+		research_cost = 3
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			land_doctrine
+			cat_mass_offensive
+		}
+		
+	}
+	
 	mobile_warfare = {
 		
 		xor = { superior_firepower trench_warfare mass_assault } 

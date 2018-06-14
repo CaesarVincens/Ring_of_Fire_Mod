@@ -4,10 +4,11 @@ state={
 	name="STATE_40"
 	resources={
 		aluminium=1.000
-		rubber=1.000
+		#rubber=1.000
 	}
 
 	history={
+		owner = WAS
 		victory_points = {
 			8096 8 
 		}
@@ -18,7 +19,7 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = BON
+		#add_core_of = BON
 
 	}
 

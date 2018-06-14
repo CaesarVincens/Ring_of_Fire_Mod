@@ -1,0 +1,118 @@
+ideas = {
+	
+	# Special ones that can be applied on other countries through focus system.
+	country = {
+
+		GG_prohibit_american_influence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				drift_defence_factor = 0.2
+				absolutist_drift = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.125
+			}
+		}
+		GG_welcome_american_influence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				absolutist_drift = -0.2
+				research_time_factor = -0.02
+			}
+		}
+		GG_royal_dictatorship_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			
+			removal_cost = -1
+
+			picture = Hun_hungarian_monarchy_habsburg
+	
+			modifier = {
+				absolutist_drift = 0.15
+				min_export = -0.1
+				conscription = 0.01
+				opinion_gain_monthly_same_ideology_factor = 0.5
+			}
+		}
+		GG_nobles_republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			removal_cost = -1
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				constitutionalist_drift = 0.15
+				min_export = -0.1
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				war_support_factor = 0.05
+			}
+		}
+
+		GG_democracy_idea = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			
+			removal_cost = -1
+
+			picture = neutrality_idea
+	
+			modifier = {
+				stability_factor = 0.05
+				liberal_drift = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		GG_radical_revolution = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = radical
+			}
+			
+			removal_cost = -1
+
+			picture = nkvd_2
+	
+			modifier = {
+				radical_drift = 0.15
+				consumer_goods_factor = -0.05
+				conscription = 0.01
+				stability_factor = 0.1
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+
+}

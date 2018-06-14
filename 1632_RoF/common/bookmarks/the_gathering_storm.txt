@@ -17,6 +17,7 @@ bookmarks = {
 			focuses = {
 				NUS_new_american_revolution
 				NUS_form_CPoE
+				NUS_national_fervor
 			}
 		}
 

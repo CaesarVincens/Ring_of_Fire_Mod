@@ -4,12 +4,13 @@ oob = "FRA_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
 heavy_artillery_1 = 1
 transport = 1
-early_destroyer = 1
+prerof_heavy_frigate = 1
 }
 
 # Research Bonuses
@@ -41,7 +42,7 @@ add_ideas = {
 	FRA_cardinal_richelieu
 	anti_habsburg_diplomacy
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Louis XIII de Bourbon"
     desc = "POLITICS_AIMABLE_DE LANGLE DE CARY_DESC"

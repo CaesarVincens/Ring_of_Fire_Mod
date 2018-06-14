@@ -4,11 +4,12 @@ state={
 	name="STATE_653"
 	resources={
 		aluminium=0.000
-		rubber=1.000
+		#rubber=1.000
 		steel=0.000
 	}
 
 	history={
+		owner = WNA
 		victory_points = {
 			4938 8 
 		}
@@ -19,7 +20,7 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = ZAZ
+		#add_core_of = ZAZ
 
 	}
 

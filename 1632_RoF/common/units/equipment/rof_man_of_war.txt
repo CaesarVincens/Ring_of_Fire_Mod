@@ -1,0 +1,99 @@
+equipments = {
+
+	man_of_war = {
+		year = 1600
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+		
+		interface_category = interface_category_capital_ships
+		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_sail_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
+		ap_attack = 10
+		attack = 15
+		fire_range = 10
+		torpedo_attack = 0
+		shore_bombardment = 2
+
+		anti_air_attack = 1
+		
+		armor_value = 10
+		evasion = 15
+		
+		surface_detection = 10
+		sub_detection = 1
+		surface_visibility = 25
+		naval_speed = 15
+		reliability = 0.80
+
+		naval_range = 4000
+		
+		max_strength = 350
+		
+		port_capacity_usage = 1
+		
+		build_cost_ic = 7500
+		resources = {
+			oil = 1
+			steel = 3
+		}
+		
+		manpower = 1500
+	}
+	
+	man_of_war_1 = {
+		year = 1600
+
+		archetype = man_of_war
+		priority = 50
+	}
+	
+	man_of_war_2 = {
+		year = 1635
+
+		archetype = man_of_war
+		parent = man_of_war_1
+		priority = 50
+	
+		ap_attack = 15
+		attack = 20
+		fire_range = 15
+		torpedo_attack = 0
+		shore_bombardment = 4
+
+		anti_air_attack = 2
+		
+		armor_value = 15
+		evasion = 20
+		
+		surface_detection = 20
+		sub_detection = 2
+		surface_visibility = 25
+		naval_speed = 20
+		reliability = 0.90
+
+		naval_range = 5000
+		
+		max_strength = 400
+		
+		port_capacity_usage = 1
+
+		build_cost_ic = 8000
+		resources = {
+			oil = 1
+			steel = 4
+		}
+		manpower = 2000
+	}
+	
+
+	
+}

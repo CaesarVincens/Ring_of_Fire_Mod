@@ -1,0 +1,5 @@
+
+Austria_Hungary = {
+	icon = generic_prospect_for_resources
+
+}

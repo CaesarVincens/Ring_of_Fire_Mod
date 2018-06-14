@@ -32,6 +32,14 @@ upgrades = {
 		evasion = 0.02
 		reliability = -0.005
 	}	
+	ship_sail_upgrade = {
+		max_level = 5
+		cost = naval 
+		naval_speed = 0.03
+		naval_range = 0.05
+		evasion = 0.02
+		reliability = -0.005
+	}	
 	destroyer_engine_upgrade = {
 		max_level = 5
 		cost = naval 

@@ -1,0 +1,99 @@
+equipments = {
+
+	ironclad = { 
+		year = 1633
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+		
+		interface_category = interface_category_capital_ships
+		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
+		ap_attack = 31
+		attack = 18
+		fire_range = 32
+		torpedo_attack = 0
+		shore_bombardment = 10
+		
+		anti_air_attack = 4
+		
+		armor_value = 26
+		evasion = 10
+		
+		surface_detection = 12
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 20
+		reliability = 0.80
+
+		naval_range = 1000
+		
+		max_strength = 350
+		port_capacity_usage = 2
+		
+		build_cost_ic = 9600
+		resources = {
+			oil = 1
+			steel = 3
+			chromium = 1
+		}
+
+		manpower = 1000
+	}
+
+	ironclad_1 = {
+		year = 1633
+
+		archetype = ironclad
+		priority = 60
+
+	}
+	
+	ironclad_2 = {
+		year = 1636
+
+		archetype = ironclad
+		parent = ironclad_1
+		priority = 60
+		
+		ap_attack = 36
+		attack = 22
+		fire_range = 33
+		torpedo_attack = 0
+		shore_bombardment = 12
+		
+		anti_air_attack = 10
+		
+		armor_value = 32
+		evasion = 12
+		
+		surface_detection = 15
+		sub_detection = 5
+		surface_visibility = 30
+		naval_speed = 26
+		reliability = 0.85
+
+		naval_range = 1500
+
+		max_strength = 450		
+		port_capacity_usage = 2
+
+		build_cost_ic = 10400
+		resources = {
+			oil = 2
+			steel = 4
+			chromium = 1
+		}
+		manpower = 1500
+		
+	}
+
+}

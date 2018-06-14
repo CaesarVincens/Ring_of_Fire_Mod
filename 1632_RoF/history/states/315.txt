@@ -9,6 +9,7 @@ state={
 	}
 
 	history={
+		owner = WAF
 		victory_points = {
 			10904 3 
 		}

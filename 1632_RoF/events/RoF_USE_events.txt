@@ -28,7 +28,7 @@ country_event = {
 				}
 				clr_country_flag = USE_annex_country
 				NUS = {
-					annex_country = { target = PREV }
+					annex_country = { target = PREV transfer_troops = yes }
 				}
 			}
 			every_owned_state = {
@@ -507,6 +507,9 @@ news_event = {
 	option = {
 		name = RoF_USE.116.a
 		set_province_controller = 6287
+		hidden_effect = {
+			DEN = { add_war_support = -0.2 }
+		}
 	}
 }
 
@@ -587,7 +590,7 @@ country_event = {
 		add_state_core = 662
 		transfer_ship = {
 			prefer_name = "SSIM President"
-			type = battleship
+			type = ironclad
 			target = DEN
 		}
 		DEN = { clr_country_flag = give_holstein }
@@ -604,7 +607,7 @@ country_event = {
 		add_state_core = 662
 		transfer_ship = {
 			prefer_name = "SSIM President"
-			type = battleship
+			type = ironclad
 			target = DEN
 		}
 		DEN = { clr_country_flag = give_holstein }
@@ -624,12 +627,12 @@ country_event = {
 		add_state_core = 110
 		transfer_ship = {
 			prefer_name = "SSIM President"
-			type = battleship
+			type = ironclad
 			target = DEN
 		}
 		transfer_ship = {
 			prefer_name = "SSIM Achilles"
-			type = heavy_cruiser
+			type = timberclad
 			target = DEN
 		}
 		DEN = { clr_country_flag = give_jutland }

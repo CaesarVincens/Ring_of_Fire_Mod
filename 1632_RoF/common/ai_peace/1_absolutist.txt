@@ -1,0 +1,96 @@
+# Logic for Absolutist AI
+# Should favor annexing other nations and taking their states
+# Written by CaesarVincens
+
+absolutist_peace = {
+	# ROOT = Taker, FROM = Giver
+	enable = {
+		has_government = absolutist
+	}
+
+	annex_randomness = 0
+	liberate_randomness = 0
+	puppet_randomness = 0
+	take_states_randomness = 0
+	force_government_randomness = 0
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			ROOT = {
+				is_subject = yes
+				FROM = {
+					any_owned_state = {
+						NOT = { ROOT_has_core_or_claim = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { is_neighbor_of = ROOT }
+				any_owned_state = {
+					NOT = { ROOT_has_core_or_claim = yes }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				is_neighbor_of = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				all_owned_state = {
+					ROOT_has_core_or_claim = yes
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = State
+	take_states = {
+		factor = 500
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { ROOT_has_core_or_claim = yes }
+				NOT = { is_coastal = yes }
+				NOT = {
+					any_neighbor_state = { is_owned_by = ROOT }
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		factor = 0
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		factor = 100
+		modifier = {
+			factor = 10
+			FROM = {
+				NOT = { is_neighbor_of = ROOT }
+				all_owned_state = {
+					is_coastal = no
+				}
+			}
+		}
+	}
+
+
+
+	# ROOT = Taker, FROM = Giver
+	force_government = {
+		factor = 0
+	}
+}

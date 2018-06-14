@@ -5,6 +5,7 @@ oob = "AUS_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -57,13 +58,14 @@ add_to_faction = MEM
 
 add_ideas = {
 	military_focus_eco
-	extensive_conscription
+	#mercenary_army
 	hre_emperor
+	archduke_rank
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Ferdinand II von Habsburg"
-    desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
+    desc = "POLITICS_FERDINAND_2_DESC"
     picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
@@ -74,7 +76,7 @@ create_country_leader = {
 
 create_country_leader = {
     name = "Ferdinand II von Habsburg"
-    desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
+    desc = "POLITICS_FERDINAND_2_DESC"
     picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
     expire = "1660.1.1"
     ideology = constitutional_monarchy
@@ -88,6 +90,10 @@ create_corps_commander = {
 	gfx = "GFX_leader_BOH_Wallenstein"
 	traits = { }
 	skill = 5
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 5
 	id = 1001
 }
 
@@ -96,6 +102,10 @@ create_corps_commander = {
 	gfx = "GFX_commander_BOH_Pappenheim"
 	traits = { }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
 	id = 1002
 }
 
@@ -104,6 +114,10 @@ create_field_marshal = {
 	picture = "Portrait_Austria_Tilly.dds"
 	traits = { }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 	id = 1003
 }
 
@@ -112,4 +126,8 @@ create_corps_commander = {
 	picture = "Portrait_Austria_Piccolomini.dds"
 	traits = { }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }

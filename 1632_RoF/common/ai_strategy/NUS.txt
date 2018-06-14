@@ -373,21 +373,6 @@ NUS_area_priority = {
 
 }
 
-NUS_stockpile_management = {
-	enable = {
-		num_divisions > 150
-	}
-
-	abort = {
-		num_divisions < 130
-	}
-
-	ai_strategy = {
-		type = equipment_stockpile
-		value = 35 # double base stockpile #from 25 to 35
-	}
-}
-
 
 NUS_template_design = {
 	enable = {

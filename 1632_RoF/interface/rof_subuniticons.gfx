@@ -22,6 +22,16 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_unit_merc_line_infantry_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_merc_line_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_merc_tercio_infantry_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_merc_tercio_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
 		name = "GFX_unit_spear_infantry_icon_medium"
 		textureFile = "gfx/interface/counters/divisions_large/unit_spearman_icon.dds"
 		noOfFrames = 2
@@ -56,6 +66,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_unit_tercio_infantry_icon_medium_white"
 		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_pike_infantry_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_merc_line_infantry_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_merc_line_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_merc_tercio_infantry_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_merc_tercio_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {

@@ -4,11 +4,12 @@ state={
 	name="STATE_641"
 	resources={
 		aluminium=3.000
-		rubber=0.000
+		#rubber=0.000
 		steel=0.000
 	}
 
 	history={
+		owner = WAF
 		victory_points = {
 			12851 8 
 		}
@@ -19,8 +20,8 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = YAT
-		add_core_of = MSS
+		#add_core_of = YAT
+		#add_core_of = MSS
 
 	}
 

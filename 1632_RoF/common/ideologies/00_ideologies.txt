@@ -27,7 +27,7 @@ ideologies = {
 		rules = {
 			can_force_government = no
 			can_guarantee_other_ideologies = yes
-			can_puppet = no
+			can_puppet = yes
 			can_send_volunteers = no
 		}
 		
@@ -72,7 +72,7 @@ ideologies = {
 		rules = {
 			can_force_government = no
 			can_guarantee_other_ideologies = yes
-			can_puppet = no
+			can_puppet = yes
 			can_send_volunteers = no
 		}
 		
@@ -97,7 +97,7 @@ ideologies = {
 			
 			democracy = {}
 			
-			constitutional_monarchy = {}
+			lib_constitutional_monarchy = {}
 			
 			liberal_republic = {}
 			
@@ -116,7 +116,7 @@ ideologies = {
 		color = { 100 200 255 }
 		
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_guarantee_other_ideologies = yes
 			can_puppet = no
 			can_send_volunteers = no
@@ -157,9 +157,9 @@ ideologies = {
 		color = { 255 60 0 }
 		
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_guarantee_other_ideologies = yes
-			can_puppet = no
+			can_puppet = yes
 			can_send_volunteers = no
 		}
 		

@@ -1,0 +1,216 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+#pseudocode for now until ideas are done
+defined_text = { # Country
+	name = GetRulerTitle
+	text = {
+		trigger = {
+			FROM = { has_idea = emperor_rank }
+			#trigger here
+		}
+		localization_key = RULER_EMPEROR
+	}
+	text = {
+		trigger = {
+			tag = FRA
+			#trigger here
+		}
+		localization_key = RULER_FRANCE
+	}
+	text = {
+		trigger = {
+			has_idea = king_rank
+			#more trigger here
+		}
+		localization_key = RULER_KING
+	}
+	text = {
+		trigger = {
+			has_idea = archduke_rank
+			#trigger here
+		}
+		localization_key = RULER_ARCHDUKE
+	}
+	text = {
+		trigger = {
+			has_idea = duke_rank
+			#more trigger here
+		}
+		localization_key = RULER_DUKE
+	}
+	text = {
+		trigger = {
+			has_idea = elector_rank
+			#trigger here
+		}
+		localization_key = RULER_ELECTOR
+	}
+	text = {
+		trigger = {
+			has_idea = count_rank
+			#more trigger here
+		}
+		localization_key = RULER_COUNT
+	}
+	text = {
+		trigger = {
+			has_idea = SPA_colony
+			#trigger here
+		}
+		localization_key = RULER_VICEROY
+	}
+	text = {
+		trigger = {
+			has_idea = other_colony
+			#more trigger here
+		}
+		localization_key = RULER_GOVERNOR
+	}
+	text = {
+		trigger = {
+			has_idea = ITA_republic
+			#trigger here
+		}
+		localization_key = RULER_DOGE
+	}
+	text = {
+		trigger = {
+			has_idea = UPS_republic
+			#more trigger here
+		}
+		localization_key = RULER_STADTHOLDER
+	}
+	text = {
+		trigger = {
+			has_idea = free_city
+			#more trigger here
+		}
+		localization_key = RULER_STADTRAT
+	}
+	text = {
+		trigger = {
+			has_idea = other_republic
+			#more trigger here
+		}
+		localization_key = RULER_PRIMEMINISTER
+	}
+	text = {
+		trigger = {
+			has_idea = shogun
+			#more trigger here
+		}
+		localization_key = RULER_SHOGUN
+	}
+
+
+}
+
+defined_text = { # Country
+	name = GetCoCStrength
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_strength_@THIS value = 20 compare = greater_than_or_equals }
+		}
+		localization_key = ROF_COC_DOMINANT
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_strength_@THIS value = 15 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength_@THIS value = 20 compare = less_than }
+		}
+		localization_key = ROF_COC_STRONG
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_strength_@THIS value = 10 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength_@THIS value = 15 compare = less_than }
+		}
+		localization_key = ROF_COC_INFLUENTIAL
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_strength_@THIS value = 5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength_@THIS value = 10 compare = less_than }
+		}
+		localization_key = ROF_COC_WEAK
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_strength_@THIS value = 0 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength_@THIS value = 5 compare = less_than }
+		}
+		localization_key = ROF_COC_INSIGNIFICANT
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_strength_@THIS value = 0 compare = less_than }
+		}
+		localization_key = ROF_COC_NON_EXISTANT
+	}
+
+}
+
+defined_text = { # Country
+	name = GetCoCAnger
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_anger_@THIS value = 10 compare = greater_than_or_equals }
+		}
+		localization_key = ROF_COC_FURIOUS
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_anger_@THIS value = 5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger_@THIS value = 10 compare = less_than }
+		}
+		localization_key = ROF_COC_ANGRY
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_anger_@THIS value = 0 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger_@THIS value = 5 compare = less_than }
+		}
+		localization_key = ROF_COC_DISPLEASED
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_anger_@THIS value = -5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger_@THIS value = 0 compare = less_than }
+		}
+		localization_key = ROF_COC_PLEASED
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_anger_@THIS value = -10 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger_@THIS value = -5 compare = less_than }
+		}
+		localization_key = ROF_COC_HAPPY
+	}
+
+	text = {
+		trigger = {
+			check_variable = { var = CoC_anger_@THIS value = -10 compare = less_than }
+		}
+		localization_key = ROF_COC_ECSTATIC
+	}
+
+}

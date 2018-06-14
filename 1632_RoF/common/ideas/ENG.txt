@@ -11,6 +11,17 @@ ideas = {
 			removal_cost = -1
 			picture = generic_goods_red_bonus			
 		}
+		ENG_tarrifs = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.5
+				consumer_goods_factor = -0.02
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
 	}
 	political_advisor = {
 		ENG_absolutist_advisor = {

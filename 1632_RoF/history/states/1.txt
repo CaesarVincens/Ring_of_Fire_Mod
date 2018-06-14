@@ -9,7 +9,7 @@ state={
 	history={
 		owner = AAC
 		victory_points = {
-			9522 8 
+			3512 10 
 		}
 		buildings = {
 			infrastructure = 3

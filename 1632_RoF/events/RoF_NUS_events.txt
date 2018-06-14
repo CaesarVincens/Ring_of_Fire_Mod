@@ -120,19 +120,31 @@ country_event = {
 	picture = GFX_report_event_scottish_mercenaries
 	
 	fire_only_once = yes
-	
+	is_triggered_only = yes
 	trigger = {
 		tag = NUS
 		date > 1631.9.15
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 
 	immediate = {
 		hidden_effect = {
 			set_country_flag = NUS_battle_of_jena
 			set_country_flag = NUS_start_CoC
+			set_country_flag = CoC_present_@NUS
+			set_variable = { var = CoC_strength_@NUS value = 0 }
+			set_variable = { var = CoC_anger_@NUS value = -5 }
+			if = {
+				limit = {
+					has_country_flag = NUS_welcome_refugees_flag
+				}
+				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = NUS_conscript_refugees_flag
+				}
+				add_to_variable = { var = CoC_anger_@NUS value = 5 }
+			}
 		}
 	}
 
@@ -693,6 +705,18 @@ country_event = {
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
+			if = {
+				limit = {
+					has_variable = CoC_anger_@NUS
+				}
+				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+			}
+			if = {
+				limit = {
+					has_variable = CoC_strength_@NUS
+				}
+				add_to_variable = { var = CoC_strength_@NUS value = -5 }
+			}
 		}
 	}
 	option = { # Absolutist
@@ -711,6 +735,18 @@ country_event = {
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
+			if = {
+				limit = {
+					has_variable = CoC_anger_@NUS
+				}
+				add_to_variable = { var = CoC_anger_@NUS value = 5 }
+			}
+			if = {
+				limit = {
+					has_variable = CoC_strength_@NUS
+				}
+				add_to_variable = { var = CoC_strength_@NUS value = 5 }
+			}
 		}
 	}
 	option = { # Constitutionalist
@@ -864,6 +900,12 @@ country_event = {
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
+			if = {
+				limit = {
+					has_variable = CoC_anger_@NUS
+				}
+				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+			}
 		}
 	}
 	option = { # Appointed
@@ -882,6 +924,12 @@ country_event = {
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
+			if = {
+				limit = {
+					has_variable = CoC_anger_@NUS
+				}
+				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+			}
 		}
 	}
 	option = { # Appointed
@@ -962,7 +1010,7 @@ country_event = {
 	}
 }
 
-#battle of Grantville
+#battle of Rain
 country_event = {
 	id = RoF_NUS.145
 	title = RoF_NUS.145.t
@@ -1098,6 +1146,7 @@ country_event = {
 	trigger = {
 		tag = NUS
 		NUS = {
+			NOT = { owns_state = 578 }
 			OR = {
 				controls_state = 578
 				any_allied_country = {
@@ -1115,6 +1164,49 @@ country_event = {
 	option = {
 		name = RoF_NUS.155.a
 		NUS = { annex_country = { target = WRZ } } 
+	}
+}
+
+country_event = {
+	id = RoF_NUS.156
+	title = RoF_NUS.155.t
+	desc = RoF_NUS.155.d
+	
+	picture = GFX_report_event_nus_flag
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NUS
+		NUS = {
+			OR = {
+				controls_state = 578
+				any_allied_country = {
+					controls_state = 578
+				}
+			}	
+		}
+		WRZ = { exists = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = RoF_NUS.155.a
+		if = {
+			limit = { any_allied_country = { controls_state = 578 } }
+			NUS = { transfer_state = 578 }
+		}
+		if = {
+			limit = { any_allied_country = { controls_state = 461 } }
+			NUS = { transfer_state = 461 }
+		}
+		if = {
+			limit = { any_allied_country = { controls_state = 577 } }
+			NUS = { transfer_state = 577 }
+		}
 	}
 }
 
@@ -1186,6 +1278,13 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = NUS_national_fervor_flag
+			if = {
+				limit = {
+					has_variable = CoC_strength_@NUS
+				}
+				add_to_variable = { var = CoC_strength_@NUS value = 10 }
+			}
+
 		}
 	}
 

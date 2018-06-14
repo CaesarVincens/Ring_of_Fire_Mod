@@ -4,6 +4,7 @@ state={
 	name="STATE_197"
 
 	history={
+		owner = WAF
 		victory_points = {
 			3123 3 
 		}
@@ -14,7 +15,7 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = KAN
+		#add_core_of = KAN
 
 	}
 

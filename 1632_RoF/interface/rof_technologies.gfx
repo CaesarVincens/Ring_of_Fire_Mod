@@ -23,8 +23,8 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_early_flintlock_tech_medium"
-		texturefile = "gfx/interface/technologies/early_flintlock.dds"
+		name = "GFX_musket_tech_medium"
+		texturefile = "gfx/interface/technologies/musket.dds"
 	}
 	
 	SpriteType = {
@@ -34,7 +34,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_srg_caplock_tech_medium"
-		texturefile = "gfx/interface/technologies/srg_rifle.dds"
+		texturefile = "gfx/interface/technologies/srg_caplock.dds"
 	}
 	
 	SpriteType = {
@@ -44,6 +44,11 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_ak3_rifle_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ak47_rifle_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 	
@@ -136,5 +141,136 @@ spriteTypes = {
 		name = "GFX_airship_tech_3_medium"
 		texturefile = "gfx/interface/technologies/airship_equipment_1.dds"
 	}
+
+	spriteType = {
+		name = "GFX_prerof_man_of_war_medium"
+		texturefile = "gfx/interface/technologies/galleon1b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_postrof_man_of_war_medium"
+		texturefile = "gfx/interface/technologies/galleon2b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_prerof_heavy_frigate_medium"
+		texturefile = "gfx/interface/technologies/heavy_frigate1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_postrof_heavy_frigate_medium"
+		texturefile = "gfx/interface/technologies/heavy_frigate2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_steam_cruiser_first_medium"
+		texturefile = "gfx/interface/technologies/quality1b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_steam_cruiser_second_medium"
+		texturefile = "gfx/interface/technologies/quality2b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_steam_destroyer_first_medium"
+		texturefile = "gfx/interface/technologies/speed1b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_steam_destroyer_second_medium"
+		texturefile = "gfx/interface/technologies/speed2b.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_timberclad_first_medium"
+		texturefile = "gfx/interface/technologies/timberclad1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_timberclad_second_medium"
+		texturefile = "gfx/interface/technologies/timberclad2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ironclad_first_medium"
+		texturefile = "gfx/interface/technologies/ironclad1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ironclad_second_medium"
+		texturefile = "gfx/interface/technologies/ironclad2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_steel_mill_tech_medium"
+		texturefile = "gfx/interface/technologies/steel_mill_tech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_crucible_steel_medium"
+		texturefile = "gfx/interface/technologies/basic_construction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bessemer_process_medium"
+		texturefile = "gfx/interface/technologies/bessemer_process.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_electric_arc_process_medium"
+		texturefile = "gfx/interface/technologies/improved_construction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_engine_factory_tech_0_medium"
+		texturefile = "gfx/interface/technologies/engine_factory_tech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_infrastructure_tech_1_medium"
+		texturefile = "gfx/interface/technologies/infra_tech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_infrastructure_tech_2_medium"
+		texturefile = "gfx/interface/technologies/infra_tech2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_infrastructure_tech_3_medium"
+		texturefile = "gfx/interface/technologies/infra_tech3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_infrastructure_tech_4_medium"
+		texturefile = "gfx/interface/technologies/infra_tech4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_apc_tech_1_medium"
+		texturefile = "gfx/interface/technologies/basic_light_tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_apc_tech_2_medium"
+		texturefile = "gfx/interface/technologies/improved_light_tank.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_early_steam_tank_medium"
+		texturefile = "gfx/interface/technologies/basic_heavy_tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_early_gas_tank_medium"
+		texturefile = "gfx/interface/technologies/basic_medium_tank.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_aerial_research_tech_medium"
+		texturefile = "gfx/interface/technologies/aerial_research_tech.dds"
+	}
+	
 
 }

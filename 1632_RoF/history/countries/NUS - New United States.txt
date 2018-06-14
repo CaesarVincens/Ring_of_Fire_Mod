@@ -5,6 +5,7 @@ oob = "NUS_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 #advanced_infantry_weapons = 1
 electronic_mechanical_engineering = 1
 radio = 1
@@ -54,7 +55,7 @@ set_politics = {
 add_ideas = {
 	people_out_of_time
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Michael Stearns"
     desc = "POLITICS_MICHAEL_STEARNS_DESC"
@@ -78,9 +79,18 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Ken Beasley"
+	ideology = dictatorship
+}
+
 create_corps_commander = {
 	name = "Frank Jackson"
 	gfx = "GFX_commander_NUS_Frank_Jackson"
 	traits = { }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }

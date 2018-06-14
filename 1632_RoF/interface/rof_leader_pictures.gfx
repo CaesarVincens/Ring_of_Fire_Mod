@@ -61,7 +61,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_admiral_UPS_Maarten_Tromp"
-		texturefile = "gfx/leaders/UPS/Portrait_Netherlands_Maarten_Tromp"
+		texturefile = "gfx/leaders/UPS/Portrait_Netherlands_Maarten_Tromp.dds"
 	}
 
 }

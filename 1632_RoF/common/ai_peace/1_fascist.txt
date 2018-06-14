@@ -6,22 +6,7 @@
 
 fascist_peace = {
 	enable = {
-		OR = {
-			has_government = fascism
-			AND = {
-				NOT = { has_government = communism }
-				NOT = { has_government = democratic }
-				OR = {
-					any_country = {
-						is_in_faction_with = ROOT
-						is_faction_leader = yes
-						has_government = fascism
-					}
-					is_in_faction = no
-					is_faction_leader = yes
-				}
-			}
-		}
+		always = no
 	}
 
 	annex_randomness = 0 #400
@@ -93,7 +78,7 @@ fascist_peace = {
 			factor = 0 #0.5 - only liberate fascists!
 			NOT = {
 				FROM = {
-					has_government = fascist
+					has_government = radical
 				}
 			}
 		}

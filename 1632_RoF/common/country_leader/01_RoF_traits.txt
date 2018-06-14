@@ -27,7 +27,7 @@ leader_traits = {
 	golden_king = {
 		random = no
 		political_power_factor = 0.125
-		unity_factor = 0.1
+		stability_factor = 0.1
 		ai_strategy = {
 			type = antagonize
 			id = "AUS"
@@ -54,54 +54,48 @@ leader_traits = {
 	}
 	
 	#generic ministers
-	absolutist_minister=
-	{
-		random=no
-		absolutist_drift=0.1
-		ai_will_do=
-		{
-			factor=0
+	absolutist_minister = {
+		random = no
+		sprite = 13
+		absolutist_drift = 0.1
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
-	constitutionalist_minister=
-	{
-		random=no
-		constitutionalist_drift=0.1
-		ai_will_do=
-		{
-			factor=0
+	constitutionalist_minister = {
+		random = no
+		sprite = 13
+		constitutionalist_drift = 0.1
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
-	liberal_minister=
-	{
-		random=no
-		sprite=13
-		liberal_drift=0.1
-		ai_will_do=
-		{
-			factor=0
+	liberal_minister = {
+		random = no
+		sprite = 13
+		liberal_drift = 0.1
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
-	radical_minister=
-	{
-		random=no
-		radical_drift=0.1
-		ai_will_do=
-		{
-			factor=0
+	radical_minister = {
+		random = no
+		sprite = 13
+		radical_drift = 0.1
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
-	neutrality_minister=
-	{
-		random=no
-		neutrality_drift=0.1
-		ai_will_do=
-		{
-			factor=1
+	neutrality_minister = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.1
+		ai_will_do = {
+			factor = 0
 		}
 	}
 

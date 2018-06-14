@@ -41,7 +41,7 @@ equipments = {
 		resources = {
 			oil = 1
 			aluminium = 2
-			rubber = 1
+			combustion_engine = 1
 		}
 		
 		manpower = 20
@@ -85,7 +85,7 @@ equipments = {
 		resources = {
 			oil = 1
 			aluminium = 3
-			rubber = 2
+			combustion_engine = 2
 		}
 		
 		manpower = 40
@@ -128,7 +128,7 @@ equipments = {
 		resources = {
 			oil = 1
 			aluminium = 3
-			rubber = 1
+			combustion_engine = 1
 		}
 
 		naval_strike_attack = 2
@@ -155,7 +155,7 @@ equipments = {
 		resources = {
 			oil = 2
 			aluminium = 3
-			rubber = 1
+			combustion_engine = 1
 		}
 
 		naval_strike_attack = 4
@@ -182,7 +182,7 @@ equipments = {
 		resources = {
 			oil = 2
 			aluminium = 4
-			rubber = 1
+			combustion_engine = 1
 		}
 
 		naval_strike_attack = 6
@@ -227,7 +227,7 @@ equipments = {
 		resources = {
 			oil = 1
 			aluminium = 4
-			rubber = 2
+			combustion_engine = 2
 		}
 	}
 	
@@ -251,7 +251,7 @@ equipments = {
 		resources = {
 			oil = 1
 			aluminium = 5
-			rubber = 2
+			combustion_engine = 2
 		}
 	}
 }

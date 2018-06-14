@@ -4,11 +4,12 @@ state={
 	name="STATE_98"
 	resources={
 		aluminium=2.000
-		rubber=1.000
+		#rubber=1.000
 		steel=1.000
 	}
 
 	history={
+		owner = WAU
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2

@@ -7,6 +7,7 @@ state={
 	}
 
 	history={
+		owner = WNA
 		victory_points = {
 			10868 3 
 		}
@@ -17,8 +18,8 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = SON
-		add_core_of = AIR
+		#add_core_of = SON
+		#add_core_of = AIR
 
 	}
 

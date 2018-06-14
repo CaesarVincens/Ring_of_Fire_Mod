@@ -1,0 +1,147 @@
+ideas = {
+
+	hidden_ideas = {		
+		
+		CoC_timer = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+	}
+	# Special ones that can be applied on other countries through focus system.
+	country = {
+		CoC_good_4 = {#max
+			allowed = {
+				always = no
+			}
+			picture = CoC_happy_icon
+			
+			modifier = {
+				radical_drift = 0.1
+				stability_factor = 0.2
+				war_support_factor = 0.1
+				mobilization_speed = 0.2
+				conscription_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		CoC_good_3 = {#max-1
+			allowed = {
+				always = no
+			}
+			picture = CoC_happy_icon
+			
+			modifier = {
+				radical_drift = 0.075
+				stability_factor = 0.15
+				war_support_factor = 0.075
+				mobilization_speed = 0.15
+				conscription_factor = 0.075
+				production_factory_max_efficiency_factor = 0.075
+			}
+			removal_cost = -1
+		}
+		CoC_good_2 = {#max-2
+			allowed = {
+				always = no
+			}
+			picture = CoC_happy_icon
+			
+			modifier = {
+				radical_drift = 0.05
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				mobilization_speed = 0.1
+				conscription_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		CoC_good_1 = {#max-3
+			allowed = {
+				always = no
+			}
+			picture = CoC_happy_icon
+			
+			modifier = {
+				radical_drift = 0.025
+				stability_factor = 0.05
+				war_support_factor = 0.025
+				mobilization_speed = 0.05
+				conscription_factor = 0.025
+				production_factory_max_efficiency_factor = 0.025
+			}
+			removal_cost = -1
+		}
+
+
+		CoC_bad_1 = {#-max-3
+			allowed = {
+				always = no
+			}
+			picture = CoC_angry_icon
+			
+			modifier = {
+				radical_drift = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.025
+				mobilization_speed = -0.05
+				conscription_factor = -0.025
+				production_factory_max_efficiency_factor = -0.025
+			}
+			removal_cost = -1
+		}
+		CoC_bad_2 = {#-max-2
+			allowed = {
+				always = no
+			}
+			picture = CoC_angry_icon
+			
+			modifier = {
+				radical_drift = 0.1
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				mobilization_speed = -0.1
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+			removal_cost = -1
+		}
+		CoC_bad_3 = {#-max-1
+			allowed = {
+				always = no
+			}
+			picture = CoC_angry_icon
+			
+			modifier = {
+				radical_drift = 0.15
+				stability_factor = -0.15
+				war_support_factor = -0.075
+				mobilization_speed = -0.15
+				conscription_factor = -0.075
+				production_factory_max_efficiency_factor = -0.075
+			}
+			removal_cost = -1
+		}
+		CoC_bad_4 = {#-max
+			allowed = {
+				always = no
+			}
+			picture = CoC_angry_icon
+			
+			modifier = {
+				radical_drift = 0.2
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				mobilization_speed = -0.2
+				conscription_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+			removal_cost = -1
+		}
+
+	}
+
+}

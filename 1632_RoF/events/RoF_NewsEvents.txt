@@ -273,6 +273,30 @@ news_event = {
 		trigger = { tag = NUS }
 	}
 }
+# NUS incorporates WRZ
+news_event = {
+	id = RoF_news.15
+	title = RoF_news.15.t
+	desc = RoF_news.15.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.15.a
+		trigger = {
+			NOT = {
+				tag = BRG
+			}
+		}
+	}
+	option = {
+		name = RoF_news.15.b
+		trigger = { tag = BRG }
+	}
+}
 
 # Dunkirk
 news_event = {

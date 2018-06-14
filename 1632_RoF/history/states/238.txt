@@ -3,11 +3,12 @@ state={
 	id=238
 	name="STATE_238"
 	resources={
-		rubber=1.000
+		#rubber=1.000
 		tungsten=0.000
 	}
 
 	history={
+		owner = WNA
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

@@ -4,11 +4,12 @@ state={
 	name="STATE_316"
 	resources={
 		aluminium=1.000
-		rubber=0.000
+		#rubber=0.000
 		steel=0.000
 	}
 
 	history={
+		owner = WAS
 		victory_points = {
 			12762 3 
 		}
@@ -19,7 +20,7 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = OYO
+		#add_core_of = OYO
 
 	}
 

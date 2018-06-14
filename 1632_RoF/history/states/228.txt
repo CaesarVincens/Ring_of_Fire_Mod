@@ -3,11 +3,12 @@ state={
 	id=228
 	name="STATE_228"
 	resources={
-		rubber=5.000
+		#rubber=5.000
 		tungsten=4.000
 	}
 
 	history={
+		owner = WAF
 		victory_points = {
 			1817 8 
 		}
@@ -18,8 +19,8 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = KIK
-		add_core_of = LBA
+		#add_core_of = KIK
+		#add_core_of = LBA
 
 	}
 

@@ -4,6 +4,7 @@ oob = "OMA_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -37,7 +38,7 @@ set_politics = {
 
 add_ideas = {
 	}
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Ali ibn Ishaq"
     desc = "POLITICS_ALI_IBN ISHAQ_DESC"

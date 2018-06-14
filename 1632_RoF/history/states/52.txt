@@ -5,7 +5,7 @@ state={
 
 	resources={
 		oil = 10
-		rubber = 138
+		#rubber = 138
 	}
 	state_category = pastoral
 

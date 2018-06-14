@@ -4,6 +4,7 @@ oob = "BUR_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -51,7 +52,7 @@ set_politics = {
 add_ideas = {
 		balanced_eco
 }
-set_national_unity = 0.7078
+set_stability = 0.5
 create_country_leader = {
     name = "Zeya Bandula"
     desc = "POLITICS_ZEYA_BANDULA_DESC"

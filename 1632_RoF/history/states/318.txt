@@ -4,11 +4,12 @@ state={
 	name="STATE_318"
 	resources={
 		aluminium=0.000
-		rubber=0.000
+		#rubber=0.000
 		steel=0.000
 	}
 
 	history={
+		owner = WAU
 		victory_points = {
 			12817 3 
 		}
@@ -19,7 +20,7 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = OYO
+		#add_core_of = OYO
 
 	}
 

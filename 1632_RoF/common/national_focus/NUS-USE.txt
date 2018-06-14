@@ -174,8 +174,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			add_tech_bonus = { name = ironclad_bonus bonus = 0.5 uses = 2 category = bb_tech }
-			add_tech_bonus = { name = timberclad_bonus bonus = 0.5 uses = 2 category = ca_tech }
+			add_tech_bonus = { name = ironclad_bonus bonus = 0.5 uses = 1 category = ironclad_tech }
+			add_tech_bonus = { name = timberclad_bonus bonus = 0.5 uses = 1 category = timberclad_tech }
 			
 		}
 		ai_will_do = {
@@ -192,6 +192,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = NUS_brown_navy
+		will_lead_to_war_with = HAM
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = USE_elbe.tt
@@ -201,8 +202,8 @@ focus_tree = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = USE_ironclad_tech.tt
-				has_tech = basic_battleship
-				has_tech = basic_heavy_cruiser
+				has_tech = ironclad_first
+				has_tech = timberclad_first
 			}
 		}
 		bypass = {
@@ -1726,7 +1727,7 @@ focus_tree = {
 			hidden_effect = {
 				every_country = {
 					limit = {
-						OR = { is_german = yes tag = SWE }
+						OR = { is_german_tag = yes tag = SWE }
 						is_in_faction_with = NUS
 						NOT = { tag = NUS }
 						NOT = { tag = NUR }
@@ -1755,7 +1756,7 @@ focus_tree = {
 			#hidden_effect = {
 				every_country = {
 					limit = {
-						is_german = yes
+						is_german_tag = yes
 						NOT = { has_country_flag = USE_rejected_country }
 						NOT = { has_war_with = NUS }
 						NOT = { has_civil_war = yes }
@@ -1764,7 +1765,7 @@ focus_tree = {
 				}
 				every_country = {
 					limit = {
-						is_german = yes
+						is_german_tag = yes
 						NOT = { has_country_flag = USE_rejected_country }
 						has_war_with = NUS
 						NOT = { has_civil_war = yes }

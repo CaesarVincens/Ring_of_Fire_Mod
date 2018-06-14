@@ -188,12 +188,21 @@ country_event = {
 			country_event = { id = RoF_NED.116 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			base = 1
+		}
 	}
 	option = { # Refuse
 		name =  RoF_NED.115.b
 		set_country_flag = @ROOT_refuse_demand
+		every_owned_state = {
+			add_claim_by = SPN
+		}
 		SPN = {
 			country_event = { id = RoF_NED.116 }
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }

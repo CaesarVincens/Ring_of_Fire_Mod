@@ -1,0 +1,360 @@
+focus_tree = {
+	id = generic_german_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			is_german_tag = yes
+			NOT = { tag = AUS }
+			NOT = { tag = NUS }
+		}
+	}
+	default = no
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research_gen
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus_gen
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling_gen
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	shared_focus = industrial_advances_gen
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	focus = {
+		id = die_amerikaner
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		x = 26
+		y = 0
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 120
+		}
+
+	}
+	focus = {
+		id = shun_americans
+		icon = GFX_focus_generic_strike_at_democracy3
+		cost = 10.00
+		prerequisite = {
+			focus = die_amerikaner
+		}
+		mutually_exclusive = {
+			focus = welcome_americans
+		}
+		x = -3
+		y = 1
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			add_ideas = GG_prohibit_american_influence
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					is_in_faction_with = AUS
+					is_in_faction_with = BAV
+					tag = BAV
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_in_faction_with = SWE
+					is_in_faction_with = NUS
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = welcome_americans
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = die_amerikaner
+		}
+		mutually_exclusive = {
+			focus = shun_americans
+		}
+		x = 3
+		y = 1
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			add_ideas = GG_welcome_american_influence		
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_in_faction_with = AUS
+					is_in_faction_with = BAV
+					tag = BAV
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_in_faction_with = SWE
+					is_in_faction_with = NUS
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = thirty_years_war_neutral
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = shun_americans
+			focus = welcome_americans
+		}
+		mutually_exclusive = {
+			focus = support_protestants
+			focus = join_austria
+		}
+		x = 0
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = representative_democracy_focus
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = welcome_americans
+		}
+		mutually_exclusive = {
+			focus = committees_of_correspondance_gen_ger
+		}
+		x = 3
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			remove_ideas = GG_welcome_american_influence
+			add_ideas = GG_democracy_idea
+		}
+	}
+	focus = {
+		id = guaranteed_freedoms
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = representative_democracy_focus
+		}
+		x = 2
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = committees_of_correspondance_gen_ger
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = welcome_americans
+		}
+		mutually_exclusive = {
+			focus = representative_democracy_focus
+		}
+		x = 5
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			remove_ideas = GG_welcome_american_influence
+			add_ideas = GG_radical_revolution
+		}
+
+	}
+	focus = {
+		id = open_society_focus
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = representative_democracy_focus
+			focus = committees_of_correspondance_gen_ger
+		}
+		x = 4
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = volunteer_military_focus
+		icon = GFX_goal_tfv_can_compromise_with_quebec
+		cost = 10.00
+		prerequisite = {
+			focus = open_society_focus
+		}
+		x = 4
+		y = 4
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = revoke_nobility
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		prerequisite = {
+			focus = committees_of_correspondance_gen_ger
+		}
+		x = 6
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = support_protestants
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = welcome_americans
+		}
+		mutually_exclusive = { focus = thirty_years_war_neutral }
+		x = 1
+		y = 2
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = centralize_power_gen_ger
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = shun_americans
+		}
+		mutually_exclusive = {
+			focus = nobles_republic
+		}
+		x = -5
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			remove_ideas = GG_prohibit_american_influence
+			add_ideas = GG_royal_dictatorship_focus
+		}
+	}
+	focus = {
+		id = nobles_republic
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = shun_americans
+		}
+		mutually_exclusive = {
+			focus = centralize_power_gen_ger
+		}
+		x = -3
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			remove_ideas = GG_prohibit_american_influence
+			add_ideas = GG_nobles_republic
+		}
+	}
+	focus = {
+		id = natural_order_focus
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		prerequisite = {
+			focus = centralize_power_gen_ger
+			focus = nobles_republic
+		}
+		x = -4
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = join_austria
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = shun_americans
+		}
+		mutually_exclusive = { focus = thirty_years_war_neutral }
+		x = -1
+		y = 2
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = increase_conscription
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		cost = 10.00
+		prerequisite = {
+			focus = natural_order_focus
+		}
+		x = -4
+		y = 4
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = constraints_on_power
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = nobles_republic
+		}
+		x = -2
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = demand_obediance
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = centralize_power_gen_ger
+		}
+		x = -6
+		y = 3
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = protect_noble_rights
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = demand_obediance
+			focus = constraints_on_power
+		}
+		x = -4
+		y = 5
+		relative_position_id = die_amerikaner
+
+	}
+	focus = {
+		id = promote_common_good
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = guaranteed_freedoms
+			focus = revoke_nobility
+		}
+		x = 4
+		y = 5
+		relative_position_id = die_amerikaner
+
+	}
+}

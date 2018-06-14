@@ -1,5 +1,91 @@
 technologies = {
 	
+	aerial_research_tech = {
+		enable_building = {
+			building = air_base
+			level = 2
+		}
+		path = {
+			leads_to_tech = aerial_experiements
+			research_cost_coeff = 1
+		}
+		start_year = 1633
+		research_cost = 1
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { tag = NUS }
+				date < 1634.1.1
+			}
+		}
+	}
+
+	aerial_experiements = {
+		enable_building = {
+			building = air_base
+			level = 6
+		}
+		path = {
+			leads_to_tech = aerial_innovations
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = aerial_protections
+			research_cost_coeff = 1
+		}
+		start_year = 1635
+		research_cost = 1
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 4 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { tag = NUS }
+				date < 1634.1.1
+			}
+		}
+	}
+	
+	aerial_innovations = {
+		enable_building = {
+			building = air_base
+			level = 10
+		}
+		start_year = 1637
+		research_cost = 1
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 6 }
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	aerial_protections = {
+		enable_building = {
+			building = anti_air_building
+			level = 5
+		}
+		start_year = 1636
+		research_cost = 1
+		folder = {
+			name = air_techs_folder
+			position = { x = 2 y = 6 }
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
 	first_plane = {
 		enable_equipments = {
 			single_plane_equipment_0

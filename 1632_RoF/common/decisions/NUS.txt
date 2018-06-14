@@ -1,0 +1,72 @@
+NUS_major_decisions = {
+
+	NUS_draft_constitution = {
+		#icon = generic_political_discourse
+		
+		available = {
+			has_country_flag = NUS_citizenship
+			has_country_flag = NUS_economy
+			has_country_flag = NUS_military
+			has_country_flag = NUS_congress
+			has_country_flag = NUS_election
+		}
+		activation = {
+			always = no #activated by focus
+		}
+		
+		is_good = no
+		days_mission_timeout = 70
+	}
+	
+	NUS_protect_Jena = {
+		icon = generic_prepare_civil_war 
+		
+		fire_only_once = yes
+		available = {
+			has_country_flag = NUS_start_CoC
+		}
+		
+		activation = {
+			has_global_flag = breitenfeld_happened
+		}
+		is_good = no
+		days_mission_timeout = 20
+		
+		timeout_effect = {
+			add_political_power = -10
+		}
+		complete_effect = {
+			add_political_power = 10
+		}
+	}
+	NUS_protect_Jena_decision = {
+		fire_only_once = yes
+		visible = {
+			has_active_mission = NUS_protect_Jena
+		}
+		available = {
+			has_active_mission = NUS_protect_Jena
+		}
+		complete_effect = {
+			#set_country_flag = NUS_start_CoC
+			country_event = { id = RoF_NUS.112 }
+		}
+		cost = 50
+		ai_will_do = {
+			base = 1
+		}		
+	}
+}
+
+NUS_minor_decisions = {
+	NUS_test_decision = {
+		available = {
+			original_tag = NUS
+		}
+		complete_effect = {
+			set_country_flag = CoC_present_@ROOT
+			set_variable = { var = CoC_strength_@ROOT value = 0 }
+		}
+	}
+	
+}

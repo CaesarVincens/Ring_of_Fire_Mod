@@ -1,0 +1,105 @@
+equipments = {
+
+	light_frigate = {
+		year = 1617
+
+		is_archetype = yes
+		is_buildable = no
+		type = screen_ship
+		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_gun_upgrade
+			ship_anti_air_upgrade
+		}
+		
+		interface_category = interface_category_screen_ships
+
+		ap_attack = 5
+		attack = 6
+		fire_range = 7
+		torpedo_attack = 0
+		sub_attack = 0
+		
+		anti_air_attack = 0.5
+		
+		armor_value = 5
+		evasion = 50
+		
+		surface_detection = 15
+		sub_detection = 1
+		surface_visibility = 15
+		naval_speed = 20
+		reliability = 0.8
+		
+		naval_range = 2400
+		
+		max_strength = 100		
+		
+		port_capacity_usage = 1
+		
+		build_cost_ic = 3100
+		resources = {
+			oil = 1
+			steel = 2
+		}
+		
+		manpower = 350
+	}
+
+	light_frigate_1 = {
+		year = 1617
+
+		archetype = light_frigate
+		priority = 30
+
+		type = { 
+			screen_ship
+			anti_air
+		}
+
+	}
+	
+	light_frigate_2 = {
+		year = 1635
+
+		archetype = light_frigate
+		parent = light_frigate_1
+		priority = 30
+		
+		ap_attack = 7
+		attack = 8
+		fire_range = 10
+		torpedo_attack = 8
+		sub_attack = 0
+		
+		anti_air_attack = 1
+		
+		armor_value = 6
+		evasion = 60
+		
+		surface_detection = 25
+		sub_detection = 25
+		naval_speed = 25
+		reliability = 0.85
+
+		naval_range = 3000
+		
+		max_strength = 120
+		
+		port_capacity_usage = 1
+		
+		type = { 
+			screen_ship
+			anti_air
+		}
+		build_cost_ic = 3400
+		resources = {
+			oil = 1
+			steel = 3
+		}
+		manpower = 500
+	}
+	
+}

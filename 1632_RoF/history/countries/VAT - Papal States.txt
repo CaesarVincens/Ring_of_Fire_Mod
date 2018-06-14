@@ -4,6 +4,7 @@ oob = "VAT_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -19,13 +20,13 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 89
+            popularity = 19
         }
         liberal = {
             popularity = 9
         }
         neutrality = {
-            popularity = 2
+            popularity = 72
         }
     }
     
@@ -38,13 +39,13 @@ set_politics = {
 
 add_ideas = {
 }
-set_national_unity = 0.7222
+set_stability = 0.5
 create_country_leader = {
     name = "Urbanus VIII"
     desc = "POLITICS_ALESSANDRO_ACTON_DESC"
     picture = "gfx/leaders/VAT/Portrait_Papacy_Urban_VIII.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

@@ -4,10 +4,11 @@ state={
 	name="STATE_113"
 	resources={
 		aluminium=1.000
-		rubber=1.000
+		#rubber=1.000
 	}
 
 	history={
+		owner = WAS
 		victory_points = {
 			8039 8 
 		}

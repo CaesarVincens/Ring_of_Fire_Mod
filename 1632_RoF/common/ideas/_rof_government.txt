@@ -1,0 +1,185 @@
+ideas = {
+
+	state_religion = {
+		law = yes
+		
+		persecute_minorities = {
+			cost = 100
+			#level = 5
+			removal_cost = -1
+			available = {
+				OR = {
+					has_country_flag = religious_enemy
+					has_government = absolutist
+				}
+			}
+			modifier = {
+				conscription_factor = -0.05
+				enemy_partisan_effect = 0.1
+#				stability_weekly = 0.005
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		state_religion_law = {
+			cost = 100
+			#level = 4
+			removal_cost = -1
+			available = {
+			}
+			modifier = {
+				stability_weekly = 0.001
+			}
+			default = yes
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 5
+					has_government = absolutist
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_government = liberal
+						has_government = radical
+					}
+				}
+			}
+		}
+		
+		secularism = {
+			cost = 100
+			#level = 3
+			removal_cost = -1
+			available = {
+			}
+			modifier = {
+
+			}
+			cancel_if_invalid = no
+			default = yes
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 5
+					has_government = constitutionalist
+				}
+			}
+		}
+		
+		freedom_of_religion = {
+			cost = 100
+			#level = 2
+			removal_cost = -1
+			available = {
+
+			}
+			cancel_if_invalid = no
+			modifier = {
+
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 5
+					has_government = liberal
+				}
+			}
+		}
+		
+		atheism = {
+			cost = 100
+			#level = 1
+			removal_cost = -1
+			available = {
+			}
+			cancel_if_invalid = no
+			modifier = {
+
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_government = radical }
+				}
+			}
+		}
+	}
+	
+	conscription_system = {
+		law = yes
+		mercenary_army = {
+			cost = 100
+			removal_cost = -1
+			available = {
+			}
+			cancel_if_invalid = no
+			modifier = {
+				conscription = 0.01
+				conscription_factor = -0.2
+				enemy_partisan_effect = 0.1
+				training_time_army_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		levy_army = {
+			cost = 100
+			removal_cost = -1
+			available = {
+			
+			}
+			cancel_if_invalid = no
+			modifier = {
+				conscription = 0.015
+				conscription_factor = 0.1			
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			default = yes
+		}
+		volunteer_army = {
+			cost = 100
+			removal_cost = -1
+			available = {
+			
+			}
+			cancel_if_invalid = no
+			modifier = {
+				conscription = 0.025
+				experience_gain_army_factor = 0.1
+				army_core_defence_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		drafted_army = {
+			cost = 100
+			removal_cost = -1
+			available = {
+				OR = {
+					has_government = absolutist
+					has_war = yes
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {
+				conscription = 0.05
+				conscription_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+}

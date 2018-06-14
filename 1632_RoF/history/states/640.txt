@@ -7,6 +7,7 @@ state={
 	}
 
 	history={
+		owner = WAF
 		victory_points = {
 			7548 8 
 		}
@@ -17,7 +18,7 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = YAK
+		#add_core_of = YAK
 
 	}
 

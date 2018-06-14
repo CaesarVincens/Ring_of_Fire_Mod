@@ -6,7 +6,7 @@ state={
 	resources={
 		aluminium = 1
 		oil = 5
-		rubber = 87
+		#rubber = 87
 		steel = 1
 		tungsten = 12
 	}

@@ -1,0 +1,128 @@
+focus_tree = {
+	id = sweden
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SWE
+		}
+	}
+	default = no
+
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research_gen
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus_gen
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling_gen
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	shared_focus = industrial_advances_gen
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	
+	focus = {
+		id = SWE_bully_brandenburg
+		icon = GFX_goal_tripartite_pact
+		ai_will_do = { factor = 10 }
+		x = 21
+		y = 0
+		mutually_exclusive = { }
+		prerequisite = { }
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+
+	focus = {
+		id = SWE_secure_baltic_coast
+		icon = GFX_focus_generic_coastal_fort
+		ai_will_do = { factor = 10 }
+		x = -1
+		y = 1
+		mutually_exclusive = { }
+		prerequisite = { focus = SWE_bully_brandenburg }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			country_event = { id = RoF_SWE.135 hours = 12 }
+		}
+	}
+
+	focus = {
+		id = SWE_strong_arm_saxony
+		icon = GFX_goal_generic_military_deal
+		ai_will_do = { factor = 10 }
+		x = 1
+		y = 1
+		mutually_exclusive = { }
+		prerequisite = { focus = SWE_bully_brandenburg }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			SAX = { country_event = { id = RoF_German.130 hours = 12 } }
+		}
+	}
+
+	focus = {
+		id = SWE_move_on_the_main
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		ai_will_do = { factor = 10 }
+		x = 0
+		y = 2
+		mutually_exclusive = { focus = SWE_advance_on_austria }
+		prerequisite = { focus = SWE_strong_arm_saxony }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 10
+		#available_if_capitulated = yes
+	}
+
+	focus = {
+		id = SWE_advance_on_austria
+		icon = GFX_focus_generic_little_entente
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		x = 2
+		y = 2
+		mutually_exclusive = { focus = SWE_move_on_the_main }
+		prerequisite = { focus = SWE_strong_arm_saxony }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 10
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = SWE_rally_germany
+		icon = GFX_focus_generic_treaty
+		ai_will_do = { factor = 10 }
+		x = 0
+		y = 3
+		mutually_exclusive = { }
+		prerequisite = { focus = SWE_move_on_the_main }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 10
+		available_if_capitulated = yes
+	}
+}

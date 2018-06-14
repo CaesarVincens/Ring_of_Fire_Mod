@@ -1,0 +1,217 @@
+﻿add_namespace = RoF_German
+
+country_event = {
+	id = RoF_German.100
+	title = RoF_German.100.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.100.d
+	fire_only_once = yes
+
+	trigger = {
+		controls_state = 434
+		date > 1633.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		hidden_effect = {
+			BRG = {
+				add_state_core = 435
+				add_state_core = 434
+				add_state_core = 16
+				add_state_core = 17
+			}
+			SPR = {
+				remove_state_core = 434
+				remove_state_core = 435
+				add_state_claim = 434
+				add_state_claim = 435
+			}
+			AUS = {
+				remove_state_core = 16
+				remove_state_core = 17
+				add_state_claim = 16
+				add_state_claim = 17
+			}
+			random_country = {
+				limit = {
+					owns_state = 434
+				}
+				release = BRG
+			}
+			BRG = {
+				transfer_state = 435
+				transfer_state = 16
+				transfer_state = 17
+				create_country_leader = {
+					name = "Bernard Wettin"
+					desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
+					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
+					expire = "1660.1.1"
+					ideology = constitutional_monarchy
+					traits = {
+					}
+				}
+				set_politics = {
+					ruling_party = constitutionalist
+					elections_allowed = no
+				}
+				set_capital = 434
+			}
+			434 = { set_state_name = "Franche-Comté" }
+		}
+	}
+	option = {
+		name = RoF_German.100.a
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			news_event = { id = RoF_news.15 days = 1 }
+		}
+	}
+	
+}
+
+country_event = {
+	id = RoF_German.110
+	title = RoF_German.110.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.110.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.110.a
+		SWE = { country_event = { id = RoF_SWE.130 hours = 12 } }
+		effect_tooltip = {
+			SWE = { add_to_faction = BRA }
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_German.110.b
+		SWE = { country_event = { id = RoF_SWE.131 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = BRA
+				}
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+	
+}
+
+country_event = {
+	id = RoF_German.120
+	title = RoF_German.120.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.120.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.120.a
+		SWE = {
+			set_autonomy = {
+				target = MKL
+				autonomy_state = autonomy_rof_vassal
+				freedom_level = 0.6
+			}
+			add_to_faction = MKL
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_German.120.b
+		SWE = { country_event = { id = RoF_SWE.136 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = MKL
+				}
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+	
+}
+
+country_event = {
+	id = RoF_German.121
+	title = RoF_German.121.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.121.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.121.a
+			SWE = { add_to_faction = MKL }
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = RoF_German.130
+	title = RoF_German.130.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.130.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.130.a
+		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
+		give_military_access = SWE
+		effect_tooltip = {
+			SWE = { add_to_faction = SAX }
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_German.130.b
+		SWE = { country_event = { id = RoF_SWE.141 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAX
+				}
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+	
+}

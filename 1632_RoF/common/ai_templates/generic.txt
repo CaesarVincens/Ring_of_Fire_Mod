@@ -7,17 +7,6 @@ armor_generic = {
 	upgrade_prio = {
 		factor = 2.17
 
-		modifier = {
-			factor = 7
-			OR = {
-				has_tech = basic_medium_tank
-			}
-		}
-		
-		modifier = {
-			factor = 2
-			has_tech = main_battle_tank
-		}
 	}
 	
 	match_to_count = 0.5
@@ -40,7 +29,7 @@ armor_generic = {
 		}
 		
 		can_upgrade_in_field = {
-			has_equipment = { light_tank_equipment < 500 } 
+			#has_equipment = { light_tank_equipment < 500 } 
 		}
 		
 		target_width = 18.0
