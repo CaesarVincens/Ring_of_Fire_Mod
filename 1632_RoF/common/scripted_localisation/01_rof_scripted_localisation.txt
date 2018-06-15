@@ -118,46 +118,46 @@ defined_text = { # Country
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_strength_@THIS value = 20 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 20 compare = greater_than_or_equals }
 		}
 		localization_key = ROF_COC_DOMINANT
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_strength_@THIS value = 15 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 20 compare = less_than }
+			check_variable = { var = CoC_strength value = 15 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 20 compare = less_than }
 		}
 		localization_key = ROF_COC_STRONG
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_strength_@THIS value = 10 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 15 compare = less_than }
+			check_variable = { var = CoC_strength value = 10 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 15 compare = less_than }
 		}
 		localization_key = ROF_COC_INFLUENTIAL
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_strength_@THIS value = 5 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 10 compare = less_than }
+			check_variable = { var = CoC_strength value = 5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 10 compare = less_than }
 		}
 		localization_key = ROF_COC_WEAK
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_strength_@THIS value = 0 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 5 compare = less_than }
+			check_variable = { var = CoC_strength value = 0 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 5 compare = less_than }
 		}
 		localization_key = ROF_COC_INSIGNIFICANT
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_strength_@THIS value = 0 compare = less_than }
+			check_variable = { var = CoC_strength value = 0 compare = less_than }
 		}
 		localization_key = ROF_COC_NON_EXISTANT
 	}
@@ -169,46 +169,46 @@ defined_text = { # Country
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_anger_@THIS value = 10 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }
 		}
 		localization_key = ROF_COC_FURIOUS
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_anger_@THIS value = 5 compare = greater_than_or_equals }
-			check_variable = { var = CoC_anger_@THIS value = 10 compare = less_than }
+			check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger value = 10 compare = less_than }
 		}
 		localization_key = ROF_COC_ANGRY
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_anger_@THIS value = 0 compare = greater_than_or_equals }
-			check_variable = { var = CoC_anger_@THIS value = 5 compare = less_than }
+			check_variable = { var = CoC_anger value = 0 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger value = 5 compare = less_than }
 		}
 		localization_key = ROF_COC_DISPLEASED
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_anger_@THIS value = -5 compare = greater_than_or_equals }
-			check_variable = { var = CoC_anger_@THIS value = 0 compare = less_than }
+			check_variable = { var = CoC_anger value = -5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger value = 0 compare = less_than }
 		}
 		localization_key = ROF_COC_PLEASED
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_anger_@THIS value = -10 compare = greater_than_or_equals }
-			check_variable = { var = CoC_anger_@THIS value = -5 compare = less_than }
+			check_variable = { var = CoC_anger value = -10 compare = greater_than_or_equals }
+			check_variable = { var = CoC_anger value = -5 compare = less_than }
 		}
 		localization_key = ROF_COC_HAPPY
 	}
 
 	text = {
 		trigger = {
-			check_variable = { var = CoC_anger_@THIS value = -10 compare = less_than }
+			check_variable = { var = CoC_anger value = -10 compare = less_than }
 		}
 		localization_key = ROF_COC_ECSTATIC
 	}

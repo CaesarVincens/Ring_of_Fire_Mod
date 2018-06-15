@@ -2,40 +2,97 @@ RoF_CoC_decisions = {
 
 	ban_CoC = {
 		available = {
-			has_country_flag = CoC_present_@ROOT
+			has_country_flag = CoC_present
+			check_variable = { var = CoC_strength value = 10 compare = less_than }
 		}
 		complete_effect = {
-			subtract_from_variable = { var = CoC_strength_@ROOT value = 5 }
-			add_to_variable = { var = CoC_strength_@ROOT value = -5 }
+			custom_effect_tooltip = RoF_ban_CoC.tt
+			set_country_flag = CoC_banned
+			set_variable = { var = CoC_strength value = 0 }
+			add_to_variable = { var = CoC_anger value = 10 }
+		}
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				OR = {
+					has_government = absolutist
+					has_government = constitutionalist
+					has_government = neutrality
+				}
+				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+			}
 		}
 	}
 	allow_CoC = {
 		available = {
-			has_country_flag = CoC_present_@ROOT
+			has_country_flag = CoC_present
+			has_country_flag = CoC_banned
+		}
+		complete_effect = {
+			custom_effect_tooltip = RoF_unban_CoC.tt
+			clr_country_flag = CoC_banned
+			add_to_variable = { var = CoC_strength value = 5 }
+			add_to_variable = { var = CoC_anger value = -5 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				OR = {
+					has_government = radical
+					has_government = liberal
+				}
+			}
 		}
 	}
 	encourage_CoC = {
 		available = {
-			has_country_flag = CoC_present_@ROOT
+			has_country_flag = CoC_present
+			check_variable = { var = CoC_strength value = 20 compare = less_than }
 		}
 		complete_effect = {
-			add_to_variable = { var = CoC_strength_@ROOT value = 5 }
-			add_to_variable = { var = CoC_anger_@ROOT value = -5 }
+			custom_effect_tooltip = RoF_strengthen_CoC.tt
+			add_to_variable = { var = CoC_strength value = 5 }
+			add_to_variable = { var = CoC_anger value = -5 }
 		}
-	}
-	test_CoC = {
-		#icon = generic_political_discourse
-		
-		fire_only_once = yes
-		visible = {
-		}
-		available = {
-		}
-		complete_effect = {
-		}
+		cost = 50
+		days_re_enable = 30
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				add = 1
+				OR = {
+					has_government = radical
+					has_government = liberal
+				}
+			}
 		}
 	}
-	
+	suppress_CoC = {
+		available = {
+			has_country_flag = CoC_present
+			check_variable = { var = CoC_strength value = 0 compare = greater_than_or_equals }
+		}
+		complete_effect = {
+			custom_effect_tooltip = RoF_weaken_CoC.tt
+			add_to_variable = { var = CoC_strength value = -5 }
+			add_to_variable = { var = CoC_anger value = 5 }
+		}
+		cost = 50
+		days_re_enable = 30
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				OR = {
+					has_government = absolutist
+					has_government = constitutionalist
+					has_government = neutrality
+				}
+			}
+		}
+	}
 }

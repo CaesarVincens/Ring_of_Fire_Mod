@@ -76,3 +76,22 @@ create_country_leader = {
     traits = {
     }
 }
+
+create_country_leader = {
+    name = "Felipe IV von Habsburg"
+    desc = "POLITICS_GABRIEL_DE ALBORNOZ_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Spain_Filipe_IV.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Felipe IV von Habsburg"
+    desc = "POLITICS_GABRIEL_DE ALBORNOZ_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Spain_Filipe_IV.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}

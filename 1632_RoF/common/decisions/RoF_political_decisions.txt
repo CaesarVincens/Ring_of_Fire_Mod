@@ -2577,7 +2577,7 @@ neutrality_on_the_rise = {
 		cost = 100
 		
 		complete_effect = {
-			country_event = { id = conv.political.340.c }
+			country_event = { id = conv.political.340 }
 		}
 		
 		ai_will_do = {

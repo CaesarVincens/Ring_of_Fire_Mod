@@ -15,7 +15,7 @@
  merc_cavalry_desc:0 "Horse mounted mercenaries. More expensive, but with good mobility. Don't rely on them too much."
  RoF_unlock_focuses:0 "Unlocks further Focuses"
  battle_of_crapper_fired:0 "Will be bypassed when we decide how to deal with refugees"
- battle_of_jena_fired:0 "We will need a seed group to start the Committees of Correspondance"
+ battle_of_jena_fired:0 "We will need a seed group to start the Committees of Correspondence"
  absolutist_drift:0 "Daily Absolutism Drift"
  liberal_drift:0 "Daily Liberalism Drift"
  constitutionalist_drift:0 "Daily Constitutionalism Drift"

@@ -249,12 +249,12 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_apc_tech_1_medium"
-		texturefile = "gfx/interface/technologies/basic_light_tank.dds"
+		texturefile = "gfx/interface/technologies/mechanized_equipment_1.dds"
 	}
 
 	spriteType = {
 		name = "GFX_apc_tech_2_medium"
-		texturefile = "gfx/interface/technologies/improved_light_tank.dds"
+		texturefile = "gfx/interface/technologies/mechanized_equipment_2.dds"
 	}
 	
 	spriteType = {
@@ -269,8 +269,22 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_aerial_research_tech_medium"
-		texturefile = "gfx/interface/technologies/aerial_research_tech.dds"
+		texturefile = "gfx/interface/technologies/air_research_tech.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_aerial_experiements_medium"
+		texturefile = "gfx/interface/technologies/air_research_tech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_aerial_innovations_medium"
+		texturefile = "gfx/interface/technologies/air_research_tech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_aerial_protections_medium"
+		texturefile = "gfx/interface/technologies/air_research_tech.dds"
+	}
 
 }

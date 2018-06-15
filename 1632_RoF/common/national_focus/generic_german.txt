@@ -142,7 +142,7 @@ focus_tree = {
 			focus = welcome_americans
 		}
 		mutually_exclusive = {
-			focus = committees_of_correspondance_gen_ger
+			focus = committees_of_correspondence_gen_ger
 		}
 		x = 3
 		y = 2
@@ -165,7 +165,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = committees_of_correspondance_gen_ger
+		id = committees_of_correspondence_gen_ger
 		icon = GFX_goal_support_communism
 		cost = 10.00
 		prerequisite = {
@@ -189,7 +189,7 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = representative_democracy_focus
-			focus = committees_of_correspondance_gen_ger
+			focus = committees_of_correspondence_gen_ger
 		}
 		x = 4
 		y = 3
@@ -213,7 +213,7 @@ focus_tree = {
 		icon = GFX_focus_rom_parties_end
 		cost = 10.00
 		prerequisite = {
-			focus = committees_of_correspondance_gen_ger
+			focus = committees_of_correspondence_gen_ger
 		}
 		x = 6
 		y = 3

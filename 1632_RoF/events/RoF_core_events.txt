@@ -5,8 +5,33 @@ country_event = {
 	picture = GFX_report_event_scottish_mercenaries #placeholder
 	is_triggered_only = yes
 	fire_only_once = yes
-	desc = RoF.000.d
-
+	desc = {
+		text = RoF.000.da
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WAF
+					tag = WAS
+					tag = WAU
+					tag = WNA
+					tag = WSA
+				}
+			}
+		}
+	}
+	
+	desc = {
+		text = RoF.000.db
+		trigger = {
+			OR = {
+				tag = WAF
+				tag = WAS
+				tag = WAU
+				tag = WNA
+				tag = WSA
+			}
+		}
+	}
 	immediate = {
 		hidden_effect = {
 			SWE = {
@@ -21,7 +46,61 @@ country_event = {
 	}
 	option = {
 		name = RoF.000.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = WAF
+					tag = WAS
+					tag = WAU
+					tag = WNA
+					tag = WSA
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = RoF.000.b
+		trigger = {
+			OR = {
+				tag = WAF
+				tag = WAS
+				tag = WAU
+				tag = WNA
+				tag = WSA
+			}
+		}
+		country_event = { id = RoF.001 }
+	}
+}
 
+country_event = {
+	id = RoF.001
+	title = RoF.001.t
+	picture = GFX_report_event_scottish_mercenaries #placeholder
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	desc = RoF.001.d
+
+	immediate = {
+
+	}
+	option = {
+		name = RoF.001.a
+		NUS = { change_tag_from = ROOT }
+	}
+	option = {
+		name = RoF.001.b
+		SWE = { change_tag_from = ROOT }
+	}
+	option = {
+		name = RoF.001.c
+		FRA = { change_tag_from = ROOT }
+	}
+	option = {
+		name = RoF.001.do
+		AUS = { change_tag_from = ROOT }
 	}
 }
 
@@ -115,26 +194,26 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		any_neighbor_country = {
-			has_variable = CoC_strength_@THIS
+			has_variable = CoC_strength
 		}
 	}
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = CoC_present_@ROOT
-			set_variable = { var = CoC_strength_@ROOT value = 0 }
-			set_variable = { var = CoC_anger_@ROOT value = 0 }
+			set_country_flag = CoC_present
+			set_variable = { var = CoC_strength value = 0 }
+			set_variable = { var = CoC_anger value = 0 }
 			if = {
 				limit = {
 					has_government = absolutist
 				}
-				add_to_variable = { var = CoC_anger_@ROOT value = 5 }
+				add_to_variable = { var = CoC_anger value = 5 }
 			}
 			else_if = {
 				limit = {
 					has_government = radical
 				}
-				add_to_variable = { var = CoC_anger_@ROOT value = -10 }				
+				add_to_variable = { var = CoC_anger value = -10 }				
 			}
 		}
 	}

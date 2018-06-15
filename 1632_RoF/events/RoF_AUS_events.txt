@@ -57,6 +57,22 @@ country_event = {
 					traits = {
 					}
 				}
+				create_country_leader = {
+					name = "Albrecht von Wallenstein"
+					desc = "POLITICS_WALLENSTEIN_DESC"
+					picture = "GFX_leader_BOH_Wallenstein"
+					ideology = absolute_monarchy
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Albrecht von Wallenstein"
+					desc = "POLITICS_WALLENSTEIN_DESC"
+					picture = "GFX_leader_BOH_Wallenstein"
+					ideology = absolute_monarchy_neutral
+					traits = {
+					}
+				}
 				set_politics = {
 					ruling_party = constitutionalist
 					elections_allowed = no
@@ -96,7 +112,7 @@ country_event = {
 	}
 }
 
-#Rain am Lech
+#Response to Bohemian Independence
 country_event = {
 	id = RoF_AUS.101
 	title = RoF_AUS.100.t
@@ -119,6 +135,9 @@ country_event = {
 	option = {
 		name = RoF_AUS.100.a
 		create_wargoal = { target = BOH type = annex_everything }
+		ai_chance = {
+			factor = 10
+		}
 	}
 }
 
@@ -225,5 +244,8 @@ country_event = {
 	option = {
 		name = RoF_AUS.150.b
 		set_country_flag = AUS_seek_hre_flag
+		ai_chance = {
+			factor = 10
+		}
 	}
 }

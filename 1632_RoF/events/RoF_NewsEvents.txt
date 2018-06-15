@@ -273,7 +273,7 @@ news_event = {
 		trigger = { tag = NUS }
 	}
 }
-# NUS incorporates WRZ
+# BRG Forms
 news_event = {
 	id = RoF_news.15
 	title = RoF_news.15.t
@@ -297,6 +297,7 @@ news_event = {
 		trigger = { tag = BRG }
 	}
 }
+
 
 # Dunkirk
 news_event = {

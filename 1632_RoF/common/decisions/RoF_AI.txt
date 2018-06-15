@@ -29,26 +29,26 @@ RoF_ai_decisions = {
 			is_ai = yes
 			NOT = { any_country = { has_idea = CoC_timer } }
 			any_neighbor_country = {
-				has_variable = CoC_strength_@THIS
+				has_variable = CoC_strength
 			}
 		}
 		complete_effect = {
+			add_timed_idea = { idea = CoC_timer days = 30 }
 			random_country = {
 				limit = {
-					not = { has_country_flag = CoC_present_@THIS }
+					not = { has_country_flag = CoC_present }
 					any_neighbor_country = {
-						has_variable = CoC_strength_@THIS
+						has_variable = CoC_strength
 					}
 					capital_scope = {
 						is_on_continent = europe
 					}
 				}
 				country_event = { id = RoF.010 }
-				add_timed_idea = { idea = CoC_timer days = 30 }
 			}
 			every_country = {
 				limit = {
-					has_variable = CoC_strength_@THIS
+					has_variable = CoC_strength
 				}
 				check_CoC_effects_for_this = yes
 			}
@@ -58,24 +58,4 @@ RoF_ai_decisions = {
 		}
 	}
 	
-}
-
-RoF_test_decisions = {
-
-	test_fleet = {
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			set_technology = { prerof_man_of_war = 1}
-			set_technology = { prerof_heavy_frigate = 1}
-			set_technology = { prerof_light_frigate = 1}
-			set_technology = { steam_battleship_first = 1}
-			set_technology = { steam_cruiser_first = 1}
-			set_technology = { steam_destroyer_first = 1}
-			set_technology = { timberclad_first = 1}
-			set_technology = { ironclad_first = 1}
-			load_oob = "test_fleet_OOB"
-		}
-	}
 }

@@ -253,6 +253,12 @@ focus_tree = {
 		available = {
 			date > 1632.5.1
 		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_attacked_grantville.tt
+				NUS = { has_country_flag = NUS_battle_of_grantville }
+			}
+		}
 		completion_reward = {
 			NUS = {
 				country_event = {
@@ -324,29 +330,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 40
-		}
-
-	}
-	focus = {
-		id = FRA_wietze_raid
-		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 5.00
-		prerequisite = {
-			focus = FRA_dunkirk
-		}
-		x = -1
-		y = 6
-		relative_position_id = FRA_investigate_grantville
-		available = {
-			has_tech = cardinal_rifle_tech
-			NUS = {
-				has_completed_focus = NUS_wietze_oil
-			}
-		}
-		completion_reward = {
-			country_event = {
-				id = RoF_FRA.125
-			}
 		}
 
 	}

@@ -130,21 +130,6 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = NUS_battle_of_jena
 			set_country_flag = NUS_start_CoC
-			set_country_flag = CoC_present_@NUS
-			set_variable = { var = CoC_strength_@NUS value = 0 }
-			set_variable = { var = CoC_anger_@NUS value = -5 }
-			if = {
-				limit = {
-					has_country_flag = NUS_welcome_refugees_flag
-				}
-				add_to_variable = { var = CoC_anger_@NUS value = -5 }
-			}
-			else_if = {
-				limit = {
-					has_country_flag = NUS_conscript_refugees_flag
-				}
-				add_to_variable = { var = CoC_anger_@NUS value = 5 }
-			}
 		}
 	}
 
@@ -664,7 +649,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = NUS_establish_committees_of_correspondance
+					has_completed_focus = NUS_establish_committees_of_correspondence
 				}
 				modify_country_flag = {
 					flag = NUS_constitution_flag
@@ -707,15 +692,15 @@ country_event = {
 			add_popularity = { ideology = liberal popularity = 0.05 }
 			if = {
 				limit = {
-					has_variable = CoC_anger_@NUS
+					has_variable = CoC_anger
 				}
-				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+				add_to_variable = { var = CoC_anger value = -5 }
 			}
 			if = {
 				limit = {
-					has_variable = CoC_strength_@NUS
+					has_variable = CoC_strength
 				}
-				add_to_variable = { var = CoC_strength_@NUS value = -5 }
+				add_to_variable = { var = CoC_strength value = -5 }
 			}
 		}
 	}
@@ -737,15 +722,15 @@ country_event = {
 			add_popularity = { ideology = absolutist popularity = 0.05 }
 			if = {
 				limit = {
-					has_variable = CoC_anger_@NUS
+					has_variable = CoC_anger
 				}
-				add_to_variable = { var = CoC_anger_@NUS value = 5 }
+				add_to_variable = { var = CoC_anger value = 5 }
 			}
 			if = {
 				limit = {
-					has_variable = CoC_strength_@NUS
+					has_variable = CoC_strength
 				}
-				add_to_variable = { var = CoC_strength_@NUS value = 5 }
+				add_to_variable = { var = CoC_strength value = 5 }
 			}
 		}
 	}
@@ -1051,6 +1036,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
+			set_country_flag = NUS_battle_of_grantville
 			set_country_flag = NUS_start_CPoE
 		}
 	}
@@ -1280,9 +1266,9 @@ country_event = {
 			set_country_flag = NUS_national_fervor_flag
 			if = {
 				limit = {
-					has_variable = CoC_strength_@NUS
+					has_variable = CoC_strength
 				}
-				add_to_variable = { var = CoC_strength_@NUS value = 10 }
+				add_to_variable = { var = CoC_strength value = 10 }
 			}
 
 		}

@@ -34,45 +34,45 @@ check_CoC_effects_for_this = {
 
 	if = { #dominant
 		limit = {
-			check_variable = { var = CoC_strength_@THIS value = 20 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 20 compare = greater_than_or_equals }
 		}
 		if = { #ecstatic
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = less_than }			
 			}
 			add_ideas = Coc_good_4 #max
 		}
 		else_if = { #happy
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = -5 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = -5 compare = less_than }			
 			}
 			add_ideas = CoC_good_3 #max-1
 		}
 		else_if = { #pleased
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -5 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 0 compare = less_than }			
+				check_variable = { var = CoC_anger value = -5 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 0 compare = less_than }			
 			}
 			add_ideas = CoC_good_2 #max-2
 		}
 		else_if = { #displeased
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 0 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 5 compare = less_than }			
+				check_variable = { var = CoC_anger value = 0 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 5 compare = less_than }			
 			}
 			add_ideas = CoC_bad_2 #max-2
 		}
 		else_if = { #angry
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 5 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = less_than }			
+				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 10 compare = less_than }			
 			}
 			add_ideas = CoC_bad_3 #max-1
 		}
 		else_if = { #furious
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = greater_than_or_equals }		
+				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }		
 			}
 			add_ideas = CoC_bad_4 #max
 		}
@@ -80,46 +80,46 @@ check_CoC_effects_for_this = {
 	}
 	else_if = { #strong
 		limit = {
-			check_variable = { var = CoC_strength_@THIS value = 15 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 20 compare = less_than }
+			check_variable = { var = CoC_strength value = 15 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 20 compare = less_than }
 		}
 		if = { #ecstatic
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = less_than }			
 			}
 			add_ideas = Coc_good_3 #max-1
 		}
 		else_if = { #happy
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = -5 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = -5 compare = less_than }			
 			}
 			add_ideas = CoC_good_2 #max-2
 		}
 		else_if = { #pleased
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -5 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 0 compare = less_than }			
+				check_variable = { var = CoC_anger value = -5 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 0 compare = less_than }			
 			}
 			add_ideas = CoC_good_1 #max-3
 		}
 		else_if = { #displeased
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 0 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 5 compare = less_than }			
+				check_variable = { var = CoC_anger value = 0 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 5 compare = less_than }			
 			}
 			add_ideas = CoC_bad_1 #max-3
 		}
 		else_if = { #angry
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 5 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = less_than }			
+				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 10 compare = less_than }			
 			}
 			add_ideas = CoC_bad_2 #max-2
 		}
 		else_if = { #furious
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = greater_than_or_equals }		
+				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }		
 			}
 			add_ideas = CoC_bad_3 #max-1
 		}
@@ -127,32 +127,32 @@ check_CoC_effects_for_this = {
 	}
 	else_if = { #influential
 		limit = {
-			check_variable = { var = CoC_strength_@THIS value = 10 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 15 compare = less_than }
+			check_variable = { var = CoC_strength value = 10 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 15 compare = less_than }
 		}
 		if = { #ecstatic
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = less_than }			
 			}
 			add_ideas = Coc_good_2 #max-1
 		}
 		else_if = { #happy
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = -5 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = -5 compare = less_than }			
 			}
 			add_ideas = CoC_good_1 #max-2
 		}
 		else_if = { #angry
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 5 compare = greater_than_or_equals }
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = less_than }			
+				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 10 compare = less_than }			
 			}
 			add_ideas = CoC_bad_1 #max-2
 		}
 		else_if = { #furious
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = greater_than_or_equals }		
+				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }		
 			}
 			add_ideas = CoC_bad_2 #max-1
 		}
@@ -160,18 +160,18 @@ check_CoC_effects_for_this = {
 	}
 	else_if = { #weak
 		limit = {
-			check_variable = { var = CoC_strength_@THIS value = 5 compare = greater_than_or_equals }
-			check_variable = { var = CoC_strength_@THIS value = 10 compare = less_than }
+			check_variable = { var = CoC_strength value = 5 compare = greater_than_or_equals }
+			check_variable = { var = CoC_strength value = 10 compare = less_than }
 		}
 		if = { #ecstatic
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = -10 compare = less_than }			
+				check_variable = { var = CoC_anger value = -10 compare = less_than }			
 			}
 			add_ideas = Coc_good_1 #max-1
 		}
 		else_if = { #furious
 			limit = { 
-				check_variable = { var = CoC_anger_@THIS value = 10 compare = greater_than_or_equals }		
+				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }		
 			}
 			add_ideas = CoC_bad_1 #max-1
 		}

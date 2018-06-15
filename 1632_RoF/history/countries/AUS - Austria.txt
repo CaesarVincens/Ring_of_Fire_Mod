@@ -85,6 +85,16 @@ create_country_leader = {
     }
 }
 
+create_country_leader = {
+    name = "Ferdinand II von Habsburg"
+    desc = "POLITICS_FERDINAND_2_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+		stand_against_ottoman
+    }
+}
 create_corps_commander = {
 	name = "Abrecht von Wallenstein"
 	gfx = "GFX_leader_BOH_Wallenstein"

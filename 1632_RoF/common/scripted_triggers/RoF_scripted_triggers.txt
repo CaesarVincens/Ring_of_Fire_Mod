@@ -47,9 +47,9 @@ NUS_or_war_ally = {
 }
 
 USE_or_war_ally = {
+	NUS = { has_country_flag = USE_formed }
 	OR = {
 		tag = NUS
-		NUS = { has_country_flag = USE_formed }
 		AND = {
 			has_war_together_with = NUS
 			is_in_faction_with = NUS

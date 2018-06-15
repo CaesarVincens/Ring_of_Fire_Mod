@@ -60,7 +60,7 @@ create_country_leader = {
     name = "Michael Stearns"
     desc = "POLITICS_MICHAEL_STEARNS_DESC"
     picture = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
-    expire = "1660.1.1"
+    #expire = "1660.1.1"
     ideology = democracy
     traits = {
 		union_man
@@ -72,7 +72,7 @@ create_country_leader = {
 	name = "John Chandler Simpson"
 	desc = "POLITICS_JOHN_SIMPSON_DESC"
 	picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
-	expire = "1660.1.1"
+	#expire = "1660.1.1"
 	ideology = constitutional_republic 
 	traits = {
 		grand_fleet_proponent
@@ -82,6 +82,11 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ken Beasley"
 	ideology = dictatorship
+}
+
+create_country_leader = {
+	name = "Quentin B. Underwood"
+	ideology = conservatism_neutral
 }
 
 create_corps_commander = {

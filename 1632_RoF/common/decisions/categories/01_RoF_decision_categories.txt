@@ -18,7 +18,7 @@ RoF_prospect_for_resources = {
 
 RoF_CoC_decisions = {
 	visible = {
-		has_country_flag = CoC_present_@ROOT
+		has_country_flag = CoC_present
 	}
 }
 

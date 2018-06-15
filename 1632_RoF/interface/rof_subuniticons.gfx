@@ -47,6 +47,24 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
+	spriteType = {
+		name = "GFX_unit_apc_brigade_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_mechanized_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_gas_tank_brigade_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_medium_tank_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_steam_tank_brigade_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_heavy_armor_icon.dds"
+		noOfFrames = 2
+	}
+
 	#Small Images
 	spriteType = {
 		name = "GFX_unit_merc_cavalry_icon_medium_white"
@@ -92,6 +110,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_unit_heavy_artillery_brigade_icon_medium_white"
 		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_art_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_apc_brigade_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_mechanized_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_gas_tank_brigade_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_medium_tank_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_steam_tank_brigade_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_armor_icon.dds"
 		noOfFrames = 2
 	}
 	

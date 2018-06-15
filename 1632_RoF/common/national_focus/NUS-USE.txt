@@ -1293,7 +1293,7 @@ focus_tree = {
 
 	
 	focus = {
-		id = NUS_establish_committees_of_correspondance
+		id = NUS_establish_committees_of_correspondence
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = NUS_welcome_refugees }
 		x = 0
@@ -1310,6 +1310,23 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			hidden_effect = {
+				set_country_flag = CoC_present
+				set_variable = { var = CoC_strength value = 0 }
+				set_variable = { var = CoC_anger value = -5 }
+				if = {
+					limit = {
+						has_country_flag = NUS_welcome_refugees_flag
+					}
+					add_to_variable = { var = CoC_anger value = -5 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = NUS_conscript_refugees_flag
+					}
+					add_to_variable = { var = CoC_anger value = 5 }
+				}
+			}
 			add_ideas = NUS_CoC_1
 			add_popularity = { ideology = radical popularity = 0.05}
 		}
@@ -1323,7 +1340,7 @@ focus_tree = {
 		icon = GFX_focus_generic_soviet_politics
 		cost = 5.00
 		prerequisite = {
-			focus = NUS_establish_committees_of_correspondance
+			focus = NUS_establish_committees_of_correspondence
 		}
 		x = -4
 		y = 3
@@ -1346,6 +1363,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { var = CoC_strength value = 5 }
+			}
 			swap_ideas = {
 				remove_idea = NUS_CoC_1
 				add_idea = NUS_CoC_2
@@ -1370,6 +1390,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { var = CoC_strength value = 5 }
+			}
 			swap_ideas = {
 				remove_idea = NUS_CoC_2
 				add_idea = NUS_CoC_3
@@ -1381,7 +1404,7 @@ focus_tree = {
 	focus = {
 		id = NUS_new_constitution
 		icon = GFX_goal_generic_national_unity #icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = NUS_establish_committees_of_correspondance focus = NUS_new_american_empire }
+		prerequisite = { focus = NUS_establish_committees_of_correspondence focus = NUS_new_american_empire }
 		mutually_exclusive = { focus = NUS_military_rule }
 		x = 0
 		y = 3
