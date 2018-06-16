@@ -253,7 +253,7 @@ ideas = {
 				original_tag = NUS
 			}
 			traits = { neutrality_minister }
-			picture = neutral_foreign_policy
+			picture = neutrality_idea
 			do_effect = {
 				NOT = {
 					has_government = neutrality

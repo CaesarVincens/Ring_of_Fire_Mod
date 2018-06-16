@@ -11,6 +11,17 @@ ideas = {
 			removal_cost = -1
 			picture = generic_goods_red_bonus			
 		}
+		ENG_DEN_payment = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.01
+				production_speed_buildings_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
 		ENG_tarrifs = {
 			allowed = {
 				always = no
@@ -30,7 +41,7 @@ ideas = {
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.01
+				#country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -48,7 +59,7 @@ ideas = {
 			}
 			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.25
+				#country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
@@ -64,7 +75,7 @@ ideas = {
 				original_tag = ENG
 			}
 			traits = { neutrality_minister }
-			picture = neutral_foreign_policy
+			picture = neutrality_idea
 			do_effect = {
 				NOT = {
 					has_government = neutrality

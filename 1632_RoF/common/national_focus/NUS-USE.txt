@@ -235,6 +235,8 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = NUS_brown_navy
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available = {
 			ships_in_area = { area = 9 size > 4 }
 		}

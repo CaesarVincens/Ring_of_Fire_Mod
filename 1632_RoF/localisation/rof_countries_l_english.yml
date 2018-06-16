@@ -2896,10 +2896,11 @@
  WAU_neutrality_DEF:0 "Oceana Territories"
  WNA_neutrality:0 "North American Territories"
  WNA_neutrality_ADJ:0 "North American"
- WNA_neutrality_DEF:0 :North American Territories
+ WNA_neutrality_DEF:0 "North American Territories"
  WAF_neutrality:0 "African Territories"
  WAF_neutrality_ADJ:0 "African"
  WAF_neutrality_DEF:0 "African Territories"
  WSA_neutrality:0 "South American Territories"
  WSA_neutrality_ADJ:0 "South American"
  WSA_neutrality_DEF:0 "South American Territories"
+ 

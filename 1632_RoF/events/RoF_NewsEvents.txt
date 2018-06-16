@@ -297,6 +297,30 @@ news_event = {
 		trigger = { tag = BRG }
 	}
 }
+# DEN gets Orkneys
+news_event = {
+	id = RoF_news.16
+	title = RoF_news.16.t
+	desc = RoF_news.16.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	#major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.16.a
+		trigger = {
+			NOT = {
+				tag = DEN
+			}
+		}
+	}
+	option = {
+		name = RoF_news.16.b
+		trigger = { tag = DEN }
+	}
+}
 
 
 # Dunkirk

@@ -1,5 +1,89 @@
 ﻿add_namespace = RoF_DEN
 
+country_event = {
+	id = RoF_DEN.110
+	title = RoF_DEN.110.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_DEN.110.d
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = HBC_founded
+	}
+	
+	option = {
+		name = RoF_DEN.110.a
+		transfer_state = 556
+	}
+}
+
+country_event = {
+	id = RoF_DEN.111
+	title = RoF_DEN.111.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_DEN.111.d
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = HBC_founded
+		owns_state = 556
+	}
+	
+	mean_time_to_happen = {
+		days = 120
+	}
+	
+	immediate = {
+		add_resource = {
+			type = steel
+			amount = 2
+			state = 556
+		}
+		556 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = {
+					level < 3
+					all_provinces = yes
+					limit_to_coastal = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = RoF_DEN.111.a
+	}
+}
+
+country_event = {
+	id = RoF_DEN.112
+	title = RoF_DEN.112.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_DEN.112.d
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = HBC_founded
+		135 = { is_owned_by = WNA }
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = RoF_DEN.111.a
+		transfer_state = 135
+	}
+}
+
 #Congress of Copenhagen - USE Demands
 country_event = {
 	id = RoF_DEN.150

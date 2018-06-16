@@ -48,6 +48,12 @@ ideas = {
 				military_leader_cost_factor = -0.25
 			}
 		}
+		NFR_new_overlord = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
 	}
 	political_advisor = {
 		FRA_cardinal_richelieu = {
@@ -68,7 +74,7 @@ ideas = {
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.01
+				#country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -86,7 +92,7 @@ ideas = {
 			}
 			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.25
+				#country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
@@ -102,7 +108,7 @@ ideas = {
 				original_tag = FRA
 			}
 			traits = { neutrality_minister }
-			picture = neutral_foreign_policy
+			picture = neutrality_idea
 			do_effect = {
 				NOT = {
 					has_government = neutrality

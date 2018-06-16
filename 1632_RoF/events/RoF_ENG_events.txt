@@ -1,6 +1,39 @@
 ﻿add_namespace = RoF_ENG
 
 country_event = {
+	id = RoF_ENG.110
+	title = RoF_ENG.110.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_ENG.110.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_ENG.110.a
+		DEN = { transfer_state = 660 }
+		660 = {
+			if = {
+				limit = { is_core_of = SCO }
+				remove_core_of = SCO
+			}
+			if = {
+				limit = { is_core_of = ENG }
+				remove_core_of = ENG
+			}
+			add_core_of = DEN
+		}
+		add_timed_idea = { idea = ENG_DEN_payment days = 180 }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = RoF_ENG.110.b
+		DEN = { add_state_claim = 660 }
+	}
+}
+
+country_event = {
 	id = RoF_ENG.150
 	title = RoF_ENG.150.t
 	picture = GFX_report_event_rof_placeholder

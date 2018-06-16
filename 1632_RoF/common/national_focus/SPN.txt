@@ -76,6 +76,12 @@ focus_tree = {
 			OR = {
 				has_global_flag = ostend_war_begins
 				has_war_with = UPS
+				FRA = {
+					focus_progress = {
+						focus = FRA_dunkirk
+						progress > 0.01
+					}
+				}
 			}
 		}
 		completion_reward = {
@@ -143,30 +149,11 @@ focus_tree = {
 		cost = 10
 		relative_position_id = SPN_don_fernando
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = SPN_border.tt	
-				any_neighbor_country = {
-					NOT = { tag = NUS }
-					NOT = { tag = FRA }
-					NOT = { tag = LOR }
-					NOT = { tag = AAC }
-					NOT = { has_war_with = SPN }
-					is_german_tag = no
-				}
-			}
 		}
 		completion_reward = {
-			every_neighbor_country = {
-				limit = {
-					NOT = { tag = NUS }
-					NOT = { tag = FRA }
-					NOT = { tag = LOR }
-					NOT = { tag = AAC }
-					NOT = { has_war_with = SPN }
-					is_german_tag = no
-				}
-				country_event = { id = RoF_NED.115 }
-			}
+			LIE = { country_event = { id = RoF_NED.115 } }
+			KLE = { country_event = { id = RoF_NED.115 } }
+			EFR = { country_event = { id = RoF_NED.115 } }
 		}
 		ai_will_do = {
 			factor = 20
@@ -178,7 +165,8 @@ focus_tree = {
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 1
 		y = 4
-		prerequisite = { focus = SPN_expand_borders focus = SPN_come_to_terms }
+		prerequisite = { focus = SPN_expand_borders }
+		prerequisite = { focus = SPN_come_to_terms }
 		relative_position_id = SPN_don_fernando
 		available = {
 		}

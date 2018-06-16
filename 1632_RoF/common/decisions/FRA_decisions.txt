@@ -1,0 +1,49 @@
+FRA_major_decisions = {
+
+
+}
+
+FRA_minor_decisions = {
+	FRA_raid_Wietze_decision = {
+		fire_only_once = yes
+		visible = {
+			has_war_with = NUS
+		}
+		available = {
+			has_tech = cardinal_rifle_tech
+		}
+		days_remove = 15
+		remove_effect = {
+			country_event = { id = RoF_FRA.125 }
+		}
+		cost = 50
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				date < 1634.5.1
+			}
+		}
+	}
+	
+	FRA_expand_colonies = {
+		fire_only_once = yes
+		visible = {
+			C13 = { is_subject_of = FRA }
+		}
+		available = {
+			C13 = { NOT = { has_idea = NFR_new_overlord } }
+		}
+		cost = 75
+		days_remove = 60
+		remove_effect = {
+			C13 = {
+				transfer_state = 377
+				add_state_core = 377
+				transfer_state = 250
+				add_state_core = 250
+			}
+		}
+	}
+
+}

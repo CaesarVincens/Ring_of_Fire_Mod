@@ -1,0 +1,11 @@
+DEN_HBC_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		original_tag = DEN
+	}
+	visible = {
+		#has_country_flag = NUS_major_decision_available
+	}
+}

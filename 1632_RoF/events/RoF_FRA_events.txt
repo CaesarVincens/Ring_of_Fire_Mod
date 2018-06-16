@@ -41,7 +41,7 @@ country_event = {
 			country_event = { id = RoF_FRA.105 days = 14 }
 		}
 		add_timed_idea = { idea = ENG_FRA_payment days = 180 }
-		#set_country_flag = ostend_member
+		set_country_flag = pseudo_ostend_member
 		effect_tooltip = {
 			end_puppet = C13
 			FRA = { set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony } }
@@ -125,6 +125,17 @@ country_event = {
 		C13 = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = NFR
+			if = {
+				limit = { 232 = { is_owned_by = FRA } }
+				transfer_state = 232
+				add_state_core = 232
+			}
+			if = {
+				limit = { 135 = { is_owned_by = FRA } }
+				transfer_state = 135
+				add_state_core = 135
+			}
+			add_timed_idea = { idea = NFR_new_overlord days = 120 }
 		}
 		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
 	}
@@ -133,6 +144,29 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = RoF_FRA.110
+	title = RoF_FRA.110.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_FRA.110.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		ENG = {
+			end_puppet = C13
+		}
+		C13 = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = NFR
+		}
+		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
+	}
+	option = {
+		name = RoF_FRA.110.a
+	}
+}
 
 #dunkirk battle
 country_event = {

@@ -41,6 +41,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_den_flag"
+		texturefile = "gfx/event_pictures/report_event_den_flag.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_breitenfeld"
 		texturefile = "gfx/event_pictures/report_event_breitenfeld.dds"
 	}
