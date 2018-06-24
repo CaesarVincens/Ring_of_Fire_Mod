@@ -3,7 +3,7 @@
 Play an alternate history set in the middle of the Thirty Years war where a town from the USA in the year 2000 has been transported to Germany in 1631. Play as the time-stranded Americans and find allies to survive the war raging around you, or play another country and see what advantage technology from the future can bring you in this turbulant time.
 
 Lead Developer: CaesarVincens
-Focus Tree Contributions: Principality of Lichenstein
+Focus Tree Contributions: Principality of Lichenstein, King of Nords
 
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
@@ -14,14 +14,16 @@ Currently in Early Alpha; expect to find bugs and oddities
 
 Alpha 0.4.0 - North Sea Empires - Jun. , 2018
 Updated compatibility for HoI patch 1.5.3
-Testing use of replace_path to remove null files
+updated to use replace_path to remove null files
 Reformatted some events and focuses as decisions
 New decisions related to Committees of Correspondence
 New Naval and Armor units (still WIP)
 New industrial and other tech, including new buildings for Steel production
 Replaced Rubber with Combustion Engines (strategic resource only available from building)
-Added New focus trees for SWE, DEN, and ENG (ENG tree thanks to forum user King of Nords)
-Many new events including the formation of Burgundy
+Added New focus trees for SWE, and ENG (ENG tree thanks to forum user King of Nords)
+Many new events including the formation of Burgundy and English Civil War
+Refactored starting situation for SWE-AUS war, balancing in progress
+More portraits, Europe mostly complete
 
 Alpha 0.3.0 - Ostend League - Nov. 25, 2017
 Beginning of Tech Overhaul; new infantry and artillery techs

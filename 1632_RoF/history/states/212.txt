@@ -1,12 +1,12 @@
 
-state={
-	id=212
-	name="STATE_212"
-	resources={
-		steel=6.000
+state = {
+	id = 212
+	name = "STATE_212"
+	resources = {
+		steel = 6.000
 	}
 
-	history={
+	history = {
 		owner = COL
 		victory_points = {
 			587 8 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		587 6469 
 	}
-	manpower=484000
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 484000
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

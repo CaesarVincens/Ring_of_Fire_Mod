@@ -1,13 +1,13 @@
 
-state={
-	id=555
-	name="STATE_555"
-	resources={
-		oil=1.000
-		steel=5.000
+state = {
+	id = 555
+	name = "STATE_555"
+	resources = {
+		oil = 1.000
+		steel = 5.000
 	}
 
-	history={
+	history = {
 		owner = UPS
 		victory_points = {
 			391 8 
@@ -53,10 +53,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		68 391 3211 3262 3314 9431 9498 
 	}
-	manpower=1360724
-	buildings_max_level_factor=1.000
-	state_category=large_city
+	manpower = 1360724
+	buildings_max_level_factor = 1.000
+	state_category = large_city
 }

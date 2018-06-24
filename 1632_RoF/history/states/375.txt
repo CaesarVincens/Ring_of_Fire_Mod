@@ -1,9 +1,9 @@
 
-state={
-	id=375
-	name="STATE_375"
+state = {
+	id = 375
+	name = "STATE_375"
 
-	history={
+	history = {
 		owner = PRU
 		victory_points = {
 			6332 8 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		266 281 348 395 3288 3384 6332 9327 11265 11386 
 	}
-	manpower=898800
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 898800
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

@@ -165,7 +165,7 @@ country_event = {
 		reverse_add_opinion_modifier = { target = NUS modifier = rejected_USE }
 		if = {
 			limit = { is_in_faction_with = NUS }
-			every_country = {
+			random_country = {
 				limit = { is_faction_leader = yes is_in_faction_with = NUS }
 				remove_from_faction = ROOT
 			}

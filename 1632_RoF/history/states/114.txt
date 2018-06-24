@@ -1,28 +1,28 @@
 
-state={
-	id=114
-	name="STATE_114"
-	resources={
-		aluminium=1.000
-		#rubber=0.000
-		steel=0.000
+state = {
+	id = 114
+	name = "STATE_114"
+	resources = {
+		aluminium = 1.000
+		#rubber = 0.000
+		steel = 0.000
 	}
 
-	history={
+	history = {
 		owner = WAU
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
 	}
 
-	provinces={
+	provinces = {
 		1565 1713 1746 1786 1801 1814 2197 2203 2211 4543 4615 4718 4748 4804 4819 5195 7692 7742 7783 7826 7839 7887 8204 8212 8232 8241 10334 10373 10609 10650 10710 12362 12604 12617 12632 12664 12966 12974 12980 12988 
 	}
-	manpower=60000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 60000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -222,6 +222,20 @@ country_event = {
 				type = annex_everything
 			}
 		}
+		DEN = {
+			add_to_war = {
+				targeted_alliance = FRA
+				enemy = NUS
+				hostility_reason = asked_to_join
+			}
+		}
+		SPR = {
+			add_to_war = {
+				targeted_alliance = FRA
+				enemy = NUS
+				hostility_reason = asked_to_join
+			}
+		}
 	}
 	option = {
 		name = RoF_FRA.121.a

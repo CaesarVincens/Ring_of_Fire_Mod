@@ -1,12 +1,12 @@
 
-state={
-	id=304
-	name="STATE_304"
-	resources={
-		#rubber=0.000
+state = {
+	id = 304
+	name = "STATE_304"
+	resources = {
+		#rubber = 0.000
 	}
 
-	history={
+	history = {
 		owner = NUB
 		victory_points = {
 			12881 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		4961 4963 12796 12826 12836 12881 
 	}
-	manpower=40000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 40000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

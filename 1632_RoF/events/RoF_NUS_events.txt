@@ -1182,16 +1182,16 @@ country_event = {
 	option = {
 		name = RoF_NUS.155.a
 		if = {
-			limit = { any_allied_country = { controls_state = 578 } }
-			NUS = { transfer_state = 578 }
-		}
-		if = {
 			limit = { any_allied_country = { controls_state = 461 } }
 			NUS = { transfer_state = 461 }
 		}
 		if = {
 			limit = { any_allied_country = { controls_state = 577 } }
 			NUS = { transfer_state = 577 }
+		}
+		if = {
+			limit = { any_allied_country = { controls_state = 578 } }
+			NUS = { transfer_state = 578 }
 		}
 	}
 }
@@ -1238,7 +1238,7 @@ country_event = {
 	}
 
 	option = {
-		name = RoF_NUS.160.a
+		name = RoF_NUS.161.a
 		custom_effect_tooltip = NUR_subject.tt
 		hidden_effect = {
 			set_country_flag = NUR_SWE_tyw_subject

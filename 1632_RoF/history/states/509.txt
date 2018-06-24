@@ -1,15 +1,15 @@
 
-state={
-	id=509
-	name="STATE_509"
-	resources={
-		aluminium=39.000
-		chromium=19.000
-		steel=15.000
-		tungsten=13.000
+state = {
+	id = 509
+	name = "STATE_509"
+	resources = {
+		aluminium = 39.000
+		chromium = 19.000
+		steel = 15.000
+		tungsten = 13.000
 	}
 
-	history={
+	history = {
 		owner = TUR
 		victory_points = {
 			4109 3 
@@ -26,10 +26,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		976 1109 1205 3401 3864 3988 4109 7127 11895 12001 
 	}
-	manpower=637600
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 637600
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

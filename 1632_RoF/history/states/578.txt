@@ -1,9 +1,9 @@
 
-state={
-	id=578
-	name="STATE_578"
+state = {
+	id = 578
+	name = "STATE_578"
 
-	history={
+	history = {
 		owner = WRZ
 		victory_points = {
 			11417 8 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		6421 9557 9572 11417 13116 
 	}
-	manpower=836408
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 836408
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

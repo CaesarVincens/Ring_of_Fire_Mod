@@ -1,13 +1,13 @@
 
-state={
-	id=492
-	name="STATE_492"
-	resources={
-		aluminium=6.000
-		chromium=6.000
+state = {
+	id = 492
+	name = "STATE_492"
+	resources = {
+		aluminium = 6.000
+		chromium = 6.000
 	}
 
-	history={
+	history = {
 		owner = SPR
 		victory_points = {
 			9793 3 
@@ -23,10 +23,10 @@ state={
 		add_core_of = CAT
 	}
 
-	provinces={
+	provinces = {
 		7114 9793 9845 
 	}
-	manpower=342900
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 342900
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

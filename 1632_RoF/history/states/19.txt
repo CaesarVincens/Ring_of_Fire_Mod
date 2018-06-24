@@ -1,15 +1,15 @@
 
-state={
-	id=19
-	name="STATE_19"
-	resources={
-		aluminium=0.000
-		oil=1.000
-		steel=7.000
-		tungsten=8.000
+state = {
+	id = 19
+	name = "STATE_19"
+	resources = {
+		aluminium = 0.000
+		oil = 1.000
+		steel = 7.000
+		tungsten = 8.000
 	}
 
-	history={
+	history = {
 		owner = AUS
 		victory_points = {
 			9679 3 
@@ -25,10 +25,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		668 3673 3674 6673 11612 
 	}
-	manpower=736800
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 736800
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

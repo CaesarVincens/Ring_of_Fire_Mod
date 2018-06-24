@@ -1,33 +1,32 @@
 
-state={
-	id=316
-	name="STATE_316"
-	resources={
-		aluminium=1.000
-		#rubber=0.000
-		steel=0.000
+state = {
+	id = 316
+	name = "STATE_316"
+	resources = {
+		aluminium = 1.000
+		#rubber = 0.000
+		steel = 0.000
 	}
 
-	history={
+	history = {
 		owner = WAS
 		victory_points = {
 			12762 3 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		#add_core_of = OYO
 
 	}
 
-	provinces={
+	provinces = {
 		1714 1748 1805 1865 4752 4810 4881 7772 7844 10540 10572 10598 10608 10667 11607 12518 12551 12650 12683 12694 
 	}
-	manpower=48400
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 48400
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

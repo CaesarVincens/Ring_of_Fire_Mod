@@ -37,7 +37,7 @@ focus_tree = {
 		id = SWE_bully_brandenburg
 		icon = GFX_goal_tripartite_pact
 		ai_will_do = { factor = 10 }
-		x = 21
+		x = 22
 		y = 0
 		mutually_exclusive = { }
 		prerequisite = { }
@@ -80,20 +80,7 @@ focus_tree = {
 			SAX = { country_event = { id = RoF_German.130 hours = 12 } }
 		}
 	}
-
-	focus = {
-		id = SWE_move_on_the_main
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		ai_will_do = { factor = 10 }
-		x = 0
-		y = 2
-		mutually_exclusive = { focus = SWE_advance_on_austria }
-		prerequisite = { focus = SWE_strong_arm_saxony }
-		relative_position_id = SWE_bully_brandenburg
-		cost = 10
-		#available_if_capitulated = yes
-	}
-
+	
 	focus = {
 		id = SWE_advance_on_austria
 		icon = GFX_focus_generic_little_entente
@@ -104,25 +91,102 @@ focus_tree = {
 				is_historical_focus_on = yes
 			}
 		}
-		x = 2
+		x = 3
 		y = 2
-		mutually_exclusive = { focus = SWE_move_on_the_main }
+		mutually_exclusive = { focus = SWE_force_franconia }
 		prerequisite = { focus = SWE_strong_arm_saxony }
 		relative_position_id = SWE_bully_brandenburg
-		cost = 10
-		available_if_capitulated = yes
+		cost = 15
+		#available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = SWE_force_franconia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		ai_will_do = { factor = 10 }
+		x = -1
+		y = 2
+		mutually_exclusive = { focus = SWE_advance_on_austria }
+		prerequisite = { focus = SWE_strong_arm_saxony }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 5
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available = {
+			OR = { 
+				alliance_strength_ratio > 1
+				AND = {
+					strength_ratio = {
+						tag = WRZ
+						ratio = 1.5
+					}
+				}
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_SWE.145 hours = 12 }
+		}
 	}
 
 	focus = {
-		id = SWE_rally_germany
-		icon = GFX_focus_generic_treaty
+		id = SWE_move_on_the_main
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		ai_will_do = { factor = 10 }
 		x = 0
 		y = 3
-		mutually_exclusive = { }
-		prerequisite = { focus = SWE_move_on_the_main }
+		prerequisite = { focus = SWE_force_franconia }
 		relative_position_id = SWE_bully_brandenburg
 		cost = 10
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available = {
+			OR = { 
+				alliance_strength_ratio > 1
+				AND = {
+					strength_ratio = {
+						tag = MNZ
+						ratio = 1.5
+					}
+				}
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_SWE.147 hours = 12 }
+		}
+	}
+	
+	focus = {
+		id = SWE_secure_north_germany
+		icon = GFX_focus_generic_treaty
+		ai_will_do = { factor = 10 }
+		x = -2
+		y = 3
+		mutually_exclusive = { }
+		prerequisite = { focus = SWE_force_franconia }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = RoF_SWE.146 hours = 12 }
+		}
+	}
+	
+	focus = {
+		id = SWE_rally_south_germany
+		icon = GFX_focus_generic_treaty
+		ai_will_do = { factor = 10 }
+		x = -2
+		y = 4
+		mutually_exclusive = { }
+		prerequisite = { focus = SWE_secure_north_germany }
+		relative_position_id = SWE_bully_brandenburg
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = RoF_SWE.150 hours = 12 }
+		}
 	}
 }

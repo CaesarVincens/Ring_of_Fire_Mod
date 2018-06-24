@@ -1,6 +1,6 @@
-state={
-	id=660
-	name="STATE_660"
+state = {
+	id = 660
+	name = "STATE_660"
 	history = {
 		owner = SCO
 		victory_points = {
@@ -12,15 +12,21 @@ state={
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
+			13206 = {
+				naval_base = 1
+			}
+			6196 = {
+				naval_base = 1
+			}
 
 		}
 		add_core_of = SCO
 
 	}
-	provinces={
+	provinces = {
 		6196 13206 
 	}
-	manpower=5000
-	buildings_max_level_factor=1.000
-	state_category=small_island
+	manpower = 5000
+	buildings_max_level_factor = 1.000
+	state_category = small_island
 }

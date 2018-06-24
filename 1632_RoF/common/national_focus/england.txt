@@ -14,44 +14,193 @@ focus_tree = {
 	focus = {
 		id = ENG_an_island_nation
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 15.00
+		cost = 10.00
 		x = 3
 		y = 1
-		available_if_capitulated = yes
+		##available_if_capitulated = yes
+		complete_tooltip = {
+			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
 		completion_reward = {
-			#navy bonuses?
+			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built_1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = naval_effort_built_1
+					}
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built_1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = naval_effort_built_1
+					}
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = {
+							tag = ROOT
+						}
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_navy_reforms
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_an_island_nation
 		}
 		x = 0
 		y = 1
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-			#navy bonuses?
+			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 25
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_experimental_concepts
 		icon = GFX_goal_continuous_naval_production
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_navy_reforms
 		}
 		x = 0
 		y = 2
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			add_tech_bonus = { name = steamship_bonus bonus = 0.5 uses = 1 category = steamship_tech }
 			#tech bonuses?
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
@@ -59,64 +208,222 @@ focus_tree = {
 	focus = {
 		id = ENG_grand_fleet
 		icon = GFX_goal_generic_navy_battleship
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_experimental_concepts
 		}
 		x = 0
 		y = 3
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
 			#navy bonuses?
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_frigate_concept
 		icon = GFX_goal_generic_navy_battleship
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_grand_fleet
 		}
 		x = 0
 		y = 4
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			add_tech_bonus = { name = frigate_bonus bonus = 0.5 uses = 1 category = frigate_tech }
 			#navy bonuses?
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_dreadnoughts
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_frigate_concept
 		}
 		x = 0
 		y = 5
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			add_tech_bonus = { name = ironclad_bonus bonus = 0.5 uses = 1 category = ironclad_tech }
 			#navy bonuses?
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_coordinated_production
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_dreadnoughts
 		}
 		x = 0
 		y = 6
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
 		completion_reward = {
-			#production bonuses?
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built_2
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = naval_effort_built_2
+					}
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built_2
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = naval_effort_built_2
+					}
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = {
+							tag = ROOT
+						}
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
 		}
 
 	}
@@ -124,7 +431,7 @@ focus_tree = {
 	focus = {
 		id = ENG_army_for_the_realm
 		icon = GFX_focus_generic_commonwealth_build_infantry
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_experimental_concepts
 		}
@@ -134,8 +441,21 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = firearm_bonus
+				bonus = 0.5
+				uses = 1
+				category = firearms_weapons
+			}
 			#army bonuses?
 		}
 
@@ -143,23 +463,29 @@ focus_tree = {
 	focus = {
 		id = ENG_artillery_regiments
 		icon = GFX_goal_generic_army_artillery
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_army_for_the_realm
 		}
 		x = 2
 		y = 4
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-			#army bonuses?
+			army_experience = 15
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_marines
 		icon = GFX_goal_generic_amphibious_assault
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_frigate_concept
 		}
@@ -169,8 +495,15 @@ focus_tree = {
 		x = 2
 		y = 5
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = marines_bonus
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
 			#army bonuses?
 		}
 
@@ -178,15 +511,22 @@ focus_tree = {
 	focus = {
 		id = ENG_new_cavalry
 		icon = GFX_goal_generic_cavalry
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_marines
 		}
 		x = 2
 		y = 6
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = apc_bonus
+				bonus = 0.5
+				uses = 1
+				category = apc_tech
+			}
 			#army bonuses?
 		}
 
@@ -194,7 +534,7 @@ focus_tree = {
 	focus = {
 		id = ENG_tank_corps
 		icon = GFX_goal_generic_army_tanks
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_coordinated_production
 		}
@@ -204,9 +544,15 @@ focus_tree = {
 		x = 1
 		y = 7
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-			#army bonuses?
+			army_experience = 15
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
 		}
 
 	}
@@ -215,31 +561,128 @@ focus_tree = {
 	focus = {
 		id = ENG_air_experiments
 		icon = GFX_goal_generic_air_production
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_experimental_concepts
 		}
 		x = -2
 		y = 3
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
+		available = {
+			custom_trigger_tooltip = {
+				NUS = {
+					has_completed_focus = NUS_las_vegas_belle
+				}
+				tooltip = Rof_first_flight.tt
+			}
+			has_tech = aerial_research_tech
+		}
+		complete_tooltip = {
+			air_experience = 25
+			if = {
+				limit = {
+					has_country_flag = aviation_effort_AB
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
 		completion_reward = {
-			#air bonuses?
+			air_experience = 25
+			#airbase not capital
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = {
+						set_country_flag = aviation_effort_AB
+					}
+				}
+			}
+			#airbase capital
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = {
+						set_country_flag = aviation_effort_AB
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = air_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_research
+			}
 		}
 
 	}
 	focus = {
 		id = ENG_raf
 		icon = GFX_goal_generic_air_fighter2
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_air_experiments
 		}
 		x = -2
 		y = 4
 		relative_position_id = ENG_an_island_nation
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_equip_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
 			#air bonuses?
 		}
 
@@ -254,12 +697,12 @@ focus_tree = {
 		id = ENG_refurbishments
 		icon = GFX_goal_generic_production
 		cost = 10.00
+		x = 9
+		y = 1
 		prerequisite = {
 			focus = ENG_collect_tarriffs
 		}
-		x = 9
-		y = 1
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -349,67 +792,104 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_refurbishments
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
+			if = {
+				limit = {
+					has_tech = infrastructure_tech_1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_tech = infrastructure_tech_1 }
+				}
+				add_tech_bonus = {
+					name = infra_bonus
+					bonus = 0.5
+					uses = 1
+					category = infra_tech
+				}
 			}
 		}
 		completion_reward = {
-			random_owned_controlled_state = {
+			if = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
+					has_tech = infrastructure_tech_1
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+										is_in_home_area = yes
 									}
-									is_in_home_area = yes
 								}
 							}
 						}
 					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
-			random_owned_controlled_state = {
+			else_if = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					NOT = { has_tech = infrastructure_tech_1 }
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+				add_tech_bonus = {
+					name = infra_bonus
+					bonus = 0.5
+					uses = 1
+					category = infra_tech
 				}
 			}
 		}
@@ -418,14 +898,14 @@ focus_tree = {
 	focus = {
 		id = ENG_royal_docks
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_royal_roads
 		}
 		x = 0
 		y = 2
 		relative_position_id = ENG_refurbishments
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
@@ -467,12 +947,12 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				set_country_flag = naval_effort_built
+				set_country_flag = naval_effort_built_3
 			}
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = naval_effort_built
+						has_country_flag = naval_effort_built_3
 					}
 					any_owned_state = {
 						dockyard > 0
@@ -499,12 +979,12 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				set_country_flag = naval_effort_built
+				set_country_flag = naval_effort_built_3
 			}
 			if = {
 				limit = {
 					NOT = {
-						has_country_flag = naval_effort_built
+						has_country_flag = naval_effort_built_3
 					}
 					NOT = {
 						any_owned_state = {
@@ -536,23 +1016,109 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
 		id = ENG_seize_traitors_lands
 		icon = GFX_focus_rom_parties_end
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_royal_docks
 		}
 		prerequisite = {
-			focus = ENG_cutting_the_cord
+			focus = ENG_arrest_cromwell
 		}
 		x = 0
-		y = 3
+		y = 4
 		relative_position_id = ENG_refurbishments
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			#industry bonuses?
 		}
 
@@ -567,7 +1133,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ENG_refurbishments
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		complete_tooltip = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -644,15 +1210,51 @@ focus_tree = {
 	focus = {
 		id = ENG_expand_royal_arsenals
 		icon = GFX_goal_generic_build_tank
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_restock_royal_arsenals
 		}
 		x = -3
 		y = 2
 		relative_position_id = ENG_refurbishments
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = firearm_bonus
+				bonus = 0.5
+				uses = 1
+				category = firearms_weapons
+			}
 			#industry bonuses?
 		}
 
@@ -660,16 +1262,16 @@ focus_tree = {
 	focus = {
 		id = ENG_fortify_thames_medway
 		icon = GFX_focus_generic_coastal_fort
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_expand_royal_arsenals
 		}
 		x = -2
 		y = 3
 		relative_position_id = ENG_refurbishments
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-			country_event = { id = RoF_ENG.150 }
+			country_event = { id = RoF_ENG.111 }
 			#industry bonuses?
 		}
 
@@ -687,7 +1289,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			#idea tariffs
 			add_ideas = ENG_tarrifs
@@ -710,9 +1312,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-			#PP?
+			add_political_power = 50
 			add_stability = 0.1
 		}
 		
@@ -731,9 +1333,28 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = ENG_lennoxs_holiday.tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = ENG_a_new_princess
+						date < 1632.2.1
+					}
+				country_event = { id = RoF_ENG.130 days = 69 }
+				}
+				else_if = {
+					limit = {
+						NOT = { has_completed_focus = ENG_a_new_princess }
+						date < 1632.2.1
+					}
+					country_event = { id = RoF_ENG.130 days = 139 }
+				}
+				else = {
+					country_event = { id = RoF_ENG.130 days = 1 }
+				}
+			}
 			#event later
 		}
 
@@ -754,8 +1375,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			country_event = { id = RoF_ENG.120 hours = 12 }
 			#event
 		}
 
@@ -773,16 +1395,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-			#event
+			country_event = { id = RoF_ENG.131 days = 1 }			
+			add_political_power = 50
+			add_ideas = ENG_thomas_wentworth
+			
 		}
 
 	}
 	focus = {
 		id = ENG_hide_cromwell
 		icon = GFX_focus_generic_home_defense
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = ENG_cutting_the_cord
 		}
@@ -795,8 +1420,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
+			country_event = { id = RoF_ENG.135 days = 1 }						
+			custom_effect_tooltip = ENG_hide_cromwell.tt
 			#event
 		}
 
@@ -814,7 +1441,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			#event
 		}
@@ -833,7 +1460,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			#civil war
 		}
@@ -852,7 +1479,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			#event
 		}
@@ -871,7 +1498,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			#event
 		}
@@ -880,7 +1507,7 @@ focus_tree = {
 	focus = {
 		id = ENG_arrest_cromwell
 		icon = GFX_focus_rom_royal_dictatorship
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = ENG_cutting_the_cord
 		}
@@ -893,7 +1520,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		completion_reward = {
+			country_event = { id = RoF_ENG.135 days = 1 }						
+			custom_effect_tooltip = ENG_arrest_cromwell.tt
+			#event
+		}
 
 	}
 	focus = {
@@ -909,7 +1540,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = ENG_emergency_measures
+		}
 
 	}
 	focus = {
@@ -925,23 +1558,35 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		completion_reward = {
+			country_event = { id = RoF_ENG.140 days = 1 }
+		}
+		#available_if_capitulated = yes
 
 	}
 	focus = {
 		id = ENG_return_orkneys
 		icon = GFX_goal_generic_major_alliance
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = ENG_state_of_emergency
 		}
 		x = -4
 		y = 6
 		relative_position_id = ENG_collect_tarriffs
+		available = {
+			OR = {
+				ENG = { owns_state = 660 }
+				SCO = { owns_state = 660 is_subject_of = ENG }
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		completion_reward = {
+			country_event = { id = RoF_ENG.110 days = 1 }
+		}
+		#available_if_capitulated = yes
 
 	}
 	focus = {
@@ -957,7 +1602,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ENG_thomas_wentworth
+				}
+				remove_ideas = ENG_thomas_wentworth
+				add_ideas = ENG_richard_boyle
+			}
+			else = {
+				add_ideas = ENG_richard_boyle
+			}
+			if = {
+				limit = {
+					has_idea = ENG_william_laud
+				}
+				remove_ideas = ENG_william_laud
+			}
+		}
+		#available_if_capitulated = yes
 
 	}
 	focus = {
@@ -973,7 +1636,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		completion_reward = {
+			country_event = { id = RoF_ENG.150 days = 1 }
+		}
+		#available_if_capitulated = yes
 
 	}
 	focus = {
@@ -986,29 +1652,29 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_overthrow_the_king
 		}
-		x = -3
+		x = -4
 		y = 9
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 
 	}
 	focus = {
 		id = ENG_united_kingdom
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_crush_the_rebels
 		}
-		x = -3
+		x = -4
 		y = 10
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
 			#event
 		}
@@ -1017,13 +1683,21 @@ focus_tree = {
 	focus = {
 		id = ENG_retake_ireland
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_united_kingdom
 		}
 		x = -4
 		y = 11
 		relative_position_id = ENG_collect_tarriffs
+		available = {
+			OR = {
+			NOT = {	owns_state = 97 }
+			NOT = {	owns_state = 120 }
+			NOT = {	owns_state = 121 }
+			NOT = {	owns_state = 122 }
+			}
+		}
 
 	}
 	focus = {
@@ -1031,18 +1705,19 @@ focus_tree = {
 		icon = GFX_focus_rom_abdicate
 		cost = 10.00
 		prerequisite = {
+			focus = ENG_alliance_with_the_swede
 			focus = ENG_the_scottish_question
 		}
 		mutually_exclusive = {
 			focus = ENG_crush_the_rebels
 		}
-		x = -1
+		x = 0
 		y = 9
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 
 	}
 	focus = {
@@ -1052,13 +1727,13 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_overthrow_the_king
 		}
-		x = -1
+		x = 0
 		y = 10
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 
 	}
 	focus = {
@@ -1071,13 +1746,13 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_liberty_or_death
 		}
-		x = -2
+		x = -1
 		y = 11
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 
 	}
 	focus = {
@@ -1090,24 +1765,24 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_house_of_lords
 		}
-		x = 0
+		x = 1
 		y = 11
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 
 	}
 	focus = {
 		id = ENG_uptime_knowledge
 		icon = GFX_goal_generic_scientific_exchange
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_commonwealth_of_england
 			focus = ENG_alliance_with_the_swede
 		}
-		x = 2
+		x = 3
 		y = 11
 		relative_position_id = ENG_collect_tarriffs
 
@@ -1115,11 +1790,11 @@ focus_tree = {
 	focus = {
 		id = ENG_trident
 		icon = GFX_focus_rocketry
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
 			focus = ENG_uptime_knowledge
 		}
-		x = 1
+		x = 4
 		y = 12
 		relative_position_id = ENG_collect_tarriffs
 
@@ -1127,11 +1802,12 @@ focus_tree = {
 	focus = {
 		id = ENG_universities
 		icon = GFX_goal_tfv_generic_tech_sharing
-		cost = 15.00
+		cost = 10.00
 		prerequisite = {
+			focus = ENG_united_kingdom
 			focus = ENG_uptime_knowledge
 		}
-		x = 3
+		x = -2
 		y = 12
 		relative_position_id = ENG_collect_tarriffs
 

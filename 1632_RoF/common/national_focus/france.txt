@@ -194,7 +194,8 @@ focus_tree = {
 				name = cardinal_tech_bonus
 				bonus = 0.5
 				uses = 1
-				technology = cardinal_rifle_tech
+				ahead_reduction = 0.8
+				technology = caplock_tech
 			}
 		}
 		ai_will_do = {

@@ -1,12 +1,12 @@
 
-state={
-	id=159
-	name="STATE_159"
-	resources={
-		oil=4.000
+state = {
+	id = 159
+	name = "STATE_159"
+	resources = {
+		oil = 4.000
 	}
 
-	history={
+	history = {
 		owner = GEO
 		victory_points = {
 			3668 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		666 1455 3667 3668 3682 3711 4605 6436 6689 6763 7554 9645 
 	}
-	manpower=164000
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 164000
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

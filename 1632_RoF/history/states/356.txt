@@ -1,13 +1,13 @@
 
-state={
-	id=356
-	name="STATE_356"
-	resources={
-		steel=8.000
-		tungsten=308.000
+state = {
+	id = 356
+	name = "STATE_356"
+	resources = {
+		steel = 8.000
+		tungsten = 308.000
 	}
 
-	history={
+	history = {
 		owner = POR
 		victory_points = {
 			9817 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		724 877 3892 6921 6941 9817 11673 
 	}
-	manpower=1660800
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1660800
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

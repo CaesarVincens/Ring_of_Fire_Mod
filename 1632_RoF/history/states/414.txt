@@ -1,12 +1,12 @@
 
-state={
-	id=414
-	name="STATE_414"
-	resources={
-		steel=74.000
+state = {
+	id = 414
+	name = "STATE_414"
+	resources = {
+		steel = 74.000
 	}
 
-	history={
+	history = {
 		owner = SAX
 		victory_points = {
 			514 9 
@@ -31,10 +31,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		478 514 573 3514 3572 6441 9535 11415 
 	}
-	manpower=1619400
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 1619400
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

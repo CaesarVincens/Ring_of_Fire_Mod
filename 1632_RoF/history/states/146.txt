@@ -1,9 +1,9 @@
 
-state={
-	id=146
-	name="STATE_146"
+state = {
+	id = 146
+	name = "STATE_146"
 
-	history={
+	history = {
 		owner = FRA
 		victory_points = {
 			625 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		620 625 651 3598 3621 3626 6618 6648 6651 6792 9751 
 	}
-	manpower=1600000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1600000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

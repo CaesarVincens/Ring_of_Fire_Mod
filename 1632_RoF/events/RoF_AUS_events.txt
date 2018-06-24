@@ -30,10 +30,17 @@ country_event = {
 				}
 				38 = { add_core_of = BOH }
 			}
+			if = {
+				limit = {
+					NOT = { 573 = { is_core_of = BOH } }
+				}
+				573 = { add_core_of = BOH }
+			}
 			AUS = {
 				release = BOH
 				add_state_claim = 37
 				add_state_claim = 38
+				add_state_claim = 573
 				add_state_claim = 429
 				add_state_claim = 428
 				add_opinion_modifier = { target = BOH modifier = hates_BOH }

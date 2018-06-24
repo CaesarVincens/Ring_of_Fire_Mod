@@ -1,12 +1,12 @@
 
-state={
-	id=601
-	name="STATE_601"
-	resources={
-		chromium=1.000
+state = {
+	id = 601
+	name = "STATE_601"
+	resources = {
+		chromium = 1.000
 	}
 
-	history={
+	history = {
 		owner = NSP
 		victory_points = {
 			12738 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1988 2075 10728 12738 
 	}
-	manpower=284000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 284000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -1,9 +1,9 @@
 
-state={
-	id=424
-	name="STATE_424"
+state = {
+	id = 424
+	name = "STATE_424"
 
-	history={
+	history = {
 		owner = POM
 		victory_points = {
 			11343 3 
@@ -18,10 +18,10 @@ state={
 		add_core_of = POM
 	}
 
-	provinces={
+	provinces = {
 		6309 6334 6390 9334 9361 11316 11343 11372 
 	}
-	manpower=158400
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 158400
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

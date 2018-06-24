@@ -1,9 +1,9 @@
 
-state={
-	id=310
-	name="STATE_310"
+state = {
+	id = 310
+	name = "STATE_310"
 
-	history={
+	history = {
 		owner = OIR
 		victory_points = {
 			1840 3 
@@ -20,10 +20,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1840 4651 4773 4845 7711 7784 7795 7856 10146 10547 10550 10619 10680 12529 12662 13149 13197 
 	}
-	manpower=108000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 108000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

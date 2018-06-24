@@ -1,9 +1,9 @@
 
-state={
-	id=458
-	name="STATE_458"
+state = {
+	id = 458
+	name = "STATE_458"
 
-	history={
+	history = {
 		owner = SPN
 		victory_points = {
 			11562 3 
@@ -20,10 +20,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		6496 6500 11562 
 	}
-	manpower=409000
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 409000
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

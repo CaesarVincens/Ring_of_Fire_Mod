@@ -54,6 +54,16 @@ ideas = {
 		}
 	}
 	political_advisor = {
+		SWE_axel_oxenstierna = {
+			allowed = {
+				original_tag = SWE
+			}
+			traits = { silent_workhorse }
+			picture = oxenstierna_pic
+			ai_will_do = {
+				factor = 1
+			}			
+		}
 		SWE_absolutist_advisor = {
 			allowed = {
 				original_tag = SWE

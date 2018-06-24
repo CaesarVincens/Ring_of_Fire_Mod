@@ -1,13 +1,13 @@
 
-state={
-	id=508
-	name="STATE_508"
-	resources={
-		chromium=84.000
-		steel=20.000
+state = {
+	id = 508
+	name = "STATE_508"
+	resources = {
+		chromium = 84.000
+		steel = 20.000
 	}
 
-	history={
+	history = {
 		owner = TUR
 		victory_points = {
 			9833 13 
@@ -28,10 +28,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		849 922 3879 3893 6895 9833 11811 11829 11842 
 	}
-	manpower=1773368
-	buildings_max_level_factor=1.000
-	state_category=large_city
+	manpower = 1773368
+	buildings_max_level_factor = 1.000
+	state_category = large_city
 }

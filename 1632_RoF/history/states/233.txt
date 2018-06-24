@@ -1,9 +1,9 @@
 
-state={
-	id=233
-	name="STATE_233"
+state = {
+	id = 233
+	name = "STATE_233"
 
-	history={
+	history = {
 		owner = LIE
 		victory_points = {
 			11519 8 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		6537 9444 9574 11519 
 	}
-	manpower=356800
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 356800
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

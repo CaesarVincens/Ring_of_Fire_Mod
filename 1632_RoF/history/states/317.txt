@@ -1,14 +1,14 @@
 
-state={
-	id=317
-	name="STATE_317"
-	resources={
-		aluminium=0.000
-		#rubber=1.000
-		steel=0.000
+state = {
+	id = 317
+	name = "STATE_317"
+	resources = {
+		aluminium = 0.000
+		#rubber = 1.000
+		steel = 0.000
 	}
 
-	history={
+	history = {
 		owner = WAF
 		victory_points = {
 			2050 8 
@@ -25,10 +25,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1951 2050 8039 8096 10919 12731 12785 12787 12843 
 	}
-	manpower=1408000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 1408000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

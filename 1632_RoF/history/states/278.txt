@@ -1,12 +1,12 @@
 
-state={
-	id=278
-	name="STATE_278"
-	resources={
-		steel=4.000
+state = {
+	id = 278
+	name = "STATE_278"
+	resources = {
+		steel = 4.000
 	}
 
-	history={
+	history = {
 		owner = MUG
 		victory_points = {
 			5043 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1179 5043 7917 8066 12774 
 	}
-	manpower=747600
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 747600
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

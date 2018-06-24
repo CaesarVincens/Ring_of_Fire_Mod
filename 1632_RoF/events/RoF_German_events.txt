@@ -1,5 +1,6 @@
 ﻿add_namespace = RoF_German
 
+#Burgundy Arises
 country_event = {
 	id = RoF_German.100
 	title = RoF_German.100.t
@@ -74,6 +75,7 @@ country_event = {
 	
 }
 
+#brandenburg joins swe
 country_event = {
 	id = RoF_German.110
 	title = RoF_German.110.t
@@ -115,6 +117,7 @@ country_event = {
 	
 }
 
+#mecklenburg joins swe
 country_event = {
 	id = RoF_German.120
 	title = RoF_German.120.t
@@ -130,6 +133,7 @@ country_event = {
 	option = {
 		name = RoF_German.120.a
 		SWE = {
+			add_manpower = 5000
 			set_autonomy = {
 				target = MKL
 				autonomy_state = autonomy_rof_vassal
@@ -155,6 +159,7 @@ country_event = {
 	
 }
 
+#mecklenburg joins swe
 country_event = {
 	id = RoF_German.121
 	title = RoF_German.121.t
@@ -174,6 +179,7 @@ country_event = {
 	}
 }
 
+#Saxony joins swe
 country_event = {
 	id = RoF_German.130
 	title = RoF_German.130.t
@@ -189,7 +195,6 @@ country_event = {
 	option = {
 		name = RoF_German.130.a
 		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
-		give_military_access = SWE
 		effect_tooltip = {
 			SWE = { add_to_faction = SAX }
 			add_to_war = {
@@ -212,6 +217,138 @@ country_event = {
 			}
 		}
 		ai_chance = { base = 0 }
+	}
+	
+}
+
+#German joins swe
+country_event = {
+	id = RoF_German.140
+	title = RoF_German.140.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.140.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.140.a
+		SWE = { country_event = { id = RoF_SWE.148 hours = 12 } }
+		effect_tooltip = {
+			SWE = { add_to_faction = ROOT }
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_German.140.b
+		SWE = { country_event = { id = RoF_SWE.149 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+	
+}
+
+#puppet Magdeburg
+country_event = {
+	id = RoF_German.141
+	title = RoF_German.141.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.141.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.141.a
+		SWE = {
+			add_manpower = 2000
+			set_autonomy = {
+				target = MAG
+				autonomy_state = autonomy_rof_vassal
+				freedom_level = 0.6
+			}
+			add_to_faction = MAG
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = RoF_German.141.b
+		SWE = { country_event = { id = RoF_SWE.149 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = MAG
+				}
+			}
+		}
+		ai_chance = { base = 0 }
+	}
+	
+}
+
+#Baden (split loyalty)
+country_event = {
+	id = RoF_German.142
+	title = RoF_German.142.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_German.142.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#Swedes occupy Baden-Baden
+	option = {
+		name = RoF_German.141.a
+		SWE = { country_event = { id = RoF_SWE.148 hours = 12 } }
+		effect_tooltip = {
+			SWE = { add_to_faction = ROOT }
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+		add_popularity = { ideology = constitutionalist popularity = 0.6 }
+		set_politics = {
+			ruling_party = constitutionalist
+		}
+		ai_chance = { base = 75 }
+	}
+	#Baden-Baden remains free
+	option = {
+		name = RoF_German.141.b
+		SWE = { country_event = { id = RoF_SWE.149 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		ai_chance = { base = 25 }
 	}
 	
 }

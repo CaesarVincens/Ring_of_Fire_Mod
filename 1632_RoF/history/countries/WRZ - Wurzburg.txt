@@ -46,7 +46,7 @@ create_country_leader = {
     desc = "POLITICS_ALEXANDER_VON ZAHRINGEN_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Wurzburg_Franz_von_Hatzfeld.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = bishopric
     traits = {
     }
 }

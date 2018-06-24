@@ -125,7 +125,30 @@ focus_tree = {
 				name = srg_tech_bonus
 				bonus = 0.5
 				uses = 1
-				technology = srg_flintlock_tech
+				technology = flintlock_tech
+			}
+		}
+	}
+
+	focus = {
+		id = NUS_srg_upgrade
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = NUS_srg_design
+		}
+		x = 0
+		y = 4
+		relative_position_id = NUS_build_an_army
+		available = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = srg_cap_tech_bonus
+				bonus = 0.5
+				uses = 1
+				technology = caplock_tech
 			}
 		}
 	}

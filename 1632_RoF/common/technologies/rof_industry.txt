@@ -322,10 +322,14 @@ technologies = {
 		}
 		
 		research_cost = 3
-		start_year = 1636
+		start_year = 1635
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 8 }
+			position = { x = 2 y = 7 }
+		}
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 5 } # x = 12 y = 0
 		}
 		
 		categories = {
@@ -364,7 +368,7 @@ technologies = {
 			}
 		}
 
-		start_year = 1638
+		start_year = 1637
 
 		#path = {
 		#	leads_to_tech = improved_oil_processing
@@ -375,7 +379,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 10 }
+			position = { x = 2 y = 9 }
 		}
 		
 		categories = {

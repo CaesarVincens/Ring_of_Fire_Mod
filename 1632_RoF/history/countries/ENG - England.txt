@@ -70,3 +70,23 @@ create_country_leader = {
     traits = {
     }
 }
+
+create_country_leader = {
+    name = "Charles Stuart"
+    desc = "POLITICS_GRAHAM_BROWN_DESC"
+    picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Charles Stuart"
+    desc = "POLITICS_GRAHAM_BROWN_DESC"
+    picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}

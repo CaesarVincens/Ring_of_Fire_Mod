@@ -45,9 +45,9 @@ set_stability = 0.5
 create_country_leader = {
     name = "Ferdinand von Wittelsbach"
     desc = "POLITICS_ALBRECHT_HOFFMANN_DESC"
-    picture = "gfx/leaders/germanies/Portrait_Cologne_Ferdinand_von_Wittelsbach.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Cologne_Ferdinand_von_Wittelsbach.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = bishopric
     traits = {
     }
 }

@@ -1,13 +1,13 @@
 
-state={
-	id=237
-	name="STATE_237"
-	resources={
-		aluminium=1.000
-		#rubber=1.000
+state = {
+	id = 237
+	name = "STATE_237"
+	resources = {
+		aluminium = 1.000
+		#rubber = 1.000
 	}
 
-	history={
+	history = {
 		owner = LNG
 		victory_points = {
 			8193 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		2115 2192 8193 8207 10968 12975 
 	}
-	manpower=88400
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 88400
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

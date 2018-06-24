@@ -1,9 +1,9 @@
 
-state={
-	id=248
-	name="STATE_248"
+state = {
+	id = 248
+	name = "STATE_248"
 
-	history={
+	history = {
 		owner = MNZ
 		victory_points = {
 			11560 8 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		11560 
 	}
-	manpower=242208
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 242208
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

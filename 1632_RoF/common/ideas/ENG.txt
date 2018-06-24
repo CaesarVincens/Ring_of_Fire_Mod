@@ -1,5 +1,29 @@
 ideas = {
 	country = {
+		ENG_emergency_measures = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				training_time_factor = -0.1
+				min_export = -0.1
+				stability_weekly = -0.001
+				industrial_capacity_factory = 0.05
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
+		ENG_st_germain = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
 		ENG_FRA_payment = {
 			allowed = {
 				always = no
@@ -35,6 +59,43 @@ ideas = {
 		}
 	}
 	political_advisor = {
+		ENG_thomas_wentworth = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				has_completed_focus = ENG_cutting_the_cord
+				NOT = { has_completed_focus = ENG_changing_of_the_guard }
+			}
+			traits = { silent_workhorse }
+			picture = wentworth_pic
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ENG_richard_boyle = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				has_completed_focus = ENG_cutting_the_cord
+				has_completed_focus = ENG_changing_of_the_guard
+			}
+			traits = { backroom_backstabber }
+			picture = boyle_pic
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ENG_william_laud = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				NOT = { has_completed_focus = ENG_changing_of_the_guard }				
+			}
+			picture = laud_pic
+		}
 		ENG_absolutist_advisor = {
 			allowed = {
 				original_tag = ENG

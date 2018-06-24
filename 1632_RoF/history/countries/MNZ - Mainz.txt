@@ -47,7 +47,7 @@ create_country_leader = {
     desc = "POLITICS_FLORIAN_HERWARTH VON BITTENFELD_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Mainz_Anselm_von_Umstadt.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = bishopric
     traits = {
     }
 }

@@ -1,11 +1,11 @@
-state={
-	id=464
+state = {
+	id = 464
 	name= "STATE_464"
 	manpower = 252000
 
 	state_category = rural
 
-	history={
+	history = {
 		owner = KEN
 		victory_points = { 8182 8 }
 		buildings = {
@@ -17,7 +17,7 @@ state={
 		add_core_of = KEN
 	}
 
-	provinces={
+	provinces = {
 		8182 12944 
 	}
 }

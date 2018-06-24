@@ -1,29 +1,28 @@
-state={
-	id=484
+state = {
+	id = 484
 	name= "STATE_484"
 	manpower = 312400
 
-	resources={
+	resources = {
 		aluminium = 2
 		#rubber = 1
 		steel = 1
 	}
 	state_category = rural
 
-	history={
+	history = {
 		owner = WAF
 		victory_points = { 2044 8 }
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 		}
-		#add_core_of = SON
-		#add_core_of = TIM
+
 	}
 
-	provinces={
+	provinces = {
 		2044 10725 10788 
 	}
 }

@@ -73,7 +73,7 @@ add_to_faction = POM
 #add_to_faction = MKL
 #add_to_faction = BRA
 #add_to_faction = SAX
-add_to_faction = BRS
+#add_to_faction = BRS
 add_to_faction = HES
 
 add_ideas = {
@@ -83,7 +83,8 @@ add_ideas = {
 	SWE_UPS_support
 	SWE_lion_of_the_north
 }
-set_stability = 0.5
+set_stability = 0.6
+set_war_support = 0.6
 create_country_leader = {
     name = "Gustavus II Adolphus Vasa"
     desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"

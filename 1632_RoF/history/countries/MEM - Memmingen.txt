@@ -20,17 +20,17 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 14
+            popularity = 74
         }
-        liberal = {
-            popularity = 84
+        constitutionalist = {
+            popularity = 24
         }
         neutrality = {
             popularity = 2
         }
     }
     
-    ruling_party = liberal
+    ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -43,11 +43,11 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Konrad Köhler"
+    name = "Heinrich von Knöringen"
     desc = "POLITICS_KONRAD_KöHLER_DESC"
-    picture = "gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Augsburg_Heinrich.dds"
     expire = "1660.1.1"
-    ideology = conservatism
+    ideology = bishopric
     traits = {
     }
 }

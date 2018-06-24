@@ -1,9 +1,9 @@
-state={
-	id=411
+state = {
+	id = 411
 	name= "STATE_411"
 	manpower = 1072000
 
-	resources={
+	resources = {
 		aluminium = 9
 		chromium = 2
 		steel = 12
@@ -11,7 +11,7 @@ state={
 	}
 	state_category = large_town
 
-	history={
+	history = {
 		owner = SAV
 		victory_points = { 9745 8 }
 		buildings = {
@@ -23,7 +23,7 @@ state={
 		add_core_of = SAV
 	}
 
-	provinces={
+	provinces = {
 		611 770 6780 9738 9745 11721 
 	}
 }

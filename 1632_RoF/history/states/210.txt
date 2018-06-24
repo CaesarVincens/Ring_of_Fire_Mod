@@ -1,13 +1,13 @@
 
-state={
-	id=210
-	name="STATE_210"
-	resources={
-		aluminium=1.000
-		#rubber=2.000
+state = {
+	id = 210
+	name = "STATE_210"
+	resources = {
+		aluminium = 1.000
+		#rubber = 2.000
 	}
 
-	history={
+	history = {
 		owner = KOC
 		victory_points = {
 			1238 8 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		10321 12251 
 	}
-	manpower=808800
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 808800
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

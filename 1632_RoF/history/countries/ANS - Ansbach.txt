@@ -43,9 +43,9 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Leonhard Hellpach"
+    name = "Frederick Hohenzollern"
     desc = "POLITICS_LEONHARD_HELLPACH_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Ansbach_Albrecht_2.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

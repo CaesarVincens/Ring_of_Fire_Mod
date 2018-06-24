@@ -43,9 +43,9 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Fritz von Bülow"
+    name = "Ludwig Philipp von Wittelsbach"
     desc = "POLITICS_FRITZ_VON BüLOW_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Palatinate_Ludwig_Philipp.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

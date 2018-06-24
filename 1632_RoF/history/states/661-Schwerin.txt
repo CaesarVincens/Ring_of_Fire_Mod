@@ -1,7 +1,7 @@
-state={
-	id=661
-	name="STATE_661"
-	history={
+state = {
+	id = 661
+	name = "STATE_661"
+	history = {
 		owner = MKL
 		victory_points = {
 			11305 8 
@@ -16,10 +16,10 @@ state={
 		add_core_of = MKL
 
 	}
-	provinces={
+	provinces = {
 		9294 9320 11305 
 	}
-	manpower=241828
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 241828
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

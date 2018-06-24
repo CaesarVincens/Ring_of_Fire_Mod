@@ -697,7 +697,7 @@ ideas = {
 			on_add = {
 				#country_event = conv.political.01
 			}
-			picture = triumphant_will
+			#picture = triumphant_will
 			do_effect = {
 				NOT = {
 					has_government = absolutist
@@ -717,7 +717,7 @@ ideas = {
 			on_add = {
 				#country_event = conv.political.07
 			}
-			picture = brittish_stoicism
+			#picture = brittish_stoicism
 			do_effect = {
 				NOT = {
 					has_government = constitutionalist
@@ -772,7 +772,7 @@ ideas = {
 				}
 			}
 			traits = { neutrality_minister }
-			picture = neutrality_idea
+			#picture = neutrality_idea
 			do_effect = {
 				NOT = {
 					has_government = neutrality

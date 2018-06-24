@@ -1,9 +1,9 @@
 
-state={
-	id=180
-	name="STATE_180"
+state = {
+	id = 180
+	name = "STATE_180"
 
-	history={
+	history = {
 		owner = JAP
 		victory_points = {
 			3962 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1512 1642 3962 4576 4646 7532 7595 10444 10512 12352 12421 12493 
 	}
-	manpower=839800
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 839800
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

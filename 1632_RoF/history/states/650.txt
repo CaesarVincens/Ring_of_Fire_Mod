@@ -1,34 +1,32 @@
 
-state={
-	id=650
-	name="STATE_650"
-	resources={
-		aluminium=2.000
-		#rubber=0.000
-		steel=0.000
+state = {
+	id = 650
+	name = "STATE_650"
+	resources = {
+		aluminium = 2.000
+		#rubber = 0.000
+		steel = 0.000
 	}
 
-	history={
+	history = {
 		owner = WNA
 		victory_points = {
 			10812 8 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		#add_core_of = SON
-		#add_core_of = MAC
 
 	}
 
-	provinces={
+	provinces = {
 		379 4450 9377 11106 13009 
 	}
-	manpower=64000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 64000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

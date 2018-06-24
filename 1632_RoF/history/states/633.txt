@@ -1,16 +1,16 @@
 
-state={
-	id=633
-	name="STATE_633"
-	resources={
-		aluminium=6.000
+state = {
+	id = 633
+	name = "STATE_633"
+	resources = {
+		aluminium = 6.000
 	}
 
-	history={
+	history = {
 		owner = WSA
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
@@ -18,10 +18,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1555 1568 1596 1624 1639 4573 4602 4643 7621 8208 10375 10402 10418 12379 12394 12409 
 	}
-	manpower=188400
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 188400
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

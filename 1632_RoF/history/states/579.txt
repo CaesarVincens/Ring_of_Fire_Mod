@@ -1,14 +1,14 @@
 
-state={
-	id=579
-	name="STATE_579"
-	resources={
-		chromium=1.000
-		steel=7.000
-		tungsten=1.000
+state = {
+	id = 579
+	name = "STATE_579"
+	resources = {
+		chromium = 1.000
+		steel = 7.000
+		tungsten = 1.000
 	}
 
-	history={
+	history = {
 		owner = SXW
 		victory_points = {
 			6524 3 
@@ -24,10 +24,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		425 482 3500 3561 6524 
 	}
-	manpower=220800
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 220800
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

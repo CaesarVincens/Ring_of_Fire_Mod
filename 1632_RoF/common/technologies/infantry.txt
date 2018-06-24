@@ -118,15 +118,7 @@ technologies = {
 		research_cost = 1
 		start_year = 1632
 		path = {
-			leads_to_tech = srg_flintlock_tech
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = cardinal_rifle_tech
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = ak3_rifle_tech
+			leads_to_tech = flintlock_tech
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -136,11 +128,96 @@ technologies = {
 		categories = {
 			firearms_weapons
 		}
+		category_musket = {
+			soft_attack = 0.1
+			defense = 0.2
+			
+		}
+		category_tercio = {
+			soft_attack = 0.05
+			defense = 0.1
+			
+		}
 		ai_will_do = {
 			factor = 5
 		}
 	}
 	
+	flintlock_tech = {
+		enable_equipments = {
+			flintlock_rifle
+		}
+		path = {
+			leads_to_tech = caplock_tech
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1634
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 6 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	caplock_tech = {
+		enable_equipments = {
+			caplock_rifle
+		}
+		path = {
+			leads_to_tech = repeating_rifle_tech
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1636
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 9 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				NOT = {
+					has_tech = srg_flintlock_tech
+				}
+				factor = 0
+			}
+		}
+	}
+	
+	repeating_rifle_tech = {
+		enable_equipments = {
+			repeating_rifle
+		}
+		research_cost = 1.5
+		start_year = 1637
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1637 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				NOT = {
+					has_tech = ak3_rifle_tech
+				}
+				factor = 0
+			}
+
+		}
+	}
+
 	srg_flintlock_tech = {
 		enable_equipments = {
 			srg_flintlock

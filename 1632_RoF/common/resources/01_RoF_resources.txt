@@ -1,8 +1,4 @@
 resources = {
 
-	combustion_engine = {
-		icon_frame = 3
-		cic = 0.25
-		convoys = 0.1
-	}
+
 }

@@ -1,26 +1,26 @@
 
-state={
-	id=479
-	name="STATE_479"
-	resources={
-		steel=1.000
+state = {
+	id = 479
+	name = "STATE_479"
+	resources = {
+		steel = 1.000
 	}
 
-	history={
+	history = {
 		owner = WSA
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
 	}
 
-	provinces={
+	provinces = {
 		1928 4934 4980 5008 8107 
 	}
-	manpower=8000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 8000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

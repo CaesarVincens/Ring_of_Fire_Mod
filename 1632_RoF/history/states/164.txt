@@ -1,9 +1,9 @@
-state={
-	id=164
+state = {
+	id = 164
 	name= "STATE_164"
 	manpower = 984000
 
-	resources={
+	resources = {
 		aluminium = 5
 		chromium = 0
 		steel = 7
@@ -11,7 +11,7 @@ state={
 	}
 	state_category = city
 
-	history={
+	history = {
 		owner = GEN
 		victory_points = { 6788 8 }
 		buildings = {
@@ -19,11 +19,14 @@ state={
 			industrial_complex = 2
 			arms_factory = 0
 			air_base = 0
+			6788 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = GEN
 	}
 
-	provinces={
+	provinces = {
 		3772 6788 11891 
 	}
 }

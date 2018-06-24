@@ -47,7 +47,7 @@ create_country_leader = {
     desc = "POLITICS_GERHARD_VON HAYNAU_DESC"
     picture = "gfx/leaders/AUS/Portrait_Austria_Leopold_Wilhelm.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = bishopric
     traits = {
     }
 }

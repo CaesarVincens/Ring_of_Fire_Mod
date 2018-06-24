@@ -1,13 +1,13 @@
 
-state={
-	id=366
-	name="STATE_366"
-	resources={
-		aluminium=2.000
-		#rubber=0.000
+state = {
+	id = 366
+	name = "STATE_366"
+	resources = {
+		aluminium = 2.000
+		#rubber = 0.000
 	}
 
-	history={
+	history = {
 		owner = POR
 		victory_points = {
 			10862 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		10803 10862 12742 
 	}
-	manpower=268000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 268000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -1,12 +1,12 @@
 
-state={
-	id=539
-	name="STATE_539"
-	resources={
-		steel=12.000
+state = {
+	id = 539
+	name = "STATE_539"
+	resources = {
+		steel = 12.000
 	}
 
-	history={
+	history = {
 		owner = TUR
 		victory_points = {
 			7065 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		3991 4116 4150 7008 10045 11923 12018 13074 
 	}
-	manpower=783600
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 783600
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

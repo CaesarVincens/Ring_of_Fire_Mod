@@ -1,13 +1,13 @@
 
-state={
-	id=496
-	name="STATE_496"
+state = {
+	id = 496
+	name = "STATE_496"
 
-	history={
+	history = {
 		owner = WNA
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
@@ -15,10 +15,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		691 695 3766 6710 6769 6782 7420 9684 9724 9746 9747 10233 10303 11641 11656 11669 11685 11714 11731 
 	}
-	manpower=52000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 52000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

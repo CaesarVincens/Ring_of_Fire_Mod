@@ -28,6 +28,69 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_cartridges_tech_medium"
+		texturefile = "gfx/interface/technologies/cartridges.dds"
+	}
+	
+	#generic flintlock
+	SpriteType = {
+		name = "GFX_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NUS_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SWE_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+
+	#generic flintlock
+	SpriteType = {
+		name = "GFX_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_caplock.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NUS_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_caplock.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SWE_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/srg_caplock.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/cardinal_rifle.dds"
+	}
+
+	#generic
+	SpriteType = {
+		name = "GFX_repeating_rifle_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_repeating_rifle_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_srg_flintlock_tech_medium"
 		texturefile = "gfx/interface/technologies/srg_rifle.dds"
 	}
@@ -263,10 +326,20 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_improved_steam_tank_medium"
+		texturefile = "gfx/interface/technologies/improved_heavy_tank.dds"
+	}
+
+	spriteType = {
 		name = "GFX_early_gas_tank_medium"
 		texturefile = "gfx/interface/technologies/basic_medium_tank.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_improved_gas_tank_medium"
+		texturefile = "gfx/interface/technologies/improved_medium_tank.dds"
+	}
+
 	spriteType = {
 		name = "GFX_aerial_research_tech_medium"
 		texturefile = "gfx/interface/technologies/air_research_tech.dds"

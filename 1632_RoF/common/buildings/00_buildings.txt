@@ -141,7 +141,7 @@ buildings = {
 	#new buildings
 	
 	steel_mill = {
-		show_on_map = 1
+		#show_on_map = 1
 		base_cost = 10000
 		icon_frame = 14
 		local_resources_steel = 2 # May use local_resources_ + any resource name
@@ -153,7 +153,7 @@ buildings = {
 	}
 	
 	engine_factory = {
-		show_on_map = 1
+		#show_on_map = 1
 		base_cost = 15000
 		icon_frame = 15
 		local_resources_combustion_engine = 2 # May use local_resources_ + any resource name

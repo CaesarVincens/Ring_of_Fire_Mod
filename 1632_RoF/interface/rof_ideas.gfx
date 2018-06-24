@@ -26,7 +26,43 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_richelieu_pic.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_wentworth_pic"
+		texturefile = "gfx/interface/ideas/idea_wentworth_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_laud_pic"
+		texturefile = "gfx/interface/ideas/idea_laud_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_boyle_pic"
+		texturefile = "gfx/interface/ideas/idea_boyle_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_oxenstierna_pic"
+		texturefile = "gfx/interface/ideas/idea_oxenstierna_pic.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_lion_of_the_north"
 		texturefile = "gfx/interface/ideas/idea_lion_of_the_north.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_radical_advisor_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_liberal_advisor_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_constitutionalist_advisor_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_neutrality_advisor_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_absolutist_advisor_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
 	}
 }

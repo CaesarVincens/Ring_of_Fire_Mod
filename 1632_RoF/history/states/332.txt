@@ -1,12 +1,12 @@
 
-state={
-	id=332
-	name="STATE_332"
-	resources={
-		chromium=3.000
+state = {
+	id = 332
+	name = "STATE_332"
+	resources = {
+		chromium = 3.000
 	}
 
-	history={
+	history = {
 		owner = PER
 		victory_points = {
 			10837 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		4553 7969 8093 8125 10523 10837 10922 12704 12818 
 	}
-	manpower=727200
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 727200
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

@@ -80,7 +80,6 @@ country_event = {
 	picture = GFX_report_event_scottish_mercenaries #placeholder
 	is_triggered_only = yes
 	fire_only_once = yes
-	hidden = yes
 	desc = RoF.001.d
 
 	immediate = {
@@ -121,7 +120,7 @@ country_event = {
 				NOT = { is_subject_of = SWE }
 			}
 			add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
-			SWE = { add_opinion_modifier = { target = PREV modifier = SWE_tyw_support } }
+			reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
 		}
 	}
 	option = {
@@ -201,7 +200,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = CoC_present
-			set_variable = { var = CoC_strength value = 0 }
+			set_variable = { var = CoC_strength value = 5 }
 			set_variable = { var = CoC_anger value = 0 }
 			if = {
 				limit = {

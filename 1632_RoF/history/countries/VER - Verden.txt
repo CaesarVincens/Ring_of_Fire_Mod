@@ -20,17 +20,17 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 14
+            popularity = 74
         }
-        liberal = {
-            popularity = 84
+        constitutionalist = {
+            popularity = 24
         }
         neutrality = {
             popularity = 2
         }
     }
     
-    ruling_party = liberal
+    ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -47,7 +47,7 @@ create_country_leader = {
     desc = "POLITICS_OTTO_VON SACHSEN-ALTENBURG_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Bremen_John_Frederick.dds"
     expire = "1660.1.1"
-    ideology = conservatism
+    ideology = bishopric
     traits = {
     }
 }

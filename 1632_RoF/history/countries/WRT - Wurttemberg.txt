@@ -47,7 +47,7 @@ create_country_leader = {
     desc = "POLITICS_ENGELBERT_VON WITTELSBACH_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Wurttemburg_Eberhard_III.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = bishopric
     traits = {
     }
 }

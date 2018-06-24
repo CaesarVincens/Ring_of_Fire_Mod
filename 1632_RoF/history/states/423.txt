@@ -1,13 +1,13 @@
 
-state={
-	id=423
-	name="STATE_423"
-	resources={
-		aluminium=5.000
-		steel=1.000
+state = {
+	id = 423
+	name = "STATE_423"
+	resources = {
+		aluminium = 5.000
+		steel = 1.000
 	}
 
-	history={
+	history = {
 		owner = TRA
 		victory_points = {
 			6682 3 
@@ -24,10 +24,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		696 713 730 746 3696 3709 3730 6682 6697 6735 9640 9687 9706 11659 
 	}
-	manpower=1291412
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 1291412
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

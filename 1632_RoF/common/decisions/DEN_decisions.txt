@@ -41,6 +41,9 @@ DEN_HBC_decisions = {
 				ENG = { add_timed_idea = { idea = ENG_DEN_payment days = 180 } }
 			}
 		}
+		ai_will_do = {
+			base = 1
+		}
 	}
 	
 	DEN_exploit_greenland = {
@@ -65,6 +68,9 @@ DEN_HBC_decisions = {
 				amount = 2
 				state = 446
 			}
+		}
+		ai_will_do = {
+			base = 1
 		}
 	}
 	
@@ -101,6 +107,9 @@ DEN_HBC_decisions = {
 		}
 		remove_effect = {
 			country_event = { id = RoF_DEN.110 days = 5 }
+		}
+		ai_will_do = {
+			base = 1
 		}
 	}
 

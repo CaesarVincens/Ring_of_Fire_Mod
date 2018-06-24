@@ -126,6 +126,44 @@ news_event = {
 		}
 	}
 }
+
+#English Civil War
+news_event = {
+	id = RoF_news.04
+	title = RoF_news.4.t
+	desc = RoF_news.04.d
+	picture = GFX_news_event_destruction
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.04.a
+		trigger = {
+			NOT = {
+				original_tag = ENG
+			}
+			has_government = absolutist
+		}
+	}
+	option = {
+		name = RoF_news.04.b
+		trigger = {
+			NOT = {
+				original_tag = ENG
+				has_government = absolutist
+			}
+		}
+	}
+	option = {
+		name = RoF_news.04.b
+		trigger = {
+			original_tag = ENG
+		}
+	}
+}
+
 # NUS forms USE
 news_event = {
 	id = RoF_news.05

@@ -1,9 +1,9 @@
 
-state={
-	id=403
-	name="STATE_403"
+state = {
+	id = 403
+	name = "STATE_403"
 
-	history={
+	history = {
 		owner = SOV
 		victory_points = {
 			3336 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		2900 2923 2972 3336 4692 4733 4859 9224 10607 11122 11261 11328 12687 13060 13064 13065 
 	}
-	manpower=2200
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 2200
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

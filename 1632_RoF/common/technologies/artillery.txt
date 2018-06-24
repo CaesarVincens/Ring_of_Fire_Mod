@@ -18,7 +18,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = 0 y = 2 }
+			position = { x = -2 y = 2 }
 		}
 		
 		categories = {
@@ -60,7 +60,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = 0 y = 4 }
+			position = { x = -2 y = 4 }
 		}
 		
 		categories = {
@@ -98,7 +98,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = 0 y = 8 }
+			position = { x = -2 y = 8 }
 		}
 		
 		categories = {
@@ -390,11 +390,13 @@ technologies = {
 			anti_air_equipment_1
 		}
 
-		enable_building = {
-			building = anti_air
-			level = 5
+		#enable_building = {
+		#	building = anti_air
+		#	level = 5
+		#}
+		dependencies = {
+			aerial_protections = 1
 		}
-		
 		path = {
 			leads_to_tech = antiair1
 			research_cost_coeff = 1
@@ -406,7 +408,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 4 }
+			position = { x = -5 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -453,7 +455,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 6 }
+			position = { x = -5 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -489,7 +491,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 8 }
+			position = { x = -5 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -521,7 +523,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 10 }
+			position = { x = -5 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -553,7 +555,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 12 }
+			position = { x = -5 y = 12 }
 		}
 		
 		ai_will_do = {
@@ -584,7 +586,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -3 y = 14 }
+			position = { x = -5 y = 14 }
 		}
 		
 		ai_will_do = {

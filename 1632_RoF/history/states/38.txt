@@ -1,20 +1,20 @@
 
-state={
-	id=38
-	name="STATE_38"
-	resources={
-		oil=1.000
-		steel=12.000
+state = {
+	id = 38
+	name = "STATE_38"
+	resources = {
+		oil = 1.000
+		steel = 12.000
 	}
 
-	history={
+	history = {
 		owner = AUS
 		victory_points = {
 			3553 9 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 4
 			arms_factory = 1
 			air_base = 0
 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		557 569 3553 3569 6562 6576 6590 11511 11525 
 	}
-	manpower=476008
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 476008
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

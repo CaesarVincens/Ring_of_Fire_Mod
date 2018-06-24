@@ -1,9 +1,9 @@
-state={
-	id=59
+state = {
+	id = 59
 	name= "STATE_59"
 	manpower = 516000
 
-	resources={
+	resources = {
 		chromium = 7
 		oil = 4
 		steel = 5
@@ -11,7 +11,7 @@ state={
 	}
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = BUK
 		victory_points = { 10476 3 }
 		buildings = {
@@ -23,7 +23,7 @@ state={
 		add_core_of = BUK
 	}
 
-	provinces={
+	provinces = {
 		7448 7584 7916 7984 10476 10896 12877 
 	}
 }

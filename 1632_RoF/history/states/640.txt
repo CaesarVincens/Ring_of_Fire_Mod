@@ -1,31 +1,30 @@
 
-state={
-	id=640
-	name="STATE_640"
-	resources={
-		steel=1.000
+state = {
+	id = 640
+	name = "STATE_640"
+	resources = {
+		steel = 1.000
 	}
 
-	history={
+	history = {
 		owner = WAF
 		victory_points = {
 			7548 8 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		#add_core_of = YAK
 
 	}
 
-	provinces={
+	provinces = {
 		1181 1473 1883 1950 1953 1974 1993 2034 2073 2081 2096 2154 2220 3123 3165 3181 3854 4033 4201 4897 4941 4978 5084 6027 7088 7133 7161 7919 7963 7996 8078 8223 9152 9962 10764 10766 10857 10859 10877 10908 11108 11194 11934 12719 12744 12783 12808 12830 12847 12929 12989 13176 13177 
 	}
-	manpower=112000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 112000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

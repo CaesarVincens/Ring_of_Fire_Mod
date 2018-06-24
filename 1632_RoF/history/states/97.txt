@@ -1,9 +1,9 @@
 
-state={
-	id=97
-	name="STATE_97"
+state = {
+	id = 97
+	name = "STATE_97"
 
-	history={
+	history = {
 		owner = ENG
 		victory_points = {
 			9303 8 
@@ -19,10 +19,10 @@ state={
 		add_core_of = IRE
 	}
 
-	provinces={
+	provinces = {
 		3396 9255 9303 9321 9369 11238 11287 11371 
 	}
-	manpower=548000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 248000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

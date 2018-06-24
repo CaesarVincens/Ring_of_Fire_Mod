@@ -28,6 +28,7 @@ technology_categories = {
 	gas_tank_tech
 	apc_tech
 	engine_tech
+	air_research
 }
 
  

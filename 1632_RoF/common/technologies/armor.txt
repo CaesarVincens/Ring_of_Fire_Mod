@@ -1,7 +1,7 @@
 technologies = {
 	@gas_tank_pos = 0
-	@steam_tank_pos = 4
-	@apc_pos = -4
+	@steam_tank_pos = 0
+	@apc_pos = 0
 	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
 	early_gas_tank = { #Leichttraktor
 
@@ -15,16 +15,20 @@ technologies = {
 				NOT = {	has_template_containing_unit = steam_tank }
 			}
 			hidden_effect = {
-				load_oob = "unlock_tanks"
+				load_oob = "unlock_gas_tanks"
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
-	
-		#path = {
-		#	leads_to_tech = basic_light_tank
-		#	research_cost_coeff = 1
-		#}
+		
+		enable_subunits = {
+			gas_tank
+		}
+
+		path = {
+			leads_to_tech = improved_gas_tank
+			research_cost_coeff = 1
+		}
 	
 		#path = {
 			#leads_to_tech = basic_heavy_tank
@@ -37,7 +41,9 @@ technologies = {
 			name = armour_folder
 			position = { x = @gas_tank_pos y = 0 }
 		}
-		
+		dependencies = {
+			engine_factory_tech_0 = 1
+		}
 		ai_will_do = {
 			factor = 1
 			
@@ -68,6 +74,71 @@ technologies = {
 		}
 	}	
 		
+	improved_gas_tank = { #Leichttraktor
+
+		enable_equipments = {
+			gas_tank_equipment_1
+		}
+
+		on_research_complete = {
+			limit = {
+				NOT = {	has_template_containing_unit = gas_tank }
+				NOT = {	has_template_containing_unit = steam_tank }
+			}
+			hidden_effect = {
+				load_oob = "unlock_gas_tanks"
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+	
+		#path = {
+		#	leads_to_tech = basic_light_tank
+		#	research_cost_coeff = 1
+		#}
+	
+		#path = {
+			#leads_to_tech = basic_heavy_tank
+			#research_cost_coeff = 1
+		#}
+		
+		research_cost = 2
+		start_year = 1639
+		folder = {
+			name = armour_folder
+			position = { x = @gas_tank_pos y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1638.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1640.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1642.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			gas_tank_tech
+		}
+	}	
+
 	early_steam_tank = { #Grosstraktor
 
 		enable_equipments = {
@@ -80,16 +151,20 @@ technologies = {
 				NOT = {	has_template_containing_unit = steam_tank }
 			}
 			hidden_effect = {
-				load_oob = "unlock_tanks"
+				load_oob = "unlock_steam_tanks"
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 		
-		#path = {
-		#	leads_to_tech = improved_heavy_tank
-		#	research_cost_coeff = 1
-		#}
+		enable_subunits = {
+			steam_tank
+		}
+
+		path = {
+			leads_to_tech = improved_steam_tank
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 2
 		start_year = 1635
@@ -124,10 +199,66 @@ technologies = {
 		}
 	}
 	
-	apc_tech_1 = {
+	improved_steam_tank = { #Grosstraktor
 
 		enable_equipments = {
-			apc_equipment_1
+			steam_tank_equipment_2 
+		}
+
+		on_research_complete = {
+			limit = {
+				NOT = {	has_template_containing_unit = gas_tank }
+				NOT = {	has_template_containing_unit = steam_tank }
+			}
+			hidden_effect = {
+				load_oob = "unlock_steam_tanks"
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		#path = {
+		#	leads_to_tech = improved_heavy_tank
+		#	research_cost_coeff = 1
+		#}
+		
+		research_cost = 2
+		start_year = 1637
+		
+		folder = {
+			name = armour_folder
+			position = { x = @steam_tank_pos y = 2 }
+		}
+				
+		ai_will_do = {
+			factor = 0.8
+			
+			modifier = {
+				factor = 1.2
+				date > "1636.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1638.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1640.1.1"
+			}
+		}
+		
+		categories = {
+			armor
+			steam_tank_tech
+		}
+	}
+
+	apc_tech_0 = {
+
+		enable_equipments = {
+			apc_equipment_0
 		}
 		
 		#motorized = {
@@ -138,6 +269,41 @@ technologies = {
 		#	leads_to_tech = apc_tech_2
 		#	research_cost_coeff = 1
 		#}
+		enable_subunits = {
+			apc
+		}
+		research_cost = 2
+		start_year = 1633
+
+		allow = {
+			always = no
+		}
+		categories = {
+			apc_tech
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	apc_tech_1 = {
+
+		enable_equipments = {
+			apc_equipment_1
+		}
+		
+		#motorized = {
+		#	hardness = 1.0
+		#}
+
+		path = {
+			leads_to_tech = apc_tech_2
+			research_cost_coeff = 1
+		}
+		enable_subunits = {
+			apc
+		}
 
 		research_cost = 2
 		start_year = 1633
@@ -149,6 +315,9 @@ technologies = {
 		categories = {
 			apc_tech
 		}
+		dependencies = {
+			engine_factory_tech_0 = 1
+		}
 		
 		ai_will_do = {
 			factor = 2
@@ -158,7 +327,7 @@ technologies = {
 	apc_tech_2 = {
 
 		enable_equipments = {
-			apc_equipment_1
+			apc_equipment_2
 		}
 		
 		#motorized = {
@@ -171,7 +340,7 @@ technologies = {
 		#}
 
 		research_cost = 2
-		start_year = 1940
+		start_year = 1640
 		folder = {
 			name = armour_folder
 			position = { x = @apc_pos y = 2 }

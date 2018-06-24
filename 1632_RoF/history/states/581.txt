@@ -1,12 +1,12 @@
 
-state={
-	id=581
-	name="STATE_581"
-	resources={
-		aluminium=0.000
+state = {
+	id = 581
+	name = "STATE_581"
+	resources = {
+		aluminium = 0.000
 	}
 
-	history={
+	history = {
 		owner = WRT
 		victory_points = {
 			9517 8 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		519 694 9517 11486 11499 
 	}
-	manpower=968000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 968000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

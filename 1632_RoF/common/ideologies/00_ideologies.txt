@@ -12,6 +12,8 @@ ideologies = {
 			absolute_monarchy = {}
 		
 			dictatorship = {}
+			
+			bishopric = {}
 		}
 		
 		dynamic_faction_names = {

@@ -1,14 +1,14 @@
 
-state={
-	id=438
-	name="STATE_438"
-	resources={
-		aluminium=25.000
-		steel=2.000
-		tungsten=20.000
+state = {
+	id = 438
+	name = "STATE_438"
+	resources = {
+		aluminium = 25.000
+		steel = 2.000
+		tungsten = 20.000
 	}
 
-	history={
+	history = {
 		owner = SPR
 		victory_points = {
 			11843 3 
@@ -24,10 +24,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		726 738 794 857 874 885 903 918 920 939 3725 3727 3729 3744 3820 3845 3859 3874 3918 3920 4024 6746 6749 6867 6907 6936 9699 9700 9703 9719 9800 9827 9846 9870 9872 11684 11688 11707 11766 11806 11809 11825 11843 11854 
 	}
-	manpower=1435024
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1435024
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

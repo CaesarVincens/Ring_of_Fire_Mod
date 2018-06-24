@@ -19,6 +19,7 @@ superior_firepower = 1
 arquebus_weapons = 1
 #early_flintlock_tech = 1
 NUS_line_infantry_tech = 1
+aerial_research_tech = 1
 }
 
 # Research Bonuses

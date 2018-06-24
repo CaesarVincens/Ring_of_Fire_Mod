@@ -15,6 +15,9 @@ technologies = {
 			name = air_techs_folder
 			position = { x = 0 y = 2 }
 		}
+		categories = {
+			air_research
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -44,6 +47,9 @@ technologies = {
 			name = air_techs_folder
 			position = { x = 0 y = 4 }
 		}
+		categories = {
+			air_research
+		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -65,6 +71,9 @@ technologies = {
 			name = air_techs_folder
 			position = { x = 0 y = 6 }
 		}
+		categories = {
+			air_research
+		}
 		ai_will_do = {
 			factor = 2
 		}
@@ -80,6 +89,9 @@ technologies = {
 		folder = {
 			name = air_techs_folder
 			position = { x = 2 y = 6 }
+		}
+		categories = {
+			air_research
 		}
 		ai_will_do = {
 			factor = 2
