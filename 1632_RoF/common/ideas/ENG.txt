@@ -1,21 +1,104 @@
 ideas = {
 	country = {
+		ENG_elizabeth_second_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				stability_weekly = -0.001
+				political_power_gain = -0.5
+				constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_mary_second_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				political_power_gain = -0.25
+				constitutionalist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_parliament_prorogued = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.5
+				absolutist_drift = 0.005
+			}
+			removal_cost = -1
+			picture = generic_disjointed_gov
+		}
+		ENG_united_kingdom_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_weekly = 0.001
+				political_power_gain = 0.5
+				constitutionalist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_england_triumphant_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_weekly = 0.001
+				political_power_gain = 0.5
+				absolutist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
 		ENG_emergency_measures = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
 			}
 			modifier = {
 				training_time_factor = -0.1
 				min_export = -0.1
 				stability_weekly = -0.001
 				industrial_capacity_factory = 0.05
+				absolutist_drift = 0.01
 			}
 			removal_cost = -1
-			picture = generic_goods_red_bonus			
+			picture = FRA_scw_intervention_republicans_focus			
 		}
 		ENG_st_germain = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
 			}
 			modifier = {
 				consumer_goods_factor = -0.02
@@ -28,6 +111,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
 			modifier = {
 				research_time_factor = -0.05
 				production_speed_buildings_factor = 0.1
@@ -39,6 +125,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
 			modifier = {
 				consumer_goods_factor = -0.01
 				production_speed_buildings_factor = 0.1
@@ -49,6 +138,9 @@ ideas = {
 		ENG_tarrifs = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
 			}
 			modifier = {
 				political_power_gain = 0.5
@@ -95,56 +187,6 @@ ideas = {
 				NOT = { has_completed_focus = ENG_changing_of_the_guard }				
 			}
 			picture = laud_pic
-		}
-		ENG_absolutist_advisor = {
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { absolutist_minister }
-			on_add = {
-				#country_event = conv.political.01
-			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		ENG_democratic_advisor = {
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { liberal_minister }
-			on_add = {
-				#country_event = conv.political.25
-			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		ENG_neutrality_advisor = {
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { neutrality_minister }
-			picture = neutrality_idea
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
 		}
 	}
 	tank_manufacturer = { 

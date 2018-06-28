@@ -1,5 +1,11 @@
 technologies = {
 
+	@prerof = 0
+	@1633 = 3
+	@1634 = 5
+	@1635 = 10
+	@1638 = 15
+	
 	prerof_man_of_war = {
 		enable_equipments = {
 			man_of_war_1
@@ -12,7 +18,7 @@ technologies = {
 		start_year = 1600
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 1 }
+			position = { x = 0 y = @prerof }
 		}
 		ai_will_do = {
 			factor = 1
@@ -31,7 +37,7 @@ technologies = {
 		start_year = 1635
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 7 }
+			position = { x = 0 y = @1635 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -55,7 +61,7 @@ technologies = {
 		start_year = 1600
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = 1 }
+			position = { x = -1 y = @prerof }
 		}
 		ai_will_do = {
 			factor = 1
@@ -78,7 +84,7 @@ technologies = {
 		start_year = 1635
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = 7 }
+			position = { x = -1 y = @1635 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -102,7 +108,7 @@ technologies = {
 		start_year = 1600
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = 1 }
+			position = { x = 1 y = @prerof }
 		}
 		ai_will_do = {
 			factor = 1
@@ -125,7 +131,7 @@ technologies = {
 		start_year = 1635
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = 7 }
+			position = { x = 1 y = @1635 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -146,10 +152,10 @@ technologies = {
 			#research_cost_coeff = 1
 		#}
 		research_cost = 1.5
-		start_year = 1634
+		start_year = 1635
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = 1 }
+			position = { x = -1 y = @1635 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -172,7 +178,7 @@ technologies = {
 		start_year = 1634
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = 1 }
+			position = { x = 1 y = @1634 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -195,7 +201,7 @@ technologies = {
 		start_year = 1638
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = 7 }
+			position = { x = 1 y = @1638 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -219,7 +225,7 @@ technologies = {
 		start_year = 1634
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = 1 }
+			position = { x = 3 y = @1634 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -242,7 +248,7 @@ technologies = {
 		start_year = 1638
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = 7 }
+			position = { x = 3 y = @1638 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -266,7 +272,7 @@ technologies = {
 		start_year = 1633
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 1 }
+			position = { x = 0 y = @1633 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -290,7 +296,7 @@ technologies = {
 		start_year = 1635
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 7 }
+			position = { x = 0 y = @1635 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -315,7 +321,7 @@ technologies = {
 		start_year = 1633
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 1 }
+			position = { x = 0 y = @1633 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -339,7 +345,7 @@ technologies = {
 		start_year = 1635
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 7 }
+			position = { x = 0 y = @1635 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -367,7 +373,7 @@ technologies = {
 		
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 1 }
+			position = { x = 0 y = -1 }
 		}
 		
 		ai_will_do = {
@@ -401,7 +407,7 @@ technologies = {
 		
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 13 }
+			position = { x = 0 y = @1635 }
 		}
 		
 		ai_will_do = {
@@ -430,7 +436,7 @@ technologies = {
 		
 		folder = {
 			name = naval_folder
-			position = { x = 0 y = 19 }
+			position = { x = 0 y = @1638 }
 		}
 		
 		ai_will_do = {

@@ -24,6 +24,16 @@ spriteTypes = {
 		name = "GFX_report_event_use_flag"
 		texturefile = "gfx/event_pictures/report_event_use_flag.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_nus_swe_flag"
+		texturefile = "gfx/event_pictures/report_event_nus_swe_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_use_swe_flag"
+		texturefile = "gfx/event_pictures/report_event_use_swe_flag.dds"
+	}
 
 	spriteType = {
 		name = "GFX_report_event_swe_flag"
@@ -43,6 +53,31 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_den_flag"
 		texturefile = "gfx/event_pictures/report_event_den_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_eng_flag"
+		texturefile = "gfx/event_pictures/report_event_eng_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_sco_flag"
+		texturefile = "gfx/event_pictures/report_event_sco_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ire_flag"
+		texturefile = "gfx/event_pictures/report_event_ire_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_bra_flag"
+		texturefile = "gfx/event_pictures/report_event_bra_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_sax_flag"
+		texturefile = "gfx/event_pictures/report_event_bra_flag.dds"
 	}
 
 	spriteType = {

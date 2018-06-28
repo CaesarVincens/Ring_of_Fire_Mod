@@ -207,22 +207,37 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_prerof_man_of_war_medium"
-		texturefile = "gfx/interface/technologies/galleon1b.dds"
+		texturefile = "gfx/interface/technologies/galleon1c.dds"
 	}
 
 	spriteType = {
 		name = "GFX_postrof_man_of_war_medium"
-		texturefile = "gfx/interface/technologies/galleon2b.dds"
+		texturefile = "gfx/interface/technologies/galleon2c.dds"
 	}
 
 	spriteType = {
 		name = "GFX_prerof_heavy_frigate_medium"
-		texturefile = "gfx/interface/technologies/heavy_frigate1.dds"
+		texturefile = "gfx/interface/technologies/heavy_frigate1b.dds"
 	}
 
 	spriteType = {
 		name = "GFX_postrof_heavy_frigate_medium"
+		texturefile = "gfx/interface/technologies/heavy_frigate2b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_prerof_light_frigate_medium"
+		texturefile = "gfx/interface/technologies/heavy_frigate1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_postrof_light_frigate_medium"
 		texturefile = "gfx/interface/technologies/heavy_frigate2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_steam_battleship_first_medium"
+		texturefile = "gfx/interface/technologies/power1.dds"
 	}
 
 	spriteType = {

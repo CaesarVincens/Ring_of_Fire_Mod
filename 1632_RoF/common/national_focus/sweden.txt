@@ -114,15 +114,16 @@ focus_tree = {
 		continue_if_invalid = yes
 		available = {
 			OR = { 
-				alliance_strength_ratio > 1
+				alliance_strength_ratio > 0.75
 				AND = {
 					strength_ratio = {
 						tag = WRZ
-						ratio = 1.5
+						ratio = 1
 					}
 				}
 			}
 		}
+		select_effect = { country_event = { id = RoF_SWE.144 hours = 12 } }
 		completion_reward = {
 			country_event = { id = RoF_SWE.145 hours = 12 }
 		}

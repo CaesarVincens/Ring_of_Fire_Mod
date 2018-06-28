@@ -130,7 +130,7 @@ news_event = {
 #English Civil War
 news_event = {
 	id = RoF_news.04
-	title = RoF_news.4.t
+	title = RoF_news.04.t
 	desc = RoF_news.04.d
 	picture = GFX_news_event_destruction
 	

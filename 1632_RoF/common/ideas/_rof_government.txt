@@ -16,6 +16,7 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.05
 				enemy_partisan_effect = 0.1
+				political_power_gain = 0.1
 #				stability_weekly = 0.005
 			}
 			cancel_if_invalid = no
@@ -80,7 +81,9 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			modifier = {
-
+				conscription_factor = 0.05
+				enemy_partisan_effect = -0.1
+				political_power_gain = -0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -99,7 +102,7 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			modifier = {
-
+				stability_weekly = -0.001
 			}
 			ai_will_do = {
 				factor = 1

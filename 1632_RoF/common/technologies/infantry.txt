@@ -398,6 +398,30 @@ technologies = {
 		allow = { always = no }
 		enable_subunits = { line_infantry }
 	}
+	
+	tercio_formation_focus_tech = {
+		allow = { always = no }
+		tercio_infantry = {
+			max_organisation = 5
+			defense = 0.05
+		}
+		merc_tercio_infantry = {
+			max_organisation = 5
+			defense = 0.05
+		}
+	}
+
+	swedish_line_tech = {
+		allow = { always = no }
+		line_infantry = {
+			max_organisation = 5
+			breakthrough = 0.05
+		}
+		merc_line_infantry = {
+			max_organisation = 5
+			breakthrough = 0.05
+		}
+	}
 
 	paratroopers = {
 

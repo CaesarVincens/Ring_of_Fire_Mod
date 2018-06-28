@@ -121,6 +121,7 @@ country_event = {
 			}
 			add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
 			reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+			SWE = { add_manpower = 10000 }
 		}
 	}
 	option = {

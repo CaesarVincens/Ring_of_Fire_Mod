@@ -29,7 +29,7 @@ constitutionalist_peace = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.1
 			FROM = {
 				NOT = { is_neighbor_of = ROOT }
 				any_owned_state = {

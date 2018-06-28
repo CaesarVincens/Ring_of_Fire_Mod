@@ -52,6 +52,11 @@ leader_traits = {
 		}
 
 	}
+	would_be_tyrrant = {
+		random = no
+		absolutist_drift = 0.1
+		stability_factor = -0.05
+	}
 	
 	#generic ministers
 	absolutist_minister = {

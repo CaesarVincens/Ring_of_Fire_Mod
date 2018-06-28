@@ -13,7 +13,7 @@
 #marines
 #mountaineer
 
-# No cav if we have motor inf
+# Tercio better than spears
 no_cavalry = {
 	enable = {
 		has_tech = tercio_formation_tech
@@ -61,7 +61,7 @@ superior_firepower_ratios = {
 	
 	ai_strategy = {
 		type = role_ratio
-		id = infantry
+		id = line_inf
 		value = 10
 	}
 
@@ -84,7 +84,7 @@ concentrated_fire_plans_ratios = {
 	
 	ai_strategy = {
 		type = role_ratio
-		id = infantry
+		id = line_inf
 		value = -5
 	}
 	
@@ -96,7 +96,7 @@ concentrated_fire_plans_ratios = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = cas
+		id = single_plane
 		value = 5
 	}
 	
@@ -113,7 +113,7 @@ grand_battle_plan_ratios = {
 	
 	ai_strategy = {
 		type = role_ratio
-		id = infantry
+		id = tercio
 		value = 10
 	}
 	
@@ -137,7 +137,7 @@ mass_assault_ratios = {
 	
 	ai_strategy = {
 		type = role_ratio
-		id = infantry
+		id = tercio
 		value = 25
 	}	
 
@@ -160,7 +160,7 @@ large_front_operations_ratios = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = infantry
+		id = tercio
 		value = -10
 	}
 
@@ -293,16 +293,10 @@ formation_flying = {
 	abort = {
 		always = no
 	}
-	
-	ai_strategy = {
-		type = unit_ratio
-		id = interceptor
-		value = 20
-	}
 
 	ai_strategy = {
 		type = unit_ratio
-		id = cas
+		id = fighter
 		value = 50
 	}
 }

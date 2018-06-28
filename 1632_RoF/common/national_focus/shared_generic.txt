@@ -705,7 +705,9 @@
 		y = 1
 		relative_position_id = army_drilling_gen
 		completion_reward = {
-		
+			set_technology = {
+				tercio_formation_focus_tech = 1
+			}
 		}
 
 	}
@@ -762,7 +764,9 @@
 		y = 1
 		relative_position_id = army_drilling_gen
 		completion_reward = {
-		
+			set_technology = {
+				swedish_line_tech = 1
+			}		
 		}
 
 	}

@@ -25,7 +25,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.101
 	title = RoF_FRA.101.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.101.d
 	fire_only_once = yes
 
@@ -58,7 +58,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.102
 	title = RoF_FRA.102.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.102.d
 	fire_only_once = yes
 
@@ -85,7 +85,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.103
 	title = RoF_FRA.103.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.103.d
 	fire_only_once = yes
 
@@ -112,7 +112,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.105
 	title = RoF_FRA.105.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.105.d
 	fire_only_once = yes
 
@@ -147,7 +147,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.110
 	title = RoF_FRA.110.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.110.d
 	fire_only_once = yes
 
@@ -172,7 +172,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.120
 	title = RoF_FRA.120.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.120.d
 	fire_only_once = yes
 
@@ -210,7 +210,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.121
 	title = RoF_FRA.121.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_nus_swe_flag
 	desc = RoF_FRA.121.d
 	fire_only_once = yes
 	is_triggered_only = yes

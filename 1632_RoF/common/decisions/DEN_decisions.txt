@@ -86,15 +86,15 @@ DEN_HBC_decisions = {
 				OR = {
 					AND = {
 						date > 1634.1.1
-						date < 1634.3.1
+						date < 1634.4.1
 					}
 					AND = {
 						date > 1635.1.1
-						date < 1635.3.1
+						date < 1635.4.1
 					}
 					AND = {
 						date > 1636.1.1
-						date < 1636.3.1
+						date < 1636.4.1
 					}
 				}
 			}
@@ -109,7 +109,7 @@ DEN_HBC_decisions = {
 			country_event = { id = RoF_DEN.110 days = 5 }
 		}
 		ai_will_do = {
-			base = 1
+			base = 10
 		}
 	}
 

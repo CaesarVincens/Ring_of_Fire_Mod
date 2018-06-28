@@ -40,7 +40,7 @@ set_convoys = 100
  #   }
 
 if = {
-    limit = {has_dlc = "Together for Victory" }
+    limit = { has_dlc = "Together for Victory" }
 
     add_to_tech_sharing_group = SWE_research
 }

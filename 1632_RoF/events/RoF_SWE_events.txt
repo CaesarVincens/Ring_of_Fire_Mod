@@ -104,7 +104,7 @@ country_event = {
 country_event = {
 	id = RoF_SWE.121
 	title = RoF_SWE.121.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_den_flag
 	desc = {
 		text = RoF_SWE.121.da
 		trigger = {
@@ -196,7 +196,7 @@ country_event = {
 country_event = {
 	id = RoF_SWE.130
 	title = RoF_SWE.130.t
-	picture = GFX_report_event_swe_flag
+	picture = GFX_report_event_bra_flag
 	desc = RoF_SWE.130.d
 #	fire_only_once = yes
 
@@ -224,7 +224,7 @@ country_event = {
 country_event = {
 	id = RoF_SWE.131
 	title = RoF_SWE.131.t
-	picture = GFX_report_event_swe_flag
+	picture = GFX_report_event_bra_flag
 	desc = RoF_SWE.131.d
 #	fire_only_once = yes
 
@@ -299,7 +299,7 @@ country_event = {
 country_event = {
 	id = RoF_SWE.140
 	title = RoF_SWE.140.t
-	picture = GFX_report_event_swe_flag
+	picture = GFX_report_event_sax_flag
 	desc = RoF_SWE.140.d
 #	fire_only_once = yes
 
@@ -327,7 +327,7 @@ country_event = {
 country_event = {
 	id = RoF_SWE.141
 	title = RoF_SWE.141.t
-	picture = GFX_report_event_swe_flag
+	picture = GFX_report_event_sax_flag
 	desc = RoF_SWE.141.d
 #	fire_only_once = yes
 
@@ -358,8 +358,9 @@ country_event = {
 	immediate = {
 		give_military_access = SXW
 		hidden_effect = {
-			#country_event = { id = RoF_SWE.145 days = 35 }
-			country_event = { id = RoF_SWE.146 days = 35 }
+			SXW = { give_military_access = SWE }
+			add_opinion_modifier = { target = SXW modifier = SWE_tyw_support }
+			reverse_add_opinion_modifier = { target = SXW modifier = SWE_tyw_support }
 		}
 	}
 	option = {
@@ -399,6 +400,9 @@ country_event = {
 	option = {
 		name = RoF_SWE.145.a
 		add_manpower = 2000
+		hidden_effect = {
+			load_oob = "SWE_franconia"
+		}
 	}
 }
 
@@ -524,9 +528,10 @@ country_event = {
 		name = RoF_SWE.150.a
 		ANS = { country_event = { id = RoF_German.140 hours = 12 } }
 		WRT = { country_event = { id = RoF_German.140 hours = 12 } }
-		PAL = { country_event = { id = RoF_German.140 hours = 12 } }
-		NAS = { country_event = { id = RoF_German.140 hours = 12 } }
-		BAD = { country_event = { id = RoF_German.142 hours = 12 } }
+		FRK = { country_event = { id = RoF_German.140 hours = 12 } }
+		#PAL = { country_event = { id = RoF_German.140 hours = 12 } }
+		#NAS = { country_event = { id = RoF_German.140 hours = 12 } }
+		#BAD = { country_event = { id = RoF_German.142 hours = 12 } }
 		NUR = { country_event = { id = RoF_German.140 hours = 12 } }
 	}
 }

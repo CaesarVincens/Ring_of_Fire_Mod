@@ -20,6 +20,9 @@ NUS_major_decisions = {
 		complete_effect = {
 			add_political_power = 20
 		}
+		ai_will_do = {
+			base = 100
+		}
 	}
 	NUS_protect_Jena_decision = {
 		fire_only_once = yes
@@ -33,9 +36,9 @@ NUS_major_decisions = {
 			#set_country_flag = NUS_start_CoC
 			country_event = { id = RoF_NUS.112 }
 		}
-		cost = 50
+		cost = 20
 		ai_will_do = {
-			base = 1
+			base = 100
 		}		
 	}
 }

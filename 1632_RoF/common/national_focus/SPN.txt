@@ -169,11 +169,13 @@ focus_tree = {
 		prerequisite = { focus = SPN_come_to_terms }
 		relative_position_id = SPN_don_fernando
 		available = {
+			UPS = { is_subject_of = SPN }
 		}
 		completion_reward = {
+			hidden_effect = { set_country_flag = take_UPS }
 			annex_country = { target = UPS transfer_troops = yes }
 		}
-		
+		cost = 15
 		ai_will_do = {
 			factor = 20
 		}

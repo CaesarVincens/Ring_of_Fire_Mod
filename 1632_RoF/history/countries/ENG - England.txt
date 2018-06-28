@@ -58,9 +58,12 @@ set_politics = {
 }
 
 add_ideas = {
+	ENG_parliament_prorogued
+	state_religion_law
 }
 
 set_stability = 0.5
+set_war_support = 0.4
 create_country_leader = {
     name = "Charles Stuart"
     desc = "POLITICS_GRAHAM_BROWN_DESC"
@@ -68,6 +71,7 @@ create_country_leader = {
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {
+		would_be_tyrrant
     }
 }
 

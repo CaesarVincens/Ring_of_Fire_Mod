@@ -77,6 +77,9 @@ bookmarks = {
 		"ENG"={
 			minor = yes
 			history = "RING_OF_FIRE_DESC"
+			ideas = {
+				ENG_parliament_prorogued
+			}
 			focuses = {
 				ENG_cutting_the_cord
 				ENG_united_kingdom

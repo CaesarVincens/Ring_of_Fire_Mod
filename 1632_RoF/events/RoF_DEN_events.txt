@@ -3,7 +3,7 @@
 country_event = {
 	id = RoF_DEN.110
 	title = RoF_DEN.110.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_den_flag
 	desc = RoF_DEN.110.d
 	is_triggered_only = yes
 	
@@ -20,7 +20,7 @@ country_event = {
 country_event = {
 	id = RoF_DEN.111
 	title = RoF_DEN.111.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_den_flag
 	desc = RoF_DEN.111.d
 	fire_only_once = yes
 	
@@ -61,7 +61,7 @@ country_event = {
 country_event = {
 	id = RoF_DEN.112
 	title = RoF_DEN.112.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_den_flag
 	desc = RoF_DEN.112.d
 	fire_only_once = yes
 	
@@ -88,7 +88,7 @@ country_event = {
 country_event = {
 	id = RoF_DEN.150
 	title = RoF_DEN.150.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_use_flag
 	desc = {
 		text = RoF_DEN.150.da
 		trigger = {
@@ -184,7 +184,7 @@ country_event = {
 country_event = {
 	id = RoF_DEN.151
 	title = RoF_DEN.151.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_swe_flag
 	desc = {
 		text = RoF_DEN.151.da
 		trigger = {

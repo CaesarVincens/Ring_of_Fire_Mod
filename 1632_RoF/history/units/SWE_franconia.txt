@@ -1,0 +1,15 @@
+﻿
+units = {
+	division = {
+		name = "Infantry Detachment"
+		location = 11445
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Infantry Detachment"
+		location = 11417
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+}
