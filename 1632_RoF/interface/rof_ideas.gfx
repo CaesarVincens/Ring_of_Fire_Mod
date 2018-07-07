@@ -21,6 +21,28 @@ spriteTypes = {
 		name = "GFX_idea_full_military_eco"
 		texturefile = "gfx/interface/ideas/idea_full_military_eco.dds"
 	}
+	### RELIGION LAWS
+	spriteType = {
+		name = "GFX_idea_secularism"
+		texturefile = "gfx/interface/ideas/idea_secularism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_freedom_of_religion"
+		texturefile = "gfx/interface/ideas/idea_free_religion.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_state_religion_law"
+		texturefile = "gfx/interface/ideas/idea_state_religion.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_persecute_minorities"
+		texturefile = "gfx/interface/ideas/idea_persecute_minorities.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_atheism"
+		texturefile = "gfx/interface/ideas/idea_state_atheism.dds"
+	}	
+	### ADVISORS
 	spriteType = {
 		name = "GFX_idea_richelieu_pic"
 		texturefile = "gfx/interface/ideas/idea_richelieu_pic.dds"
@@ -45,6 +67,45 @@ spriteTypes = {
 		name = "GFX_idea_lion_of_the_north"
 		texturefile = "gfx/interface/ideas/idea_lion_of_the_north.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_FRA_gaston"
+		texturefile = "gfx/interface/ideas/idea_FRA_gaston.dds"
+	}
+	
+	#COC ideas
+	spriteType = {
+		name = "GFX_idea_CoC_good_4"
+		texturefile = "gfx/interface/ideas/CoC_good_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_good_3"
+		texturefile = "gfx/interface/ideas/CoC_good_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_good_2"
+		texturefile = "gfx/interface/ideas/CoC_good_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_good_1"
+		texturefile = "gfx/interface/ideas/CoC_good_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_bad_4"
+		texturefile = "gfx/interface/ideas/CoC_bad_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_bad_3"
+		texturefile = "gfx/interface/ideas/CoC_bad_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_bad_2"
+		texturefile = "gfx/interface/ideas/CoC_bad_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CoC_bad_1"
+		texturefile = "gfx/interface/ideas/CoC_bad_1.dds"
+	}
+	
 	#generic advisors
 	#west europe
 	spriteType = {

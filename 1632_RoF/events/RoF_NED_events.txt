@@ -146,9 +146,9 @@ country_event = {
 #UPS annexed
 country_event = {
 	id = RoF_NED.111
-	title = RoF_NED.111.t
+	title = RoF_NED.110.t
 	picture = GFX_report_event_spr_flag
-	desc = RoF_NED.111.d
+	desc = RoF_NED.110.d
 
 	is_triggered_only = yes
 	
@@ -182,14 +182,13 @@ country_event = {
 	
 	option = { # Accept
 		name =  RoF_NED.115.a
-		ai_chance = { base = 100 }
 		set_country_flag = @ROOT_accept_demand
 		SPN = {
 			country_event = { id = RoF_NED.116 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		ai_chance = {
-			base = 1
+			base = 2
 		}
 	}
 	option = { # Refuse
@@ -268,18 +267,18 @@ country_event = {
 # SPN goes to Congress of Copenhagen
 country_event = {
 	id = RoF_NED.121
-	title = RoF_NED.121.t
-	desc = RoF_NED.121.d
+	title = RoF_NED.120.t
+	desc = RoF_NED.120.d
 	picture = GFX_report_event_spr_flag
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NED.121.a
+		name =  RoF_NED.120.a
 		set_country_flag = attending_congress_of_copenhagen
 		ai_chance = { base = 100 }
 	}
 	option = { # Refuse
-		name =  RoF_NED.121.b
+		name =  RoF_NED.120.b
 	}
 }

@@ -20,6 +20,24 @@ RoF_CoC_decisions = {
 	visible = {
 		has_country_flag = CoC_present
 	}
+	priority = 10
+}
+
+RoF_CoC_covert_decisions = {
+	visible = {
+		has_government = radical
+		has_country_flag = CoC_present
+	}
+	priority = 10
+}
+
+RoF_CoC_Border_Clashes = {
+	icon = border_conflicts
+	priority = 9
+	visible = {
+		has_country_flag = CoC_present
+		has_government = radical
+	}
 }
 
 absolutist_on_the_rise = {

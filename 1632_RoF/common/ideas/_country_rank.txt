@@ -27,7 +27,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = generic_infantry_bonus
+			picture = HUN_hungarian_monarchy
 			modifier = {
 			}
 			rule = {

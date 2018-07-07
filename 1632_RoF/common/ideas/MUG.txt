@@ -2,6 +2,7 @@ ideas = {
 	political_advisor = {
 		MUG_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = MUG
 			}
 			traits = { absolutist_minister }
@@ -20,6 +21,7 @@ ideas = {
 		}
 		MUG_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = MUG
 			}
 			traits = { liberal_minister }
@@ -37,6 +39,7 @@ ideas = {
 		}
 		MUG_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = MUG
 			}
 			traits = { neutrality_minister }

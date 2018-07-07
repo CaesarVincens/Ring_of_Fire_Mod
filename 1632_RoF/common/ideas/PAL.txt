@@ -2,6 +2,7 @@ ideas = {
 	political_advisor = {
 		PAL_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = PAL
 			}
 			traits = { absolutist_minister }
@@ -20,6 +21,7 @@ ideas = {
 		}
 		PAL_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = PAL
 			}
 			traits = { liberal_minister }
@@ -37,6 +39,7 @@ ideas = {
 		}
 		PAL_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = PAL
 			}
 			traits = { neutrality_minister }

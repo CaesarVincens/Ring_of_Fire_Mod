@@ -17,6 +17,7 @@ ideas = {
 	political_advisor = {
 		SPR_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = SPR
 			}
 			traits = { absolutist_minister }
@@ -35,6 +36,7 @@ ideas = {
 		}
 		SPR_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = SPR
 			}
 			traits = { liberal_minister }
@@ -52,6 +54,7 @@ ideas = {
 		}
 		SPR_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = SPR
 			}
 			traits = { neutrality_minister }

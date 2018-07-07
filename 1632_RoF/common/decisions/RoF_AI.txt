@@ -28,9 +28,7 @@ RoF_ai_decisions = {
 		available = {
 			is_ai = yes
 			NOT = { any_country = { has_idea = CoC_timer } }
-			any_neighbor_country = {
-				has_variable = CoC_strength
-			}
+			has_global_flag = CoC_established
 		}
 		complete_effect = {
 			add_timed_idea = { idea = CoC_timer days = 30 }
@@ -50,6 +48,7 @@ RoF_ai_decisions = {
 				limit = {
 					has_variable = CoC_strength
 				}
+				check_CoC_strength_anger = yes
 				check_CoC_effects_for_this = yes
 			}
 		}

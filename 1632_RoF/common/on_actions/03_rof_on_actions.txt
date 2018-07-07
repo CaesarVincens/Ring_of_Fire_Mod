@@ -47,5 +47,55 @@ on_actions = {
 			}
 		}
 	}
+	
+	#ROOT is winner #FROM gets annexed
+	on_civil_war_end = {
+		effect = {
+			country_event = { id = RoF_ENG.155 days = 2 }
+			country_event = { id = RoF_ENG.156 days = 2 }
+		}
+	}
+	
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {
+			clr_country_flag = crown_union_flag
+			clr_country_flag = federal_state
+			clr_country_flag = RoF_raise_autonomy
+			clr_country_flag = RoF_lower_autonomy
+			clr_country_flag = RoF_go_free
+			clr_country_flag = RoF_annex_puppet
+			if = {
+				limit = { has_country_flag = colony_flag }
+				set_country_flag = former_colony
+				clr_country_flag = colony_flag
+			}
+		}
+	}
+
+	#ROOT is subject FROM is overlord
+	on_subject_autonomy_level_change = {
+		effect = {
+			clr_country_flag = RoF_raise_autonomy
+			clr_country_flag = RoF_lower_autonomy
+		}
+	}
+
+	#ROOT is subject FROM is overlord
+	on_subject_annexed = {
+		effect = {
+			clr_country_flag = crown_union_flag
+			clr_country_flag = federal_state
+			clr_country_flag = RoF_raise_autonomy
+			clr_country_flag = RoF_lower_autonomy
+			clr_country_flag = RoF_go_free
+			clr_country_flag = RoF_annex_puppet
+			if = {
+				limit = { has_country_flag = colony_flag }
+				set_country_flag = former_colony
+				clr_country_flag = colony_flag
+			}
+		}
+	}
 
 }

@@ -118,7 +118,7 @@ ideas = {
 				enemy_partisan_effect = -0.1
 			}
 			removal_cost = -1
-			picture = generic_democratic_drift_bonus
+			picture = generic_constitutional_guarantees
 		}
 		NUS_conservative_constitution = {
 			allowed = {
@@ -215,6 +215,7 @@ ideas = {
 	political_advisor = {
 		NUS_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = NUS
 			}
 			traits = { absolutist_minister }
@@ -233,6 +234,7 @@ ideas = {
 		}
 		NUS_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = NUS
 			}
 			traits = { liberal_minister }
@@ -250,6 +252,7 @@ ideas = {
 		}
 		NUS_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = NUS
 			}
 			traits = { neutrality_minister }

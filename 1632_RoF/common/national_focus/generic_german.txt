@@ -129,6 +129,12 @@ focus_tree = {
 			focus = support_protestants
 			focus = join_austria
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = twy_ongoing.tt
+				SWE = { has_war_with = AUS }
+			}
+		}
 		x = 0
 		y = 3
 		relative_position_id = die_amerikaner
@@ -160,7 +166,7 @@ focus_tree = {
 			focus = representative_democracy_focus
 		}
 		x = 2
-		y = 3
+		y = 4
 		relative_position_id = die_amerikaner
 
 	}
@@ -216,7 +222,7 @@ focus_tree = {
 			focus = committees_of_correspondence_gen_ger
 		}
 		x = 6
-		y = 3
+		y = 4
 		relative_position_id = die_amerikaner
 
 	}
@@ -228,6 +234,15 @@ focus_tree = {
 			focus = welcome_americans
 		}
 		mutually_exclusive = { focus = thirty_years_war_neutral }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = twy_ongoing.tt
+				SWE = { has_war_with = AUS }
+			}
+		}
+		bypass = {
+			is_in_faction_with = SWE
+		}
 		x = 1
 		y = 2
 		relative_position_id = die_amerikaner
@@ -290,6 +305,15 @@ focus_tree = {
 			focus = shun_americans
 		}
 		mutually_exclusive = { focus = thirty_years_war_neutral }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = twy_ongoing.tt
+				SWE = { has_war_with = AUS }
+			}
+		}
+		bypass = {
+			is_in_faction_with = AUS
+		}
 		x = -1
 		y = 2
 		relative_position_id = die_amerikaner
@@ -315,7 +339,7 @@ focus_tree = {
 			focus = nobles_republic
 		}
 		x = -2
-		y = 3
+		y = 4
 		relative_position_id = die_amerikaner
 
 	}
@@ -327,7 +351,7 @@ focus_tree = {
 			focus = centralize_power_gen_ger
 		}
 		x = -6
-		y = 3
+		y = 4
 		relative_position_id = die_amerikaner
 
 	}

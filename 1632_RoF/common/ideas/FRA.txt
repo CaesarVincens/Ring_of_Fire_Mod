@@ -1,11 +1,34 @@
 ideas = {
 	country = {
+		FRA_gaston = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = FRA_gaston
+			modifier = {
+				stability_weekly = -0.001
+				absolutist_drift = 0.01
+				political_power_gain = -0.25
+			}
+		}
+		FRA_constitutionalism = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			modifier = {
+				constitutionalist_drift = 0.1
+				absolutist_drift = -0.1
+			}
+		}
 		anti_habsburg_diplomacy = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
-			picture = generic_infantry_bonus
+			picture = generic_deal_with_the_devil2
 			modifier = {
 				constitutionalist_acceptance = 50
 				send_volunteer_divisions_required = -0.75
@@ -19,7 +42,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = generic_morale_bonus
+			picture = generic_democratic_drift_bonus
 			modifier = {
 				liberal_acceptance = 50
 				research_time_factor = -0.05
@@ -31,7 +54,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = generic_morale_bonus
+			picture = generic_intel_bonus
 			modifier = {
 				research_time_factor = -0.05
 				constitutionalist_drift = 0.05
@@ -42,7 +65,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = generic_infantry_bonus
+			picture = generic_army_war_college
 			modifier = {
 				army_leader_start_level = 1
 				military_leader_cost_factor = -0.25
@@ -70,6 +93,7 @@ ideas = {
 		}
 		FRA_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = FRA
 			}
 			traits = { absolutist_minister }
@@ -88,6 +112,7 @@ ideas = {
 		}
 		FRA_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = FRA
 			}
 			traits = { liberal_minister }
@@ -105,6 +130,7 @@ ideas = {
 		}
 		FRA_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = FRA
 			}
 			traits = { neutrality_minister }

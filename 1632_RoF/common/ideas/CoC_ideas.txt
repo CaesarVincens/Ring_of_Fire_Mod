@@ -15,10 +15,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_happy_icon
+			picture = CoC_good_4
 			
 			modifier = {
-				radical_drift = 0.05
+				radical_drift = 0.025
 				stability_factor = 0.2
 				war_support_factor = 0.1
 				mobilization_speed = 0.2
@@ -31,10 +31,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_happy_icon
+			picture = CoC_good_3
 			
 			modifier = {
-				radical_drift = 0.0375
+				radical_drift = 0.01875
 				stability_factor = 0.15
 				war_support_factor = 0.075
 				mobilization_speed = 0.15
@@ -47,10 +47,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_happy_icon
+			picture = CoC_good_2
 			
 			modifier = {
-				radical_drift = 0.025
+				radical_drift = 0.0125
 				stability_factor = 0.1
 				war_support_factor = 0.05
 				mobilization_speed = 0.1
@@ -63,10 +63,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_happy_icon
+			picture = CoC_good_1
 			
 			modifier = {
-				radical_drift = 0.0125
+				radical_drift = 0.00625
 				stability_factor = 0.05
 				war_support_factor = 0.025
 				mobilization_speed = 0.05
@@ -81,10 +81,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_angry_icon
+			picture = CoC_bad_1
 			
 			modifier = {
-				radical_drift = 0.025
+				radical_drift = 0.0125
 				stability_factor = -0.05
 				war_support_factor = -0.025
 				mobilization_speed = -0.05
@@ -97,10 +97,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_angry_icon
+			picture = CoC_bad_2
 			
 			modifier = {
-				radical_drift = 0.05
+				radical_drift = 0.025
 				stability_factor = -0.1
 				war_support_factor = -0.05
 				mobilization_speed = -0.1
@@ -113,10 +113,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_angry_icon
+			picture = CoC_bad_3
 			
 			modifier = {
-				radical_drift = 0.075
+				radical_drift = 0.0375
 				stability_factor = -0.15
 				war_support_factor = -0.075
 				mobilization_speed = -0.15
@@ -129,10 +129,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = CoC_angry_icon
+			picture = CoC_bad_4
 			
 			modifier = {
-				radical_drift = 0.1
+				radical_drift = 0.05
 				stability_factor = -0.2
 				war_support_factor = -0.1
 				mobilization_speed = -0.2

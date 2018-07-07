@@ -2,6 +2,7 @@ ideas = {
 	political_advisor = {
 		SXW_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = SXW
 			}
 			traits = { absolutist_minister }
@@ -20,6 +21,7 @@ ideas = {
 		}
 		SXW_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = SXW
 			}
 			traits = { liberal_minister }
@@ -37,6 +39,7 @@ ideas = {
 		}
 		SXW_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = SXW
 			}
 			traits = { neutrality_minister }

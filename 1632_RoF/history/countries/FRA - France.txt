@@ -41,6 +41,8 @@ set_politics = {
 add_ideas = {
 	FRA_cardinal_richelieu
 	anti_habsburg_diplomacy
+	FRA_gaston
+	state_religion_law
 }
 set_stability = 0.5
 create_country_leader = {

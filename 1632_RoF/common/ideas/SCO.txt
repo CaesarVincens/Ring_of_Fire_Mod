@@ -2,6 +2,7 @@ ideas = {
 	political_advisor = {
 		SCO_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = SCO
 			}
 			traits = { absolutist_minister }
@@ -20,6 +21,7 @@ ideas = {
 		}
 		SCO_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = SCO
 			}
 			traits = { liberal_minister }
@@ -37,6 +39,7 @@ ideas = {
 		}
 		SCO_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = SCO
 			}
 			traits = { neutrality_minister }

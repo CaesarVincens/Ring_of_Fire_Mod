@@ -1,0 +1,13 @@
+spriteTypes = {	
+
+	SpriteType = { 
+		name = "GFX_focus_magdeburg_committee"
+		texturefile = "gfx/interface/goals/focus_magdeburg_committee.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_germany_committee"
+		texturefile = "gfx/interface/goals/focus_germany_committee.dds"
+	}
+	
+}

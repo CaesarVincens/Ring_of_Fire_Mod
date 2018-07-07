@@ -20,6 +20,36 @@ technologies = {
 		}
 		research_cost = 1.5
 		start_year = 1631
+		on_research_complete = {
+			limit = { has_country_flag = infra_tech_1_flag }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 0 }
@@ -45,6 +75,36 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1632
+		on_research_complete = {
+			limit = { has_country_flag = infra_tech_2_flag }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 4 }
@@ -70,6 +130,36 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1634
+		on_research_complete = {
+			limit = { has_country_flag = infra_tech_3_flag }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 6 }

@@ -51,7 +51,7 @@ ideologies = {
 		}
 		can_be_boosted = no
 
-		ai_neutral = yes
+		ai_fascist = yes
 	}
 
 	constitutionalist = {
@@ -88,7 +88,7 @@ ideologies = {
 		}
 		faction_modifiers = {
 		}
-		ai_neutral = yes
+		ai_democratic = yes
 	}
 	
 	liberal = {
@@ -135,7 +135,7 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
-		ai_neutral = yes
+		ai_communist = yes
 	}
 
 	radical = {
@@ -175,7 +175,7 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
-		ai_neutral = yes
+		ai_communist = yes
 	}
 
 	neutrality = {

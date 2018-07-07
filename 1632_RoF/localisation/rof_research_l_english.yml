@@ -35,6 +35,8 @@
  firearms_weapons:0 "Firearm Weapons"
  apc_tech:0 "Armored Personnel Carriers"
  air_research:0 "Aerial Technology"
+ steel_tech:0 "Steel Production Technology"
+ engine_tech:0 "Combustion Engine Technology"
  LIGHT_ARTILLERY_TITLE:0 "FIELD GUNS"
  AIR_TITLE_SINGLE_PLANE:0 "LIGHT PLANES"
  AIR_TITLE_MULTI_PLANE:0 "HEAVY PLANES"

@@ -130,6 +130,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = NUS_battle_of_jena
 			set_country_flag = NUS_start_CoC
+			set_global_flag = CoC_established
+			create_country_leader = {
+				name = "Gretchen Richterin"
+				ideology = radical_democracy
+				#picture
+			}
 		}
 	}
 
@@ -625,16 +631,16 @@ country_event = {
 			country_event = { id = RoF_NUS.133 days = 38 }
 			country_event = { id = RoF_NUS.134 days = 51 }
 			country_event = { id = RoF_NUS.135 days = 64 }
-			set_country_flag = {
-				flag = NUS_constitution_flag
+			set_variable = {
+				var = NUS_constitution_flag
 				value = 0
 			}
 			if = {
 				limit = {
 					has_completed_focus = NUS_new_american_revolution
 				}
-				modify_country_flag = {
-					flag = NUS_constitution_flag
+				add_to_variable = {
+					var = NUS_constitution_flag
 					value = 5
 				}
 			}
@@ -642,8 +648,8 @@ country_event = {
 				limit = {
 					has_completed_focus = NUS_fortress_america
 				}
-				modify_country_flag = {
-					flag = NUS_constitution_flag
+				add_to_variable = {
+					var = NUS_constitution_flag
 					value = -5
 				}
 			}
@@ -651,8 +657,8 @@ country_event = {
 				limit = {
 					has_completed_focus = NUS_establish_committees_of_correspondence
 				}
-				modify_country_flag = {
-					flag = NUS_constitution_flag
+				add_to_variable = {
+					var = NUS_constitution_flag
 					value = 5
 				}
 			}
@@ -660,8 +666,8 @@ country_event = {
 				limit = {
 					has_completed_focus = NUS_new_american_empire
 				}
-				modify_country_flag = {
-					flag = NUS_constitution_flag
+				add_to_variable = {
+					var = NUS_constitution_flag
 					value = -5
 				}
 			}
@@ -685,8 +691,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_full_citizens
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
@@ -715,8 +721,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_non_citizens
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
@@ -766,8 +772,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_free_economy
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
@@ -784,8 +790,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_govt_controled_economy
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
@@ -823,8 +829,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_civilian_first
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
@@ -841,8 +847,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_military_first
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
@@ -880,8 +886,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_elected_congress
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
@@ -904,8 +910,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_appointed_congress
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
@@ -952,8 +958,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_stearns
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = 5
 			}
 			add_popularity = { ideology = liberal popularity = 0.05 }
@@ -970,9 +976,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = {
-					flag = NUS_constitution_flag
-					value > -25
+				check_variable = {
+					var = NUS_constitution_flag
+					value = -25
+					compare = greater_than
 				}
 			}
 			add_popularity = { ideology = constitutionalist popularity = 0.6 }
@@ -986,8 +993,8 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = NUS_simpson
-			modify_country_flag = {
-				flag = NUS_constitution_flag
+			add_to_variable = {
+				var = NUS_constitution_flag
 				value = -5
 			}
 			add_popularity = { ideology = absolutist popularity = 0.05 }
@@ -1001,7 +1008,7 @@ country_event = {
 	title = RoF_NUS.145.t
 	desc = RoF_NUS.145.d
 	
-	picture = GFX_report_event_scottish_mercenaries
+	picture = GFX_report_event_nus_swe_flag
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1228,7 +1235,7 @@ country_event = {
 	title = RoF_NUS.161.t
 	desc = RoF_NUS.161.d
 	
-	picture = GFX_report_event_SWE_flag
+	picture = GFX_report_event_swe_flag
 	
 	fire_only_once = yes
 	
@@ -1250,6 +1257,7 @@ country_event = {
 	}
 }
 
+#wismar
 country_event = {
 	id = RoF_NUS.170
 	title = RoF_NUS.170.t

@@ -99,6 +99,7 @@ ideas = {
 			#level = 1
 			removal_cost = -1
 			available = {
+				has_government = radical
 			}
 			cancel_if_invalid = no
 			modifier = {

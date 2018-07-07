@@ -20,6 +20,7 @@ ideas = {
 		}
 		UPS_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = UPS
 			}
 			traits = { liberal_minister }
@@ -37,6 +38,7 @@ ideas = {
 		}
 		UPS_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = UPS
 			}
 			traits = { neutrality_minister }

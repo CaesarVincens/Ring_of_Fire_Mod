@@ -9,7 +9,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 			}
 			removal_cost = -1
-			picture = generic_morale_bonus		
+			picture = generic_war_preparation		
 		}
 		SWE_FRA_support = {
 			allowed = {
@@ -20,7 +20,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 			}
 			removal_cost = -1
-			picture = generic_morale_bonus		
+			picture = generic_war_preparation		
 		}
 		SWE_UPS_support = {
 			allowed = {
@@ -31,7 +31,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 			}
 			removal_cost = -1
-			picture = generic_morale_bonus	
+			picture = generic_war_preparation	
 		}
 		SWE_lion_of_the_north = {
 			allowed = {
@@ -66,6 +66,7 @@ ideas = {
 		}
 		SWE_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = SWE
 			}
 			traits = { absolutist_minister }
@@ -84,6 +85,7 @@ ideas = {
 		}
 		SWE_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = SWE
 			}
 			traits = { liberal_minister }
@@ -101,6 +103,7 @@ ideas = {
 		}
 		SWE_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = SWE
 			}
 			traits = { neutrality_minister }

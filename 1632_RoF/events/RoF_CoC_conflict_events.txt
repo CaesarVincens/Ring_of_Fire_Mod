@@ -1,0 +1,330 @@
+﻿add_namespace = RoF_CoC_conflicts
+
+#wtt_border_conflict_won_attacker.1
+country_event = {
+	id = RoF_CoC_conflicts.01
+	title = RoF_CoC_conflicts.01.t
+	desc = RoF_CoC_conflicts.01.desc
+	
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = our_country
+		FROM = { save_event_target_as = our_state }
+		FROM.FROM = { save_event_target_as = their_country }
+		FROM.FROM.FROM = { save_event_target_as = their_state }
+		remove_targeted_decision = { target = event_target:their_country decision = CoC_border_conflict_time_until_cancelled }
+	}
+	
+	option = {
+		name = RoF_CoC_conflicts.01.a
+		add_political_power = 100
+		if = {
+			limit = {
+				check_variable = {
+					FROM.FROM.num_owned_states > 1
+				}
+			}
+			transfer_state = FROM.FROM.FROM
+		}
+		else = {
+			FROM.FROM = { ROOT = { annex_country = { target = PREV } } }
+		}
+	}	
+}
+
+#wtt_border_conflict_won_defender.1
+country_event = {
+	id = RoF_CoC_conflicts.02
+	title = RoF_CoC_conflicts.02.t
+	desc = RoF_CoC_conflicts.02.desc
+	
+	picture = GFX_report_event_chinese_soldiers_mountain
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = our_country
+			FROM = {
+				save_event_target_as = our_state
+				clr_state_flag = border_incident_active
+			}
+			FROM.FROM = { save_event_target_as = their_country }
+			FROM.FROM.FROM = {
+				save_event_target_as = their_state
+				clr_state_flag = border_incident_active
+			}
+			set_country_flag = show_effect_tooltips
+			clear_variable = attacker_state_vs_@FROM.FROM
+			clear_variable = defender_state_vs_@FROM.FROM
+			remove_targeted_decision = { target = event_target:their_country decision = CoC_border_conflict_time_until_cancelled }
+		}
+	}
+	
+	#Same effect as attacker. Tooltip for their effects
+	option = {
+		name = RoF_CoC_conflicts.02.a
+		add_political_power = 150
+		army_experience = 30
+		add_tech_bonus = {
+			name = defensive_border_conflict_won
+			category = land_doctrine
+			bonus = 0.5
+		}
+		if = {
+			limit = { has_country_flag = show_effect_tooltips }
+			event_target:their_country = {
+				effect_tooltip = {
+					add_political_power = -150
+					army_experience = 10
+				}
+			}
+			clr_country_flag = show_effect_tooltips
+		}
+	}	
+}
+
+#wtt_border_conflict_lost_attacker.1
+country_event = {
+	id = RoF_CoC_conflicts.03
+	title = RoF_CoC_conflicts.03.t
+	desc = RoF_CoC_conflicts.03.desc
+	
+	picture = GFX_report_event_dead_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = our_country
+		FROM = { save_event_target_as = our_state }
+		FROM.FROM = { save_event_target_as = their_country }
+		FROM.FROM.FROM = { save_event_target_as = their_state }
+		set_country_flag = show_effect_tooltips
+		remove_targeted_decision = { target = event_target:their_country decision = CoC_border_conflict_time_until_cancelled }
+	}
+	
+	#Same effect as defender. Tooltip for their effects	
+	option = {
+		name = RoF_CoC_conflicts.03.a
+		add_political_power = -150
+		army_experience = 10
+		if = {
+			limit = { has_country_flag = show_effect_tooltips }
+			event_target:their_country = {
+				effect_tooltip = {
+					add_political_power = 150
+					army_experience = 30
+					add_tech_bonus = {
+						name = defensive_border_conflict_won
+						category = land_doctrine
+						bonus = 0.5
+					}
+				}
+			}
+			clr_country_flag = show_effect_tooltips
+		}
+	}	
+}
+
+#wtt_border_conflict_lost_defender.1
+country_event = {
+	id = RoF_CoC_conflicts.04
+	title = RoF_CoC_conflicts.04.t
+	desc = RoF_CoC_conflicts.04.desc
+	
+	picture = GFX_report_event_dead_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = our_country
+			FROM = {
+				save_event_target_as = our_state
+				clr_state_flag = border_incident_active
+			}
+			FROM.FROM = { save_event_target_as = their_country }
+			FROM.FROM.FROM = {
+				save_event_target_as = their_state
+				clr_state_flag = border_incident_active
+			}
+			set_country_flag = show_effect_tooltips
+			clear_variable = attacker_state_vs_@FROM.FROM
+			clear_variable = defender_state_vs_@FROM.FROM
+			remove_targeted_decision = { target = event_target:their_country decision = CoC_border_conflict_time_until_cancelled }
+		}
+	}
+	
+	#Same effect as attacker. Tooltip for their effects
+	option = {
+		name = RoF_CoC_conflicts.04.a
+		if = {
+			limit = { has_country_flag = show_effect_tooltips }
+			effect_tooltip = {
+				add_political_power = 100
+				if = {
+					limit = {
+						check_variable = {
+							num_owned_states > 1
+						}
+					}
+					FROM.FROM = { transfer_state = FROM }
+				}
+				else = {
+					FROM.FROM = { annex_country = { target = ROOT } }
+				}				
+			}
+			clr_country_flag = show_effect_tooltips
+		}
+	}	
+}
+
+#wtt_border_conflict_canceled_attacker.1
+country_event = {
+	id = RoF_CoC_conflicts.05
+	title = RoF_CoC_conflicts.05.t
+	desc = RoF_CoC_conflicts.05.desc
+	
+	picture = GFX_report_event_chinese_soldiers_mountain
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = our_country
+		FROM = { save_event_target_as = our_state }
+		FROM.FROM = { save_event_target_as = their_country }
+		FROM.FROM.FROM = { save_event_target_as = their_state }
+		set_country_flag = show_effect_tooltips
+	}
+	
+	option = {
+		name = RoF_CoC_conflicts.05.a
+		army_experience = 15
+		if = {
+			limit = { has_country_flag = show_effect_tooltips }
+			event_target:their_country = {
+				effect_tooltip = {
+					army_experience = 30
+					add_political_power = 50
+				}
+			}
+			clr_country_flag = show_effect_tooltips
+		}
+	}	
+}
+
+#wtt_border_conflict_canceled_defender.1
+country_event = {
+	id = RoF_CoC_conflicts.06
+	title = RoF_CoC_conflicts.06.t
+	desc = RoF_CoC_conflicts.06.desc
+	
+	picture = GFX_report_event_chinese_soldiers_mountain
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = our_country
+			FROM = {
+				save_event_target_as = our_state
+				clr_state_flag = border_incident_active
+			}
+			FROM.FROM = { save_event_target_as = their_country }
+			FROM.FROM.FROM = {
+				save_event_target_as = their_state
+				clr_state_flag = border_incident_active
+			}
+			set_country_flag = show_effect_tooltips
+			clear_variable = attacker_state_vs_@FROM.FROM
+			clear_variable = defender_state_vs_@FROM.FROM
+		}
+	}
+	
+	option = {
+		name = RoF_CoC_conflicts.06.a
+		army_experience = 30
+		add_political_power = 50
+		if = {
+			limit = { has_country_flag = show_effect_tooltips }
+			event_target:their_country = {
+				effect_tooltip = {
+					army_experience = 15
+				}
+			}
+			clr_country_flag = show_effect_tooltips
+		}
+	}	
+}
+
+#wtt_border_incident_defender_warning.1
+country_event = {
+	id = RoF_CoC_conflicts.07
+	title = RoF_CoC_conflicts.07.t
+	desc = RoF_CoC_conflicts.07.desc
+	
+	picture = GFX_report_event_chinese_soldiers_mountain
+
+	is_triggered_only = yes
+
+	#Event targets saved
+	#attacker_state
+	#defender_state
+	immediate = {
+		save_event_target_as = our_country
+		FROM = { save_event_target_as = their_country }
+	}
+	
+	option = {
+		name = RoF_CoC_conflicts.07.a
+	}	
+}
+
+#wtt_border_conflict_escalation.1
+country_event = {
+	id = RoF_CoC_conflicts.08
+	title = RoF_CoC_conflicts.08.t
+	desc = RoF_CoC_conflicts.08.desc
+	
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	#Event targets saved
+	#attacker_state
+	#defender_state
+	immediate = {
+		save_event_target_as = our_country
+		FROM = { save_event_target_as = their_country }
+	}
+	
+	option = {
+		name = RoF_CoC_conflicts.08.a
+	}	
+}
+
+#wtt_border_conflict_escalate_to_war.1
+country_event = {
+	id = RoF_CoC_conflicts.09
+	title = RoF_CoC_conflicts.09.t
+	desc = RoF_CoC_conflicts.09.desc
+	
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	#Event targets saved
+	#attacker_state
+	#defender_state
+	immediate = {
+		save_event_target_as = our_country
+		FROM = { save_event_target_as = their_country }
+	}
+	
+	option = {
+		name = RoF_CoC_conflicts.09.a
+	}	
+}

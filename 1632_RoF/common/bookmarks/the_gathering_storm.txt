@@ -37,6 +37,7 @@ bookmarks = {
 			ideology = absolutist
 			ideas = {
 				anti_habsburg_diplomacy
+				FRA_gaston
 			}
 			focuses = {
 				FRA_ostend_league_focus

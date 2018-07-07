@@ -135,6 +135,16 @@ country_event = {
 				transfer_state = 135
 				add_state_core = 135
 			}
+			if = {
+				limit = { 117 = { is_owned_by = FRA } }
+				transfer_state = 117
+				add_state_core = 117
+			}
+			if = {
+				limit = { 118 = { is_owned_by = FRA } }
+				transfer_state = 118
+				add_state_core = 118
+			}
 			add_timed_idea = { idea = NFR_new_overlord days = 120 }
 		}
 		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }

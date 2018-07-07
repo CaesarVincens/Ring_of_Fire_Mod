@@ -796,7 +796,7 @@ focus_tree = {
 		complete_tooltip = {
 			if = {
 				limit = {
-					has_tech = infrastructure_tech_1
+					has_country_flag = infra_built_flag_1
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -811,7 +811,7 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					NOT = { has_tech = infrastructure_tech_1 }
+					NOT = { has_country_flag = infra_built_flag_1 }
 				}
 				add_tech_bonus = {
 					name = infra_bonus
@@ -889,6 +889,11 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				set_country_flag = infra_built_flag_1
+				random_owned_controlled_state = {
+					limit = { has_state_flag = infra_1 }
+					clr_state_flag = infra_1
+				}
 			}
 			else_if = {
 				limit = {
@@ -900,6 +905,7 @@ focus_tree = {
 					uses = 1
 					category = infra_tech
 				}
+				set_country_flag = infra_tech_1_flag
 			}
 		}
 
@@ -1374,7 +1380,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_treaty_of_stgermain-en-laye
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_generic_treaty
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_a_new_princess
@@ -1477,17 +1483,18 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ENG_constitutional_monarchy.tt
-				constitutionalist > 0.45
+				ENG_constitutionalist_45 = yes
 			}
 		}
 		#available_if_capitulated = yes
 		completion_reward = {
 			country_event = { id = RoF_ENG.171 days = 1 }
+			custom_effect_tooltip = parliamentarians_chosen
 			#civil war
 		}
 
 	}
-	
+
 	focus = {
 		id = ENG_the_regency
 		icon = GFX_goal_continuous_restrict_freedom
@@ -1505,11 +1512,12 @@ focus_tree = {
 		available = {
 			has_global_flag = ENG_civil_war_done
 		}
-		bypass = { 
+		bypass = {
 			has_country_flag = ENG_queen_mary_2
 		}
 		#available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = ENG_mary_regent.tt
 			#event
 		}
 
@@ -1536,7 +1544,11 @@ focus_tree = {
 		}
 		#available_if_capitulated = yes
 		completion_reward = {
-			#event
+			create_country_leader = {
+				name = "Elizabeth Wittelsbach"
+				picture = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
+				ideology = constitutional_monarchy
+			}			#event
 		}
 	}
 	focus = {
@@ -1561,8 +1573,92 @@ focus_tree = {
 		}
 		#available_if_capitulated = yes
 		completion_reward = {
-			#event
+			create_country_leader = {
+				name = "Rupert Wittelsbach"
+				picture = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
+				ideology = constitutional_monarchy
+			}
 		}
+	}
+	focus = {
+		id = ENG_constitutional_reforms
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_prince_rupert focus = ENG_princess_elizabeth focus = ENG_the_regency
+		}
+		mutually_exclusive = {
+			focus = ENG_value_of_monarchy
+		}
+		x = 0
+		y = 8
+		relative_position_id = ENG_collect_tarriffs
+		available = {
+
+		}
+		completion_reward = {
+			#country_event = { id = RoF_ENG.148 days = 2 }
+			if = {
+				limit = { has_completed_focus = ENG_prince_rupert }
+				add_ideas = ENG_strong_monarchy_R
+			}
+			if = {
+				limit = { has_completed_focus = ENG_the_regency }
+				add_ideas = ENG_strong_monarchy_M
+			}
+			if = {
+				limit = { has_completed_focus = ENG_princess_elizabeth }
+				add_ideas = ENG_strong_monarchy_E
+			}
+			else = {
+				custom_effect_tooltip = ENG_strong_monarchy.tt
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+
+	}
+	focus = {
+		id = ENG_value_of_monarchy
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_prince_rupert focus = ENG_princess_elizabeth focus = ENG_the_regency
+		}
+		mutually_exclusive = {
+			focus = ENG_constitutional_reforms
+		}
+		x = 2
+		y = 8
+		relative_position_id = ENG_collect_tarriffs
+		available = {
+
+		}
+		completion_reward = {
+			if = {
+				limit = { has_completed_focus = ENG_prince_rupert }
+				add_ideas = ENG_figurehead_monarchy_R
+			}
+			if = {
+				limit = { has_completed_focus = ENG_the_regency }
+				add_ideas = ENG_figurehead_monarchy_M
+			}
+			if = {
+				limit = { has_completed_focus = ENG_princess_elizabeth }
+				add_ideas = ENG_figurehead_monarchy_E
+			}
+			else = {
+				custom_effect_tooltip = ENG_figurehead_monarchy.tt
+			}
+			#country_event = { id = RoF_ENG.173 days = 2 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+
 	}
 	focus = {
 		id = ENG_alliance_with_the_swede
@@ -1571,8 +1667,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_constitutional_monarchy
 		}
-		x = 6
-		y = 7
+		x = 5
+		y = 8
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
@@ -1749,9 +1845,9 @@ focus_tree = {
 			focus = ENG_the_scottish_question
 		}
 		mutually_exclusive = {
-			focus = ENG_overthrow_the_king focus = ENG_constitutional_reforms
+			focus = ENG_overthrow_the_king
 		}
-		x = -4
+		x = -3
 		y = 9
 		relative_position_id = ENG_collect_tarriffs
 		available = {
@@ -1768,46 +1864,17 @@ focus_tree = {
 
 	}
 	focus = {
-		id = ENG_constitutional_reforms
-		icon = GFX_focus_rom_handle_king
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_the_scottish_question focus = ENG_prince_rupert
-		}
-		mutually_exclusive = {
-			focus = ENG_overthrow_the_king focus = ENG_crush_the_rebels
-		}
-		x = 0
-		y = 9
-		relative_position_id = ENG_collect_tarriffs
-		available = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ENG_hide_cromwell }
-				}
-				has_country_flag = ENG_affirm_SCO_rights
-			}
-		}
-		completion_reward = {
-			country_event = { id = RoF_ENG.148 days = 2 }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-
-	}
-	focus = {
 		id = ENG_overthrow_the_king
 		icon = GFX_focus_rom_abdicate
+		dynamic = yes
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_the_scottish_question
 		}
 		mutually_exclusive = {
-			focus = ENG_crush_the_rebels focus = ENG_constitutional_reforms
+			focus = ENG_crush_the_rebels
 		}
-		x = -2
+		x = -1
 		y = 9
 		relative_position_id = ENG_collect_tarriffs
 		available = {
@@ -1838,7 +1905,7 @@ focus_tree = {
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		cost = 10.00
 		prerequisite = {
-			focus = ENG_crush_the_rebels focus = ENG_constitutional_reforms focus = ENG_overthrow_the_king
+			focus = ENG_crush_the_rebels
 		}
 		x = -3
 		y = 10
@@ -1868,7 +1935,6 @@ focus_tree = {
 				limit = { has_global_flag = ENG_civil_war_flag }
 				has_global_flag = ENG_civil_war_done
 			}
-			has_country_flag = ENG_IRE_revolted
 			custom_trigger_tooltip = {
 				tooltip = ENG_rules_IRE.tt
 				OR = {
@@ -1899,22 +1965,69 @@ focus_tree = {
 
 	}
 	focus = {
+		id = ENG_reintegrate_ireland
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_constitutional_reforms
+		}
+		x = 0
+		y = 10
+		relative_position_id = ENG_collect_tarriffs
+		available = {
+			if = {
+				limit = { has_global_flag = ENG_civil_war_flag }
+				has_global_flag = ENG_civil_war_done
+			}
+			NOT = {
+				custom_trigger_tooltip = {
+					tooltip = ENG_not_rules_IRE.tt
+					OR = {
+						ENG = {
+							owns_state = 97
+							owns_state = 120
+							owns_state = 121
+							owns_state = 122
+						}
+						IRE = { is_subject_of = ENG }
+					}
+				}
+			}
+		}
+		bypass = {
+			if = {
+				limit = { has_global_flag = ENG_civil_war_flag }
+				has_global_flag = ENG_civil_war_done
+			}
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_IRE.tt
+				OR = {
+					ENG = {
+						owns_state = 97
+						owns_state = 120
+						owns_state = 121
+						owns_state = 122
+					}
+					IRE = { is_subject_of = ENG }
+				}
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_ENG.161 days = 1 }
+		}
+
+	}
+	focus = {
 		id = ENG_united_kingdom
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 10.00
-		x = -3
+		x = -2
 		y = 11
 		relative_position_id = ENG_collect_tarriffs
 		prerequisite = {
-			focus = ENG_retake_ireland
+			focus = ENG_retake_ireland focus = ENG_reintegrate_ireland
 		}
 		available = {
-			if = {
-				limit = {
-					has_completed_focus = ENG_overthrow_the_king
-				}
-				has_country_flag = ENG_royalists_won
-			}
 			custom_trigger_tooltip = {
 				tooltip = ENG_rules_IRE.tt
 				OR = {
@@ -1934,7 +2047,6 @@ focus_tree = {
 					SCO = { is_subject_of = ENG }
 				}
 			}
-
 		}
 		ai_will_do = {
 			factor = 10
@@ -1945,87 +2057,71 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ENG_value_of_monarchy
-		icon = GFX_focus_rom_handle_king
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_princess_elizabeth focus = ENG_the_regency
-		}
-		x = 3
-		y = 9
-		relative_position_id = ENG_collect_tarriffs
-		available = {
-
-		}
-		completion_reward = {
-			country_event = { id = RoF_ENG.173 days = 2 }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-
-	}
-	focus = {
 		id = ENG_commonwealth_of_england
-		icon = GFX_goal_continuous_increase_nu
+		icon = GFX_focus_chi_british_cooperation
+		dynamic = yes
 		cost = 10.00
 		prerequisite = {
-			focus = ENG_overthrow_the_king focus = ENG_crush_the_rebels
+			focus = ENG_overthrow_the_king focus = ENG_value_of_monarchy
 		}
-		x = 0
+		x = 2
 		y = 10
 		relative_position_id = ENG_collect_tarriffs
 		available = {
-			if = {
-				limit = {
-					has_completed_focus = ENG_crush_the_rebels
-				}
-				has_country_flag = ENG_parliamentarians_won
-			}
 			has_global_flag = ENG_civil_war_done
 		}
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			country_event = { id = RoF_ENG.180 days = 2 }
+			country_event = { id = RoF_ENG.180 days = 7 }
+			if = {
+				limit = {
+					NOT = {
+						custom_trigger_tooltip = {
+							tooltip = ENG_not_rules_SCO.tt
+							OR = {
+								ENG = { owns_state = 415 owns_state = 416 }
+								SCO = { is_subject_of = ENG }
+							}
+						}
+					}
+				}
+				country_event = { id = RoF_ENG.181 hours = 12 }
+			}
+			if = {
+				limit = {
+					NOT = {
+						custom_trigger_tooltip = {
+							tooltip = ENG_not_rules_IRE.tt
+							OR = {
+								ENG = {
+									owns_state = 97
+									owns_state = 120
+									owns_state = 121
+									owns_state = 122
+								}
+								IRE = { is_subject_of = ENG }
+							}
+						}
+					}
+				}
+				country_event = { id = RoF_ENG.182 hours = 12 }
+			}
 		}
 		#available_if_capitulated = yes
 
 	}
 	focus = {
 		id = ENG_house_of_lords
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_focus_generic_treaty
+		dynamic = yes
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_commonwealth_of_england
 		}
 		mutually_exclusive = {
 			focus = ENG_liberty_or_death
-		}
-		x = -1
-		y = 11
-		relative_position_id = ENG_collect_tarriffs
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			country_event = { id = RoF_ENG.181 days = 2 }
-			add_ideas = ENG_house_of_lords_idea
-		}
-		#available_if_capitulated = yes
-
-	}
-	focus = {
-		id = ENG_liberty_or_death
-		icon = GFX_focus_generic_strike_at_democracy2
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_commonwealth_of_england
-		}
-		mutually_exclusive = {
-			focus = ENG_house_of_lords
 		}
 		x = 1
 		y = 11
@@ -2034,7 +2130,31 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			country_event = { id = RoF_ENG.182 days = 2 }
+			country_event = { id = RoF_ENG.185 days = 2 }
+			add_ideas = ENG_house_of_lords_idea
+		}
+		#available_if_capitulated = yes
+
+	}
+	focus = {
+		id = ENG_liberty_or_death
+		icon = GFX_goal_support_democracy
+		dynamic = yes
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_commonwealth_of_england
+		}
+		mutually_exclusive = {
+			focus = ENG_house_of_lords
+		}
+		x = 3
+		y = 11
+		relative_position_id = ENG_collect_tarriffs
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = { id = RoF_ENG.186 days = 2 }
 			add_ideas = ENG_democracy_idea
 		}
 		#available_if_capitulated = yes
@@ -2048,7 +2168,7 @@ focus_tree = {
 			focus = ENG_commonwealth_of_england
 			focus = ENG_alliance_with_the_swede
 		}
-		x = 3
+		x = 5
 		y = 11
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
@@ -2067,13 +2187,15 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_uptime_knowledge
 		}
-		x = 3
+		x = 5
 		y = 12
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {
 			factor = 10
 		}
-
+		completion_reward = {
+			add_ideas = ENG_trident
+		}
 	}
 	focus = {
 		id = ENG_universities
@@ -2083,7 +2205,7 @@ focus_tree = {
 			focus = ENG_united_kingdom
 			focus = ENG_uptime_knowledge
 		}
-		x = -2
+		x = 3
 		y = 12
 		relative_position_id = ENG_collect_tarriffs
 		ai_will_do = {

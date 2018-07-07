@@ -39,7 +39,7 @@ focus_tree = {
 		id = FRA_investigate_grantville
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
-		x = 21
+		x = 24
 		y = 0
 		completion_reward = {
 			add_political_power = 100
@@ -79,7 +79,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_countermeasures_focus
 		}
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = FRA_investigate_grantville
 		completion_reward = {
@@ -111,13 +111,35 @@ focus_tree = {
 
 	}
 	focus = {
+		id = FRA_make_reforms
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = FRA_make_overtures
+		}
+		x = 1
+		y = 3
+		relative_position_id = FRA_investigate_grantville
+		completion_reward = {
+			add_ideas = FRA_constitutionalism
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+	}
+	focus = {
 		id = FRA_anti_habsburg_alliance
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 10.00
 		prerequisite = {
 			focus = FRA_make_overtures
 		}
-		x = 1
+		x = 3
 		y = 3
 		relative_position_id = FRA_investigate_grantville
 		available = {
@@ -150,7 +172,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_learn_from_history
 		}
-		x = 3
+		x = -4
 		y = 2
 		relative_position_id = FRA_investigate_grantville
 		completion_reward = {
@@ -163,12 +185,12 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_promote_from_history
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_military_academy
 		cost = 10.00
 		prerequisite = {
 			focus = FRA_strengthen_crown
 		}
-		x = 3
+		x = -4
 		y = 3
 		relative_position_id = FRA_investigate_grantville
 		completion_reward = {
@@ -186,7 +208,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_promote_from_history
 		}
-		x = 3
+		x = -4
 		y = 4
 		relative_position_id = FRA_investigate_grantville
 		completion_reward = {
@@ -205,7 +227,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_countermeasures_focus
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 10.00
 		prerequisite = {
 			focus = FRA_learn_from_history
@@ -213,7 +235,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = FRA_make_overtures
 		}
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = FRA_investigate_grantville
 		cancel_if_invalid = no
@@ -248,7 +270,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_countermeasures_focus
 		}
-		x = -1
+		x = -2
 		y = 3
 		relative_position_id = FRA_investigate_grantville
 		available = {
@@ -279,7 +301,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_strike_grantville
 		}
-		x = -1
+		x = -2
 		y = 4
 		relative_position_id = FRA_investigate_grantville
 		available = {
@@ -307,7 +329,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_ostend_league_focus
 		}
-		x = -1
+		x = -2
 		y = 5
 		relative_position_id = FRA_investigate_grantville
 		will_lead_to_war_with = NUS

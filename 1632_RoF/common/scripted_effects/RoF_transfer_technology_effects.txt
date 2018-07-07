@@ -19,7 +19,7 @@
 # }
 #
 
-transfer_technology = {
+RoF_transfer_technology = {
 	hidden_effect = {
 		### Air doctrines ####
 		if = {

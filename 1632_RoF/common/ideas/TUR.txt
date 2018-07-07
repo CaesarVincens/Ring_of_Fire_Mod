@@ -2,6 +2,7 @@ ideas = {
 	political_advisor = {
 		TUR_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = TUR
 			}
 			traits = { absolutist_minister }
@@ -20,6 +21,7 @@ ideas = {
 		}
 		TUR_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = TUR
 			}
 			traits = { liberal_minister }
@@ -37,6 +39,7 @@ ideas = {
 		}
 		TUR_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = TUR
 			}
 			traits = { neutrality_minister }

@@ -704,10 +704,10 @@ technologies = {
 		}
 		
 		research_cost = 3
-		start_year = 1631
+		start_year = 1634
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = 6 }
 		}
 		
 		categories = {
@@ -746,7 +746,7 @@ technologies = {
 			}
 		}
 
-		start_year = 1632
+		start_year = 1636
 
 		path = {
 			leads_to_tech = improved_oil_processing
@@ -757,7 +757,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 4 }
+			position = { x = 0 y = 8 }
 		}
 		
 		categories = {
@@ -798,17 +798,17 @@ technologies = {
 			}
 		}
 
-		path = {
-			leads_to_tech = advanced_oil_processing
-			research_cost_coeff = 1
-		}
+		#path = {
+		#	leads_to_tech = advanced_oil_processing
+		#	research_cost_coeff = 1
+		#}
 		
 		research_cost = 1.5
-		start_year = 1634
+		start_year = 1638
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 10 }
 		}
 		
 		categories = {

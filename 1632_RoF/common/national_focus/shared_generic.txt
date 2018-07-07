@@ -1195,7 +1195,7 @@
 		complete_tooltip = {
 			if = {
 				limit = {
-					has_tech = infrastructure_tech_1
+					has_country_flag = infra_built_flag_1
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -1210,7 +1210,7 @@
 			}
 			else_if = {
 				limit = {
-					NOT = { has_tech = infrastructure_tech_1 }
+					NOT = { has_country_flag = infra_built_flag_1 }
 				}
 				add_tech_bonus = {
 					name = infra_bonus
@@ -1251,12 +1251,21 @@
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = infra_1
 				}
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
 							building = infrastructure
 							size > 0
+						}
+						OR = {
+							NOT = { has_state_flag = infra_1 }
+							owner = {
+								any_owned_state = {
+									NOT = { has_state_flag = infra_1 }
+								}
+							}
 						}
 						OR = {
 							is_in_home_area = yes
@@ -1279,17 +1288,24 @@
 						instant_build = yes
 					}
 				}
+				random_owned_controlled_state = {
+					limit = { has_state_flag = infra_1 }
+					clr_state_flag = infra_1
+				}
+				set_country_flag = infra_built_flag_1
 			}
 			else_if = {
 				limit = {
 					NOT = { has_tech = infrastructure_tech_1 }
 				}
+				custom_effect_tooltip = increase_infra_tech.tt
 				add_tech_bonus = {
 					name = infra_bonus
 					bonus = 0.5
 					uses = 1
 					category = infra_tech
 				}
+				set_country_flag = infra_tech_1_flag
 			}
 		}
 		ai_will_do = {
@@ -1334,7 +1350,7 @@
 		complete_tooltip = {
 			if = {
 				limit = {
-					has_tech = infrastructure_tech_2
+					has_country_flag = infra_built_flag_2
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -1349,7 +1365,7 @@
 			}
 			else_if = {
 				limit = {
-					NOT = { has_tech = infrastructure_tech_2 }
+					NOT = { has_country_flag = infra_built_flag_2 }
 				}
 				add_tech_bonus = {
 					name = infra_bonus
@@ -1390,12 +1406,21 @@
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = infra_1
 				}
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
 							building = infrastructure
 							size > 0
+						}
+						OR = {
+							NOT = { has_state_flag = infra_1 }
+							owner = {
+								any_owned_state = {
+									NOT = { has_state_flag = infra_1 }
+								}
+							}
 						}
 						OR = {
 							is_in_home_area = yes
@@ -1418,17 +1443,24 @@
 						instant_build = yes
 					}
 				}
+				random_owned_controlled_state = {
+					limit = { has_state_flag = infra_1 }
+					clr_state_flag = infra_1
+				}
+				set_country_flag = infra_built_flag_2
 			}
 			else_if = {
 				limit = {
 					NOT = { has_tech = infrastructure_tech_2 }
 				}
+				custom_effect_tooltip = increase_infra_tech.tt
 				add_tech_bonus = {
 					name = infra_bonus
 					bonus = 0.5
 					uses = 1
 					category = infra_tech
 				}
+				set_country_flag = infra_tech_2_flag
 			}
 		}
 		ai_will_do = {
@@ -1473,7 +1505,7 @@
 		complete_tooltip = {
 			if = {
 				limit = {
-					has_tech = infrastructure_tech_3
+					has_country_flag = infra_built_flag_3
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -1488,7 +1520,7 @@
 			}
 			else_if = {
 				limit = {
-					NOT = { has_tech = infrastructure_tech_3 }
+					NOT = { has_country_flag = infra_built_flag_3 }
 				}
 				add_tech_bonus = {
 					name = infra_bonus
@@ -1529,12 +1561,21 @@
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = infra_1
 				}
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
 							building = infrastructure
 							size > 0
+						}
+						OR = {
+							NOT = { has_state_flag = infra_1 }
+							owner = {
+								any_owned_state = {
+									NOT = { has_state_flag = infra_1 }
+								}
+							}
 						}
 						OR = {
 							is_in_home_area = yes
@@ -1557,17 +1598,24 @@
 						instant_build = yes
 					}
 				}
+				random_owned_controlled_state = {
+					limit = { has_state_flag = infra_1 }
+					clr_state_flag = infra_1
+				}
+				set_country_flag = infra_built_flag_3
 			}
 			else_if = {
 				limit = {
 					NOT = { has_tech = infrastructure_tech_3 }
 				}
+				custom_effect_tooltip = increase_infra_tech.tt
 				add_tech_bonus = {
 					name = infra_bonus
 					bonus = 0.5
 					uses = 1
 					category = infra_tech
 				}
+				set_country_flag = infra_tech_3_flag
 			}
 		}
 		ai_will_do = {
@@ -1616,7 +1664,7 @@
 	shared_focus = {
 		id = research_initiative_gen
 		text = research_initiative
-		icon = GFX_focus_research
+		icon = GFX_focus_research2
 		cost = 10.00
 		prerequisite = {
 			focus = continued_innovations_gen

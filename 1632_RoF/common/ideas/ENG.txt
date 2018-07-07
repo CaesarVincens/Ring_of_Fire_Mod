@@ -1,5 +1,185 @@
 ideas = {
 	country = {
+		ENG_trident = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_time_factor = -0.05
+			}
+			research_bonus = {
+				rocketry = 0.1
+			}
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		ENG_democracy_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = radical
+					has_government = liberal
+				}
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.25
+				liberal_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_house_of_lords_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_advisor_cost_factor = -0.25
+				constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy_R = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+				war_support_factor = 0.1
+				military_leader_cost_factor = -0.5
+				liberal_drift = 0.005
+				liberal_acceptance = 20
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy_M = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+				stability_factor = 0.2
+				liberal_drift = 0.005
+				liberal_acceptance = 40
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy_E = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+				stability_factor = 0.1
+				political_power_gain = 0.25
+				liberal_drift = 0.005
+				liberal_acceptance = 20
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy_R = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+				military_leader_cost_factor = -0.25
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy_M = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.02
+				constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy_E = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				political_power_gain = 0.5
+				trade_opinion_factor = 0.25
+				liberal_drift = 0.005
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
 		ENG_elizabeth_second_idea = {
 			allowed = {
 				always = no

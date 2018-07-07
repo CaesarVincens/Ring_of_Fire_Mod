@@ -30,9 +30,6 @@ technologies = {
 			tercio_formation_tech
 		}
 
-		enable_subunits = {
-			spear_infantry
-		}
 		research_cost = 1
 		start_year = 1500
 		folder = {

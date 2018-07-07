@@ -2,6 +2,7 @@ ideas = {
 	political_advisor = {
 		HES_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = HES
 			}
 			traits = { absolutist_minister }
@@ -20,6 +21,7 @@ ideas = {
 		}
 		HES_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = HES
 			}
 			traits = { liberal_minister }
@@ -37,6 +39,7 @@ ideas = {
 		}
 		HES_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = HES
 			}
 			traits = { neutrality_minister }

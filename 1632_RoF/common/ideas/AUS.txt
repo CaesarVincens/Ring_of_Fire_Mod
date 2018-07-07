@@ -27,6 +27,7 @@ ideas = {
 	political_advisor = {
 		AUS_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = AUS
 			}
 			traits = { absolutist_minister }
@@ -45,6 +46,7 @@ ideas = {
 		}
 		AUS_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = AUS
 			}
 			traits = { liberal_minister }
@@ -62,6 +64,7 @@ ideas = {
 		}
 		AUS_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = AUS
 			}
 			traits = { neutrality_minister }

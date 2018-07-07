@@ -3,7 +3,7 @@
 country_event = {
 	id = RoF_AUS.100
 	title = RoF_AUS.100.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_boh_flag
 	desc = RoF_AUS.100.d
 	fire_only_once = yes
 
@@ -56,6 +56,7 @@ country_event = {
 			}
 			BOH = {
 				add_named_threat = { threat = 5 name = BOH.1.t }
+				RoF_transfer_technology = yes 
 				create_country_leader = {
 					name = "Albrecht von Wallenstein"
 					desc = "POLITICS_WALLENSTEIN_DESC"
@@ -113,7 +114,7 @@ country_event = {
 			POL = { transfer_state = 428 }
 		}
 		hidden_effect = {
-			country_event = { id = RoF_AUS.101 hours = 6 }
+			country_event = { id = RoF_AUS.101 days = 2 }
 			news_event = { id = RoF_news.02 days = 1 }
 		}
 	}
@@ -123,7 +124,7 @@ country_event = {
 country_event = {
 	id = RoF_AUS.101
 	title = RoF_AUS.100.t
-	picture = GFX_report_event_breitenfeld
+	picture = GFX_report_event_boh_flag
 	desc = RoF_AUS.100.d
 	fire_only_once = yes
 
@@ -136,6 +137,10 @@ country_event = {
 		declare_war_on = { target = BOH type = annex_everything }
 		ai_chance = {
 			factor = 100
+			modifier = {
+				factor = 0
+				is_in_faction_with = BOH
+			}
 		}
 	}
 	
@@ -183,10 +188,32 @@ country_event = {
 	}
 }
 
+#defense of homeland
+country_event = {
+	id = RoF_AUS.115
+	title = RoF_AUS.115.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.115.d
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { country_exists = BOH }
+		NOT = { controls_state = 37 }
+	}
+	
+	immediate = {
+		load_oob = "AUS_defend_wien"
+		add_manpower = 10000
+	}
+	option = {
+		name = RoF_AUS.115.a
+	}
+}
+
 country_event = {
 	id = RoF_AUS.150
 	title = RoF_AUS.150.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_aus_flag
 	desc = RoF_AUS.150.d
 	fire_only_once = yes
 	

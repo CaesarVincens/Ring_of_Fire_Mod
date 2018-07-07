@@ -10,7 +10,7 @@ country_event = {
 
 	trigger = {
 		controls_state = 434
-		date > 1633.1.1
+		date > 1633.10.1
 	}
 	
 	mean_time_to_happen = {
@@ -44,6 +44,7 @@ country_event = {
 				release = BRG
 			}
 			BRG = {
+				RoF_transfer_technology = yes 
 				transfer_state = 435
 				transfer_state = 16
 				transfer_state = 17
@@ -348,6 +349,70 @@ country_event = {
 				}
 			}
 		}
+		ai_chance = { base = 25 }
+	}
+	
+}
+
+#BRA asks for POL help
+country_event = {
+	id = RoF_German.150
+	title = RoF_German.150.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_German.150.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#Help
+	option = {
+		name = RoF_German.150.a
+		hidden_effect = {
+			POL = { country_event = { id = RoF_German.151 hours = 12 } }
+		}
+		add_political_power = -50
+		effect_tooltip = {
+			POL = {
+				transfer_state = 47
+			}
+		}
+		ai_chance = { base = 75 }
+	}
+	#No Help
+	option = {
+		name = RoF_German.150.b
+		
+		ai_chance = { base = 25 }
+	}
+	
+}
+
+#BRA asks for POL help
+country_event = {
+	id = RoF_German.151
+	title = RoF_German.151.t
+	picture = GFX_report_event_bra_flag
+	desc = RoF_German.151.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#Help
+	option = {
+		name = RoF_German.151.a
+		transfer_state = 47
+		ai_chance = { base = 75 }
+	}
+	#No Help
+	option = {
+		name = RoF_German.151.b
+		
 		ai_chance = { base = 25 }
 	}
 	

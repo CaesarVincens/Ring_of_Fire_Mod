@@ -8,109 +8,54 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
-#pseudocode for now until ideas are done
-defined_text = { # Country
-	name = GetRulerTitle
+defined_text = {
+	name = GetCoCProgress
+	text = {
+		localization_key = ROF_COC_AGITATE_PROGRESS
+	}
+}
+defined_text = {
+	name = GetCoCAgitatedStateName
 	text = {
 		trigger = {
-			FROM = { has_idea = emperor_rank }
-			#trigger here
+			has_country_flag = CoC_agitator_alpha
 		}
-		localization_key = RULER_EMPEROR
+		localization_key = ROF_COC_AGITATED_ALPHA_NAME
 	}
 	text = {
 		trigger = {
-			tag = FRA
-			#trigger here
+			has_country_flag = CoC_agitator_beta
 		}
-		localization_key = RULER_FRANCE
+		localization_key = ROF_COC_AGITATED_BETA_NAME
 	}
 	text = {
 		trigger = {
-			has_idea = king_rank
-			#more trigger here
+			has_country_flag = CoC_agitator_gamma
 		}
-		localization_key = RULER_KING
+		localization_key = ROF_COC_AGITATED_GAMMA_NAME
 	}
-	text = {
-		trigger = {
-			has_idea = archduke_rank
-			#trigger here
-		}
-		localization_key = RULER_ARCHDUKE
-	}
-	text = {
-		trigger = {
-			has_idea = duke_rank
-			#more trigger here
-		}
-		localization_key = RULER_DUKE
-	}
-	text = {
-		trigger = {
-			has_idea = elector_rank
-			#trigger here
-		}
-		localization_key = RULER_ELECTOR
-	}
-	text = {
-		trigger = {
-			has_idea = count_rank
-			#more trigger here
-		}
-		localization_key = RULER_COUNT
-	}
-	text = {
-		trigger = {
-			has_idea = SPA_colony
-			#trigger here
-		}
-		localization_key = RULER_VICEROY
-	}
-	text = {
-		trigger = {
-			has_idea = other_colony
-			#more trigger here
-		}
-		localization_key = RULER_GOVERNOR
-	}
-	text = {
-		trigger = {
-			has_idea = ITA_republic
-			#trigger here
-		}
-		localization_key = RULER_DOGE
-	}
-	text = {
-		trigger = {
-			has_idea = UPS_republic
-			#more trigger here
-		}
-		localization_key = RULER_STADTHOLDER
-	}
-	text = {
-		trigger = {
-			has_idea = free_city
-			#more trigger here
-		}
-		localization_key = RULER_STADTRAT
-	}
-	text = {
-		trigger = {
-			has_idea = other_republic
-			#more trigger here
-		}
-		localization_key = RULER_PRIMEMINISTER
-	}
-	text = {
-		trigger = {
-			has_idea = shogun
-			#more trigger here
-		}
-		localization_key = RULER_SHOGUN
-	}
+}
 
-
+defined_text = {
+	name = GetCoCAgitatedStateVar
+	text = {
+		trigger = {
+			has_country_flag = CoC_agitator_alpha
+		}
+		localization_key = ROF_COC_AGITATED_ALPHA_VAR
+	}
+	text = {
+		trigger = {
+			has_country_flag = CoC_agitator_beta
+		}
+		localization_key = ROF_COC_AGITATED_BETA_VAR
+	}
+	text = {
+		trigger = {
+			has_country_flag = CoC_agitator_gamma
+		}
+		localization_key = ROF_COC_AGITATED_GAMMA_VAR
+	}
 }
 
 defined_text = { # Country

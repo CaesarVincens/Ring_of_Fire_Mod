@@ -39,12 +39,59 @@ defined_text = {
 	name = ENG_commonwealth_of_england_script
 	text = {
 		trigger = {
-			has_completed_focus = ENG_hide_cromwell
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_IRE.tt
+				OR = {
+					ENG = {
+						owns_state = 97
+						owns_state = 120
+						owns_state = 121
+						owns_state = 122
+					}
+					IRE = { is_subject_of = ENG }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_SCO.tt
+				OR = {
+					ENG = { owns_state = 415 owns_state = 416 }
+					SCO = { is_subject_of = ENG }
+				}
+			}
 		}
-		localization_key = ENG_commonwealth_of_england_cons
+		localization_key = ENG_commonwealth_of_england_uk
 	}
 	text = {
-		localization_key = ENG_commonwealth_of_england_abs
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_IRE.tt
+				OR = {
+					ENG = {
+						owns_state = 97
+						owns_state = 120
+						owns_state = 121
+						owns_state = 122
+					}
+					IRE = { is_subject_of = ENG }
+				}
+			}
+		}
+		localization_key = ENG_commonwealth_of_england_eng_ire
+	}
+	text = {
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_SCO.tt
+				OR = {
+					ENG = { owns_state = 415 owns_state = 416 }
+					SCO = { is_subject_of = ENG }
+				}
+			}
+		}
+		localization_key = ENG_commonwealth_of_england_gbr
+	}
+	text = {
+		localization_key = ENG_commonwealth_of_england_eng
 	}
 }
 
@@ -123,34 +170,5 @@ defined_text = {
 	}
 	text = {
 		localization_key = ENG_united_kingdom_abs_desc
-	}
-}
-
-defined_text = {
-	name = ENG_retake_ireland_script
-	text = {
-		trigger = {
-			has_completed_focus = ENG_constitutional_reforms
-		}
-		localization_key = ENG_retake_ireland_cons
-	}
-	text = {
-		localization_key = ENG_retake_ireland_abs
-	}
-}
-
-defined_text = {
-	name = ENG_retake_ireland_script_desc
-	text = {
-		trigger = {
-			OR = {
-				has_completed_focus = ENG_constitutional_reforms
-				has_completed_focus = ENG_overthrow_the_king
-			}
-		}
-		localization_key = ENG_retake_ireland_cons_desc
-	}
-	text = {
-		localization_key = ENG_retake_ireland_abs_desc
 	}
 }
