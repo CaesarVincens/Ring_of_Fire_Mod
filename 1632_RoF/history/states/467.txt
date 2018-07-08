@@ -1,12 +1,12 @@
 
-state={
-	id=467
-	name="STATE_467"
-	resources={
-		steel=12.000
+state = {
+	id = 467
+	name = "STATE_467"
+	resources = {
+		steel = 12.000
 	}
 
-	history={
+	history = {
 		owner = SWE
 		victory_points = {
 			3375 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		211 242 295 299 329 363 3063 3229 3286 3375 6148 6331 6406 9251 9329 9406 9410 11231 11280 11311 11390 13095 
 	}
-	manpower=679200
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 179200
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

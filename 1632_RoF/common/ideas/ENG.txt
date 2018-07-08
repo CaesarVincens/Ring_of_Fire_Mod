@@ -1,8 +1,298 @@
 ideas = {
 	country = {
+		ENG_trident = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_time_factor = -0.05
+			}
+			research_bonus = {
+				rocketry = 0.1
+			}
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		ENG_democracy_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = radical
+					has_government = liberal
+				}
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.25
+				liberal_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_house_of_lords_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_advisor_cost_factor = -0.25
+				constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy_R = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+				war_support_factor = 0.1
+				military_leader_cost_factor = -0.5
+				liberal_drift = 0.005
+				liberal_acceptance = 20
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy_M = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+				stability_factor = 0.2
+				liberal_drift = 0.005
+				liberal_acceptance = 40
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_figurehead_monarchy_E = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+				stability_factor = 0.1
+				political_power_gain = 0.25
+				liberal_drift = 0.005
+				liberal_acceptance = 20
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				#stability_factor = 0.1
+				#political_power_gain = 0.5
+				#constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy_R = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+				military_leader_cost_factor = -0.25
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy_M = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.02
+				constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_strong_monarchy_E = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			modifier = {
+				political_power_gain = 0.5
+				trade_opinion_factor = 0.25
+				liberal_drift = 0.005
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_elizabeth_second_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				stability_weekly = -0.001
+				political_power_gain = -0.5
+				constitutionalist_drift = 0.2
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_mary_second_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				political_power_gain = -0.25
+				constitutionalist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_parliament_prorogued = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.5
+				absolutist_drift = 0.005
+			}
+			removal_cost = -1
+			picture = generic_disjointed_gov
+		}
+		ENG_united_kingdom_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_weekly = 0.001
+				political_power_gain = 0.5
+				constitutionalist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_england_triumphant_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_weekly = 0.001
+				political_power_gain = 0.5
+				absolutist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = brittish_stoicism
+		}
+		ENG_emergency_measures = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				training_time_factor = -0.1
+				min_export = -0.1
+				stability_weekly = -0.001
+				industrial_capacity_factory = 0.05
+				absolutist_drift = 0.01
+			}
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus			
+		}
+		ENG_st_germain = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
 		ENG_FRA_payment = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
 			}
 			modifier = {
 				research_time_factor = -0.05
@@ -11,57 +301,72 @@ ideas = {
 			removal_cost = -1
 			picture = generic_goods_red_bonus			
 		}
+		ENG_DEN_payment = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				consumer_goods_factor = -0.01
+				production_speed_buildings_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
+		ENG_tarrifs = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			modifier = {
+				political_power_gain = 0.5
+				consumer_goods_factor = -0.02
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus			
+		}
 	}
 	political_advisor = {
-		ENG_absolutist_advisor = {
+		ENG_thomas_wentworth = {
 			allowed = {
 				original_tag = ENG
 			}
-			traits = { absolutist_minister }
-			on_add = {
-				country_event = conv.political.01
+			available = {
+				has_completed_focus = ENG_cutting_the_cord
+				NOT = { has_completed_focus = ENG_changing_of_the_guard }
 			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
-			}
+			traits = { silent_workhorse }
+			picture = wentworth_pic
 			ai_will_do = {
-				factor = 0
+				factor = 1
 			}
 		}
-		ENG_democratic_advisor = {
+		ENG_richard_boyle = {
 			allowed = {
 				original_tag = ENG
 			}
-			traits = { liberal_minister }
-			on_add = {
-				country_event = conv.political.25
+			available = {
+				has_completed_focus = ENG_cutting_the_cord
+				has_completed_focus = ENG_changing_of_the_guard
 			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
-			}
+			traits = { backroom_backstabber }
+			picture = boyle_pic
 			ai_will_do = {
-				factor = 0
+				factor = 1
 			}
 		}
-		ENG_neutrality_advisor = {
+		ENG_william_laud = {
 			allowed = {
 				original_tag = ENG
 			}
-			traits = { neutrality_minister }
-			picture = neutral_foreign_policy
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
+			available = {
+				NOT = { has_completed_focus = ENG_changing_of_the_guard }				
 			}
-			ai_will_do = {
-				factor = 0
-			}
+			picture = laud_pic
 		}
 	}
 	tank_manufacturer = { 

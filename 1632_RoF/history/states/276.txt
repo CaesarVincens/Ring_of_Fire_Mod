@@ -1,15 +1,16 @@
 
-state={
-	id=276
-	name="STATE_276"
-	resources={
-		rubber=1.000
+state = {
+	id = 276
+	name = "STATE_276"
+	resources = {
+		#rubber = 1.000
 	}
 
-	history={
+	history = {
+		owner = WAU
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
@@ -17,10 +18,10 @@ state={
 
 	}
 
-	provinces={
-		1428 1437 1574 4211 7293 7369 7384 7396 10191 10342 10409 12126 12162 12219 12234 
+	provinces = {
+		1428 1437 1574 4211 7293 7369 7384 7396 10191 10342 10409 12126 12162 12219 12234 13002 13005
 	}
-	manpower=637500
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 637500
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

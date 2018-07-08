@@ -1,26 +1,46 @@
+
 state={
 	id=573
-	name= "STATE_573"
-	manpower = 216000
-
+	name="STATE_573"
 	resources={
-		oil = 2
+		oil=2.000
 	}
-	state_category = town
 
 	history={
-		owner = VER
-		victory_points = { 374 8 }
+		owner = AUS
+		victory_points = {
+			374 8 
+		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 3
 			arms_factory = 0
 			air_base = 0
+			11432 = {
+				bunker = 1
+
+			}
+			3418 = {
+				bunker = 1
+
+			}
+			3585 = {
+				bunker = 1
+
+			}
+			6470 = {
+				bunker = 1
+
+			}
 		}
-		add_core_of = VER
+		add_core_of = BOH
+
 	}
 
 	provinces={
-		374 3271 6349 
+		424 3418 3585 6470 9555 11432 
 	}
+	manpower=216000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

@@ -1,15 +1,15 @@
 
-state={
-	id=49
-	name="STATE_49"
-	resources={
-		aluminium=8.000
-		chromium=34.000
-		steel=20.000
-		tungsten=28.000
+state = {
+	id = 49
+	name = "STATE_49"
+	resources = {
+		aluminium = 8.000
+		chromium = 34.000
+		steel = 20.000
+		tungsten = 28.000
 	}
 
-	history={
+	history = {
 		owner = BRT
 		victory_points = {
 			4837 8 
@@ -25,10 +25,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1666 1696 1761 4705 4716 4762 4766 4835 4837 4868 7736 7751 7759 7816 7835 7854 7860 10528 10583 10654 10658 12506 12507 12575 12644 
 	}
-	manpower=217000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 217000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

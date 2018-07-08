@@ -1,15 +1,16 @@
 
-state={
-	id=431
-	name="STATE_431"
+state = {
+	id = 431
+	name = "STATE_431"
 
-	history={
+	history = {
+		owner = WAF
 		victory_points = {
 			9321 8 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
@@ -17,10 +18,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		2188 13019 
 	}
-	manpower=768400
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 768400
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

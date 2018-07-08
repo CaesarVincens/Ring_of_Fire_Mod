@@ -1,0 +1,61 @@
+﻿division_template = {
+	name = "Cavaliers"			
+	is_locked = yes
+	#division_names_group = ENG_cavaliers
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		tercio_infantry = { x = 0 y = 1 }
+		tercio_infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	#london
+	division = {
+		name = "1. Cavaliers Brigade"
+		location = 6103
+		division_template = "Cavaliers"
+	}
+	division = {
+		name = "2. Cavaliers Brigade"
+		location = 6103
+		division_template = "Cavaliers"
+	}
+	division = {
+		name = "3. Cavaliers Brigade"
+		location = 6103
+		division_template = "Cavaliers"
+	}
+	division = {
+		name = "4. Cavaliers Brigade"
+		location = 6103
+		division_template = "Cavaliers"
+	}
+	division = {
+		name = "5. Cavaliers Brigade"
+		location = 6103
+		division_template = "Cavaliers"
+	}
+	division = {
+		name = "6. Cavaliers Brigade"
+		location = 6103
+		division_template = "Cavaliers"
+	}
+	#birmingham
+	division = {
+		name = "7. Cavaliers Brigade"
+		location = 9297
+		division_template = "Cavaliers"
+	}
+	division = {
+		name = "8. Cavaliers Brigade"
+		location = 9297
+		division_template = "Cavaliers"
+	}
+	#bristol
+	division = {
+		name = "9. Cavaliers Brigade"
+		location = 3369
+		division_template = "Cavaliers"
+	}
+}

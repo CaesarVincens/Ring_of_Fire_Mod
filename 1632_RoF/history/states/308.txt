@@ -1,14 +1,14 @@
 
-state={
-	id=308
-	name="STATE_308"
-	resources={
-		chromium=1.000
-		steel=3.000
-		tungsten=1.000
+state = {
+	id = 308
+	name = "STATE_308"
+	resources = {
+		chromium = 1.000
+		steel = 3.000
+		tungsten = 1.000
 	}
 
-	history={
+	history = {
 		owner = NUS
 		victory_points = {
 			9497 20 
@@ -25,10 +25,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		9497 
 	}
-	manpower=208400
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 18400
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

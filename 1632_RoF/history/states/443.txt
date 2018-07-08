@@ -1,9 +1,9 @@
 
-state={
-	id=443
-	name="STATE_443"
+state = {
+	id = 443
+	name = "STATE_443"
 
-	history={
+	history = {
 		owner = SPR
 		victory_points = {
 			6906 3 
@@ -20,10 +20,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		832 871 888 962 1093 3799 3835 3873 3891 3945 4098 4195 6817 6856 6906 6959 7111 9812 9889 9896 9903 10024 10109 11807 11884 
 	}
-	manpower=1520000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1520000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

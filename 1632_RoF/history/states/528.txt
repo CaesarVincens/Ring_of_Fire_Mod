@@ -1,12 +1,12 @@
 
-state={
-	id=528
-	name="STATE_528"
-	resources={
-		oil=8.000
+state = {
+	id = 528
+	name = "STATE_528"
+	resources = {
+		oil = 8.000
 	}
 
-	history={
+	history = {
 		owner = TUR
 		victory_points = {
 			4951 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1631 2097 3795 4951 7994 10744 10876 12046 12372 12413 12839 12855 
 	}
-	manpower=569892
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 569892
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

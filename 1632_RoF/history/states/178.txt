@@ -1,13 +1,13 @@
 
-state={
-	id=178
-	name="STATE_178"
-	resources={
-		aluminium=2.000
-		steel=15.000
+state = {
+	id = 178
+	name = "STATE_178"
+	resources = {
+		aluminium = 2.000
+		steel = 15.000
 	}
 
-	history={
+	history = {
 		owner = IRO
 		victory_points = {
 			9708 8 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		598 734 1436 3602 3702 3733 3747 6707 6717 6778 6795 6916 9664 9708 9721 9754 10381 11650 11654 11660 11662 11680 11722 
 	}
-	manpower=916000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 916000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

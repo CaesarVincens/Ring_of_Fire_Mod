@@ -14,7 +14,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = fascism
+		has_government = absolutist
 		FROM = { has_government = neutrality }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
@@ -40,7 +40,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_government = fascism
+		has_government = absolutist
 		FROM = { has_government = liberal }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
@@ -66,8 +66,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_government = fascism
-		FROM = { has_government = communism }
+		has_government = absolutist
+		FROM = { has_government = radical }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 
@@ -92,8 +92,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = fascism
-		FROM = { has_government = fascism }
+		has_government = absolutist
+		FROM = { has_government = absolutist }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -118,7 +118,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = communism
+		has_government = radical
 		FROM = { has_government = neutrality }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
@@ -144,7 +144,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = communism
+		has_government = radical
 		FROM = { has_government = liberal }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
@@ -170,8 +170,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = communism
-		FROM = { has_government = communism }
+		has_government = radical
+		FROM = { has_government = radical }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -196,8 +196,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = communism
-		FROM = { has_government = fascism }
+		has_government = radical
+		FROM = { has_government = absolutist }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -275,7 +275,7 @@ country_event = {
 
 	trigger = {
 		has_government = liberal
-		FROM = { has_government = communism }
+		FROM = { has_government = radical }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -301,7 +301,7 @@ country_event = {
 
 	trigger = {
 		has_government = liberal
-		FROM = { has_government = fascism }
+		FROM = { has_government = absolutist }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -379,7 +379,7 @@ country_event = {
 
 	trigger = {
 		has_government = neutrality
-		FROM = { has_government = communism }
+		FROM = { has_government = radical }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -405,7 +405,7 @@ country_event = {
 
 	trigger = {
 		has_government = neutrality
-		FROM = { has_government = fascism }
+		FROM = { has_government = absolutist }
 		NOT = { has_country_flag = war_justification_last_event_political }
 	}
 	
@@ -834,9 +834,20 @@ country_event = {
 		name = war_justification.301.a
 		trigger = { has_government = absolutist }
 		add_political_power = -30
-		add_national_unity = -0.03
+		add_stability = -0.03
 		add_popularity = {
 			ideology = absolutist
+			popularity = -0.05
+		}
+	}
+
+	option = {
+		name = war_justification.301.a
+		trigger = { has_government = constitutionalist }
+		add_political_power = -30
+		add_stability = -0.03
+		add_popularity = {
+			ideology = constitutionalist
 			popularity = -0.05
 		}
 	}
@@ -845,7 +856,7 @@ country_event = {
 		name = war_justification.301.b
 		trigger = { has_government = liberal }
 		add_political_power = -30
-		add_national_unity = -0.03
+		add_stability = -0.03
 		add_popularity = {
 			ideology = liberal
 			popularity = -0.05
@@ -853,10 +864,21 @@ country_event = {
 	}
 
 	option = {
+		name = war_justification.301.b
+		trigger = { has_government = radical }
+		add_political_power = -30
+		add_stability = -0.03
+		add_popularity = {
+			ideology = radical
+			popularity = -0.05
+		}
+	}
+	
+	option = {
 		name = war_justification.301.c
 		trigger = { has_government = neutrality }
 		add_political_power = -30
-		add_national_unity = -0.03
+		add_stability = -0.03
 
 	}
 }

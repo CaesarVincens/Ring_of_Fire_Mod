@@ -8,6 +8,27 @@ technology_categories = {
 	light_artillery
 	heavy_artillery
 	cavalry_tech
+	man_of_war_tech
+	frigate_tech
+	steamship_tech
+	ironclad_tech
+	timberclad_tech
+	balloon_tech
+	fixed_wing_tech
+	cat_combined_arms
+	cat_pike_and_shot
+	cat_cavalry_supremacy
+	cat_mass_offensive
+	cat_coastal_defense
+	cat_regional_fleet
+	cat_global_empire
+	infra_tech
+	steel_tech
+	steam_tank_tech
+	gas_tank_tech
+	apc_tech
+	engine_tech
+	air_research
 }
 
  

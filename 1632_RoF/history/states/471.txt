@@ -1,14 +1,14 @@
-state={
-	id=471
+state = {
+	id = 471
 	name= "STATE_471"
-	manpower = 735680
+	manpower = 55680
 
-	resources={
+	resources = {
 		steel = 1
 	}
 	state_category = town
 
-	history={
+	history = {
 		owner = SWE
 		victory_points = { 9340 3 }
 		buildings = {
@@ -20,7 +20,7 @@ state={
 		add_core_of = SWE
 	}
 
-	provinces={
+	provinces = {
 		222 319 341 3298 3388 7482 9240 9317 9340 9501 10323 10493 11222 11302 
 	}
 }

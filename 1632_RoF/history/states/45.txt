@@ -1,12 +1,12 @@
 
-state={
-	id=45
-	name="STATE_45"
-	resources={
-		aluminium=15.000
+state = {
+	id = 45
+	name = "STATE_45"
+	resources = {
+		aluminium = 15.000
 	}
 
-	history={
+	history = {
 		owner = BRA
 		victory_points = {
 			6521 9 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		375 3207 3258 3312 3367 3499 6521 9428 9496 11444 11505 
 	}
-	manpower=1491500
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 1491500
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

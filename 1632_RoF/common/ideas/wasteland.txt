@@ -1,0 +1,38 @@
+ideas = {
+	country = {
+	
+		wasteland = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				neutrality_drift = 1
+				trade_opinion_factor = -1000.0
+				join_faction_tension = 500
+				enemy_justify_war_goal_time = 500.0
+				research_time_factor = 1
+				political_power_gain = -500
+				justify_war_goal_time = 9000
+				conscription = -10
+				drift_defence_factor = 1
+				consumer_goods_factor = 1
+				MONTHLY_POPULATION = 0
+				training_time_army_factor = 1000000
+				consumer_goods_factor = 1
+				local_resources_factor = -1
+				max_command_power = -100
+				improve_relations_maintain_cost_factor = 100
+			}
+		}
+	}
+}

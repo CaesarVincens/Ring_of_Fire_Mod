@@ -1,11 +1,11 @@
-state={
-	id=279
+state = {
+	id = 279
 	name= "STATE_279"
 	manpower = 748200
 
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = MUG
 		victory_points = { 12884 3 }
 		buildings = {
@@ -17,7 +17,7 @@ state={
 		add_core_of = MUG
 	}
 
-	provinces={
+	provinces = {
 		7316 12884 
 	}
 }

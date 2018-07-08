@@ -4,6 +4,7 @@ oob = "ALB_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -42,7 +43,7 @@ add_ideas = {
 create_country_leader = {
     name = "Behxhet Evangjeli"
     desc = "POLITICS_BEHXHET_EVANGJELI_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+	picture = "gfx/leaders/leader_unknown.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

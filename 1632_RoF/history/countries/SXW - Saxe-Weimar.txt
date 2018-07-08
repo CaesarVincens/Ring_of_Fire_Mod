@@ -4,6 +4,7 @@ oob = "SXW_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -38,8 +39,14 @@ set_politics = {
 
 set_country_flag = german_tag_flag
 add_ideas = {
+	SXW_support_SWE
 }
-set_national_unity = 0.75
+
+give_military_access = SWE
+add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+
+set_stability = 0.5
 create_country_leader = {
     name = "Wilhelm Wettin"
     desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"

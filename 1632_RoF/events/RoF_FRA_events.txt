@@ -12,8 +12,8 @@ country_event = {
 	
 	immediate = {
 		FRA = { set_country_flag = ostend_leader } #create_faction = "Ostend League" }
-		DEN = { country_event = { id = RoF_FRA.102 days = 7 } }
 		ENG = { country_event = { id = RoF_FRA.101 days = 7 } }
+		DEN = { country_event = { id = RoF_FRA.102 days = 7 } }
 		SPR = { country_event = { id = RoF_FRA.103 days = 7 } }
 	}
 	option = {
@@ -25,7 +25,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.101
 	title = RoF_FRA.101.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.101.d
 	fire_only_once = yes
 
@@ -41,7 +41,7 @@ country_event = {
 			country_event = { id = RoF_FRA.105 days = 14 }
 		}
 		add_timed_idea = { idea = ENG_FRA_payment days = 180 }
-		#set_country_flag = ostend_member
+		set_country_flag = pseudo_ostend_member
 		effect_tooltip = {
 			end_puppet = C13
 			FRA = { set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony } }
@@ -58,7 +58,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.102
 	title = RoF_FRA.102.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.102.d
 	fire_only_once = yes
 
@@ -85,7 +85,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.103
 	title = RoF_FRA.103.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.103.d
 	fire_only_once = yes
 
@@ -112,8 +112,53 @@ country_event = {
 country_event = {
 	id = RoF_FRA.105
 	title = RoF_FRA.105.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.105.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		ENG = {
+			end_puppet = C13
+		}
+		C13 = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = NFR
+			if = {
+				limit = { 232 = { is_owned_by = FRA } }
+				transfer_state = 232
+				add_state_core = 232
+			}
+			if = {
+				limit = { 135 = { is_owned_by = FRA } }
+				transfer_state = 135
+				add_state_core = 135
+			}
+			if = {
+				limit = { 117 = { is_owned_by = FRA } }
+				transfer_state = 117
+				add_state_core = 117
+			}
+			if = {
+				limit = { 118 = { is_owned_by = FRA } }
+				transfer_state = 118
+				add_state_core = 118
+			}
+			add_timed_idea = { idea = NFR_new_overlord days = 120 }
+		}
+		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
+	}
+	option = {
+		name = RoF_FRA.105.a
+	}
+}
+
+country_event = {
+	id = RoF_FRA.110
+	title = RoF_FRA.110.t
+	picture = GFX_report_event_fra_flag
+	desc = RoF_FRA.110.d
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -129,16 +174,15 @@ country_event = {
 		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
 	}
 	option = {
-		name = RoF_FRA.105.a
+		name = RoF_FRA.110.a
 	}
 }
-
 
 #dunkirk battle
 country_event = {
 	id = RoF_FRA.120
 	title = RoF_FRA.120.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_fra_flag
 	desc = RoF_FRA.120.d
 	fire_only_once = yes
 
@@ -176,7 +220,7 @@ country_event = {
 country_event = {
 	id = RoF_FRA.121
 	title = RoF_FRA.121.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_nus_swe_flag
 	desc = RoF_FRA.121.d
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -188,12 +232,27 @@ country_event = {
 				type = annex_everything
 			}
 		}
+		DEN = {
+			add_to_war = {
+				targeted_alliance = FRA
+				enemy = NUS
+				hostility_reason = asked_to_join
+			}
+		}
+		SPR = {
+			add_to_war = {
+				targeted_alliance = FRA
+				enemy = NUS
+				hostility_reason = asked_to_join
+			}
+		}
 	}
 	option = {
 		name = RoF_FRA.121.a
 		news_event = { id = RoF_news.21 days = 1 }
 	}
 }
+
 #Raid Wietze
 country_event = {
 	id = RoF_FRA.125

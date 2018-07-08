@@ -4,6 +4,7 @@ oob = "VER_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -19,17 +20,17 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 14
+            popularity = 74
         }
-        liberal = {
-            popularity = 84
+        constitutionalist = {
+            popularity = 24
         }
         neutrality = {
             popularity = 2
         }
     }
     
-    ruling_party = liberal
+    ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -40,13 +41,13 @@ set_country_flag = german_tag_flag
 add_ideas = {
 	balanced_eco
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "John Frederick"
     desc = "POLITICS_OTTO_VON SACHSEN-ALTENBURG_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Bremen_John_Frederick.dds"
     expire = "1660.1.1"
-    ideology = conservatism
+    ideology = bishopric
     traits = {
     }
 }

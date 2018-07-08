@@ -1,12 +1,12 @@
 
-state={
-	id=226
-	name="STATE_226"
-	resources={
-		chromium=9.000
+state = {
+	id = 226
+	name = "STATE_226"
+	resources = {
+		chromium = 9.000
 	}
 
-	history={
+	history = {
 		owner = KAZ
 		victory_points = {
 			10601 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1459 1532 1554 1623 4488 4499 4578 4581 4636 4638 7486 7501 7507 7777 10187 10353 10366 10420 10470 10488 10601 12161 12471 
 	}
-	manpower=1088008
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 1088008
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

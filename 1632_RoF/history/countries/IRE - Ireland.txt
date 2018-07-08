@@ -4,6 +4,7 @@ oob = "IRE_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -12,38 +13,41 @@ transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 100
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 9
-        }
-        liberal = {
-            popularity = 89
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = liberal
-    last_election = "1631.1.1"
-    election_frequency = 48
-    elections_allowed = yes
+	ruling_party = liberal
+	parties = {
+		absolutist = {
+			popularity = 10
+		}
+		constitutionalist = {
+			popularity = 20
+		}
+		liberal = {
+			popularity = 45
+		}
+		radical = {
+			popularity = 20
+		}
+		neutrality = {
+			popularity = 5
+		}
+	}
+	election_frequency = 48
+	elections_allowed = yes
 }
 
 
 add_ideas = {
 }
 create_country_leader = {
-    name = "Harry Plunket"
-    desc = "POLITICS_HARRY_PLUNKET_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
-    expire = "1660.1.1"
-    ideology = democracy
-    traits = {
-    }
+	name = "Owen Roe O'Neil"
+	desc = "POLITICS_GRAHAM_BROWN_DESC"
+	picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
+	expire = "1660.1.1"
+	ideology = democracy
+	traits = {
+	}
 }

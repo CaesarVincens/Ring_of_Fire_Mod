@@ -1,13 +1,13 @@
 
-state={
-	id=462
-	name="STATE_462"
-	resources={
-		aluminium=1.000
-		steel=7.000
+state = {
+	id = 462
+	name = "STATE_462"
+	resources = {
+		aluminium = 1.000
+		steel = 7.000
 	}
 
-	history={
+	history = {
 		owner = SPN
 		victory_points = {
 			11606 3 
@@ -27,10 +27,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		575 3476 3516 3536 3576 6504 9536 11483 11606 13081 
 	}
-	manpower=280396
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 280396
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

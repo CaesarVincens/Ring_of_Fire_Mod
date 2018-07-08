@@ -1,0 +1,313 @@
+ideas = {
+	
+	# Special ones that can be applied on other countries through focus system.
+	country = {
+		GG_tyw_neutrality = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_neutrality_drift_bonus
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		SXW_support_SWE = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				constitutionalist_acceptance = 50
+				send_volunteer_divisions_required = -1
+			}
+			rule = {
+				can_send_volunteers = yes
+			}
+		}
+
+		GG_prohibit_american_influence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			removal_cost = -1
+			picture = ast_naval_auxiliary_patrol
+			modifier = {
+				drift_defence_factor = 0.2
+				absolutist_drift = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.125
+			}
+		}
+		GG_welcome_american_influence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				absolutist_drift = -0.2
+				research_time_factor = -0.02
+			}
+		}
+		GG_royal_dictatorship_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			
+			removal_cost = -1
+
+			picture = HUN_hungarian_monarchy_habsburg
+	
+			modifier = {
+				absolutist_drift = 0.15
+				min_export = -0.1
+				conscription = 0.01
+				opinion_gain_monthly_same_ideology_factor = 0.5
+			}
+		}
+		GG_nobles_republic = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			removal_cost = -1
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				constitutionalist_drift = 0.15
+				min_export = -0.1
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				war_support_factor = 0.05
+			}
+		}
+
+		GG_constitution = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			removal_cost = -1
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				constitutionalist_drift = 0.05
+				stability_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+
+		GG_natural_order = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = constitutionalist
+					has_government = absolutist
+				}
+			}
+			removal_cost = -1
+			picture = generic_oppression
+			modifier = {
+				war_support_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		GG_conscripts = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = constitutionalist
+					has_government = absolutist
+				}
+			}
+			removal_cost = -1
+			picture = chi_forced_conscription
+			modifier = {
+				conscription = 0.05
+				non_core_manpower = -0.02
+				training_time_factor = 0.1
+				industrial_capacity_factory = -0.02
+				industrial_capacity_dockyard = -0.02
+			}
+		}
+		
+		GG_noble_privileges = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = constitutionalist
+					has_government = absolutist
+				}
+			}
+			removal_cost = -1
+			picture = chi_forced_conscription
+			modifier = {
+				subjects_autonomy_gain = -0.1
+				military_leader_cost_factor = -0.25
+				local_resources_factor = 0.1
+			}
+		}
+
+		
+		GG_democracy_idea = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+	
+			modifier = {
+				stability_factor = 0.05
+				liberal_drift = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		GG_bill_of_rights = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+	
+			modifier = {
+				war_support_factor = 0.05
+				liberal_drift = 0.05
+				consumer_goods_factor = -0.03
+				non_core_manpower = 0.03
+			}
+		}
+
+		GG_open_society = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = liberal
+					has_government = radical
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+	
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				stability_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		GG_volunteers = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = liberal
+					has_government = radical
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+	
+			modifier = {
+				conscription_factor = 0.05
+				conscription = 0.01
+				non_core_manpower = 0.05
+			}
+		}
+
+		GG_common_good = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = liberal
+					has_government = radical
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+	
+			modifier = {
+				research_time_factor = -0.05
+				consumer_goods_factor = -0.05
+				industry_free_repair_factor = 0.1
+			}
+		}
+
+		GG_radical_revolution = {
+						
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = radical
+			}
+			
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+	
+			modifier = {
+				radical_drift = 0.15
+				consumer_goods_factor = -0.05
+				conscription = 0.01
+				stability_factor = 0.1
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+
+}

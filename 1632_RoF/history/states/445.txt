@@ -1,12 +1,12 @@
 
-state={
-	id=445
-	name="STATE_445"
-	resources={
-		steel=12.000
+state = {
+	id = 445
+	name = "STATE_445"
+	resources = {
+		steel = 12.000
 	}
 
-	history={
+	history = {
 		owner = SPR
 		victory_points = {
 			1176 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		747 1090 1176 1192 4065 4095 4135 4182 7068 7153 7196 7198 9979 10009 10063 10111 11956 12038 
 	}
-	manpower=1298400
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1298400
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

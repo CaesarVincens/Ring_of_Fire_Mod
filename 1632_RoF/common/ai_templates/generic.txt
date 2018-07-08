@@ -7,17 +7,6 @@ armor_generic = {
 	upgrade_prio = {
 		factor = 2.17
 
-		modifier = {
-			factor = 7
-			OR = {
-				has_tech = basic_medium_tank
-			}
-		}
-		
-		modifier = {
-			factor = 2
-			has_tech = main_battle_tank
-		}
 	}
 	
 	match_to_count = 0.5
@@ -40,7 +29,7 @@ armor_generic = {
 		}
 		
 		can_upgrade_in_field = {
-			has_equipment = { light_tank_equipment < 500 } 
+			#has_equipment = { light_tank_equipment < 500 } 
 		}
 		
 		target_width = 18.0
@@ -88,12 +77,12 @@ armor_generic = {
 			}
 			
 			regiments = {
-				light_armor = 5
+				gas_tank = 5
 			}
 		}
 		
 		allowed_types = {
-			light_armor
+			gas_tank
 			engineer
 			recon
 			anti_tank
@@ -160,17 +149,15 @@ armor_generic = {
 			}
 			
 			regiments = {
-				heavy_armor = 6
+				steam_tank = 6
 				line_infantry = 3
 			}
 		}
 		
 		allowed_types = {
-			modern_armor
-			heavy_armor
+			steam_tank
 			
-			motorized
-			mechanized
+			apc
 
 			#Cheaper but slower might be worth considering
 			line_infantry
@@ -183,9 +170,6 @@ armor_generic = {
 			
 		}
 		
-		replace_at_match = 0.4
-		replace_with = modern_armor_default
-		target_min_match = 0.5
 	}
 
 	medium_armor_default = {
@@ -245,13 +229,12 @@ armor_generic = {
 			}
 			
 			regiments = {
-				medium_armor = 6
+				gas_tank = 6
 			}
 		}
 
 		allowed_types = {
-			modern_armor
-			medium_armor
+			gas_tank
 			line_infantry
 			engineer
 			recon
@@ -259,82 +242,7 @@ armor_generic = {
 			logistics_company
 			anti_tank
 		}
-		
-		replace_at_match = 0.8
-		replace_with = modern_armor_default
-		target_min_match = 0.5
-	}
-
-
-	modern_armor_default = {
 	
-		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 1
-			}
-		}
-		
-		target_width = 18.0
-		width_weight = 2.0
-		column_swap_factor = 0.1
-		
-		stat_weights = {
-			0.00 #-- default_morale
-			1.10 #-- defense
-			1.10 #-- breakthrough
-			0.60 #-- hardness
-			2.00 #-- soft_attack
-			0.00 #-- hard_attack
-			0.10 #-- recon
-			0.01 #-- entrenchment
-			0.10 #-- initiative
-			0.01 #-- casualty_trickleback
-			-0.05 #-- supply_consumption_factor
-			-0.01 #-- supply_consumption
-			0.00 #-- suppression
-			0.00 #-- suppression_factor
-			0.01 #-- experience_loss_factor
-			#-- Air Values
-			0.02 #-- air_attack
-			#-- Common Values
-			50.00 #-- max_organisation
-			0.80 #-- max_strength
-			0.00 #-- build_cost_ic
-			10.0 #-- maximum_speed
-			0.20 #-- armor_value
-			0.05 #-- ap_attack
-			0.10 #-- reliability
-			0.10 #-- reliability_factor
-			0.00 #-- weight
-		}
-
-		target_template = {
-			weight = 0.9
-			match_value = 5000.0
-			
-			support = {
-				engineer = 1
-				recon = 1
-				maintenance_company = 1
-				logistics_company = 1
-			}
-			
-			regiments = {
-				modern_armor = 6
-			}
-		}
-		
-
-		allowed_types = {
-			modern_armor
-			engineer
-			recon
-			maintenance_company
-			logistics_company
-			anti_tank
-		}
 	}
 
 }
@@ -755,6 +663,7 @@ spear_generic = {
 		}
 		allowed_types = {
 			spear_infantry
+			merc_spear_infantry
 			cavalry
 		}
 	}
@@ -823,7 +732,9 @@ tercio_generic = {
 		}
 		allowed_types = {
 			tercio_infantry
+			merc_tercio_infantry
 			line_infantry
+			merc_line_infantry
 			cavalry
 			heavy_artillery_brigade
 		}
@@ -891,6 +802,7 @@ line_infantry_generic = {
 		}
 		allowed_types = {
 			line_infantry
+			merc_line_infantry
 			light_artillery_brigade
 			cavalry
 		}

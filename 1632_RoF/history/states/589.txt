@@ -1,9 +1,9 @@
-state={
-	id=589
+state = {
+	id = 589
 	name= "STATE_589"
 	manpower = 1022428
 
-	resources={
+	resources = {
 		aluminium = 17
 		chromium = 5
 		steel = 4
@@ -11,7 +11,7 @@ state={
 	}
 	state_category = rural
 
-	history={
+	history = {
 		owner = BRZ
 		victory_points = { 10980 3 }
 		buildings = {
@@ -19,11 +19,14 @@ state={
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			10980 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = BRZ
 	}
 
-	provinces={
+	provinces = {
 		2153 5172 8190 8196 10980 10999 12996 
 	}
 }

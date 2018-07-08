@@ -1,9 +1,9 @@
 
-state={
-	id=247
-	name="STATE_247"
+state = {
+	id = 247
+	name = "STATE_247"
 
-	history={
+	history = {
 		owner = MAG
 		victory_points = {
 			3522 30 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		3522 6487 9456 9560 
 	}
-	manpower=721596
-	buildings_max_level_factor=1.000
-	state_category=large_city
+	manpower = 721596
+	buildings_max_level_factor = 1.000
+	state_category = large_city
 }

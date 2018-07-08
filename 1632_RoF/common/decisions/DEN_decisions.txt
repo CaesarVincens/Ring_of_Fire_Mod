@@ -1,0 +1,116 @@
+DEN_HBC_decisions = {
+	#temporary until focus tree developed
+	DEN_redeem_shetland_orkneys = {
+		fire_only_once = yes
+		visible = {
+			ENG = { has_country_flag = pseudo_ostend_member }
+			DEN = { has_country_flag = ostend_member }
+			NOT = { owns_state = 660 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEN_redeem_shetland_orkneys.tt
+				660 = {
+					OR = {
+						AND = {
+							is_owned_by = SCO
+							SCO = { is_subject_of = ENG }
+						}
+						is_owned_by = ENG
+					}
+				}
+			}
+		}
+		cost = 75
+		days_remove = 30
+		remove_effect = {
+			ENG = { country_event = { id = RoF_ENG.110 } }
+			effect_tooltip = {
+				transfer_state = 660
+				660 = {
+					if = {
+						limit = { is_core_of = SCO }
+						remove_core_of = SCO
+					}
+					if = {
+						limit = { is_core_of = ENG }
+						remove_core_of = ENG
+					}
+					add_core_of = DEN
+				}
+				ENG = { add_timed_idea = { idea = ENG_DEN_payment days = 180 } }
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	DEN_exploit_greenland = {
+		fire_only_once = yes
+		visible = {
+			446 = { is_owned_by = WNA }
+		}
+		available = {
+		
+		}
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			transfer_state = 446
+			add_resource = {
+				type = aluminium
+				amount = 2
+				state = 446
+			}
+			add_resource = {
+				type = chromium
+				amount = 2
+				state = 446
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	DEN_launch_HBC_expedition = {
+		fire_only_once = yes
+		visible = {
+			date > 1633.6.1
+			NOT = { has_country_flag = DEN_HBC_start }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEN_Hudson_winter.tt
+				OR = {
+					AND = {
+						date > 1634.1.1
+						date < 1634.4.1
+					}
+					AND = {
+						date > 1635.1.1
+						date < 1635.4.1
+					}
+					AND = {
+						date > 1636.1.1
+						date < 1636.4.1
+					}
+				}
+			}
+			owns_state = 660
+		}
+		cost = 150
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = DEN_HBC_start
+		}
+		remove_effect = {
+			country_event = { id = RoF_DEN.110 days = 5 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+}

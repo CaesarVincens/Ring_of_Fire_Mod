@@ -4,6 +4,7 @@ oob = "NUR_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -40,13 +41,22 @@ set_country_flag = german_tag_flag
 add_ideas = {
 	military_focus_eco
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Stadtrat"
     desc = "POLITICS_GERHARD_VON KOBRATIN_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Nuremberg_City_Council.dds"
     expire = "1660.1.1"
     ideology = republican_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Stadtrat"
+    desc = "POLITICS_GERHARD_VON KOBRATIN_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Nuremberg_City_Council.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_republic
     traits = {
     }
 }

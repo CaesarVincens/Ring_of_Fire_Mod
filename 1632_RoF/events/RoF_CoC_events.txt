@@ -1,0 +1,316 @@
+﻿add_namespace = RoF_CoC
+
+country_event = {
+	id = RoF_CoC.0101
+	title = RoF.hidden.t
+	desc = RoF.hidden.d
+	picture = GFX_report_event_scottish_mercenaries
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		FROM = {
+			country_event = { id = RoF_CoC.010 }
+		}
+	}
+	option = {
+		name = RoF_CoC.0101
+	}
+}
+
+#start agitating
+country_event = {
+	id = RoF_CoC.010
+	title = RoF_CoC.010.t
+	desc = RoF_CoC.010.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				save_event_target_as = target_country_evttgt
+			}
+			random_state = {
+				limit = {
+					is_on_continent = europe
+					is_owned_and_controlled_by = FROM
+					OR = {
+						NOT = { is_capital = yes }
+						FROM = { num_of_controlled_states < 2 }
+					}
+					any_neighbor_state = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				save_event_target_as = agitated_state
+			}
+		}
+	}
+	
+	option = {
+		name = RoF_CoC.010.a
+		event_target:agitated_state = {
+			set_state_flag = CoC_agitating_by_@ROOT
+			set_variable = { var = ROOT.CoC_agitating_progress value = 10 }
+			set_variable = { ROOT.CoC_agitated_state_var = id }
+			set_variable = { ROOT.CoC_annex_cost = 200 }
+			subtract_from_variable = { ROOT.CoC_annex_cost = ROOT.CoC_agitating_progress }
+			clamp_variable = { var = ROOT.CoC_annex_cost min = 0 max = 100 }
+			OWNER = {  }
+		}
+		ROOT = {
+			set_variable = { FROM.CoC_agitated_by = id }
+			activate_targeted_decision = { target = FROM decision = CoC_agitate_state_continue }
+			activate_targeted_decision = { target = FROM decision = CoC_agitate_state_annex }
+		}
+	}
+	option = {
+		name = RoF_CoC.010.b
+
+	}
+}
+
+#state defects to FROM
+country_event = {
+	id = RoF_CoC.011
+	title = RoF_CoC.011.t
+	desc = RoF_CoC.011.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { var:CoC_annex_resist_cost = FROM.CoC_agitating_progress }
+		multiply_variable = { var:CoC_annex_resist_cost = -1 }
+	}
+	
+	option = {
+		name = RoF_CoC.011.a
+		
+		random_state = {
+			limit = {
+				has_state_flag = CoC_agitating_by_@FROM
+			}
+			clr_state_flag = CoC_agitating_by_@FROM
+			set_state_flag = annexed_CoC_state
+			FROM = {
+				clear_CoC_vars_and_flags = yes
+				#transfer_state = PREV
+				set_country_flag = annexed_CoC_state
+				country_event = { id = RoF_CoC.012 hours = 1 }
+			}
+		}
+		add_to_variable = { var = CoC_strength value = -5 }
+		add_to_variable = { var = CoC_anger value = -5 }
+		clear_variable = var:CoC_annex_resist_cost
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_political_power > 0
+			}
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+			}
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_strength value = 15 compare = greater_than_or_equals }
+			}
+		}
+	}
+	option = {
+		name = RoF_CoC.011.b
+		add_to_variable = { var = CoC_strength value = 5 }
+		add_to_variable = { var = CoC_anger value = 5 }
+		add_political_power = var:CoC_annex_resist_cost
+		clear_variable = var:CoC_annex_resist_cost
+		FROM = {
+			country_event = { id = RoF_CoC.012 hours = 1 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_anger value = -5 compare = less_than }
+			}
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_strength value = 5 compare = less_than }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_CoC.012
+	title = {
+		trigger = { has_country_flag = annexed_CoC_state }
+		text = RoF_CoC.012.ta
+	}
+	title = {
+		trigger = { NOT = { has_country_flag = annexed_CoC_state } }
+		text = RoF_CoC.012.tb
+	}
+	desc = {
+		trigger = { has_country_flag = annexed_CoC_state }
+		text = RoF_CoC.012.da
+	}
+	desc = {
+		trigger = { NOT = { has_country_flag = annexed_CoC_state } }
+		text = RoF_CoC.012.db
+	}
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	trigger = {
+		any_neighbor_country = {
+			has_variable = CoC_strength
+		}
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = RoF_CoC.012.a
+		trigger = {
+			has_country_flag = annexed_CoC_state
+		}
+		ROOT = {
+			set_country_flag = {
+				flag = CoC_agitate_timer
+				days = 60
+				value = 1
+			}
+		}
+		clear_CoC_vars_and_flags = yes
+		random_state = {
+			limit = { has_state_flag = annexed_CoC_state }
+			clr_state_flag = annexed_CoC_state
+			ROOT = { transfer_state = PREV }
+		}
+		clr_country_flag = annexed_CoC_state
+	}
+	option = {
+		name = RoF_CoC.012.b
+		trigger = {
+			NOT = { has_country_flag = annexed_CoC_state }
+		}
+		activate_targeted_decision = { target = FROM decision = CoC_agitate_state_annex }
+	}
+}
+
+country_event = {
+	id = RoF_CoC.013
+	title = RoF_CoC.013.t
+	desc = RoF_CoC.013.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	trigger = {
+		any_neighbor_country = {
+			has_variable = CoC_strength
+		}
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = RoF_CoC.013.a
+		custom_effect_tooltip = GAME_OVER_TT
+		FROM = { annex_country = { target = ROOT } }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_political_power > 0
+			}
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }
+			}
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_strength value = 20 compare = greater_than_or_equals }
+			}
+		}
+	}
+	option = {
+		name = RoF_CoC.013.b
+		add_to_variable = { var = CoC_strength value = 5 }
+		add_to_variable = { var = CoC_anger value = 5 }
+		add_political_power = -100
+		ai_chance = {
+			factor = 1
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_anger value = 0 compare = less_than }
+			}
+			modifier = {
+				add = 5
+				check_variable = { var = CoC_strength value = 10 compare = less_than }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_CoC.015
+	title = RoF_CoC.015.t
+	desc = RoF_CoC.015.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = RoF_CoC.015.a
+		hidden_effect = {
+			clear_CoC_vars_and_flags = yes
+			FROM = {
+				remove_targeted_decision = { target = ROOT decision = CoC_agitate_state_warning }
+				remove_targeted_decision = { target = ROOT decision = CoC_agitate_progress_warning }
+				remove_targeted_decision = { target = ROOT decision = CoC_agitate_state_counter }
+				country_event = { id = RoF_CoC.016 hours = 6 }
+			}
+		}
+		ROOT = {
+			set_country_flag = {
+				flag = CoC_agitate_timer
+				days = 60
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = RoF_CoC.015.b
+		activate_targeted_decision = { target = FROM decision = CoC_border_conflict_timer }
+		activate_targeted_decision = { target = FROM decision = CoC_border_conflict_start }
+	}
+}
+
+country_event = {
+	id = RoF_CoC.016
+	title = RoF_CoC.016.t
+	desc = RoF_CoC.016.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = RoF_CoC.016.a
+
+	}
+}

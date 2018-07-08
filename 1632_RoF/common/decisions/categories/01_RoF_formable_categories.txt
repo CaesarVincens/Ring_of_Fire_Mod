@@ -1,0 +1,14 @@
+form_Austria_Hungary = {
+	icon = generic_formable_nations
+
+}
+
+form_Kalmar_Union = {
+	icon = generic_formable_nations
+
+}
+
+form_United_Netherlands = {
+	icon = generic_formable_nations
+
+}

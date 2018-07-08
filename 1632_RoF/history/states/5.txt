@@ -1,12 +1,12 @@
 
-state={
-	id=5
-	name="STATE_5"
-	resources={
-		steel=89.000
+state = {
+	id = 5
+	name = "STATE_5"
+	resources = {
+		steel = 89.000
 	}
 
-	history={
+	history = {
 		owner = ALS
 		victory_points = {
 			9503 8 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		549 9503 
 	}
-	manpower=492000
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 492000
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

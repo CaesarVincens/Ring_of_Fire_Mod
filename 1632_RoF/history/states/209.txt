@@ -1,11 +1,11 @@
-state={
-	id=209
+state = {
+	id = 209
 	name= "STATE_209"
 	manpower = 120000
 
 	state_category = town
 
-	history={
+	history = {
 		owner = KNI
 		victory_points = { 12003 8 }
 		buildings = {
@@ -13,11 +13,14 @@ state={
 			industrial_complex = 2
 			arms_factory = 0
 			air_base = 0
+			12003 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = KNI
 	}
 
-	provinces={
+	provinces = {
 		12003 
 	}
 }

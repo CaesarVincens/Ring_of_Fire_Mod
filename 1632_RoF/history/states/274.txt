@@ -4,31 +4,28 @@ state={
 	name="STATE_274"
 	resources={
 		aluminium=4.000
-		rubber=1.000
 		steel=1.000
 	}
 
 	history={
+		owner = VEN
 		victory_points = {
-			10836 8 
+			6631 5 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = YAT
-		add_core_of = DAG
-		add_core_of = MSS
 
 	}
 
 	provinces={
-		2001 7950 10836 12762 12817 12874 
+		6631 9598 11598
 	}
 	manpower=612400
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }

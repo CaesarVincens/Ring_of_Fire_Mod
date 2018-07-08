@@ -4,6 +4,7 @@ oob = "BAD_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -21,7 +22,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        liberal = {
+        constitutionalist = {
             popularity = 19
         }
         neutrality = {
@@ -40,13 +41,23 @@ set_country_flag = german_tag_flag
 add_ideas = {
 	military_focus_eco
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
-    name = "Engelbert Miklas"
+    name = "William Zähringen"
     desc = "POLITICS_ENGELBERT_MIKLAS_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Baden_William.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Georg Friedrich Zähringen"
+    desc = "POLITICS_ENGELBERT_MIKLAS_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Baden_Georg_Friedrich.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
     traits = {
     }
 }

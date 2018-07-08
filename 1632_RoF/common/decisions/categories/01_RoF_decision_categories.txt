@@ -1,0 +1,82 @@
+RoF_test_decisions = {
+	allowed = {
+		always = yes
+	}
+}
+
+RoF_economy_decisions = {
+	icon = generic_economy
+
+}
+RoF_ai_decisions = {
+	
+}
+RoF_prospect_for_resources = {
+	icon = generic_prospect_for_resources
+
+}
+
+RoF_CoC_decisions = {
+	visible = {
+		has_country_flag = CoC_present
+	}
+	priority = 10
+}
+
+RoF_CoC_covert_decisions = {
+	visible = {
+		has_government = radical
+		has_country_flag = CoC_present
+	}
+	priority = 10
+}
+
+RoF_CoC_Border_Clashes = {
+	icon = border_conflicts
+	priority = 9
+	visible = {
+		has_country_flag = CoC_present
+		has_government = radical
+	}
+}
+
+absolutist_on_the_rise = {
+	allowed = {
+		always = yes
+	}
+	#temp icon
+	icon = military_operation
+
+}
+
+constitutionalist_on_the_rise = {
+	allowed = {
+		always = yes
+	}
+	#temp
+	icon = generic_monarchism
+}
+
+liberal_on_the_rise = {
+	allowed = {
+		always = yes
+	}
+	#temp
+	icon = generic_democracy
+}
+
+radical_on_the_rise = {
+	allowed = {
+		always = yes
+	}
+	#temp
+	icon = generic_communism
+}
+
+neutrality_on_the_rise = {
+	allowed = {
+		always = yes
+	}
+	#temp
+	icon = generic_formable_nations
+}

@@ -71,6 +71,15 @@ instant_effect = {
 		progress = 0.88
 		efficiency = 100
 	}
+	add_equipment_production = {
+		equipment = {
+			type = pike_equipment_0
+			creator = "BRS"
+		}
+		requested_factories = 1
+		progress = 0.88
+		efficiency = 100
+	}
 }
 units = {
 	division = {
@@ -87,6 +96,24 @@ units = {
 	}
 	division = {
 		name = "3. Tercio Detachment"
+		location = 11493
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Tercio Detachment"
+		location = 11493
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Tercio Detachment"
+		location = 11493
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Tercio Detachment"
 		location = 11493
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3

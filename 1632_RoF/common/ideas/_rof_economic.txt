@@ -21,7 +21,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor = 0.3
 				conscription_factor = -0.5
-				unity_weekly = 0.001
+				stability_weekly = 0.001
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -165,7 +165,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor = -0.3
 				conscription_factor = -0.2
-				unity_weekly = -0.001
+				stability_weekly = -0.001
 			}
 			ai_will_do = {
 				factor = 2

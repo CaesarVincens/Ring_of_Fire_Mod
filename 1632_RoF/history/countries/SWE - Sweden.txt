@@ -5,14 +5,15 @@ oob = "SWE_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
-early_flintlock_tech = 1
+musket_tech = 1
 heavy_artillery_1 = 1
 light_artillery_1  = 1
 transport = 1
-early_destroyer = 1
+prerof_heavy_frigate = 1
 }
 
 add_named_threat = { threat = 10 name = swedish_intervention }
@@ -32,14 +33,14 @@ set_convoys = 100
         autonomous_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
-    set_autonomy = {
-        target = MKL
-        autonomous_state = autonomy_rof_vassal
-        freedom_level = 0.6
-    }
+ #   set_autonomy = {
+ #       target = MKL
+ #       autonomous_state = autonomy_rof_vassal
+ #       freedom_level = 0.6
+ #   }
 
 if = {
-    limit = {has_dlc = "Together for Victory" }
+    limit = { has_dlc = "Together for Victory" }
 
     add_to_tech_sharing_group = SWE_research
 }
@@ -66,32 +67,58 @@ set_politics = {
     elections_allowed = no
 }
 
-create_faction = "Protestant Union"
+create_faction = Protestant_Union
 add_to_faction = SWE
 add_to_faction = POM
-add_to_faction = MKL
-add_to_faction = BRA
-add_to_faction = SAX
-add_to_faction = BRS
+#add_to_faction = MKL
+#add_to_faction = BRA
+#add_to_faction = SAX
+#add_to_faction = BRS
 add_to_faction = HES
+give_military_access = SXW
 
 add_ideas = {
 	military_focus_eco
-	extensive_conscription
+	drafted_army
 	SWE_FRA_support
 	SWE_UPS_support
 	SWE_lion_of_the_north
 }
-set_national_unity = 0.70
+set_stability = 0.6
+set_war_support = 0.6
 create_country_leader = {
     name = "Gustavus II Adolphus Vasa"
-    desc = "POLITICS_ALBRECHT_GYNDESTOLPE_DESC"
+    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
     picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
-    expire = "1660.1.1"
+    #expire = "1660.1.1"
     ideology = constitutional_monarchy
     traits = {
 		golden_king
     }
+}
+create_country_leader = {
+    name = "Gustavus II Adolphus Vasa"
+    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
+    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
+    #expire = "1660.1.1"
+    ideology = lib_constitutional_monarchy
+    traits = {
+		golden_king
+    }
+}
+create_country_leader = {
+    name = "Gustavus II Adolphus Vasa"
+    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
+    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
+    #expire = "1660.1.1"
+    ideology = absolute_monarchy
+}
+create_country_leader = {
+    name = "Gustavus II Adolphus Vasa"
+    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
+    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
+    #expire = "1660.1.1"
+    ideology = monarchy_neutral
 }
 
 create_field_marshal = {
@@ -99,6 +126,11 @@ create_field_marshal = {
 	picture = "Portrait_Sweden_Gustav_Horn.dds"
 	traits = { }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+
 }
 
 create_corps_commander = {
@@ -106,6 +138,11 @@ create_corps_commander = {
 	picture = "Portrait_Sweden_Gustavus_Adolphus.dds"
 	traits = { }
 	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+
 }
 
 create_corps_commander = {
@@ -113,4 +150,9 @@ create_corps_commander = {
 	picture = "Portrait_Sweden_Johan_Baner.dds"
 	traits = { }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+
 }

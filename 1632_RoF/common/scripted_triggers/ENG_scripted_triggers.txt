@@ -1,0 +1,36 @@
+ENG_constitutionalist_45 = {
+	OR = {
+		constitutionalist > 0.45
+		AND = {
+			constitutionalist > 0.40
+			OR = {
+				liberal > 0.1
+				radical > 0.1
+				AND = { liberal > 0.05 radical > 0.05 }
+			}
+		}
+		AND = {
+			constitutionalist > 0.35
+			OR = {
+				liberal > 0.2
+				radical > 0.2
+				AND = { liberal > 0.1 radical > 0.1 }
+				AND = { liberal > 0.15 radical > 0.05 }
+				AND = { liberal > 0.05 radical > 0.15 }
+			}
+		}
+		AND = {
+			constitutionalist > 0.30
+			OR = {
+				liberal > 0.3
+				radical > 0.3
+				AND = { liberal > 0.15 radical > 0.15 }
+				AND = { liberal > 0.25 radical > 0.05 }
+				AND = { liberal > 0.2 radical > 0.1 }
+				AND = { liberal > 0.15 radical > 0.15 }
+				AND = { liberal > 0.1 radical > 0.2 }
+				AND = { liberal > 0.05 radical > 0.25 }
+			}
+		}
+	}
+}

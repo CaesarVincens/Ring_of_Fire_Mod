@@ -55,6 +55,7 @@ SOV = "countries/Russia.txt"
 SPN = "countries/Spanish Netherlands.txt"
 SPR = "countries/Spain.txt"
 SWE = "countries/Sweden.txt"
+BRG = "countries/Burgundy.txt"
 
 #Balkans
 ALB = "countries/Albania.txt"
@@ -178,3 +179,10 @@ HUR = "countries/Huron.txt"
 IRO = "countries/Iroquois.txt"
 NSP = "countries/New Spain.txt"
 SPU = "countries/Spanish Peru.txt"
+
+#"Wastelands"
+WNA = "countries/North America.txt"
+WSA = "countries/South America.txt"
+WAF = "countries/Africa.txt"
+WAS = "countries/Asia.txt"
+WAU = "countries/WLAustralia.txt"

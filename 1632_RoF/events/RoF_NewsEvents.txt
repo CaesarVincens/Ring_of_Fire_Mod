@@ -126,6 +126,44 @@ news_event = {
 		}
 	}
 }
+
+#English Civil War
+news_event = {
+	id = RoF_news.04
+	title = RoF_news.04.t
+	desc = RoF_news.04.d
+	picture = GFX_news_event_destruction
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.04.a
+		trigger = {
+			NOT = {
+				original_tag = ENG
+			}
+			has_government = absolutist
+		}
+	}
+	option = {
+		name = RoF_news.04.b
+		trigger = {
+			NOT = {
+				original_tag = ENG
+				has_government = absolutist
+			}
+		}
+	}
+	option = {
+		name = RoF_news.04.b
+		trigger = {
+			original_tag = ENG
+		}
+	}
+}
+
 # NUS forms USE
 news_event = {
 	id = RoF_news.05
@@ -273,6 +311,55 @@ news_event = {
 		trigger = { tag = NUS }
 	}
 }
+# BRG Forms
+news_event = {
+	id = RoF_news.15
+	title = RoF_news.15.t
+	desc = RoF_news.15.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.15.a
+		trigger = {
+			NOT = {
+				tag = BRG
+			}
+		}
+	}
+	option = {
+		name = RoF_news.15.b
+		trigger = { tag = BRG }
+	}
+}
+# DEN gets Orkneys
+news_event = {
+	id = RoF_news.16
+	title = RoF_news.16.t
+	desc = RoF_news.16.d
+	picture = GFX_news_event_landscape_urban_1
+	
+	#major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.16.a
+		trigger = {
+			NOT = {
+				tag = DEN
+			}
+		}
+	}
+	option = {
+		name = RoF_news.16.b
+		trigger = { tag = DEN }
+	}
+}
+
 
 # Dunkirk
 news_event = {

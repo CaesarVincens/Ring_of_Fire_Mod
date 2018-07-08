@@ -1,9 +1,9 @@
 
-state={
-	id=557
-	name="STATE_557"
+state = {
+	id = 557
+	name = "STATE_557"
 
-	history={
+	history = {
 		owner = UPS
 		victory_points = {
 			6336 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		6286 6336 9309 9335 9403 11318 
 	}
-	manpower=686200
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 686200
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

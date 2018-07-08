@@ -1,0 +1,98 @@
+equipments = {
+
+	heavy_frigate = {
+		year = 1600
+
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		group_by = archetype
+		
+		interface_category = interface_category_capital_ships
+
+		upgrades = {
+			ship_reliability_upgrade
+			ship_sail_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
+		ap_attack = 8
+		attack = 10
+		fire_range = 8
+		torpedo_attack = 0
+		shore_bombardment = 1
+		
+		anti_air_attack = 1
+		
+		armor_value = 9
+		evasion = 30
+		
+		surface_detection = 12
+		sub_detection = 1
+		surface_visibility = 20
+		naval_speed = 18
+		reliability = 0.80
+		
+		naval_range = 3000
+		
+		max_strength = 150
+		
+		port_capacity_usage = 1
+		
+		build_cost_ic = 4200
+		resources = {
+			oil = 1
+			steel = 3
+		}
+		
+		manpower = 500
+	}
+
+	heavy_frigate_1 = {
+		year = 1600
+
+		archetype = heavy_frigate
+		priority = 40
+		
+	}
+	
+	heavy_frigate_2 = {
+		year = 1635
+
+		archetype = heavy_frigate
+		parent = heavy_frigate_1
+		priority = 40
+
+		ap_attack = 12
+		attack = 14
+		fire_range = 12
+		torpedo_attack = 0
+		shore_bombardment = 2
+		
+		anti_air_attack = 2
+		
+		armor_value = 11
+		evasion = 40
+		
+		surface_detection = 25
+		sub_detection = 2
+		surface_visibility = 20
+		naval_speed = 24
+		reliability = 0.85
+
+		naval_range = 4000
+		
+		max_strength = 175
+		
+		port_capacity_usage = 1
+
+		build_cost_ic = 4600
+		resources = {
+			oil = 1
+			steel = 4
+		}		
+		manpower = 700
+	}
+
+}

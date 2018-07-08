@@ -4,6 +4,7 @@ oob = "PRU_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -44,7 +45,7 @@ set_politics = {
 
 add_ideas = {
 }
-set_national_unity = 0.775
+set_stability = 0.5
 create_country_leader = {
     name = "George William von Hohenzollern"
     desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"

@@ -1,12 +1,12 @@
 
-state={
-	id=635
-	name="STATE_635"
-	resources={
-		oil=12.000
+state = {
+	id = 635
+	name = "STATE_635"
+	resources = {
+		oil = 12.000
 	}
 
-	history={
+	history = {
 		owner = SPU
 		victory_points = {
 			7500 3 
@@ -16,16 +16,19 @@ state={
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			12364 = {
+				naval_base = 2
+			}
 
 		}
 		add_core_of = SPU
 
 	}
 
-	provinces={
+	provinces = {
 		1449 2172 2173 5163 7500 8187 8238 10390 10515 10943 12351 12364 12453 12964 13000 
 	}
-	manpower=40000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 40000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

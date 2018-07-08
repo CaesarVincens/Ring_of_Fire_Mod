@@ -5,8 +5,10 @@ FRA_anti_habsburg = {
 		has_idea = anti_habsburg_diplomacy
 	}
 	abort = {
-		NOT = { country_exists = AUS }
-		NOT = { has_idea = anti_habsburg_diplomacy }
+		OR = {
+			NOT = { country_exists = AUS }
+			NOT = { has_idea = anti_habsburg_diplomacy }
+		}
 	}
 	ai_strategy = {
 		type = antagonize
@@ -24,11 +26,13 @@ FRA_anti_habsburg_SPR = {
 	enable = {
 		original_tag = FRA
 		country_exists = SPR
-		NOT = { has_idea = anti_habsburg_diplomacy }
+		has_idea = anti_habsburg_diplomacy
 	}
 	abort = {
-		NOT = { country_exists = SPR }
-		has_idea = anti_habsburg_diplomacy
+		OR = {
+			NOT = { country_exists = SPR }
+			NOT = { has_idea = anti_habsburg_diplomacy }
+		}
 	}
 	ai_strategy = {
 		type = antagonize

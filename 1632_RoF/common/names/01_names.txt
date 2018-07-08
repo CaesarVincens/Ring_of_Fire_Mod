@@ -1469,28 +1469,6 @@ SIL = {
 	callsigns = {
 	}
 }
-SLI = {
-	male = {
-		names = {
-			"Alexander" "Arthur" "Brian" "Cathal" "Christopher" "Con" "Daniel" "Denis" "Desmond" "Éamon"
-			"Edward" "Ernes" "Fionán" "Frank" "George" "Harry" "Jack" "James" "John" "Joseph"
-			"Kevin" "Liam" "Michael" "Patrick" "Peter" "Richard" "Robert" "Séan" "Thomas" "William"
-			
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Aiken" "Ashe" "Breen" "Brugha" "Collins" "Connolly" "Cosgrave" "Craig" "de Valera" "Donnelly"
-		"FitzGerald" "Griffith" "Kelly" "Larkin" "Lynch" "Mallin" "McCartan" "McCullough" "McGarry" "McGuinness"
-		"Mulcahy" "O'Brien" "O'Connor" "O'Doherty" "O'Higgins" "O'Leary" "O'Mara" "Pearse" "Plunket" "White"
-		
-	}
-	callsigns = {
-	}
-}
 SAL = {
 	male = {
 		names = {
@@ -2000,24 +1978,6 @@ SPU = {
 	callsigns = {
 	}
 }
-YAK = {
-	male = {
-		names = {
-			"Kaumba" "Muteba" "Mushidi" "Mbala" "Mutand" "Mudib" "Kangapu" "Cimbindu" "Mbumb" "Cakasekene"
-			"Mulay" "Nawej" "Cikombe" "Waranankong" 
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Kasang" "Nambing" "Kalong" "Mukaz" "Ditend" "Yaava" "Namwan" "Naweej" "Kamong" "Isot"
-		"Kat" "Muteba" 
-	}
-	callsigns = {
-	}
-}
 YAT = {
 	male = {
 		names = {
@@ -2321,23 +2281,6 @@ AUS = {
 		"The Red knight" "Reeste" 
 	}
 }
-AIR = {
-	male = {
-		names = {
-			"Attici" "Musa" "Aytarel" "Ahmad" "Ag Mama" "Moussa" "Majila" "Islaman" "In Tayaden" "Abareybon"
-			"Hasso" "Kiddu" 
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"ag Sidi" "al-Hajj" "ag Muhammad" "ag Amellal" "ag Amastan" 
-	}
-	callsigns = {
-	}
-}
 BAD = {
 	male = {
 		names = {
@@ -2462,23 +2405,6 @@ BIJ = {
 	}
 	surnames = {
 		"Rama Raya" "Rani" "Raya" "Bibi" "Wodeyar" "Gowda" "Nayaka" "Rayanna" "Ballala" 
-	}
-	callsigns = {
-	}
-}
-BON = {
-	male = {
-		names = {
-			"Amanquatia" "Agyeman" "Onsei" "Kwaku" "Kofi" "Atakora" "Kwabena" "Mensa" "Owusu" "Akyampon"
-			"Kwame" "Opoku" 
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Prempeh" "Bonsu" "Dua" "Karikari" "Dwomo" "Panyin" "Sekyere" "Fofie" "Asiba" 
 	}
 	callsigns = {
 	}
@@ -2716,44 +2642,6 @@ CIR = {
 	callsigns = {
 	}
 }
-CNT = {
-	male = {
-		names = {
-			"Alexander" "Arthur" "Brian" "Cathal" "Christopher" "Con" "Daniel" "Denis" "Desmond" "Éamon"
-			"Edward" "Ernes" "Fionán" "Frank" "George" "Harry" "Jack" "James" "John" "Joseph"
-			"Kevin" "Liam" "Michael" "Patrick" "Peter" "Richard" "Robert" "Séan" "Thomas" "William"
-			
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Aiken" "Ashe" "Breen" "Brugha" "Collins" "Connolly" "Cosgrave" "Craig" "de Valera" "Donnelly"
-		"FitzGerald" "Griffith" "Kelly" "Larkin" "Lynch" "Mallin" "McCartan" "McCullough" "McGarry" "McGuinness"
-		"Mulcahy" "O'Brien" "O'Connor" "O'Doherty" "O'Higgins" "O'Leary" "O'Mara" "Pearse" "Plunket" "White"
-		
-	}
-	callsigns = {
-	}
-}
-DAH = {
-	male = {
-		names = {
-			"Behanzin" "Ghezo" "Glele" "Adandozan" "Agonglo" "Kpengla" "Tegbessou" "Agadja" 
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Madogugu" "Zedoko" "Basagla" "Chadakogundo" 
-	}
-	callsigns = {
-	}
-}
 DAR = {
 	male = {
 		names = {
@@ -2767,24 +2655,6 @@ DAR = {
 	}
 	surnames = {
 		"Tayrab" "Bakri" "Badl" "Madyan" "al-Mahdi" "El-Fadl" "Khalid" "Ibrahim" "Dinar" 
-	}
-	callsigns = {
-	}
-}
-DAG = {
-	male = {
-		names = {
-			"Builsa" "Babato" "Gazari" "Alfa" "Dyori" "Bako" "Laganfyela" "Ali" "Kokoroko" "Sabana"
-			"Tyeba" "Pintyeba" "Karamoko" "Sapilem" "Nyambre" "Salma" "Korongo" "Koom" "Yamba" "Tigre"
-			
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Hano" "Hamaria" "Wattara" "Moru" "Dyan" "Nyandane" 
 	}
 	callsigns = {
 	}
@@ -3269,23 +3139,6 @@ KAB = {
 	callsigns = {
 	}
 }
-KIK = {
-	male = {
-		names = {
-			"Kasongo" "Umpafu" "Ilunga" "Kisula" "Nday" "Kitamba" "Maloba" "Ndaye" "Kumwimba" "Maniema"
-			
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Nsungu" "Kukaya" "Ngombe" "Muzinga" "Kabale" "Konkola" "Kalombo" "Mande" "Nyembo" 
-	}
-	callsigns = {
-	}
-}
 KLE = {
 	male = {
 		names = {
@@ -3473,35 +3326,6 @@ KAT = {
 	callsigns = {
 	}
 }
-LAU = {
-	male = {
-		names = {
-			"Adelbert" "Adolf" "Albrecht" "Alexander" "Alfred" "August" "Bernhard" "Burkhard" "Dieter" "Eduard"
-			"Edwin" "Erwin" "Erich" "Ernst" "Florian" "Franz" "Friedrich" "Fritz" "Georg" "Günther"
-			"Gustav" "Hasso" "Heinrich" "Helmuth" "Hermann" "Hugo" "Joachim" "Johann" "Jürgen" "Karl"
-			"Konrad" "Leonhard" "Leopold" "Ludwig" "Lukas" "Manfred" "Maximilian" "Michael" "Nikolaus" "Otto"
-			"Pascal" "Paul" "Peter" "Reinhard" "Rudolf" "Ruprecht" "Stefan" "Theodor" "Wilhelm" "Wolfgang"
-			
-		}
-	}
-	female = {
-		names = {
-			"Jessica" "Emma" "Hanna" "Sofia" "Marie" 
-		}
-	}
-	surnames = {
-		"Behncke" "Brommy" "Cordemann" "Dreyer" "Droste" "Groener" "Herwarth von Bittenfeld" "Heppendorf" "Hoffmann" "Krohn"
-		"Ludendorff" "Schree" "Vogel von Falkenstein" "von Alten" "von Anhalt" "von Arentschildt" "von Bülow" "von Bismarck-Bohlen" "von Blumenthal" "von Blomberg"
-		"von Boyen" "von Braunschweig" "von dem Knesebeck" "von Gebser" "von Fritsch" "von Halkett" "von Hannover" "von Hessen-Darmstadt" "von Hessen-Kassel" "von Hindenburg"
-		"von Hohenzollern" "von Holstein-Gottorp" "von Knorr" "von Kleefeld" "von Manteuffel" "von Mecklenburg-Schwerin" "von Mecklenburg-Strelitz" "von Moltke" "von Oldenburg" "von Rauch"
-		"von Ravensberg" "von Reuter" "von Richthofen" "von Sachsen-Altenburg" "von Sachsen-Coburg-Gotha" "von Sachsen-Meiningen" "von Sachsen-Weimar-Eisenach" "von Schlieffen" "von Schwarzburg" "von Spee"
-		"von Tirpitz" "von Waldeck und Pyrmont" "von Wettin" "von Wrangel" "von Zieten" "zur Lippe" "von Roon" 
-	}
-	callsigns = {
-		"Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer"
-		"The Red knight" "Reeste" 
-	}
-}
 LBA = {
 	male = {
 		names = {
@@ -3533,28 +3357,6 @@ LAD = {
 	}
 	surnames = {
 		"Jawansher" "Khan" "Ghafar Khan" "Alokzai" "Muhammad Khan" "Bamzai" 
-	}
-	callsigns = {
-	}
-}
-LEI = {
-	male = {
-		names = {
-			"Alexander" "Arthur" "Brian" "Cathal" "Christopher" "Con" "Daniel" "Denis" "Desmond" "Éamon"
-			"Edward" "Ernes" "Fionán" "Frank" "George" "Harry" "Jack" "James" "John" "Joseph"
-			"Kevin" "Liam" "Michael" "Patrick" "Peter" "Richard" "Robert" "Séan" "Thomas" "William"
-			
-		}
-	}
-	female = {
-		names = {
-		}
-	}
-	surnames = {
-		"Aiken" "Ashe" "Breen" "Brugha" "Collins" "Connolly" "Cosgrave" "Craig" "de Valera" "Donnelly"
-		"FitzGerald" "Griffith" "Kelly" "Larkin" "Lynch" "Mallin" "McCartan" "McCullough" "McGarry" "McGuinness"
-		"Mulcahy" "O'Brien" "O'Connor" "O'Doherty" "O'Higgins" "O'Leary" "O'Mara" "Pearse" "Plunket" "White"
-		
 	}
 	callsigns = {
 	}

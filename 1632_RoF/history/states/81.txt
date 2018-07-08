@@ -1,13 +1,13 @@
 
-state={
-	id=81
-	name="STATE_81"
-	resources={
-		aluminium=2.000
-		steel=2.000
+state = {
+	id = 81
+	name = "STATE_81"
+	resources = {
+		aluminium = 2.000
+		steel = 2.000
 	}
 
-	history={
+	history = {
 		owner = CHI
 		victory_points = {
 			7568 6 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1004 1603 4158 4203 4519 4547 6932 7459 7508 7568 10017 10064 10434 10446 11931 12012 12426 
 	}
-	manpower=21859712
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 21859712
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

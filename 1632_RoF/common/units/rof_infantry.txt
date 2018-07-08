@@ -9,7 +9,7 @@ sub_units = {
 
 		priority = 600
 		ai_priority = 200
-		active = no
+		active = yes
 
 		type = {
 			infantry
@@ -90,8 +90,8 @@ sub_units = {
 		sprite = infantry
 		map_icon_category = infantry
 
-		priority = 600
-		ai_priority = 200
+		priority = 601
+		ai_priority = 201
 		active = no
 
 		type = {
@@ -111,7 +111,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 25
-		max_organisation = 60
+		max_organisation = 70
 		default_morale = 0.3
 		manpower = 600
 
@@ -164,7 +164,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 25
-		max_organisation = 50
+		max_organisation = 60
 		default_morale = 0.2
 		manpower = 200
 
@@ -194,8 +194,8 @@ sub_units = {
 	line_infantry = {
 		sprite = infantry
 		map_icon_category = infantry
-		priority = 601
-		ai_priority = 200
+		priority = 602
+		ai_priority = 202
 		active = no
 
 		type = {

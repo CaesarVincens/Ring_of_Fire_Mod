@@ -1,9 +1,9 @@
 
-state={
-	id=592
-	name="STATE_592"
+state = {
+	id = 592
+	name = "STATE_592"
 
-	history={
+	history = {
 		owner = UPS
 		buildings = {
 			infrastructure = 3
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		6241 9363 11456 
 	}
-	manpower=286200
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 286200
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

@@ -10,7 +10,7 @@ absolutist_defeated=
 	picture=generic_democratic_drift_bonus
 	modifier=
 	{
-		unity_factor=0.1
+		stability_factor=0.1
 	}
 }
 
@@ -43,7 +43,7 @@ absolutist_revolutionaries=
 	picture=generic_fascism_drift_bonus
 	modifier=
 	{
-		unity_factor=-0.1
+		stability_factor=-0.1
 	}
 }
 
@@ -93,7 +93,7 @@ constitutionalist_revolutionaries=
 	picture=generic_pp_unity_bonus
 	modifier=
 	{
-		unity_factor=-0.1
+		stability_factor=-0.1
 	}
 }
 
@@ -105,7 +105,7 @@ collectivist_ethos_focus_democratic=
 	}
 	allowed_civil_war=
 	{
-		has_government=communism
+		#has_government=communism
 	}
 	removal_cost=-1
 	picture=generic_pp_unity_bonus
@@ -160,7 +160,7 @@ collectivist_ethos_focus_neutral=
 	}
 	allowed_civil_war=
 	{
-		has_government=communism
+		#has_government=communism
 	}
 	removal_cost=-1
 	picture=generic_pp_unity_bonus
@@ -180,7 +180,7 @@ radical_defeated=
 	picture=generic_democratic_drift_bonus
 	modifier=
 	{
-		unity_factor=0.1
+		stability_factor=0.1
 	}
 }
 
@@ -231,7 +231,7 @@ radical_revolutionaries=
 	picture=generic_fascism_drift_bonus
 	modifier=
 	{
-		unity_factor=-0.1
+		stability_factor=-0.1
 	}
 }
 

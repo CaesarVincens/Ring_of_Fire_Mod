@@ -1,13 +1,13 @@
 
-state={
-	id=461
-	name="STATE_461"
-	resources={
-		aluminium=7.000
-		steel=31.000
+state = {
+	id = 461
+	name = "STATE_461"
+	resources = {
+		aluminium = 7.000
+		steel = 31.000
 	}
 
-	history={
+	history = {
 		owner = WRZ
 		victory_points = {
 			9416 8 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		3474 9416 11404 
 	}
-	manpower=1048000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1048000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

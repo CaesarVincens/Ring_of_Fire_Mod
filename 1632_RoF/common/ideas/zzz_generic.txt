@@ -1,6 +1,6 @@
 ideas = {
 
-	hidden_ideas = {
+	hidden_ideas = {		
 		
 		idea_support_SWE = {
 			allowed = {
@@ -47,63 +47,15 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				fighter_equipment = {
+				single_plane_equipment = {
 					instant = yes
 					build_cost_ic = -0.20
 				}
-				cv_fighter_equipment = {
+				multi_plane_equipment = {
 					instant = yes
 					build_cost_ic = -0.20
 				}
-				jet_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				cv_CAS_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				CAS_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				nav_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				cv_nav_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				rocket_interceptor_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				jet_tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				jet_strat_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				heavy_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				strat_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.20
-				}
-				guided_missile_equipment = {
+				airship_equipment = {
 					instant = yes
 					build_cost_ic = -0.20
 				}
@@ -113,6 +65,7 @@ ideas = {
 	
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+
 		keep_traditions_idea = {
 			allowed = {
 				always = no
@@ -155,7 +108,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = Hun_hungarian_monarchy_habsburg
+			picture = HUN_hungarian_monarchy_habsburg
 	
 			modifier = {
 				absolutist_drift = 0.15
@@ -289,7 +242,7 @@ ideas = {
 				liberal_drift = 0.1
 				consumer_goods_factor = -0.05
 				political_power_gain = 0.1
-				unity_factor = 0.10
+				stability_factor = 0.10
 			}
 		}
 
@@ -311,7 +264,7 @@ ideas = {
 				radical_drift = 0.1
 				consumer_goods_factor = -0.1
 				conscription = 0.05
-				unity_factor = 0.15
+				stability_factor = 0.15
 				ai_focus_aggressive_factor = 0.5
 			}
 		}
@@ -336,7 +289,7 @@ ideas = {
 			}
 	
 			modifier = {
-				unity_factor = 0.05
+				stability_factor = 0.05
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
@@ -464,7 +417,7 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				unity_factor = 0.10
+				stability_factor = 0.10
 			}
 		}	
 
@@ -485,6 +438,43 @@ ideas = {
 				foreign_subversive_activites = -0.75
 			}			
 		}
+
+		idea_irregular_forces = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				special_forces_cap = 0.25
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}			
+		}
+		
+		idea_conscripts = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_forced_conscription
+			modifier = {
+				conscription = 0.025
+				training_time_factor = 0.1
+			}
+		}
+
+		
 	}
 		
 	
@@ -742,9 +732,9 @@ ideas = {
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.01
+				#country_event = conv.political.01
 			}
-			picture = triumphant_will
+			#picture = triumphant_will
 			do_effect = {
 				NOT = {
 					has_government = absolutist
@@ -762,9 +752,9 @@ ideas = {
 			}
 			traits = { constitutionalist_minister }
 			on_add = {
-				country_event = conv.political.07
+				#country_event = conv.political.07
 			}
-			picture = brittish_stoicism
+			#picture = brittish_stoicism
 			do_effect = {
 				NOT = {
 					has_government = constitutionalist
@@ -782,7 +772,7 @@ ideas = {
 			}
 			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.25
+				#country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
@@ -801,7 +791,7 @@ ideas = {
 			}
 			traits = { radical_minister }
 			on_add = {
-				country_event = conv.political.19
+				#country_event = conv.political.19
 			}
 			do_effect = {
 				NOT = {
@@ -819,7 +809,7 @@ ideas = {
 				}
 			}
 			traits = { neutrality_minister }
-			picture = neutrality_idea
+			#picture = neutrality_idea
 			do_effect = {
 				NOT = {
 					has_government = neutrality

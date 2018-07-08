@@ -17,6 +17,7 @@ bookmarks = {
 			focuses = {
 				NUS_new_american_revolution
 				NUS_form_CPoE
+				NUS_national_fervor
 			}
 		}
 
@@ -36,6 +37,7 @@ bookmarks = {
 			ideology = absolutist
 			ideas = {
 				anti_habsburg_diplomacy
+				FRA_gaston
 			}
 			focuses = {
 				FRA_ostend_league_focus
@@ -57,6 +59,10 @@ bookmarks = {
 		"---"={
 			history = "RING_OF_FIRE_DESC"
 		}
+		"SPN"={
+			minor = yes
+			history = "RING_OF_FIRE_DESC"
+		}
 		"POL"={
 			minor = yes
 			history = "RING_OF_FIRE_DESC"
@@ -68,7 +74,19 @@ bookmarks = {
 		"SOV"={
 			minor = yes
 			history = "RING_OF_FIRE_DESC"
-		}		
+		}
+		"ENG"={
+			minor = yes
+			history = "RING_OF_FIRE_DESC"
+			ideas = {
+				ENG_parliament_prorogued
+			}
+			focuses = {
+				ENG_cutting_the_cord
+				ENG_united_kingdom
+				ENG_commonwealth_of_england
+			}
+		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

@@ -28,7 +28,7 @@ country_event = {
 				}
 				clr_country_flag = USE_annex_country
 				NUS = {
-					annex_country = { target = PREV }
+					annex_country = { target = PREV transfer_troops = no }
 				}
 			}
 			every_owned_state = {
@@ -36,8 +36,12 @@ country_event = {
 					has_state_flag = USE_annex_state
 					NOT = { is_core_of = NUS }
 				}
-				add_core_of = NUS
+				#add_core_of = NUS
 				clr_state_flag = USE_annex_state
+				if = {
+					limit = { is_core_of = SWE }
+					remove_core_of = SWE
+				}
 			}
 			every_country = {
 				limit = { has_country_flag = USE_fed_prov }
@@ -48,6 +52,14 @@ country_event = {
 			if = {
 				limit = { owns_state = 247 }
 				set_capital = 247
+			}
+			every_country = {
+				limit = { is_in_faction_with = SWE }
+				SWE = {
+					dismantle_faction = yes
+					create_faction = "Vasa Empire"
+					add_to_faction = PREV
+				}
 			}
 		}
 	}
@@ -68,7 +80,29 @@ country_event = {
 				NUS = { set_autonomy = { target = PREV autonomy_state = autonomy_rof_federal_state } }
 			}
 		}
+		set_party_name = {
+			ideology = constitutionalist
+			name = USE_crown_loyalists
+			long_name = USE_crown_loyalists_long
+		}
 		hidden_effect = {
+			set_party_name = {
+				ideology = absolutist
+				name = USE_crown_loyalists_abs
+				long_name = USE_crown_loyalists_abs_long
+			}
+			create_country_leader = {
+				name = "Johann Wilhelm Neumair von Ramsla"
+				ideology = absolute_monarchy
+			}
+			create_country_leader = {
+				name = "Wilhelm Wettin"
+				picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
+				expire = "1660.1.1"
+				ideology = constitutional_republic
+				traits = {
+				}
+			}
 			news_event = { id = RoF_news.05 days = 1 }
 		}
 	}
@@ -165,7 +199,7 @@ country_event = {
 		reverse_add_opinion_modifier = { target = NUS modifier = rejected_USE }
 		if = {
 			limit = { is_in_faction_with = NUS }
-			every_country = {
+			random_country = {
 				limit = { is_faction_leader = yes is_in_faction_with = NUS }
 				remove_from_faction = ROOT
 			}
@@ -345,7 +379,7 @@ country_event = {
 			}
 			clr_country_flag = USE_annex_country
 			NUS = {
-				annex_country = { target = PREV transfer_troops = yes }
+				annex_country = { target = PREV }
 			}
 		}
 		every_owned_state = {
@@ -353,7 +387,7 @@ country_event = {
 				has_state_flag = USE_annex_state
 				NOT = { is_core_of = NUS }
 			}
-			add_core_of = NUS
+			#add_core_of = NUS
 			clr_state_flag = USE_annex_state
 		}
 		ai_chance = { base = 100 }
@@ -468,7 +502,7 @@ country_event = {
 			HAM = { has_country_flag = HAM_accept_demand }
 		}
 		annex_country = { target = HAM }
-		add_state_core = 168
+		#add_state_core = 168
 		load_oob = "NUS_Hamburg_navy"
 		hidden_effect = {
 			NUS = {
@@ -507,6 +541,9 @@ news_event = {
 	option = {
 		name = RoF_USE.116.a
 		set_province_controller = 6287
+		hidden_effect = {
+			DEN = { add_war_support = -0.4 }
+		}
 	}
 }
 
@@ -521,6 +558,8 @@ country_event = {
 	immediate ={
 		hidden_effect ={
 			SWE = { country_event = { id = RoF_SWE.120 days = 1 } }
+			SPN = { country_event = { id = RoF_NED.121 days = 1 } }
+			UPS = { country_event = { id = RoF_NED.120 days = 1 } }
 		}
 	}
 
@@ -548,7 +587,7 @@ country_event = {
 country_event = {
 	id = RoF_USE.121
 	title = RoF_USE.121.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_den_flag
 	desc = {
 		text = RoF_USE.121.da
 		trigger = {
@@ -587,7 +626,7 @@ country_event = {
 		add_state_core = 662
 		transfer_ship = {
 			prefer_name = "SSIM President"
-			type = battleship
+			type = ironclad
 			target = DEN
 		}
 		DEN = { clr_country_flag = give_holstein }
@@ -604,7 +643,7 @@ country_event = {
 		add_state_core = 662
 		transfer_ship = {
 			prefer_name = "SSIM President"
-			type = battleship
+			type = ironclad
 			target = DEN
 		}
 		DEN = { clr_country_flag = give_holstein }
@@ -624,12 +663,12 @@ country_event = {
 		add_state_core = 110
 		transfer_ship = {
 			prefer_name = "SSIM President"
-			type = battleship
+			type = ironclad
 			target = DEN
 		}
 		transfer_ship = {
 			prefer_name = "SSIM Achilles"
-			type = heavy_cruiser
+			type = timberclad
 			target = DEN
 		}
 		DEN = { clr_country_flag = give_jutland }
@@ -645,7 +684,7 @@ country_event = {
 	picture = GFX_report_event_use_flag
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = RoF_USE.130.a
 		white_peace = FRA
@@ -653,3 +692,578 @@ country_event = {
 		FRA = { dismantle_faction = yes }
 	}
 }
+
+#Start of the Eastern War
+country_event = {
+	id = RoF_USE.131
+	title = RoF_USE.131.t
+	desc = RoF_USE.131.d
+	picture = GFX_report_event_bra_sax_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_USE.131.a
+		if = {
+			limit = {
+				SAX = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
+				}
+			}
+			declare_war_on = {
+				target = SAX
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				BRA = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
+				}
+			}
+			hidden_effect = {
+				BRA = { country_event = { id = RoF_German.150 days = 7 } }
+			}
+			declare_war_on = {
+				target = BRA
+				type = annex_everything
+			}
+		}
+	}
+
+}
+
+#Poland Enters the Eastern War
+country_event = {
+	id = RoF_USE.132
+	title = RoF_USE.132.t
+	desc = RoF_USE.132.d
+	picture = GFX_report_event_pol_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_USE.132.a
+	}
+
+}
+
+#election of '35
+country_event = {
+	id = RoF_USE.135
+	title = RoF_USE.135.t
+	desc = RoF_USE.135.d
+	picture = GFX_report_event_use_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.135.a
+		hidden_effect = {
+			set_political_party = {
+				ideology = constitutionalist
+				popularity = 40
+			}
+			set_political_party = {
+				ideology = absolutist
+				popularity = 12
+			}
+		}
+		set_country_flag = crown_loyalists_win
+	}
+	option = {
+		name = RoF_USE.135.b
+		hidden_effect = {
+			set_political_party = {
+				ideology = liberal
+				popularity = 40
+			}
+			set_political_party = {
+				ideology = radical
+				popularity = 12
+			}
+		}
+		set_country_flag = fojp_win
+	}
+}
+
+#election of '35
+country_event = {
+	id = RoF_USE.136
+	title = RoF_USE.136.t
+	desc = RoF_USE.136.d
+	picture = GFX_report_event_use_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.136.a
+		set_politics = {
+			ruling_party = constitutionalist
+		}
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Michael Stearns"
+				picture = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
+				traits = { }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+	}
+}
+
+#election of '35
+country_event = {
+	id = RoF_USE.137
+	title = RoF_USE.137.t
+	desc = RoF_USE.137.d
+	picture = GFX_report_event_use_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.137.a
+		add_political_power = 100
+	}
+}
+
+#Krystalnacht
+country_event = {
+	id = RoF_USE.140
+	title = RoF_USE.140.t
+	desc = RoF_USE.140.d
+	picture = GFX_report_event_use_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.140.a
+		add_popularity = {
+			ideology = absolutist
+			popularity = -1
+		}
+		add_stability = -0.1
+	}
+}
+
+#Embassy events: FRA-NED
+#embassy in France, meets with Richelieu - canon
+country_event = {
+	id = RoF_USE.200
+	title = RoF_USE.200.t
+	desc = RoF_USE.200.d
+	picture = GFX_report_event_richelieu
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_FRA
+		FRA = { has_completed_focus = FRA_countermeasures_focus }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.200.a
+		set_country_flag = embassy_to_UPS
+	}
+
+}
+
+#embassy in France, meets with Richelieu - friendly
+country_event = {
+	id = RoF_USE.201
+	title = RoF_USE.201.t
+	desc = RoF_USE.201.d
+	picture = GFX_report_event_richelieu
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_FRA
+		FRA = { has_completed_focus = FRA_make_overtures }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.201.a
+		set_country_flag = embassy_to_UPS
+	}
+
+}
+
+#embassy in UPS
+country_event = {
+	id = RoF_USE.202
+	title = RoF_USE.202.t
+	desc = RoF_USE.202.d
+	picture = GFX_report_event_ups_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_FRA
+		has_country_flag = embassy_to_UPS
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.202.a
+	}
+
+}
+
+#embassy in UPS trapped by SPN
+country_event = {
+	id = RoF_USE.203
+	title = RoF_USE.203.t
+	desc = RoF_USE.203.d
+	picture = GFX_report_event_ups_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_FRA
+		has_country_flag = embassy_to_UPS
+		SPN = { has_completed_focus = SPN_haarlem_gambit }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.203.a
+	}
+
+}
+
+#embassy in UPS makes ceasefire with SPN
+country_event = {
+	id = RoF_USE.204
+	title = RoF_USE.204.t
+	desc = RoF_USE.204.d
+	picture = GFX_report_event_ups_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_FRA
+		has_country_flag = embassy_to_UPS
+		OR = {
+			SPN = { focus_progress = { focus = SPN_come_to_terms progress > 0.1 } }
+			focus_progress = { focus = NUS_congress_of_copenhagen progress > 0.1 }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.204.a
+		set_country_flag = UPS_SPN_ceasefire
+	}
+
+}
+
+#embassy in UPS, SPN and UPS peace treaty
+country_event = {
+	id = RoF_USE.205
+	title = RoF_USE.205.t
+	desc = RoF_USE.205.d
+	picture = GFX_report_event_ups_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_FRA
+		has_country_flag = embassy_to_UPS
+		has_country_flag = UPS_SPN_ceasefire
+		OR = {
+			SPN = { has_completed_focus = SPN_come_to_terms }
+			has_completed_focus = NUS_congress_of_copenhagen
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.205.a
+	}
+
+}
+
+#Embassy events: ENG-SCO
+#embassy in England, Cromwell arrested - canon
+country_event = {
+	id = RoF_USE.210
+	title = RoF_USE.210.t
+	desc = RoF_USE.210.d
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		ENG = { has_completed_focus = ENG_arrest_cromwell }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.210.a
+		set_country_flag = embassy_in_ENG
+	}
+
+}
+
+#embassy in England, Cromwell hidden
+country_event = {
+	id = RoF_USE.211
+	title = RoF_USE.211.t
+	desc = RoF_USE.211.d
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		ENG = { has_completed_focus = ENG_hide_cromwell }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.211.a
+		set_country_flag = embassy_in_ENG
+	}
+
+}
+
+#embassy held in Tower
+country_event = {
+	id = RoF_USE.212
+	title = RoF_USE.212.t
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_arrest_cromwell } }
+		text = RoF_USE.212.da
+	}
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_hide_cromwell } }
+		text = RoF_USE.212.db
+	}
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		has_country_flag = embassy_in_ENG
+		FRA = { has_completed_focus = FRA_dunkirk }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.212.a
+		hidden_effect = {
+			activate_targeted_decision = { target = ENG decision = NUS_break_out_embassy_ENG }
+		}
+	}
+
+}
+
+#embassy broken out of tower
+country_event = {
+	id = RoF_USE.213
+	title = RoF_USE.213.t
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_arrest_cromwell } }
+		text = RoF_USE.213.da
+	}
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_hide_cromwell } }
+		text = RoF_USE.213.db
+	}
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		has_country_flag = embassy_in_ENG
+		has_country_flag = NUS_embassy_break_out
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.213.a
+		set_country_flag = NUS_embassy_SCO
+	}
+
+}
+
+#embassy to SCO
+country_event = {
+	id = RoF_USE.214
+	title = RoF_USE.214.t
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_arrest_cromwell } }
+		text = RoF_USE.214.da
+	}
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_hide_cromwell } }
+		text = RoF_USE.214.db
+	}
+	picture = GFX_report_event_sco_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		has_country_flag = NUS_embassy_SCO
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.214.a
+	}
+
+}
+
+#Embassy events: VEN-VAT
+#embassy in Venice
+country_event = {
+	id = RoF_USE.220
+	title = RoF_USE.220.t
+	desc = RoF_USE.220.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.220.a
+		set_country_flag = embassy_in_VEN
+	}
+
+}
+
+#embassy in Venice
+country_event = {
+	id = RoF_USE.221
+	title = RoF_USE.221.t
+	desc = RoF_USE.221.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+		has_country_flag = embassy_in_VEN
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.221.a
+		set_country_flag = embassy_to_VAT
+	}
+
+}
+
+#embassy in Rome
+country_event = {
+	id = RoF_USE.222
+	title = RoF_USE.222.t
+	desc = RoF_USE.222.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+		has_country_flag = embassy_to_VAT
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.222.a
+		set_country_flag = embassy_in_VAT
+	}
+
+}
+
+#embassy saves Pope
+country_event = {
+	id = RoF_USE.223
+	title = RoF_USE.223.t
+	desc = RoF_USE.223.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+		has_country_flag = embassy_in_VAT
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.223.a
+	}
+
+}
+

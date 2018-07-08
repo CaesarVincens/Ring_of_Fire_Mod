@@ -1,13 +1,13 @@
 
-state={
-	id=613
-	name="STATE_613"
-	resources={
-		oil=19.000
-		steel=2.000
+state = {
+	id = 613
+	name = "STATE_613"
+	resources = {
+		oil = 19.000
+		steel = 2.000
 	}
 
-	history={
+	history = {
 		owner = SPU
 		victory_points = {
 			12845 3 
@@ -17,16 +17,19 @@ state={
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			12790 = {
+				naval_base = 2
+			}
 
 		}
 		add_core_of = SPU
 
 	}
 
-	provinces={
+	provinces = {
 		1937 2023 2085 4969 8056 10494 10864 12703 12790 12845 12872 
 	}
-	manpower=526600
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 526600
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

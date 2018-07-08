@@ -7,7 +7,7 @@ country_event = {
 	picture = GFX_report_event_breitenfeld
 	desc = RoF_SWE.100.d
 	fire_only_once = yes
-
+	is_triggered_only = yes
 	trigger = {
 		tag = SWE
 		date > 1631.9.16
@@ -16,10 +16,11 @@ country_event = {
 		days = 1
 	}
 	immediate = {
-		
+		set_global_flag = breitenfeld_happened
 	}
 	option = {
 		name = RoF_SWE.100.a
+		add_war_support = 0.05
 		hidden_effect = {
 			news_event = { id = RoF_news.01 days = 1 }
 			AUS = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
@@ -103,7 +104,7 @@ country_event = {
 country_event = {
 	id = RoF_SWE.121
 	title = RoF_SWE.121.t
-	picture = GFX_report_event_rof_placeholder
+	picture = GFX_report_event_den_flag
 	desc = {
 		text = RoF_SWE.121.da
 		trigger = {
@@ -187,5 +188,390 @@ country_event = {
 			clr_country_flag = give_scania_gotland
 		}
 		clr_country_flag = demand_scania_gotland
+	}
+}
+
+#Gaining German Allies
+#Brandenburg joins
+country_event = {
+	id = RoF_SWE.130
+	title = RoF_SWE.130.t
+	picture = GFX_report_event_bra_flag
+	desc = RoF_SWE.130.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.130.a
+		add_manpower = 5000
+		add_war_support = 0.05
+		add_to_faction = BRA
+		BRA = {
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+#Brandenburg refuses
+country_event = {
+	id = RoF_SWE.131
+	title = RoF_SWE.131.t
+	picture = GFX_report_event_bra_flag
+	desc = RoF_SWE.131.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.131.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BRA
+		}
+	}
+}
+
+#FROM asks to join
+country_event = {
+	id = RoF_SWE.132
+	title = RoF_SWE.132.t
+	picture = GFX_report_event_scottish_mercenaries
+	desc = RoF_SWE.132.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.132.a
+		effect_tooltip = {
+			add_to_faction = FROM
+			FROM = {
+				add_to_war = {
+					targeted_alliance = SWE
+					enemy = AUS
+					hostility_reason = asked_to_join
+				}
+			}
+		}
+		FROM = {
+			set_country_flag = SWE_accepted
+			country_event = { id = RoF_German.101 hours = 12 }
+		}
+	}
+	option = {
+		name = RoF_SWE.132.b
+		FROM = {
+			set_country_flag = SWE_rejected
+			country_event = { id = RoF_German.101 hours = 12 }
+		}
+	}
+}
+
+
+# SWE Baltic Coast
+country_event = {
+	id = RoF_SWE.135
+	title = RoF_SWE.135.t
+	desc = RoF_SWE.135.d
+	picture = GFX_report_event_swe_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Vassal
+		name =  RoF_SWE.135.a
+		add_political_power = -50
+		MKL = { country_event = { id = RoF_German.120 hours = 12 } }
+		effect_tooltip = {
+			add_manpower = 5000
+			set_autonomy = {
+				target = MKL
+				autonomy_state = autonomy_rof_vassal
+			}
+			add_to_faction = MKL
+		}
+		ai_chance = { base = 10 }
+	}
+	option = { # Free
+		name =  RoF_SWE.135.b
+		MKL = { country_event = { id = RoF_German.121 hours = 12 } }
+		add_manpower = 2000
+		effect_tooltip = {
+			add_to_faction = MKL
+		}
+		ai_chance = { base = 0 }
+	}
+}
+
+# SWE Baltic Coast
+country_event = {
+	id = RoF_SWE.136
+	title = RoF_SWE.136.t
+	desc = RoF_SWE.136.d
+	picture = GFX_report_event_swe_flag
+	
+	is_triggered_only = yes
+	
+	option = { # refused vassal
+		name =  RoF_SWE.136.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = MKL
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+#Saxony joins
+country_event = {
+	id = RoF_SWE.140
+	title = RoF_SWE.140.t
+	picture = GFX_report_event_sax_flag
+	desc = RoF_SWE.140.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.140.a
+		add_manpower = 5000
+		add_war_support = 0.05
+		add_to_faction = SAX
+		SAX = {
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+#Saxony refuses
+country_event = {
+	id = RoF_SWE.141
+	title = RoF_SWE.141.t
+	picture = GFX_report_event_sax_flag
+	desc = RoF_SWE.141.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.141.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SAX
+		}
+	}
+}
+
+#Move on Main
+country_event = {
+	id = RoF_SWE.144
+	title = RoF_SWE.144.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.144.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		give_military_access = SXW
+		hidden_effect = {
+			SXW = { give_military_access = SWE }
+			add_opinion_modifier = { target = SXW modifier = SWE_tyw_support }
+			reverse_add_opinion_modifier = { target = SXW modifier = SWE_tyw_support }
+		}
+	}
+	option = {
+		name = RoF_SWE.144.a
+		#set_state_controller = 461
+	}
+}
+
+#Seize Wurzburg
+country_event = {
+	id = RoF_SWE.145
+	title = RoF_SWE.145.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.145.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			set_state_controller = 577
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			set_state_controller = 578
+		}
+	}
+	option = {
+		name = RoF_SWE.145.a
+		add_manpower = 2000
+		hidden_effect = {
+			load_oob = "SWE_franconia"
+		}
+	}
+}
+
+#North German Allies
+country_event = {
+	id = RoF_SWE.146
+	title = RoF_SWE.146.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.146.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		BRS = { country_event = { id = RoF_German.140 hours = 12 } }
+		LUB = { country_event = { id = RoF_German.140 hours = 12 } }
+		BRE = { country_event = { id = RoF_German.140 hours = 12 } }
+		MAG = { country_event = { id = RoF_German.141 hours = 12 } }
+	}
+	option = {
+		name = RoF_SWE.146.a
+		#set_state_controller = 461
+	}
+}
+
+#Seize Mainz
+country_event = {
+	id = RoF_SWE.147
+	title = RoF_SWE.147.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.147.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				MNZ = {
+					controls_state = 248
+				}
+			}
+			set_state_controller = 248
+		}
+		if = {
+			limit = {
+				MNZ = {
+					controls_state = 249
+				}
+			}
+			set_state_controller = 249
+		}
+	}
+	option = {
+		name = RoF_SWE.147.a
+		add_manpower = 2000
+	}
+}
+
+#FROM joins
+country_event = {
+	id = RoF_SWE.148
+	title = RoF_SWE.148.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.148.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.140.a
+		add_manpower = 2000
+		add_to_faction = FROM
+		FROM = {
+			add_to_war = {
+				targeted_alliance = SWE
+				enemy = AUS
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+#FROM refuses
+country_event = {
+	id = RoF_SWE.149
+	title = RoF_SWE.149.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.149.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.141.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+	}
+}
+
+#Rally Germans
+country_event = {
+	id = RoF_SWE.150
+	title = RoF_SWE.150.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.150.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.150.a
+		ANS = { country_event = { id = RoF_German.140 hours = 12 } }
+		WRT = { country_event = { id = RoF_German.140 hours = 12 } }
+		FRK = { country_event = { id = RoF_German.140 hours = 12 } }
+		#PAL = { country_event = { id = RoF_German.140 hours = 12 } }
+		#NAS = { country_event = { id = RoF_German.140 hours = 12 } }
+		#BAD = { country_event = { id = RoF_German.142 hours = 12 } }
+		NUR = { country_event = { id = RoF_German.140 hours = 12 } }
 	}
 }

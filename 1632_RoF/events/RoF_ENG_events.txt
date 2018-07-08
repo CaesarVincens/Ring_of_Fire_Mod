@@ -1,0 +1,1708 @@
+﻿add_namespace = RoF_ENG
+
+#return Orkneys to DEN
+country_event = {
+	id = RoF_ENG.110
+	title = RoF_ENG.110.t
+	picture = GFX_report_event_den_flag
+	desc = RoF_ENG.110.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.110.a
+		DEN = { transfer_state = 660 }
+		660 = {
+			if = {
+				limit = { is_core_of = SCO }
+				remove_core_of = SCO
+			}
+			if = {
+				limit = { is_core_of = ENG }
+				remove_core_of = ENG
+			}
+			add_core_of = DEN
+		}
+		add_timed_idea = { idea = ENG_DEN_payment days = 180 }
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = RoF_ENG.110.b
+		DEN = { add_state_claim = 660 }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#fortify the thames
+country_event = {
+	id = RoF_ENG.111
+	title = RoF_ENG.111.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.111.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			128 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11446
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 13070
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 3501
+					level = 2
+					instant_build = yes
+				}
+			}
+			127 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11374
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_ENG.111.a
+		effect_tooltip = {
+			128 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11446
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 13070
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 3501
+					level = 2
+					instant_build = yes
+				}
+			}
+			127 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11374
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#st. germain-en-laye
+country_event = {
+	id = RoF_ENG.120
+	title = RoF_ENG.120.t
+	picture = GFX_report_event_fra_flag
+	desc = RoF_ENG.120.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.120.a
+		FRA = { transfer_state = 117 transfer_state = 118 }
+		add_timed_idea = { idea = ENG_st_germain days = 360 }
+		add_political_power = 100
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = RoF_ENG.120.b
+		FRA = { add_state_claim = 117 add_state_claim = 118 }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#Dr. Harvey reports on history
+country_event = {
+	id = RoF_ENG.130
+	title = RoF_ENG.130.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.130.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.130.a
+		custom_effect_tooltip = ENG_change_history.tt
+		set_country_flag = ENG_change_history
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = RoF_ENG.130.b
+		custom_effect_tooltip = ENG_go_with_history.tt
+		set_country_flag = ENG_go_with_history
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#cutting the cord (of history)
+country_event = {
+	id = RoF_ENG.131
+	title = RoF_ENG.131.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.131.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.131.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#arrest/hide cromwell
+country_event = {
+	id = RoF_ENG.135
+	title = RoF_ENG.135.t
+	picture = GFX_report_event_eng_flag
+	desc = {
+		trigger = { has_completed_focus = ENG_arrest_cromwell }
+		text = RoF_ENG.135.da
+	}
+	desc = {
+		trigger = { has_completed_focus = ENG_hide_cromwell }
+		text = RoF_ENG.135.db
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		trigger = { has_completed_focus = ENG_arrest_cromwell }
+		name = RoF_ENG.135.a
+		hidden_effect = {
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.3
+			}
+			set_party_name = {
+				ideology = constitutionalist
+				long_name = ENG_con_parliamentarians_long
+				name = ENG_con_parliamentarians
+			}
+			set_party_name = {
+				ideology = liberal
+				long_name = ENG_lib_parliamentarians_long
+				name = ENG_lib_parliamentarians
+			}
+			set_party_name = {
+				ideology = absolutist
+				long_name = ENG_royalists_long
+				name = ENG_royalists
+			}
+			create_country_leader = {
+				name = "Oliver Cromwell"
+				picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+				expire = "1660.1.1"
+				ideology = constitutional_republic
+			}
+		}
+		create_country_leader = {
+			name = "Oliver Cromwell"
+			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+			expire = "1660.1.1"
+			ideology = liberal_republic
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		trigger = { has_completed_focus = ENG_hide_cromwell }
+		name = RoF_ENG.135.b
+		hidden_effect = {
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.3
+			}
+			set_party_name = {
+				ideology = constitutionalist
+				long_name = ENG_con_parliamentarians_long
+				name = ENG_con_parliamentarians
+			}
+			set_party_name = {
+				ideology = liberal
+				long_name = ENG_lib_parliamentarians_long
+				name = ENG_lib_parliamentarians
+			}
+			set_party_name = {
+				ideology = absolutist
+				name = ENG_royalists
+			}
+			create_country_leader = {
+				name = "Oliver Cromwell"
+				picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+				expire = "1660.1.1"
+				ideology = liberal_republic
+			}
+		}
+		create_country_leader = {
+			name = "Oliver Cromwell"
+			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+			expire = "1660.1.1"
+			ideology = constitutional_republic
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#king crippled
+country_event = {
+	id = RoF_ENG.140
+	title = RoF_ENG.140.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.140.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.140.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#scottish question
+country_event = {
+	id = RoF_ENG.145
+	title = RoF_ENG.145.t
+	picture = GFX_report_event_sco_flag
+	desc = RoF_ENG.145.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.145.a
+		custom_effect_tooltip = ENG_the_scottish_question.tt
+		set_country_flag = ENG_disolved_SCO_parliament
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = RoF_ENG.145.b
+		set_country_flag = ENG_affirm_SCO_rights
+		add_political_power = -100
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#crush rebels
+country_event = {
+	id = RoF_ENG.147
+	title = RoF_ENG.147.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.148.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = ENG_civil_war_flag
+		news_event = { hours = 6 id = RoF_news.04 }
+		SCO = {
+			every_owned_state = {
+				add_core_of = ENG
+			}
+		}
+		annex_country = {
+			target = SCO
+			transfer_troops = yes
+		}
+	}
+	option = { #Support Royalists
+		name = RoF_ENG.147.a
+		hidden_effect = {
+			set_country_flag = ENG_IRE_revolt_coming
+			start_civil_war = {
+				ruling_party = absolutist
+				ideology = constitutionalist
+				size = 0.5
+				capital = 416
+				states = { 416 415 123 124 125 660 }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = ENG
+					has_government = constitutionalist
+				}
+				load_oob = "SCO_Civil_War"
+				set_equipment_fraction = 0.5
+				set_stability = 0.9
+				set_war_support = 0.8
+				#country_event = { id = spain.3 days = 1 }
+				add_popularity = {
+					ideology = liberal
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = radical
+					popularity = 0.10
+				}
+				create_country_leader = {
+					name = "Archibald Campbell"
+					desc = "POLITICS_GRAHAM_BROWN_DESC"
+					picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
+					expire = "1660.1.1"
+					ideology = constitutional_monarchy
+					traits = {
+					}
+				}
+			}
+			load_oob = "ENG_Civil_War"
+			set_equipment_fraction = 0.5
+			set_stability = 0.9
+			set_war_support = 0.8
+
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.8
+			}
+			set_cosmetic_tag = ENG_civil_war
+			random_other_country = {
+				limit = {
+					original_tag = ENG
+					has_government = constitutionalist
+				}
+				set_cosmetic_tag = SCO_civil_war
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#constitutional reforms
+country_event = {
+	id = RoF_ENG.148
+	title = RoF_ENG.148.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.148.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_ENG.148.a
+		set_country_flag = ENG_affirm_IRE_rights
+		add_political_power = -100
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = RoF_ENG.148.b
+		custom_effect_tooltip = ENG_the_irish_question.tt
+		set_country_flag = ENG_deny_IRE_rights
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#overthrow the king
+country_event = {
+	id = RoF_ENG.149
+	title = RoF_ENG.149.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.149.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = ENG_civil_war_flag
+		news_event = { hours = 6 id = RoF_news.04 }
+		SCO = {
+			every_owned_state = {
+				add_core_of = ENG
+			}
+		}
+		annex_country = {
+			target = SCO
+			transfer_troops = yes
+		}
+	}
+
+	option = { #Support Parliamentarians
+		name = RoF_ENG.149.a
+		hidden_effect = {
+			set_capital = 416
+			start_civil_war = {
+				#ruling_party = constitutionalist
+				ideology = absolutist
+				size = 0.5
+				capital = 128
+				states = { 128 126 127 129 97 120 121 122 }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = ENG
+					has_government = absolutist
+				}
+				set_country_flag = ENG_IRE_revolt_coming
+				load_oob = "ENG_Civil_War"
+				set_equipment_fraction = 0.5
+				set_stability = 0.9
+				set_war_support = 0.8
+				#country_event = { id = spain.3 days = 1 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.25
+				}
+			}
+			load_oob = "SCO_Civil_War"
+			set_equipment_fraction = 0.5
+			set_stability = 0.9
+			set_war_support = 0.8
+			create_country_leader = {
+				name = "Archibald Campbell"
+				desc = "POLITICS_GRAHAM_BROWN_DESC"
+				picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
+				expire = "1660.1.1"
+				ideology = constitutional_monarchy
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = constitutionalist
+			}
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.277
+			}
+			add_popularity = {
+				ideology = radical
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = absolutist
+				popularity = -1
+			}
+			set_cosmetic_tag = SCO_civil_war
+			random_other_country = {
+				limit = {
+					original_tag = ENG
+					has_government = absolutist
+				}
+				set_cosmetic_tag = ENG_civil_war
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#ireland revolts during civil war
+country_event = {
+	id = RoF_ENG.150
+	title = RoF_ENG.150.t
+	desc = RoF_ENG.150.d
+	picture = GFX_report_event_ire_flag
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		has_country_flag = ENG_IRE_revolt_coming
+		has_civil_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = RoF_ENG.150.a
+		release = IRE
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } RoF_transfer_technology = yes }
+		set_country_flag = ENG_IRE_revolted
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = RoF_ENG.150.b
+		add_political_power = -100
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = RoF_ENG.150.c
+		trigger = {
+			is_ai = no
+		}
+		release = IRE
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG RoF_transfer_technology = yes }
+		set_country_flag = ENG_IRE_revolted
+	}
+}
+
+country_event = {
+	id = RoF_ENG.151
+	title = RoF_ENG.151.t
+	desc = RoF_ENG.151.d
+	picture = GFX_report_event_ire_flag
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		create_country_leader = {
+			name = "Owen Roe O'Neil"
+			desc = "POLITICS_GRAHAM_BROWN_DESC"
+			picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
+			expire = "1660.1.1"
+			ideology = democracy
+			traits = {
+			}
+		}
+		set_politics = {
+			ruling_party = liberal
+			parties = {
+				absolutist = {
+					popularity = 10
+				}
+				constitutionalist = {
+					popularity = 20
+				}
+				liberal = {
+					popularity = 45
+				}
+				radical = {
+					popularity = 20
+				}
+				neutrality = {
+					popularity = 5
+				}
+			}
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		load_oob = "IRE_cw_revolt"
+	}
+
+	option = {
+		name = RoF_ENG.151.a
+	}
+}
+
+#ireland revolts after being denied rights
+country_event = {
+	id = RoF_ENG.152
+	title = RoF_ENG.150.t
+	desc = RoF_ENG.150.d
+	picture = GFX_report_event_ire_flag
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ENG
+		has_country_flag = ENG_deny_IRE_rights
+		#has_civil_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = RoF_ENG.150.a
+		release = IRE
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } RoF_transfer_technology = yes }
+		set_country_flag = ENG_IRE_revolted
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = RoF_ENG.150.b
+		add_political_power = -100
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = RoF_ENG.150.c
+		trigger = {
+			is_ai = no
+		}
+		release = IRE
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG RoF_transfer_technology = yes }
+		set_country_flag = ENG_IRE_revolted
+	}
+}
+
+country_event = {
+	id = RoF_ENG.155
+	title = RoF_ENG.155.t
+	desc = RoF_ENG.155.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = ENG
+		has_completed_focus = ENG_the_scottish_question
+		has_government = absolutist
+	}
+
+
+	immediate = {
+		set_global_flag = ENG_civil_war_done
+		set_country_flag = ENG_royalists_won
+		drop_cosmetic_tag = yes
+	}
+
+	option = { #scottish province
+		name = RoF_ENG.155.a
+		add_political_power = -100
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #scottish kingdom
+		name = RoF_ENG.155.b
+		release_autonomy = {
+			target = SCO
+			autonomy_state = autonomy_rof_union
+			freedom_level = 0.2
+		}
+		if = {
+			limit = {
+				SCO = {
+					NOT = { has_country_flag = crown_union_flag }
+				}
+			}
+			SCO = { set_country_flag = crown_union_flag }
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					name = "Charles Stuart"
+				}
+			}
+			SCO = {
+				create_country_leader = {
+					name = "Charles Stuart"
+					desc = "POLITICS_GRAHAM_BROWN_DESC"
+					picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
+					expire = "1660.1.1"
+					ideology = absolute_monarchy
+					traits = {
+					}
+				}
+				RoF_transfer_technology = yes 
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = RoF_ENG.156
+	title = RoF_ENG.156.t
+	desc = RoF_ENG.156.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = ENG
+		has_completed_focus = ENG_the_scottish_question
+		has_government = constitutionalist
+	}
+
+	immediate = {
+		set_global_flag = ENG_civil_war_done
+		set_country_flag = ENG_parliamentarians_won
+		drop_cosmetic_tag = yes
+		create_country_leader = {
+			name = "Oliver Cromwell"
+			desc = "POLITICS_GRAHAM_BROWN_DESC"
+			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+			expire = "1660.1.1"
+			ideology = constitutional_republic
+			traits = {
+			}
+		}
+	}
+
+	option = { #united realm
+		name = RoF_ENG.156.a
+		add_political_power = -100
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #separate realms
+		name = RoF_ENG.156.b
+		release = SCO
+		SCO = {
+			country_event = { id = RoF_ENG.157 days = 2 }
+			RoF_transfer_technology = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = RoF_ENG.157
+	title = RoF_ENG.157.t
+	desc = RoF_ENG.157.d
+	picture = GFX_report_event_sco_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_country_leader = {
+			name = "Archibald Campbell"
+			desc = "POLITICS_GRAHAM_BROWN_DESC"
+			picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
+			expire = "1660.1.1"
+			ideology = constitutional_republic
+			traits = {
+			}
+		}
+		create_country_leader = {
+			name = "James Stewart"
+			desc = "POLITICS_GRAHAM_BROWN_DESC"
+			picture = "gfx/leaders/ENG/Portrait_Scotland_James_Stewart.dds"
+			expire = "1660.1.1"
+			ideology = absolute_monarchy
+			traits = {
+			}
+		}
+
+	}
+
+	option = {
+		name = RoF_ENG.157.a
+		set_politics = {
+			parties = {
+				absolutist = {
+					popularity = 10
+				}
+				constitutionalist = {
+					popularity = 50
+				}
+				liberal = {
+					popularity = 35
+				}
+				neutrality = {
+					popularity = 5
+				}
+			}
+
+			ruling_party = constitutionalist
+			election_frequency = 48
+			elections_allowed = no
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = RoF_ENG.157.b
+		set_politics = {
+			parties = {
+				absolutist = {
+					popularity = 45
+				}
+				constitutionalist = {
+					popularity = 30
+				}
+				liberal = {
+					popularity = 20
+				}
+				neutrality = {
+					popularity = 5
+				}
+			}
+
+			ruling_party = absolutist
+			election_frequency = 48
+			elections_allowed = no
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = RoF_ENG.160
+	title = RoF_ENG.160.t
+	desc = {
+		trigger = {
+			has_completed_focus = ENG_crush_the_rebels
+		}
+		text = RoF_ENG.160.da
+	}
+	desc = {
+		trigger = {
+			has_completed_focus = ENG_constitutional_reforms
+		}
+		text = RoF_ENG.160.db
+	}
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				IRE = { is_subject_of = ENG }
+			}
+			IRE = { set_country_flag = RoF_annex_puppet set_country_flag = RoF_lower_autonomy }
+		}
+		if = {
+			limit = {
+				SCO = { is_subject_of = ENG }
+			}
+			SCO = { set_country_flag = RoF_annex_puppet set_country_flag = RoF_lower_autonomy }
+		}
+	}
+
+	option = {
+		trigger = {
+			has_completed_focus = ENG_crush_the_rebels
+		}
+		name = RoF_ENG.160.a
+		add_ideas = ENG_england_triumphant_idea
+	}
+	option = {
+		trigger = {
+			has_completed_focus = ENG_constitutional_reforms
+		}
+		name = RoF_ENG.160.b
+		add_ideas = ENG_united_kingdom_idea
+	}
+}
+
+#reformed England seeks to reintegrate Ireland
+country_event = {
+	id = RoF_ENG.161
+	title = RoF_ENG.161.t
+	desc = RoF_ENG.161.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #reintegrate with concessions
+		name = RoF_ENG.161.a
+		add_political_power = -100
+		IRE = { set_country_flag = ENG_IRE_concessions country_event = { id = RoF_ENG.162 days = 1 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #guarantee autonomy
+		name = RoF_ENG.161.b
+		IRE = { set_country_flag = ENG_IRE_autonomy country_event = { id = RoF_ENG.162 days = 1 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Ireland responds
+country_event = {
+	id = RoF_ENG.162
+	title = RoF_ENG.162.t
+	desc = {
+		trigger = {
+			has_country_flag = ENG_IRE_concessions
+		}
+		text = RoF_ENG.162.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = ENG_IRE_autonomy
+		}
+		text = RoF_ENG.162.db
+	}
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #approve concessions
+		trigger = {
+			has_country_flag = ENG_IRE_concessions
+		}
+		name = RoF_ENG.162.a
+		ENG = { set_country_flag = IRE_approve_concessions country_event = { id = RoF_ENG.163 days = 1 } }
+		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #reject concessions
+		trigger = {
+			has_country_flag = ENG_IRE_concessions
+		}
+		name = RoF_ENG.162.b
+		ENG = { set_country_flag = IRE_reject_concessions country_event = { id = RoF_ENG.163 days = 1 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #approve autonomy
+		trigger = {
+			has_country_flag = ENG_IRE_autonomy
+		}
+		name = RoF_ENG.162.c
+		ENG = { set_country_flag = IRE_approve_autonomy country_event = { id = RoF_ENG.163 days = 1 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #reject autonomy
+		trigger = {
+			has_country_flag = ENG_IRE_autonomy
+		}
+		name = RoF_ENG.162.do
+		ENG = { set_country_flag = IRE_reject_autonomy country_event = { id = RoF_ENG.163 days = 1 } }
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+#England gets resonse
+country_event = {
+	id = RoF_ENG.163
+	title = RoF_ENG.163.t
+	desc = {
+		trigger = {
+			has_country_flag = IRE_approve_concessions
+		}
+		text = RoF_ENG.163.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = IRE_reject_concessions
+		}
+		text = RoF_ENG.163.db
+	}
+	desc = {
+		trigger = {
+			has_country_flag = IRE_approve_autonomy
+		}
+		text = RoF_ENG.163.dc
+	}
+	desc = {
+		trigger = {
+			has_country_flag = IRE_reject_autonomy
+		}
+		text = RoF_ENG.163.de
+	}	picture = GFX_report_event_ire_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #approve concessions
+		trigger = {
+			has_country_flag = IRE_approve_concessions
+		}
+		name = RoF_ENG.163.a
+		add_state_core = 97
+		add_state_core = 120
+		add_state_core = 121
+		add_state_core = 122
+		annex_country = { target = IRE }
+	}
+	option = { #reject concessions
+		trigger = {
+			has_country_flag = IRE_reject_concessions
+		}
+		name = RoF_ENG.163.b
+		add_state_claim = 97
+		add_state_claim = 120
+		add_state_claim = 121
+		add_state_claim = 122
+		create_wargoal = {
+			target = IRE
+			type = annex_everything
+		}
+	}
+	option = { #approve autonomy
+		trigger = {
+			has_country_flag = IRE_approve_autonomy
+		}
+		name = RoF_ENG.163.c
+		set_autonomy = {
+			target = IRE
+			autonomy_state = autonomy_rof_auto_province
+			freedom_level = 0.2
+		}
+	}
+	option = { #reject autonomy
+		trigger = {
+			has_country_flag = IRE_reject_autonomy
+		}
+		name = RoF_ENG.163.do
+		add_state_claim = 97
+		add_state_claim = 120
+		add_state_claim = 121
+		add_state_claim = 122
+		create_wargoal = {
+			target = IRE
+			type = annex_everything
+		}
+	}
+}
+
+#Elizabeth II movement
+country_event = {
+	id = RoF_ENG.170
+	title = RoF_ENG.170.t
+	desc = RoF_ENG.170.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #rupert
+		name = RoF_ENG.170.a
+			add_ideas = ENG_elizabeth_second_idea
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #mary
+		name = RoF_ENG.170.b
+			add_ideas = ENG_mary_second_idea
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#constitutional monarchy
+country_event = {
+	id = RoF_ENG.171
+	title = RoF_ENG.171.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_ENG.171.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = ENG_civil_war_flag
+		news_event = { hours = 6 id = RoF_news.04 }
+		SCO = {
+			every_owned_state = {
+				add_core_of = ENG
+			}
+		}
+		annex_country = {
+			target = SCO
+			transfer_troops = yes
+		}
+	}
+
+	option = { #Support Parliamentarians
+		name = RoF_ENG.171.a
+		hidden_effect = {
+			set_capital = 416
+			start_civil_war = {
+				#ruling_party = constitutionalist
+				ideology = absolutist
+				size = 0.5
+				capital = 128
+				states = { 128 126 127 129 97 120 121 122 }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = ENG
+					has_government = absolutist
+				}
+				set_country_flag = ENG_IRE_revolt_coming
+				load_oob = "ENG_Civil_War"
+				set_equipment_fraction = 0.5
+				set_stability = 0.9
+				set_war_support = 0.8
+				#country_event = { id = spain.3 days = 1 }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.25
+				}
+			}
+			load_oob = "SCO_Civil_War"
+			set_equipment_fraction = 0.5
+			set_stability = 0.9
+			set_war_support = 0.8
+			set_politics = {
+				ruling_party = constitutionalist
+			}
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.277
+			}
+			add_popularity = {
+				ideology = radical
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = absolutist
+				popularity = -1
+			}
+			set_cosmetic_tag = SCO_civil_war
+			random_other_country = {
+				limit = {
+					original_tag = ENG
+					has_government = absolutist
+				}
+				set_cosmetic_tag = ENG_civil_war
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = RoF_ENG.172
+	title = RoF_ENG.172.t
+	desc = RoF_ENG.172.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = ENG
+		has_completed_focus = ENG_constitutional_monarchy
+		has_government = constitutionalist
+	}
+
+	immediate = {
+		set_global_flag = ENG_civil_war_done
+		drop_cosmetic_tag = yes
+	}
+
+	option = { #mary
+		name = RoF_ENG.172.a
+		set_country_flag = ENG_queen_mary_2
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #rupert
+		name = RoF_ENG.172.b
+		set_country_flag = ENG_king_rupert
+		create_country_leader = {
+			name = "Rupert Wittelsbach"
+			picture = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
+			ideology = constitutional_monarchy
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #elizabeth
+		name = RoF_ENG.172.c
+		set_country_flag = ENG_queen_elizabeth_2
+		create_country_leader = {
+			name = "Elizabeth Wittelsbach"
+			picture = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
+			ideology = constitutional_monarchy
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = RoF_ENG.173
+	title = RoF_ENG.173.t
+	desc = RoF_ENG.173.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = ENG
+		has_completed_focus = ENG_constitutional_monarchy
+		has_government = constitutionalist
+	}
+
+	immediate = {
+		set_global_flag = ENG_civil_war_done
+		drop_cosmetic_tag = yes
+	}
+
+	option = { #powerful monarch
+		name = RoF_ENG.173.a
+		set_country_flag = ENG_confirm_monarchy
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #weak monarch
+		name = RoF_ENG.173.b
+		set_country_flag = ENG_deny_monarchy
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#commonwealth
+country_event = {
+	id = RoF_ENG.180
+	title = RoF_ENG.180.t
+	desc = RoF_ENG.180.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_leader = { name = "Oliver Cromwell" } }
+			}
+			create_country_leader = {
+				name = "Oliver Cromwell"
+				picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+				expire = "1660.1.1"
+				ideology = constitutional_republic
+			}
+			if = {
+				limit = {
+					has_completed_focus = ENG_value_of_monarchy
+				}
+				set_country_leader_ideology = constitutional_monarchy
+			}
+		}
+		if = {
+			limit = { has_elections = no }
+			set_politics = {
+				elections_allowed = yes
+			}
+		}
+	}
+
+	option = {
+		name = RoF_ENG.180.a
+	}
+}
+
+#Restore Scotland
+country_event = {
+	id = RoF_ENG.181
+	title = RoF_ENG.181.t
+	desc = RoF_ENG.181.d
+	picture = GFX_report_event_sco_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #autonomous country
+		name = RoF_ENG.181.a
+		add_political_power = -100
+		effect_tooltip = {
+			set_autonomy = {
+				target = SCO
+				autonomy_state = autonomy_rof_auto_province
+				freedom_level = 0.2
+			}
+		}
+		SCO = { set_country_flag = ENG_auto_prov country_event = { id = RoF_ENG.183 days = 1 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #integrated country
+		name = RoF_ENG.181.b
+		add_political_power = -200
+		effect_tooltip = {
+			annex_country = {
+				target = SCO
+				transfer_troops = yes
+			}
+		}
+		SCO = { set_country_flag = ENG_annex country_event = { id = RoF_ENG.183 days = 1 } }
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #don't need them
+		name = RoF_ENG.181.c
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Restore Ireland
+country_event = {
+	id = RoF_ENG.182
+	title = RoF_ENG.182.t
+	desc = RoF_ENG.182.d
+	picture = GFX_report_event_ire_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #autonomous country
+		name = RoF_ENG.182.a
+		add_political_power = -100
+		effect_tooltip = {
+			set_autonomy = {
+				target = IRE
+				autonomy_state = autonomy_rof_auto_province
+				freedom_level = 0.2
+			}
+		}
+		IRE = { set_country_flag = ENG_auto_prov country_event = { id = RoF_ENG.183 days = 1 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #integrated country
+		name = RoF_ENG.182.b
+		add_political_power = -200
+		effect_tooltip = {
+			annex_country = {
+				target = IRE
+				transfer_troops = yes
+			}
+		}
+		IRE = { set_country_flag = ENG_annex country_event = { id = RoF_ENG.183 days = 1 } }
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #don't need them
+		name = RoF_ENG.182.c
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#FROM Responds
+country_event = {
+	id = RoF_ENG.183
+	title = RoF_ENG.183.t
+	desc = {
+		trigger = {
+			has_country_flag = ENG_auto_prov
+		}
+		text = RoF_ENG.183.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = ENG_annex
+		}
+		text = RoF_ENG.183.db
+	}
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #reintegrate with concessions
+		name = RoF_ENG.183.a
+		trigger = {
+			has_country_flag = ENG_auto_prov
+		}
+		ENG = {
+			set_country_flag = @ROOT_accept_auto_prov
+			effect_tooltip = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_rof_auto_province
+					freedom_level = 0.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #guarantee autonomy
+		name = RoF_ENG.183.b
+		trigger = {
+			has_country_flag = ENG_auto_prov
+		}
+		ENG = {
+			set_country_flag = @ROOT_reject_auto_prov
+			effect_tooltip = {
+				create_wargoal = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #reintegrate with concessions
+		name = RoF_ENG.183.c
+		trigger = {
+			has_country_flag = ENG_annex
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		every_owned_state = {
+			add_core_of = ENG
+		}
+		ENG = {
+			set_country_flag = @ROOT_accept_annex
+			effect_tooltip = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #guarantee autonomy
+		name = RoF_ENG.183.do
+		trigger = {
+			has_country_flag = ENG_annex
+		}
+		ENG = {
+			set_country_flag = @ROOT_reject_annex
+			effect_tooltip = {
+				create_wargoal = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#Notify ENG
+country_event = {
+	id = RoF_ENG.184
+	title = RoF_ENG.184.t
+	desc = {
+		trigger = {
+			has_country_flag = @FROM_accept_auto_prov
+		}
+		text = RoF_ENG.184.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = @FROM_reject_auto_prov
+		}
+		text = RoF_ENG.184.db
+	}
+	desc = {
+		trigger = {
+			has_country_flag = @FROM_accept_annex
+		}
+		text = RoF_ENG.184.dc
+	}
+	desc = {
+		trigger = {
+			has_country_flag = @FROM_reject_annex
+		}
+		text = RoF_ENG.184.dd
+	}
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #reintegrate with concessions
+		name = RoF_ENG.184.a
+		trigger = {
+			has_country_flag = @FROM_accept_auto_prov
+		}
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_rof_auto_province
+			freedom_level = 0.2
+		}
+	}
+	option = { #guarantee autonomy
+		name = RoF_ENG.184.b
+		trigger = {
+			has_country_flag = @FROM_reject_auto_prov
+		}
+		create_wargoal = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+	}
+	option = { #reintegrate with concessions
+		name = RoF_ENG.184.c
+		trigger = {
+			has_country_flag = @FROM_accept_annex
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+	}
+	option = { #guarantee autonomy
+		name = RoF_ENG.184.do
+		trigger = {
+			has_country_flag = @FROM_reject_annex
+		}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+#House of Lords
+country_event = {
+	id = RoF_ENG.185
+	title = RoF_ENG.185.t
+	desc = RoF_ENG.185.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_country_leader = {
+			name = "Thomas Wentworth"
+			picture = "gfx/leaders/ENG/Portrait_England_Thomas_Wentworth.dds"
+			ideology = constitutional_republic
+		}
+		create_country_leader = {
+			name = "Oliver Cromwell"
+			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+			ideology = liberal_republic
+		}
+		create_country_leader = {
+			name = "John Hampden"
+			picture = "gfx/leaders/ENG/Portrait_England_John_Hampden.dds"
+			ideology = republican_neutral
+		}
+	}
+
+	option = { #reintegrate with concessions
+		name = RoF_ENG.185.a
+	}
+}
+
+#Democracy
+country_event = {
+	id = RoF_ENG.186
+	title = RoF_ENG.186.t
+	desc = RoF_ENG.186.d
+	picture = GFX_report_event_eng_flag
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_country_leader = {
+			name = "Thomas Wentworth"
+			picture = "gfx/leaders/ENG/Portrait_England_Thomas_Wentworth.dds"
+			ideology = constitutional_republic
+		}
+		create_country_leader = {
+			name = "Oliver Cromwell"
+			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+			ideology = liberal_republic
+		}
+		create_country_leader = {
+			name = "John Hampden"
+			picture = "gfx/leaders/ENG/Portrait_England_John_Hampden.dds"
+			ideology = republican_neutral
+		}
+	}
+
+	option = { #reintegrate with concessions
+		name = RoF_ENG.186.a
+	}
+}

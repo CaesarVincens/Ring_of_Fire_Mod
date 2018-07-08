@@ -1,0 +1,36 @@
+# Written by Henrik "Groogy" Hansson
+# Modified by Daniel "Da9L" Sjöberg
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+SXW_befriend_SWE = {
+	enable = {
+		original_tag = SXW
+	}
+	abort = {
+		has_war_with = SWE
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 2000
+	}
+	ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 2000
+	}
+
+}

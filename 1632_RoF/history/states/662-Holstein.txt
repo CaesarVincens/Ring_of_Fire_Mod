@@ -1,7 +1,7 @@
-state={
-	id=662
-	name="STATE_662"
-	history={
+state = {
+	id = 662
+	name = "STATE_662"
+	history = {
 		owner = DEN
 		victory_points = {
 			6389 3 
@@ -16,10 +16,10 @@ state={
 		add_core_of = DEN
 
 	}
-	provinces={
+	provinces = {
 		3231 3368 6257 6389 13207
 	}
-	manpower=296208
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 296208
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

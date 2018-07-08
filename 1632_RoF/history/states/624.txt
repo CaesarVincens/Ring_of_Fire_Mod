@@ -1,9 +1,9 @@
 
-state={
-	id=624
-	name="STATE_624"
+state = {
+	id = 624
+	name = "STATE_624"
 
-	history={
+	history = {
 		owner = SPU
 		victory_points = {
 			12994 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		2174 5131 5146 5171 5192 5228 8217 8231 10952 11000 12914 12994 
 	}
-	manpower=164216
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 164216
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

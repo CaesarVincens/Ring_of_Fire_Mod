@@ -4,6 +4,7 @@ oob = "KNI_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -39,11 +40,11 @@ set_politics = {
 add_ideas = {
 	balanced_eco
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
-    name = "Maria Peire"
+    name = "Antoine de Paule"
     desc = "POLITICS_MARIA_PEIRE_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_Edward_VIII.dds"
+    picture = "gfx/leaders/Italies/Portrait_Knights_Antoine_de_Paule.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

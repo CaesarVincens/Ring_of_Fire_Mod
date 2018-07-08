@@ -49,7 +49,7 @@ leader_traits = {
 	inexperienced_imperialist = {
 		random = no
 		political_power_factor = -0.3
-		unity_factor = 0.05
+		stability_factor = 0.05
 		justify_war_goal_time = -0.25
 		
 		ai_will_do = {
@@ -147,7 +147,7 @@ leader_traits = {
 	
 	union_man = {
 		random = no
-		unity_factor = 0.05
+		stability_factor = 0.05
 		
 		ai_will_do = {
 			factor = 1
@@ -208,7 +208,7 @@ leader_traits = {
 		random = no
 		political_advisor_cost_factor = -0.25
 		trade_laws_cost_factor = -0.25
-		mobilization_laws_cost_factor = -0.25
+		#mobilization_laws_cost_factor = -0.25
 		economy_cost_factor = -0.25
 		high_command_cost_factor = -0.25
 		air_chief_cost_factor = -0.25
@@ -222,7 +222,7 @@ leader_traits = {
 
 	hedonist = {
 		random = no
-		unity_factor = -0.05
+		stability_factor = -0.05
 
 		ai_will_do = {
 			factor = 1
@@ -233,7 +233,7 @@ leader_traits = {
 	
 	popular_figurehead = {
 		sprite = 13
-		unity_factor = 0.15 
+		stability_factor = 0.15 
 		
 		ai_will_do = {
 			factor = 1
@@ -352,9 +352,9 @@ leader_traits = {
 		random = yes
 		production_speed_air_base_factor = 0.15
 		production_speed_naval_base_factor = 0.15
-		production_speed_rocket_site_factor = 0.15
+		#production_speed_rocket_site_factor = 0.15
 		production_speed_radar_station_factor = 0.15
-		production_speed_nuclear_reactor_factor = 0.15
+		#production_speed_nuclear_reactor_factor = 0.15
 		
 		ai_will_do = {
 			factor = 0.2

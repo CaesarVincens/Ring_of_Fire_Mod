@@ -1,15 +1,15 @@
-state={
-	id=337
+state = {
+	id = 337
 	name= "STATE_337"
 	manpower = 601096
 
-	resources={
+	resources = {
 		aluminium = 4
 		chromium = 21
 	}
 	state_category = pastoral
 
-	history={
+	history = {
 		owner = PER
 		victory_points = { 12739 3 }
 		buildings = {
@@ -21,7 +21,7 @@ state={
 		add_core_of = PER
 	}
 
-	provinces={
+	provinces = {
 		1521 1888 1957 2000 5029 5073 7573 7990 8009 10351 10759 10806 10873 10890 11671 12739 12748 12852 
 	}
 }

@@ -30,14 +30,11 @@ technologies = {
 			tercio_formation_tech
 		}
 
-		enable_subunits = {
-			spear_infantry
-		}
 		research_cost = 1
 		start_year = 1500
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = -1 }
 		}
 		categories = {
 			cat_pike_weapons
@@ -49,6 +46,7 @@ technologies = {
 	tercio_formation_tech = {
 		enable_subunits = {
 			tercio_infantry
+			merc_tercio_infantry
 		}
 		allow = {
 			has_tech = arquebus_weapons
@@ -70,14 +68,14 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = early_flintlock_tech
+			leads_to_tech = musket_tech
 			research_cost_coeff = 1
 		}
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1600
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = -1 }
 		}
 		categories = {
 			firearms_weapons
@@ -87,30 +85,23 @@ technologies = {
 		}
 	}
 	
-	early_flintlock_tech = {
+	musket_tech = {
 		enable_equipments = {
-			early_flintlock
+			musket
 		}
 		enable_subunits = {
 			line_infantry
+			merc_line_infantry
 		}
 		path = {
-			leads_to_tech = srg_flintlock_tech
+			leads_to_tech = cartridges_tech
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = cardinal_rifle_tech
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = ak3_rifle_tech
-			research_cost_coeff = 1
-		}
-		research_cost = 1
-		start_year = 1631
+		research_cost = 1.5
+		start_year = 1625
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = 3 }
+			position = { x = 0 y = 2 }
 		}
 		categories = {
 			firearms_weapons
@@ -120,6 +111,110 @@ technologies = {
 		}
 	}
 	
+	cartridges_tech = {
+		research_cost = 1
+		start_year = 1632
+		path = {
+			leads_to_tech = flintlock_tech
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 4 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		category_musket = {
+			soft_attack = 0.1
+			defense = 0.2
+			
+		}
+		category_tercio = {
+			soft_attack = 0.05
+			defense = 0.1
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	flintlock_tech = {
+		enable_equipments = {
+			flintlock_rifle
+		}
+		path = {
+			leads_to_tech = caplock_tech
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1634
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 6 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	caplock_tech = {
+		enable_equipments = {
+			caplock_rifle
+		}
+		path = {
+			leads_to_tech = repeating_rifle_tech
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1636
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 9 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				NOT = {
+					has_tech = srg_flintlock_tech
+				}
+				factor = 0
+			}
+		}
+	}
+	
+	repeating_rifle_tech = {
+		enable_equipments = {
+			repeating_rifle
+		}
+		research_cost = 1.5
+		start_year = 1637
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1637 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				NOT = {
+					has_tech = ak3_rifle_tech
+				}
+				factor = 0
+			}
+
+		}
+	}
+
 	srg_flintlock_tech = {
 		enable_equipments = {
 			srg_flintlock
@@ -128,11 +223,11 @@ technologies = {
 			leads_to_tech = srg_caplock_tech
 			research_cost_coeff = 1
 		}
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1634
 		folder = {
 			name = infantry_folder
-			position = { x = 0 y = @1634 }
+			position = { x = 0 y = 7 }
 		}
 		categories = {
 			firearms_weapons
@@ -172,7 +267,7 @@ technologies = {
 		enable_equipments = {
 			srg_caplock
 		}
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1636
 		folder = {
 			name = infantry_folder
@@ -197,7 +292,7 @@ technologies = {
 		enable_equipments = {
 			cardinal_rifle
 		}
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1635
 		folder = {
 			name = infantry_folder
@@ -237,8 +332,12 @@ technologies = {
 		enable_equipments = {
 			ak3_rifle
 		}
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 1635
+		path = {
+			leads_to_tech = ak47_rifle_tech
+			research_cost_coeff = 1
+		}
 		folder = {
 			name = infantry_folder
 			position = { x = 4 y = @1635 }
@@ -266,10 +365,59 @@ technologies = {
 		}
 	}
 	
+	ak47_rifle_tech = {
+		enable_equipments = {
+			ak47_rifle
+		}
+		research_cost = 1.5
+		start_year = 1637
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = @1637 }
+		}
+		categories = {
+			firearms_weapons
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				NOT = {
+					has_tech = ak3_rifle_tech
+				}
+				factor = 0
+			}
+
+		}
+	}
+	
 	NUS_line_infantry_tech = {
 		research_cost = 1
 		allow = { always = no }
 		enable_subunits = { line_infantry }
+	}
+	
+	tercio_formation_focus_tech = {
+		allow = { always = no }
+		tercio_infantry = {
+			max_organisation = 5
+			defense = 0.05
+		}
+		merc_tercio_infantry = {
+			max_organisation = 5
+			defense = 0.05
+		}
+	}
+
+	swedish_line_tech = {
+		allow = { always = no }
+		line_infantry = {
+			max_organisation = 5
+			breakthrough = 0.05
+		}
+		merc_line_infantry = {
+			max_organisation = 5
+			breakthrough = 0.05
+		}
 	}
 
 	paratroopers = {
@@ -540,85 +688,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.7
-		}
-	}
-	night_vision = {
-
-		land_night_attack = 0.1
-		
-		path = {
-			leads_to_tech = night_vision2
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2.5
-		start_year = 1638
-		folder = {
-			name = infantry_folder
-			position = { x = 0 y = @1638 }
-		}
-		
-		categories = {
-			night_vision
-		}
-		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 2
-				date > "1637.1.9"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1638.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1638.1.6"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1641.1.1"
-			}
-		}
-	}
-	
-	night_vision2 = {
-
-		land_night_attack = 0.15	
-
-		research_cost = 2
-		start_year = 1641
-		folder = {
-			name = infantry_folder
-			position = { x = 0 y = @1641 }
-		}
-		
-		categories = {
-			night_vision
-		}
-		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 2
-				date > "1640.1.9"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1641.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "1641.1.6"
-			}
 		}
 	}
 	

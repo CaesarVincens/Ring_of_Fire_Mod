@@ -1,12 +1,12 @@
 
-state={
-	id=41
-	name="STATE_41"
-	resources={
-		oil=0.000
+state = {
+	id = 41
+	name = "STATE_41"
+	resources = {
+		oil = 0.000
 	}
 
-	history={
+	history = {
 		owner = BRS
 		victory_points = {
 			6325 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		6218 6263 6298 6325 9264 
 	}
-	manpower=216800
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 216800
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

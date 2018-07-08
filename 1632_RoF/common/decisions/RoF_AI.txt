@@ -1,0 +1,60 @@
+RoF_ai_decisions = {
+
+	fire_breitenfeld = {
+		#icon = generic_political_discourse
+		
+		fire_only_once = yes
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			is_ai = yes
+			date > 1631.9.16
+			NOT = { has_global_flag = breitenfeld_fired }
+		}
+		complete_effect = {
+			set_global_flag = breitenfeld_fired
+			SWE = { country_event = { id = RoF_SWE.100 days = 1 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	check_CoC_spread_and_effects = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			is_ai = yes
+			NOT = { any_country = { has_idea = CoC_timer } }
+			has_global_flag = CoC_established
+		}
+		complete_effect = {
+			add_timed_idea = { idea = CoC_timer days = 30 }
+			random_country = {
+				limit = {
+					not = { has_country_flag = CoC_present }
+					any_neighbor_country = {
+						has_variable = CoC_strength
+					}
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				country_event = { id = RoF.010 }
+			}
+			every_country = {
+				limit = {
+					has_variable = CoC_strength
+				}
+				check_CoC_strength_anger = yes
+				check_CoC_effects_for_this = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}

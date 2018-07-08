@@ -5,6 +5,7 @@ oob = "NUS_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 #advanced_infantry_weapons = 1
 electronic_mechanical_engineering = 1
 radio = 1
@@ -18,6 +19,7 @@ superior_firepower = 1
 arquebus_weapons = 1
 #early_flintlock_tech = 1
 NUS_line_infantry_tech = 1
+aerial_research_tech = 1
 }
 
 # Research Bonuses
@@ -54,12 +56,12 @@ set_politics = {
 add_ideas = {
 	people_out_of_time
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Michael Stearns"
     desc = "POLITICS_MICHAEL_STEARNS_DESC"
     picture = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
-    expire = "1660.1.1"
+    #expire = "1660.1.1"
     ideology = democracy
     traits = {
 		union_man
@@ -71,11 +73,21 @@ create_country_leader = {
 	name = "John Chandler Simpson"
 	desc = "POLITICS_JOHN_SIMPSON_DESC"
 	picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
-	expire = "1660.1.1"
+	#expire = "1660.1.1"
 	ideology = constitutional_republic 
 	traits = {
 		grand_fleet_proponent
 	}
+}
+
+create_country_leader = {
+	name = "Ken Beasley"
+	ideology = dictatorship
+}
+
+create_country_leader = {
+	name = "Quentin B. Underwood"
+	ideology = conservatism_neutral
 }
 
 create_corps_commander = {
@@ -83,4 +95,8 @@ create_corps_commander = {
 	gfx = "GFX_commander_NUS_Frank_Jackson"
 	traits = { }
 	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }

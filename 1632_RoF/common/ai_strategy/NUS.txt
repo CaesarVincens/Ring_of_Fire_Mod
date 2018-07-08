@@ -15,6 +15,27 @@
 # contain
 # area_priority
 
+NUS_ironclads = {
+	enable = {
+		original_tag = NUS
+		has_completed_focus = NUS_ironclads_focus
+	}
+	abort = {
+		has_tech = ironclad_first
+		has_tech = timberclad_first
+	}
+	ai_strategy = {
+		type = research_tech
+		id = ironclad_first
+		value = 10000
+		
+	}
+	ai_strategy = {
+		type = research_tech
+		id = timberclad_first
+		value = 10000
+	}
+}
 NUS_unit_production = {
 	enable = {
 		original_tag = NUS
@@ -71,12 +92,6 @@ NUS_unit_production = {
 	
 	ai_strategy = {
 		type = unit_ratio
-		id = cas
-		value = 5
-	}
-	
-	ai_strategy = {
-		type = unit_ratio
 		id = tactical_bomber
 		value = 5
 	}
@@ -84,12 +99,6 @@ NUS_unit_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = strategic_bomber
-		value = 5
-	}
-	
-	ai_strategy = {
-		type = unit_ratio
-		id = naval_bomber
 		value = 5
 	}
 	
@@ -138,189 +147,27 @@ NUS_unit_production = {
 	}
 }
 
-
-NUS_paratroopers_production = {
+NUS_pp_spend_amount = {
 	enable = {
-		ai_wants_divisions >  12 #Massively decreasing the amount of paratroopers the AI wants
+		original_tag = NUS
 	}
-	abort = {
-		ai_wants_divisions < 13 #Massively decreasing the amount of paratroopers the AI wants
-	}
-
+	
 	ai_strategy = {
-		type = role_ratio
-		id = paratroopers
-		value = 0
+		type = pp_spend_amount
+		id = decision
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 200
 	}
 }
-
-NUS_garrison_production = {
-	enable = {
-		ai_wants_divisions >  12 #Massively decreasing the amount of paratroopers the AI wants
-		is_major = yes
-	}
-	abort = {
-		ai_wants_divisions < 13 #Massively decreasing the amount of paratroopers the AI wants
-		is_major = no
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = garrison
-		value = 7
-	}
-}
-
-NUS_mountaineers_production = {
-	enable = {
-		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
-	}
-	abort = {
-		ai_wants_divisions < 12 #Decreasing the amount of mountaineers the AI wants
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = mountaineers
-		value = 3
-	}
-}
-
-NUS_marines_production = {
-	enable = {
-		ai_wants_divisions > 49
-	}
-	abort = {
-		ai_wants_divisions < 50
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = marines
-		value = 0
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = line_inf
-		value = 0
-	}
-}
-
-NUS_mobile_production = {
-	enable = {
-		ai_wants_divisions > 11
-		has_tech = motorised_infantry
-	}
-	abort = {
-		ai_wants_divisions < 12
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = mobile
-		value = 2
-	}
-}
-
-NUS_armored_production = {
-	enable = {
-		ai_wants_divisions > 49
-	}
-	abort = {
-		ai_wants_divisions < 50
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 2
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = line_inf
-		value = 0
-	}
-}
-
-highered_armored_production = {
-	enable = {
-		num_of_military_factories > 69
-	}
-	abort = {
-		num_of_military_factories < 70
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 5
-	}
-}
-
-slightly_naval_focused_nation = {
-	enable = {
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = capital_ship
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = submarine
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = screen_ship
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = convoy
-		value = 1
-	}
-}
-
-more_naval_focused_nation = {
-	enable = {
-		date > "1941.1.1" #Delaying it by a couple of years
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = capital_ship
-		value = 2		 #1 to 2
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = submarine
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = screen_ship
-		value = 1
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = convoy
-		value = 1
-	}
-}
-
 
 NUS_area_priority = {
 	enable = {
+		original_tag = NUS
 	}
 
 	ai_strategy = {
@@ -332,19 +179,19 @@ NUS_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = north_america
-		value = 100
+		value = -10
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = south_america
-		value = 50
+		value = -50
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = asia
-		value = 75
+		value = -15
 	}
 	
 	ai_strategy = {
@@ -362,69 +209,49 @@ NUS_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = pacific
-		value = 300
+		value = -10
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = oceania
-		value = 80
+		value = -10
 	}
 
-}
-
-NUS_stockpile_management = {
-	enable = {
-		num_divisions > 150
-	}
-
-	abort = {
-		num_divisions < 130
-	}
-
-	ai_strategy = {
-		type = equipment_stockpile
-		value = 35 # double base stockpile #from 25 to 35
-	}
 }
 
 
 NUS_template_design = {
 	enable = {
+		original_tag = NUS
 		date < 1631.1.1				
 	}
 	abort = { 
-		date > 1635.1.1
+		date > 1633.1.1
 	}
 
 	ai_strategy = {
 		type = template_prio
-		id = motorized
-		value = 10
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = cavalry
-		value = 10
-	}
-	
-	ai_strategy = {
-		type = template_prio
-		id = light_armor
-		value = 50
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = medium_armor
+		id = apc
 		value = -10
 	}
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
+		id = cavalry
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = gas_tank
 		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = steam_tank
+		value = -10
 	}
 
 	ai_strategy = {
@@ -435,19 +262,32 @@ NUS_template_design = {
 	
 	ai_strategy = {
 		type = template_prio
-		id = infantry
-		value = 60
+		id = spear_infantry
+		value = -20
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = tercio_infantry
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = line_infantry
+		value = 40
 	}
 }
 
 NUS_template_design = {
 	enable = {
+		original_tag = NUS
 		date > 1635.1.1				
 	}
 
 	ai_strategy = {
 		type = template_prio
-		id = mechanized
+		id = apc
 		value = 10
 	}
 
@@ -456,28 +296,16 @@ NUS_template_design = {
 		id = cavalry
 		value = 10
 	}
-	
-	ai_strategy = {
-		type = template_prio
-		id = light_armor
-		value = 10
-	}
 
 	ai_strategy = {
 		type = template_prio
-		id = medium_armor
+		id = gas_tank
 		value = 20
 	}
-	
-	ai_strategy = {
-		type = template_prio
-		id = modern_armor
-		value = 50
-	}
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
+		id = steam_tank
 		value = 10
 	}
 
@@ -489,28 +317,19 @@ NUS_template_design = {
 	
 	ai_strategy = {
 		type = template_prio
-		id = infantry
-		value = 10
+		id = spear_infantry
+		value = -20
+	}
+	ai_strategy = {
+		type = template_prio
+		id = tercio_infantry
+		value = -10
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = line_infantry
+		value = 80
 	}
 }
 
-save_admiral_pp_for_later = {
-	enable = {
-		has_war = no
-		threat < 0.3
-		has_political_power < 200		
-	}
-	abort = {
-		OR = {
-			has_war = yes	
-			threat > 0.3
-			has_political_power > 200
-		}
-	}
-
-	ai_strategy = { # dont burn PP on admirals (can still get free ones)
-		type = pp_spend_priority
-		id = admiral
-		value = -100
-	}
-}

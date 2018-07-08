@@ -1,12 +1,12 @@
 
-state={
-	id=444
-	name="STATE_444"
-	resources={
-		tungsten=5.000
+state = {
+	id = 444
+	name = "STATE_444"
+	resources = {
+		tungsten = 5.000
 	}
 
-	history={
+	history = {
 		owner = SPR
 		victory_points = {
 			1048 3 
@@ -26,10 +26,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		809 875 879 931 1048 1178 3810 3871 3930 3940 4080 6744 6954 7098 7183 9815 9891 10094 11749 11798 11851 12070 
 	}
-	manpower=1177600
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1177600
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

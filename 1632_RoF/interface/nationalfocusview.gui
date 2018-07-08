@@ -85,6 +85,11 @@ guiTypes = {
 			}
 			
 			containerWindowType = {
+				name = "focus_tree_scripted_window_container"
+				position = { x=0 y=0 }
+			}
+			
+			containerWindowType = {
 				name = "continuous_focus_window"
 				position = { x=0 y=0 }
 				size = { width = 770 height = 380 }
@@ -245,7 +250,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "national_focus_item"
 		position = { x=0 y=0 }
-		size = { width = 80 height = 64 }
+		size = { width = 165 height = 128 }
 		clipping = no
 
 		iconType = {
@@ -262,8 +267,10 @@ guiTypes = {
 		
 		buttonType = {
 			name = "symbol"
-			position = { x = 42 y = -18 }
-			quadTextureSprite = "GFX_goal_unknown"			
+			position = { x = 5 y = -44 }
+			quadTextureSprite = "GFX_goal_unknown"
+			centerposition = yes
+			Orientation = CENTER
 		}
 		
 		iconType = {
@@ -458,7 +465,7 @@ guiTypes = {
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 300
+			maxWidth = 287
 			maxHeight = 100
 			scrollbarType = standardtext_slider
 		}
@@ -487,19 +494,20 @@ guiTypes = {
 			borderSize = {x = 5 y = 0}
 			text = "Description"
 			maxWidth = 485
-			maxHeight = 70
+			maxHeight = 110
+			scrollbarType = standardtext_slider
 			format = center
 		}
 
 		iconType = {
 			name = "reward_bg"
-			position = { x = 84 y = 363 }
+			position = { x = 84 y = 373 }
 			spriteType = "GFX_unit_list_header"
 		}		
 		
 		instantTextboxType = {
 			name = "reward_label"
-			position = { x = 34 y = 370 }
+			position = { x = 34 y = 380 }
 			textureFile = ""
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
@@ -511,7 +519,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "reward"
-			position = { x = 50 y = 397 }
+			position = { x = 50 y = 407 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
@@ -624,7 +632,7 @@ guiTypes = {
 			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 300
+			maxWidth = 287
 			maxHeight = 100
 			scrollbarType = standardtext_slider
 		}

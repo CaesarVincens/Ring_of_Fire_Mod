@@ -1,15 +1,16 @@
 
-state={
-	id=227
-	name="STATE_227"
+state = {
+	id = 227
+	name = "STATE_227"
 
-	history={
+	history = {
+		owner = WAS
 		victory_points = {
 			9320 8 
 		}
 		buildings = {
-			infrastructure = 0
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
@@ -17,10 +18,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1735 1803 1813 1876 4703 4750 4808 7713 7769 7802 7828 7841 7876 7902 10549 10562 10570 10628 10664 10688 10699 12523 12681 
 	}
-	manpower=148600
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 148600
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

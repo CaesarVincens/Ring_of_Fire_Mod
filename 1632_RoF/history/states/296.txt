@@ -1,9 +1,9 @@
 
-state={
-	id=296
-	name="STATE_296"
+state = {
+	id = 296
+	name = "STATE_296"
 
-	history={
+	history = {
 		owner = NAS
 		victory_points = {
 			6444 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		529 6444 9486 
 	}
-	manpower=402400
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 402400
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

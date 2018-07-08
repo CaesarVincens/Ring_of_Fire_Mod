@@ -4,6 +4,7 @@ oob = "BRE_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -19,17 +20,17 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 14
+            popularity = 74
         }
-        liberal = {
-            popularity = 14
+        constitutionalist = {
+            popularity = 24
         }
         neutrality = {
-            popularity = 72
+            popularity = 2
         }
     }
     
-    ruling_party = neutrality
+    ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -38,15 +39,15 @@ set_politics = {
 
 set_country_flag = german_tag_flag
 add_ideas = {
-	military_focus_eco
+	balanced_eco
 }
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
-    name = "Stadtrat"
-    desc = "POLITICS_MANFRED_VON SACHSEN-WEIMAR-EISENACH_DESC"
-    picture = "gfx/leaders/Germanies/Portrait_Bremen_City_Council.dds"
+    name = "John Frederick"
+    desc = "POLITICS_OTTO_VON SACHSEN-ALTENBURG_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Bremen_John_Frederick.dds"
     expire = "1660.1.1"
-    ideology = republican_neutral
+    ideology = bishopric
     traits = {
     }
 }

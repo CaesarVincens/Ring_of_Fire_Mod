@@ -1,9 +1,9 @@
 
-state={
-	id=655
-	name="STATE_655"
+state = {
+	id = 655
+	name = "STATE_655"
 
-	history={
+	history = {
 		owner = BAV
 		victory_points = {
 			6540 5 
@@ -21,10 +21,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		532 561 571 586 3299 3541 3571 6540 11497 
 	}
-	manpower=485700
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 485700
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

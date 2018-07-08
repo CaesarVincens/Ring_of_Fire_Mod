@@ -1,32 +1,29 @@
 
-state={
-	id=99
-	name="STATE_99"
-	resources={
-		aluminium=1.000
-		rubber=0.000
-		steel=0.000
+state = {
+	id = 99
+	name = "STATE_99"
+	resources = {
+		aluminium = 1.000
+		#rubber = 0.000
+		steel = 0.000
 	}
 
-	history={
-		victory_points = {
-			10919 3 
-		}
+	history = {
+		owner = WSA
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = DAH
 
 	}
 
-	provinces={
-		10995 12960 13013 13016 
+	provinces = {
+		10995 12960
 	}
-	manpower=240800
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 240800
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -5,6 +5,7 @@ oob = "POL_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -52,13 +53,24 @@ set_politics = {
 add_ideas = {
 	balanced_eco
 }
-set_national_unity = 0.7232
+set_stability = 0.5
 create_country_leader = {
-    name = "Władysław IV Vasa"
+    name = "Sigismund III Vasa"
     desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
-    picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-    expire = "1660.1.1"
+    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
+    expire = "1632.11.1"
     ideology = absolute_monarchy
     traits = {
     }
+}
+
+create_corps_commander = {
+	name = "Stanisław Koniecpolski"
+    picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }

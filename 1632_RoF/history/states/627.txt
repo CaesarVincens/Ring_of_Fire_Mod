@@ -1,14 +1,14 @@
 
-state={
-	id=627
-	name="STATE_627"
-	resources={
-		oil=2.000
-		steel=1.000
-		tungsten=29.000
+state = {
+	id = 627
+	name = "STATE_627"
+	resources = {
+		oil = 2.000
+		steel = 1.000
+		tungsten = 29.000
 	}
 
-	history={
+	history = {
 		owner = SPU
 		victory_points = {
 			5179 3 
@@ -24,10 +24,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		5179 5229 5230 8157 8240 10924 10938 10987 12930 12979 13195 
 	}
-	manpower=139000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 139000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

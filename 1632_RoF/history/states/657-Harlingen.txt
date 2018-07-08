@@ -1,6 +1,6 @@
-state={
-	id=657
-	name="STATE_657"
+state = {
+	id = 657
+	name = "STATE_657"
 	history = {
 		owner = UPS
 		victory_points = {
@@ -17,10 +17,10 @@ state={
 		add_core_of = UPS
 
 	}
-	provinces={
+	provinces = {
 		13205 
 	}
-	manpower=5000
-	buildings_max_level_factor=1.000
-	state_category=enclave
+	manpower = 5000
+	buildings_max_level_factor = 1.000
+	state_category = enclave
 }

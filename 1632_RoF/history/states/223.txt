@@ -1,9 +1,9 @@
 
-state={
-	id=223
-	name="STATE_223"
+state = {
+	id = 223
+	name = "STATE_223"
 
-	history={
+	history = {
 		owner = KAZ
 		victory_points = {
 			10220 8 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1223 1229 1309 1375 1391 1418 1662 1680 1694 4232 4238 4277 4281 4309 4333 4850 7298 7326 7383 7392 7407 7425 7741 7874 10211 10220 10239 10268 10275 10277 10308 10633 12111 12121 12152 12177 12194 12619 
 	}
-	manpower=328000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 328000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

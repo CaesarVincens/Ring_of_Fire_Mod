@@ -1,12 +1,12 @@
 
-state={
-	id=322
-	name="STATE_322"
-	resources={
-		aluminium=30.000
+state = {
+	id = 322
+	name = "STATE_322"
+	resources = {
+		aluminium = 30.000
 	}
 
-	history={
+	history = {
 		owner = VAT
 		victory_points = {
 			958 3 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		958 
 	}
-	manpower=222000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 222000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

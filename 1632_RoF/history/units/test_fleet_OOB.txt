@@ -1,0 +1,21 @@
+﻿start_equipment_factor = 0
+
+units = {
+						
+	navy = {					
+		name = "Test 1"
+		base = 9347
+		location = 9347 # Hamburg?
+
+		ship = { name = "Ironclad" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Timberclad" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Man o' War" definition = man_of_war equipment = { man_of_war_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Heavy Frigate" definition = heavy_frigate equipment = { heavy_frigate_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Light Frigate" definition = light_frigate equipment = { light_frigate_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Steam Battleship" definition = steam_battleship equipment = { steam_battleship_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Steam Cruiser" definition = steam_cruiser equipment = { steam_cruiser_1 = { amount = 1 owner = UPS creator = UPS } } }
+		ship = { name = "Steam Destroyer" definition = steam_destroyer equipment = { steam_destroyer_1 = { amount = 1 owner = UPS creator = UPS } } }
+	}
+}
+
+

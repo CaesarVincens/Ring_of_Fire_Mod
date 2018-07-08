@@ -5,6 +5,7 @@ oob = "SOV_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -43,7 +44,7 @@ set_politics = {
 add_ideas = {
 	military_focus_eco
 }
-set_national_unity = 0.7118
+set_stability = 0.5
 create_country_leader = {
     name = "Mikhail Romanov"
     desc = "POLITICS_DMITRY_GOLIVIN_DESC"

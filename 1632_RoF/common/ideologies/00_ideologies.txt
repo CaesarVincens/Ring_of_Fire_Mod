@@ -12,6 +12,8 @@ ideologies = {
 			absolute_monarchy = {}
 		
 			dictatorship = {}
+			
+			bishopric = {}
 		}
 		
 		dynamic_faction_names = {
@@ -27,7 +29,7 @@ ideologies = {
 		rules = {
 			can_force_government = no
 			can_guarantee_other_ideologies = yes
-			can_puppet = no
+			can_puppet = yes
 			can_send_volunteers = no
 		}
 		
@@ -47,9 +49,9 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
-		can_be_boosted = no
+		can_collaborate = yes
 
-		ai_neutral = yes
+		ai_fascist = yes
 	}
 
 	constitutionalist = {
@@ -72,7 +74,7 @@ ideologies = {
 		rules = {
 			can_force_government = no
 			can_guarantee_other_ideologies = yes
-			can_puppet = no
+			can_puppet = yes
 			can_send_volunteers = no
 		}
 		
@@ -86,7 +88,8 @@ ideologies = {
 		}
 		faction_modifiers = {
 		}
-		ai_neutral = yes
+		can_collaborate = yes
+		ai_democratic = yes
 	}
 	
 	liberal = {
@@ -97,7 +100,7 @@ ideologies = {
 			
 			democracy = {}
 			
-			constitutional_monarchy = {}
+			lib_constitutional_monarchy = {}
 			
 			liberal_republic = {}
 			
@@ -116,7 +119,7 @@ ideologies = {
 		color = { 100 200 255 }
 		
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_guarantee_other_ideologies = yes
 			can_puppet = no
 			can_send_volunteers = no
@@ -133,7 +136,8 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
-		ai_neutral = yes
+		can_collaborate = yes
+		ai_communist = yes
 	}
 
 	radical = {
@@ -157,9 +161,9 @@ ideologies = {
 		color = { 255 60 0 }
 		
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_guarantee_other_ideologies = yes
-			can_puppet = no
+			can_puppet = yes
 			can_send_volunteers = no
 		}
 		
@@ -173,7 +177,8 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
-		ai_neutral = yes
+		can_collaborate = yes
+		ai_communist = yes
 	}
 
 	neutrality = {

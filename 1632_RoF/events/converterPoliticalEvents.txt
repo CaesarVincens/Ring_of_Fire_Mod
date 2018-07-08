@@ -1,101 +1,6 @@
 ﻿add_namespace = conv.political
 
 country_event = {
-	id = conv.political.01
-	title = conv.political.01.t
-	desc = conv.political.01.d
-	picture = GFX_report_event_generic_factory
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_government = absolutist }
-	}
-
-	option = {
-		name = conv.political.01.a
-		custom_effect_tooltip = conv.political.01.a.tt
-		clr_country_flag = absolutist_popular_movement
-		set_country_flag = absolutist_political_movement
-	}
-
-	option = {
-		name = conv.political.01.b
-		custom_effect_tooltip = conv.political.01.b.tt
-		clr_country_flag = absolutist_political_movement
-		clr_country_flag = absolutist_government_support
-		set_country_flag = absolutist_popular_movement
-	}
-}
-
-country_event = {
-	id = conv.political.02
-	title = conv.political.02.t
-	desc = conv.political.02.d
-	picture = GFX_report_event_generic_factory
-
-
-	trigger = {
-		has_idea_with_trait = absolutist_minister
-		NOT = { has_government = absolutist }
-		NOT = { has_country_flag = absolutist_government_support }
-	}
-
-	mean_time_to_happen = {
-		days = 500
-		modifier = {
-			factor = 0.5
-			has_country_flag = absolutist_political_movement
-		}
-	}
-
-	option = {
-		name = conv.political.02.a
-		custom_effect_tooltip = conv.political.02.a.tt
-		clr_country_flag = absolutist_political_movement
-		set_country_flag = absolutist_government_support
-	}
-}
-
-country_event = {
-	id = conv.political.03
-	title = conv.political.03.t
-	desc = conv.political.03.d
-	picture = GFX_report_event_generic_factory
-
-
-	trigger = {
-		has_idea_with_trait = absolutist_minister
-		NOT = { has_government = absolutist }
-		has_country_flag = absolutist_government_support
-		absolutist > 0.4
-		is_major = no
-		is_puppet = no
-	}
-
-	mean_time_to_happen = {
-		days = 100
-		modifier = {
-			factor = 0.5
-			absolutist > 0.5
-		}
-	}
-
-	immediate = {
-		hidden_effect = { remove_ideas = absolutist_revolutionaries }
-	}
-
-	option = {
-		name = conv.political.03.a
-		set_politics = {
-			ruling_party = absolutist
-			elections_allowed = no
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
-	}
-}
-
-country_event = {
 	id = conv.political.04
 	title = conv.political.04.t
 	desc = conv.political.04.d
@@ -120,8 +25,9 @@ country_event = {
 		name = conv.political.04.a
 		add_popularity = {
 			ideology = absolutist
-			popularity = 0.15
+			popularity = 0.05
 		}
+		add_stability = -0.05
 	}
 }
 
@@ -152,178 +58,9 @@ country_event = {
 		name = conv.political.05.a
 		add_popularity = {
 			ideology = absolutist
-			popularity = 0.15
+			popularity = 0.05
 		}
 		add_ideas = absolutist_partisans_recruiting
-	}
-}
-
-country_event = {
-	id = conv.political.06
-	title = conv.political.06.t
-	desc = conv.political.06.d
-	picture = GFX_report_event_generic_factory
-
-
-	trigger = {
-		has_idea_with_trait = absolutist_minister
-		NOT = { has_government = absolutist }
-		absolutist > 0.4
-	}
-
-	mean_time_to_happen = {
-		days = 365
-		modifier = {
-			factor = 0.75
-			has_country_flag = absolutist_popular_movement
-		}
-
-	}
-
-	option = {
-		name = conv.political.06.a
-		if = {
-			limit = {
-				has_government = constitutionalist
-			}
-			start_civil_war = {
-				ruling_party = absolutist
-				ideology = constitutionalist
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = liberal
-			}
-			start_civil_war = {
-				ruling_party = absolutist
-				ideology = liberal
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = neutrality
-			}
-			start_civil_war = {
-				ruling_party = absolutist
-				ideology = neutrality
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = radical
-			}
-			start_civil_war = {
-				ruling_party = absolutist
-				ideology = radical
-				size = 0.6
-			}
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
-		remove_ideas = absolutist_revolutionaries
-	}
-
-	option = {
-		name = conv.political.06.b
-
-	}
-}
-
-country_event = {
-	id = conv.political.07
-	title = conv.political.07.t
-	desc = conv.political.07.d
-	picture = GFX_report_event_generic_factory
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_government = constitutionalist }
-	}
-
-	option = {
-		name = conv.political.07.a
-		custom_effect_tooltip = conv.political.07.a.tt
-		clr_country_flag = constitutionalist_popular_movement
-		set_country_flag = constitutionalist_political_movement
-	}
-
-	option = {
-		name = conv.political.07.b
-		custom_effect_tooltip = conv.political.07.b.tt
-		clr_country_flag = constitutionalist_political_movement
-		clr_country_flag = constitutionalist_government_support
-		set_country_flag = constitutionalist_popular_movement
-	}
-}
-
-country_event = {
-	id = conv.political.08
-	title = conv.political.08.t
-	desc = conv.political.08.d
-	picture = GFX_report_event_generic_factory
-
-
-	trigger = {
-		has_idea_with_trait = constitutionalist_minister
-		NOT = { has_government = constitutionalist }
-		NOT = { has_country_flag = constitutionalist_government_support }
-	}
-
-	mean_time_to_happen = {
-		days = 500
-		modifier = {
-			factor = 0.5
-			has_country_flag = constitutionalist_political_movement
-		}
-	}
-
-	option = {
-		name = conv.political.08.a
-		custom_effect_tooltip = conv.political.08.a.tt
-		clr_country_flag = constitutionalist_political_movement
-		set_country_flag = constitutionalist_government_support
-	}
-}
-
-country_event = {
-	id = conv.political.09
-	title = conv.political.09.t
-	desc = conv.political.09.d
-	picture = GFX_report_event_generic_factory
-
-
-	trigger = {
-		has_idea_with_trait = constitutionalist_minister
-		NOT = { has_government = constitutionalist }
-		has_country_flag = constitutionalist_government_support
-		constitutionalist > 0.4
-		is_major = no
-		is_puppet = no
-	}
-
-	mean_time_to_happen = {
-		days = 100
-		modifier = {
-			factor = 0.5
-			constitutionalist > 0.5
-		}
-	}
-
-	immediate = {
-		hidden_effect = { remove_ideas = constitutionalist_revolutionaries }
-	}
-
-	option = {
-		name = conv.political.09.a
-		set_politics = {
-			ruling_party = constitutionalist
-			elections_allowed = no
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
 	}
 }
 
@@ -352,8 +89,9 @@ country_event = {
 		name = conv.political.10.a
 		add_popularity = {
 			ideology = constitutionalist
-			popularity = 0.15
+			popularity = 0.05
 		}
+		add_stability = -0.05
 	}
 }
 
@@ -384,178 +122,9 @@ country_event = {
 		name = conv.political.11.a
 		add_popularity = {
 			ideology = constitutionalist
-			popularity = 0.15
+			popularity = 0.05
 		}
 		add_ideas = constitutionalist_partisans_recruiting
-	}
-}
-
-country_event = {
-	id = conv.political.12
-	title = conv.political.12.t
-	desc = conv.political.12.d
-	picture = GFX_report_event_generic_factory
-
-
-	trigger = {
-		has_idea_with_trait = constitutionalist_minister
-		NOT = { has_government = constitutionalist }
-		constitutionalist > 0.4
-	}
-
-	mean_time_to_happen = {
-		days = 365
-		modifier = {
-			factor = 0.75
-			has_country_flag = constitutionalist_popular_movement
-		}
-
-	}
-
-	option = {
-		name = conv.political.12.a
-		if = {
-			limit = {
-				has_government = absolutist
-			}
-			start_civil_war = {
-				ruling_party = constitutionalist
-				ideology = absolutist
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = liberal
-			}
-			start_civil_war = {
-				ruling_party = constitutionalist
-				ideology = liberal
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = neutrality
-			}
-			start_civil_war = {
-				ruling_party = constitutionalist
-				ideology = neutrality
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = radical
-			}
-			start_civil_war = {
-				ruling_party = constitutionalist
-				ideology = radical
-				size = 0.6
-			}
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
-		remove_ideas = constitutionalist_revolutionaries
-	}
-
-	option = {
-		name = conv.political.12.b
-
-	}
-}
-
-country_event = {
-	id = conv.political.19
-	title = conv.political.19.t
-	desc = conv.political.19.d
-	picture = GFX_report_event_gathering_protests
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_government = radical }
-	}
-
-	option = {
-		name = conv.political.19.a
-		custom_effect_tooltip = conv.political.19.a.tt
-		clr_country_flag = radical_popular_movement
-		set_country_flag = radical_political_movement
-	}
-
-	option = {
-		name = conv.political.19.b
-		custom_effect_tooltip = conv.political.19.b.tt
-		clr_country_flag = radical_political_movement
-		clr_country_flag = radical_government_support
-		set_country_flag = radical_popular_movement
-	}
-}
-
-country_event = {
-	id = conv.political.20
-	title = conv.political.20.t
-	desc = conv.political.20.d
-	picture = GFX_report_event_gathering_protests
-
-
-	trigger = {
-		has_idea_with_trait = radical_minister
-		NOT = { has_government = radical }
-		NOT = { has_country_flag = radical_government_support }
-	}
-
-	mean_time_to_happen = {
-		days = 500
-		modifier = {
-			factor = 0.5
-			has_country_flag = radical_political_movement
-		}
-	}
-
-	option = {
-		name = conv.political.20.a
-		custom_effect_tooltip = conv.political.20.a.tt
-		clr_country_flag = radical_political_movement
-		set_country_flag = radical_government_support
-	}
-}
-
-country_event = {
-	id = conv.political.21
-	title = conv.political.21.t
-	desc = conv.political.21.d
-	picture = GFX_report_event_gathering_protests
-
-
-	trigger = {
-		has_idea_with_trait = radical_minister
-		NOT = { has_government = radical }
-		has_country_flag = radical_government_support
-		radical > 0.4
-		is_major = no
-		is_puppet = no
-	}
-
-	mean_time_to_happen = {
-		days = 100
-		modifier = {
-			factor = 0.5
-			radical > 0.5
-		}
-	}
-
-	immediate = {
-		hidden_effect = { remove_ideas = radical_revolutionaries }
-	}
-
-	option = {
-		name = conv.political.21.a
-		set_politics = {
-			ruling_party = radical
-			elections_allowed = no
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
 	}
 }
 
@@ -584,8 +153,9 @@ country_event = {
 		name = conv.political.22.a
 		add_popularity = {
 			ideology = radical
-			popularity = 0.15
+			popularity = 0.05
 		}
+		add_stability = -0.05
 	}
 }
 
@@ -616,145 +186,9 @@ country_event = {
 		name = conv.political.23.a
 		add_popularity = {
 			ideology = radical
-			popularity = 0.15
+			popularity = 0.05
 		}
 		add_ideas = radical_partisans_recruiting
-	}
-}
-
-country_event = {
-	id = conv.political.24
-	title = conv.political.24.t
-	desc = conv.political.24.d
-	picture = GFX_report_event_gathering_protests
-
-
-	trigger = {
-		has_idea_with_trait = radical_minister
-		NOT = { has_government = radical }
-		radical > 0.4
-	}
-
-	mean_time_to_happen = {
-		days = 365
-		modifier = {
-			factor = 0.75
-			has_country_flag = radical_popular_movement
-		}
-
-	}
-
-	option = {
-		name = conv.political.24.a
-		if = {
-			limit = {
-				has_government = absolutist
-			}
-			start_civil_war = {
-				ruling_party = radical
-				ideology = absolutist
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = constitutionalist
-			}
-			start_civil_war = {
-				ruling_party = radical
-				ideology = constitutionalist
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = liberal
-			}
-			start_civil_war = {
-				ruling_party = radical
-				ideology = liberal
-				size = 0.6
-			}
-		}
-		if = {
-			limit = {
-				has_government = neutrality
-			}
-			start_civil_war = {
-				ruling_party = radical
-				ideology = neutrality
-				size = 0.6
-			}
-		}
-		add_timed_idea = { idea = reign_of_terror days = 730 }
-		remove_ideas = radical_revolutionaries
-	}
-
-	option = {
-		name = conv.political.24.b
-
-	}
-}
-
-country_event = {
-	id = conv.political.25
-	title = conv.political.25.t
-	desc = conv.political.25.d
-	picture = GFX_report_event_journalists_speech
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_government = liberal }
-	}
-
-	option = {
-		name = conv.political.25.a
-		custom_effect_tooltip = conv.political.25.a.tt
-		clr_country_flag = liberal_popular_movement
-		clr_country_flag = liberal_opposition_formed
-		set_country_flag = liberal_political_movement
-	}
-
-	option = {
-		name = conv.political.25.b
-		custom_effect_tooltip = conv.political.25.b.tt
-		clr_country_flag = liberal_political_movement
-		clr_country_flag = liberal_government_support
-		set_country_flag = liberal_popular_movement
-	}
-}
-
-country_event = {
-	id = conv.political.26
-	title = conv.political.26.t
-	desc = conv.political.26.d
-	picture = GFX_report_event_journalists_speech
-
-
-	trigger = {
-		has_idea_with_trait = liberal_minister
-		NOT = { has_government = liberal }
-		NOT = { has_country_flag = liberal_government_support }
-	}
-
-	mean_time_to_happen = {
-		days = 400
-		modifier = {
-			factor = 0.5
-			has_country_flag = liberal_political_movement
-		}
-		modifier = {
-			factor = 0.5
-			liberal > 0.5
-		}
-	}
-
-	option = {
-		name = conv.political.26.a
-		custom_effect_tooltip = political.26.a.tt
-		clr_country_flag = liberal_political_movement
-		set_country_flag = liberal_government_support
 	}
 }
 
@@ -784,9 +218,9 @@ country_event = {
 		name = conv.political.27.a
 		add_popularity = {
 			ideology = liberal
-			popularity = 0.1
+			popularity = 0.05
 		}
-		add_national_unity = -0.02
+		add_stability = -0.05
 		set_country_flag = liberal_opposition_formed
 	}
 }
@@ -873,40 +307,7 @@ country_event = {
 	desc = conv.political.30.d
 	picture = GFX_report_event_generic_factory
 
-
-	trigger = {
-		absolutist > 0.5
-		NOT = { has_government = absolutist }
-		NOT = { has_idea = absolutist_revolutionaries }
-		NOT = { has_idea = reign_of_terror }
-		is_puppet = no
-
-	}
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-	option = {
-		name = conv.political.30.a
-		add_political_power = -100
-		add_popularity = {
-			ideology = absolutist
-			popularity = -0.10
-		}
-		add_timed_idea = {
-			idea = absolutist_revolutionaries
-			days = 365
-		}
-	}
-
-	option = {
-		name = conv.political.30.b
-		add_timed_idea = {
-			idea = absolutist_revolutionaries
-			days = 365
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = conv.political.30.c
@@ -914,7 +315,7 @@ country_event = {
 			ruling_party = absolutist
 			elections_allowed = no
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 
 	}
 }
@@ -925,40 +326,7 @@ country_event = {
 	desc = conv.political.31.d
 	picture = GFX_report_event_worker_protests
 
-
-	trigger = {
-		constitutionalist > 0.5
-		NOT = { has_government = constitutionalist }
-		NOT = { has_idea = constitutionalist_revolutionaries }
-		NOT = { has_idea = reign_of_terror }
-		is_puppet = no
-
-	}
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-	option = {
-		name = conv.political.31.a
-		add_political_power = -100
-		add_popularity = {
-			ideology = constitutionalist
-			popularity = -0.10
-		}
-		add_timed_idea = {
-			idea = constitutionalist_revolutionaries
-			days = 365
-		}
-	}
-
-	option = {
-		name = conv.political.31.b
-		add_timed_idea = {
-			idea = constitutionalist_revolutionaries
-			days = 365
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = conv.political.31.c
@@ -966,7 +334,7 @@ country_event = {
 			ruling_party = constitutionalist
 			elections_allowed = no
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 
 	}
 }
@@ -977,40 +345,7 @@ country_event = {
 	desc = conv.political.32.d
 	picture = GFX_report_event_journalists_speech
 
-
-	trigger = {
-		liberal > 0.5
-		NOT = { has_government = liberal }
-		NOT = { has_idea = liberal_revolutionaries }
-		NOT = { has_idea = reign_of_terror }
-		is_puppet = no
-
-	}
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-	option = {
-		name = conv.political.32.a
-		add_political_power = -100
-		add_popularity = {
-			ideology = liberal
-			popularity = -0.10
-		}
-		add_timed_idea = {
-			idea = liberal_revolutionaries
-			days = 365
-		}
-	}
-
-	option = {
-		name = conv.political.32.b
-		add_timed_idea = {
-			idea = liberal_revolutionaries
-			days = 365
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = conv.political.32.c
@@ -1030,7 +365,7 @@ country_event = {
 			ruling_party = liberal
 			elections_allowed = yes
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
 
 	}
 }
@@ -1041,40 +376,7 @@ country_event = {
 	desc = conv.political.34.d
 	picture = GFX_report_event_gathering_protests
 
-
-	trigger = {
-		radical > 0.5
-		NOT = { has_government = radical }
-		NOT = { has_idea = radical_revolutionaries }
-		NOT = { has_idea = reign_of_terror }
-		is_puppet = no
-
-	}
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-	option = {
-		name = conv.political.34.a
-		add_political_power = -100
-		add_popularity = {
-			ideology = radical
-			popularity = -0.10
-		}
-		add_timed_idea = {
-			idea = radical_revolutionaries
-			days = 365
-		}
-	}
-
-	option = {
-		name = conv.political.34.b
-		add_timed_idea = {
-			idea = radical_revolutionaries
-			days = 365
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = conv.political.34.c
@@ -1082,7 +384,26 @@ country_event = {
 			ruling_party = radical
 			elections_allowed = no
 		}
-		add_national_unity = -0.05
+		add_stability = -0.05
+
+	}
+}
+
+country_event = {
+	id = conv.political.340
+	title = conv.political.340.t
+	desc = conv.political.340.d
+	picture = GFX_report_event_gathering_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = conv.political.340.c
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_stability = -0.05
 
 	}
 }

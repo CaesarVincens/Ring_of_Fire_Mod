@@ -1,0 +1,45 @@
+﻿add_namespace = RoF_POL
+
+country_event = {
+	id = RoF_POL.100
+	title = RoF_POL.100.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.100.d
+	fire_only_once = yes
+
+	trigger = {
+		tag = POL
+		date > 1632.11.1
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Władysław IV Vasa"
+				desc = "POLITICS_WALLENSTEIN_DESC"
+				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+				ideology = absolute_monarchy
+				traits = {
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_POL.100.a
+		effect_tooltip = {
+			create_country_leader = {
+				name = "Władysław IV Vasa"
+				desc = "POLITICS_WALLENSTEIN_DESC"
+				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+				ideology = absolute_monarchy
+				traits = {
+				}
+			}
+		}
+	}
+}

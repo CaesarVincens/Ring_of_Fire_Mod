@@ -5,10 +5,11 @@ ai_historical_focus_list_NUS = {
 		NUS_grantville_national_library
 		NUS_gearing_down
 		NUS_revitalize_mining
-		NUS_establish_committees_of_correspondance
+		NUS_establish_committees_of_correspondence
 		NUS_new_constitution
 		NUS_invite_thuringian_cities
 		NUS_support_SWE
+		NUS_upgrade_techniques
 		NUS_build_an_army
 		NUS_integrate_down_timers
 		NUS_encourage_reinvention

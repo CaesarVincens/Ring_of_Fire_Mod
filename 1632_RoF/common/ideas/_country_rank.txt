@@ -1,0 +1,148 @@
+ideas = {
+	country = {
+		emperor_rank = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		king_rank = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		archduke_rank = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HUN_hungarian_monarchy
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		duke_rank = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		elector_rank = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		count_rank = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		SPA_colony = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		other_colony = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		ITA_republic = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		UPS_republic = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		free_city = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		other_republic = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+		shogun = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+			rule = {
+			}
+		}
+
+	}
+}

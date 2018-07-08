@@ -1,0 +1,132 @@
+sub_units = {
+	ironclad = {
+		sprite = battleship
+		map_icon_category = ship
+		priority = 9
+		active = yes
+		type = { capital_ship }
+		need = { ironclad = 1 }
+		
+		max_organisation = 40
+
+		supply_consumption = 0.2
+	}
+
+}
+
+sub_units = {
+	timberclad = {
+		sprite = heavy_cruiser
+		map_icon_category = ship
+		priority = 6
+		active = yes
+		type = { screen_ship }
+		need = { timberclad = 1 }
+		
+		max_organisation = 40
+
+		
+		supply_consumption = 0.15
+	}
+
+}
+
+sub_units = {
+	man_of_war = {
+		sprite = battle_cruiser
+		map_icon_category = ship
+		priority = 8
+		active = yes
+		type = { capital_ship }
+		need = { man_of_war = 1 }
+
+		
+		max_organisation = 40
+
+		supply_consumption = 0.1.5
+	}
+	
+}
+
+sub_units = {
+	heavy_frigate = {
+		sprite = heavy_cruiser
+		map_icon_category = ship
+		priority = 6
+		active = yes
+		type = { screen_ship }
+		need = { heavy_frigate = 1 }
+		
+		max_organisation = 40
+
+		
+		supply_consumption = 0.1
+	}
+
+}
+
+sub_units = {
+	light_frigate = {
+		sprite = light_cruiser
+		map_icon_category = ship
+		priority = 5
+		active = yes
+		type = { screen_ship }
+		need = { light_frigate = 1 }
+		
+
+		max_organisation = 40
+		
+		
+		supply_consumption = 0.05
+	}
+}
+
+sub_units = {
+	steam_battleship = {
+		sprite = battle_cruiser
+		map_icon_category = ship
+		priority = 9
+		active = yes
+		type = { capital_ship }
+		need = { steam_battleship = 1 }
+		
+		max_organisation = 40
+		
+		supply_consumption = 0.2
+	}
+}
+
+sub_units = {
+	steam_cruiser = {
+		sprite = heavy_cruiser
+		map_icon_category = ship
+		priority = 6
+		active = yes
+		type = { screen_ship }
+		need = { steam_cruiser = 1 }
+		
+		max_organisation = 40
+
+		
+		supply_consumption = 0.15
+	}
+
+}
+
+sub_units = {
+	steam_destroyer = {
+		sprite = light_cruiser
+		map_icon_category = ship
+		priority = 5
+		active = yes
+		type = { screen_ship }
+		need = { steam_destroyer = 1 }
+		
+
+		max_organisation = 40
+		
+		
+		supply_consumption = 0.1
+	}
+}

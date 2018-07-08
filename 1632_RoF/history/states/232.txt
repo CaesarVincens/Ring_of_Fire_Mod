@@ -1,12 +1,12 @@
 
-state={
-	id=232
-	name="STATE_232"
-	resources={
-		steel=6.000
+state = {
+	id = 232
+	name = "STATE_232"
+	resources = {
+		steel = 6.000
 	}
 
-	history={
+	history = {
 		owner = FRA
 		victory_points = {
 			1356 3 
@@ -21,10 +21,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1356 
 	}
-	manpower=22400
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 22400
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

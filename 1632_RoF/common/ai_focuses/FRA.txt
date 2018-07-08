@@ -2,13 +2,13 @@ ai_historical_focus_list_FRA = {
 	ai_national_focuses = {
 		FRA_investigate_grantville
 		FRA_learn_from_history
-		FRA_industrial_effort #temp
+		industrial_advances_gen #temp
 		FRA_strengthen_crown
-		FRA_production_effort #temp
+		machined_parts_gen #temp
 		FRA_countermeasures_focus
 		FRA_strike_grantville
-		FRA_army_effort #temp
-		FRA_construction_effort #temp
+		army_drilling_gen #temp
+		road_work_gen #temp
 		FRA_ostend_league_focus
 		FRA_promote_from_history
 		FRA_dunkirk

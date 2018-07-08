@@ -1,16 +1,16 @@
-state={
-	id=361
+state = {
+	id = 361
 	name= "STATE_361"
 	manpower = 52808
 
-	resources={
-		rubber = 34
+	resources = {
+		#rubber = 34
 		steel = 1
 		tungsten = 12
 	}
 	state_category = enclave
 
-	history={
+	history = {
 		owner = POR
 		victory_points = { 7427 3 }
 		buildings = {
@@ -21,7 +21,7 @@ state={
 		}
 	}
 
-	provinces={
+	provinces = {
 		7427 
 	}
 }

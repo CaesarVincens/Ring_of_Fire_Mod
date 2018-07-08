@@ -1,14 +1,14 @@
 
-state={
-	id=275
-	name="STATE_275"
-	resources={
-		oil=10.000
-		rubber=155.000
-		steel=3.000
+state = {
+	id = 275
+	name = "STATE_275"
+	resources = {
+		oil = 10.000
+		#rubber = 155.000
+		steel = 3.000
 	}
 
-	history={
+	history = {
 		owner = MAT
 		victory_points = {
 			4434 8 
@@ -24,10 +24,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1209 1386 1413 4273 4306 4390 4434 4608 7223 7642 7654 10135 10479 10491 12277 12293 12472 
 	}
-	manpower=5283000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 5283000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

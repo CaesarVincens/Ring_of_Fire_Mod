@@ -1,11 +1,11 @@
-state={
-	id=606
+state = {
+	id = 606
 	name= "STATE_606"
 	manpower = 405600
 
 	state_category = small_island
 
-	history={
+	history = {
 		owner = NSP
 		victory_points = { 4155 3 }
 		buildings = {
@@ -13,11 +13,14 @@ state={
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			1440 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = NSP
 	}
 
-	provinces={
+	provinces = {
 		1440 4155 
 	}
 }

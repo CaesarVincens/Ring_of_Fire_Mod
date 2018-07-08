@@ -1,9 +1,9 @@
 
-state={
-	id=343
-	name="STATE_343"
+state = {
+	id = 343
+	name = "STATE_343"
 
-	history={
+	history = {
 		owner = POL
 		victory_points = {
 			362 3 
@@ -13,6 +13,9 @@ state={
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			362 = {
+				naval_base = 2
+			}
 
 		}
 		add_core_of = POL
@@ -20,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		334 362 389 3324 3380 6402 9263 
 	}
-	manpower=399000
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 399000
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

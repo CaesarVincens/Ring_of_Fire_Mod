@@ -1,13 +1,13 @@
 
-state={
-	id=294
-	name="STATE_294"
-	resources={
-		aluminium=0.000
-		rubber=6.000
+state = {
+	id = 294
+	name = "STATE_294"
+	resources = {
+		aluminium = 0.000
+		#rubber = 6.000
 	}
 
-	history={
+	history = {
 		owner = MYS
 		victory_points = {
 			10808 3 
@@ -24,10 +24,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1238 7363 8067 10130 10274 10808 12275 
 	}
-	manpower=2116000
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 2116000
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

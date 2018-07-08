@@ -7,13 +7,13 @@ units = {
 		base = 9347
 		location = 9347 # Hamburg?
 
-		ship = { name = "SSIM United States" definition = battleship equipment = { battleship_2 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Constitution" definition = battleship equipment = { battleship_2 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM President" definition = battleship equipment = { battleship_2 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Monitor" definition = battleship equipment = { battleship_2 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Ajax" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Achates" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Achilles" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM United States" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM Constitution" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM President" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM Monitor" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM Ajax" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM Achates" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		ship = { name = "SSIM Achilles" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
 	}
 }
 

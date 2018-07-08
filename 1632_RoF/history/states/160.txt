@@ -1,12 +1,12 @@
 
-state={
-	id=160
-	name="STATE_160"
-	resources={
-		chromium=39.000
+state = {
+	id = 160
+	name = "STATE_160"
+	resources = {
+		chromium = 39.000
 	}
 
-	history={
+	history = {
 		owner = GEO
 		victory_points = {
 			11664 8 
@@ -23,10 +23,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		654 672 1530 1599 3656 3658 4534 6669 6671 6674 9626 9632 9702 11609 11708 12309 12380 12441 
 	}
-	manpower=648600
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 648600
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

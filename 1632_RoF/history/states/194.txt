@@ -1,28 +1,27 @@
 
-state={
-	id=194
-	name="STATE_194"
+state = {
+	id = 194
+	name = "STATE_194"
 
-	history={
+	history = {
+		owner = WNA
 		victory_points = {
 			10805 3 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = AIR
-		add_core_of = KAN
 
 	}
 
-	provinces={
+	provinces = {
 		373 7758 7788 12680 12698 
 	}
-	manpower=327600
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 327600
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -25,7 +25,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				unity_factor = 0.1
+				stability_factor = 0.1
 			}
 			removal_cost = -1
 			picture = ulrik_kristina
@@ -34,11 +34,12 @@ ideas = {
 	political_advisor = {
 		DEN_absolutist_advisor = {
 			allowed = {
+				always = no
 				original_tag = DEN
 			}
 			traits = { absolutist_minister }
 			on_add = {
-				country_event = conv.political.01
+				#country_event = conv.political.01
 			}
 			picture = triumphant_will
 			do_effect = {
@@ -52,11 +53,12 @@ ideas = {
 		}
 		DEN_democratic_advisor = {
 			allowed = {
+				always = no
 				original_tag = DEN
 			}
 			traits = { liberal_minister }
 			on_add = {
-				country_event = conv.political.25
+				#country_event = conv.political.25
 			}
 			do_effect = {
 				NOT = {
@@ -69,10 +71,11 @@ ideas = {
 		}
 		DEN_neutrality_advisor = {
 			allowed = {
+				always = no
 				original_tag = DEN
 			}
 			traits = { neutrality_minister }
-			picture = neutral_foreign_policy
+			picture = neutrality_idea
 			do_effect = {
 				NOT = {
 					has_government = neutrality

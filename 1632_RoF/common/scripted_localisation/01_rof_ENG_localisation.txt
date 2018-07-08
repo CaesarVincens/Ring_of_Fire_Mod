@@ -1,0 +1,174 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+#Rename English focuses based on choices
+defined_text = {
+	name = ENG_overthrow_the_king_script
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_overthrow_the_king_cons
+	}
+	text = {
+		localization_key = ENG_overthrow_the_king_abs
+	}
+}
+
+defined_text = {
+	name = ENG_overthrow_the_king_script_desc
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_overthrow_the_king_cons_desc
+	}
+	text = {
+		localization_key = ENG_overthrow_the_king_abs_desc
+	}
+}
+
+defined_text = {
+	name = ENG_commonwealth_of_england_script
+	text = {
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_IRE.tt
+				OR = {
+					ENG = {
+						owns_state = 97
+						owns_state = 120
+						owns_state = 121
+						owns_state = 122
+					}
+					IRE = { is_subject_of = ENG }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_SCO.tt
+				OR = {
+					ENG = { owns_state = 415 owns_state = 416 }
+					SCO = { is_subject_of = ENG }
+				}
+			}
+		}
+		localization_key = ENG_commonwealth_of_england_uk
+	}
+	text = {
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_IRE.tt
+				OR = {
+					ENG = {
+						owns_state = 97
+						owns_state = 120
+						owns_state = 121
+						owns_state = 122
+					}
+					IRE = { is_subject_of = ENG }
+				}
+			}
+		}
+		localization_key = ENG_commonwealth_of_england_eng_ire
+	}
+	text = {
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_rules_SCO.tt
+				OR = {
+					ENG = { owns_state = 415 owns_state = 416 }
+					SCO = { is_subject_of = ENG }
+				}
+			}
+		}
+		localization_key = ENG_commonwealth_of_england_gbr
+	}
+	text = {
+		localization_key = ENG_commonwealth_of_england_eng
+	}
+}
+
+defined_text = {
+	name = ENG_commonwealth_of_england_script_desc
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_commonwealth_of_england_cons_desc
+	}
+	text = {
+		localization_key = ENG_commonwealth_of_england_abs_desc
+	}
+}
+
+defined_text = {
+	name = ENG_house_of_lords_script
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_house_of_lords_cons
+	}
+	text = {
+		localization_key = ENG_house_of_lords_abs
+	}
+}
+
+defined_text = {
+	name = ENG_house_of_lords_script_desc
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_house_of_lords_cons_desc
+	}
+	text = {
+		localization_key = ENG_house_of_lords_abs_desc
+	}
+}
+
+defined_text = {
+	name = ENG_liberty_or_death_script
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_liberty_or_death_cons
+	}
+	text = {
+		localization_key = ENG_liberty_or_death_abs
+	}
+}
+
+defined_text = {
+	name = ENG_liberty_or_death_script_desc
+	text = {
+		trigger = {
+			has_completed_focus = ENG_hide_cromwell
+		}
+		localization_key = ENG_liberty_or_death_cons_desc
+	}
+	text = {
+		localization_key = ENG_liberty_or_death_abs_desc
+	}
+}
+
+defined_text = {
+	name = ENG_united_kingdom_script_desc
+	text = {
+		trigger = {
+			has_completed_focus = ENG_constitutional_reforms
+		}
+		localization_key = ENG_united_kingdom_cons_desc
+	}
+	text = {
+		localization_key = ENG_united_kingdom_abs_desc
+	}
+}

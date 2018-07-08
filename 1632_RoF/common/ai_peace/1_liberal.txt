@@ -1,0 +1,119 @@
+# Logic for Liberal AI
+# Should favor annexing other nations and taking their states
+# Written by CaesarVincens
+
+liberal_peace = {
+	# ROOT = Taker, FROM = Giver
+	enable = {
+		has_government = liberal
+	}
+
+	annex_randomness = 0
+	liberate_randomness = 0
+	puppet_randomness = 0
+	take_states_randomness = 0
+	force_government_randomness = 0
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 50
+		modifier = {
+			factor = 0
+			ROOT = {
+				is_subject = yes
+				FROM = {
+					any_owned_state = {
+						NOT = { ROOT_has_core_or_claim = yes }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { is_neighbor_of = ROOT }
+				any_owned_state = {
+					NOT = { ROOT_has_core_or_claim = yes }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				is_neighbor_of = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				all_owned_state = {
+					ROOT_has_core_or_claim = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			original_tag = NUS
+			FROM = { is_german_tag = yes }
+		}
+
+	}
+
+	# ROOT = Taker, FROM = State
+	take_states = {
+		factor = 10
+		modifier = {
+			factor = 0
+			FROM = {
+				NOT = { ROOT_has_core_or_claim = yes }
+				NOT = { is_coastal = yes }
+				NOT = {
+					any_neighbor_state = { is_owned_by = ROOT }
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		factor = 100
+		modifier = {
+			factor = 10
+			FROM = {
+				has_government = liberal
+			}
+		}
+		modifier = {
+			factor = 0
+			original_tag = NUS
+			FROM = { is_german_tag = yes }
+		}
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		factor = 100
+		modifier = {
+			factor = 10
+			FROM = {
+				NOT = { is_neighbor_of = ROOT }
+				all_owned_state = {
+					is_coastal = no
+				}
+			}
+		}
+	}
+
+
+
+	# ROOT = Taker, FROM = Giver
+	force_government = {
+		factor = 200
+		modifier = {
+			factor = 10
+			FROM = {
+				has_government = absolutist
+			}
+		}
+	}
+}

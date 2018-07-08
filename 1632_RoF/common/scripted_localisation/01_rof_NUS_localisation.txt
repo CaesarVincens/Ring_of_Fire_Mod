@@ -1,0 +1,142 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+#Rename NUS-USE focuses based on choices
+defined_text = {
+	name = NUS_retake_saxony_script
+	text = {
+		trigger = {
+			BRA = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+			SAX = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+		}
+		localization_key = NUS_retake_saxony_brandenburg
+	}
+	text = {
+		trigger = {
+			BRA = {
+				OR = {
+					exists = no
+					NOT = {
+						any_owned_state = {
+							is_claimed_by = NUS
+						}
+					}
+				}
+			}
+			SAX = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+		}
+		localization_key = NUS_retake_saxony_only
+	}
+	text = {
+		trigger = {
+			SAX = {
+				OR = {
+					exists = no
+					NOT = {
+						any_owned_state = {
+							is_claimed_by = NUS
+						}
+					}
+				}
+			}
+			BRA = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+		}
+		localization_key = NUS_retake_brandenburg_only
+	}
+	text = {
+		localization_key = NUS_retake_saxony_neither
+	}
+}
+
+defined_text = {
+	name = NUS_retake_saxony_script_desc
+	text = {
+		trigger = {
+			BRA = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+			SAX = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+		}
+		localization_key = NUS_retake_saxony_brandenburg_desc
+	}
+	text = {
+		trigger = {
+			BRA = {
+				OR = {
+					exists = no
+					NOT = {
+						any_owned_state = {
+							is_claimed_by = NUS
+						}
+					}
+				}
+			}
+			SAX = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+		}
+		localization_key = NUS_retake_saxony_only_desc
+	}
+	text = {
+		trigger = {
+			SAX = {
+				OR = {
+					exists = no
+					NOT = {
+						any_owned_state = {
+							is_claimed_by = NUS
+						}
+					}
+				}
+			}
+			BRA = {
+				exists = yes
+				any_owned_state = {
+					is_claimed_by = NUS
+				}
+			}
+		}
+		localization_key = NUS_retake_brandenburg_only_desc
+	}
+	text = {
+		localization_key = NUS_retake_saxony_neither_desc
+	}
+}

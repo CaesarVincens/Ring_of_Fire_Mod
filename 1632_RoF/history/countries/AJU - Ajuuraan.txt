@@ -4,6 +4,7 @@ oob = "AJU_OOB"
 
 # Starting tech
 set_technology = {
+infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -38,11 +39,11 @@ set_politics = {
 
 add_ideas = {
 	}
-set_national_unity = 0.7
+set_stability = 0.5
 create_country_leader = {
     name = "Yusuf Gurey"
     desc = "POLITICS_YUSUF_GUREY_DESC"
-    picture = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+	picture = "gfx/leaders/leader_unknown.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

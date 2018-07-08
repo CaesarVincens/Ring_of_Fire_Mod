@@ -239,10 +239,6 @@ technologies = {
 				date > "1632.1.1"
 			}
 
-			modifier = {
-				factor = 0
-				NOT = { has_government = fascism }
-			}
 		}
 		
 		categories = {
@@ -270,10 +266,6 @@ technologies = {
 				date > "1632.1.1"
 			}
 
-			modifier = {
-				factor = 0
-				NOT = { has_government = fascism }
-			}
 		}
 		
 		categories = {
@@ -691,26 +683,31 @@ technologies = {
 			defensive = -1.0
 		}
 	}
+	#####################################
 	
 	synth_oil_experiments = {
 
 		enable_building = {
 			building = synthetic_refinery
-			level = 1
+			level = 3
 		}
 		
 		#production_oil_factor = 0.1 #Can increase oil output - not used though.
 		
 		path = {
-			leads_to_tech = oil_plant 
+			leads_to_tech = oil_processing 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rubber_processing 
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 3
-		start_year = 1631
+		start_year = 1634
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = 6 }
 		}
 		
 		categories = {
@@ -739,15 +736,20 @@ technologies = {
 		}
 	}
 	
-	oil_plant = {
-
-		enable_building = {
-			building = synthetic_refinery
-			level = 2
-		}
+	oil_processing = {
 		
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 1
+			}
+		}
+
+		start_year = 1636
+
 		path = {
-			leads_to_tech = improved_oil_plant 
+			leads_to_tech = improved_oil_processing
 			research_cost_coeff = 1
 		}
 		
@@ -755,7 +757,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 2 }
+			position = { x = 0 y = 8 }
 		}
 		
 		categories = {
@@ -782,26 +784,31 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
+		
+		show_effect_as_desc = yes
 	}
 	
-	improved_oil_plant = {
-
-		enable_building = {
-			building = synthetic_refinery
-			level = 3
-		}
+	improved_oil_processing = {
 		
-		path = {
-			leads_to_tech = advanced_oil_plant 
-			research_cost_coeff = 1
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 1
+			}
 		}
+
+		#path = {
+		#	leads_to_tech = advanced_oil_processing
+		#	research_cost_coeff = 1
+		#}
 		
 		research_cost = 1.5
-		start_year = 1634
+		start_year = 1638
 		
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 10 }
 		}
 		
 		categories = {
@@ -828,18 +835,69 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
+		
+		show_effect_as_desc = yes
 	}
 	
-	advanced_oil_plant = {
+	advanced_oil_processing = {
 
-		enable_building = {
-			building = synthetic_refinery
-			level = 4
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 1
+			}
+		}
+
+		path = {
+			leads_to_tech = modern_oil_processing
+			research_cost_coeff = 1
 		}
 		
-		path = {
-			leads_to_tech = advanced_oil_plant 
-			research_cost_coeff = 1
+		research_cost = 1.5
+		start_year = 1636
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			industry
+			synth_resources
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0.5
+				oil > 10
+			}
+			modifier = {
+				factor = 0.5
+				oil > 20
+			}	
+			modifier = {
+				factor = 0.5
+				oil > 30
+			}			
+		}
+		
+		ai_research_weights = {
+			oil = -2.0
+		}
+		
+		show_effect_as_desc = yes
+	}
+
+	modern_oil_processing = {
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 1
+			}
 		}
 		
 		research_cost = 1.5
@@ -874,7 +932,12 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
+		
+		show_effect_as_desc = yes
 	}
+
+	#####################################
+	#####################################
 	
 	construction1 = {
 		
@@ -940,7 +1003,7 @@ technologies = {
 				OR = {
 					oil > 0
 					aluminium > 0
-					rubber > 0
+					#rubber > 0
 					tungsten > 0
 					steel > 0
 					chromium > 0
@@ -952,7 +1015,7 @@ technologies = {
 				OR = {
 					oil > 8
 					aluminium > 8
-					rubber > 8
+					#rubber > 8
 					tungsten > 8
 					steel > 8
 					chromium > 8
@@ -1027,7 +1090,7 @@ technologies = {
 				OR = {
 					oil > 0
 					aluminium > 0
-					rubber > 0
+					#rubber > 0
 					tungsten > 0
 					steel > 0
 					chromium > 0
@@ -1039,7 +1102,7 @@ technologies = {
 				OR = {
 					oil > 8
 					aluminium > 8
-					rubber > 8
+					#rubber > 8
 					tungsten > 8
 					steel > 8
 					chromium > 8
@@ -1126,7 +1189,7 @@ technologies = {
 				OR = {
 					oil > 0
 					aluminium > 0
-					rubber > 0
+					#rubber > 0
 					tungsten > 0
 					steel > 0
 					chromium > 0
@@ -1138,7 +1201,7 @@ technologies = {
 				OR = {
 					oil > 8
 					aluminium > 8
-					rubber > 8
+					#rubber > 8
 					tungsten > 8
 					steel > 8
 					chromium > 8
@@ -1213,7 +1276,7 @@ technologies = {
 				OR = {
 					oil > 0
 					aluminium > 0
-					rubber > 0
+					#rubber > 0
 					tungsten > 0
 					steel > 0
 					chromium > 0
@@ -1225,7 +1288,7 @@ technologies = {
 				OR = {
 					oil > 8
 					aluminium > 8
-					rubber > 8
+					#rubber > 8
 					tungsten > 8
 					steel > 8
 					chromium > 8
@@ -1298,7 +1361,7 @@ technologies = {
 				OR = {
 					oil > 0
 					aluminium > 0
-					rubber > 0
+					#rubber > 0
 					tungsten > 0
 					steel > 0
 					chromium > 0
@@ -1310,7 +1373,7 @@ technologies = {
 				OR = {
 					oil > 8
 					aluminium > 8
-					rubber > 8
+					#rubber > 8
 					tungsten > 8
 					steel > 8
 					chromium > 8

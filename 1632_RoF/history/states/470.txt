@@ -1,12 +1,12 @@
 
-state={
-	id=470
-	name="STATE_470"
-	resources={
-		steel=2.000
+state = {
+	id = 470
+	name = "STATE_470"
+	resources = {
+		steel = 2.000
 	}
 
-	history={
+	history = {
 		owner = SWE
 		victory_points = {
 			83 3 
@@ -22,10 +22,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		83 308 496 567 592 3074 3152 3174 4640 6099 6178 6201 6381 6408 9079 9221 9485 11057 11127 11291 11426 11443 
 	}
-	manpower=593216
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 83216
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

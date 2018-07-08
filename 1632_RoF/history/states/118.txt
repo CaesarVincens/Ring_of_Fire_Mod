@@ -1,9 +1,9 @@
 
-state={
-	id=118
-	name="STATE_118"
+state = {
+	id = 118
+	name = "STATE_118"
 
-	history={
+	history = {
 		owner = C13
 		victory_points = {
 			7644 3 
@@ -19,10 +19,10 @@ state={
 
 	}
 
-	provinces={
+	provinces = {
 		1354 4623 7304 7361 7644 10244 
 	}
-	manpower=44400
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 44400
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

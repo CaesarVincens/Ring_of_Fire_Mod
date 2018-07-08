@@ -1,9 +1,9 @@
 
-state={
-	id=170
-	name="STATE_170"
+state = {
+	id = 170
+	name = "STATE_170"
 
-	history={
+	history = {
 		owner = HES
 		victory_points = {
 			564 8 
@@ -13,16 +13,44 @@ state={
 			industrial_complex = 2
 			arms_factory = 0
 			air_base = 0
+			564 = {
+				bunker = 2
+
+			}
+			3524 = {
+				bunker = 1
+
+			}
+			6549 = {
+				bunker = 1
+
+			}
+			9443 = {
+				bunker = 1
+
+			}
+			9524 = {
+				bunker = 1
+
+			}
+			9547 = {
+				bunker = 1
+
+			}
+			11431 = {
+				bunker = 1
+
+			}
 
 		}
 		add_core_of = HES
 
 	}
 
-	provinces={
+	provinces = {
 		564 3524 6549 9443 9524 9547 11431 11533 
 	}
-	manpower=445200
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 445200
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }
