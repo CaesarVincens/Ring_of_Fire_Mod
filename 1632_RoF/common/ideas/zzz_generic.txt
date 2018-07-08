@@ -108,7 +108,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = Hun_hungarian_monarchy_habsburg
+			picture = HUN_hungarian_monarchy_habsburg
 	
 			modifier = {
 				absolutist_drift = 0.15
@@ -438,6 +438,43 @@ ideas = {
 				foreign_subversive_activites = -0.75
 			}			
 		}
+
+		idea_irregular_forces = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				special_forces_cap = 0.25
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}			
+		}
+		
+		idea_conscripts = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_forced_conscription
+			modifier = {
+				conscription = 0.025
+				training_time_factor = 0.1
+			}
+		}
+
+		
 	}
 		
 	

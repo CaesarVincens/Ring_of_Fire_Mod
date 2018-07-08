@@ -89,3 +89,5 @@
  custom_diff_strong_spr:0 "Strengthen Spain"
  custom_diff_strong_tur:0 "Strengthen the Ottomans"
  custom_diff_strong_pol:0 "Strengthen Poland"
+ EFFECT_CHANGE_LAW_state_religion:0 "Change Religious Tolerance to '$NAME|Y$' which grants ($DESC$)."
+ EFFECT_CHANGE_LAW_conscription_system:0 "Change Army System to '$NAME|Y$' which grants ($DESC$)."

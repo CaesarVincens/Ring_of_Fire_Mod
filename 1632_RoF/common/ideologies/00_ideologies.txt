@@ -49,7 +49,7 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
-		can_be_boosted = no
+		can_collaborate = yes
 
 		ai_fascist = yes
 	}
@@ -88,6 +88,7 @@ ideologies = {
 		}
 		faction_modifiers = {
 		}
+		can_collaborate = yes
 		ai_democratic = yes
 	}
 	
@@ -135,6 +136,7 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
+		can_collaborate = yes
 		ai_communist = yes
 	}
 
@@ -175,6 +177,7 @@ ideologies = {
 		
 		faction_modifiers = {
 		}
+		can_collaborate = yes
 		ai_communist = yes
 	}
 

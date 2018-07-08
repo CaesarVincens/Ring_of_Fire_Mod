@@ -95,7 +95,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = die_amerikaner
 		completion_reward = {
-			add_ideas = GG_welcome_american_influence		
+			add_ideas = GG_welcome_american_influence
 		}
 		ai_will_do = {
 			factor = 1
@@ -138,92 +138,10 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = die_amerikaner
-
-	}
-	focus = {
-		id = representative_democracy_focus
-		icon = GFX_goal_generic_national_unity
-		cost = 10.00
-		prerequisite = {
-			focus = welcome_americans
-		}
-		mutually_exclusive = {
-			focus = committees_of_correspondence_gen_ger
-		}
-		x = 3
-		y = 2
-		relative_position_id = die_amerikaner
 		completion_reward = {
-			remove_ideas = GG_welcome_american_influence
-			add_ideas = GG_democracy_idea
+			add_ideas = GG_tyw_neutrality
+			set_country_flag = tyw_neutral
 		}
-	}
-	focus = {
-		id = guaranteed_freedoms
-		icon = GFX_goal_support_democracy
-		cost = 10.00
-		prerequisite = {
-			focus = representative_democracy_focus
-		}
-		x = 2
-		y = 4
-		relative_position_id = die_amerikaner
-
-	}
-	focus = {
-		id = committees_of_correspondence_gen_ger
-		icon = GFX_goal_support_communism
-		cost = 10.00
-		prerequisite = {
-			focus = welcome_americans
-		}
-		mutually_exclusive = {
-			focus = representative_democracy_focus
-		}
-		x = 5
-		y = 2
-		relative_position_id = die_amerikaner
-		completion_reward = {
-			remove_ideas = GG_welcome_american_influence
-			add_ideas = GG_radical_revolution
-		}
-
-	}
-	focus = {
-		id = open_society_focus
-		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10.00
-		prerequisite = {
-			focus = representative_democracy_focus
-			focus = committees_of_correspondence_gen_ger
-		}
-		x = 4
-		y = 3
-		relative_position_id = die_amerikaner
-
-	}
-	focus = {
-		id = volunteer_military_focus
-		icon = GFX_goal_tfv_can_compromise_with_quebec
-		cost = 10.00
-		prerequisite = {
-			focus = open_society_focus
-		}
-		x = 4
-		y = 4
-		relative_position_id = die_amerikaner
-
-	}
-	focus = {
-		id = revoke_nobility
-		icon = GFX_focus_rom_parties_end
-		cost = 10.00
-		prerequisite = {
-			focus = committees_of_correspondence_gen_ger
-		}
-		x = 6
-		y = 4
-		relative_position_id = die_amerikaner
 
 	}
 	focus = {
@@ -246,7 +164,294 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = die_amerikaner
+		completion_reward = {
+			SWE = {
+				country_event = { id = RoF_SWE.132 days = 1 }
+			}
+		}
 
+	}
+	focus = {
+		id = join_austria
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = shun_americans
+		}
+		mutually_exclusive = { focus = thirty_years_war_neutral }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = twy_ongoing.tt
+				SWE = { has_war_with = AUS }
+			}
+		}
+		bypass = {
+			is_in_faction_with = AUS
+		}
+		x = -1
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			AUS = {
+				country_event = { id = RoF_AUS.105 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = representative_democracy_focus
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = welcome_americans
+		}
+		mutually_exclusive = {
+			focus = committees_of_correspondence_gen_ger
+		}
+		x = 3
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			remove_ideas = GG_welcome_american_influence
+			add_ideas = GG_democracy_idea
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = guaranteed_freedoms
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = representative_democracy_focus
+		}
+		x = 2
+		y = 4
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			add_ideas = GG_bill_of_rights
+		}
+	}
+	focus = {
+		id = committees_of_correspondence_gen_ger
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = welcome_americans
+		}
+		mutually_exclusive = {
+			focus = representative_democracy_focus
+		}
+		x = 5
+		y = 2
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			remove_ideas = GG_welcome_american_influence
+			add_ideas = GG_radical_revolution
+		}
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	focus = {
+		id = open_society_focus
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = representative_democracy_focus
+			focus = committees_of_correspondence_gen_ger
+		}
+		x = 4
+		y = 3
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			add_ideas = GG_open_society
+			if = {
+				limit = {
+					OR = {
+						has_idea = persecute_minorities
+						has_idea = state_religion_law
+					}
+				}
+				add_ideas = secularism
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_idea = secularism
+						has_idea = freedom_of_religion
+					}
+				}
+				add_political_power = 100
+			}
+		}
+
+	}
+	focus = {
+		id = volunteer_military_focus
+		icon = GFX_goal_tfv_can_compromise_with_quebec
+		cost = 10.00
+		prerequisite = {
+			focus = open_society_focus
+		}
+		x = 4
+		y = 4
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			add_ideas = GG_volunteers
+			if = {
+				limit = {
+					NOT = { has_idea = volunteer_army }
+				}
+				add_ideas = volunteer_army
+			}
+			else_if = {
+				limit = {
+					has_idea = volunteer_army
+				}
+				add_political_power = 100
+			}
+		}
+
+	}
+	focus = {
+		id = revoke_nobility
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		prerequisite = {
+			focus = committees_of_correspondence_gen_ger
+		}
+		x = 6
+		y = 4
+		relative_position_id = die_amerikaner
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = abs_cons_under_half.tt
+				OR = {
+					AND = {
+						absolutist < 0.50
+						constitutionalist < 0.01
+					}
+					AND = {
+						absolutist < 0.45
+						constitutionalist < 0.05
+					}
+					AND = {
+						absolutist < 0.40
+						constitutionalist < 0.10
+					}
+					AND = {
+						absolutist < 0.35
+						constitutionalist < 0.15
+					}
+					AND = {
+						absolutist < 0.30
+						constitutionalist < 0.20
+					}
+					AND = {
+						absolutist < 0.25
+						constitutionalist < 0.25
+					}
+					AND = {
+						absolutist < 0.20
+						constitutionalist < 0.30
+					}
+					AND = {
+						absolutist < 0.15
+						constitutionalist < 0.35
+					}
+					AND = {
+						absolutist < 0.10
+						constitutionalist < 0.40
+					}
+					AND = {
+						absolutist < 0.05
+						constitutionalist < 0.45
+					}
+					AND = {
+						absolutist < 0.01
+						constitutionalist < 0.50
+					}
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						absolutist > 0.001
+						constitutionalist > 0.001
+					}
+				}
+				hidden_effect = {
+					set_temp_variable = {
+						var = ban_ideology_var
+						value = party_popularity@absolutist
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = -1
+					}
+					add_popularity = {
+						ideology = absolutist
+						popularity = ban_ideology_var
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = 0.5
+					}
+					set_temp_variable = { stab_hit_var = ban_ideology_var }
+				}
+				custom_effect_tooltip = ban_absolutist_party_tt
+				hidden_effect = {
+					set_temp_variable = {
+						var = ban_ideology_var
+						value = party_popularity@constitutionalist
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = -0.5
+					}
+					add_popularity = {
+						ideology = constitutionalist
+						popularity = ban_ideology_var
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = 0.5
+					}
+					add_to_temp_variable = { stab_hit_var = ban_ideology_var }
+				}
+				custom_effect_tooltip = revoke_nobility_ban_cons_tt
+				add_stability = stab_hit_var
+			}
+			else_if = {
+				limit = {
+					OR = {
+						absolutist < 0.001
+						constitutionalist < 0.001
+					}
+				}
+				add_political_power = 100
+			}
+		}
+
+	}
+	focus = {
+		id = promote_common_good
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = guaranteed_freedoms
+			focus = revoke_nobility
+		}
+		x = 4
+		y = 5
+		relative_position_id = die_amerikaner
+		completion_reward = {
+			add_ideas = GG_common_good
+		}
 	}
 	focus = {
 		id = centralize_power_gen_ger
@@ -295,28 +500,28 @@ focus_tree = {
 		x = -4
 		y = 3
 		relative_position_id = die_amerikaner
-
-	}
-	focus = {
-		id = join_austria
-		icon = GFX_goal_generic_defence
-		cost = 10.00
-		prerequisite = {
-			focus = shun_americans
-		}
-		mutually_exclusive = { focus = thirty_years_war_neutral }
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = twy_ongoing.tt
-				SWE = { has_war_with = AUS }
+		completion_reward = {
+			add_ideas = GG_natural_order
+			if = {
+				limit = {
+					OR = {
+						has_idea = secularism
+						has_idea = freedom_of_religion
+						has_idea = atheism
+					}
+				}
+				add_ideas = state_religion_law
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_idea = persecute_minorities
+						has_idea = state_religion_law
+					}
+				}
+				add_political_power = 100
 			}
 		}
-		bypass = {
-			is_in_faction_with = AUS
-		}
-		x = -1
-		y = 2
-		relative_position_id = die_amerikaner
 
 	}
 	focus = {
@@ -329,7 +534,21 @@ focus_tree = {
 		x = -4
 		y = 4
 		relative_position_id = die_amerikaner
-
+		completion_reward = {
+			add_ideas = GG_conscripts
+			if = {
+				limit = {
+					NOT = { has_idea = drafted_army }
+				}
+				add_ideas = drafted_army
+			}
+			else_if = {
+				limit = {
+					has_idea = drafted_army
+				}
+				add_political_power = 100
+			}
+		}
 	}
 	focus = {
 		id = constraints_on_power
@@ -341,7 +560,9 @@ focus_tree = {
 		x = -2
 		y = 4
 		relative_position_id = die_amerikaner
-
+		completion_reward = {
+			add_ideas = GG_constitution
+		}
 	}
 	focus = {
 		id = demand_obediance
@@ -353,6 +574,117 @@ focus_tree = {
 		x = -6
 		y = 4
 		relative_position_id = die_amerikaner
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = rad_lib_under_half.tt
+				OR = {
+					AND = {
+						radical < 0.50
+						liberal < 0.01
+					}
+					AND = {
+						radical < 0.45
+						liberal < 0.05
+					}
+					AND = {
+						radical < 0.40
+						liberal < 0.10
+					}
+					AND = {
+						radical < 0.35
+						liberal < 0.15
+					}
+					AND = {
+						radical < 0.30
+						liberal < 0.20
+					}
+					AND = {
+						radical < 0.25
+						liberal < 0.25
+					}
+					AND = {
+						radical < 0.20
+						liberal < 0.30
+					}
+					AND = {
+						radical < 0.15
+						liberal < 0.35
+					}
+					AND = {
+						radical < 0.10
+						liberal < 0.40
+					}
+					AND = {
+						radical < 0.05
+						liberal < 0.45
+					}
+					AND = {
+						radical < 0.01
+						liberal < 0.50
+					}
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						radical > 0.001
+						liberal > 0.001
+					}
+				}
+				hidden_effect = {
+					set_temp_variable = {
+						var = ban_ideology_var
+						value = party_popularity@radical
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = -1
+					}
+					add_popularity = {
+						ideology = radical
+						popularity = ban_ideology_var
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = 0.5
+					}
+					set_temp_variable = { stab_hit_var = ban_ideology_var }
+				}
+				custom_effect_tooltip = ban_radical_party_tt
+				hidden_effect = {
+					set_temp_variable = {
+						var = ban_ideology_var
+						value = party_popularity@liberal
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = -0.5
+					}
+					add_popularity = {
+						ideology = liberal
+						popularity = ban_ideology_var
+					}
+					multiply_temp_variable = {
+						var = ban_ideology_var
+						value = 0.5
+					}
+					add_to_temp_variable = { stab_hit_var = ban_ideology_var }
+				}
+				custom_effect_tooltip = demand_obediance_ban_lib_tt
+				add_stability = stab_hit_var
+			}
+			else_if = {
+				limit = {
+					OR = {
+						radical < 0.001
+						liberal < 0.001
+					}
+				}
+				add_political_power = 100
+			}
+		}
 
 	}
 	focus = {
@@ -366,19 +698,8 @@ focus_tree = {
 		x = -4
 		y = 5
 		relative_position_id = die_amerikaner
-
-	}
-	focus = {
-		id = promote_common_good
-		icon = GFX_goal_generic_national_unity
-		cost = 10.00
-		prerequisite = {
-			focus = guaranteed_freedoms
-			focus = revoke_nobility
+		completion_reward = {
+			add_ideas = GG_noble_privileges
 		}
-		x = 4
-		y = 5
-		relative_position_id = die_amerikaner
-
 	}
 }

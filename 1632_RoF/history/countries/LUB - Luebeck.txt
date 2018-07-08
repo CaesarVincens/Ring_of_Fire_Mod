@@ -50,3 +50,13 @@ create_country_leader = {
     traits = {
     }
 }
+
+create_country_leader = {
+    name = "Stadtrat"
+    desc = "POLITICS_DIETER_GROENER_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Lubeck_City_Council.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_republic
+    traits = {
+    }
+}

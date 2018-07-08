@@ -2,6 +2,7 @@
 #Anger 10-5-0-0-5-10
 RoF_CoC_decisions = {
 	NUS_test_decision = {
+		allowed = { always = no }
 		visible = {
 			always = no
 		}

@@ -153,6 +153,44 @@ country_event = {
 	}
 }
 
+#FROM asks to join
+country_event = {
+	id = RoF_AUS.105
+	title = RoF_AUS.105.t
+	picture = GFX_report_event_scottish_mercenaries
+	desc = RoF_AUS.105.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_AUS.105.a
+		effect_tooltip = {
+			add_to_faction = FROM
+			FROM = {
+				add_to_war = {
+					targeted_alliance = AUS
+					enemy = SWE
+					hostility_reason = asked_to_join
+				}
+			}
+		}
+		FROM = {
+			set_country_flag = AUS_accepted
+			country_event = { id = RoF_German.102 hours = 12 }
+		}
+	}
+	option = {
+		name = RoF_AUS.105.b
+		FROM = {
+			set_country_flag = AUS_rejected
+			country_event = { id = RoF_German.102 hours = 12 }
+		}
+	}
+}
 #Rain am Lech
 country_event = {
 	id = RoF_AUS.110
@@ -270,6 +308,12 @@ country_event = {
 			}
 			add_core_of = AUS
 			set_state_flag = hun_core
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			dismantle_faction = yes
 		}
 		ai_chance = {
 			factor = 100

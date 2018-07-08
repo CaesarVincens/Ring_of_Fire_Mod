@@ -1018,3 +1018,252 @@ country_event = {
 
 }
 
+#Embassy events: ENG-SCO
+#embassy in England, Cromwell arrested - canon
+country_event = {
+	id = RoF_USE.210
+	title = RoF_USE.210.t
+	desc = RoF_USE.210.d
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		ENG = { has_completed_focus = ENG_arrest_cromwell }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.210.a
+		set_country_flag = embassy_in_ENG
+	}
+
+}
+
+#embassy in England, Cromwell hidden
+country_event = {
+	id = RoF_USE.211
+	title = RoF_USE.211.t
+	desc = RoF_USE.211.d
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		ENG = { has_completed_focus = ENG_hide_cromwell }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.211.a
+		set_country_flag = embassy_in_ENG
+	}
+
+}
+
+#embassy held in Tower
+country_event = {
+	id = RoF_USE.212
+	title = RoF_USE.212.t
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_arrest_cromwell } }
+		text = RoF_USE.212.da
+	}
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_hide_cromwell } }
+		text = RoF_USE.212.db
+	}
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		has_country_flag = embassy_in_ENG
+		FRA = { has_completed_focus = FRA_dunkirk }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.212.a
+		hidden_effect = {
+			activate_targeted_decision = { target = ENG decision = NUS_break_out_embassy_ENG }
+		}
+	}
+
+}
+
+#embassy broken out of tower
+country_event = {
+	id = RoF_USE.213
+	title = RoF_USE.213.t
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_arrest_cromwell } }
+		text = RoF_USE.213.da
+	}
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_hide_cromwell } }
+		text = RoF_USE.213.db
+	}
+	picture = GFX_report_event_eng_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		has_country_flag = embassy_in_ENG
+		has_country_flag = NUS_embassy_break_out
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.213.a
+		set_country_flag = NUS_embassy_SCO
+	}
+
+}
+
+#embassy to SCO
+country_event = {
+	id = RoF_USE.214
+	title = RoF_USE.214.t
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_arrest_cromwell } }
+		text = RoF_USE.214.da
+	}
+	desc = {
+		trigger = { ENG = { has_completed_focus = ENG_hide_cromwell } }
+		text = RoF_USE.214.db
+	}
+	picture = GFX_report_event_sco_flag
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_ENG
+		has_country_flag = NUS_embassy_SCO
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.214.a
+	}
+
+}
+
+#Embassy events: VEN-VAT
+#embassy in Venice
+country_event = {
+	id = RoF_USE.220
+	title = RoF_USE.220.t
+	desc = RoF_USE.220.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.220.a
+		set_country_flag = embassy_in_VEN
+	}
+
+}
+
+#embassy in Venice
+country_event = {
+	id = RoF_USE.221
+	title = RoF_USE.221.t
+	desc = RoF_USE.221.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+		has_country_flag = embassy_in_VEN
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = RoF_USE.221.a
+		set_country_flag = embassy_to_VAT
+	}
+
+}
+
+#embassy in Rome
+country_event = {
+	id = RoF_USE.222
+	title = RoF_USE.222.t
+	desc = RoF_USE.222.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+		has_country_flag = embassy_to_VAT
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.222.a
+		set_country_flag = embassy_in_VAT
+	}
+
+}
+
+#embassy saves Pope
+country_event = {
+	id = RoF_USE.223
+	title = RoF_USE.223.t
+	desc = RoF_USE.223.d
+	picture = GFX_report_event_scottish_mercenaries
+
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_embassy_VEN
+		has_country_flag = embassy_in_VAT
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.223.a
+	}
+
+}
+

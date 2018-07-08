@@ -12,12 +12,17 @@ ideas = {
 					has_country_flag = religious_enemy
 					has_government = absolutist
 				}
+				if = {
+					limit = { has_completed_focus = welcome_americans }
+					NOT = { has_idea = GG_open_society }
+				}
 			}
 			modifier = {
 				conscription_factor = -0.05
 				enemy_partisan_effect = 0.1
 				political_power_gain = 0.1
 #				stability_weekly = 0.005
+				war_support_factor = 0.1
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -30,9 +35,13 @@ ideas = {
 			#level = 4
 			removal_cost = -1
 			available = {
+				if = {
+					limit = { has_completed_focus = welcome_americans }
+					NOT = { has_idea = GG_open_society }
+				}
 			}
 			modifier = {
-				stability_weekly = 0.001
+				stability_factor = 0.1
 			}
 			default = yes
 			cancel_if_invalid = no
@@ -57,9 +66,14 @@ ideas = {
 			#level = 3
 			removal_cost = -1
 			available = {
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_natural_order }
+				}
 			}
 			modifier = {
-
+				conscription_factor = 0.05
+				enemy_partisan_effect = -0.1
 			}
 			cancel_if_invalid = no
 			default = yes
@@ -77,12 +91,15 @@ ideas = {
 			#level = 2
 			removal_cost = -1
 			available = {
-
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_natural_order }
+				}
 			}
 			cancel_if_invalid = no
 			modifier = {
-				conscription_factor = 0.05
-				enemy_partisan_effect = -0.1
+				conscription_factor = 0.1
+				enemy_partisan_effect = -0.2
 				political_power_gain = -0.1
 			}
 			ai_will_do = {
@@ -100,16 +117,25 @@ ideas = {
 			removal_cost = -1
 			available = {
 				has_government = radical
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_natural_order }
+				}
 			}
 			cancel_if_invalid = no
 			modifier = {
-				stability_weekly = -0.001
+				stability_factor = -0.1
+				political_power_gain = 0.25
 			}
 			ai_will_do = {
 				factor = 1
 				modifier = {
 					factor = 0
 					NOT = { has_government = radical }
+				}
+				modifier = {
+					factor = 2
+					has_government = radical
 				}
 			}
 		}
@@ -119,15 +145,43 @@ ideas = {
 		law = yes
 		mercenary_army = {
 			cost = 100
+			level = 4
 			removal_cost = -1
 			available = {
+				if = {
+					limit = { has_completed_focus = welcome_americans }
+					NOT = { has_idea = GG_volunteers }
+				}
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_conscripts }
+				}
 			}
 			cancel_if_invalid = no
 			modifier = {
 				conscription = 0.01
-				conscription_factor = -0.2
 				enemy_partisan_effect = 0.1
-				training_time_army_factor = 0.1
+				training_time_army_factor = -0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		volunteer_army = {
+			cost = 100
+			level = 3
+			removal_cost = -1
+			available = {
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_conscripts }
+				}			
+			}
+			cancel_if_invalid = no
+			modifier = {
+				conscription = 0.02
+				experience_gain_army_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -135,41 +189,37 @@ ideas = {
 		}
 		levy_army = {
 			cost = 100
+			level = 2
 			removal_cost = -1
 			available = {
-			
+				if = {
+					limit = { has_completed_focus = welcome_americans }
+					NOT = { has_idea = GG_volunteers }
+				}
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_conscripts }
+				}
 			}
 			cancel_if_invalid = no
 			modifier = {
-				conscription = 0.015
-				conscription_factor = 0.1			
+				conscription = 0.03
+				conscription_factor = 0.2			
 			}
 			ai_will_do = {
 				factor = 1
 			}
 			default = yes
 		}
-		volunteer_army = {
-			cost = 100
-			removal_cost = -1
-			available = {
-			
-			}
-			cancel_if_invalid = no
-			modifier = {
-				conscription = 0.025
-				experience_gain_army_factor = 0.1
-				army_core_defence_factor = 0.1
-				training_time_army_factor = -0.1
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		drafted_army = {
 			cost = 100
+			level = 1
 			removal_cost = -1
 			available = {
+				if = {
+					limit = { has_completed_focus = welcome_americans }
+					NOT = { has_idea = GG_volunteers }
+				}
 				OR = {
 					has_government = absolutist
 					has_war = yes
@@ -179,9 +229,14 @@ ideas = {
 			modifier = {
 				conscription = 0.05
 				conscription_factor = 0.05
+				training_time_army_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0.5
+					has_war = no
+				}
 			}
 		}
 

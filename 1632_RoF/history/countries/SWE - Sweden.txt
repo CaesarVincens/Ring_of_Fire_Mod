@@ -75,6 +75,7 @@ add_to_faction = POM
 #add_to_faction = SAX
 #add_to_faction = BRS
 add_to_faction = HES
+give_military_access = SXW
 
 add_ideas = {
 	military_focus_eco

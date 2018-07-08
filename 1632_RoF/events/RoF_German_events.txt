@@ -76,6 +76,76 @@ country_event = {
 	
 }
 
+country_event = {
+	id = RoF_German.101
+	title = RoF_German.101.t
+	picture = GFX_report_event_swe_flag
+	desc = {
+		trigger = {
+			has_country_flag = SWE_accepted
+		}
+		text = RoF_German.101.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = SWE_rejected
+		}
+		text = RoF_German.101.db
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_German.101.a
+		trigger = { has_country_flag = SWE_accepted }
+		SWE = { add_to_faction = ROOT }
+		add_to_war = {
+			targeted_alliance = SWE
+			enemy = AUS
+			hostility_reason = asked_to_join
+		}
+	}
+	option = {
+		name = RoF_German.101.b
+		trigger = { has_country_flag = SWE_rejected }
+	}
+}
+
+country_event = {
+	id = RoF_German.102
+	title = RoF_German.102.t
+	picture = GFX_report_event_aus_flag
+	desc = {
+		trigger = {
+			has_country_flag = AUS_accepted
+		}
+		text = RoF_German.102.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = SWE_rejected
+		}
+		text = RoF_German.102.db
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_German.102.a
+		trigger = { has_country_flag = AUS_accepted }
+		AUS = { add_to_faction = ROOT }
+		add_to_war = {
+			targeted_alliance = AUS
+			enemy = SWE
+			hostility_reason = asked_to_join
+		}
+	}
+	option = {
+		name = RoF_German.102.b
+		trigger = { has_country_flag = AUS_rejected }
+	}
+}
+
 #brandenburg joins swe
 country_event = {
 	id = RoF_German.110
@@ -175,7 +245,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.121.a
-			SWE = { add_to_faction = MKL }
+		SWE = { add_to_faction = MKL }
 		ai_chance = { base = 100 }
 	}
 }
@@ -412,6 +482,58 @@ country_event = {
 	#No Help
 	option = {
 		name = RoF_German.151.b
+		
+		ai_chance = { base = 25 }
+	}
+	
+}
+
+#test
+country_event = {
+	id = RoF_German.1000
+	title = "Test"
+	picture = GFX_report_event_bra_flag
+	desc = "Test"
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#Help
+	option = {
+		name = "test"
+		set_politics = {
+
+			parties = {
+				absolutist = {
+					#popularity = 0
+					banned = yes
+				}
+				constitutionalist = {
+					#popularity = 88
+					banned = no
+				}
+				liberal = {
+					#popularity = 9
+					banned = no
+				}
+				neutrality = {
+					#popularity = 3
+					banned = no
+				}
+			}
+			
+			ruling_party = constitutionalist
+			#last_election = "1631.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+	}
+	#No Help
+	option = {
+		name = "test"
 		
 		ai_chance = { base = 25 }
 	}

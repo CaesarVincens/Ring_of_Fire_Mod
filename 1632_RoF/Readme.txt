@@ -12,19 +12,22 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 Currently in Early Alpha; expect to find bugs and oddities
 
-Alpha 0.4.0 - North Sea Empires - Jun. , 2018
+Alpha 0.4.0 - North Sea Empires - Jul. 8, 2018
 Updated compatibility for HoI patch 1.5.4
-updated to use replace_path to remove null files
+updated to use replace_path to remove most null files
 Reformatted some events and focuses as decisions
 New decisions related to Committees of Correspondence
 New Naval and Armor units (still WIP)
 New industrial and other tech, including new buildings for Steel production
 Replaced Rubber with Combustion Engines (strategic resource only available from building)
 Added New focus trees for SWE, and ENG (ENG tree thanks to forum user King of Nords)
+Finished up Generic German focus tree (shared tree for most German tags)
 Added focuses to NUS-USE focus tree
 Many new events including the formation of Burgundy and English Civil War
 Refactored starting situation for SWE-AUS war, balancing still in progress
 More portraits, Europe mostly complete
+New government laws for economy, religion, and manpower; balancing in progress
+Balance very much in progress for most aspects.
 
 Alpha 0.3.0 - Ostend League - Nov. 25, 2017
 Beginning of Tech Overhaul; new infantry and artillery techs

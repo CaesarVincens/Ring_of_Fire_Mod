@@ -42,6 +42,14 @@ country_event = {
 					set_state_flag = UPS_original_state
 				}
 			}
+			if = {
+				limit = {
+					SXW = { is_ai = no }
+				}
+				SXW = {
+					remove_ideas = SXW_support_SWE
+				}
+			}
 		}
 	}
 	option = {

@@ -62,7 +62,7 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_FRA
 			custom_effect_tooltip = NUS_embassy_FRA.tt
 		}
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			base = 10
 		}		
@@ -88,7 +88,26 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_ENG
 			custom_effect_tooltip = NUS_embassy_ENG.tt
 		}
-		cost = 50
+		cost = 25
+		ai_will_do = {
+			base = 10
+		}		
+	}
+	NUS_break_out_embassy_ENG = {
+		fire_only_once = yes
+		allowed = { always = no }
+		available = {
+			OR = {
+				has_completed_focus = NUS_force_hamburg
+				ENG = { has_completed_focus = ENG_move_to_oxford }
+				date > 1634.4.1
+			}
+		}
+		complete_effect = {
+			set_country_flag = NUS_embassy_break_out
+			custom_effect_tooltip = NUS_embassy_break_out.tt
+		}
+		cost = 25
 		ai_will_do = {
 			base = 10
 		}		
@@ -114,7 +133,7 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_VEN
 			custom_effect_tooltip = NUS_embassy_VEN.tt
 		}
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			base = 10
 		}		
@@ -141,7 +160,7 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_MUG
 			custom_effect_tooltip = NUS_embassy_MUG.tt
 		}
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			base = 10
 		}		

@@ -59,3 +59,5 @@
  steam_frigates_desc:0 "Steam Frigates occupy a similar role as sailing frigates. Lighter ships which are less expensive to operate and build than their larger cousin the battleship, but still formidible in their own right."
  timberclad_desc:0 "Timberclad refers to use of extra thick wooden armor reinforcing the hulls of these ships. While not as much protection as iron or steel, it does a sufficient job against most weapons. Without sails, these ships are generally limited to river and coastal work."
  ironclad_desc:0 "Ironclad ships have heavy armor protecting their freeboard, the hull above water. The use of steam or internal combustion to drive them means not depending on wind for maneuverability, but does limit their effective range."
+ tercio_formation_focus_tech:0 "Tercio Formations"
+ swedish_line_tech:0 "Swedish Line Tactics"

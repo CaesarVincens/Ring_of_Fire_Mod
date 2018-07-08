@@ -61,3 +61,12 @@ create_country_leader = {
     traits = {
     }
 }
+create_country_leader = {
+    name = "Bogislaw XIV Griffins"
+    desc = "POLITICS_JOACHIM_KROHN_DESC"
+    picture = "gfx/leaders/SWE/Portrait_Pomerania_Bogislaw_XIV.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}

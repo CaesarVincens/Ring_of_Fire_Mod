@@ -39,7 +39,13 @@ set_politics = {
 
 set_country_flag = german_tag_flag
 add_ideas = {
+	SXW_support_SWE
 }
+
+give_military_access = SWE
+add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+
 set_stability = 0.5
 create_country_leader = {
     name = "Wilhelm Wettin"

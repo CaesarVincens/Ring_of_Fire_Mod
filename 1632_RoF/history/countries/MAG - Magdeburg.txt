@@ -51,3 +51,12 @@ create_country_leader = {
     traits = {
     }
 }
+create_country_leader = {
+    name = "Christian William von Hohenzollern"
+    desc = "POLITICS_ADELBERT_VON MANTEUFFEL_DESC"
+    picture = "gfx/leaders/MAG/Portrait_Magdeburg_Christian_William.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}

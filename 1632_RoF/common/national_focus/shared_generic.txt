@@ -708,6 +708,12 @@
 			set_technology = {
 				tercio_formation_focus_tech = 1
 			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 
 	}
@@ -745,7 +751,7 @@
 		y = 3
 		relative_position_id = army_drilling_gen
 		completion_reward = {
-		
+			add_ideas = idea_conscripts
 		}
 
 	}
@@ -767,6 +773,12 @@
 			set_technology = {
 				swedish_line_tech = 1
 			}		
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 
 	}
@@ -813,7 +825,12 @@
 				uses = 1
 				category = land_doctrine
 			}
-		
+			add_tech_bonus = {
+				name = firearm_bonus
+				bonus = 0.5
+				uses = 1
+				category = firearms_weapons
+			}
 		}
 
 	}
@@ -829,7 +846,14 @@
 		y = 1
 		relative_position_id = army_drilling_gen
 		completion_reward = {
-		
+			add_ideas = idea_irregular_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				category = mountaineers_tech
+				category = marine_tech
+			}
 		}
 
 	}
