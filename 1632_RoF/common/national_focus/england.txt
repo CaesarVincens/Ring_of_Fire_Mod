@@ -1418,7 +1418,19 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = RoF_ENG.131 days = 1 }
 			add_political_power = 50
-			add_ideas = ENG_thomas_wentworth
+			if = {
+				limit = {
+					amount_taken_ideas = {
+						amount < 3
+						slots = { political_advisor }
+					}
+				}
+				custom_effect_tooltip = ENG_thomas_wentworth.tt
+				hidden_effect = {
+					add_ideas = ENG_thomas_wentworth
+				}
+			}
+
 
 		}
 
@@ -1502,7 +1514,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_constitutional_monarchy
 		}
-		mutually_exclusive = { focus = ENG_prince_rupert focus = ENG_princess_elizabeth }
+		#mutually_exclusive = { focus = ENG_prince_rupert focus = ENG_princess_elizabeth }
 		x = 2
 		y = 7
 		relative_position_id = ENG_collect_tarriffs
@@ -1511,6 +1523,11 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = ENG_civil_war_done
+			custom_trigger_tooltip = {
+				tooltip = ENG_queen_mary_2
+				NOT = { has_country_flag = ENG_queen_elizabeth_2 }
+				NOT = { has_country_flag = ENG_king_rupert }
+			}
 		}
 		bypass = {
 			has_country_flag = ENG_queen_mary_2
@@ -1529,7 +1546,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_constitutional_monarchy
 		}
-		mutually_exclusive = { focus = ENG_the_regency focus = ENG_prince_rupert }
+		#mutually_exclusive = { focus = ENG_the_regency focus = ENG_prince_rupert }
 		x = 4
 		y = 7
 		relative_position_id = ENG_collect_tarriffs
@@ -1538,6 +1555,11 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = ENG_civil_war_done
+			custom_trigger_tooltip = {
+				tooltip = ENG_queen_elizabeth_2
+				NOT = { has_country_flag = ENG_queen_mary_2 }
+				NOT = { has_country_flag = ENG_king_rupert }
+			}
 		}
 		bypass = {
 			has_country_flag = ENG_queen_elizabeth_2
@@ -1558,7 +1580,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_constitutional_monarchy
 		}
-		mutually_exclusive = { focus = ENG_the_regency focus = ENG_princess_elizabeth }
+		#mutually_exclusive = { focus = ENG_the_regency focus = ENG_princess_elizabeth }
 		x = 0
 		y = 7
 		relative_position_id = ENG_collect_tarriffs
@@ -1567,6 +1589,11 @@ focus_tree = {
 		}
 		available = {
 			has_global_flag = ENG_civil_war_done
+			custom_trigger_tooltip = {
+				tooltip = ENG_king_rupert
+				NOT = { has_country_flag = ENG_queen_mary_2 }
+				NOT = { has_country_flag = ENG_queen_elizabeth_2 }
+			}
 		}
 		bypass = {
 			has_country_flag = ENG_king_rupert
@@ -1616,6 +1643,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 2
+				has_completed_focus = ENG_prince_rupert
+			}
 		}
 		#available_if_capitulated = yes
 
@@ -1656,6 +1687,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 2
+				has_completed_focus = ENG_the_regency
+			}
 		}
 		#available_if_capitulated = yes
 
@@ -1789,15 +1824,18 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = ENG_thomas_wentworth
+			custom_effect_tooltip = ENG_boyle.tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = ENG_thomas_wentworth
+					}
+					remove_ideas = ENG_thomas_wentworth
+					add_ideas = ENG_richard_boyle
 				}
-				remove_ideas = ENG_thomas_wentworth
-				add_ideas = ENG_richard_boyle
-			}
-			else = {
-				add_ideas = ENG_richard_boyle
+				else = {
+					add_ideas = ENG_richard_boyle
+				}
 			}
 			if = {
 				limit = {
@@ -1878,10 +1916,7 @@ focus_tree = {
 		y = 9
 		relative_position_id = ENG_collect_tarriffs
 		available = {
-			if = {
-				limit = { NOT = { has_completed_focus = ENG_hide_cromwell } }
-				has_country_flag = ENG_disolved_SCO_parliament
-			}
+			has_country_flag = ENG_disolved_SCO_parliament
 		}
 		ai_will_do = {
 			factor = 10

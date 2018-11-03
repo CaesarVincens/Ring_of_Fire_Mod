@@ -1,5 +1,87 @@
 ideas = {
+	country = {
+		RUS_patriarch_filaret = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.25
+			}
+			removal_cost = -1
+			picture = RUS_filaret
+		}
+		RUS_up_timer_advisor = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_time_factor = -0.05
+				liberal_drift = 0.005
+			}
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		RUS_eastern_serfdom_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				partisan_effect = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				consumer_goods_factor = 0.2
+				global_building_slots_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		RUS_eastern_serfdom_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.15
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				partisan_effect = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				consumer_goods_factor = 0.15
+				global_building_slots_factor = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+	}
+	
 	political_advisor = {
+		RUS_filaret = {
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				filaret_trait
+			}
+			picture = filaret_pic
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		SOV_absolutist_advisor = {
 			allowed = {
 				always = no
@@ -164,6 +246,22 @@ ideas = {
 		}
 	}
 	industrial_concern = {
+		RUS_gorchakov_dacha = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = RUS_establish_dacha
+			}
+			cost = 100
+			removal_cost = 10
+			research_bonus = {
+				industry = 0.10
+				electronics = 0.05
+			}
+			traits = { industrial_concern }
+		}
 		SOV_industrial_concern = {
 			
 			picture = generic_industrial_concern_1
@@ -199,6 +297,22 @@ ideas = {
 	}
 	materiel_manufacturer = {
 		designer = yes
+		RUS_gun_shop = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = RUS_establish_gun_shop
+			}
+			cost = 100
+			removal_cost = 10
+			
+			research_bonus = {
+				firearms_weapons = 0.10
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
 		SOV_motorized_equipment_manufacturer = {
 			
 			picture = generic_motorized_equipment_manufacturer_3
@@ -227,7 +341,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				firearms_weapons = 0.10
 			}
 			
 			traits = { infantry_equipment_manufacturer }

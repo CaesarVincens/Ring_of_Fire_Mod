@@ -7,11 +7,11 @@ AUH = {
 	color = rgb { 236 215 215 }
 	color_ui = rgb { 236 215 215 }
 }
-NFR = {
+New_France = {
 	color = rgb { 90 110 230 }
 	color_ui = rgb { 90 110 230 }
 }
-NEN = {
+New_England = {
 	color = rgb { 225 90 80 }
 	color_ui = rgb { 225 90 80 }
 }
@@ -22,4 +22,8 @@ ENG_civil_war = {
 SCO_civil_war = {
 	color = rgb { 225 10 0 }
 	color_ui = rgb { 225 10 0 }
+}
+United_Netherlands = {
+	color = rgb { 255 108 27 }
+	color_ui = rgb { 255 108 27 }
 }

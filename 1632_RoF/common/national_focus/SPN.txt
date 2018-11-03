@@ -172,6 +172,7 @@ focus_tree = {
 			UPS = { is_subject_of = SPN }
 		}
 		completion_reward = {
+			set_cosmetic_tag = United_Netherlands
 			hidden_effect = { set_country_flag = take_UPS }
 			annex_country = { target = UPS transfer_troops = yes }
 		}

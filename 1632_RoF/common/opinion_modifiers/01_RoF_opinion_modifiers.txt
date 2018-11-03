@@ -3,6 +3,12 @@ opinion_modifiers = {
 	SWE_tyw_support = {
 		value = 50
 	}
+	tyw_enemies = {
+		value = -200
+	}
+	tyw_allies = {
+		value = 50
+	}
 	rejected_USE = {
 		value = -50
 	}

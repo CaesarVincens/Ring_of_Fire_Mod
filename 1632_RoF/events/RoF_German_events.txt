@@ -99,6 +99,10 @@ country_event = {
 		name = RoF_German.101.a
 		trigger = { has_country_flag = SWE_accepted }
 		SWE = { add_to_faction = ROOT }
+		add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		add_opinion_modifier = { target = SWE modifier = tyw_allies }
+		reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 		add_to_war = {
 			targeted_alliance = SWE
 			enemy = AUS
@@ -134,6 +138,10 @@ country_event = {
 		name = RoF_German.102.a
 		trigger = { has_country_flag = AUS_accepted }
 		AUS = { add_to_faction = ROOT }
+		add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+		reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }
 		add_to_war = {
 			targeted_alliance = AUS
 			enemy = SWE
@@ -164,6 +172,10 @@ country_event = {
 		SWE = { country_event = { id = RoF_SWE.130 hours = 12 } }
 		effect_tooltip = {
 			SWE = { add_to_faction = BRA }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			add_to_war = {
 				targeted_alliance = SWE
 				enemy = AUS
@@ -245,6 +257,10 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.121.a
+		add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		add_opinion_modifier = { target = SWE modifier = tyw_allies }
+		reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 		SWE = { add_to_faction = MKL }
 		ai_chance = { base = 100 }
 	}
@@ -268,6 +284,10 @@ country_event = {
 		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
 		effect_tooltip = {
 			SWE = { add_to_faction = SAX }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			add_to_war = {
 				targeted_alliance = SWE
 				enemy = AUS
@@ -310,6 +330,10 @@ country_event = {
 		SWE = { country_event = { id = RoF_SWE.148 hours = 12 } }
 		effect_tooltip = {
 			SWE = { add_to_faction = ROOT }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			add_to_war = {
 				targeted_alliance = SWE
 				enemy = AUS
@@ -395,6 +419,10 @@ country_event = {
 		SWE = { country_event = { id = RoF_SWE.148 hours = 12 } }
 		effect_tooltip = {
 			SWE = { add_to_faction = ROOT }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			add_to_war = {
 				targeted_alliance = SWE
 				enemy = AUS

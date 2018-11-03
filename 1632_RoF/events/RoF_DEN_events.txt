@@ -213,7 +213,7 @@ country_event = {
 				}
 			}
 			set_politics = { ruling_party = constitutionalist }
-			FRA = { remove_from_faction = DEN }
+			#FRA = { remove_from_faction = DEN }
 			#white_peace = NUS
 			#NUS = { white_peace = DEN }
 		}

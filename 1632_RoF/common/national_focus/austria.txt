@@ -1,0 +1,42 @@
+focus_tree = {
+	id = austria_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = AUS
+		}
+		modifier = {
+			add = 0
+			original_tag = AUS
+		}
+	}
+	default = no
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research_gen
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus_gen
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling_gen
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	shared_focus = industrial_advances_gen
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	
+	#prosecute the war against Sweden 1631-1634
+	#july 33 Wallenstein takes Bohemia
+	#september 34 FIII ascends to throne
+}

@@ -165,6 +165,32 @@ NUS_major_decisions = {
 			base = 10
 		}		
 	}
+	NUS_negotiate_for_Harlingen = {
+		fire_only_once = yes
+		visible = {
+			has_global_flag = congress_of_copenhagen_begins
+		}
+		target_trigger = {
+			FROM = {
+				owns_state = 657
+			}
+		}
+		highlight_states = { state = 657 }
+		available = {
+			657 = {
+				OWNER = {
+					NOT = { has_war_with = NUS }
+				}
+			}
+		}
+		complete_effect = {
+			transfer_state = 657
+		}
+		cost = 50
+		ai_will_do = {
+			base = 10
+		}
+	}
 	
 }
 

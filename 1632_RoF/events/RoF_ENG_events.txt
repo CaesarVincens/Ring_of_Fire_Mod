@@ -152,7 +152,7 @@ country_event = {
 
 	option = {
 		name = RoF_ENG.130.a
-		custom_effect_tooltip = ENG_change_history.tt
+		#custom_effect_tooltip = ENG_change_history.tt
 		set_country_flag = ENG_change_history
 		ai_chance = {
 			factor = 10
@@ -160,7 +160,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_ENG.130.b
-		custom_effect_tooltip = ENG_go_with_history.tt
+		#custom_effect_tooltip = ENG_go_with_history.tt
 		set_country_flag = ENG_go_with_history
 		ai_chance = {
 			factor = 1

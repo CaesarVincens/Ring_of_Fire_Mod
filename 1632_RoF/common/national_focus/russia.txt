@@ -1,0 +1,190 @@
+focus_tree = {
+	id = france_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+		modifier = {
+			add = 10
+			original_tag = SOV
+		}
+	}
+	default = no
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research_gen
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus_gen
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling_gen
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	shared_focus = industrial_advances_gen
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	
+	#oct 35 coup
+	focus = {
+		id = RUS_investigate_grantville
+		icon = GFX_goal_generic_position_armies
+		x = 22
+		y = 0
+		cost = 20
+		completion_reward = {
+			add_political_power = 120
+			
+		}
+	}
+	
+	focus = {
+		id = RUS_recruit_up_timer
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = RUS_investigate_grantville }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_investigate_grantville
+		completion_reward = {
+			add_ideas = RUS_up_timer_advisor
+		}
+	}
+	
+	focus = {
+		id = RUS_establish_dacha
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_recruit_up_timer }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = RUS_investigate_grantville
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = RUS_establish_gun_shop
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_establish_dacha }
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = RUS_establish_dacha
+		completion_reward = {
+			add_tech_bonus = {
+				name = ak1_tech_bonus
+				bonus = 0.5
+				uses = 1
+				technology = musket_tech
+				technology = cartridges_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_war_gaming
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_establish_gun_shop }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_establish_gun_shop
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_ak3
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_war_gaming }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = RUS_establish_gun_shop
+		completion_reward = {
+			add_tech_bonus = {
+				name = ak3_tech_bonus
+				bonus = 0.5
+				uses = 1
+				technology = flintlock_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_fresno_scrapers
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_establish_dacha }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_establish_dacha
+		completion_reward = {
+			add_tech_bonus = {
+				name = infra_bonus
+				bonus = 0.5
+				uses = 1
+				category = infra_tech
+			}
+			set_country_flag = infra_tech_1_flag
+		}
+	}
+	
+	focus = {
+		id = RUS_russian_flight
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_fresno_scrapers }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_fresno_scrapers
+		completion_reward = {
+			add_tech_bonus = {
+				name = aerial_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_research
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_new_monetary_system
+		icon = GFX_focus_research
+		prerequisite = { focus = RUS_establish_dacha }
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = RUS_establish_dacha
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_eastern_serfdom_1 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_1
+					add_idea = RUS_eastern_serfdom_2
+				}
+			}
+		}
+	}
+	
+}

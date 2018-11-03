@@ -249,9 +249,39 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = USE_elbe.tt
-				controls_state = 41
-				controls_state = 406
-				controls_state = 247
+				41 = {
+					controller = {
+						OR = {
+							tag = NUS
+							gives_military_access_to = NUS
+							is_in_faction_with = NUS
+							is_subject_of = NUS
+							NUS = { is_subject_of = PREV }
+						}
+					}
+				}
+				406 = {
+					controller = {
+						OR = {
+							tag = NUS
+							gives_military_access_to = NUS
+							is_in_faction_with = NUS
+							is_subject_of = NUS
+							NUS = { is_subject_of = PREV }
+						}
+					}
+				}
+				247 = {
+					controller = {
+						OR = {
+							tag = NUS
+							gives_military_access_to = NUS
+							is_in_faction_with = NUS
+							is_subject_of = NUS
+							NUS = { is_subject_of = PREV }
+						}
+					}
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = USE_ironclad_tech.tt

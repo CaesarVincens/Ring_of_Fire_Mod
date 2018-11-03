@@ -12,6 +12,16 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 Currently in Early Alpha; expect to find bugs and oddities
 
+Alpha 0.5.0 - ? - in-progress
+Started work on Denmark and Russia focus trees
+Added decision for NUS to buy Harlingen
+Minor fixes and removing unused vanilla code
+Laid the groundwork for overhaul of Thirty Years War
+
+Alpha 0.4.1 - Jul. 13, 2018
+Fix for missing English Civil War complete event for Constitutionalist path
+Revert ideology changes to prevent unwanted behavior
+
 Alpha 0.4.0 - North Sea Empires - Jul. 8, 2018
 Updated compatibility for HoI patch 1.5.4
 updated to use replace_path to remove most null files

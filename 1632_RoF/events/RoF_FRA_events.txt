@@ -78,6 +78,7 @@ country_event = {
 	#don't join
 	option = {
 		name = RoF_FRA.102.b
+		set_country_flag = refused_ostend
 	}
 }
 
@@ -124,7 +125,7 @@ country_event = {
 		}
 		C13 = {
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = NFR
+			set_cosmetic_tag = New_France
 			if = {
 				limit = { 232 = { is_owned_by = FRA } }
 				transfer_state = 232

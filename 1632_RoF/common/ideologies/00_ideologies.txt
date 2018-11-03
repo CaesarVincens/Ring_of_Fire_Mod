@@ -51,7 +51,7 @@ ideologies = {
 		}
 		can_collaborate = yes
 
-		ai_fascist = yes
+		ai_neutral = yes
 	}
 
 	constitutionalist = {
@@ -89,7 +89,7 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-		ai_democratic = yes
+		ai_neutral = yes
 	}
 	
 	liberal = {
@@ -137,7 +137,7 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-		ai_communist = yes
+		ai_neutral = yes
 	}
 
 	radical = {
@@ -178,7 +178,7 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-		ai_communist = yes
+		ai_neutral = yes
 	}
 
 	neutrality = {
@@ -233,8 +233,3 @@ ideologies = {
 	}
 
 }
-
-#catholic
-#protestant
-#secular
-#muslim

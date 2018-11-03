@@ -121,14 +121,29 @@ country_event = {
 	desc = RoF.002.d
 
 	immediate = {
+		add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		every_country = {
+			limit = {
+				is_in_faction_with = AUS
+				NOT = { tag = AUS }
+				NOT = { is_subject_of = AUS }
+			}
+			add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }				
+			add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		}
 		every_country = {
 			limit = {
 				is_in_faction_with = SWE
 				NOT = { tag = SWE }
 				NOT = { is_subject_of = SWE }
 			}
-			add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
-			reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			SWE = { add_manpower = 10000 }
 		}
 	}
