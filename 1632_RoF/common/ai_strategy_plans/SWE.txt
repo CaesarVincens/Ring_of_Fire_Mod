@@ -1,0 +1,46 @@
+SWE_focus_on_germany_plan = {
+	name = "Focus on Germany"
+	desc = "War with Austria"
+	
+	enable = {
+		original_tag = SWE
+	}
+	abort = {
+		OR = {
+			has_war_with = DEN
+			FRA = { has_completed_focus = FRA_ostend_league_focus }
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "DEN"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SXW"
+		value = 200
+	}
+}
+
+SWE_ignore_russia = {
+	name = "Ignore Russia"
+	desc = "Ignore Russia"
+	
+	enable = {
+		original_tag = SWE
+	}
+	abort = {
+		has_war_with = SOV
+	}
+	ai_strategy = {
+		type = ignore
+		id = "SOV"
+		value = 1000
+	}
+}
+
+
+
+

@@ -9,11 +9,11 @@ state = {
 	history = {
 		owner = SWE
 		victory_points = {
-			83 3 
+			3152 3 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
 

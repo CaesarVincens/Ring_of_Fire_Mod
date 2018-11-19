@@ -12,13 +12,13 @@ state = {
 			958 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = FRA
+		add_claim_by = FRA
 		add_core_of = VAT
 
 	}

@@ -28,7 +28,7 @@ NDiplomacy = {
 	BASE_TRUST_FACTOR = 100,						-- Base trust factor in % for opinion.
 	MAX_OPINION_VALUE = 100,						-- Max opinion value cap.
 	MIN_OPINION_VALUE = -100,						-- Min opinion value cap.
-	BASE_TRUCE_PERIOD = 30,							-- Base truce period in days.
+	BASE_TRUCE_PERIOD = 360,							-- Base truce period in days.
 	TRUCE_PERIOD_AFTER_KICKING_FROM_FACTION = 30,				-- Truce period after kicking someone from faction in days.
 	NUM_DAYS_TO_ENABLE_KICKING_NEW_MEMBERS_OF_FACTION = 90,			-- Number of days before being able to kick a new member of faction 
 	NUM_DAYS_TO_ENABLE_REINVITE_KICKED_NATIONS = 90,			-- Number of days before being able to re invite a kicked nation to your faction
@@ -324,7 +324,7 @@ NTechnology = {
 
 NPolitics = {
 	BASE_LEADER_TRAITS = 3,				-- Base amount of leader traits.
-	MAX_RANDOM_LEADERS = 1,				-- Maximum amount random leader to have per party.
+	MAX_RANDOM_LEADERS = 2,				-- Maximum amount random leader to have per party.
 	BASE_POLITICAL_POWER_INCREASE = 2,	-- Weekly increase of PP.
 	ARMY_LEADER_COST = 5,					-- cost for recruiting new leaders, 'this value' * number_of_existing_leaders_of_type
 	NAVY_LEADER_COST = 5,					-- cost for recruiting new leaders, 'this value' * number_of_existing_leaders_of_type

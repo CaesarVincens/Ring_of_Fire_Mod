@@ -47,7 +47,7 @@ set_politics = {
         absolutist = {
             popularity = 80
         }
-        liberal = {
+        constitutionalist = {
             popularity = 17
         }
         neutrality = {
@@ -64,6 +64,7 @@ set_politics = {
 
 add_ideas = {
 	balanced_eco
+	POR_iberian_union
 }
 set_stability = 0.5
 create_country_leader = {

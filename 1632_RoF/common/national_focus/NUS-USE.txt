@@ -489,6 +489,9 @@ focus_tree = {
 				OR = { has_war_with = DEN has_war_with = FRA }
 			}
 		}
+		bypass = {
+			has_cosmetic_tag = USE
+		}
 		select_effect = {
 			258 = {
 				OWNER = {
@@ -1225,9 +1228,9 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = NUS_wietze.tt
 				OR = {
-					owns_state = 43
+					controls_state = 43
 					any_allied_country = {
-						owns_state = 43
+						controls_state = 43
 					}
 				}
 			}
@@ -2295,7 +2298,7 @@ focus_tree = {
 				remove_idea = NUS_CoC_2
 				add_idea = NUS_CoC_3
 			}
-			add_popularity = { ideology = radical popularity = 0.05}
+			add_popularity = { ideology = radical popularity = 0.05 }
 		}
 
 	}

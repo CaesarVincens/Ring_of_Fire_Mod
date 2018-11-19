@@ -20,17 +20,17 @@ set_politics = {
 
     parties = {
         absolutist = {
-            popularity = 68
+            popularity = 18
         }
-        liberal = {
-            popularity = 29
+        constitutionalist = {
+            popularity = 19
         }
         neutrality = {
-            popularity = 3
+            popularity = 63
         }
     }
     
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
@@ -41,11 +41,11 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Giulio Cialdini"
+    name = "Council of Elders"
     desc = "POLITICS_GIULIO_CIALDINI_DESC"
-    picture = "gfx/leaders/ITA/Portrait_Italy_Victor_Emmanuel_III.dds"
+    picture = "gfx/leaders/Italies/Portrait_Lucca_City_Council.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = republican_neutral
     traits = {
     }
 }

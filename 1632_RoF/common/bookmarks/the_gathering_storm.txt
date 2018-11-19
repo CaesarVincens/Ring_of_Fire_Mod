@@ -74,6 +74,9 @@ bookmarks = {
 		"SOV"={
 			minor = yes
 			history = "RING_OF_FIRE_DESC"
+			ideas = {
+				RUS_eastern_serfdom_1
+			}
 		}
 		"ENG"={
 			minor = yes

@@ -28,7 +28,7 @@ set_politics = {
         absolutist = {
             popularity = 14
         }
-        liberal = {
+        constitutionalist = {
             popularity = 13
         }
         neutrality = {
@@ -42,7 +42,7 @@ set_politics = {
     elections_allowed = yes
 }
 
-set_cosmetic_tag = NEN
+set_cosmetic_tag = New_England
 set_country_flag = colony_flag
 add_ideas = {
 }

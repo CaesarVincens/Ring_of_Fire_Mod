@@ -52,7 +52,7 @@
  NUS_settled_in.tt:0 "We have to take stock of our circumstances first."
  NUS_abs_pol.tt:0 "May cause an absolutist coup in the government."
  NUS_elbe.tt:0 "We need ready access to the Elbe river (owns or ally of Magdeburg)."
- NUS_wietze.tt:0 "We or an ally controls Brunswick."
+ NUS_wietze.tt:0 "We or our allies control Brunswick."
  USE_elbe.tt:0 "We need access down the Elbe to the North Sea (controls or has military access to Magdeburg, Altmark, and Luneburg)."
  USE_ironclad_tech.tt:0 "We need the plans for our Ironclads and Timberclads"
  NUS_cpoe.tt:0 "We need to expand our influence first (owns or ally of Magdeburg)."

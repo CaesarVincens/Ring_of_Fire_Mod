@@ -1,7 +1,5 @@
 ﻿capital = 210
 
-oob = "KOC_OOB"
-
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
@@ -21,7 +19,7 @@ set_politics = {
         absolutist = {
             popularity = 88
         }
-        liberal = {
+        constitutionalist = {
             popularity = 9
         }
         neutrality = {

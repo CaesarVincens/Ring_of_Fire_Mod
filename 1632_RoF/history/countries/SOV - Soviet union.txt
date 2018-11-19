@@ -23,14 +23,11 @@ set_politics = {
         absolutist = {
             popularity = 73
         }
-        liberal = {
-            popularity = 15
-        }
-        neutrality = {
+		neutrality = {
             popularity = 2
         }
 		constitutionalist = {
-			popularity = 10
+			popularity = 25
 		}
     }
     
@@ -43,6 +40,9 @@ set_politics = {
 
 add_ideas = {
 	military_focus_eco
+	RUS_filaret
+	state_religion_law
+	RUS_eastern_serfdom_1
 }
 set_stability = 0.5
 create_country_leader = {
@@ -52,6 +52,7 @@ create_country_leader = {
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {
+		weak_czar
     }
 }
 
@@ -62,5 +63,6 @@ create_country_leader = {
     expire = "1660.1.1"
     ideology = constitutional_monarchy
     traits = {
+		weak_czar
     }
 }

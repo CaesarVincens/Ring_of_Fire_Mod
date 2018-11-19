@@ -9,18 +9,18 @@ state = {
 	}
 
 	history = {
-		owner = UPS
+		owner = VOC
 		victory_points = {
-			10279 3 
+			7381 3 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
-
+		add_core_of = VOC
 	}
 
 	provinces = {

@@ -1,0 +1,119 @@
+FRA_contain_habsburgs_AUS = {
+	name = "Contain Habsburgs"
+	desc = "Support enemies of AUS"
+	
+	enable = {
+		original_tag = FRA
+		country_exists = AUS
+		has_idea = anti_habsburg_diplomacy
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = AUS }
+			NOT = { has_idea = anti_habsburg_diplomacy }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "AUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = contain
+		id = "AUS"
+		value = 200
+	}
+}
+FRA_contain_habsburgs_SPR = {
+	name = "Contain Habsburgs"
+	desc = "Support enemies of SPR"
+	
+	enable = {
+		original_tag = FRA
+		country_exists = SPR
+		has_idea = anti_habsburg_diplomacy
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SPR }
+			NOT = { has_idea = anti_habsburg_diplomacy }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SPR"
+		value = 200
+	}
+	ai_strategy = {
+		type = contain
+		id = "SPR"
+		value = 200
+	}
+}
+
+FRA_support_SWE_plan = {
+	name = "Support Sweden"
+	desc = "Kill the Habsburgs"
+	
+	enable = {
+		original_tag = FRA
+		country_exists = SWE
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SWE }
+			has_completed_focus = FRA_countermeasures_focus
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 200
+	}
+
+}
+
+FRA_anti_grantville_plan = {
+	name = "Defeat Grantville"
+	desc = "Americans are worse than Habsburgs"
+	
+	enable = {
+		original_tag = FRA
+		country_exists = NUS
+		has_completed_focus = FRA_countermeasures_focus
+	}
+	abort = {
+		NOT = { country_exists = NUS }
+		NUS = {
+			has_completed_focus = NUS_congress_of_copenhagen
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = contain
+		id = "NUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SWE"
+		value = 200
+	}
+	ai_strategy = {
+		type = contain
+		id = "NUS"
+		value = 200
+	}
+
+}

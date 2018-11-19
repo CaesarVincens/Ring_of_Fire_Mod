@@ -65,14 +65,16 @@ clear_CoC_vars_and_flags = {
 #Strength 20-15-10-5-0
 #Anger 10-5-0-0-5-10
 check_CoC_strength_anger = {
-	set_variable = { templib = party_popularity@liberal }
-	set_variable = { temprad = party_popularity@radical }
-	set_variable = { tempcon = party_popularity@constitutionalist }
-	set_variable = { tempabs = party_popularity@absolutist }
-	multiply_variable = { templib = -2.5 }
-	multiply_variable = { temprad = -5 }
-	multiply_variable = { tempcon = 2.5 }
-	multiply_variable = { tempabs = 5 }
+	multiply_variable = { CoC_anger = 2 }
+	multiply_variable = { CoC_strength = 2 }
+	set_variable = { templib = party_popularity@liberal } #0-1
+	set_variable = { temprad = party_popularity@radical } #0-1
+	set_variable = { tempcon = party_popularity@constitutionalist } #0-1
+	set_variable = { tempabs = party_popularity@absolutist } #0-1
+	multiply_variable = { templib = -5 } #0 to -2.5
+	multiply_variable = { temprad = -10 } #0 to -5
+	multiply_variable = { tempcon = 5 } #0 to 2.5
+	multiply_variable = { tempabs = 10 } #0 to 5
 	add_to_variable = { CoC_anger = templib }
 	add_to_variable = { CoC_anger = temprad }
 	add_to_variable = { CoC_anger = tempcon }
@@ -83,38 +85,79 @@ check_CoC_strength_anger = {
 	subtract_from_variable = { CoC_strength = tempcon }
 	if = {
 		limit = { has_idea = persecute_minorities }
-		add_to_variable = { CoC_anger = 5 }
-		add_to_variable = { CoC_strength = 2.5 }
+		add_to_variable = { CoC_anger = 10 }
+		add_to_variable = { CoC_strength = 5 }
 	}
 	if = {
 		limit = { has_idea = state_religion_law }
-		add_to_variable = { CoC_anger = 2.5 }
-		add_to_variable = { CoC_strength = 1 }
-	}
-	if = {
-		limit = { has_government = absolutist }
 		add_to_variable = { CoC_anger = 5 }
-		add_to_variable = { CoC_strength = 2.5 }
+		add_to_variable = { CoC_strength = 2 }
 	}
 	if = {
-		limit = { has_government = constitutionalist }
-		add_to_variable = { CoC_anger = 2.5 }
-		add_to_variable = { CoC_strength = 1 }
-	}
-	if = {
-		limit = { has_government = radical }
+		limit = { has_idea = freedom_of_religion }
 		add_to_variable = { CoC_anger = -5 }
-		add_to_variable = { CoC_strength = -2.5 }
+		add_to_variable = { CoC_strength = -2 }
 	}
 	if = {
-		limit = { has_government = liberal }
-		add_to_variable = { CoC_anger = -2.5 }
-		add_to_variable = { CoC_strength = -1 }
+		limit = { has_war = no has_idea = full_civilian_eco }
+		add_to_variable = { CoC_anger = -10 }
+		add_to_variable = { CoC_strength = -5 }
 	}
+	if = {
+		limit = { has_war = no has_idea = civilian_focus_eco }
+		add_to_variable = { CoC_anger = -5 }
+		add_to_variable = { CoC_strength = -2 }
+	}
+	if = {
+		limit = { has_war = no has_idea = military_focus_eco }
+		add_to_variable = { CoC_anger = 5 }
+		add_to_variable = { CoC_strength = 2 }
+	}
+	if = {
+		limit = { has_war = no has_idea = levy_army }
+		add_to_variable = { CoC_anger = 5 }
+		add_to_variable = { CoC_strength = 2 }
+	}
+	if = {
+		limit = { has_war = no has_idea = full_military_eco }
+		add_to_variable = { CoC_anger = 10 }
+		add_to_variable = { CoC_strength = 5 }
+	}
+	if = {
+		limit = { has_war = no has_idea = drafted_army }
+		add_to_variable = { CoC_anger = 10 }
+		add_to_variable = { CoC_strength = 5 }
+	}
+	#if = {
+	#	limit = { has_government = absolutist }
+	#	add_to_variable = { CoC_anger = 5 }
+	#	add_to_variable = { CoC_strength = 2.5 }
+	#}
+	#if = {
+	#	limit = { has_government = constitutionalist }
+	#	add_to_variable = { CoC_anger = 2.5 }
+	#	add_to_variable = { CoC_strength = 1 }
+	#}
+	#if = {
+	#	limit = { has_government = radical }
+	#	add_to_variable = { CoC_anger = -5 }
+	#	add_to_variable = { CoC_strength = -2.5 }
+	#}
+	#if = {
+	#	limit = { has_government = liberal }
+	#	add_to_variable = { CoC_anger = -2.5 }
+	#	add_to_variable = { CoC_strength = -1 }
+	#}
 	round_variable = CoC_anger
 	round_variable = CoC_strength
+	divide_variable = { CoC_anger = 2 }
+	divide_variable = { CoC_strength = 2 }
 	clamp_variable = { var = CoC_anger min = -20 max = 20 }
 	clamp_variable = { var = CoC_strength min = -10 max = 30 }
+	if = {
+		limit = { has_country_flag = CoC_banned }
+		clamp_variable = { var = CoC_strength min = -10 max = 10 }
+	}
 	#clear_variable = templib
 	#clear_variable = temprad
 	#clear_variable = tempcon

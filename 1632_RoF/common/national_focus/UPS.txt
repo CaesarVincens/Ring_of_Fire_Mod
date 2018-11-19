@@ -1,0 +1,376 @@
+focus_tree = {
+	id = united_provinces_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UPS
+		}
+		modifier = {
+			add = 10
+			original_tag = UPS
+		}
+	}
+	default = no
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research_gen
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus_gen
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling_gen
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	shared_focus = industrial_advances_gen
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	focus = {
+		id = UPS_support_counter_remonstrants
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = 21
+		y = 0
+		available = {
+
+		}
+		mutually_exclusive = { focus = UPS_support_remonstrants focus = UPS_seek_middle_ground }
+		completion_reward = {
+			add_political_power = 120
+			592 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	
+	focus = {
+		id = UPS_seek_middle_ground
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = 2
+		y = 0
+		available = {
+
+		}
+		mutually_exclusive = { focus = UPS_support_remonstrants focus = UPS_support_counter_remonstrants }
+		relative_position_id = UPS_support_counter_remonstrants
+		completion_reward = {
+			add_political_power = 60
+			592 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			555 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+
+	focus = {
+		id = UPS_support_remonstrants
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		x = 4
+		y = 0
+		available = {
+
+		}
+		mutually_exclusive = { focus = UPS_support_counter_remonstrants focus = UPS_seek_middle_ground }
+		relative_position_id = UPS_support_counter_remonstrants
+		completion_reward = {
+			add_political_power = 30
+			add_timed_idea = {
+				idea = UPS_supported_remonstrants
+				days = 180
+			}
+			555 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+
+	focus = {
+		id = UPS_prepare_maastricht_campaign
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = UPS_support_counter_remonstrants
+		available = {
+			NOT = { has_war_with = SPN }
+			NOT = { owns_state = 458 }
+		}
+		bypass = {
+			OR = {
+				owns_state = 458
+				has_war_with = SPN
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+
+	focus = {
+		id = UPS_besiege_maastricht
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = UPS_prepare_maastricht_campaign }
+		relative_position_id = UPS_prepare_maastricht_campaign
+		available = {
+			NOT = { has_war_with = SPN }
+			NOT = { owns_state = 458 }
+		}
+		bypass = {
+			OR = {
+				owns_state = 458
+				has_war_with = SPN
+			}
+		}
+		completion_reward = {
+			transfer_state = 458
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	
+	focus = {
+		id = UPS_renew_french_alliance
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = { focus = UPS_besiege_maastricht }
+		prerequisite = { focus = UPS_support_counter_remonstrants focus = UPS_seek_middle_ground }
+		mutually_exclusive = { focus = UPS_renew_spanish_treaty }
+		relative_position_id = UPS_support_counter_remonstrants
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		bypass = {
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	focus = {
+		id = UPS_renew_spanish_treaty
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = { focus = UPS_besiege_maastricht }
+		prerequisite = { focus = UPS_support_remonstrants focus = UPS_seek_middle_ground }
+		mutually_exclusive = { focus = UPS_renew_french_alliance }
+		relative_position_id = UPS_support_remonstrants
+		available = {
+			NOT = { has_war_with = SPN }
+			NOT = { has_war_with = SPR }
+		}
+		bypass = {
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	
+	focus = {
+		id = UPS_united_provinces_defeated
+		icon = GFX_focus_CZE_german_puppet
+		cost = 0
+		x = 0
+		y = 5
+		relative_position_id = UPS_seek_middle_ground
+		allow_branch = {
+			OR = {
+				has_capitulated = yes
+				is_subject = yes
+				always = yes
+			}
+			is_ai = no
+		}
+		available = {
+			OR = {
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+		available_if_capitulated = yes
+		bypass = {
+			OR = {
+				has_capitulated = yes
+				is_subject = yes
+			}
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	
+	focus = {
+		id = UPS_flee_to_west_indies
+		icon = GFX_goal_generic_improve_relations
+		cost = 0
+		x = -2
+		y = 1
+		prerequisite = { focus = UPS_united_provinces_defeated }
+		mutually_exclusive = { focus = UPS_flee_to_east_indies focus = UPS_cooperate_with_fernando }
+		relative_position_id = UPS_united_provinces_defeated
+		available = {
+			country_exists = WIC
+			WIC = { is_ai = yes }
+		}
+		bypass = {
+		}
+		completion_reward = {
+			set_autonomy = {
+				target = WIC
+				autonomy_state = autonomy_free
+			}
+			WIC = { change_tag_from = ROOT }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	focus = {
+		id = UPS_flee_to_east_indies
+		icon = GFX_goal_generic_improve_relations
+		cost = 0
+		x = 2
+		y = 1
+		prerequisite = { focus = UPS_united_provinces_defeated }
+		mutually_exclusive = { focus = UPS_cooperate_with_fernando focus = UPS_flee_to_west_indies }
+		relative_position_id = UPS_united_provinces_defeated
+		available = {
+			country_exists = VOC
+			VOC = { is_ai = yes }
+		}
+		bypass = {
+		}
+		completion_reward = {
+			set_autonomy = {
+				target = VOC
+				autonomy_state = autonomy_free
+			}
+			VOC = { change_tag_from = ROOT }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	focus = {
+		id = UPS_cooperate_with_fernando
+		dynamic = yes
+		icon = GFX_goal_generic_improve_relations
+		cost = 0
+		x = 0
+		y = 1
+		prerequisite = { focus = UPS_united_provinces_defeated }
+		mutually_exclusive = { focus = UPS_flee_to_west_indies focus = UPS_flee_to_east_indies }
+		relative_position_id = UPS_united_provinces_defeated
+		available = {
+			country_exists = SPN
+			SPN = { is_ai = yes }
+		}
+		bypass = {
+		}
+		completion_reward = {
+			SPN = { change_tag_from = ROOT }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+
+}

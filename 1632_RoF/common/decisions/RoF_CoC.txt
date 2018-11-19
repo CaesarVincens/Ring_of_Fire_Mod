@@ -40,6 +40,9 @@ RoF_CoC_decisions = {
 				check_variable = { var = CoC_strength value = 10 compare = less_than }
 			}
 		}
+		visible = {
+			NOT = { has_country_flag = CoC_banned }
+		}
 		complete_effect = {
 			set_country_flag = CoC_banned
 			custom_effect_tooltip = RoF_ban_CoC.tt
@@ -63,6 +66,9 @@ RoF_CoC_decisions = {
 	allow_CoC = {
 		available = {
 			has_country_flag = CoC_present
+			has_country_flag = CoC_banned
+		}
+		visible = {
 			has_country_flag = CoC_banned
 		}
 		complete_effect = {
@@ -91,6 +97,9 @@ RoF_CoC_decisions = {
 				tooltip = CoC_strength_under_20.tt
 				check_variable = { var = CoC_strength value = 20 compare = less_than }
 			}
+		}
+		visible = {
+			NOT = { has_country_flag = CoC_banned }
 		}
 		complete_effect = {
 			add_to_variable = { var = CoC_strength value = 5 }
@@ -144,8 +153,56 @@ RoF_CoC_decisions = {
 			}
 		}
 	}
+	accomodate_CoC = {
+		available = {
+			has_country_flag = CoC_present
+			NOT = { has_country_flag = CoC_banned }
+			custom_trigger_tooltip = {
+				tooltip = accomodate_CoC.tt
+				OR = {
+					has_idea = persecute_minorities
+					has_idea = state_religion_law
+					AND = {
+						has_war = no
+						OR = {
+							has_idea = military_focus_eco
+							has_idea = full_military_eco
+							has_idea = levy_army
+							has_idea = drafted_army
+						}
+					}
+					liberal < 0.3
+					radical < 0.3
+				}
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = CoC_banned }
+		}
+		complete_effect = {
+			country_event = { id = RoF_CoC.020 }
+		}
+		cost = 50
+		days_re_enable = 30
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				OR = {
+					has_government = radical
+					has_government = liberal
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = { var = CoC_strength value = 10 compare = greater_than_or_equals }
+				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }
+			}
+		}
+	}
 	establish_CoC_neighbor = {
 		visible = {
+			NOT = { has_country_flag = CoC_banned }
 			has_country_flag = CoC_present
 			any_neighbor_country = {
 				NOT = {

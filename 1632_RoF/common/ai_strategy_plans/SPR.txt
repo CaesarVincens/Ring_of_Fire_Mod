@@ -1,0 +1,106 @@
+SPR_protect_POR = {
+	name = "POR is our Union"
+	desc = "name"
+	
+	enable = {
+		original_tag = SPR
+	}
+	abort = {
+		OR = {
+			has_war_with = POR
+			POR = { NOT = { has_idea = POR_iberian_union } }
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "POR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "POR"
+		value = 100
+	}
+}
+
+SPR_dont_invade_SWE = {
+	name = "Sea landings are hard"
+	desc = "don't do it"
+	
+	enable = {
+		original_tag = SPR
+		has_war_with = SWE
+	}
+	abort = {
+		NOT = { has_war_with = SWE }
+	}
+	ai_strategy = {
+		type = invade
+		id = "SWE"
+		value = -200
+	}
+}
+
+SPR_habsburg_cousins = {
+	name = "Habsburg Cousins"
+	desc = "support = AUS"
+	enable = {
+		original_tag = SPR
+		country_exists = AUS
+	}
+	abort = {
+		NOT = { country_exists = AUS }
+	}
+	ai_strategy = {
+		type = befriend
+		id = "AUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "AUS"
+		value = 200
+	}
+}
+
+SPR_anti_dutch = {
+	name = "Dutch Revolt"
+	desc = "80 years war"
+	enable = {
+		original_tag = SPR
+		country_exists = UPS
+	}
+	abort = {
+		NOT = { country_exists = UPS }
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "UPS"
+		value = 1000
+	}
+}
+
+SPR_support_SPN = {
+	name = "Spanish Netherlands"
+	desc = "Spanish Netherlands"
+	enable = {
+		original_tag = SPR
+		country_exists = SPN
+	}
+	abort = {
+		NOT = { country_exists = SPN }
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SPN"
+		value = 1000
+	}
+	ai_strategy = {
+		type = support
+		id = "SPN"
+		value = 1000
+	}
+}
+
+

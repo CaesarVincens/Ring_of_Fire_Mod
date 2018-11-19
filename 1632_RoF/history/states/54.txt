@@ -9,10 +9,11 @@ state = {
 	state_category = rural
 
 	history = {
+		owner = BUT
 		victory_points = { 10222 8 }
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}

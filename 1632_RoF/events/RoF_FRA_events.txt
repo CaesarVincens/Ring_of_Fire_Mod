@@ -287,3 +287,40 @@ country_event = {
 		name = RoF_FRA.130.a
 	}
 }
+
+#join NUS
+country_event = {
+	id = RoF_FRA.150
+	title = RoF_FRA.150.t
+	picture = GFX_report_event_ups_flag
+	desc = RoF_FRA.150.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_FRA.150.a
+		if = {
+			limit = {
+				135 = { is_controlled_by_ROOT_or_subject = yes }
+			}
+			WNA = { transfer_state = 135 }
+		}
+		if = {
+			limit = {
+				118 = { is_controlled_by_ROOT_or_subject = yes }
+			}
+			WNA = { transfer_state = 118 }
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = RoF_FRA.150.b
+		add_political_power = -120
+		add_manpower = -10000
+		ai_chance = { factor = 1 }
+	}
+}
+

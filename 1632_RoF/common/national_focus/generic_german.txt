@@ -43,6 +43,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 		}
+		ai_will_do = {
+			factor = 10
+		}
 
 	}
 	focus = {
@@ -72,11 +75,20 @@ focus_tree = {
 				}
 			}
 			modifier = {
+				factor = 5
+				OR = {
+					tag = SAX
+					tag = BRA
+				}
+			}
+			modifier = {
 				factor = 0
 				OR = {
 					is_in_faction_with = SWE
 					is_in_faction_with = NUS
 				}
+				NOT = { tag = SAX }
+				NOT = { tag = BRA }
 			}
 		}
 
@@ -113,6 +125,8 @@ focus_tree = {
 					is_in_faction_with = SWE
 					is_in_faction_with = NUS
 				}
+				NOT = { tag = SAX }
+				NOT = { tag = BRA }
 			}
 		}
 
@@ -157,6 +171,7 @@ focus_tree = {
 				tooltip = twy_ongoing.tt
 				SWE = { has_war_with = AUS }
 			}
+			NOT = { has_war_with = SWE }
 		}
 		bypass = {
 			is_in_faction_with = SWE
@@ -184,6 +199,7 @@ focus_tree = {
 				tooltip = twy_ongoing.tt
 				SWE = { has_war_with = AUS }
 			}
+			NOT = { has_war_with = AUS }
 		}
 		bypass = {
 			is_in_faction_with = AUS

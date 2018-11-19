@@ -15,22 +15,3 @@
 # contain
 # area_priority
 
-SXW_befriend_SWE = {
-	enable = {
-		original_tag = SXW
-	}
-	abort = {
-		has_war_with = SWE
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SWE"
-		value = 2000
-	}
-	ai_strategy = {
-		type = support
-		id = "SWE"
-		value = 2000
-	}
-
-}

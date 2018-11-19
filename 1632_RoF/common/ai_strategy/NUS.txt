@@ -15,27 +15,6 @@
 # contain
 # area_priority
 
-NUS_ironclads = {
-	enable = {
-		original_tag = NUS
-		has_completed_focus = NUS_ironclads_focus
-	}
-	abort = {
-		has_tech = ironclad_first
-		has_tech = timberclad_first
-	}
-	ai_strategy = {
-		type = research_tech
-		id = ironclad_first
-		value = 10000
-		
-	}
-	ai_strategy = {
-		type = research_tech
-		id = timberclad_first
-		value = 10000
-	}
-}
 NUS_unit_production = {
 	enable = {
 		original_tag = NUS

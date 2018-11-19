@@ -12,11 +12,13 @@ state = {
 			185 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
-
+			185 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = DEN
 

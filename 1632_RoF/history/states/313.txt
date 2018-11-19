@@ -9,13 +9,15 @@ state = {
 			241 8 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
-
+			241 = {
+				naval_base = 1
+			}
 		}
-		add_core_of = DEN
+		add_claim_by = DEN
 		add_core_of = OLD
 
 	}

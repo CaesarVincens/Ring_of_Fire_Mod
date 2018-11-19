@@ -22,7 +22,7 @@ set_politics = {
         absolutist = {
             popularity = 14
         }
-        liberal = {
+        constitutionalist = {
             popularity = 84
         }
         neutrality = {
@@ -30,7 +30,7 @@ set_politics = {
         }
     }
     
-    ruling_party = liberal
+    ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
@@ -47,7 +47,7 @@ create_country_leader = {
     desc = "POLITICS_ERNST_VON TEGETTHOFF_DESC"
     picture = "gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
     expire = "1660.1.1"
-    ideology = conservatism
+    ideology = constitutional_republic
     traits = {
     }
 }

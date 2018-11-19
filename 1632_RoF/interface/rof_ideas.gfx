@@ -81,6 +81,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_oxenstierna_pic.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_filaret_pic"
+		texturefile = "gfx/interface/ideas/idea_filaret_pic.dds"
+	}
+	### NATIONAL IDEAS
+	spriteType = {
 		name = "GFX_idea_lion_of_the_north"
 		texturefile = "gfx/interface/ideas/idea_lion_of_the_north.dds"
 	}
@@ -88,8 +93,27 @@ spriteTypes = {
 		name = "GFX_idea_FRA_gaston"
 		texturefile = "gfx/interface/ideas/idea_FRA_gaston.dds"
 	}
-	
-	#COC ideas
+	spriteType = {
+		name = "GFX_idea_ENG_mary"
+		texturefile = "gfx/interface/ideas/idea_ENG_mary.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_elizabeth"
+		texturefile = "gfx/interface/ideas/idea_ENG_elizabeth.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_rupert"
+		texturefile = "gfx/interface/ideas/idea_ENG_rupert.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_rupert"
+		texturefile = "gfx/interface/ideas/idea_ENG_rupert.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_RUS_filaret"
+		texturefile = "gfx/interface/ideas/idea_RUS_filaret.dds"
+	}	
+	##COC IDEAS
 	spriteType = {
 		name = "GFX_idea_CoC_good_4"
 		texturefile = "gfx/interface/ideas/CoC_good_4.dds"

@@ -47,11 +47,14 @@ focus_tree = {
 			add_political_power = 120
 			
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	
 	focus = {
 		id = RUS_recruit_up_timer
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_treaty
 		prerequisite = { focus = RUS_investigate_grantville }
 		x = 0
 		y = 1
@@ -77,7 +80,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_establish_gun_shop
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RUS_establish_dacha }
 		x = -2
 		y = 1
@@ -96,7 +99,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_war_gaming
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = RUS_establish_gun_shop }
 		x = 0
 		y = 1
@@ -115,7 +118,7 @@ focus_tree = {
 	
 	focus = {
 		id = RUS_ak3
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RUS_war_gaming }
 		x = 0
 		y = 2
@@ -133,7 +136,7 @@ focus_tree = {
 	
 	focus = {
 		id = RUS_fresno_scrapers
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = RUS_establish_dacha }
 		x = 0
 		y = 1
@@ -152,7 +155,7 @@ focus_tree = {
 	
 	focus = {
 		id = RUS_russian_flight
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = RUS_fresno_scrapers }
 		x = 0
 		y = 1
@@ -170,7 +173,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_new_monetary_system
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = RUS_establish_dacha }
 		x = 2
 		y = 1

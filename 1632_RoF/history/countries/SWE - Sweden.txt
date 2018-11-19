@@ -51,10 +51,10 @@ set_politics = {
 
     parties = {
         constitutionalist = {
-            popularity = 88
+            popularity = 78
         }
-        liberal = {
-            popularity = 9
+        absolutist = {
+            popularity = 19
         }
         neutrality = {
             popularity = 3

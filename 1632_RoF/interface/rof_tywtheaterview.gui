@@ -1,0 +1,107 @@
+guiTypes = {
+
+	#Button
+	containerWindowType = {
+		name = "rof_tywtheaterbutton"
+		position = { x = 900 y = 4 }
+		
+		buttonType ={
+			name ="rof_tyw_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }
+			shortcut = "ctrl+k"
+		}
+		
+		iconType = {
+			name ="rof_tyw_icon"
+			spriteType = "GFX_relation_war_relation"
+			position = { x= 2 y = 0 }
+		}
+		
+		instantTextBoxType = {
+			name ="rof_tyw_text"
+			position = { x= 23 y = 4 }
+			font = "hoi_18mbs"
+			text = "ROF_TYW"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+			
+			pdx_tooltip = "ROF_TYW_TOOLTIP"
+			pdx_tooltip_delayed = "ROF_TYW_TOOLTIP_DELAYED"
+		}
+		
+	}
+	# THIRTY YEAR WAR THEATERS
+	containerWindowType = {
+		name = "rof_tywtheaterwindow"
+		size = { width = 1167 height = 85%%}
+		position = { x=-583 y=-297 }
+		Orientation = center
+		moveable = yes
+		clipping = no
+		fade_time = 500
+		fade_type = linear
+		click_to_front = yes		
+				
+		background = {
+			name = "Background"		
+			spriteType ="GFX_tiled_waroverview_bg"
+		}
+		
+		instantTextboxType = {
+			name = "tywtheater_headline"
+			position = { x = -177 y = 23 }
+			font = "hoi_24header"
+			text = "ROF_TYW_HEADER"
+			Orientation = center_up
+			format = center			
+			maxWidth = 350
+			maxHeight = 30
+		}
+		
+		containerWindowType = {
+			name = "north_germany_theater"
+			size = { width = 555 height = 50%%}
+			position = { x=25 y=192 }
+			margin = { top = 5 bottom = 5 }
+			verticalScrollbar = "right_vertical_slider"
+
+			background =
+			{
+				name = "north_germany_window"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			instantTextBoxType = {
+				name = "north_germany_theater_header"
+				position = { x = 0 y = 5 }
+				font = "hoi_18mbs"
+				text = "ROF_NG_HEADER"
+				maxWidth = 200
+				maxHeight = 30
+				format = left
+				Orientation = left_up
+			}
+			buttonType ={
+				name ="attacker_divisions"
+				quadTextureSprite = "GFX_division_icon"
+				position = { x= 362 y = 10 }
+				pdx_tooltip = "DIVISIONS"
+			}
+		
+			instantTextBoxType = {
+				name = "ROF_TYW_DIVISIONS"
+				position = { x = 400 y = 12 }
+				font = "hoi_18mbs"
+				text = "ROF_TYW_DIVISIONS"
+				maxWidth = 80
+				maxHeight = 30
+				format = center
+				pdx_tooltip = "ROF_TYW_DIVISIONS"
+			}
+		}
+
+
+	
+}

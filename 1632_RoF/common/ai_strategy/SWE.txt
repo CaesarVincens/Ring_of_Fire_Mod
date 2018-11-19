@@ -15,30 +15,6 @@
 # contain
 # area_priority
 
-SWE_focus_on_germany = {
-	enable = {
-		original_tag = SWE
-	}
-	abort = {
-		FRA = { has_completed_focus = FRA_ostend_league_focus }
-	}
-	ai_strategy = {
-		type = ignore
-		id = "DEN"
-		value = 100
-	}
-	ai_strategy = {
-		type = ignore
-		id = "SOV"
-		value = 100
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SXW"
-		value = 100
-	}
-}
-
 SWE_unit_production = {
 	enable = {
 		original_tag = SWE

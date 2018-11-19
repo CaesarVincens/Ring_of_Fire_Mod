@@ -39,8 +39,17 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = 22
 		y = 0
-		mutually_exclusive = { }
 		prerequisite = { }
+		available = {
+			NOT = { has_war_with = BRA }
+			NOT = { BRA = { is_in_faction = yes } }
+		}
+		bypass = {
+			OR = {
+				has_war_with = BRA
+				BRA = { is_in_faction = yes }
+			}
+		}
 		cost = 5
 		#available_if_capitulated = yes
 		completion_reward = {
@@ -55,7 +64,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = -1
 		y = 1
-		mutually_exclusive = { }
 		prerequisite = { focus = SWE_bully_brandenburg }
 		relative_position_id = SWE_bully_brandenburg
 		cost = 5
@@ -71,7 +79,16 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = 1
 		y = 1
-		mutually_exclusive = { }
+		available = {
+			NOT = { has_war_with = SAX }
+			NOT = { SAX = { is_in_faction = yes } }
+		}
+		bypass = {
+			OR = {
+				has_war_with = SAX
+				SAX = { is_in_faction = yes }
+			}
+		}
 		prerequisite = { focus = SWE_bully_brandenburg }
 		relative_position_id = SWE_bully_brandenburg
 		cost = 5
@@ -93,6 +110,9 @@ focus_tree = {
 		}
 		x = 3
 		y = 2
+		available = {
+			has_war_with = AUS
+		}
 		mutually_exclusive = { focus = SWE_force_franconia }
 		prerequisite = { focus = SWE_strong_arm_saxony }
 		relative_position_id = SWE_bully_brandenburg
@@ -113,7 +133,8 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
-			OR = { 
+			has_war_with = WRZ
+			OR = {
 				alliance_strength_ratio > 0.75
 				AND = {
 					strength_ratio = {
@@ -121,6 +142,12 @@ focus_tree = {
 						ratio = 1
 					}
 				}
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = { has_war_with = WRZ }
+				NOT = { country_exists = WRZ }
 			}
 		}
 		select_effect = { country_event = { id = RoF_SWE.144 hours = 12 } }
@@ -142,7 +169,8 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
-			OR = { 
+			has_war_with = MNZ
+			OR = {
 				alliance_strength_ratio > 1
 				AND = {
 					strength_ratio = {
