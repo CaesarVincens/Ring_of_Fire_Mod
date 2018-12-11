@@ -2,7 +2,6 @@ strategic_region={
 	id=15
 	name="STRATEGICREGION_15"
 	provinces={
-		
 	}
 weather=
 {
@@ -142,7 +141,7 @@ weather=
 		rain_heavy=0.450
 		snow=0.000
 		blizzard=0.000
-		mud=1.050
+		mud=1.00
 		sandstorm=0.000
 		min_snow_level=0.000
 	}

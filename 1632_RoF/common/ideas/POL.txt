@@ -1,4 +1,94 @@
 ideas = {
+	country = {
+		POL_eastern_serfdom_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				partisan_effect = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				consumer_goods_factor = 0.2
+				global_building_slots_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		POL_eastern_serfdom_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.15
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				partisan_effect = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				consumer_goods_factor = 0.15
+				global_building_slots_factor = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		POL_eastern_serfdom_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.1
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				conscription_factor = -0.15
+				partisan_effect = -0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.05
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		POL_eastern_serfdom_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.05
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				conscription_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+	}
 	political_advisor = {
 		POL_absolutist_advisor = {
 			allowed = {

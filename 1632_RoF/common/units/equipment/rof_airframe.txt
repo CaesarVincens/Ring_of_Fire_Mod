@@ -40,7 +40,7 @@ equipments = {
 		build_cost_ic = 80
 		resources = {
 			oil = 1
-			aluminium = 2
+			aluminium = 1
 			combustion_engine = 1
 		}
 		
@@ -61,7 +61,7 @@ equipments = {
 		
 		interface_category = interface_category_air
 		
-		# Strategic bomber
+		# Tactical bomber
 		interface_overview_category_index = 4
 		
 		upgrades = {
@@ -84,7 +84,7 @@ equipments = {
 		build_cost_ic = 120
 		resources = {
 			oil = 1
-			aluminium = 3
+			aluminium = 2
 			combustion_engine = 2
 		}
 		
@@ -127,7 +127,7 @@ equipments = {
 		build_cost_ic = 88
 		resources = {
 			oil = 1
-			aluminium = 3
+			aluminium = 2
 			combustion_engine = 1
 		}
 
@@ -154,7 +154,7 @@ equipments = {
 		build_cost_ic = 92
 		resources = {
 			oil = 2
-			aluminium = 3
+			aluminium = 2
 			combustion_engine = 1
 		}
 
@@ -181,7 +181,7 @@ equipments = {
 		build_cost_ic = 94
 		resources = {
 			oil = 2
-			aluminium = 4
+			aluminium = 3
 			combustion_engine = 1
 		}
 
@@ -225,8 +225,8 @@ equipments = {
 		
 		build_cost_ic = 130
 		resources = {
-			oil = 1
-			aluminium = 4
+			oil = 2
+			aluminium = 2
 			combustion_engine = 2
 		}
 	}
@@ -249,8 +249,8 @@ equipments = {
 		
 		build_cost_ic = 135
 		resources = {
-			oil = 1
-			aluminium = 5
+			oil = 2
+			aluminium = 3
 			combustion_engine = 2
 		}
 	}

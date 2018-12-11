@@ -200,7 +200,7 @@ country_event = {
 
 
 	trigger = {
-		has_idea_with_trait = liberal_reformer
+		has_idea_with_trait = liberal_minister
 		NOT = { has_government = liberal }
 		NOT = { has_country_flag = liberal_opposition_formed }
 		is_puppet = no
@@ -233,7 +233,7 @@ country_event = {
 
 
 	trigger = {
-		has_idea_with_trait = liberal_reformer
+		has_idea_with_trait = liberal_minister
 		NOT = { has_government = liberal }
 		has_country_flag = liberal_opposition_formed
 		NOT = { has_idea = liberal_opposition_voicing_protests }
@@ -262,7 +262,7 @@ country_event = {
 
 
 	trigger = {
-		has_idea_with_trait = liberal_reformer
+		has_idea_with_trait = liberal_minister
 		NOT = { has_government = liberal }
 		liberal > 0.5
 		has_country_flag = liberal_government_support

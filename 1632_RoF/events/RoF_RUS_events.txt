@@ -1,0 +1,47 @@
+﻿add_namespace = RoF_RUS
+
+country_event = {
+	id = RoF_RUS.100
+	title = RoF_RUS.100.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.100.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		393 = { add_core_of = USR }
+		394 = { add_core_of = USR }
+		398 = { add_core_of = USR }
+		399 = { add_core_of = USR }
+		400 = { add_core_of = USR }
+		401 = { add_core_of = USR }
+		402 = { add_core_of = USR }
+		403 = { add_core_of = USR }
+		404 = { add_core_of = USR }
+	}
+	option = {
+		name = RoF_RUS.100.a
+		release = USR
+		set_cosmetic_tag = Directorate_Russia
+		USR = {
+			set_cosmetic_tag = Free_Russia
+		}
+	}
+}
+
+country_event = {
+	id = RoF_RUS.101
+	title = RoF_RUS.100.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.100.d
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	option = {
+		name = RoF_RUS.100.a
+		set_cosmetic_tag = Free_Russia
+	}
+}

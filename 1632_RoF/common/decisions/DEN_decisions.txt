@@ -105,11 +105,40 @@ DEN_HBC_decisions = {
 			}
 			owns_state = 660
 		}
-		cost = 10
+		activation = {
+			custom_trigger_tooltip = {
+				tooltip = DEN_Hudson_winter.tt
+				OR = {
+					AND = {
+						date > 1634.1.1
+						date < 1634.4.1
+					}
+					AND = {
+						date > 1635.1.1
+						date < 1635.4.1
+					}
+					AND = {
+						date > 1636.1.1
+						date < 1636.4.1
+					}
+					AND = {
+						date > 1637.1.1
+						date < 1637.4.1
+					}
+				}
+			}
+			owns_state = 660			
+		}
+		is_good = no
+		days_mission_timeout = 90
+		selectable_mission = yes
+		cost = 50
 		days_remove = 90
+		timeout_effect = {
+			add_political_power = -10
+		}
 		complete_effect = {
 			set_country_flag = DEN_HBC_start
-			add_political_power = -40
 		}
 		remove_effect = {
 			country_event = { id = RoF_DEN.110 days = 5 }

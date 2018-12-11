@@ -86,6 +86,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Bobby Gene \"Red\" Sybolt"
+	ideology = socialism
+}
+
+create_country_leader = {
 	name = "Quentin B. Underwood"
 	ideology = conservatism_neutral
 }

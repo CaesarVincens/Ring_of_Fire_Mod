@@ -21,6 +21,60 @@ ideas = {
 			removal_cost = -1
 			picture = generic_research_bonus
 		}
+		RUS_boyar_cavalry_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+			}
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+		}
+		RUS_boyar_cavalry_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+		}
+		RUS_streltzi_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+			}
+			removal_cost = -1
+			picture = ast_volunteer_defence_corps
+		}
+		RUS_streltzi_2 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+			removal_cost = -1
+			picture = ast_volunteer_defence_corps
+		}
+		RUS_infrastructure = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+			removal_cost = -1
+			picture = ast_all_in
+		}
 		RUS_eastern_serfdom_1 = {
 			allowed = {
 				always = no
@@ -67,12 +121,54 @@ ideas = {
 			picture = generic_manpower_bonus
 			removal_cost = -1
 		}
+		RUS_eastern_serfdom_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.1
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				conscription_factor = -0.15
+				partisan_effect = -0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.05
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		RUS_eastern_serfdom_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.05
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				conscription_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
 	}
 	
 	political_advisor = {
 		RUS_filaret = {
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			traits = {
 				filaret_trait
@@ -82,10 +178,10 @@ ideas = {
 				factor = 1
 			}
 		}
-		SOV_absolutist_advisor = {
+		RUS_absolutist_advisor = {
 			allowed = {
 				always = no
-				original_tag = SOV
+				original_tag = RUS
 			}
 			traits = { absolutist_minister }
 			on_add = {
@@ -101,10 +197,10 @@ ideas = {
 				factor = 0
 			}
 		}
-		SOV_democratic_advisor = {
+		RUS_democratic_advisor = {
 			allowed = {
 				always = no
-				original_tag = SOV
+				original_tag = RUS
 			}
 			traits = { liberal_minister }
 			on_add = {
@@ -119,10 +215,10 @@ ideas = {
 				factor = 0
 			}
 		}
-		SOV_neutrality_advisor = {
+		RUS_neutrality_advisor = {
 			allowed = {
 				always = no
-				original_tag = SOV
+				original_tag = RUS
 			}
 			traits = { neutrality_minister }
 			picture = neutrality_idea
@@ -139,11 +235,11 @@ ideas = {
 	tank_manufacturer = { 
 		designer = yes
 		
-		SOV_tank_manufacturer = {
+		RUS_tank_manufacturer = {
 			picture = generic_tank_manufacturer_1
 			
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -158,11 +254,11 @@ ideas = {
 	}
 	naval_manufacturer = { 
 		designer = yes
-		SOV_naval_manufacturer = {
+		RUS_naval_manufacturer = {
 			
 			picture = generic_naval_manufacturer_1
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -177,11 +273,11 @@ ideas = {
 	}
 	aircraft_manufacturer = { 
 		designer = yes
-		SOV_light_aircraft_manufacturer = {
+		RUS_light_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_1
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -194,11 +290,11 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 		}
 		
-		SOV_medium_aircraft_manufacturer = {
+		RUS_medium_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_3
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -211,11 +307,11 @@ ideas = {
 			traits = { medium_aircraft_manufacturer }
 		}
 		
-		SOV_heavy_aircraft_manufacturer = {
+		RUS_heavy_aircraft_manufacturer = {
 			picture = generic_air_manufacturer_2
 			
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -228,11 +324,11 @@ ideas = {
 			traits = { heavy_aircraft_manufacturer }
 		}
 		
-		SOV_naval_aircraft_manufacturer = {
+		RUS_naval_aircraft_manufacturer = {
 			
 			picture = generic_naval_manufacturer_2
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -249,7 +345,7 @@ ideas = {
 		RUS_gorchakov_dacha = {
 			picture = generic_industrial_concern_1
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			available = {
 				has_completed_focus = RUS_establish_dacha
@@ -262,11 +358,11 @@ ideas = {
 			}
 			traits = { industrial_concern }
 		}
-		SOV_industrial_concern = {
+		RUS_industrial_concern = {
 			
 			picture = generic_industrial_concern_1
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -278,11 +374,11 @@ ideas = {
 			
 			traits = { industrial_concern }
 		}
-		SOV_electronics_concern = {
+		RUS_electronics_concern = {
 			
 			picture = generic_electronics_concern_1
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -300,7 +396,7 @@ ideas = {
 		RUS_gun_shop = {
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			available = {
 				has_completed_focus = RUS_establish_gun_shop
@@ -313,11 +409,11 @@ ideas = {
 			}
 			traits = { infantry_equipment_manufacturer }
 		}
-		SOV_motorized_equipment_manufacturer = {
+		RUS_motorized_equipment_manufacturer = {
 			
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -330,11 +426,11 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 		}
 		
-		SOV_infantry_equipment_manufacturer = {
+		RUS_infantry_equipment_manufacturer = {
 			
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150
@@ -347,11 +443,11 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 		}
 		
-		SOV_artillery_manufacturer = {
+		RUS_artillery_manufacturer = {
 			
 			picture = generic_artillery_manufacturer_2
 			allowed = {
-				original_tag = SOV
+				original_tag = RUS
 			}
 			
 			cost = 150

@@ -1,29 +1,34 @@
-state = {
-	id = 483
-	name= "STATE_483"
-	manpower = 2243840
 
-	resources = {
-		chromium = 20
-		oil = 0
-		steel = 2
-		tungsten = 2
+state={
+	id=483
+	name="STATE_483"
+	resources={
+		chromium=20.000
+		oil=0.000
+		steel=2.000
+		tungsten=2.000
 	}
-	state_category = town
 
-	history = {
+	history={
 		owner = TIB
-		victory_points = { 5033 9 }
+		victory_points = {
+			5033 9 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = TIB
+
 	}
 
-	provinces = {
-		1961 1991 2010 2014 2093 2098 4900 4994 5011 5018 5033 5080 5094 5102 7926 8029 8041 8059 8068 8121 10741 10755 10802 10918 12784 12801 12807 
+	provinces={
+		2014 2098 4914 4964 4994 5011 5018 5033 5080 5102 7926 8037 8041 8059 10741 10755 10918 12899 
 	}
+	manpower=2243840
+	buildings_max_level_factor=1.000
+	state_category=town
 }

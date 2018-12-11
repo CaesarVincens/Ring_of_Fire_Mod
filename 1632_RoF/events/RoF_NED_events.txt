@@ -301,7 +301,6 @@ country_event = {
 }
 
 #UPS-WIC and VOC events 200
-# SPN goes to Congress of Copenhagen
 country_event = {
 	id = RoF_NED.200
 	title = RoF_NED.200.t

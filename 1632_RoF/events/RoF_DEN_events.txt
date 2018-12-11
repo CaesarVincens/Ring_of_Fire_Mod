@@ -66,6 +66,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		always = no
 		has_country_flag = HBC_founded
 		135 = { is_owned_by = WNA }
 	}

@@ -1,12 +1,9 @@
 
-state = {
-	id = 132
-	name = "STATE_132"
-	resources = {
-		#rubber = 1.000
-	}
+state={
+	id=132
+	name="STATE_132"
 
-	history = {
+	history={
 		owner = ETH
 		victory_points = {
 			5097 9 
@@ -22,10 +19,10 @@ state = {
 
 	}
 
-	provinces = {
-		1984 2040 2072 4954 5017 5041 5097 7944 12723 
+	provinces={
+		1984 2040 2072 4954 5017 5041 5097 7944 12723 13137 
 	}
-	manpower = 2491100
-	buildings_max_level_factor = 1.000
-	state_category = large_town
+	manpower=2491100
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

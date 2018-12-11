@@ -1,9 +1,9 @@
 
-state = {
-	id = 520
-	name = "STATE_520"
+state={
+	id=520
+	name="STATE_520"
 
-	history = {
+	history={
 		owner = TUR
 		victory_points = {
 			12376 3 
@@ -22,10 +22,10 @@ state = {
 
 	}
 
-	provinces = {
-		772 789 3653 4583 6991 7454 10403 10472 11599 12376 
+	provinces={
+		772 789 3653 6991 7454 10403 10472 11599 
 	}
-	manpower = 933596
-	buildings_max_level_factor = 1.000
-	state_category = town
+	manpower=933596
+	buildings_max_level_factor=1.000
+	state_category=town
 }

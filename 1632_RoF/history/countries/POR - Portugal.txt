@@ -17,7 +17,9 @@ prerof_man_of_war = 1
 # Research Bonuses
 set_convoys = 0
 
-
+BRZ = {
+	set_country_flag = colony_flag
+}
 # DIPLOMACY
     set_autonomy = {
         target = KEN
@@ -35,11 +37,6 @@ set_convoys = 0
         freedom_level = 0.8
     }
 
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = POR_research
-}
 
 set_politics = {
 

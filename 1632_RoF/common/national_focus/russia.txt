@@ -1,14 +1,14 @@
 focus_tree = {
-	id = france_focus_tree
+	id = russia_focus_tree
 	country = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = SOV
+			tag = RUS
 		}
 		modifier = {
 			add = 10
-			original_tag = SOV
+			original_tag = RUS
 		}
 	}
 	default = no
@@ -30,7 +30,6 @@ focus_tree = {
 	####################
 	#  INDUSTRY  TREE  #
 	####################
-	shared_focus = industrial_advances_gen
 
 	####################
 	#  POLITICAL TREE  #
@@ -40,7 +39,7 @@ focus_tree = {
 	focus = {
 		id = RUS_investigate_grantville
 		icon = GFX_goal_generic_position_armies
-		x = 22
+		x = 20
 		y = 0
 		cost = 20
 		completion_reward = {
@@ -78,11 +77,12 @@ focus_tree = {
 		}
 	}
 
+	#military branch
 	focus = {
 		id = RUS_establish_gun_shop
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RUS_establish_dacha }
-		x = -2
+		x = -5
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_dacha
@@ -94,6 +94,14 @@ focus_tree = {
 				technology = musket_tech
 				technology = cartridges_tech
 			}
+			389 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -101,7 +109,7 @@ focus_tree = {
 		id = RUS_war_gaming
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = RUS_establish_gun_shop }
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_gun_shop
@@ -115,15 +123,80 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = RUS_expand_streltzi
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RUS_war_gaming }
+		mutually_exclusive = { focus = RUS_expand_boyar_cavalry }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = RUS_war_gaming
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_streltzi_1
+				add_idea = RUS_streltzi_2
+			}
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_expand_boyar_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = RUS_war_gaming }
+		mutually_exclusive = { focus = RUS_expand_streltzi }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = RUS_war_gaming
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_boyar_cavalry_1
+				add_idea = RUS_boyar_cavalry_2
+			}
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
 	
 	focus = {
 		id = RUS_ak3
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = RUS_war_gaming }
-		x = 0
-		y = 2
+		prerequisite = { focus = RUS_establish_gun_shop }
+		x = 2
+		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_gun_shop
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = ak3_tech_bonus
+				bonus = 0.5
+				uses = 1
+				technology = flintlock_tech
+			}
+			random_state = {
+				limit = { has_state_flag = RUS_ak3_arms }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ak3_tech_bonus
@@ -131,9 +204,149 @@ focus_tree = {
 				uses = 1
 				technology = flintlock_tech
 			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+					OR = {
+						distance_to = {
+							value > 500
+							target = 389
+						}
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									distance_to = {
+										value > 500
+										target = 389
+									}
+								}
+							}
+						}
+					}
+				}
+				set_state_flag = RUS_ak3_arms
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_new_cannon
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = RUS_ak3 }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_ak3
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = art_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			random_state = {
+				limit = { has_state_flag = RUS_new_cannon_arms }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = art_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+					OR = {
+						distance_to = {
+							value > 500
+							target = 389
+						}
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									distance_to = {
+										value > 500
+										target = 389
+									}
+								}
+							}
+						}
+					}
+				}
+				set_state_flag = RUS_new_cannon_arms
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
+	#tech/industry branch
 	focus = {
 		id = RUS_fresno_scrapers
 		icon = GFX_goal_generic_construct_infrastructure
@@ -157,7 +370,7 @@ focus_tree = {
 		id = RUS_russian_flight
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = RUS_fresno_scrapers }
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 		relative_position_id = RUS_fresno_scrapers
@@ -172,21 +385,416 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RUS_new_monetary_system
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = RUS_establish_dacha }
-		x = 2
+		id = RUS_new_ideas
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = RUS_russian_flight }
+		x = 0
 		y = 1
 		cost = 10
-		relative_position_id = RUS_establish_dacha
-		completion_reward = {
+		relative_position_id = RUS_russian_flight
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = research_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
 			if = {
-				limit = { has_idea = RUS_eastern_serfdom_1 }
+				limit = { has_country_flag = new_ideas_serfdom_1 }
 				swap_ideas = {
 					remove_idea = RUS_eastern_serfdom_1
 					add_idea = RUS_eastern_serfdom_2
 				}
 			}
+			if = {
+				limit = { has_country_flag = new_ideas_serfdom_2 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_2
+					add_idea = RUS_eastern_serfdom_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = new_ideas_serfdom_3 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_3
+					add_idea = RUS_eastern_serfdom_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = new_ideas_serfdom_4 }
+				remove_ideas = RUS_eastern_serfdom_4
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = research_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			if = {
+				limit = { has_idea = RUS_eastern_serfdom_1 }
+				set_country_flag = new_ideas_serfdom_1
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_2 }
+				set_country_flag = new_ideas_serfdom_2
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_3 }
+				set_country_flag = new_ideas_serfdom_3
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_4 }
+				set_country_flag = new_ideas_serfdom_4
+			}
+			lessen_RUS_serfdom = yes
+		}
+	}
+
+	focus = {
+		id = RUS_expand_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RUS_fresno_scrapers }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = RUS_fresno_scrapers
+		available = {
+			has_tech = infrastructure_tech_1
+		}
+		completion_reward = {
+			add_ideas = RUS_infrastructure
+			389 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			390 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			391 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			385 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_build_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_expand_infrastructure }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_expand_infrastructure
+		available = {
+		}
+		completion_reward = {
+			389 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			390 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			391 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			385 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RUS_siberian_expansion
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = RUS_build_factories }
+		prerequisite = { focus = RUS_new_monetary_system }
+		x = 3
+		y = 1
+		cost = 20
+		relative_position_id = RUS_build_factories
+		available = {
+			OR = {
+				owns_state = 215
+				owns_state = 393
+				owns_state = 398
+				owns_state = 399
+				owns_state = 400
+				owns_state = 401
+				owns_state = 402
+				owns_state = 403
+				owns_state = 404
+			}
+		}
+		bypass = {
+
+		}
+		complete_tooltip = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 215
+						state = 393
+						state = 398
+						state = 399
+						state = 400
+						state = 401
+						state = 402
+						state = 403
+						state = 404
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_country_flag = siberian_ex_serfdom_1 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_1
+					add_idea = RUS_eastern_serfdom_2
+				}
+			}
+			if = {
+				limit = { has_country_flag = siberian_ex_serfdom_2 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_2
+					add_idea = RUS_eastern_serfdom_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = siberian_ex_serfdom_3 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_3
+					add_idea = RUS_eastern_serfdom_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = siberian_ex_serfdom_4 }
+				remove_ideas = RUS_eastern_serfdom_4
+			}
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 215
+						state = 393
+						state = 398
+						state = 399
+						state = 400
+						state = 401
+						state = 402
+						state = 403
+						state = 404
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = RUS_eastern_serfdom_1 }
+				set_country_flag = siberian_ex_serfdom_1
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_2 }
+				set_country_flag = siberian_ex_serfdom_2
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_3 }
+				set_country_flag = siberian_ex_serfdom_3
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_4 }
+				set_country_flag = siberian_ex_serfdom_4
+			}
+			lessen_RUS_serfdom = yes
+		}
+	}
+
+	#political branch
+	focus = {
+		id = RUS_slow_fever
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = RUS_establish_dacha }
+		x = 4
+		y = 1
+		cost = 10
+		relative_position_id = RUS_establish_dacha
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_serfdom_abolished.tt
+				NOT = {
+					has_idea = RUS_eastern_serfdom_1
+					has_idea = RUS_eastern_serfdom_2
+					has_idea = RUS_eastern_serfdom_3
+					has_idea = RUS_eastern_serfdom_4
+				}				
+			}
+		}
+		complete_tooltip = {
+			if = {
+				limit = { has_country_flag = slow_fever_serfdom_1 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_1
+					add_idea = RUS_eastern_serfdom_2
+				}
+			}
+			if = {
+				limit = { has_country_flag = slow_fever_serfdom_2 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_2
+					add_idea = RUS_eastern_serfdom_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = slow_fever_serfdom_3 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_3
+					add_idea = RUS_eastern_serfdom_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = slow_fever_serfdom_4 }
+				remove_ideas = RUS_eastern_serfdom_4
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_eastern_serfdom_1 }
+				set_country_flag = slow_fever_serfdom_1
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_2 }
+				set_country_flag = slow_fever_serfdom_2
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_3 }
+				set_country_flag = slow_fever_serfdom_3
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_4 }
+				set_country_flag = slow_fever_serfdom_4
+			}
+			lessen_RUS_serfdom = yes
+		}
+	}
+	
+	focus = {
+		id = RUS_new_monetary_system
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = RUS_slow_fever }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = RUS_slow_fever
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_serfdom_abolished.tt
+				NOT = {
+					has_idea = RUS_eastern_serfdom_1
+					has_idea = RUS_eastern_serfdom_2
+					has_idea = RUS_eastern_serfdom_3
+					has_idea = RUS_eastern_serfdom_4
+				}				
+			}
+		}
+		complete_tooltip = {
+			if = {
+				limit = { has_country_flag = new_money_serfdom_1 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_1
+					add_idea = RUS_eastern_serfdom_2
+				}
+			}
+			if = {
+				limit = { has_country_flag = new_money_serfdom_2 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_2
+					add_idea = RUS_eastern_serfdom_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = new_money_serfdom_3 }
+				swap_ideas = {
+					remove_idea = RUS_eastern_serfdom_3
+					add_idea = RUS_eastern_serfdom_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = new_money_serfdom_4 }
+				remove_ideas = RUS_eastern_serfdom_4
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_eastern_serfdom_1 }
+				set_country_flag = new_money_serfdom_1
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_2 }
+				set_country_flag = new_money_serfdom_2
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_3 }
+				set_country_flag = new_money_serfdom_3
+			}
+			else_if = {
+				limit = { has_idea = RUS_eastern_serfdom_4 }
+				set_country_flag = new_money_serfdom_4
+			}
+			lessen_RUS_serfdom = yes
 		}
 	}
 	

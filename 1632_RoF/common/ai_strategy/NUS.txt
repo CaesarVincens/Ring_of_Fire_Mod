@@ -1,5 +1,5 @@
 # Written by Henrik "Groogy" Hansson
-# Modified by Daniel "Da9L" Sjöberg
+# Modified by Daniel "Da9L" Sjï¿½berg
 
 # befriend
 # conquer
@@ -24,17 +24,7 @@ NUS_unit_production = {
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = spears
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = tercio
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = line_inf
+		id = infantry
 		value = 80
 	}
 

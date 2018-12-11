@@ -360,8 +360,11 @@ country_event = {
 		name = RoF_CoC.020.c
 		trigger = {
 			OR = {
-				liberal < 0.3
 				radical < 0.3
+				and = {
+					liberal < 0.3
+					radical < 0.6
+				}
 			}
 		}
 		country_event = { id = RoF_CoC.023 }
@@ -650,7 +653,7 @@ country_event = {
 			radical < 0.3
 		}
 		add_popularity = {
-			ideology = liberal
+			ideology = radical
 			popularity = 0.1
 		}
 		add_to_variable = { var = CoC_strength value = -5 }

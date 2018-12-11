@@ -242,7 +242,7 @@ ideas = {
 						has_government = liberal
 						has_war = yes
 						any_enemy_country = {
-							ic_ratio = { 
+							ic_ratio = {
 								tag = ROOT 
 								ratio > 0.2
 							}

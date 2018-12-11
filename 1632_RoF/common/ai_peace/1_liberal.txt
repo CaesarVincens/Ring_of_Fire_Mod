@@ -52,7 +52,7 @@ liberal_peace = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 100
 			original_tag = NUS
 			FROM = { is_german_tag = yes }
 		}

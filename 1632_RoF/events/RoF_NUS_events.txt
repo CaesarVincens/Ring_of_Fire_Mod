@@ -91,6 +91,17 @@ country_event = {
 		add_manpower = 6000
 		hidden_effect = {
 			set_country_flag = NUS_welcome_refugees_flag
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = NUS_conscript_refugees
+							has_completed_focus = NUS_welcome_refugees
+						}
+					}
+				}
+			complete_national_focus = NUS_welcome_refugees
+			}
 		}
 		ai_chance = { base = 75 }
 	}
@@ -100,6 +111,17 @@ country_event = {
 		add_manpower = 6000
 		hidden_effect = {
 			set_country_flag = NUS_conscript_refugees_flag
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = NUS_conscript_refugees
+							has_completed_focus = NUS_welcome_refugees
+						}
+					}
+				}
+			complete_national_focus = NUS_conscript_refugees
+			}
 		}
 		ai_chance = {
 			base = 25
@@ -121,10 +143,44 @@ country_event = {
 	
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = NUS
-		date > 1631.9.15
+	#trigger = {
+	#	tag = NUS
+	#	date > 1631.9.15
+	#}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NUS_battle_of_jena
+			set_country_flag = NUS_start_CoC
+			set_global_flag = CoC_established
+			create_country_leader = {
+				name = "Gretchen Richterin"
+				ideology = radical_democracy
+				#picture
+			}
+			set_party_name = {
+				ideology = radical
+				long_name = NUS_coc_long
+				name = NUS_coc
+			}
+		}
 	}
+
+	option = {
+		name = RoF_NUS.112.a
+	}
+}
+
+#battle of Jena
+news_event = {
+	id = RoF_NUS.113
+	title = RoF_NUS.113.t
+	desc = RoF_NUS.113.d
+	
+	picture = GFX_report_event_scottish_mercenaries
+	
+	fire_only_once = yes
+	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
@@ -140,81 +196,65 @@ country_event = {
 	}
 
 	option = {
-		name = RoF_NUS.112.a
+		name = RoF_NUS.113.a
 	}
 }
 
 #NUS wants to incorporate SXW
 country_event = {
 	id = RoF_NUS.120
-	title = {
-		text = RoF_NUS.120.ta
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
+	title = RoF_NUS.120.tb
+	desc = RoF_NUS.120.db
+
+	picture = GFX_report_event_nus_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.120.c
+		ai_chance = { base = 100 }
+		set_country_flag = SXW_accept_invite
+		NUS = {
+			country_event = { id = RoF_NUS.121 }
+		}
+		if = {
+			limit = { num_of_controlled_states < 3 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name =  RoF_NUS.120.d
+		set_country_flag = SXW_refuse_invite
+		NUS = {
+			country_event = { id = RoF_NUS.121 }
 		}
 	}
-	title = {
-		text = RoF_NUS.120.tb
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-	}
-	desc = {
-		text = RoF_NUS.120.da
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
-		}
-	}
-	desc = {
-		text = RoF_NUS.120.db
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-	}
+}
+#NUS wants to incorporate SXW
+country_event = {
+	id = RoF_NUS.1201
+	title = RoF_NUS.120.ta
+	desc = RoF_NUS.120.da
+
 	picture = GFX_report_event_nus_flag
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
 		name =  RoF_NUS.120.a
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
-		}
 		ai_chance = { base = 100 }
 		set_country_flag = SXW_accept_demand
 		NUS = {
 			country_event = { id = RoF_NUS.121 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		if = {
+			limit = { num_of_controlled_states < 3 }
+			custom_effect_tooltip = GAME_OVER_TT
+		}
 	}
 	option = { # Refuse
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
-		}
 		name =  RoF_NUS.120.b
 		set_country_flag = SXW_refuse_demand
-		NUS = {
-			country_event = { id = RoF_NUS.121 }
-		}
-	}
-	option = { # Accept
-		name =  RoF_NUS.120.c
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-		ai_chance = { base = 100 }
-		set_country_flag = SXW_accept_invite
-		NUS = {
-			country_event = { id = RoF_NUS.121 }
-		}
-		custom_effect_tooltip = GAME_OVER_TT
-	}
-	option = { # Refuse
-		name =  RoF_NUS.120.d
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-		set_country_flag = SXW_refuse_invite
 		NUS = {
 			country_event = { id = RoF_NUS.121 }
 		}
@@ -228,25 +268,25 @@ country_event = {
 	desc = {
 		text = RoF_NUS.121.da
 		trigger = {
-			SXW = { has_country_flag = SXW_refuse_demand }
+			FROM = { has_country_flag = SXW_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.121.db
 		trigger = {
-			SXW = { has_country_flag = SXW_accept_demand }
+			FROM = { has_country_flag = SXW_accept_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.121.dc
 		trigger = {
-			SXW = { has_country_flag = SXW_refuse_invite }
+			FROM = { has_country_flag = SXW_refuse_invite }
 		}
 	}
 	desc = {
 		text = RoF_NUS.121.dd
 		trigger = {
-			SXW = { has_country_flag = SXW_accept_invite }
+			FROM = { has_country_flag = SXW_accept_invite }
 		}
 	}
 	picture = GFX_report_event_nus_flag
@@ -256,19 +296,35 @@ country_event = {
 	option = {
 		name = RoF_NUS.121.a
 		trigger = {
-			SXW = { has_country_flag = SXW_refuse_demand }
+			FROM = { has_country_flag = SXW_refuse_demand }
 		}
 		create_wargoal = {
-			target = SXW
-			type = annex_everything
+			target = FROM
+			type = take_state_focus
+			generator = {
+				579 580
+			}
 		}
 	}
 	option = {
 		name = RoF_NUS.121.b
 		trigger = {
-			SXW = { has_country_flag = SXW_accept_demand }
+			FROM = { has_country_flag = SXW_accept_demand }
 		}
-		annex_country = { target = SXW }
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						has_state_flag = NUS_thur_inv
+					}
+				}
+			}
+			annex_country = { target = FROM }
+		}
+		else = {
+			transfer_state = 579
+			transfer_state = 580
+		}
 		add_state_core = 579
 		add_state_core = 580
 		hidden_effect = {
@@ -280,15 +336,28 @@ country_event = {
 	option = {
 		name = RoF_NUS.121.c
 		trigger = {
-			SXW = { has_country_flag = SXW_refuse_invite }
+			FROM = { has_country_flag = SXW_refuse_invite }
 		}
 	}
 	option = {
 		name = RoF_NUS.121.d
 		trigger = {
-			SXW = { has_country_flag = SXW_accept_invite }
+			FROM = { has_country_flag = SXW_accept_invite }
 		}
-		annex_country = { target = SXW transfer_troops = yes }
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						has_state_flag = NUS_thur_inv
+					}
+				}
+			}
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+		else = {
+			transfer_state = 579
+			transfer_state = 580
+		}
 		add_state_core = 579
 		add_state_core = 580
 		hidden_effect = {
@@ -302,74 +371,59 @@ country_event = {
 # NUS wants to Annex Magdeburg
 country_event = {
 	id = RoF_NUS.122
-	title = {
-		text = RoF_NUS.122.ta
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
+	title = RoF_NUS.122.tb
+	desc = RoF_NUS.122.db
+
+	picture = GFX_report_event_nus_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.122.c
+		ai_chance = { base = 100 }
+		set_country_flag = MAG_accept_offer
+		NUS = {
+			country_event = { id = RoF_NUS.123 }
+		}
+		if = {
+			limit = { num_of_controlled_states < 2 }
+			custom_effect_tooltip = GAME_OVER_TT
 		}
 	}
-	title = {
-		text = RoF_NUS.122.tb
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
+	option = { # Refuse
+		name =  RoF_NUS.122.d
+		set_country_flag = MAG_refuse_offer
+		NUS = {
+			country_event = { id = RoF_NUS.123 }
 		}
 	}
-	desc = {
-		text = RoF_NUS.122.da
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
-		}
-	}
-	desc = {
-		text = RoF_NUS.122.db
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-	}
+}
+
+# NUS wants to Annex Magdeburg
+country_event = {
+	id = RoF_NUS.1221
+	title = RoF_NUS.122.ta
+	desc = RoF_NUS.122.da
+
 	picture = GFX_report_event_nus_flag
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
 		name =  RoF_NUS.122.a
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
-		}
 		ai_chance = { base = 100 }
 		set_country_flag = MAG_accept_demand
 		NUS = {
 			country_event = { id = RoF_NUS.123 }
 		}
-		custom_effect_tooltip = GAME_OVER_TT
+		if = {
+			limit = { num_of_controlled_states < 2 }
+			custom_effect_tooltip = GAME_OVER_TT
+		}
 	}
 	option = { # Refuse
 		name =  RoF_NUS.122.b
-		trigger = {
-			NUS = { has_country_flag = demand_thuringia }
-		}
 		set_country_flag = MAG_refuse_demand
-		NUS = {
-			country_event = { id = RoF_NUS.123 }
-		}
-	}
-	option = { # Accept
-		name =  RoF_NUS.122.c
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-		ai_chance = { base = 100 }
-		set_country_flag = MAG_accept_offer
-		NUS = {
-			country_event = { id = RoF_NUS.123 }
-		}
-		custom_effect_tooltip = GAME_OVER_TT
-	}
-	option = { # Refuse
-		name =  RoF_NUS.122.d
-		trigger = {
-			NUS = { has_country_flag = invite_thuringia }
-		}
-		set_country_flag = MAG_refuse_offer
 		NUS = {
 			country_event = { id = RoF_NUS.123 }
 		}
@@ -383,25 +437,25 @@ country_event = {
 	desc = {
 		text = RoF_NUS.123.da
 		trigger = {
-			MAG = { has_country_flag = MAG_refuse_demand }
+			FROM = { has_country_flag = MAG_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.123.db
 		trigger = {
-			MAG = { has_country_flag = MAG_accept_demand }
+			FROM = { has_country_flag = MAG_accept_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.123.dc
 		trigger = {
-			MAG = { has_country_flag = MAG_refuse_offer }
+			FROM = { has_country_flag = MAG_refuse_offer }
 		}
 	}
 	desc = {
 		text = RoF_NUS.123.dd
 		trigger = {
-			MAG = { has_country_flag = MAG_accept_offer }
+			FROM = { has_country_flag = MAG_accept_offer }
 		}
 	}
 	picture = GFX_report_event_nus_flag
@@ -411,19 +465,32 @@ country_event = {
 	option = {
 		name = RoF_NUS.123.a
 		trigger = {
-			MAG = { has_country_flag = MAG_refuse_demand }
+			FROM = { has_country_flag = MAG_refuse_demand }
 		}
 		create_wargoal = {
-			target = MAG
-			type = annex_everything
+			target = FROM
+			type = take_state_focus
+			generator = {
+				247
+			}
 		}
 	}
 	option = {
 		name = RoF_NUS.123.b
 		trigger = {
-			MAG = { has_country_flag = MAG_accept_demand }
+			FROM = { has_country_flag = MAG_accept_demand }
 		}
-		annex_country = { target = MAG }
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = { has_state_flag = NUS_magd_inv }
+				}
+			}
+			annex_country = { target = FROM }
+		}
+		else = {
+			transfer_state = 247
+		}
 		#add_state_core = 247
 		hidden_effect = {
 			NUS = {
@@ -434,15 +501,25 @@ country_event = {
 	option = {
 		name = RoF_NUS.123.c
 		trigger = {
-			MAG = { has_country_flag = MAG_refuse_offer }
+			FROM = { has_country_flag = MAG_refuse_offer }
 		}
 	}
 	option = {
 		name = RoF_NUS.123.d
 		trigger = {
-			MAG = { has_country_flag = MAG_accept_offer }
+			FROM = { has_country_flag = MAG_accept_offer }
 		}
-		annex_country = { target = MAG }
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = { has_state_flag = NUS_magd_inv }
+				}
+			}
+			annex_country = { target = FROM transfer_troops = yes }
+		}
+		else = {
+			transfer_state = 247
+		}
 		add_state_core = 247
 		hidden_effect = {
 			NUS = {
@@ -485,13 +562,13 @@ country_event = {
 	desc = {
 		text = RoF_NUS.125.da
 		trigger = {
-			SAX = { has_country_flag = SAX_refuse_demand }
+			FROM = { has_country_flag = SAX_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.125.db
 		trigger = {
-			SAX = { has_country_flag = SAX_accept_demand }
+			FROM = { has_country_flag = SAX_accept_demand }
 		}
 	}
 	picture = GFX_report_event_nus_flag
@@ -501,18 +578,18 @@ country_event = {
 	option = {
 		name = RoF_NUS.125.a
 		trigger = {
-			SAX = { has_country_flag = SAX_refuse_demand }
+			FROM = { has_country_flag = SAX_refuse_demand }
 		}
 		create_wargoal = {
-			target = SAX
-			type = take_claimed_state
+			target = FROM
+			type = take_state_focus
 			generator = { 412 }
 		}
 	}
 	option = {
 		name = RoF_NUS.125.b
 		trigger = {
-			SAX = { has_country_flag = SAX_accept_demand }
+			FROM = { has_country_flag = SAX_accept_demand }
 		}
 		transfer_state = 412
 		#add_state_core = 412
@@ -558,21 +635,21 @@ country_event = {
 	desc = {
 		text = RoF_NUS.127.da
 		trigger = {
-			WRZ = { has_country_flag = WRZ_refuse_demand }
+			FROM = { has_country_flag = WRZ_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.127.db
 		trigger = {
 			HES = { has_capitulated = no }
-			WRZ = { has_country_flag = WRZ_accept_demand }
+			FROM = { has_country_flag = WRZ_accept_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.127.dc
 		trigger = {
 			HES = { OR = { has_capitulated = yes exists = no } }
-			WRZ = { has_country_flag = WRZ_accept_demand }
+			FROM = { has_country_flag = WRZ_accept_demand }
 		}
 	}
 	picture = GFX_report_event_nus_flag
@@ -582,17 +659,36 @@ country_event = {
 	option = {
 		name = RoF_NUS.127.a
 		trigger = {
-			WRZ = { has_country_flag = WRZ_refuse_demand }
+			FROM = { has_country_flag = WRZ_refuse_demand }
 		}
 		create_wargoal = {
-			target = WRZ
-			type = annex_everything
+			target = FROM
+			type = take_state_focus
+			generator = {
+				577 578 461
+			}
 		}
 	}
 	option = {
 		name = RoF_NUS.127.b
 		trigger = {
-			WRZ = { has_country_flag = WRZ_accept_demand }
+			FROM = { has_country_flag = WRZ_accept_demand }
+		}
+
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						has_state_flag = NUS_franc_inv
+					}
+				}
+			}
+			annex_country = { target = FROM }
+		}
+		else = {
+			transfer_state = 577
+			transfer_state = 578
+			transfer_state = 461
 		}
 		if = {
 			limit = {
@@ -603,8 +699,7 @@ country_event = {
 			}
 			HES = { transfer_state = 577 }
 		}
-		annex_country = { target = WRZ }
-		add_state_core = 247
+		#add_state_core = 247
 		hidden_effect = {
 			NUS = {
 				news_event = { days = 1 id = RoF_news.14 }
@@ -1101,7 +1196,7 @@ country_event = {
 	option = {
 		name = RoF_NUS.151.a
 		dismantle_faction = yes
-		create_faction = "Confederated Principalities of Europe"
+		create_faction = CPOE_faction
 		NUS = {
 			if = {
 				limit = {

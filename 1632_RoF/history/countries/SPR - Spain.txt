@@ -18,7 +18,12 @@ prerof_man_of_war = 1
 # Research Bonuses
 set_convoys = 250
 
-
+NSP = {
+	set_country_flag = colony_flag
+}
+SPU = {
+	set_country_flag = colony_flag
+}
 # DIPLOMACY
     #set_autonomy = {
     #    target = SPN
@@ -45,12 +50,6 @@ set_convoys = 250
         autonomous_state = autonomy_rof_auto_province
         freedom_level = 0.5
     }
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = SPR_research
-}
 
 set_politics = {
 

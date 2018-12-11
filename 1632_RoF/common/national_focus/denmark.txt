@@ -203,25 +203,26 @@ focus_tree = {
 		y = 1
 		complete_tooltip = {
 			navy_experience = 25
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
+			random_state = {
+				limit = { has_state_flag = DEN_naval_buildup_state }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
 			}
 		}
 		completion_reward = {
 			navy_experience = 25
 			if = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 3
+							include_locked = yes
 						}
 					}
 					any_owned_state = {
@@ -233,7 +234,7 @@ focus_tree = {
 						is_coastal = yes
 						free_building_slots = {
 							building = dockyard
-							size > 2
+							size > 3
 							include_locked = yes
 						}
 					}
@@ -243,14 +244,11 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
+					set_state_flag = DEN_naval_buildup_state
 				}
-				set_country_flag = naval_effort_built
 			}
-			if = {
+			else_if = {
 				limit = {
-					NOT = {
-						has_country_flag = naval_effort_built
-					}
 					any_owned_state = {
 						dockyard > 0
 						free_building_slots = {
@@ -275,24 +273,10 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
+					set_state_flag = DEN_naval_buildup_state
 				}
-				set_country_flag = naval_effort_built
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = naval_effort_built
-					}
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-				}
+			else = {
 				random_state = {
 					limit = {
 						controller = {
@@ -310,22 +294,13 @@ focus_tree = {
 						level = 3
 						instant_build = yes
 					}
+					set_state_flag = DEN_naval_buildup_state
 				}
 			}
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
 		}
-
 	}
 
 	focus = {
@@ -397,6 +372,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	####################
 	#  POLITICAL TREE  #
@@ -467,9 +445,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = DEN_establish_workshops }
 		mutually_exclusive = { focus = DEN_ally_americans }
-		relative_position_id = DEN_handle_Rigsradet
+		relative_position_id = DEN_establish_workshops
 		x = -1
-		y = 3
+		y = 1
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = DEN_ostend_league.tt
@@ -596,9 +574,9 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = { focus = DEN_invest_lubeck }
-		relative_position_id = DEN_ostend_league
-		x = -2
-		y = 3
+		relative_position_id = DEN_invest_lubeck
+		x = -1
+		y = 1
 		available = {
 			has_war_with = SWE
 			SWE = { has_capitulated = yes }
@@ -623,9 +601,9 @@ focus_tree = {
 		icon = GFX_focus_CZE_german_puppet
 		cost = 10
 		prerequisite = { focus = DEN_invest_lubeck }
-		relative_position_id = DEN_ostend_league
-		x = 0
-		y = 3
+		relative_position_id = DEN_invest_lubeck
+		x = 1
+		y = 1
 		available = {
 			has_war_with = SWE
 			has_capitulated = yes
@@ -648,9 +626,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = DEN_establish_workshops }
 		mutually_exclusive = { focus = DEN_ostend_league }
-		relative_position_id = DEN_handle_Rigsradet
+		relative_position_id = DEN_establish_workshops
 		x = 1
-		y = 3
+		y = 1
 		available = {
 			NOT = {
 				has_war_with = NUS
@@ -918,6 +896,9 @@ focus_tree = {
 			if = {
 				limit = { 135 = { is_owned_by = WNA } }
 				transfer_state = 135
+			}
+			else = {
+				custom_effect_tooltip = DEN_expand_HBC.tt
 			}
 			#hudson bay
 		}

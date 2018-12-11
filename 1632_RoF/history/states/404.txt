@@ -4,7 +4,7 @@ state = {
 	name = "STATE_404"
 
 	history = {
-		owner = SOV
+		owner = RUS
 		victory_points = {
 			6085 3 
 		}
@@ -15,7 +15,7 @@ state = {
 			air_base = 0
 
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 
 	}
 

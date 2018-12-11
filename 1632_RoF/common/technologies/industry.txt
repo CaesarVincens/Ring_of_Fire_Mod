@@ -698,10 +698,6 @@ technologies = {
 			leads_to_tech = oil_processing 
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = rubber_processing 
-			research_cost_coeff = 1
-		}
 		
 		research_cost = 3
 		start_year = 1634

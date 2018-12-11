@@ -1,26 +1,31 @@
-state = {
-	id = 475
-	name= "STATE_475"
-	manpower = 670960
 
-	resources = {
-		aluminium = 21
+state={
+	id=475
+	name="STATE_475"
+	resources={
+		aluminium=21.000
 	}
-	state_category = city
 
-	history = {
+	history={
 		owner = SWI
-		victory_points = { 9620 8 }
+		victory_points = {
+			9620 8 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
+
 		}
 		add_core_of = SWI
+
 	}
 
-	provinces = {
-		3612 6666 6683 9587 9618 9620 9622 9638 11590 
+	provinces={
+		3612 6666 6683 9587 9618 9620 9622 9638 11590 13124 
 	}
+	manpower=670960
+	buildings_max_level_factor=1.000
+	state_category=city
 }

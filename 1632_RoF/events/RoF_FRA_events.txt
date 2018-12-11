@@ -170,7 +170,7 @@ country_event = {
 		}
 		C13 = {
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = NFR
+			set_cosmetic_tag = New_France
 		}
 		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
 	}
@@ -323,4 +323,3 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
-

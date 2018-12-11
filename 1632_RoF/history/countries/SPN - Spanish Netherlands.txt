@@ -18,12 +18,6 @@ prerof_man_of_war = 1
 set_convoys = 100
 
 
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = SPR_research
-}
-
 set_politics = {
 
     parties = {

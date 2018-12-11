@@ -49,7 +49,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SOV_flintlock_tech_medium"
+		name = "GFX_RUS_flintlock_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 
@@ -70,7 +70,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SOV_caplock_tech_medium"
+		name = "GFX_RUS_caplock_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 
@@ -86,7 +86,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SOV_repeating_rifle_tech_medium"
+		name = "GFX_RUS_repeating_rifle_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 

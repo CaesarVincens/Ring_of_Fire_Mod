@@ -57,7 +57,7 @@ country_event = {
 				limit = { is_in_faction_with = SWE }
 				SWE = {
 					dismantle_faction = yes
-					create_faction = "Vasa Empire"
+					create_faction = Vasa_Empire
 					add_to_faction = PREV
 				}
 			}
@@ -473,13 +473,13 @@ country_event = {
 	desc = {
 		text = RoF_USE.111.da
 		trigger = {
-			HAM = { has_country_flag = HAM_refuse_demand }
+			FROM = { has_country_flag = HAM_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_USE.111.db
 		trigger = {
-			HAM = { has_country_flag = HAM_accept_demand }
+			FROM = { has_country_flag = HAM_accept_demand }
 		}
 	}
 	picture = GFX_report_event_use_flag
@@ -489,25 +489,24 @@ country_event = {
 	option = {
 		name = RoF_USE.111.a
 		trigger = {
-			HAM = { has_country_flag = HAM_refuse_demand }
+			FROM = { has_country_flag = HAM_refuse_demand }
 		}
 		create_wargoal = {
-			target = HAM
-			type = annex_everything
+			target = FROM
+			type = take_state_focus
+			generator = {
+				168
+			}
 		}
 	}
 	option = {
 		name = RoF_USE.111.b
 		trigger = {
-			HAM = { has_country_flag = HAM_accept_demand }
+			FROM = { has_country_flag = HAM_accept_demand }
 		}
-		annex_country = { target = HAM }
-		#add_state_core = 168
-		load_oob = "NUS_Hamburg_navy"
+		transfer_state = 168
 		hidden_effect = {
-			NUS = {
-				#news_event = { days = 1 id = RoF_news.12 }
-			}
+			load_oob = "NUS_Hamburg_navy"
 		}
 	}
 }
@@ -690,6 +689,15 @@ country_event = {
 		white_peace = FRA
 		SWE = { white_peace = FRA }
 		FRA = { dismantle_faction = yes }
+		hidden_effect = {
+			DEN = {
+				every_owned_state = {
+					DEN = {
+						set_state_controller = PREV
+					}
+				}
+			}
+		}
 	}
 }
 

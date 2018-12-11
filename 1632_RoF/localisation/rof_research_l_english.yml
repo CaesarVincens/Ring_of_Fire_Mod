@@ -61,3 +61,4 @@
  ironclad_desc:0 "Ironclad ships have heavy armor protecting their freeboard, the hull above water. The use of steam or internal combustion to drive them means not depending on wind for maneuverability, but does limit their effective range."
  tercio_formation_focus_tech:0 "Tercio Formations"
  swedish_line_tech:0 "Swedish Line Tactics"
+ firearms_weapons_research:0 "Firearm Research Time"

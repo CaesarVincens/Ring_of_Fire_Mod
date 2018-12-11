@@ -65,7 +65,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = arquebus_equipment
-			creator = "SOV"
+			creator = "RUS"
 		}
 		requested_factories = 1
 		progress = 0.88

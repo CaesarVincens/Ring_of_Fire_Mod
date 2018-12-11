@@ -10,7 +10,7 @@ FRA_minor_decisions = {
 			has_war_with = NUS
 		}
 		available = {
-			has_tech = cardinal_rifle_tech
+			has_tech = caplock_tech
 		}
 		days_remove = 15
 		remove_effect = {

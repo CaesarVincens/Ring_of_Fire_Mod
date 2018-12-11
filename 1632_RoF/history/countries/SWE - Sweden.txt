@@ -39,13 +39,8 @@ set_convoys = 100
  #       freedom_level = 0.6
  #   }
 
-if = {
-    limit = { has_dlc = "Together for Victory" }
 
-    add_to_tech_sharing_group = SWE_research
-}
-
-diplomatic_relation = { country = SOV relation = non_aggression_pact }
+diplomatic_relation = { country = RUS relation = non_aggression_pact active = yes }
 
 set_politics = {
 
@@ -154,5 +149,17 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Lennart Torstenson"
+	picture = "Portrait_Sweden_Lennart_Torstenson.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
 
 }

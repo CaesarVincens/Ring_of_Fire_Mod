@@ -35,6 +35,11 @@ leader_traits = {
 		}
 	}
 	
+	crippled = {
+		random =  no
+		political_power_gain = -0.05
+	}
+	
 	filaret_trait = {
 		random = no
 		political_power_gain = 0.25
@@ -118,6 +123,45 @@ leader_traits = {
 		neutrality_drift = 0.1
 		ai_will_do = {
 			factor = 0
+		}
+	}
+
+	light_airframe_manufacturer = {
+		random = no
+		equipment_bonus = {
+			single_plane_equipment = {
+				air_agility = 0.1 maximum_speed = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	heavy_airframe_manufacturer = {
+		random = no
+		equipment_bonus = {
+			multi_plane_equipment = {
+				air_ground_attack = 0.1 reliability = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	airship_manufacturer = {
+		random = no
+		equipment_bonus = {
+			airship_equipment = {
+				air_range = 0.1 reliability = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
 		}
 	}
 

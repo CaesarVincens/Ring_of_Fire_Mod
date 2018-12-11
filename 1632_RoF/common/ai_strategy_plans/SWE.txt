@@ -32,11 +32,11 @@ SWE_ignore_russia = {
 		original_tag = SWE
 	}
 	abort = {
-		has_war_with = SOV
+		has_war_with = RUS
 	}
 	ai_strategy = {
 		type = ignore
-		id = "SOV"
+		id = "RUS"
 		value = 1000
 	}
 }

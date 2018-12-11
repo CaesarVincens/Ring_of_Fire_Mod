@@ -857,7 +857,7 @@ SLO = {
 	callsigns = {
 	}
 }
-SOV = {
+RUS = {
 	male = {
 		names = {
 			"Aleksandr" "Alexei" "Andrei" "Anton" "Boris" "Dmitry" "Fyodor" "Gennady" "Giorgi" "Grigoriy"

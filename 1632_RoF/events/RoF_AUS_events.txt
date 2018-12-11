@@ -240,7 +240,7 @@ country_event = {
 	title = RoF_AUS.105.t
 	picture = GFX_report_event_scottish_mercenaries
 	desc = RoF_AUS.105.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	

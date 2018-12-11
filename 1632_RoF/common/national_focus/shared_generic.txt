@@ -735,7 +735,7 @@
 				uses = 1
 				category = heavy_artillery
 			}
-		
+
 		}
 
 	}
@@ -772,7 +772,7 @@
 		completion_reward = {
 			set_technology = {
 				swedish_line_tech = 1
-			}		
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 0.5
@@ -800,7 +800,7 @@
 				uses = 1
 				category = light_artillery
 			}
-		
+
 		}
 
 	}
@@ -1704,4 +1704,4 @@
 		}
 
 	}
-	
+

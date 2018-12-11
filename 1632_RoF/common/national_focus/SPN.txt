@@ -55,6 +55,10 @@ focus_tree = {
 				gfx = "GFX_leader_SPN_Don_Fernando"
 				traits = {}
 				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
 			}
 		}
 		ai_will_do = {

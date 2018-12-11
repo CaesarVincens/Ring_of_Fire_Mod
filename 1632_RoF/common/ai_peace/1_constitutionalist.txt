@@ -51,6 +51,10 @@ constitutionalist_peace = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			has_annex_war_goal = FROM
+		}
 	}
 
 	# ROOT = Taker, FROM = State
@@ -64,6 +68,18 @@ constitutionalist_peace = {
 				NOT = {
 					any_neighbor_state = { is_owned_by = ROOT }
 				}
+			}
+		}
+		modifier = {
+			factor = 10
+			FROM = {
+				is_claimed_by = ROOT
+			}
+		}
+		modifier = {
+			factor = 100
+			FROM = {
+				is_core_of = ROOT
 			}
 		}
 	}

@@ -1,15 +1,88 @@
 areas = {
 
+	scandinavian_region = {
+		strategic_regions = {
+			204
+			10
+			11
+			191
+			192
+			12
+			13
+		}
+	}
+
+	german_region = {
+		strategic_regions = {
+			8 #eastern germany
+			7 #Western Germany
+			6 #north-west Germany
+			205 #southern Germany
+			206 #central Germany
+			22
+		}
+	}
+
+	netherlands_region = {
+		strategic_regions = {
+			5
+		}
+	}
+
+	britain_region = {
+		strategic_regions = {
+			1
+			2
+			3
+			4
+		}
+	}
+
+	french_region = {
+		strategic_regions = {
+			19
+			20
+		}
+	}
+
+	iberian_region = {
+		strategic_regions = {
+			41
+		}
+	}
+	polish_region = {
+		strategic_regions = {
+			37
+			38
+			39
+			130
+			131
+		}
+	}
+
+	russian_region = {
+		strategic_regions = {
+			132
+			133
+			137
+			150
+			40
+			14
+			147
+			151
+		}
+	}
+
 	europe = {
 
-		continents = { 
+		continents = {
 			europe
 		}
 	}
 
 	north_america = {
 
-		continents = { 
+		continents = {
 			north_america 
 		}
 	}
@@ -31,7 +104,7 @@ areas = {
 	asia = {
 
 		continents = { 
-			asia 
+			asia
 		}
 	}
 
@@ -46,22 +119,22 @@ areas = {
 
 		strategic_regions = {
 			105 # Hawaii
-			180 # Micronesian Gap
-			97  # Eastern Micronesia
-			32  # South-Eastern Pacific
-			84  # Bismarck Sea
-			95  # West Emperor Sea
-			94  # Mariana Region
-			177 # Western North Pacific
-			172 # Pacific Line Ridge
-			78  # Phillipine Sea
 			109 # Peruvian Coast
 			160 # Phillipines
-			83  # Solomon Sea
 			167 # New Guinea
-			91  # Arafura Sea
+			172 # Pacific Line Ridge
+			177 # Western North Pacific
 			178 # West Polynesia
 			179 # French Polynesia
+			180 # Micronesian Gap
+			32  # South-Eastern Pacific
+			78  # Phillipine Sea
+			83  # Solomon Sea
+			84  # Bismarck Sea
+			91  # Arafura Sea
+			94  # Mariana Region
+			95  # West Emperor Sea
+			97  # Eastern Micronesia
 		}
 	}
 
@@ -73,16 +146,6 @@ areas = {
 			86  # Tasman Sea
 			98  # Great Australian Bight
 			81  # Coral Sea
-		}
-	}
-	
-	germany = {
-		strategic_regions = {
-			8 #eastern germany
-			7 #Western Germany
-			6 #north-west Germany
-			205 #southern Germany
-			206 #central Germany
 		}
 	}
 	

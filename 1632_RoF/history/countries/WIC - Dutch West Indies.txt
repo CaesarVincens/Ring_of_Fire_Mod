@@ -1,6 +1,6 @@
 ﻿capital = 554
 
-oob = "VOC_OOB"
+oob = "WIC_OOB"
 
 # Starting tech
 set_technology = {

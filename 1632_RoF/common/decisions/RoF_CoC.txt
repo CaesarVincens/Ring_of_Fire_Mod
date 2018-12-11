@@ -171,7 +171,10 @@ RoF_CoC_decisions = {
 							has_idea = drafted_army
 						}
 					}
-					liberal < 0.3
+					AND = {
+						liberal < 0.3
+						radical < 0.3
+					}
 					radical < 0.3
 				}
 			}
@@ -286,8 +289,6 @@ RoF_CoC_covert_decisions = {
 			}
 		}
 		target_trigger = {
-			has_government = radical
-			has_country_flag = CoC_present
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
@@ -333,8 +334,6 @@ RoF_CoC_covert_decisions = {
 			}
 		}
 		target_trigger = {
-			has_government = radical
-			has_country_flag = CoC_present
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
@@ -439,8 +438,6 @@ RoF_CoC_covert_decisions = {
 			}
 		}
 		target_trigger = {
-			has_government = radical
-			has_country_flag = CoC_present
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
@@ -879,7 +876,6 @@ RoF_CoC_Border_Clashes = {
 			NOT = { has_non_aggression_pact_with = FROM }
 		}
 		target_trigger = {
-			has_government = radical
 			FROM = {
 				has_variable = var:CoC_agitated_by
 			}
@@ -971,9 +967,6 @@ RoF_CoC_Border_Clashes = {
 		}
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 	}
 	CoC_border_conflict_incident_warning_defender = {
@@ -996,9 +989,6 @@ RoF_CoC_Border_Clashes = {
 		war_with_target_on_timeout = yes
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		days_mission_timeout = 30
@@ -1041,9 +1031,6 @@ RoF_CoC_Border_Clashes = {
 		war_with_target_on_timeout = yes
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		days_mission_timeout = 30
@@ -1084,9 +1071,6 @@ RoF_CoC_Border_Clashes = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		cancel_trigger = {
@@ -1163,9 +1147,6 @@ RoF_CoC_Border_Clashes = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		days_mission_timeout = 360
@@ -1217,9 +1198,6 @@ RoF_CoC_Border_Clashes = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		fire_only_once = yes #Reactivation handled in effect
@@ -1281,9 +1259,6 @@ RoF_CoC_Border_Clashes = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		days_remove = 15
@@ -1359,9 +1334,6 @@ RoF_CoC_Border_Clashes = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-
-			}
 		}
 
 		fire_only_once = yes #Reactivation handled in effect

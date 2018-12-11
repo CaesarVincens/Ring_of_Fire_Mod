@@ -18,7 +18,12 @@ prerof_man_of_war = 1
 # Research Bonuses
 set_convoys = 150
 
-
+SCO = {
+	set_country_flag = crown_union_flag
+}
+C13 = {
+	set_country_flag = colony_flag
+}
 # DIPLOMACY
     set_autonomy = {
         target = SCO
@@ -30,12 +35,6 @@ set_convoys = 150
         autonomous_state = autonomy_rof_colony
         freedom_level = 0.75
     }
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = ENG_research
-}
 
 set_politics = {
 

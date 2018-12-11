@@ -16,6 +16,9 @@ NUS_major_decisions = {
 		
 		timeout_effect = {
 			add_political_power = -40
+			hidden_effect = {
+				news_event = { id = RoF_NUS.113 }
+			}
 		}
 		complete_effect = {
 			add_political_power = 20
@@ -190,6 +193,30 @@ NUS_major_decisions = {
 		ai_will_do = {
 			base = 10
 		}
+	}
+
+	USE_move_capital_to_magdeburg = {
+		visible = {
+			has_cosmetic_tag = USE
+			NOT = {
+				capital_scope = {
+					state = 247
+				}
+			}
+		}
+		available = {
+			owns_state = 247
+		}
+		complete_effect = {
+			set_capital = 247
+			if = {
+				limit = {
+					NOT = { 247 = { is_core_of = NUS } }
+				}
+				add_state_core = 247
+			}
+		}
+		cost = 50
 	}
 	
 }

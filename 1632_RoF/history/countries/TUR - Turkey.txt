@@ -35,12 +35,6 @@ set_convoys = 0
         freedom_level = 0.6
     }
 
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = TUR_research
-}
-
 set_politics = {
 
     parties = {

@@ -289,7 +289,7 @@ tactic_tw_attack = {
 	attacker = -0.25
 	defender = -0.1
 }
-tactic_tw_defend = { 
+tactic_tw_defend = {
 	is_attacker = no
 	trigger = {
 		is_attacker = no

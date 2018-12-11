@@ -879,6 +879,5 @@ country_event = {
 		trigger = { has_government = neutrality }
 		add_political_power = -30
 		add_stability = -0.03
-
 	}
 }

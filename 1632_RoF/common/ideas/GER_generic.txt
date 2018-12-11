@@ -309,5 +309,5 @@ ideas = {
 				ai_focus_aggressive_factor = 0.5
 			}
 		}
-
+	}
 }

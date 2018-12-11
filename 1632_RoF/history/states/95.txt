@@ -1,14 +1,14 @@
 
-state = {
-	id = 95
-	name = "STATE_95"
-	resources = {
-		chromium = 9.000
-		oil = 11.000
-		tungsten = 17.000
+state={
+	id=95
+	name="STATE_95"
+	resources={
+		chromium=9.000
+		oil=11.000
+		tungsten=17.000
 	}
 
-	history = {
+	history={
 		owner = CIR
 		victory_points = {
 			9709 8 
@@ -25,10 +25,10 @@ state = {
 
 	}
 
-	provinces = {
-		714 717 719 735 3698 3717 3720 3760 6692 6718 6721 6733 6736 6738 6768 6781 9649 9663 9674 9691 9694 9696 9709 11617 11633 11647 11664 11668 11681 
+	provinces={
+		717 719 735 3698 3717 3720 3760 6692 6721 6736 6738 6768 6781 9663 9674 9691 9694 9696 9709 11617 11647 11664 11668 11681 
 	}
-	manpower = 333200
-	buildings_max_level_factor = 1.000
-	state_category = town
+	manpower=333200
+	buildings_max_level_factor=1.000
+	state_category=town
 }

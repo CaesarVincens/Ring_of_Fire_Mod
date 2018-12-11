@@ -1,5 +1,5 @@
 # Written by Henrik "Groogy" Hansson
-# Modified by Daniel "Da9L" Sjöberg
+# Modified by Daniel "Da9L" Sjï¿½berg
 
 # befriend
 # conquer
@@ -24,17 +24,7 @@ SWE_unit_production = {
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = spears
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = tercio
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = line_inf
+		id = infantry
 		value = 80
 	}
 
@@ -133,62 +123,7 @@ SWE_area_priority = {
 
 	ai_strategy = {
 		type = area_priority
-		id = europe
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = north_america
-		value = -10
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = south_america
-		value = -50
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = asia
-		value = -15
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = 50
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = africa
-		value = -90
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = pacific
-		value = -10
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = oceania
-		value = -10
-	}
-
-}
-
-default_area_priority = {
-	enable = {
-		original_tag = SWE
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = germany
+		id = german_region
 		value = 1000
 	}
 	ai_strategy = {

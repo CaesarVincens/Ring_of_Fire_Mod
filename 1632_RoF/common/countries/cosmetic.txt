@@ -27,3 +27,11 @@ United_Netherlands = {
 	color = rgb { 255 108 27 }
 	color_ui = rgb { 255 108 27 }
 }
+Directorate_Russia = {
+	color = rgb { 147 21 18 }
+	color_ui = rgb { 147 21 18 }
+}
+Free_Russia = {
+	color = rgb { 47 21 108 }
+	color_ui = rgb { 47 21 108 }
+}

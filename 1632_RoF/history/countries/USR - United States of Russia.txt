@@ -1,7 +1,7 @@
-﻿capital = 389
-set_research_slots = 2
+﻿capital = 393
+set_research_slots = 3
 
-oob = "SOV_OOB"
+oob = "RUS_OOB"
 
 # Starting tech
 set_technology = {
@@ -20,18 +20,18 @@ set_convoys = 0
 set_politics = {
 
     parties = {
-        absolutist = {
+        constitutionalist = {
             popularity = 73
         }
 		neutrality = {
             popularity = 2
         }
-		constitutionalist = {
+		liberal = {
 			popularity = 25
 		}
     }
     
-    ruling_party = absolutist
+    ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
@@ -40,29 +40,49 @@ set_politics = {
 
 add_ideas = {
 	military_focus_eco
-	RUS_filaret
-	state_religion_law
-	RUS_eastern_serfdom_1
+	secularism
 }
 set_stability = 0.5
 create_country_leader = {
     name = "Mikhail Romanov"
     desc = "POLITICS_DMITRY_GOLIVIN_DESC"
-    picture = "gfx/leaders/SOV/Portrait_Russia_Mikhail_Romanov.dds"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {
-		weak_czar
+		
     }
 }
 
 create_country_leader = {
     name = "Mikhail Romanov"
     desc = "POLITICS_DMITRY_GOLIVIN_DESC"
-    picture = "gfx/leaders/SOV/Portrait_Russia_Mikhail_Romanov.dds"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = constitutional_monarchy
     traits = {
-		weak_czar
+		
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Romanov"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
+    expire = "1660.1.1"
+    ideology = lib_constitutional_monarchy
+    traits = {
+		
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Romanov"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
+    expire = "1660.1.1"
+    ideology = monarchy_neutral
+    traits = {
+		
     }
 }

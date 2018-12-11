@@ -39,7 +39,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = 22
 		y = 0
-		prerequisite = { }
 		available = {
 			NOT = { has_war_with = BRA }
 			NOT = { BRA = { is_in_faction = yes } }
@@ -118,6 +117,9 @@ focus_tree = {
 		relative_position_id = SWE_bully_brandenburg
 		cost = 15
 		#available_if_capitulated = yes
+		completion_reward = {
+			
+		}
 	}
 	
 	focus = {
@@ -191,7 +193,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = -2
 		y = 3
-		mutually_exclusive = { }
 		prerequisite = { focus = SWE_force_franconia }
 		relative_position_id = SWE_bully_brandenburg
 		cost = 5
@@ -208,7 +209,6 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = -2
 		y = 4
-		mutually_exclusive = { }
 		prerequisite = { focus = SWE_secure_north_germany }
 		relative_position_id = SWE_bully_brandenburg
 		cost = 10

@@ -5,14 +5,10 @@ state = {
 
 	history = {
 		owner = BAV
-		victory_points = {
-			6540 5 
-		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
-			6540 = { bunker = 1 }
 			586 = { bunker = 1 }
 
 		}

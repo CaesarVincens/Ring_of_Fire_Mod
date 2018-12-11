@@ -16,12 +16,6 @@ transport = 1
 set_convoys = 0
 
 
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = SWE_research
-}
-
 set_politics = {
 
     parties = {

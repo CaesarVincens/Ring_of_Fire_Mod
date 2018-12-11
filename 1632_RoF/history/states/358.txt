@@ -1,9 +1,9 @@
 
-state = {
-	id = 358
-	name = "STATE_358"
+state={
+	id=358
+	name="STATE_358"
 
-	history = {
+	history={
 		owner = POR
 		victory_points = {
 			9819 3 
@@ -19,10 +19,10 @@ state = {
 
 	}
 
-	provinces = {
-		844 970 980 3790 3846 3866 3886 3926 6880 6884 6933 6986 9765 9819 9869 11768 
+	provinces={
+		980 3790 3846 3866 3886 6880 6884 6933 6986 9765 9819 9869 
 	}
-	manpower = 372500
-	buildings_max_level_factor = 1.000
-	state_category = large_town
+	manpower=372500
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

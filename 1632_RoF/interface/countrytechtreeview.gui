@@ -293,6 +293,12 @@ guiTypes = {
 				slotsize = { width = 70 height = 45` }
 				format = "LEFT"
 			}
+			gridboxtype = {
+				name = "tech_special_forces_tree"
+				position = { x = 140 y = 1140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
 		}
 
 		containerWindowType = {

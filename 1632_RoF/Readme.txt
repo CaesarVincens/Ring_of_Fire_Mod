@@ -17,6 +17,8 @@ Started work on Denmark and Russia focus trees
 Added decision for NUS to buy Harlingen
 Minor fixes and removing unused vanilla code
 Laid the groundwork for overhaul of Thirty Years War
+Updated much of the AI coding, hopefully for better play experience, still WIP
+More map adjustments
 
 Alpha 0.4.1 - Jul. 13, 2018
 Fix for missing English Civil War complete event for Constitutionalist path

@@ -126,6 +126,12 @@ country_event = {
 	option = {
 		name = RoF_ENG.120.a
 		FRA = { transfer_state = 117 transfer_state = 118 }
+		hidden_effect = {
+			C13 = {
+				remove_state_core = 117
+				remove_state_core = 118
+			}
+		}
 		add_timed_idea = { idea = ENG_st_germain days = 360 }
 		add_political_power = 100
 		ai_chance = {
@@ -262,6 +268,7 @@ country_event = {
 			}
 			set_party_name = {
 				ideology = absolutist
+				long_name = ENG_royalists
 				name = ENG_royalists
 			}
 			create_country_leader = {
@@ -297,6 +304,7 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
+		add_country_leader_trait = crippled
 	}
 }
 
