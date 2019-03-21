@@ -222,5 +222,61 @@ NUS_major_decisions = {
 }
 
 NUS_minor_decisions = {
-
+	NUS_test_decision2 = {
+		visible = {
+			always = no
+		}
+		available = {
+			
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = NUS_new_american_revolution_flag }
+				clr_country_flag = NUS_new_american_revolution_flag
+				add_political_power = -1
+				else = {
+					set_country_flag = NUS_new_american_revolution_flag
+					add_political_power = 1
+				}
+			}
+		}
+	}
+	NUS_coc_speeches = {
+		visible = {
+			any_other_country = {
+				is_german_tag = yes
+				has_country_flag = CoC_present
+			}
+			has_completed_focus = NUS_establish_committees_of_correspondence
+		}
+		available = {
+			has_completed_focus = NUS_expand_committees
+		}
+		target_trigger = {
+			FROM = {
+				is_german_tag = yes
+				has_country_flag = CoC_present
+				NOT = { has_country_flag = NUS_coc_inspired }
+			}
+		}
+		highlight_states = {
+			owner = {
+				is_german_tag = yes
+				#has_variable = CoC_strength
+				has_country_flag = CoC_present
+			}
+			is_capital = yes
+			is_controlled_by = FROM
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = NUS_patriotic_fervor
+				value = 1
+			}
+			FROM = {
+				set_country_flag = NUS_coc_inspired
+			}
+		}
+		cost = 50
+	}
 }

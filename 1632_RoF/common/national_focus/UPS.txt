@@ -15,22 +15,22 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research_gen
+	shared_focus = air_research
 
 	####################
 	#    NAVAL TREE    #
 	####################
-	shared_focus = naval_research_focus_gen
+	shared_focus = naval_research_focus
 
 	####################
 	#    ARMY  TREE    #
 	####################
-	shared_focus = army_drilling_gen
+	shared_focus = army_drilling
 
 	####################
 	#  INDUSTRY  TREE  #
 	####################
-	shared_focus = industrial_advances_gen
+	shared_focus = industrial_advances
 
 	####################
 	#  POLITICAL TREE  #

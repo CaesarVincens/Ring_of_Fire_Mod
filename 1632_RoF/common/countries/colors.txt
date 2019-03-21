@@ -560,3 +560,6 @@ BRG = {
 NAP = {
 	color = rgb { 105 0 173 }
 	color_ui = rgb { 180 0 90 }}
+CRI = {
+	color = rgb { 59 158 125 }
+	color_ui = rgb { 59 158 125 }}

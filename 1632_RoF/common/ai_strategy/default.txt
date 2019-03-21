@@ -334,7 +334,12 @@ default_area_priority = {
 	}
 	ai_strategy = {
 		type = area_priority
-		id = german_region
+		id = north_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
 		value = 100
 	}
 	ai_strategy = {

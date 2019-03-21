@@ -45,7 +45,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
 				liberal_acceptance = 50
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				constitutionalist_drift = 0.1
 			}
 		}
@@ -56,7 +56,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_intel_bonus
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				constitutionalist_drift = 0.05
 			}
 		}

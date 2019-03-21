@@ -6,14 +6,16 @@ state = {
 	history = {
 		owner = SPN
 		victory_points = {
-			11562 3 
+			11562 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
-
+			11562 = {
+				bunker = 2
+			}
 		}
 		add_core_of = SPN
 		add_core_of = UPS

@@ -3,6 +3,7 @@ set_research_slots = 2
 
 oob = "RUS_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
@@ -46,6 +47,11 @@ add_ideas = {
 	RUS_boyar_cavalry_1
 	RUS_streltzi_1
 }
+add_timed_idea = {
+	idea = RUS_slow_fever
+	days = 35
+}
+country_event = { id = RoF_RUS.10 days = 325 }
 set_stability = 0.5
 create_country_leader = {
     name = "Mikhail Romanov"

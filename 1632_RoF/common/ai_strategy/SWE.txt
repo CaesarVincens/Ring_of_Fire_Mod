@@ -123,8 +123,13 @@ SWE_area_priority = {
 
 	ai_strategy = {
 		type = area_priority
-		id = german_region
-		value = 1000
+		id = north_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 100
 	}
 	ai_strategy = {
 		type = area_priority

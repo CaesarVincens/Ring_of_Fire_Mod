@@ -18,7 +18,7 @@ FRA_minor_decisions = {
 		}
 		cost = 50
 		ai_will_do = {
-			base = 1
+			base = 10
 			modifier = {
 				factor = 0
 				date < 1634.5.1
@@ -44,6 +44,8 @@ FRA_minor_decisions = {
 				add_state_core = 250
 			}
 		}
+		ai_will_do = {
+			base = 1
+		}
 	}
-
 }

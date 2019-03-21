@@ -32,6 +32,10 @@ NUS_canon_focus_list = {
 		}
 	}
 	ai_national_focuses = {
+		#do these as soon as possible
+		NUS_baltic_relief #1633 september 11 35
+		NUS_patriotic_fervor #1633 october 16 35
+		
 		NUS_new_american_revolution #1631 may 25 35
 		NUS_welcome_refugees #bypass by event
 		NUS_grantville_national_library #1631 june 29 35
@@ -57,8 +61,8 @@ NUS_canon_focus_list = {
 		NUS_las_vegas_belle #1633 may 29 35
 		NUS_wietze_oil #1633 july 3 35
 		NUS_steel_production #1633 august 7 35
-		NUS_baltic_relief #1633 september 11 35
-		NUS_national_fervor #1633 october 16 35
+		#baltic relief
+		#national fervor
 		NUS_integrate_franconia #1633 november 20 70
 		NUS_german_committees #1634 january 29 35
 		NUS_force_hamburg #1634 march 5 35

@@ -39,6 +39,52 @@ SWE_ignore_russia = {
 		id = "RUS"
 		value = 1000
 	}
+	ai_strategy = {
+		type = area_priority
+		id = russian_region
+		value = -1000
+	}
+}
+
+SWE_Thirty_Years_War = {
+	name = "Focus on Germany"
+	desc = "War with Austria"
+	enable = {
+		OR = {
+			original_tag = SWE
+			is_in_faction_with = SWE
+		}
+		has_war_with = AUS
+		NOT = {
+			capital_scope = {
+				region = 205
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { is_in_faction_with = SWE }
+			NOT = { has_war_with = AUS }
+			capital_scope = {
+				region = 205
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = -50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = -50
+	}
 }
 
 

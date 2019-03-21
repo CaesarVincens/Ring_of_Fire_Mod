@@ -148,6 +148,10 @@ technologies = {
 			leads_to_tech = caplock_tech
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = heavy_weapons_tech
+			research_cost_coeff = 1
+		}
 		research_cost = 1.5
 		start_year = 1634
 		folder = {
@@ -159,6 +163,25 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 10
+		}
+	}
+
+	heavy_weapons_tech = {
+		enable_subunits = {
+			heavy_weapons_company
+		}
+		research_cost = 1.5
+		start_year = 1634
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 8 }
+		}
+		categories = {
+			firearms_weapons
+			support_tech
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 
@@ -202,6 +225,7 @@ technologies = {
 		}
 	}
 
+	#Special Techs
 	NUS_line_infantry_tech = {
 		research_cost = 1
 		allow = { always = no }
@@ -234,6 +258,89 @@ technologies = {
 		}
 	}
 
+	jaegers = {
+		enable_subunits = {
+			jaeger_brigade
+		}
+		on_research_complete = {
+			limit = {
+				NOT = {
+					has_template_containing_unit = jaeger_brigade
+				}
+			}
+			hidden_effect = {
+				load_oob = "unlock_jaegers"
+			}			
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		path = {
+			leads_to_tech = jaegers2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1631
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1631 }
+		}
+		categories = {
+			jaeger_tech
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+
+	}
+
+	jaegers2 = {
+
+		jaeger_brigade = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		path = {
+			leads_to_tech = jaegers3
+			research_cost_coeff = 1
+		}
+		
+
+		research_cost = 1.5
+		start_year = 1634
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1634 }
+		}
+		
+		categories = {
+			jaeger_tech
+		}
+		
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
+	
+	jaegers3 = {
+
+		jaeger_brigade = {
+			max_organisation = 5
+		}
+
+		research_cost = 2.0
+		start_year = 1638
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1638 }
+		}
+		
+		categories = {
+			jaeger_tech
+		}
+		
+		ai_will_do = {
+			factor = 0.7
+		}
+	}	
 	paratroopers = {
 
 		enable_subunits = {

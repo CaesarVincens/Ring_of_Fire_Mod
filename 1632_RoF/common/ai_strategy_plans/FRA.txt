@@ -117,3 +117,81 @@ FRA_anti_grantville_plan = {
 	}
 
 }
+
+ostend_war = {
+	name = "Baltic War"
+	desc = "FRA Fight against NUS/USE, not SWE"
+	enable = {
+		OR = {
+			original_tag = FRA
+			#original_tag = SPR
+		}
+		has_war_with = NUS
+		#has_war_with = SWE
+	}
+	abort = {
+		NOT = {
+			has_war_with = NUS
+			has_war_with = SWE
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "DEN"
+		value = 0
+	}
+}
+
+ostend_war = {
+	name = "Baltic War"
+	desc = "SPR Fight against NUS/USE, not SWE"
+	enable = {
+		OR = {
+			#original_tag = FRA
+			original_tag = SPR
+		}
+		has_war_with = NUS
+		#has_war_with = SWE
+	}
+	abort = {
+		NOT = {
+			has_war_with = NUS
+			has_war_with = SWE
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "DEN"
+		value = 100
+	}
+}

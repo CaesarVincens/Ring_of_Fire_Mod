@@ -11,15 +11,20 @@ areas = {
 			13
 		}
 	}
-
-	german_region = {
+	north_germany = {
 		strategic_regions = {
-			8 #eastern germany
-			7 #Western Germany
 			6 #north-west Germany
-			205 #southern Germany
+			7 #Western Germany
+			8 #eastern germany
 			206 #central Germany
-			22
+		}
+	}
+	south_germany = {
+		strategic_regions = {
+			205 #southern Germany
+			22 #Bohemia
+			21 #Alps
+			202 #Austria
 		}
 	}
 

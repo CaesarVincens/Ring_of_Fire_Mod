@@ -1,6 +1,99 @@
 ﻿add_namespace = RoF_DEN
 
 country_event = {
+	id = RoF_DEN.10
+	title = RoF_DEN.10.t
+	picture = GFX_report_event_den_flag
+	desc = RoF_DEN.10.d
+	fire_only_once = yes
+	trigger = {
+		tag = DEN
+		date > 1632.4.1
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	immediate = {
+		set_country_flag = knows_about_grantville
+	}
+	
+	option = {
+		name = RoF_DEN.10.a
+	}
+}
+
+country_event = {
+	id = RoF_DEN.100
+	title = RoF_DEN.100.t
+	picture = GFX_report_event_den_flag
+	desc = RoF_DEN.100.d
+	trigger = {
+		has_country_flag = DEN_launch_HBC
+		NOT = { has_country_flag = DEN_HBC_start }
+		OR = {
+			AND = {
+				date > 1634.1.1
+				date < 1634.4.1
+			}
+			AND = {
+				date > 1635.1.1
+				date < 1635.4.1
+			}
+			AND = {
+				date > 1636.1.1
+				date < 1636.4.1
+			}
+			AND = {
+				date > 1637.1.1
+				date < 1637.4.1
+			}
+		}
+		owns_state = 660
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	immediate = {
+	}
+	
+	#launch company
+	option = {
+		name = RoF_DEN.100.a
+		country_event = { id = RoF_DEN.110 days = 90 }
+		set_country_flag = DEN_HBC_start
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	#wait
+	option = {
+		name = RoF_DEN.100.b
+		trigger = {
+			date < 1637.1.1
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	#abandon effort
+	option = {
+		name = RoF_DEN.100.c
+		trigger = {
+			date > 1637.1.1
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+}
+
+country_event = {
 	id = RoF_DEN.110
 	title = RoF_DEN.110.t
 	picture = GFX_report_event_den_flag
@@ -65,23 +158,51 @@ country_event = {
 	desc = RoF_DEN.112.d
 	fire_only_once = yes
 	
-	trigger = {
-		always = no
-		has_country_flag = HBC_founded
-		135 = { is_owned_by = WNA }
-	}
-	
-	mean_time_to_happen = {
-		days = 60
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 	
 	}
 	
 	option = {
-		name = RoF_DEN.111.a
+		name = RoF_DEN.112.a
 		transfer_state = 135
+	}
+}
+
+country_event = {
+	id = RoF_DEN.120
+	title = RoF_DEN.120.t
+	picture = GFX_report_event_den_flag
+	desc = RoF_DEN.120.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = RoF_DEN.120.a
+	}
+}
+
+country_event = {
+	id = RoF_DEN.130
+	title = RoF_DEN.130.t
+	picture = GFX_report_event_den_flag
+	desc = RoF_DEN.130.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = RoF_DEN.130.a
 	}
 }
 
@@ -206,7 +327,6 @@ country_event = {
 		hidden_effect = {
 			create_country_leader = {
 				name = "Christian IV von Oldenburg"
-				desc = "POLITICS_HANNIBAL_OXHOLM_DESC"
 				picture = "gfx/leaders/DEN/Portrait_Denmark_Christian_IV.dds"
 				expire = "1660.1.1"
 				ideology = constitutional_monarchy
@@ -278,5 +398,45 @@ country_event = {
 		}
 		SWE = { country_event = { id = RoF_SWE.121 days = 7 } }
 		ai_chance = { base = 10 }
+	}
+}
+
+country_event = {
+	id = RoF_DEN.160
+	title = RoF_DEN.160.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_DEN.160.d
+	#fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = RoF_DEN.160.a
+		set_autonomy = {
+			target = SWE
+			autonomy_state = autonomy_rof_union
+		}
+	}
+}
+
+country_event = {
+	id = RoF_DEN.161
+	title = RoF_DEN.161.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_DEN.161.d
+	#fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+	}
+	
+	option = {
+		name = RoF_DEN.161.a
 	}
 }

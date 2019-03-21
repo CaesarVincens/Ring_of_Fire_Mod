@@ -140,3 +140,23 @@ defined_text = {
 		localization_key = NUS_retake_saxony_neither_desc
 	}
 }
+
+defined_text = {
+	name = USE_focus_desc
+	text = {
+		trigger = {
+			has_country_flag = NUS_patriotic_fervor_flag
+		}
+		localization_key = NUS_patriotic_fervor_desc_a
+	}
+}
+
+defined_text = {
+	name = USE_formation_desc
+	text = {
+		trigger = {
+			has_country_flag = NUS_patriotic_fervor_flag
+		}
+		localization_key = RoF_USE.100.d
+	}
+}

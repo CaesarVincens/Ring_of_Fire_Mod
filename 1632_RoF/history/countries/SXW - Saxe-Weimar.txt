@@ -38,6 +38,7 @@ set_politics = {
 
 
 set_country_flag = german_tag_flag
+set_country_flag = SXW_neutrality
 add_ideas = {
 	SXW_support_SWE
 }

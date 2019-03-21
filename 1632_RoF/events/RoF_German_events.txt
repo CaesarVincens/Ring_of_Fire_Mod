@@ -44,7 +44,8 @@ country_event = {
 				release = BRG
 			}
 			BRG = {
-				RoF_transfer_technology = yes 
+				inherit_technology = ROOT
+				#RoF_transfer_technology = yes 
 				transfer_state = 435
 				transfer_state = 16
 				transfer_state = 17
@@ -103,11 +104,11 @@ country_event = {
 		reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 		add_opinion_modifier = { target = SWE modifier = tyw_allies }
 		reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-		add_to_war = {
-			targeted_alliance = SWE
-			enemy = AUS
-			hostility_reason = asked_to_join
-		}
+		#add_to_war = {
+		#	targeted_alliance = SWE
+		#	enemy = AUS
+		#	hostility_reason = asked_to_join
+		#}
 	}
 	option = {
 		name = RoF_German.101.b
@@ -142,11 +143,11 @@ country_event = {
 		reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
 		add_opinion_modifier = { target = SWE modifier = tyw_enemies }
 		reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }
-		add_to_war = {
-			targeted_alliance = AUS
-			enemy = SWE
-			hostility_reason = asked_to_join
-		}
+		#add_to_war = {
+		#	targeted_alliance = AUS
+		#	enemy = SWE
+		#	hostility_reason = asked_to_join
+		#}
 	}
 	option = {
 		name = RoF_German.102.b
@@ -170,17 +171,18 @@ country_event = {
 	option = {
 		name = RoF_German.110.a
 		SWE = { country_event = { id = RoF_SWE.130 hours = 12 } }
+		set_country_flag = BRA_joins_SWE
 		effect_tooltip = {
 			SWE = { add_to_faction = BRA }
 			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 		ai_chance = { base = 100 }
 	}
@@ -282,17 +284,18 @@ country_event = {
 	option = {
 		name = RoF_German.130.a
 		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
+		set_country_flag = SAX_joins_SWE
 		effect_tooltip = {
 			SWE = { add_to_faction = SAX }
 			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 		ai_chance = { base = 100 }
 	}
@@ -334,11 +337,11 @@ country_event = {
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 		ai_chance = { base = 100 }
 	}
@@ -423,11 +426,11 @@ country_event = {
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 		add_popularity = { ideology = constitutionalist popularity = 0.6 }
 		set_politics = {
@@ -475,15 +478,27 @@ country_event = {
 		effect_tooltip = {
 			POL = {
 				transfer_state = 47
+				add_to_war = {
+					targeted_alliance = BRA
+					enemy = NUS
+				}
 			}
 		}
-		ai_chance = { base = 75 }
+		ai_chance = {
+			base = 75
+		}
 	}
 	#No Help
 	option = {
 		name = RoF_German.150.b
 		
-		ai_chance = { base = 25 }
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0.1
+				is_historical_focus_on = yes
+			}
+		}
 	}
 	
 }
@@ -505,13 +520,25 @@ country_event = {
 	option = {
 		name = RoF_German.151.a
 		transfer_state = 47
-		ai_chance = { base = 75 }
+		add_to_war = {
+			targeted_alliance = BRA
+			enemy = NUS
+		}
+		ai_chance = {
+			base = 75
+		}
 	}
 	#No Help
 	option = {
 		name = RoF_German.151.b
 		
-		ai_chance = { base = 25 }
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0.1
+				is_historical_focus_on = yes
+			}
+		}
 	}
 	
 }

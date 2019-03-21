@@ -34,7 +34,12 @@ set_convoys = 0
         autonomous_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
-
+    set_autonomy = {
+        target = CRI
+        autonomy_state = autonomy_rof_protectorate
+        freedom_level = 0.6
+	}
+	
 set_politics = {
 
     parties = {

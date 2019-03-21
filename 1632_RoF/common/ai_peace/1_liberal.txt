@@ -16,59 +16,44 @@ liberal_peace = {
 	
 	# ROOT = Taker, FROM = Giver
 	annex = {
-		factor = 50
+		base = 0
 		modifier = {
-			factor = 0
-			ROOT = {
-				is_subject = yes
-				FROM = {
-					any_owned_state = {
-						NOT = { ROOT_has_core_or_claim = yes }
+			add = 1000
+			has_annex_war_goal = FROM
+		}
+		modifier = {
+			add = 1000
+			FROM = {
+				all_owned_state = {
+					OR = {
+						is_claimed_by = ROOT
+						is_core_of = ROOT
 					}
 				}
 			}
 		}
-		modifier = {
-			factor = 0
-			FROM = {
-				NOT = { is_neighbor_of = ROOT }
-				any_owned_state = {
-					NOT = { ROOT_has_core_or_claim = yes }
-				}
-			}
-		}
-		modifier = {
-			factor = 2
-			FROM = {
-				is_neighbor_of = ROOT
-			}
-		}
-		modifier = {
-			factor = 2
-			FROM = {
-				all_owned_state = {
-					ROOT_has_core_or_claim = yes
-				}
-			}
-		}
-		modifier = {
-			factor = 100
-			original_tag = NUS
-			FROM = { is_german_tag = yes }
-		}
-
 	}
 
 	# ROOT = Taker, FROM = State
 	take_states = {
-		factor = 10
+		base = 0
 		modifier = {
-			factor = 0
+			add = 100
 			FROM = {
-				NOT = { ROOT_has_core_or_claim = yes }
-				NOT = { is_coastal = yes }
-				NOT = {
-					any_neighbor_state = { is_owned_by = ROOT }
+				OR = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		modifier = {
+			add = 50
+			FROM = {
+				all_neighbor_state = {
+					OR = {
+						is_owned_by = ROOT
+						has_claimed_state_in_peace_conference = ROOT
+					}
 				}
 			}
 		}
@@ -76,7 +61,7 @@ liberal_peace = {
 
 	# ROOT = Taker, FROM = Liberated
 	liberate = {
-		factor = 100
+		base = 100
 		modifier = {
 			factor = 10
 			FROM = {

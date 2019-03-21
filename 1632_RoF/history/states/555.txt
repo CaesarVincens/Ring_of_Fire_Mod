@@ -10,10 +10,10 @@ state = {
 	history = {
 		owner = UPS
 		victory_points = {
-			391 8 
+			391 30 
 		}
 		victory_points = {
-			3211 5
+			3211 10
 		}
 		victory_points = {
 			68 3

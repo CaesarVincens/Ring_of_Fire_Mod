@@ -22,8 +22,18 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_unit_jaeger_brigade_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_jaeger_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
 		name = "GFX_unit_merc_line_infantry_icon_medium"
 		textureFile = "gfx/interface/counters/divisions_large/unit_merc_line_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_weapons_company_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_heavy_weapon_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
@@ -82,6 +92,11 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_unit_jaeger_brigade_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_jaeger_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
 		name = "GFX_unit_tercio_infantry_icon_medium_white"
 		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_pike_infantry_icon.dds"
 		noOfFrames = 2
@@ -89,6 +104,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_unit_merc_line_infantry_icon_medium_white"
 		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_merc_line_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_weapons_company_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_arquebusier_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {

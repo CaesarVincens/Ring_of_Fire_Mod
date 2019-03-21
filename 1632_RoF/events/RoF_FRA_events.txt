@@ -155,30 +155,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = RoF_FRA.110
-	title = RoF_FRA.110.t
-	picture = GFX_report_event_fra_flag
-	desc = RoF_FRA.110.d
-	fire_only_once = yes
-
-	is_triggered_only = yes
-	
-	immediate = {
-		ENG = {
-			end_puppet = C13
-		}
-		C13 = {
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = New_France
-		}
-		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
-	}
-	option = {
-		name = RoF_FRA.110.a
-	}
-}
-
 #dunkirk battle
 country_event = {
 	id = RoF_FRA.120
@@ -250,7 +226,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_FRA.121.a
-		news_event = { id = RoF_news.21 days = 1 }
+		news_event = { id = RoF_news.21 hours = 2 }
 	}
 }
 
@@ -288,7 +264,7 @@ country_event = {
 	}
 }
 
-#join NUS
+#Dutch Raids
 country_event = {
 	id = RoF_FRA.150
 	title = RoF_FRA.150.t

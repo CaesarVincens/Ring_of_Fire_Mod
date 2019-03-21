@@ -1,0 +1,18 @@
+state={
+	id=664
+	name="STATE_664"
+	provinces={
+		39 60 75 81 93 129 160 163 2996 3035 3057 3085 3124 3154 3157 3163 3175 6073 6097 6182 6189 9102 9131 9199 9207 11062 11083 11107 11131 11165 11168 11177 11189 11213 13129 
+	}
+	history = {
+		owner = RUS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = RUS
+	}
+	manpower=150486
+	buildings_max_level_factor=1.000
+	state_category=town
+}

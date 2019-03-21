@@ -3,6 +3,7 @@ set_research_slots = 4
 
 oob = "POL_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
@@ -81,7 +82,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Stanisław Koniecpolski"
-    picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
+    picture = "Portrait_Poland_Stanislas_Koniecpolski.dds"
 	traits = { }
 	skill = 3
 	attack_skill = 3

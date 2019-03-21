@@ -141,26 +141,71 @@ NUS_area_priority = {
 
 	ai_strategy = {
 		type = area_priority
-		id = europe
+		id = scandinavian_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 500
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = netherlands_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = britain_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = french_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = iberian_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = polish_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = polish_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = russian_region
 		value = 100
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = north_america
-		value = -10
+		value = 10
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = south_america
-		value = -50
+		value = 10
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = asia
-		value = -15
+		value = 75
 	}
 	
 	ai_strategy = {
@@ -178,13 +223,13 @@ NUS_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = pacific
-		value = -10
+		value = 20
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = oceania
-		value = -10
+		value = 10
 	}
 
 }

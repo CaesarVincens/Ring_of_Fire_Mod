@@ -6,7 +6,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				liberal_drift = 0.01
 			}
 			removal_cost = -1
@@ -182,7 +182,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 			removal_cost = -1
 			picture = generic_research_bonus

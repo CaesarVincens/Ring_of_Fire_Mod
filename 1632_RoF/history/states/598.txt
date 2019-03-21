@@ -8,11 +8,15 @@ state = {
 	history = {
 		owner = NSP
 		victory_points = { 4887 3 }
+		victory_points = { 10730 15 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			10730 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = NSP
 	}

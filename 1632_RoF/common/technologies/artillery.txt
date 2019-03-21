@@ -5,7 +5,7 @@ technologies = {
 			light_artillery_equipment_1
 		}
 		path = {
-			leads_to_tech = light_artillery_2
+			leads_to_tech = light_artillery_casting_1
 			research_cost_coeff = 1
 		}
 		path = {
@@ -18,7 +18,7 @@ technologies = {
 		
 		folder = {
 			name = artillery_folder
-			position = { x = -2 y = 2 }
+			position = { x = -2 y = 0 }
 		}
 		
 		categories = {
@@ -46,12 +46,51 @@ technologies = {
 		}
 	}
 
+	light_artillery_casting_1 = {
+		path = {
+			leads_to_tech = light_artillery_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1633
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 2 }
+		}
+		categories = {
+			artillery
+			light_artillery
+		}
+		
+		light_artillery_brigade = {
+			reliability = 0.1
+		}
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1632.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1633.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1634.1.1"
+			}
+		}
+	}
+
 	light_artillery_2 = {
 		enable_equipments = {
 			light_artillery_equipment_2
 		}
 		path = {
-			leads_to_tech = light_artillery_3
+			leads_to_tech = light_artillery_ballistics_1
 			research_cost_coeff = 1
 		}
 		
@@ -84,6 +123,47 @@ technologies = {
 			modifier = {
 				factor = 5
 				date > "1634.1.6"
+			}
+		}
+	}
+
+	light_artillery_ballistics_1 = {
+		path = {
+			leads_to_tech = light_artillery_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1635
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 6 }
+		}
+		categories = {
+			artillery
+			light_artillery
+		}
+		
+		light_artillery_brigade = {
+			soft_attack = 0.1
+			breakthrough = 0.1
+			ap_attack = 0.1
+		}
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1632.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1633.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1634.1.1"
 			}
 		}
 	}
@@ -131,7 +211,7 @@ technologies = {
 			heavy_artillery_equipment_1
 		}
 		path = {
-			leads_to_tech = heavy_artillery_2
+			leads_to_tech = heavy_artillery_casting_1
 			research_cost_coeff = 1
 		}
 		path = {
@@ -172,12 +252,51 @@ technologies = {
 		}
 	}
 
+	heavy_artillery_casting_1 = {
+		path = {
+			leads_to_tech = heavy_artillery_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1633
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 2 }
+		}
+		categories = {
+			artillery
+			heavy_artillery
+		}
+		
+		heavy_artillery_brigade = {
+			reliability = 0.1
+		}
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1632.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1633.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1634.1.1"
+			}
+		}
+	}
+
 	heavy_artillery_2 = {
 		enable_equipments = {
 			heavy_artillery_equipment_2
 		}
 		path = {
-			leads_to_tech = heavy_artillery_3
+			leads_to_tech = heavy_artillery_ballistics_1
 			research_cost_coeff = 1
 		}
 		
@@ -215,6 +334,50 @@ technologies = {
 			modifier = {
 				factor = 5
 				date > "1634.1.6"
+			}
+		}
+	}
+
+	heavy_artillery_ballistics_1 = {
+		path = {
+			leads_to_tech = heavy_artillery_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1635
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 6 }
+		}
+		categories = {
+			artillery
+			heavy_artillery
+		}
+		
+		heavy_artillery_brigade = {
+			fort = {
+				attack = 0.05
+			}
+			hard_attack = 0.1
+			breakthrough = 0.1
+			ap_attack = 0.1
+		}
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1632.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1633.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1634.1.1"
 			}
 		}
 	}

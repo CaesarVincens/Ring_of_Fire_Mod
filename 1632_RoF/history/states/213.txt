@@ -23,7 +23,7 @@ state={
 	}
 
 	provinces={
-		495 3355 3398 6469 6535 6622 9509 11346 
+		495 3398 6469 6535 6622 11346
 	}
 	manpower=1255000
 	buildings_max_level_factor=1.000

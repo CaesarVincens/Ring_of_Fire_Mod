@@ -22,6 +22,8 @@
  NUS_embassy_MUG.tt:0 "Events about the Mission will follow"
  NUS_negotiate_for_Harlingen:0 "Negotiate for Harlingen"
  NUS_negotiate_for_Harlingen_desc:0 "The conflict between the Spanish Netherlands and the United Provinces is at a stalemate as are negotiations. We can capitalize on this to secure ourselves a port on the Zuider Zee."
+ NUS_coc_speeches:0 "Inspire National Fervor in §Y[From.GetName]§!"
+ NUS_coc_speeches_desc:0 "The history of Germany so far has been fractured and fractious. If we are to forge a new nation in this time, we must make all Germans recognize their shared heritage and goals. We can encourage the CoC in §Y[From.GetName]§! to begin speaking towards this goal."
  FRA_major_decisions:0 "Important Decisions"
  FRA_minor_decisions:0 "Minor Decisions"
  FRA_raid_Wietze_decision:0 "Raid Wietze Oil Fields"

@@ -1,0 +1,75 @@
+AUS_Thirty_Years_War = {
+	name = "Focus on Germany"
+	desc = "War with Sweden"
+	enable = {
+		OR = {
+			original_tag = AUS
+			is_in_faction_with = AUS
+		}
+		has_war_with = SWE
+		NOT = {
+			capital_scope = {
+				OR = {
+					region = 6
+					region = 7
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { is_in_faction_with = AUS }
+			NOT = { has_war_with = SWE }
+			capital_scope = {
+				OR = {
+					region = 6
+					region = 7
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = -50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 1000
+	}
+}
+
+AUS_TYW_prep = {
+	name = "Keep Watch on Saxony and BRA"
+	desc = "Something Witty"
+	enable = {
+		OR = {
+			original_tag = AUS
+			is_in_faction_with = AUS
+		}
+		has_war_with = SWE
+	}
+	abort = {
+		OR = {
+			NOT = { is_in_faction_with = AUS }
+			NOT = { has_war_with = SWE }
+			AND = {
+				has_war_with = SAX
+				has_war_with = BRA
+			}
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = BRA
+		value = 50
+	}
+	ai_strategy = {
+		type = antagonize
+		id = SAX
+		value = 50
+	}
+}
+
+

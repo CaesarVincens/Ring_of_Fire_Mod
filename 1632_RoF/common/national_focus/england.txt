@@ -8,6 +8,22 @@ focus_tree = {
 		}
 	}
 	default = no
+	focus = {
+		id = ENG_collect_tarriffs
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 15.00
+		x = 13
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		completion_reward = {
+			#idea tariffs
+			add_ideas = ENG_tarrifs
+		}
+
+	}
 	####################
 	#  MILITARY  TREE  #
 	####################
@@ -42,7 +58,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -57,7 +73,7 @@ focus_tree = {
 						is_in_home_area = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -76,7 +92,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -89,7 +105,7 @@ focus_tree = {
 						is_coastal = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -108,7 +124,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -118,7 +134,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -139,7 +155,7 @@ focus_tree = {
 						}
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -312,7 +328,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -327,7 +343,7 @@ focus_tree = {
 						is_in_home_area = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -346,7 +362,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -359,7 +375,7 @@ focus_tree = {
 						is_coastal = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -378,7 +394,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -388,7 +404,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -409,7 +425,7 @@ focus_tree = {
 						}
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -447,9 +463,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_expand_royal_arsenals
 		}
-		x = -1
+		x = 2
 		y = 1
-		relative_position_id = ENG_expand_royal_arsenals
+		relative_position_id = ENG_experimental_concepts
 		#available_if_capitulated = yes
 		completion_reward = {
 			army_experience = 15
@@ -859,7 +875,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					set_state_flag = infra_1
 					set_state_flag = ENG_royal_roads_state
 				}
 				random_owned_controlled_state = {
@@ -869,10 +884,10 @@ focus_tree = {
 							size > 0
 						}
 						OR = {
-							NOT = { has_state_flag = infra_1 }
+							NOT = { has_state_flag = ENG_royal_roads_state }
 							owner = {
-								any_owned_state = {
-									NOT = { has_state_flag = infra_1 }
+								all_owned_state = {
+									has_state_flag = ENG_royal_roads_state
 								}
 							}
 						}
@@ -900,10 +915,6 @@ focus_tree = {
 
 				}
 				set_country_flag = infra_built_flag_1
-				random_owned_controlled_state = {
-					limit = { has_state_flag = infra_1 }
-					clr_state_flag = infra_1
-				}
 			}
 			else_if = {
 				limit = {
@@ -950,7 +961,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -965,7 +976,7 @@ focus_tree = {
 						is_in_home_area = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -984,7 +995,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -997,7 +1008,7 @@ focus_tree = {
 						is_coastal = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -1016,7 +1027,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -1026,7 +1037,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -1047,7 +1058,7 @@ focus_tree = {
 						}
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -1096,7 +1107,7 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 					OR = {
@@ -1106,7 +1117,7 @@ focus_tree = {
 								any_owned_state = {
 									free_building_slots = {
 										building = arms_factory
-										size > 0
+										size > 1
 										include_locked = yes
 									}
 									is_in_home_area = yes
@@ -1128,7 +1139,7 @@ focus_tree = {
 					NOT = { has_state_flag = ENG_seize_traitors_lands_state }
 					free_building_slots = {
 						building = industrial_complex
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 					OR = {
@@ -1138,7 +1149,7 @@ focus_tree = {
 								any_owned_state = {
 									free_building_slots = {
 										building = industrial_complex
-										size > 0
+										size > 1
 										include_locked = yes
 									}
 									is_in_home_area = yes
@@ -1255,9 +1266,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_restock_royal_arsenals
 		}
-		x = -3
-		y = 2
-		relative_position_id = ENG_refurbishments
+		x = 0
+		y = 1
+		relative_position_id = ENG_restock_royal_arsenals
 		#available_if_capitulated = yes
 		complete_tooltip = {
 			random_state = {
@@ -1338,22 +1349,6 @@ focus_tree = {
 	####################
 	#  POLITICAL TREE  #
 	####################
-	focus = {
-		id = ENG_collect_tarriffs
-		icon = GFX_goal_generic_consumer_goods
-		cost = 15.00
-		x = 13
-		y = 0
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		completion_reward = {
-			#idea tariffs
-			add_ideas = ENG_tarrifs
-		}
-
-	}
 	focus = {
 		id = ENG_a_new_princess
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
@@ -1616,7 +1611,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_prince_rupert
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_focus_eng_god_save_the_king
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_constitutional_monarchy
@@ -1979,17 +1974,17 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_retake_ireland
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_crush_the_rebels
 		}
-		x = -3
-		y = 10
-		relative_position_id = ENG_collect_tarriffs
+		x = 0
+		y = 1
+		relative_position_id = ENG_crush_the_rebels
 		available = {
 			if = {
-				limit = { has_global_flag = ENG_civil_war_flag }
+				limit = { has_completed_focus = ENG_crush_the_rebels }
 				has_global_flag = ENG_civil_war_done
 			}
 			NOT = {
@@ -2009,7 +2004,7 @@ focus_tree = {
 		}
 		bypass = {
 			if = {
-				limit = { has_global_flag = ENG_civil_war_flag }
+				limit = { has_completed_focus = ENG_crush_the_rebels }
 				has_global_flag = ENG_civil_war_done
 			}
 			custom_trigger_tooltip = {
@@ -2137,7 +2132,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_commonwealth_of_england
-		icon = GFX_focus_chi_british_cooperation
+		icon = GFX_focus_eng_the_sun_never_sets
 		dynamic = yes
 		cost = 10.00
 		prerequisite = {

@@ -1,30 +1,151 @@
 ﻿add_namespace = RoF_RUS
 
 country_event = {
+	id = RoF_RUS.10
+	title = RoF_RUS.10.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.10.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = RoF_RUS.50.a
+		if = {
+			limit = {
+				NOT = { has_completed_focus = RUS_slow_fever_treatment }
+			}
+			add_timed_idea = {
+				idea = RUS_slow_fever
+				days = 75
+			}
+		}
+		else_if = {
+			limit = { has_completed_focus = RUS_slow_fever_treatment }
+			add_timed_idea = {
+				idea = RUS_slow_fever_mitigated
+				days = 75
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = RoF_RUS.10
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_RUS.50
+	title = RoF_RUS.50.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.50.d
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		has_completed_focus = RUS_siberian_expansion
+		date > 1635.10.1
+	}
+
+	immediate = {
+		set_country_flag = crisis_in_kremlin
+		set_country_flag = filaret_gone
+	}
+	option = {
+		name = RoF_RUS.50.a
+		if = { 
+			limit = { has_idea = RUS_filaret }
+			remove_ideas = RUS_filaret
+		}
+		if = { 
+			limit = { has_idea = RUS_patriarch_filaret }
+			remove_ideas = RUS_patriarch_filaret
+		}
+	}
+}
+
+country_event = {
+	id = RoF_RUS.99
+	title = RoF_RUS.99.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.99.d
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	option = {
+		name = RoF_RUS.99.a
+		effect_tooltip = {
+			release = USR
+			set_cosmetic_tag = Directorate_Russia
+		}
+	}
+	option = {
+		name = RoF_RUS.99.a
+		effect_tooltip = {
+			release = USR
+			set_cosmetic_tag = Directorate_Russia
+		}
+		USR = { change_tag_from = RUS }
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
 	id = RoF_RUS.100
 	title = RoF_RUS.100.t
-	picture = GFX_report_event_pol_flag
+	picture = GFX_report_event_rus_coa
 	desc = RoF_RUS.100.d
 
 	is_triggered_only = yes
 
 	immediate = {
-		393 = { add_core_of = USR }
-		394 = { add_core_of = USR }
-		398 = { add_core_of = USR }
-		399 = { add_core_of = USR }
-		400 = { add_core_of = USR }
-		401 = { add_core_of = USR }
-		402 = { add_core_of = USR }
-		403 = { add_core_of = USR }
-		404 = { add_core_of = USR }
+		hidden_effect = {
+			215 = { add_core_of = USR }
+			391 = { add_core_of = USR }
+			393 = { add_core_of = USR }
+			394 = { add_core_of = USR }
+			398 = { add_core_of = USR }
+			399 = { add_core_of = USR }
+			400 = { add_core_of = USR }
+			401 = { add_core_of = USR }
+			402 = { add_core_of = USR }
+			403 = { add_core_of = USR }
+			404 = { add_core_of = USR }
+			USR = {
+				set_cosmetic_tag = Free_Russia
+			}
+			release = USR
+			USR = { inherit_technology = RUS load_oob = USR_OOB }
+			set_cosmetic_tag = Directorate_Russia
+		}
 	}
 	option = {
 		name = RoF_RUS.100.a
-		release = USR
-		set_cosmetic_tag = Directorate_Russia
-		USR = {
-			set_cosmetic_tag = Free_Russia
+		effect_tooltip = {
+			release = USR
+			set_cosmetic_tag = Directorate_Russia
+		}
+		USR = { change_tag_from = RUS }
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = RoF_RUS.100.b
+		effect_tooltip = {
+			release = USR
+			set_cosmetic_tag = Directorate_Russia
 		}
 	}
 }
@@ -32,7 +153,7 @@ country_event = {
 country_event = {
 	id = RoF_RUS.101
 	title = RoF_RUS.100.t
-	picture = GFX_report_event_pol_flag
+	picture = GFX_report_event_rus_coa
 	desc = RoF_RUS.100.d
 
 	is_triggered_only = yes
@@ -43,5 +164,108 @@ country_event = {
 	option = {
 		name = RoF_RUS.100.a
 		set_cosmetic_tag = Free_Russia
+	}
+}
+
+news_event = {
+	id = RoF_RUS.110
+	title = RoF_RUS.110.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.110.d
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	option = {
+		name = RoF_RUS.110.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.111
+	title = RoF_RUS.111.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.111.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		start_border_war = {
+			change_state_after_war = no
+			minimum_duration_in_days = 60
+			attacker = {
+				state = 385
+				num_provinces = 3
+				on_win = RoF_RUS.112
+				on_lose = RoF_RUS.113
+				on_cancel = RoF_RUS.114
+			}
+			defender = {
+				state = 387
+				num_provinces = 3
+				on_win = RoF_POL.151
+				on_lose = RoF_POL.152
+				on_cancel = RoF_POL.153
+			}
+			
+		}
+	}
+	option = {
+		name = RoF_RUS.111.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.112
+	title = RoF_RUS.112.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.112.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					POL = { owns_state = 387 }
+				}
+				transfer_state = 387
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.112.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.113
+	title = RoF_RUS.113.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.113.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.113.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.114
+	title = RoF_RUS.114.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_RUS.114.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.114.a
 	}
 }

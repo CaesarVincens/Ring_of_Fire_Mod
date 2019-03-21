@@ -1,5 +1,7 @@
 ai_historical_focus_list_NUS = {
 	ai_national_focuses = {
+		NUS_baltic_relief
+		NUS_patriotic_fervor
 		NUS_new_american_revolution
 		NUS_welcome_refugees
 		NUS_grantville_national_library
@@ -24,8 +26,6 @@ ai_historical_focus_list_NUS = {
 		NUS_las_vegas_belle
 		NUS_wietze_oil
 		NUS_steel_production
-		NUS_baltic_relief
-		NUS_national_fervor
 		NUS_integrate_franconia
 		NUS_german_committees
 		NUS_force_hamburg

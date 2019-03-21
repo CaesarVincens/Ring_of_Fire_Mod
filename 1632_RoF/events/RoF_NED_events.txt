@@ -70,6 +70,14 @@ country_event = {
 				traits = {
 				}
 			}
+			create_country_leader = {
+				name = "Fernando von Habsburg"
+				desc = "POLITICS_DON_FERNANDO_DESC"
+				picture = "GFX_leader_SPN_Don_Fernando"
+				ideology = monarchy_neutral
+				traits = {
+				}
+			}
 		}
 	}
 	
@@ -190,32 +198,30 @@ country_event = {
 	
 	option = { # Accept
 		name =  RoF_NED.115.a
-		set_country_flag = @ROOT_accept_demand
+		#set_country_flag = accept_demand_@ROOT
 		SPN = {
-			country_event = { id = RoF_NED.116 }
+			country_event = { id = RoF_NED.116 hours = 1 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		ai_chance = {
 			base = 2
 			modifier = {
 				factor = 10
-				NOT = {
-					strength_ratio = {
-						tag = SPN
-						ratio = 0.75
-					}
+				strength_ratio = {
+					tag = SPN
+					ratio < 0.75
 				}
 			}
 		}
 	}
 	option = { # Refuse
 		name =  RoF_NED.115.b
-		set_country_flag = @ROOT_refuse_demand
+		#set_country_flag = refuse_demand_@ROOT
 		every_owned_state = {
 			add_claim_by = SPN
 		}
 		SPN = {
-			country_event = { id = RoF_NED.116 }
+			country_event = { id = RoF_NED.117 }
 		}
 		ai_chance = {
 			base = 1
@@ -227,38 +233,33 @@ country_event = {
 country_event = {
 	id = RoF_NED.116
 	title = RoF_NED.116.t
-	desc = {
-		text = RoF_NED.116.da
-		trigger = {
-			FROM = { has_country_flag = @FROM_refuse_demand }
-		}
+	desc = RoF_NED.116.db
+
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.116.b
+		annex_country = { target = FROM }
 	}
-	desc = {
-		text = RoF_NED.116.db
-		trigger = {
-			FROM = { has_country_flag = @FROM_accept_demand }
-		}
-	}
+}
+
+country_event = {
+	id = RoF_NED.117
+	title = RoF_NED.116.t
+	desc = RoF_NED.116.da
+
 	picture = GFX_report_event_SPR_flag
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = RoF_NED.116.a
-		trigger = {
-			FROM = { has_country_flag = @FROM_refuse_demand }
-		}
 		create_wargoal = {
 			target = FROM
 			type = annex_everything
 		}
-	}
-	option = {
-		name = RoF_NED.116.b
-		trigger = {
-			FROM = { has_country_flag = @FROM_accept_demand }
-		}
-		annex_country = { target = FROM }
 	}
 }
 

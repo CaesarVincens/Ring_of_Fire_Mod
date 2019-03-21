@@ -1,0 +1,12 @@
+﻿division_template = {
+	name = "Jaeger Division"
+
+	regiments = {
+		jaeger_brigade = { x = 0 y = 0 }
+		jaeger_brigade = { x = 0 y = 1 }
+        jaeger_brigade = { x = 0 y = 2 }
+        jaeger_brigade = { x = 1 y = 0 }
+		jaeger_brigade = { x = 1 y = 1 }
+		jaeger_brigade = { x = 1 y = 2 }
+	}
+}

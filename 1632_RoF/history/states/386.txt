@@ -1,12 +1,12 @@
 
-state = {
-	id = 386
-	name = "STATE_386"
+state={
+	id=386
+	name="STATE_386"
 
-	history = {
+	history={
 		owner = RUS
 		victory_points = {
-			104 3 
+			11202 3 
 		}
 		buildings = {
 			infrastructure = 2
@@ -19,10 +19,10 @@ state = {
 
 	}
 
-	provinces = {
-		95 126 415 3053 3120 3310 6139 6324 9098 9120 9319 9408 11097 11202 11304 11392 
+	provinces={
+		126 415 3053 3120 3310 3333 6139 6242 6324 9120 9408 11097 11202 11392 
 	}
-	manpower = 597564
-	buildings_max_level_factor = 1.000
-	state_category = town
+	manpower=597564
+	buildings_max_level_factor=1.000
+	state_category=town
 }

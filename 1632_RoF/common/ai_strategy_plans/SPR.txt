@@ -77,7 +77,7 @@ SPR_anti_dutch = {
 	ai_strategy = {
 		type = antagonize
 		id = "UPS"
-		value = 1000
+		value = 200
 	}
 }
 
@@ -89,17 +89,20 @@ SPR_support_SPN = {
 		country_exists = SPN
 	}
 	abort = {
-		NOT = { country_exists = SPN }
+		OR = {
+			NOT = { country_exists = SPN }
+			SPN = { has_completed_focus = SPN_come_to_terms }
+		}
 	}
 	ai_strategy = {
 		type = befriend
 		id = "SPN"
-		value = 1000
+		value = 200
 	}
 	ai_strategy = {
 		type = support
 		id = "SPN"
-		value = 1000
+		value = 200
 	}
 }
 

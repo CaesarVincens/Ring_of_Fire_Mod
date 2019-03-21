@@ -30,6 +30,7 @@ continent = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 		}
 	}
 	
@@ -80,6 +81,7 @@ continent = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 		}
 	}
 	
@@ -180,6 +182,7 @@ continent = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 		}
 	}
 	
@@ -303,12 +306,12 @@ continent = {
 		}
 		absolutist = {
 				male = { 
-					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds" 
 			}
 		}
 		constitutionalist = {
 				male = { 
-					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds" 
 			}
 		}
 		neutrality = {

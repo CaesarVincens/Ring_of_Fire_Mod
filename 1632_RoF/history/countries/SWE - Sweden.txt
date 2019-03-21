@@ -3,6 +3,7 @@ set_research_slots = 3
 
 oob = "SWE_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
@@ -70,7 +71,9 @@ add_to_faction = POM
 #add_to_faction = SAX
 #add_to_faction = BRS
 add_to_faction = HES
-give_military_access = SXW
+add_to_faction = SXW
+
+news_event = { id = RoF_SWE.1 days = 208 }
 
 add_ideas = {
 	military_focus_eco

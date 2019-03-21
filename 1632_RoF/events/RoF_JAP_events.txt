@@ -1,0 +1,24 @@
+﻿add_namespace = RoF_JAP
+
+country_event = {
+	id = RoF_JAP.100
+	title = RoF_JAP.100.t
+	picture = GFX_placeholder
+	desc = RoF_JAP.100.d
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_JAP.100.a
+	}
+}

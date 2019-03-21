@@ -8,7 +8,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 			research_bonus = {
 				rocketry = 0.1
@@ -295,7 +295,7 @@ ideas = {
 				has_government = absolutist
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				production_speed_buildings_factor = 0.1
 			}
 			removal_cost = -1
@@ -309,7 +309,7 @@ ideas = {
 				has_government = absolutist
 			}
 			modifier = {
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.02
 				production_speed_buildings_factor = 0.1
 			}
 			removal_cost = -1

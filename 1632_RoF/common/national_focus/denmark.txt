@@ -1,5 +1,5 @@
 focus_tree = {
-	id = sweden
+	id = danish_focus_tree
 	country = {
 		factor = 0
 		modifier = {
@@ -12,22 +12,22 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research_gen
+	shared_focus = air_research
 
 	####################
 	#    NAVAL TREE    #
 	####################
-	shared_focus = naval_research_focus_gen
+	shared_focus = naval_research_focus
 
 	####################
 	#    ARMY  TREE    #
 	####################
-	shared_focus = army_drilling_gen
+	shared_focus = army_drilling
 
 	####################
 	#  INDUSTRY  TREE  #
 	####################
-	#shared_focus = industrial_advances_gen
+	#shared_focus = industrial_advances
 
 	focus = {
 		id = DEN_continue_recovery
@@ -221,7 +221,7 @@ focus_tree = {
 						dockyard > 0
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -234,7 +234,7 @@ focus_tree = {
 						is_coastal = yes
 						free_building_slots = {
 							building = dockyard
-							size > 3
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -441,7 +441,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_ostend_league
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_focus_chi_reach_out_to_france
 		cost = 10
 		prerequisite = { focus = DEN_establish_workshops }
 		mutually_exclusive = { focus = DEN_ally_americans }
@@ -541,7 +541,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+			country_event = {
+				id = RoF_DEN.120
+				hours = 2
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -562,7 +565,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+			country_event = {
+				id = RoF_DEN.130
+				hours = 2
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -574,6 +580,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = { focus = DEN_invest_lubeck }
+		mutually_exclusive = { focus = DEN_submit_to_sweden }
 		relative_position_id = DEN_invest_lubeck
 		x = -1
 		y = 1
@@ -587,20 +594,26 @@ focus_tree = {
 				NOT = { country_exists = SWE }
 			}
 		}
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 		completion_reward = {
-
+			SWE = {
+				country_event = {
+					id = RoF_SWE.160
+					hours = 2
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 20
 		}
 	}
-
+	
 	focus = {
 		id = DEN_submit_to_sweden
 		icon = GFX_focus_CZE_german_puppet
 		cost = 10
 		prerequisite = { focus = DEN_invest_lubeck }
+		mutually_exclusive = { focus = DEN_subjugate_sweden }
 		relative_position_id = DEN_invest_lubeck
 		x = 1
 		y = 1
@@ -620,9 +633,10 @@ focus_tree = {
 		}
 	}
 
+	#Join Americans
 	focus = {
 		id = DEN_ally_americans
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_mission_to_the_us
 		cost = 10
 		prerequisite = { focus = DEN_establish_workshops }
 		mutually_exclusive = { focus = DEN_ostend_league }
@@ -651,16 +665,61 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					FRA = { has_tech = caplock_tech }
+				}
+				NUS = {
+					create_production_license = {
+						target = DEN
+						equipment = {
+							type = caplock_rifle
+						}
+						cost_factor = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					FRA = { has_tech = flintlock_tech }
+				}
+				NUS = {
+					create_production_license = {
+						target = DEN
+						equipment = {
+							type = flintlock_rifle
+						}
+						cost_factor = 1
+					}
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = nus_tech_bonus
+					bonus = 0.5
+					uses = 1
+					category = firearms_weapons
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = no
+			}
 		}
 	}
 
 	focus = {
 		id = DEN_reenter_german_wars
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_usa_focus_on_europe
 		cost = 10
 		prerequisite = { focus = DEN_ally_americans }
 		relative_position_id = DEN_ally_americans
@@ -696,15 +755,16 @@ focus_tree = {
 				limit = {
 					NUS = { is_in_faction = yes is_faction_leader = no }
 				}
-				NUS = {
-					random_country = {
-						limit = {
-							is_in_faction_with = NUS
-							is_faction_leader = yes
-						}
-						add_to_faction = DEN
+				random_country = {
+					limit = {
+						is_in_faction_with = NUS
+						is_faction_leader = yes
 					}
+					add_to_faction = DEN
 				}
+			}
+			else = {
+				custom_effect_tooltip = DEN_reenter_german_wars.tt
 			}
 		}
 		ai_will_do = {
@@ -891,11 +951,18 @@ focus_tree = {
 		cost = 10
 		available = {
 			owns_state = 556
+			custom_trigger_tooltip = {
+				tooltip = DEN_expand_HBC_TT
+				135 = { is_owned_by = WNA }
+			}
+			
 		}
 		completion_reward = {
 			if = {
 				limit = { 135 = { is_owned_by = WNA } }
-				transfer_state = 135
+				country_event = {
+					id = RoF_DEN.112
+				}
 			}
 			else = {
 				custom_effect_tooltip = DEN_expand_HBC.tt

@@ -15,20 +15,42 @@ germans_ally_swe = {
 	ai_strategy = {
 		type = befriend
 		id = "SWE"
-		value = 200
+		value = 100
 	}
 	ai_strategy = {
 		type = alliance
 		id = "SWE"
-		value = 200
+		value = 300
 	}
 	ai_strategy = {
 		type = support
 		id = "SWE"
-		value = 200
+		value = 100
 	}
 }
 
+SAX_BRA_ally_SWE = {
+	name = "Ally SWE"
+	desc = "Don't Leave the Faction"
+	enable = {
+		OR = {
+			has_country_flag = BRA_joins_SWE
+			has_country_flag = SAX_joins_SWE
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = SWE
+			NOT = { country_exists = SWE }
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 500
+	}
+
+}
 SXW_befriend_SWE = {
 	name = "support SWE"
 	desc = "support Sweden"
@@ -41,12 +63,17 @@ SXW_befriend_SWE = {
 	ai_strategy = {
 		type = befriend
 		id = "SWE"
-		value = 200
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 100
 	}
 	ai_strategy = {
 		type = support
 		id = "SWE"
-		value = 200
+		value = 100
 	}
 
 }

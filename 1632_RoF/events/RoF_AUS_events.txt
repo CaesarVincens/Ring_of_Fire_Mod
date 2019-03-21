@@ -49,7 +49,8 @@ country_event = {
 			}
 			BOH = {
 				add_named_threat = { threat = 5 name = BOH.1.t }
-				RoF_transfer_technology = yes 
+				inherit_technology = ROOT
+				#RoF_transfer_technology = yes
 				create_country_leader = {
 					name = "Albrecht von Wallenstein"
 					desc = "POLITICS_WALLENSTEIN_DESC"
@@ -146,6 +147,8 @@ country_event = {
 	trigger = {
 		tag = AUS
 		date > 1633.7.1
+		has_global_flag = wallenstein_gambit
+		BOH = { exists = no }
 	}
 	
 	mean_time_to_happen = {
@@ -234,6 +237,33 @@ country_event = {
 	
 }
 
+country_event = {
+	id = RoF_AUS.104
+	title = RoF_AUS.104.t
+	picture = GFX_report_event_boh_flag
+	desc = RoF_AUS.104.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			news_event = { id = RoF_news.0201 days = 1 }
+		}
+	}
+	
+	option = {
+		name = RoF_AUS.103.a
+		remove_unit_leader = 1001
+		remove_unit_leader = 1002
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+}
+
+
 #FROM asks to join
 country_event = {
 	id = RoF_AUS.105
@@ -251,13 +281,13 @@ country_event = {
 		name = RoF_AUS.105.a
 		effect_tooltip = {
 			add_to_faction = FROM
-			FROM = {
-				add_to_war = {
-					targeted_alliance = AUS
-					enemy = SWE
-					hostility_reason = asked_to_join
-				}
-			}
+			#FROM = {
+			#	add_to_war = {
+			#		targeted_alliance = AUS
+			#		enemy = SWE
+			#		hostility_reason = asked_to_join
+			#	}
+			#}
 		}
 		FROM = {
 			set_country_flag = AUS_accepted
@@ -323,6 +353,7 @@ country_event = {
 	immediate = {
 		load_oob = "AUS_defend_wien"
 		add_manpower = 10000
+		set_country_flag = defend_wien
 	}
 	option = {
 		name = RoF_AUS.115.a

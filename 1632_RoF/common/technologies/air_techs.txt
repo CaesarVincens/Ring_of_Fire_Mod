@@ -111,6 +111,9 @@ technologies = {
 			leads_to_tech = multi_plane_tech_1
 			research_cost_coeff = 1
 		}
+		dependencies = {
+			aerial_research_tech = 1
+		}
 		research_cost = 2
 		start_year = 1633
 		folder = {
@@ -287,7 +290,9 @@ technologies = {
 			leads_to_tech = airship_tech_2
 			research_cost_coeff = 1
 		}
-
+		dependencies = {
+			aerial_research_tech = 1
+		}
 		research_cost = 2
 		start_year = 1634
 		folder = {

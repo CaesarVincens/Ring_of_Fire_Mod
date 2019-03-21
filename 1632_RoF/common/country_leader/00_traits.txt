@@ -57,6 +57,15 @@ leader_traits = {
 		}
 	}
 
+	unpopular_monarch = {
+		random = no
+		political_power_factor = -0.3
+		stability_factor = -0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	spirit_of_genghis = {
 		random = no
 		cavalry_attack_factor = 0.05
@@ -96,7 +105,7 @@ leader_traits = {
 		random = no
 		ai_strategy = {
 			type = antagonize
-			id = "GER"			
+			id = "GER"
 			value = 200
 		}
 		
@@ -228,12 +237,60 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
+	kaiserin_of_the_people = {
+		stability_weekly = 0.001
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		army_core_defence_factor = 0.1
+		political_power_factor = 0.15
+	}
+
+	veteran_communist = {
+		random = no
+		stability_factor = 0.05
+		industrial_capacity_factory = 0.05
+	}
+
 	### IDEA TRAITS ###
 	
+	# drift is a percent applied weekly
+	
+	staunch_monarchist = {
+		random = no
+		# Boosts Unaligned
+		sprite = 13
+		neutrality_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	shadow_of_calles = {
+		random = no
+		sprite = 13
+
+		neutrality_drift = 0.1
+		political_power_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	popular_figurehead = {
 		sprite = 13
 		stability_factor = 0.15 
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	propaganda_expert = {
+		sprite = 13
+		war_support_factor = 0.10 
 		
 		ai_will_do = {
 			factor = 1
@@ -335,6 +392,34 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	financial_expert = {
+		sprite = 10
+		random = yes
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	economist = {
+		sprite = 10
+		random = yes
+		production_factory_max_efficiency_factor = 0.05
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	editor = {
+		sprite = 10
+		random = yes
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
 	
 	armaments_organizer = {
 		sprite = 10
@@ -378,7 +463,28 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	
+
+	### BRITISH TRADE UNION MINISTER TRAITS ###
+
+	propaganda_bungler = {
+		sprite = 13
+		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	nuclear_enthusiast = {
+		random = no
+		sprite = 14
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### END BRITISH TRADE UNION MINISTER TRAITS ###
 	military_theorist = {
 		sprite = 14
 		experience_gain_army = 0.05
@@ -690,7 +796,8 @@ leader_traits = {
 				armor_value = 0.5 
 			}
 			capital_ship = {
-				armor_value = 0.1 attack = 0.1
+				armor_value = 0.1 
+				hg_attack = 0.1
 			}
 			#screen_ship = {
 			#	
@@ -698,6 +805,24 @@ leader_traits = {
 			#submarine = {
 			#	
 			#}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+		
+	battlefleet_designer = { #armored carriers, slightly buffed cap ships
+		random = no
+		equipment_bonus = {
+			capital_ship = {
+				armor_value = 0.15 
+				hg_attack = 0.15
+			}
+			screen_ship = {
+				torpedo_attack = 0.25
+				sub_detection = -0.25
+			}
 		}
 		
 		ai_will_do = {
@@ -712,7 +837,7 @@ leader_traits = {
 				surface_visibility = -0.1 naval_speed = 0.1 carrier_size = -0.1
 			}
 			capital_ship = {
-				surface_visibility = -0.1 naval_speed = 0.1 attack = -0.1
+				surface_visibility = -0.1 naval_speed = 0.1 hg_attack = -0.1
 			}
 			screen_ship = {
 				surface_visibility = -0.1 naval_speed = 0.1
@@ -747,7 +872,7 @@ leader_traits = {
 				build_cost_ic = -0.25 carrier_size = -0.2 naval_range = -0.5
 			}
 			capital_ship = {
-				build_cost_ic = -0.25 armor_value = -0.2 attack = -0.2 naval_range = -0.5
+				build_cost_ic = -0.25 armor_value = -0.2 hg_attack = -0.2 naval_range = -0.5
 			}
 			screen_ship = {
 				build_cost_ic = -0.25 naval_range = -0.5
@@ -805,6 +930,16 @@ leader_traits = {
 	
 	industrial_concern = {
 		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	construction_company = {
+		random = no
+
+		production_speed_infrastructure_factor = 0.1
 		
 		ai_will_do = {
 			factor = 1
@@ -987,6 +1122,32 @@ leader_traits = {
 		}
 	}
 	
+	army_chief_planning_1 = { # 
+		sprite = 5
+		planning_speed = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	army_chief_planning_2 = { # 
+		sprite = 5
+		planning_speed = 0.10
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	army_chief_planning_3 = { # 
+		sprite = 5
+		planning_speed = 0.15
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
 	
 	army_chief_morale_1 = { # Ground units get 4 more Morale
 		sprite = 5
@@ -1728,6 +1889,31 @@ leader_traits = {
 			factor = 3
 		}
 	}
+
+	air_pilot_training_1 = {
+		sprite = 1
+		air_training_xp_gain_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	air_pilot_training_2 = {
+		sprite = 1
+		air_training_xp_gain_factor = 0.1
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	air_pilot_training_3 = {
+		sprite = 1
+		air_training_xp_gain_factor = 0.15
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
 	
 	
 	navy_chief_naval_aviation_1 = {
@@ -2121,6 +2307,10 @@ leader_traits = {
 		
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				has_navy_size = { unit = carrier size < 1 }
+			}
 		}
 	}
 }

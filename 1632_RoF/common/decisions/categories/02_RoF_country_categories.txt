@@ -9,3 +9,57 @@ DEN_HBC_decisions = {
 		#has_country_flag = NUS_major_decision_available
 	}
 }
+
+NUS_major_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		original_tag = NUS
+	}
+	visible = {
+		#has_country_flag = NUS_major_decision_available
+	}
+}
+
+NUS_minor_decisions = {
+	icon = generic_political_actions
+	priority = 10
+	
+	allowed = {
+		original_tag = NUS
+	}
+}
+
+FRA_major_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		original_tag = FRA
+	}
+	visible = {
+		#has_country_flag = NUS_major_decision_available
+	}
+}
+
+FRA_minor_decisions = {
+	icon = generic_political_actions
+	priority = 10
+	
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+RUS_major_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		original_tag = RUS
+	}
+	visible = {
+		#has_country_flag = NUS_major_decision_available
+	}
+}

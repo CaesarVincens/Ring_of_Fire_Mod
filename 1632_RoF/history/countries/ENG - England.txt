@@ -3,6 +3,7 @@ set_research_slots = 3
 
 oob = "ENG_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1

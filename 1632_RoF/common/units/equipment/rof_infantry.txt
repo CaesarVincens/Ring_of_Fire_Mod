@@ -17,7 +17,7 @@ equipments = {
 
 		active = yes
 
-		reliability = 0.95
+		reliability = 0.9
 		maximum_speed = 4
 
 		defense = 15
@@ -26,8 +26,8 @@ equipments = {
 		armor_value = 0
 
 		soft_attack = 2
-		hard_attack = 0.25
-		ap_attack = 0.5
+		hard_attack = 0.05
+		ap_attack = 0.25
 		air_attack = 0
 
 		lend_lease_cost = 0.5
@@ -75,7 +75,7 @@ equipments = {
 		#Offensive Abilities
 		soft_attack = 3
 		hard_attack = 0.5
-		ap_attack = 1
+		ap_attack = 0.5
 		air_attack = 0
 
 		#Space taken in convoy
@@ -174,125 +174,6 @@ equipments = {
 		
 		priority = 10
 		visual_level = 4
-		
-		defense = 32
-		breakthrough = 6
-		soft_attack = 14
-		hard_attack = 2
-		ap_attack = 4
-		air_attack = 1
-		
-		build_cost_ic = 0.7
-		
-		resources = {
-			steel = 2
-		}
-	}
-
-	#flintlock_rifle
-	srg_flintlock = {
-		year = 1633
-		
-		archetype = firearm_equipment
-		parent = musket
-		
-		priority = 10
-		visual_level = 2
-		
-		defense = 28
-		breakthrough = 4
-		soft_attack = 9
-		hard_attack = 1.5
-		ap_attack = 3
-		air_attack = 0.5
-		
-		build_cost_ic = 0.6
-		
-		resources = {
-			steel = 2
-		}
-	}
-	
-	srg_caplock = {
-		year = 1633
-		
-		archetype = firearm_equipment
-		parent = srg_flintlock
-		
-		priority = 11
-		visual_level = 3
-		
-		defense = 32
-		breakthrough = 5
-		soft_attack = 12
-		hard_attack = 2
-		ap_attack = 4
-		air_attack = 1
-		
-		build_cost_ic = 0.7
-		
-		resources = {
-			steel = 2
-		}
-	}
-
-	#caplock_rifle
-	cardinal_rifle = {
-		year = 1634
-		
-		archetype = firearm_equipment
-		parent = musket
-		
-		priority = 10
-		visual_level = 2
-		
-		defense = 24
-		breakthrough = 5
-		soft_attack = 10
-		hard_attack = 1.5
-		ap_attack = 3
-		air_attack = 0.5
-		
-		build_cost_ic = 0.6
-		
-		resources = {
-			steel = 2
-		}
-	}
-	
-	#chambered rifle
-	ak3_rifle = {
-		year = 1634
-		
-		archetype = firearm_equipment
-		parent = musket
-		
-		priority = 10
-		visual_level = 2
-		
-		defense = 24
-		breakthrough = 5
-		soft_attack = 10
-		hard_attack = 1.5
-		ap_attack = 3
-		air_attack = 0.5
-		
-		build_cost_ic = 0.6
-		
-		resources = {
-			steel = 2
-		}
-	}
-	
-	#chambered rifle
-	ak47_rifle = {
-		year = 1637
-		
-		archetype = firearm_equipment
-		parent = ak3_rifle
-		
-		priority = 10
-		visual_level = 2
 		
 		defense = 32
 		breakthrough = 6

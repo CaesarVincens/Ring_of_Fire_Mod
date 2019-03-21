@@ -1,6 +1,24 @@
 ﻿add_namespace = RoF_SWE
 
 #Breitenfeld
+news_event = {
+	id = RoF_SWE.1
+	title = RoF_SWE.1.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.1.d
+	is_triggered_only = yes
+	option = {
+		name = RoF_SWE.1.a
+		add_political_power = 5
+		hidden_effect = {
+			SWE = {
+				news_event = { id = RoF_SWE.1 days = 365 }
+			}
+		}
+
+	}
+}
+
 country_event = {
 	id = RoF_SWE.100
 	title = RoF_SWE.100.t
@@ -23,8 +41,8 @@ country_event = {
 		add_war_support = 0.05
 		hidden_effect = {
 			news_event = { id = RoF_news.01 days = 1 }
-			AUS = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
-			BAV = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
+			#AUS = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
+			#BAV = { add_timed_idea = { idea = breitenfeld_aftermath days = 90 } }
 		}
 	}
 }
@@ -44,6 +62,19 @@ country_event = {
 	}
 	option = {
 		name = RoF_SWE.105.a
+		give_guarantee = NUS
+		add_ideas = SWE_NUS_support
+		add_opinion_modifier = { target = NUS modifier = SWE_tyw_support }
+		reverse_add_opinion_modifier = {
+			target = NUS
+			modifier = SWE_tyw_support
+		}
+		add_tech_bonus = {
+			name = light_art_bonus
+			uses = 1
+			category = light_artillery
+			bonus = 0.5
+		}
 		hidden_effect = {
 			NUS = { country_event = { id = RoF_NUS.145 } }
 			AUS = { country_event = { id = RoF_AUS.110 days = 2 } }
@@ -215,11 +246,11 @@ country_event = {
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 	}
 }
@@ -263,13 +294,13 @@ country_event = {
 		name = RoF_SWE.132.a
 		effect_tooltip = {
 			add_to_faction = FROM
-			FROM = {
-				add_to_war = {
-					targeted_alliance = SWE
-					enemy = AUS
-					hostility_reason = asked_to_join
-				}
-			}
+			#FROM = {
+			#	add_to_war = {
+			#		targeted_alliance = SWE
+			#		enemy = AUS
+			#		hostility_reason = asked_to_join
+			#	}
+			#}
 		}
 		FROM = {
 			set_country_flag = SWE_accepted
@@ -330,7 +361,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # refused vassal
-		name =  RoF_SWE.136.a
+		name = RoF_SWE.136.a
 		create_wargoal = {
 			type = puppet_wargoal_focus
 			target = MKL
@@ -362,11 +393,11 @@ country_event = {
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 	}
 }
@@ -465,10 +496,30 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		BRS = { country_event = { id = RoF_German.140 hours = 12 } }
-		LUB = { country_event = { id = RoF_German.140 hours = 12 } }
-		BRE = { country_event = { id = RoF_German.140 hours = 12 } }
-		MAG = { country_event = { id = RoF_German.141 hours = 12 } }
+		if = {
+			limit = {
+				BRS = { is_potential_friend_of_ROOT = yes }
+			}
+			BRS = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				BRE = { is_potential_friend_of_ROOT = yes }
+			}
+			BRE = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				LUB = { is_potential_friend_of_ROOT = yes }
+			}
+			LUB = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				MAG = { is_potential_friend_of_ROOT = yes }
+			}
+			MAG = { country_event = { id = RoF_German.141 hours = 12 } }
+		}
 	}
 	option = {
 		name = RoF_SWE.146.a
@@ -532,11 +583,11 @@ country_event = {
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			add_to_war = {
-				targeted_alliance = SWE
-				enemy = AUS
-				hostility_reason = asked_to_join
-			}
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
 		}
 	}
 }
@@ -578,12 +629,76 @@ country_event = {
 	}
 	option = {
 		name = RoF_SWE.150.a
-		ANS = { country_event = { id = RoF_German.140 hours = 12 } }
-		WRT = { country_event = { id = RoF_German.140 hours = 12 } }
-		FRK = { country_event = { id = RoF_German.140 hours = 12 } }
-		#PAL = { country_event = { id = RoF_German.140 hours = 12 } }
-		#NAS = { country_event = { id = RoF_German.140 hours = 12 } }
-		#BAD = { country_event = { id = RoF_German.142 hours = 12 } }
-		NUR = { country_event = { id = RoF_German.140 hours = 12 } }
+		if = {
+			limit = {
+				ANS = { is_potential_friend_of_ROOT = yes }
+			}
+			ANS = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				FRK = { is_potential_friend_of_ROOT = yes }
+			}
+			FRK = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				NUR = { is_potential_friend_of_ROOT = yes }
+			}
+			NUR = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				WRT = { is_potential_friend_of_ROOT = yes }
+			}
+			WRT = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+	}
+}
+
+#FROM refuses
+country_event = {
+	id = RoF_SWE.160
+	title = RoF_SWE.160.t
+	picture = GFX_report_event_den_flag
+	desc = RoF_SWE.160.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.160.a
+		set_country_flag = crown_union_flag
+		effect_tooltip = {
+			DEN = {
+				set_autonomy = {
+					target = SWE
+					autonomy_state = autonomy_rof_union
+				}
+			}
+		}
+		hidden_effect = {
+			DEN = {
+				country_event = {
+					id = RoF_DEN.160
+				}
+			}
+		}
+	}
+
+	option = {
+		name = RoF_SWE.160.b
+		add_political_power = -100
+		set_country_flag = SWE_resisted_DEN
+		hidden_effect = {
+			DEN = {
+				country_event = {
+					id = RoF_DEN.161
+				}
+			}
+		}
 	}
 }

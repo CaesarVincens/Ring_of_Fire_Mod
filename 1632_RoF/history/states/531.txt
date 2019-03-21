@@ -8,7 +8,7 @@ state={
 	}
 
 	history={
-		owner = TUR
+		owner = CRI
 		victory_points = {
 			721 3 
 		}
@@ -20,7 +20,7 @@ state={
 
 		}
 		add_core_of = POL
-		add_core_of = TUR
+		add_core_of = CRI
 		add_core_of = RUT
 
 	}

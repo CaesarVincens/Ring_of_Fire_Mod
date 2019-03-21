@@ -17,7 +17,7 @@ bookmarks = {
 			focuses = {
 				NUS_new_american_revolution
 				NUS_form_CPoE
-				NUS_national_fervor
+				NUS_patriotic_fervor
 			}
 		}
 
@@ -26,6 +26,9 @@ bookmarks = {
 			ideology = constitutionalist
 			ideas = {
 				SWE_lion_of_the_north
+			}
+			focuses = {
+				SWE_cpoe
 			}
 		}
 		"AUS"={
@@ -79,6 +82,7 @@ bookmarks = {
 			}
 			focuses = {
 				RUS_russian_flight
+				RUS_siberian_expansion
 			}
 		}
 		"ENG"={
@@ -98,6 +102,7 @@ bookmarks = {
 			history = "DEN_RING_OF_FIRE_DESC"
 			focuses = {
 				DEN_prepare_HBC
+				DEN_ostend_league
 			}
 		}
 		effect = {

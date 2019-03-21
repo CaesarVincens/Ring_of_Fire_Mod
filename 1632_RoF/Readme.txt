@@ -10,15 +10,22 @@ Many thanks to Idhrendur and the rest of the converter project team. Their tools
 Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-the-ring-of-fire.1048836/
 
 
-Currently in Early Alpha; expect to find bugs and oddities
+Currently in Alpha; expect to find bugs and oddities
 
 Alpha 0.5.0 - ? - in-progress
-Started work on Denmark and Russia focus trees
+Updated to HoI Patch 1.6.1
+Started work on Denmark, Russia, and United Provinces focus trees
+Updates to Sweden, New US, and other focus trees
 Added decision for NUS to buy Harlingen
-Minor fixes and removing unused vanilla code
-Laid the groundwork for overhaul of Thirty Years War
+Minor fixes and removing unused vanilla code, update-proofing various files
 Updated much of the AI coding, hopefully for better play experience, still WIP
+Updated and added Technologies
 More map adjustments
+Added Jaeger and Heavy Weapons Units
+Added Crimea as a Protectorate of Ottoman Empire
+Added Alternate path to form USE
+Added Explanation of CoC mechanics
+Laid the groundwork for overhaul of Thirty Years War
 
 Alpha 0.4.1 - Jul. 13, 2018
 Fix for missing English Civil War complete event for Constitutionalist path

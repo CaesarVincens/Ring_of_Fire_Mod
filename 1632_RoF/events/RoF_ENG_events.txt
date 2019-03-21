@@ -389,7 +389,6 @@ country_event = {
 				}
 				create_country_leader = {
 					name = "Archibald Campbell"
-					desc = "POLITICS_GRAHAM_BROWN_DESC"
 					picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
 					expire = "1660.1.1"
 					ideology = constitutional_monarchy
@@ -493,7 +492,6 @@ country_event = {
 				set_equipment_fraction = 0.5
 				set_stability = 0.9
 				set_war_support = 0.8
-				#country_event = { id = spain.3 days = 1 }
 				add_popularity = {
 					ideology = neutrality
 					popularity = 0.25
@@ -505,7 +503,6 @@ country_event = {
 			set_war_support = 0.8
 			create_country_leader = {
 				name = "Archibald Campbell"
-				desc = "POLITICS_GRAHAM_BROWN_DESC"
 				picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
 				expire = "1660.1.1"
 				ideology = constitutional_monarchy
@@ -570,7 +567,7 @@ country_event = {
 	option = {
 		name = RoF_ENG.150.a
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } inherit_technology = ROOT } #RoF_transfer_technology = yes }
 		set_country_flag = ENG_IRE_revolted
 		ai_chance = {
 			factor = 10
@@ -589,7 +586,7 @@ country_event = {
 			is_ai = no
 		}
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG inherit_technology = ROOT } # RoF_transfer_technology = yes }
 		set_country_flag = ENG_IRE_revolted
 	}
 }
@@ -606,23 +603,22 @@ country_event = {
 	immediate = {
 		create_country_leader = {
 			name = "Owen Roe O'Neil"
-			desc = "POLITICS_GRAHAM_BROWN_DESC"
 			picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
 			expire = "1660.1.1"
-			ideology = democracy
+			ideology = constitutional_republic
 			traits = {
 			}
 		}
 		set_politics = {
-			ruling_party = liberal
+			ruling_party = constitutionalist
 			parties = {
 				absolutist = {
 					popularity = 10
 				}
-				constitutionalist = {
+				liberal = {
 					popularity = 20
 				}
-				liberal = {
+				constitutionalist = {
 					popularity = 45
 				}
 				radical = {
@@ -667,7 +663,7 @@ country_event = {
 	option = {
 		name = RoF_ENG.150.a
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } inherit_technology = ROOT }# RoF_transfer_technology = yes }
 		set_country_flag = ENG_IRE_revolted
 		ai_chance = {
 			factor = 10
@@ -686,7 +682,7 @@ country_event = {
 			is_ai = no
 		}
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG inherit_technology = ROOT } #RoF_transfer_technology = yes }
 		set_country_flag = ENG_IRE_revolted
 	}
 }
@@ -726,6 +722,7 @@ country_event = {
 			autonomy_state = autonomy_rof_union
 			freedom_level = 0.2
 		}
+		SCO = { inherit_technology = ROOT }
 		if = {
 			limit = {
 				SCO = {
@@ -743,14 +740,13 @@ country_event = {
 			SCO = {
 				create_country_leader = {
 					name = "Charles Stuart"
-					desc = "POLITICS_GRAHAM_BROWN_DESC"
 					picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
 					expire = "1660.1.1"
 					ideology = absolute_monarchy
 					traits = {
 					}
 				}
-				RoF_transfer_technology = yes 
+				#RoF_transfer_technology = yes
 			}
 		}
 		ai_chance = {
@@ -779,7 +775,6 @@ country_event = {
 		drop_cosmetic_tag = yes
 		create_country_leader = {
 			name = "Oliver Cromwell"
-			desc = "POLITICS_GRAHAM_BROWN_DESC"
 			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
 			expire = "1660.1.1"
 			ideology = constitutional_republic
@@ -799,8 +794,9 @@ country_event = {
 		name = RoF_ENG.156.b
 		release = SCO
 		SCO = {
+			inherit_technology = ROOT
 			country_event = { id = RoF_ENG.157 days = 2 }
-			RoF_transfer_technology = yes
+			#RoF_transfer_technology = yes
 		}
 		ai_chance = {
 			factor = 1
@@ -819,7 +815,6 @@ country_event = {
 	immediate = {
 		create_country_leader = {
 			name = "Archibald Campbell"
-			desc = "POLITICS_GRAHAM_BROWN_DESC"
 			picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
 			expire = "1660.1.1"
 			ideology = constitutional_republic
@@ -828,7 +823,6 @@ country_event = {
 		}
 		create_country_leader = {
 			name = "James Stewart"
-			desc = "POLITICS_GRAHAM_BROWN_DESC"
 			picture = "gfx/leaders/ENG/Portrait_Scotland_James_Stewart.dds"
 			expire = "1660.1.1"
 			ideology = absolute_monarchy
@@ -1307,6 +1301,7 @@ country_event = {
 		original_tag = ENG
 		has_completed_focus = ENG_constitutional_monarchy
 		has_government = constitutionalist
+		always = no
 	}
 
 	immediate = {
@@ -1500,7 +1495,7 @@ country_event = {
 			has_country_flag = ENG_auto_prov
 		}
 		ENG = {
-			set_country_flag = @ROOT_accept_auto_prov
+			set_country_flag = accept_auto_prov_@ROOT
 			effect_tooltip = {
 				set_autonomy = {
 					target = ROOT
@@ -1519,7 +1514,7 @@ country_event = {
 			has_country_flag = ENG_auto_prov
 		}
 		ENG = {
-			set_country_flag = @ROOT_reject_auto_prov
+			set_country_flag = reject_auto_prov_@ROOT
 			effect_tooltip = {
 				create_wargoal = {
 					target = ROOT
@@ -1541,7 +1536,7 @@ country_event = {
 			add_core_of = ENG
 		}
 		ENG = {
-			set_country_flag = @ROOT_accept_annex
+			set_country_flag = accept_annex_@ROOT
 			effect_tooltip = {
 				annex_country = {
 					target = ROOT
@@ -1559,7 +1554,7 @@ country_event = {
 			has_country_flag = ENG_annex
 		}
 		ENG = {
-			set_country_flag = @ROOT_reject_annex
+			set_country_flag = reject_annex_@ROOT
 			effect_tooltip = {
 				create_wargoal = {
 					target = ROOT
@@ -1579,25 +1574,25 @@ country_event = {
 	title = RoF_ENG.184.t
 	desc = {
 		trigger = {
-			has_country_flag = @FROM_accept_auto_prov
+			has_country_flag = accept_auto_prov_@FROM
 		}
 		text = RoF_ENG.184.da
 	}
 	desc = {
 		trigger = {
-			has_country_flag = @FROM_reject_auto_prov
+			has_country_flag = reject_auto_prov_@FROM
 		}
 		text = RoF_ENG.184.db
 	}
 	desc = {
 		trigger = {
-			has_country_flag = @FROM_accept_annex
+			has_country_flag = accept_annex_@FROM
 		}
 		text = RoF_ENG.184.dc
 	}
 	desc = {
 		trigger = {
-			has_country_flag = @FROM_reject_annex
+			has_country_flag = reject_annex_@FROM
 		}
 		text = RoF_ENG.184.dd
 	}
@@ -1612,7 +1607,7 @@ country_event = {
 	option = { #reintegrate with concessions
 		name = RoF_ENG.184.a
 		trigger = {
-			has_country_flag = @FROM_accept_auto_prov
+			has_country_flag = accept_auto_prov_@FROM
 		}
 		set_autonomy = {
 			target = FROM
@@ -1623,7 +1618,7 @@ country_event = {
 	option = { #guarantee autonomy
 		name = RoF_ENG.184.b
 		trigger = {
-			has_country_flag = @FROM_reject_auto_prov
+			has_country_flag = reject_auto_prov_@FROM
 		}
 		create_wargoal = {
 			target = FROM
@@ -1633,7 +1628,7 @@ country_event = {
 	option = { #reintegrate with concessions
 		name = RoF_ENG.184.c
 		trigger = {
-			has_country_flag = @FROM_accept_annex
+			has_country_flag = accept_annex_@FROM
 		}
 		annex_country = {
 			target = FROM
@@ -1643,7 +1638,7 @@ country_event = {
 	option = { #guarantee autonomy
 		name = RoF_ENG.184.do
 		trigger = {
-			has_country_flag = @FROM_reject_annex
+			has_country_flag = reject_annex_@FROM
 		}
 		create_wargoal = {
 			target = FROM

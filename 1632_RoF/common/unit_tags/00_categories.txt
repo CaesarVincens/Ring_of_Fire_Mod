@@ -22,4 +22,5 @@ sub_unit_categories = {
 	category_steam_tanks
 	category_gas_tanks
 	category_apc
+	category_cavalry
 }

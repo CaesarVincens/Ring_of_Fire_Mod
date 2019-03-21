@@ -1,0 +1,31 @@
+
+ostend_war = {
+	name = "Baltic War"
+	desc = "The Kalmar Union will Rise again"
+	enable = {
+		original_tag = DEN
+		has_war_with = NUS
+		has_war_with = SWE
+	}
+	abort = {
+		NOT = {
+			has_war_with = NUS
+			has_war_with = SWE
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 100
+	}
+}

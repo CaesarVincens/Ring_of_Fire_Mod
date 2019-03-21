@@ -40,6 +40,10 @@ autonomy_state = {
 		has_country_flag = colony_flag
 	}
 
+	allowed_levels_filter = {
+		autonomy_rof_colony
+	}
+
 	can_take_level = {
 		has_country_flag = RoF_go_free
 		#trigger here

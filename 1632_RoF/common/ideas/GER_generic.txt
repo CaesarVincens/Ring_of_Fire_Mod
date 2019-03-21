@@ -1,5 +1,5 @@
 ideas = {
-	
+
 	# Special ones that can be applied on other countries through focus system.
 	country = {
 		GG_tyw_neutrality = {
@@ -22,6 +22,7 @@ ideas = {
 			modifier = {
 				constitutionalist_acceptance = 50
 				send_volunteer_divisions_required = -1
+				#ai_join_ally_desire_factor = -2000
 			}
 			rule = {
 				can_send_volunteers = yes
@@ -54,7 +55,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
 				absolutist_drift = -0.2
-				research_time_factor = -0.02
+				research_speed_factor = 0.02
 			}
 		}
 		GG_royal_dictatorship_focus = {
@@ -281,7 +282,7 @@ ideas = {
 			picture = generic_morale_bonus
 	
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				consumer_goods_factor = -0.05
 				industry_free_repair_factor = 0.1
 			}

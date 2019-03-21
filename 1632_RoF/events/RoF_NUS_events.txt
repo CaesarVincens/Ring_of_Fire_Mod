@@ -988,9 +988,9 @@ country_event = {
 			add_popularity = { ideology = liberal popularity = 0.05 }
 			if = {
 				limit = {
-					has_variable = CoC_anger_@NUS
+					has_variable = CoC_anger_@ROOT
 				}
-				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+				add_to_variable = { var = CoC_anger_@ROOT value = -5 }
 			}
 		}
 	}
@@ -1012,9 +1012,9 @@ country_event = {
 			add_popularity = { ideology = absolutist popularity = 0.05 }
 			if = {
 				limit = {
-					has_variable = CoC_anger_@NUS
+					has_variable = CoC_anger_@ROOT
 				}
-				add_to_variable = { var = CoC_anger_@NUS value = -5 }
+				add_to_variable = { var = CoC_anger_@ROOT value = -5 }
 			}
 		}
 	}
@@ -1050,6 +1050,10 @@ country_event = {
 		name =  RoF_NUS.135.a
 		ai_chance = {
 			base = 10
+			modifier = {
+				liberal > 0.5
+				factor = 10
+			}
 		}
 		hidden_effect = {
 			set_country_flag = NUS_stearns
@@ -1130,6 +1134,11 @@ country_event = {
 		tag = NUS
 		NOT = { has_country_flag = NUS_battle_of_grantville }
 		date > 1632.10.1
+		OR = {
+			has_completed_focus = NUS_support_SWE
+			is_in_faction_with = SWE
+			is_guaranteed_by = SWE
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1185,40 +1194,35 @@ country_event = {
 
 	
 	immediate = {
-		every_country = {
-			limit = {
-				is_in_faction_with = SWE
-			}
-			set_country_flag = member_protestant_union
-		}
+		set_global_flag = CPoE_formed
 	}
 
 	option = {
 		name = RoF_NUS.151.a
-		dismantle_faction = yes
-		create_faction = CPOE_faction
+		set_faction_name = CPOE_faction
 		NUS = {
 			if = {
 				limit = {
 					is_in_faction = yes
 				}
-				remove_from_faction = NUS
+				leave_faction = yes
 			}
 		}
 		add_named_threat = { threat = 5 name = cpoe.1.t }
 		add_to_faction = NUS
-		every_country = {
+		if = {
 			limit = {
-				has_country_flag = member_protestant_union
+				NOT = { is_in_faction_with = MAG }
 			}
-			clr_country_flag = member_protestant_union
-			SWE = {
-				add_to_faction = PREV
-			}
+			add_to_faction = MAG
+			puppet = MAG
 		}
-		add_to_faction = MAG
-		puppet = MAG
-		add_to_faction = LUB
+		if = {
+			limit = {
+				NOT = { is_in_faction_with = LUB }
+			}
+			add_to_faction = LUB
+		}
 	}
 }
 
@@ -1233,6 +1237,7 @@ country_event = {
 	
 	trigger = {
 		tag = NUS
+		NOT = { has_country_flag = NUS_annex_WRZ }
 		NUS = {
 			NOT = { owns_state = 578 }
 			OR = {
@@ -1248,7 +1253,11 @@ country_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
+	immediate = {
+		set_country_flag = NUS_annex_WRZ
+	}
+
 	option = {
 		name = RoF_NUS.155.a
 		NUS = { annex_country = { target = WRZ } } 
@@ -1266,6 +1275,7 @@ country_event = {
 	
 	trigger = {
 		tag = NUS
+		NOT = { has_country_flag = NUS_annex_WRZ }
 		NUS = {
 			OR = {
 				controls_state = 578
@@ -1279,6 +1289,9 @@ country_event = {
 	
 	mean_time_to_happen = {
 		days = 1
+	}
+	immediate = {
+		set_country_flag = NUS_annex_WRZ
 	}
 	
 	option = {
@@ -1352,6 +1365,34 @@ country_event = {
 	}
 }
 
+#Pappenheim comes to Grantville
+country_event = {
+	id = RoF_NUS.162
+	title = RoF_NUS.162.t
+	desc = RoF_NUS.162.d
+	
+	picture = GFX_report_event_swe_flag
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NUS
+		has_country_flag = NUS_battle_of_alte_veste
+		date > 1632.12.1
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	immediate = {
+		set_global_flag = wallenstein_gambit
+	}
+
+	option = {
+		name = RoF_NUS.162.a
+	}
+}
+
 #wismar
 country_event = {
 	id = RoF_NUS.170
@@ -1366,7 +1407,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = NUS_national_fervor_flag
+			set_country_flag = NUS_patriotic_fervor_flag
 			if = {
 				limit = {
 					has_variable = CoC_strength

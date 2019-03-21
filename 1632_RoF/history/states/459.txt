@@ -11,8 +11,8 @@ state = {
 
 	history = {
 		owner = SPN
-		victory_points = { 516 8 }
-		victory_points = { 6598 3 }
+		victory_points = { 516 20 }
+		victory_points = { 6598 10 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -20,6 +20,10 @@ state = {
 			air_base = 0
 			6598 = {
 				naval_base = 2
+				bunker = 2
+			}
+			516 = {
+				bunker = 2
 			}
 		}
 		add_core_of = SPN

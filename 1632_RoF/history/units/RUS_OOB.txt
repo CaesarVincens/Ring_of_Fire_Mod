@@ -74,19 +74,19 @@ instant_effect = {
 }
 units = {
 	division = {
-		name = "1. Infantry Division"
-		location = 6380
-		division_template = "Tercio"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "2. Infantry Division"
-		location = 6380
-		division_template = "Tercio"
-		start_experience_factor = 0.3
-	}
-	division = {
 		name = "1. Tercio"
+		location = 6380
+		division_template = "Tercio"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Tercio"
+		location = 6380
+		division_template = "Tercio"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Tercio"
 		location = 6380
 		division_template = "Tercio"
 		start_experience_factor = 0.3
@@ -99,6 +99,36 @@ units = {
 	}
 	division = {
 		name = "2. Tercio Detachment"
+		location = 6380
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Tercio"
+		location = 6380
+		division_template = "Tercio"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Tercio"
+		location = 6380
+		division_template = "Tercio"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Tercio"
+		location = 6380
+		division_template = "Tercio"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Tercio Detachment"
+		location = 6380
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Tercio Detachment"
 		location = 6380
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
