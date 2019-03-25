@@ -104,7 +104,12 @@ ai_focus_naval_ENG = {
         shbb_tech = 3.0
         tp_tech = 5.0
         cv_tech = 3.0
-        ss_tech = 5.0
+		ss_tech = 5.0
+		man_of_war_tech = 3
+		frigate_tech = 3
+		steamship_tech = 3
+		ironclad_tech = 3
+		timberclad_tech = 3
     }
 }
 

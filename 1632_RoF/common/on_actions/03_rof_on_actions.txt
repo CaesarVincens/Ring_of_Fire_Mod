@@ -6,6 +6,10 @@ on_actions = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
 			}
+			random_country = {
+				limit = { is_ai = yes }
+				country_event = { id = RoF.006 }
+			}
 		}
 	}
 	# ROOT is capitulated country, FROM is winner

@@ -560,3 +560,45 @@ save_admiral_pp_for_later = {
 		value = -100
 	}
 }
+
+dont_mess_with_wastelands = { # Reverse strategy
+	reversed = yes
+
+	enable = {
+		NOT = { tag = WNA }
+		NOT = { tag = WSA }
+		NOT = { tag = WAS }
+		NOT = { tag = WAF }
+		NOT = { tag = WAU }
+	}
+
+	abort = {
+		has_idea = wasteland
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = WNA
+		value = -1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = WSA
+		value = -1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = WAS
+		value = -1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = WAF
+		value = -1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = WAU
+		value = -1000
+	}
+}

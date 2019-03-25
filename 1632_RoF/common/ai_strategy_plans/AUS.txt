@@ -61,14 +61,29 @@ AUS_TYW_prep = {
 		}
 	}
 	ai_strategy = {
+		type = prepare_for_war
+		id = BRA
+		value = 100
+	}
+	ai_strategy = {
 		type = antagonize
 		id = BRA
-		value = 50
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SAX
+		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
 		id = SAX
-		value = 50
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+		
 	}
 }
 

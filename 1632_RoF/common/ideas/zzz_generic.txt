@@ -65,6 +65,27 @@ ideas = {
 	
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+		early_modern_warfare = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.2
+				army_defence_factor = 0.2
+			}
+		}
+
+		early_uptime_influence_warfare = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+			}
+		}
 
 		keep_traditions_idea = {
 			allowed = {

@@ -85,3 +85,15 @@ create_country_leader = {
 		weak_czar
     }
 }
+
+create_corps_commander = {
+	name = "Mikhail Borisovich Shein"
+	picture = "Portrait_Russia_Mikhail_Shein.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	logistics_skill = 1
+	planning_skill = 1
+	id = 1050
+}

@@ -1,0 +1,133 @@
+Russian_Civil_war_Free_RUS = {
+	name = "Fight Sheremetev"
+	desc = "do it"
+	
+	enable = {
+		original_tag = USR
+	}
+	abort = {
+		NOT = { country_exists = RUS }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = RUS
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = RUS
+		value = 200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = RUS
+		value = 200
+	}
+}
+
+Russian_Civil_war_Free_RUS_prep = {
+	name = "Fight Sheremetev"
+	desc = "do it"
+	
+	enable = {
+		original_tag = USR
+	}
+	abort = {
+		OR = {
+			has_war_with = RUS
+			NOT = { country_exists = RUS }
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = RUS
+		value = 100
+	}
+}
+
+Russian_Civil_war_Direc_RUS_prep = {
+	name = "Control Russia"
+	desc = "do it"
+	
+	enable = {
+		original_tag = RUS
+		country_exists = USR
+	}
+	abort = {
+		OR = {
+			has_war_with = USR
+			NOT = { country_exists = USR }
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = USR
+		value = 100
+	}
+}
+
+Russian_Civil_war_Direc_RUS = {
+	name = "Control Russia"
+	desc = "do it"
+	
+	enable = {
+		original_tag = RUS
+		country_exists = USR
+	}
+	abort = {
+		NOT = { country_exists = USR }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = USR
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = USR
+		value = 200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = USR
+		value = 200
+	}
+}
+
+RUS_air_research_plan = {
+	name = "Research airships"
+	desc = "Get those OP ships"
+	
+	enable = {
+		original_tag = RUS
+		has_completed_focus = RUS_russian_flight
+	}
+	abort = {
+		has_tech = aerial_research_tech
+	}
+	
+	research = {
+		air_research = 5000
+	}
+}
+
+RUS_airship_research_plan = {
+	name = "Research airships"
+	desc = "Get those OP ships"
+	
+	enable = {
+		original_tag = RUS
+		has_completed_focus = RUS_dirrigible_designs
+	}
+	abort = {
+		has_tech = first_airship
+	}
+	
+	research = {
+		heavy_air = 10000
+	}
+}

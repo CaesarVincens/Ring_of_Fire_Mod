@@ -5,7 +5,7 @@ country_event = {
 	title = RoF_RUS.10.t
 	picture = GFX_report_event_rus_coa
 	desc = RoF_RUS.10.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	
 	is_triggered_only = yes
 
@@ -14,7 +14,7 @@ country_event = {
 	}
 
 	option = {
-		name = RoF_RUS.50.a
+		name = RoF_RUS.10.a
 		if = {
 			limit = {
 				NOT = { has_completed_focus = RUS_slow_fever_treatment }
@@ -79,22 +79,159 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		#215 = { add_core_of = USR }
+		#391 = { add_core_of = USR }
+		#393 = { add_core_of = USR }
+		#394 = { add_core_of = USR }
+		#395 = { add_core_of = USR }
+		398 = { add_core_of = SIB }
+		399 = { add_core_of = SIB }
+		400 = { add_core_of = SIB }
+		401 = { add_core_of = SIB }
+		402 = { add_core_of = SIB }
+
+		#USR = {
+		#	set_cosmetic_tag = Free_Russia
+		#}
+		#random_other_country = {
+		#	limit = {
+		#		original_tag = RUS
+		#		has_government = constitutionalist
+		#	}
+		#	USR = {
+		#		annex_country = {
+		#			target = PREV
+		#			transfer_troops = yes
+		#		}
+		#	}
+		#}
+		release = SIB
+		#USR = {
+		#	inherit_technology = RUS
+		#	load_oob = USR_OOB
+		#	every_owned_state = {
+		#		add_core_of = RUS
+		#	}
+		#}
+		if = {
+			limit = {
+				has_idea = RUS_streltzi_3
+			}
+			SIB = {
+				add_ideas = RUS_streltzi_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = RUS_streltzi_2 }
+			SIB = {
+				add_ideas = RUS_streltzi_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = RUS_streltzi_1 }
+			SIB = {
+				add_ideas = RUS_streltzi_1
+			}
+		}
+		if = {
+			limit = {
+				has_idea = RUS_boyar_cavalry_3
+			}
+			SIB = {
+				add_ideas = RUS_boyar_cavalry_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = RUS_boyar_cavalry_2 }
+			SIB = {
+				add_ideas = RUS_boyar_cavalry_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = RUS_boyar_cavalry_1 }
+			SIB = {
+				add_ideas = RUS_boyar_cavalry_1
+			}
+		}
+		SIB = {
+			inherit_technology = RUS
+			every_owned_state = {
+				add_core_of = RUS
+				#add_core_of = USR
+			}
+		}
+		random_unit_leader = {
+			limit = {
+				has_id = 1050
+			}
+			set_nationality = SIB
+		}
 
 	}
 	option = {
 		name = RoF_RUS.99.a
-		effect_tooltip = {
-			release = USR
-			set_cosmetic_tag = Directorate_Russia
+		set_cosmetic_tag = Directorate_Russia
+		start_civil_war = {
+			ruling_party = absolutist
+			ideology = constitutionalist
+			size = 0.5
+			capital = 215
+			states = { 215 391 393 394 395 }
+		}
+		random_other_country = {
+			limit = {
+				original_tag = RUS
+				has_government = constitutionalist
+			}
+			set_cosmetic_tag = Free_Russia
+			hidden_effect = {
+				384 = { set_demilitarized_zone = yes }
+				392 = { set_demilitarized_zone = yes }
+				393 = { set_demilitarized_zone = yes }
+				394 = { set_demilitarized_zone = yes }
+			}
+		}
+		hidden_effect = {
+			384 = { set_demilitarized_zone = yes }
+			392 = { set_demilitarized_zone = yes }
+			393 = { set_demilitarized_zone = yes }
+			394 = { set_demilitarized_zone = yes }
 		}
 	}
+	
 	option = {
 		name = RoF_RUS.99.a
-		effect_tooltip = {
-			release = USR
-			set_cosmetic_tag = Directorate_Russia
+		set_cosmetic_tag = Free_Russia
+		set_capital = 215
+		start_civil_war = {
+			ruling_party = constitutionalist
+			ideology = absolutist
+			size = 0.5
+			states = { 379 381 382 383 384 385 386 387 388 389 390 392 396 397 433 534 664 }
+			capital = 389
 		}
-		USR = { change_tag_from = RUS }
+		random_other_country = {
+			limit = {
+				original_tag = RUS
+				has_government = absolutist
+			}
+			hidden_effect = {
+				set_capital = 389
+			}
+			set_cosmetic_tag = Directorate_Russia
+			hidden_effect = {
+				384 = { set_demilitarized_zone = yes }
+				392 = { set_demilitarized_zone = yes }
+				393 = { set_demilitarized_zone = yes }
+				394 = { set_demilitarized_zone = yes }
+			}
+		}
+		hidden_effect = {
+			384 = { set_demilitarized_zone = yes }
+			392 = { set_demilitarized_zone = yes }
+			393 = { set_demilitarized_zone = yes }
+			394 = { set_demilitarized_zone = yes }
+		}
 		ai_chance = {
 			base = 0
 		}
@@ -115,18 +252,101 @@ country_event = {
 			391 = { add_core_of = USR }
 			393 = { add_core_of = USR }
 			394 = { add_core_of = USR }
-			398 = { add_core_of = USR }
-			399 = { add_core_of = USR }
-			400 = { add_core_of = USR }
-			401 = { add_core_of = USR }
-			402 = { add_core_of = USR }
-			403 = { add_core_of = USR }
-			404 = { add_core_of = USR }
-			USR = {
-				set_cosmetic_tag = Free_Russia
-			}
+			395 = { add_core_of = USR }
+			398 = { add_core_of = SIB }
+			399 = { add_core_of = SIB }
+			400 = { add_core_of = SIB }
+			401 = { add_core_of = SIB }
+			402 = { add_core_of = SIB }
 			release = USR
-			USR = { inherit_technology = RUS load_oob = USR_OOB }
+			release = SIB
+			every_owned_state = { add_core_of = USR }
+			load_focus_tree = directorate_russia_focus_tree
+			USR = {
+				set_cosmetic_tag = Free_Russia 
+				inherit_technology = RUS
+				load_oob = USR_OOB
+				every_owned_state = { add_core_of = RUS }
+				RUS = { split_equipment_half = yes }
+				load_focus_tree = united_states_russia_focus_tree
+			}
+			SIB = {
+				inherit_technology = RUS
+				every_owned_state = {
+					add_core_of = RUS
+					add_core_of = USR
+				}
+			}
+			if = {
+				limit = { has_idea = RUS_up_timer_advisor }
+				USR = { add_ideas = RUS_up_timer_advisor }
+				remove_ideas = RUS_up_timer_advisor
+			}
+			if = {
+				limit = { has_idea = RUS_infrastructure }
+				USR = { add_ideas = RUS_infrastructure }
+			}
+			if = {
+				limit = { has_idea = RUS_streltzi_3 }
+				USR = { add_ideas = RUS_streltzi_3 }
+				SIB = { add_ideas = RUS_streltzi_3 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_streltzi_2 }
+				USR = { add_ideas = RUS_streltzi_2 }
+				SIB = { add_ideas = RUS_streltzi_2 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_streltzi_1 }
+				USR = { add_ideas = RUS_streltzi_1 }
+				SIB = { add_ideas = RUS_streltzi_1 }
+			}
+			if = {
+				limit = { has_idea = RUS_boyar_cavalry_3 }
+				USR = { add_ideas = RUS_boyar_cavalry_3 }
+				SIB = { add_ideas = RUS_boyar_cavalry_3 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_boyar_cavalry_2 }
+				USR = { add_ideas = RUS_boyar_cavalry_2 }
+				SIB = { add_ideas = RUS_boyar_cavalry_2 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_boyar_cavalry_1 }
+				USR = { add_ideas = RUS_boyar_cavalry_1 }
+				SIB = { add_ideas = RUS_boyar_cavalry_1 }
+			}
+			#set_cosmetic_tag = Directorate_Russia
+			if = {
+				limit = {
+					NOT = { has_government = absolutist }
+				}
+				add_popularity = {
+					ideology = absolutist
+					popularity = 30
+				}
+				set_politics = {
+					ruling_party = absolutist
+				}
+			}
+			create_country_leader = {
+				name = "Fedor Ivanovich Sheremetev"
+				ideology = dictatorship
+			}
+			create_country_leader = {
+				name = "Fedor Ivanovich Sheremetev"
+				ideology = dictatorship_neutral
+			}
+			create_country_leader = {
+				name = "Fedor Ivanovich Sheremetev"
+				ideology = constitutional_republic
+			}
+			random_unit_leader = {
+				limit = {
+					has_id = 1050
+				}
+				set_nationality = SIB
+			}
 			set_cosmetic_tag = Directorate_Russia
 		}
 	}
@@ -134,7 +354,7 @@ country_event = {
 		name = RoF_RUS.100.a
 		effect_tooltip = {
 			release = USR
-			set_cosmetic_tag = Directorate_Russia
+			release = SIB
 		}
 		USR = { change_tag_from = RUS }
 		ai_chance = {
@@ -145,7 +365,18 @@ country_event = {
 		name = RoF_RUS.100.b
 		effect_tooltip = {
 			release = USR
-			set_cosmetic_tag = Directorate_Russia
+			release = SIB
+		}
+	}
+	option = {
+		name = RoF_RUS.100.c
+		effect_tooltip = {
+			release = USR
+			release = SIB
+		}
+		SIB = { change_tag_from = RUS }
+		ai_chance = {
+			base = 0
 		}
 	}
 }
@@ -186,7 +417,7 @@ news_event = {
 country_event = {
 	id = RoF_RUS.111
 	title = RoF_RUS.111.t
-	picture = GFX_report_event_pol_flag
+	picture = GFX_report_event_rus_coa
 	desc = RoF_RUS.111.d
 
 	is_triggered_only = yes
@@ -267,5 +498,192 @@ country_event = {
 	}
 	option = {
 		name = RoF_RUS.114.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.119
+	title = RoF_RUS.119.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.119.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.119.a
+		391 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = {
+					id = 11356
+					id = 3315
+					id = 9305
+					id = 9402
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_RUS.120
+	title = RoF_RUS.120.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.120.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.120.a
+		declare_war_on = {
+			target = USR
+			type = civil_war
+		}
+	}
+}
+
+country_event = {
+	id = RoF_RUS.121
+	title = RoF_RUS.121.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.121.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		start_border_war = {
+			change_state_after_war = yes
+			minimum_duration_in_days = 60
+			attacker = {
+				state = 396
+				num_provinces = 5
+				on_win = RoF_RUS.122
+				on_lose = RoF_RUS.123
+				on_cancel = RoF_RUS.124
+			}
+			defender = {
+				state = 391
+				num_provinces = 6
+				on_win = RoF_RUS.125
+				on_lose = RoF_RUS.126
+				on_cancel = RoF_RUS.127
+			}
+			
+		}
+	}
+	option = {
+		name = RoF_RUS.121.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.122
+	title = RoF_RUS.122.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.122.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					POL = { owns_state = 387 }
+				}
+				transfer_state = 387
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.122.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.123
+	title = RoF_RUS.123.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.123.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.123.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.124
+	title = RoF_RUS.124.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.124.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.124.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.125
+	title = RoF_RUS.122.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.122.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					POL = { owns_state = 387 }
+				}
+				transfer_state = 387
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.122.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.126
+	title = RoF_RUS.123.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.123.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.123.a
+	}
+}
+
+country_event = {
+	id = RoF_RUS.127
+	title = RoF_RUS.124.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.124.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.124.a
 	}
 }

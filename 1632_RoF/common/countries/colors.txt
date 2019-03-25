@@ -563,3 +563,6 @@ NAP = {
 CRI = {
 	color = rgb { 59 158 125 }
 	color_ui = rgb { 59 158 125 }}
+SIB = {
+	color = rgb { 47 91 108 }
+	color_ui = rgb { 47 91 108 }}

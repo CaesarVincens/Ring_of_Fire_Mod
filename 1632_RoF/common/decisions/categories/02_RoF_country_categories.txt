@@ -39,7 +39,7 @@ FRA_major_decisions = {
 		original_tag = FRA
 	}
 	visible = {
-		#has_country_flag = NUS_major_decision_available
+		
 	}
 }
 
@@ -60,6 +60,6 @@ RUS_major_decisions = {
 		original_tag = RUS
 	}
 	visible = {
-		#has_country_flag = NUS_major_decision_available
+		
 	}
 }

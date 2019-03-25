@@ -10,13 +10,31 @@ ideas = {
 			removal_cost = -1
 			picture = RUS_filaret
 		}
+		USR_free_russia = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				weekly_manpower = 500
+				constitutionalist_drift = 0.05
+				liberal_drift = 0.1
+			}
+			picture = generic_democratic_drift_bonus
+		}
 		RUS_up_timer_advisor = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
 			modifier = {
 				research_speed_factor = 0.05
-				liberal_drift = 0.005
+				constitutionalist_drift = 0.1
+				liberal_drift = 0.05
 			}
 			removal_cost = -1
 			picture = generic_research_bonus
@@ -24,6 +42,9 @@ ideas = {
 		RUS_boyar_cavalry_1 = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			modifier = {
 				cavalry_attack_factor = 0.05
@@ -36,6 +57,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				cavalry_attack_factor = 0.1
 				cavalry_defence_factor = 0.1
@@ -46,6 +70,9 @@ ideas = {
 		RUS_boyar_cavalry_3 = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			modifier = {
 				cavalry_attack_factor = 0.15
@@ -58,6 +85,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				army_infantry_attack_factor = 0.05
 				army_infantry_defence_factor = 0.05
@@ -68,6 +98,9 @@ ideas = {
 		RUS_streltzi_2 = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			modifier = {
 				army_infantry_attack_factor = 0.1
@@ -80,6 +113,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				army_infantry_attack_factor = 0.15
 				army_infantry_defence_factor = 0.15
@@ -90,6 +126,9 @@ ideas = {
 		RUS_infrastructure = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			modifier = {
 				production_speed_infrastructure_factor = 0.1
@@ -315,76 +354,6 @@ ideas = {
 			}
 			
 			traits = { naval_manufacturer }
-		}
-	}
-	aircraft_manufacturer = { 
-		designer = yes
-		RUS_light_aircraft_manufacturer = {
-			
-			picture = generic_air_manufacturer_1
-			allowed = {
-				original_tag = RUS
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { light_aircraft_manufacturer }
-		}
-		
-		RUS_medium_aircraft_manufacturer = {
-			
-			picture = generic_air_manufacturer_3
-			allowed = {
-				original_tag = RUS
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-		}
-		
-		RUS_heavy_aircraft_manufacturer = {
-			picture = generic_air_manufacturer_2
-			
-			allowed = {
-				original_tag = RUS
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { heavy_aircraft_manufacturer }
-		}
-		
-		RUS_naval_aircraft_manufacturer = {
-			
-			picture = generic_naval_manufacturer_2
-			allowed = {
-				original_tag = RUS
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { naval_aircraft_manufacturer }
 		}
 	}
 	industrial_concern = {

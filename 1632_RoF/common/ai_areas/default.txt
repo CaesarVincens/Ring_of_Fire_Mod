@@ -11,6 +11,12 @@ areas = {
 			13
 		}
 	}
+	baltic_sea = {
+		strategic_regions = {
+			9
+			207
+		}
+	}
 	north_germany = {
 		strategic_regions = {
 			6 #north-west Germany

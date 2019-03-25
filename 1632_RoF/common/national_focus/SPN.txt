@@ -141,6 +141,12 @@ focus_tree = {
 				has_global_flag = congress_of_copenhagen_begins
 			}
 		}
+		bypass = {
+			OR = {
+				UPS = { is_subject_of = SPN }
+				NOT = { country_exists = UPS }
+			}
+		}
 		completion_reward = {
 			white_peace = UPS
 			set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }
@@ -160,6 +166,12 @@ focus_tree = {
 		cost = 10
 		relative_position_id = SPN_don_fernando
 		available = {
+			OR = {
+				UPS = { is_subject_of = SPN }
+				NOT = { country_exists = UPS }
+				controls_state = 557
+				controls_state = 555
+			}
 		}
 		completion_reward = {
 			LIE = { country_event = { id = RoF_NED.115 } }

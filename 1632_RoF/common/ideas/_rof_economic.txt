@@ -186,6 +186,10 @@ ideas = {
 					manpower_per_military_factory <  3000
 				}
 				modifier = {
+					factor = 0
+					has_war = no
+				}
+				modifier = {
 					factor = 25
 					#Prio this if nation has a lot of manpower compared to MIC
 					manpower_per_military_factory >  10000

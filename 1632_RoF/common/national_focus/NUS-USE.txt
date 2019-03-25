@@ -332,7 +332,12 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
-			ships_in_area = { area = 9 size > 4 }
+			if = {
+				limit = {
+					is_ai = no
+				}
+				ships_in_area = { area = 9 size > 4 }
+			}
 		}
 		bypass = {
 			has_war_with = DEN

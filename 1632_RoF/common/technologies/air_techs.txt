@@ -126,6 +126,7 @@ technologies = {
 			cas_bomber
 			naval_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		
 		ai_will_do = {
@@ -158,6 +159,7 @@ technologies = {
 			cas_bomber
 			naval_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -184,6 +186,7 @@ technologies = {
 			cas_bomber
 			naval_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		ai_will_do = {
 			factor = 3
@@ -205,6 +208,7 @@ technologies = {
 			cas_bomber
 			naval_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		ai_will_do = {
 			factor = 4
@@ -229,6 +233,7 @@ technologies = {
 			medium_air
 			tactical_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		ai_will_do = {
 			factor = 1
@@ -253,6 +258,7 @@ technologies = {
 			medium_air
 			tactical_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		ai_will_do = {
 			factor = 2
@@ -274,6 +280,7 @@ technologies = {
 			medium_air
 			tactical_bomber
 			air_equipment
+			fixed_wing_tech
 		}
 		ai_will_do = {
 			factor = 3
@@ -304,6 +311,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			balloon_tech
 		}
 		
 		ai_will_do = {
@@ -333,6 +341,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			balloon_tech
 		}
 		
 		ai_will_do = {
@@ -357,6 +366,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			balloon_tech
 		}
 		
 		ai_will_do = {

@@ -248,6 +248,7 @@ NUS_minor_decisions = {
 				has_country_flag = CoC_present
 			}
 			has_completed_focus = NUS_establish_committees_of_correspondence
+			NOT = { has_completed_focus = NUS_patriotic_fervor }
 		}
 		available = {
 			has_completed_focus = NUS_expand_committees
@@ -268,13 +269,29 @@ NUS_minor_decisions = {
 			is_capital = yes
 			is_controlled_by = FROM
 		}
+		days_re_enable = 60
+		fixed_random_seed = no
 		complete_effect = {
-			add_to_variable = {
-				var = NUS_patriotic_fervor
-				value = 1
-			}
-			FROM = {
-				set_country_flag = NUS_coc_inspired
+			random_list ={
+				67 = {
+					add_to_variable = {
+						var = NUS_patriotic_fervor
+						value = 1
+					}
+					FROM = {
+						set_country_flag = NUS_coc_inspired
+					}
+					custom_effect_tooltip = NUS_coc_speeches_success_TT
+					news_event = {
+						id = RoF_NUS.140
+					}
+				}
+				33 = {
+					custom_effect_tooltip = NUS_coc_speeches_faliure_TT
+					news_event = {
+						id = RoF_NUS.141
+					}
+				}
 			}
 		}
 		cost = 50

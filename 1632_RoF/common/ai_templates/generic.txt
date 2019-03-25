@@ -87,6 +87,7 @@ armor_generic = {
 			engineer
 			recon
 			anti_tank
+			cavalry
 		}
 		
 		replace_at_match = 0.4
@@ -169,7 +170,7 @@ armor_generic = {
 			maintenance_company
 			logistics_company
 			anti_tank
-			
+			cavalry
 		}
 		
 	}
@@ -244,6 +245,7 @@ armor_generic = {
 			maintenance_company
 			logistics_company
 			anti_tank
+			cavalry
 		}
 	
 	}
@@ -629,6 +631,8 @@ infantry_generic = {
 			modifier = {
 				add = 2
 				NOT = { has_tech = caplock_tech }
+				NOT = { original_tag = NUS }
+				NOT = { original_tag = SWE }
 			}
 			modifier = {
 				factor = 2
@@ -693,11 +697,12 @@ infantry_generic = {
 			cavalry
 			merc_cavalry
 			heavy_artillery_brigade
+			jaeger_brigade
 		}
 	}
 	line_infantry_default = {
 		upgrade_prio = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 2
 				has_tech = flintlock_tech
@@ -709,6 +714,17 @@ infantry_generic = {
 			modifier = {
 				factor = 2
 				has_tech = repeating_rifle_tech
+			}
+			modifier = {
+				add = 18
+				OR = {
+					original_tag = NUS
+					original_tag = SWE
+				}
+			}
+			modifier = {
+				factor = 2
+				has_completed_focus = swedish_line
 			}
 		}
 		
@@ -748,7 +764,7 @@ infantry_generic = {
 		}
 		
 		target_template = {
-			weight = 0.9
+			weight = 0.8
 			match_value = 3000
 			
 			support = {
@@ -766,6 +782,7 @@ infantry_generic = {
 			light_artillery_brigade
 			cavalry
 			merc_cavalry
+			jaeger_brigade
 		}
 	}
 }
@@ -852,6 +869,83 @@ garrison_generic = {
 	}
 	
 	match_to_count = 0.60
+
+	garrison_tercio = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				OR = {
+					tag = NUS
+					tag = SWE
+				}
+			}
+		}
+		
+		target_width = 6.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			3.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = { 
+				military_police = 1
+			}
+			
+			regiments = {
+				tercio_infantry = 3
+			}
+		}
+
+		allowed_types = {
+			cavalry
+			merc_cavalry
+			line_infantry
+			merc_line_infantry
+			tercio_infantry
+			merc_tercio_infantry
+			spear_infantry
+			military_police
+		}
+	}
 
 	garrison_infantry = {
 	

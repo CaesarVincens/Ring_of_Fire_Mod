@@ -12,9 +12,10 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 
 Currently in Alpha; expect to find bugs and oddities
 
-Alpha 0.5.0 - ? - in-progress
+Alpha 0.5.0 - Crisis in the Kremlin - Mar. 24, 2019
 Updated to HoI Patch 1.6.1
 Started work on Denmark, Russia, and United Provinces focus trees
+Russia tree nearly complete up to beginning of Russian civil war, with bare-start for civil war trees.
 Updates to Sweden, New US, and other focus trees
 Added decision for NUS to buy Harlingen
 Minor fixes and removing unused vanilla code, update-proofing various files
@@ -23,9 +24,10 @@ Updated and added Technologies
 More map adjustments
 Added Jaeger and Heavy Weapons Units
 Added Crimea as a Protectorate of Ottoman Empire
-Added Alternate path to form USE
+Added Alternate path to form USE (through Expand the Committees focus)
 Added Explanation of CoC mechanics
 Laid the groundwork for overhaul of Thirty Years War
+Many balance changes, expect different outcomes from 0.4.1
 
 Alpha 0.4.1 - Jul. 13, 2018
 Fix for missing English Civil War complete event for Constitutionalist path

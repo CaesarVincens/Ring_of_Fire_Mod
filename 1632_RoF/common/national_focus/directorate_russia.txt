@@ -1,0 +1,76 @@
+focus_tree = {
+	id = directorate_russia_focus_tree
+	country = {
+		factor = 0
+	}
+	default = no
+	####################
+	#     AIR TREE     #
+	####################
+	#shared_focus = air_research
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	#shared_focus = naval_research_focus
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	#shared_focus = army_drilling
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	
+	focus = {
+		id = DIRRUS_secure_bureaus
+		icon = GFX_focus_generic_treaty
+		x = 7
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_start_civil_war
+		icon = GFX_goal_generic_occupy_start_war
+		x = 10
+		y = 0
+		cost = 10
+		completion_reward = {
+			country_event = {
+				id = RoF_RUS.120
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_hire_kazakh
+		icon = GFX_goal_generic_occupy_start_war
+		x = 7
+		y = 5
+		cost = 10
+		available = {
+			date > 1637.1.1
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

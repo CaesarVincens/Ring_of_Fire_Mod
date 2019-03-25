@@ -17,6 +17,208 @@
 #
 
 ##########################################
+###      Split Equipment Effect       ####
+##########################################
+
+#PREV gains equipment from THIS
+#TARGET = {
+#	ROOT = {
+#		split_equipment_half = yes
+#	}	
+#}
+split_equipment_half = {
+	set_variable = {
+		var = convoy_var
+		value = num_equipment@convoy
+	}
+	multiply_variable = {
+		var = convoy_var
+		value = 0.5
+	}
+	send_equipment = {
+		type = convoy
+		amount = convoy_var
+		target = PREV
+	}
+	if = {
+		limit = { has_tech = arquebus_weapons }
+		set_variable = {
+			var = firearms_var
+			value = num_equipment@firearm_equipment
+		}
+		multiply_variable = {
+			var = firearms_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = firearm_equipment
+			amount = firearms_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = pike_weapons }
+		set_variable = {
+			var = pikes_var
+			value = num_equipment@pike_equipment
+		}
+		multiply_variable = {
+			var = pikes_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = pike_equipment
+			amount = pikes_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = light_artillery_1 }
+		set_variable = {
+			var = lcannon_var
+			value = num_equipment@light_artillery_equipment
+		}
+		multiply_variable = {
+			var = lcannon_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = light_artillery_equipment
+			amount = lcannon_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = heavy_artillery_1 }
+		set_variable = {
+			var = hcannon_var
+			value = num_equipment@heavy_artillery_equipment
+		}
+		multiply_variable = {
+			var = hcannon_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = heavy_artillery_equipment
+			amount = hcannon_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = apc_tech_0 }
+		set_variable = {
+			var = apc_var
+			value = num_equipment@apc_equipment
+		}
+		multiply_variable = {
+			var = apc_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = apc_equipment
+			amount = apc_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = early_gas_tank }
+		set_variable = {
+			var = gas_tank_var
+			value = num_equipment@gas_tank_equipment
+		}
+		multiply_variable = {
+			var = gas_tank_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = gas_tank_equipment
+			amount = gas_tank_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = early_steam_tank }
+		set_variable = {
+			var = steam_tank_var
+			value = num_equipment@steam_tank_equipment
+		}
+		multiply_variable = {
+			var = steam_tank_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = steam_tank_equipment
+			amount = steam_tank_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = motorised_infantry }
+		set_variable = {
+			var = motorized_var
+			value = num_equipment@motorized_equipment
+		}
+		multiply_variable = {
+			var = motorized_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = motorized_equipment
+			amount = motorized_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = tech_support }
+		set_variable = {
+			var = support_var
+			value = num_equipment@support_equipment
+		}
+		multiply_variable = {
+			var = support_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = support_equipment
+			amount = support_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = antiair1 }
+		set_variable = {
+			var = aa_var
+			value = num_equipment@anti_air_equipment
+		}
+		multiply_variable = {
+			var = aa_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = anti_air_equipment
+			amount = aa_var
+			target = PREV
+		}
+	}
+	if = {
+		limit = { has_tech = antitank1 }
+		set_variable = {
+			var = at_var
+			value = num_equipment@anti_tank_equipment
+		}
+		multiply_variable = {
+			var = at_var
+			value = 0.5
+		}
+		send_equipment = {
+			type = anti_tank_equipment
+			amount = at_var
+			target = PREV
+		}
+	}
+}
+
+##########################################
 ###      Change State Category        ####
 ##########################################
 

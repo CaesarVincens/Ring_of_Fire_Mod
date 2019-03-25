@@ -57,6 +57,7 @@ SPN = "countries/Spanish Netherlands.txt"
 SPR = "countries/Spain.txt"
 SWE = "countries/Sweden.txt"
 BRG = "countries/Burgundy.txt"
+SIB = "countries/Siberia.txt"
 
 #Balkans
 ALB = "countries/Albania.txt"
@@ -127,6 +128,7 @@ VIJ = "countries/Vijayanagar.txt"
 
 #Middle East
 CIR = "countries/Circassia.txt"
+CRI = "countries/Crimea.txt"
 GEO = "countries/Georgia.txt"
 MRH = "countries/Marehan.txt"
 NEJ = "countries/Nejd.txt"

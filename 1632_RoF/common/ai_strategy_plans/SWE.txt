@@ -40,6 +40,11 @@ SWE_ignore_russia = {
 		value = 1000
 	}
 	ai_strategy = {
+		type = ignore
+		id = "USR"
+		value = 1000
+	}
+	ai_strategy = {
 		type = area_priority
 		id = russian_region
 		value = -1000
@@ -87,6 +92,27 @@ SWE_Thirty_Years_War = {
 	}
 }
 
-
+SWE_Thirty_Years_War = {
+	name = "Watch for Denmark"
+	desc = "Ostend Prep"
+	enable = {
+		original_tag = SWE
+		DEN = { has_completed_focus = DEN_ostend_league }
+	}
+	abort = {
+		OR = {
+			has_war_with = FRA
+			has_war_with = DEN
+			NUS = { has_completed_focus = NUS_congress_of_copenhagen }
+			DEN = { is_subject_of = SWE }
+			DEN = { exists = no }
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = DEN
+		value = 100
+	}
+}
 
 

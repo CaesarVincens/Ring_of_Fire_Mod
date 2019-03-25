@@ -247,10 +247,6 @@ technologies = {
 				steel > 30
 			}
 		}
-
-		ai_research_weights = {
-			steel = -2.0
-		}
 	}
 
 	crucible_steel = {
@@ -301,10 +297,6 @@ technologies = {
 				factor = 0.5
 				steel > 30
 			}
-		}
-
-		ai_research_weights = {
-			steel = -2.0
 		}
 
 		show_effect_as_desc = yes

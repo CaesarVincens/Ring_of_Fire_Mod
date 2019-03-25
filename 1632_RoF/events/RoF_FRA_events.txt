@@ -223,6 +223,13 @@ country_event = {
 				hostility_reason = asked_to_join
 			}
 		}
+		SWE = {
+			add_to_war = {
+				targeted_alliance = NUS
+				enemy = FRA
+				hostility_reason = asked_to_join
+			}
+		}
 	}
 	option = {
 		name = RoF_FRA.121.a

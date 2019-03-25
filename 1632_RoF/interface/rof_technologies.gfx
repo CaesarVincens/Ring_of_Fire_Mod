@@ -54,6 +54,10 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_USR_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+	SpriteType = {
 		name = "GFX_heavy_weapons_tech_medium"
 		texturefile = "gfx/interface/technologies/support_weapons.dds"
 	}
@@ -90,6 +94,10 @@ spriteTypes = {
 		name = "GFX_RUS_caplock_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
+	SpriteType = {
+		name = "GFX_USR_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_FRA_caplock_tech_medium"
@@ -104,6 +112,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_RUS_repeating_rifle_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+	SpriteType = {
+		name = "GFX_USR_repeating_rifle_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 	

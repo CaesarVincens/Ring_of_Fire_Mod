@@ -88,7 +88,7 @@ focus_tree = {
 		id = RUS_establish_gun_shop
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RUS_establish_dacha }
-		x = -5
+		x = -4
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_dacha
@@ -116,7 +116,7 @@ focus_tree = {
 		id = RUS_war_gaming
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = RUS_establish_gun_shop }
-		x = -1
+		x = 0
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_gun_shop
@@ -195,6 +195,8 @@ focus_tree = {
 				owns_state = 387
 			}
 		}
+		continue_if_invalid = yes
+		cancel_if_invalid = no
 		select_effect = {
 			387 = {
 				set_demilitarized_zone = no
@@ -222,6 +224,9 @@ focus_tree = {
 					custom_effect_tooltip = RUS_retake_rezhev.tt
 				}
 			}
+		}
+		ai_will_do = {
+			base = 100
 		}
 	}
 	
@@ -302,7 +307,7 @@ focus_tree = {
 		id = RUS_ak3
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RUS_establish_gun_shop }
-		x = 2
+		x = -3
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_gun_shop
@@ -935,7 +940,7 @@ focus_tree = {
 			has_tech = first_airship
 		}
 		completion_reward = {
-			custom_effect_tooltip = launch_airship_WIP
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 
@@ -947,7 +952,7 @@ focus_tree = {
 		id = RUS_slow_fever_treatment
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = RUS_establish_dacha }
-		x = 5
+		x = 3
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_dacha
@@ -962,6 +967,8 @@ focus_tree = {
 				}				
 			}
 		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available = {
 			has_idea = RUS_slow_fever
 		}
@@ -1111,8 +1118,6 @@ focus_tree = {
 				owns_state = 400
 				owns_state = 401
 				owns_state = 402
-				owns_state = 403
-				owns_state = 404
 			}
 		}
 		bypass = {
@@ -1129,8 +1134,6 @@ focus_tree = {
 						state = 400
 						state = 401
 						state = 402
-						state = 403
-						state = 404
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1200,7 +1203,7 @@ focus_tree = {
 				hidden_effect = {
 					increase_state_category = yes
 				}
-				custom_effect_tooltip = RUS_siberian_expansion.tt
+				custom_effect_tooltip = increase_state_category_tt
 			}
 			if = {
 				limit = { has_idea = RUS_eastern_serfdom_1 }
@@ -1224,116 +1227,40 @@ focus_tree = {
 
 	#oct 35
 	focus = {
-		id = RUS_back_boyars
+		id = RUS_sideline_czar
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = RUS_siberian_expansion }
 		x = 0
 		y = 1
 		cost = 10
 		relative_position_id = RUS_siberian_expansion
-		mutually_exclusive = {
-			focus = RUS_support_service_nobility
-			focus = RUS_side_with_serfs
-		}
 		available = {
 			has_country_flag = crisis_in_kremlin
 		}
 		completion_reward = {
-
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 
 	focus = {
 		id = RUS_restore_status_quo
 		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = RUS_back_boyars }
+		prerequisite = { focus = RUS_sideline_czar }
 		x = 0
 		y = 1
 		cost = 10
-		relative_position_id = RUS_back_boyars
+		relative_position_id = RUS_sideline_czar
 		available = {
 		}
 		completion_reward = {
-
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 	
-	#oct 35
-	focus = {
-		id = RUS_support_service_nobility
-		icon = GFX_goal_molotov_ribbentrop_pact
-		prerequisite = { focus = RUS_siberian_expansion }
-		x = -2
-		y = 1
-		cost = 10
-		relative_position_id = RUS_siberian_expansion
-		mutually_exclusive = {
-			focus = RUS_back_boyars
-			focus = RUS_side_with_serfs
-		}
-		available = {
-			has_country_flag = crisis_in_kremlin
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = RUS_promote_service_nobility
-		icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = RUS_support_service_nobility }
-		x = 0
-		y = 1
-		cost = 10
-		relative_position_id = RUS_support_service_nobility
-		available = {
-		}
-		completion_reward = {
-
-		}
-	}
-
-	#oct 35
-	focus = {
-		id = RUS_side_with_serfs
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = RUS_siberian_expansion }
-		x = 2
-		y = 1
-		cost = 10
-		relative_position_id = RUS_siberian_expansion
-		mutually_exclusive = {
-			focus = RUS_back_boyars
-			focus = RUS_support_service_nobility
-		}
-		available = {
-			has_country_flag = crisis_in_kremlin
-		}
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = RUS_revoke_noble_titles
-		icon = GFX_focus_rom_handle_king
-		prerequisite = { focus = RUS_side_with_serfs }
-		x = 0
-		y = 1
-		cost = 10
-		relative_position_id = RUS_side_with_serfs
-		available = {
-		}
-		completion_reward = {
-
-		}
-	}
-
 	focus = {
 		id = RUS_fate_of_czar
 		icon = GFX_focus_ger_strike_at_the_source
-		prerequisite = { focus = RUS_revoke_noble_titles focus = RUS_promote_service_nobility focus = RUS_restore_status_quo }
+		prerequisite = { focus = RUS_restore_status_quo }
 		prerequisite = { focus = RUS_launch_czarina_evdokia }
 		x = 2
 		y = 1
@@ -1346,6 +1273,7 @@ focus_tree = {
 				id = RoF_RUS.100
 				hours = 2
 			}
+			custom_effect_tooltip = load_new_focus_tree_TT
 		}
 	}
 }

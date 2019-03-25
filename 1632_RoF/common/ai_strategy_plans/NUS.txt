@@ -110,3 +110,20 @@ NUS_ally_swe = {
 		value = 200
 	}
 }
+
+NUS_baltic_relief_strat = {
+	name = "Relieve Lubeck"
+	desc = "Get Ships in Baltic"
+	enable = {
+		original_tag = NUS
+		has_completed_focus = NUS_force_hamburg
+	}
+	abort = {
+		has_completed_focus = NUS_relieve_lubeck
+	}
+	ai_strategy = {
+		type = area_priority
+		id = baltic_sea
+		value = 1000
+	}
+}

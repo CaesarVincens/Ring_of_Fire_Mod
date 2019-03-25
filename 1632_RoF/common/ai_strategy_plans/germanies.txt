@@ -15,7 +15,7 @@ germans_ally_swe = {
 	ai_strategy = {
 		type = befriend
 		id = "SWE"
-		value = 100
+		value = 200
 	}
 	ai_strategy = {
 		type = alliance
