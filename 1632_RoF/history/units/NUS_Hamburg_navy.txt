@@ -2,18 +2,25 @@
 
 units = {
 						
-	navy = {					
+	fleet = {			
 		name = "USE Fleet 1"
-		base = 9347
-		location = 9347 # Hamburg?
+		naval_base = 9347
+		task_force = {
+			name = "Ironclads"
+			location = 9347 # Hamburg?
 
-		ship = { name = "SSIM United States" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Constitution" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM President" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Monitor" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Ajax" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Achates" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
-		ship = { name = "SSIM Achilles" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+			ship = { name = "SSIM United States" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+			ship = { name = "SSIM Constitution" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+			ship = { name = "SSIM President" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+			ship = { name = "SSIM Monitor" definition = ironclad equipment = { ironclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		}
+		task_force = {
+			name = "Timberclads"
+			location = 9347
+			ship = { name = "SSIM Ajax" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+			ship = { name = "SSIM Achates" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+			ship = { name = "SSIM Achilles" definition = timberclad equipment = { timberclad_1 = { amount = 1 owner = NUS creator = NUS } } }
+		}
 	}
 }
 

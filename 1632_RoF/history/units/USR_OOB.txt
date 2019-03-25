@@ -61,33 +61,22 @@ division_template = {
 }
 
 ### No BHU air forces ###
-instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = arquebus_equipment
-			creator = "USR"
-		}
-		requested_factories = 1
-		progress = 0.88
-		efficiency = 100
-	}
-}
 units = {
 	division = {
 		name = "1. Infantry"
-		location = 291
+		location = 6338
 		division_template = "Infantry"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "2. Infantry"
-		location = 291
+		location = 6338
 		division_template = "Infantry"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "3. Infantry"
-		location = 291
+		location = 6338
 		division_template = "Infantry"
 		start_experience_factor = 0.3
 	}
@@ -105,19 +94,19 @@ units = {
 	}
 	division = {
 		name = "4. Infantry"
-		location = 291
+		location = 6338
 		division_template = "Infantry"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "5. Infantry"
-		location = 291
+		location = 6338
 		division_template = "Infantry"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "6. Infantry"
-		location = 291
+		location = 6338
 		division_template = "Infantry"
 		start_experience_factor = 0.3
 	}
@@ -129,6 +118,66 @@ units = {
 	}
 	division = {
 		name = "4. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "10. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "11. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8. Infantry Detachment"
 		location = 291
 		division_template = "Infantry Detachment"
 		start_experience_factor = 0.3

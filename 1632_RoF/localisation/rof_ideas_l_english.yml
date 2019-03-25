@@ -148,6 +148,7 @@
  RUS_gorchakov_dacha:0 "Gorchakov Dacha"
  RUS_gun_shop:0 "The Gun Shop"
  RUS_filaret:0 "Patriarch Filaret"
+ USR_free_russia:0 "Free Haven"
  filaret_gone:0 "We cannot simply dismiss the Patriarch\n(only removed by event or focus)"
  filaret_trait:0 "Patriarch of Russia"
  filaret_trait_desc:0 "Filaret, the father of Mikhail, is co-regent of Russia as the Patriarch of the Orthodox Church.\nFilaret holds a strong anti-Polish stance."
@@ -201,3 +202,5 @@
  absolutist_partisans_recruiting:0 "Absolutist Partisans"
  constitutionalist_partisans_recruiting:0 "Constitutionalist Partisans"
  constitutionalist_revolutionaries:0 "Constitutionalist "
+ early_modern_warfare:0 "Early Modern Warfare"
+ early_uptime_influence_warfare:0 "Early Uptime Influenced Warfare"
