@@ -7,8 +7,8 @@ focus_tree = {
 			tag = RUS
 		}
 		modifier = {
-			add = 10
-			original_tag = RUS
+			add = 2
+			has_country_flag = russia_focus_tree_flag
 		}
 	}
 	default = no

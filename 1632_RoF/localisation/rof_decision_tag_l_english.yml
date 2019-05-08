@@ -42,3 +42,4 @@
  USE_move_capital_to_magdeburg:0 "Move Capital to Magdeburg"
  USE_move_capital_to_magdeburg_desc:0 "Gustavus Adolphus has chosen Magdeburg as his imperial capital in Germany. Let us move our administration to the city as he wishes."
  RUS_major_decisions:0 "Important Decisions"
+ NUS_test_decision2_desc:0 "Absolutist [?Root.USE_abs|Y4]\nConstitutionalist [?Root.USE_cons|Y4]\nLiberal [?Root.USE_lib|Y4]\nRadical [?Root.USE_rad|Y4]\nIsolationist [?Root.USE_iso|Y4]\nCount [?Root.USE_party_count|Y0]"

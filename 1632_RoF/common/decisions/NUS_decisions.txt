@@ -230,15 +230,13 @@ NUS_minor_decisions = {
 			
 		}
 		complete_effect = {
-			if = {
-				limit = { has_country_flag = NUS_new_american_revolution_flag }
-				clr_country_flag = NUS_new_american_revolution_flag
-				add_political_power = -1
-				else = {
-					set_country_flag = NUS_new_american_revolution_flag
-					add_political_power = 1
-				}
-			}
+			set_variable = { USE_abs = 0.424 }
+			set_variable = { USE_cons = 0.241 }
+			set_variable = { USE_lib = 0.105 }
+			set_variable = { USE_rad = 0.061 }
+			set_variable = { USE_iso = 0.166 }
+
+			set_USE_parties = yes
 		}
 	}
 	NUS_coc_speeches = {
@@ -281,13 +279,13 @@ NUS_minor_decisions = {
 					FROM = {
 						set_country_flag = NUS_coc_inspired
 					}
-					custom_effect_tooltip = NUS_coc_speeches_success_TT
+					#custom_effect_tooltip = NUS_coc_speeches_success_TT
 					news_event = {
 						id = RoF_NUS.140
 					}
 				}
 				33 = {
-					custom_effect_tooltip = NUS_coc_speeches_faliure_TT
+					#custom_effect_tooltip = NUS_coc_speeches_faliure_TT
 					news_event = {
 						id = RoF_NUS.141
 					}

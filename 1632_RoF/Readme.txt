@@ -8,9 +8,14 @@ Focus Tree Contributions: Principality of Lichenstein, King of Nords
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
 Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-the-ring-of-fire.1048836/
-
+Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
+
+Alpha 0.5.1 - Apr. 3, 2019
+Updated to HoI patch 1.6.2
+Add new party popularity merging mechanic for USE formation
+Other minor changes
 
 Alpha 0.5.0 - Crisis in the Kremlin - Mar. 24, 2019
 Updated to HoI Patch 1.6.1

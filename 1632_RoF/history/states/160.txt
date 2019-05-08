@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = GEO
 		victory_points = {
-			11664 8 
+			1599 8
 		}
 		buildings = {
 			infrastructure = 2

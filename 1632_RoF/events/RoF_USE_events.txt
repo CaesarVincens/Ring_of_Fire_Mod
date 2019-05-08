@@ -79,6 +79,13 @@ country_event = {
 			SWE = {
 				set_faction_name = Vasa_Empire
 			}
+			divide_variable = { USE_abs = USE_party_count }
+			divide_variable = { USE_cons = USE_party_count }
+			divide_variable = { USE_lib = USE_party_count }
+			divide_variable = { USE_rad = USE_party_count }
+			divide_variable = { USE_iso = USE_party_count }
+
+			set_USE_parties = yes
 		}
 	}
 	option = {
@@ -156,6 +163,12 @@ country_event = {
 		trigger = {
 			NOT = { tag = SWE }
 		}
+		add_to_variable = { NUS.USE_abs = party_popularity@absolutist }
+		add_to_variable = { NUS.USE_cons = party_popularity@constitutionalist }
+		add_to_variable = { NUS.USE_lib = party_popularity@liberal }
+		add_to_variable = { NUS.USE_rad = party_popularity@radical }
+		add_to_variable = { NUS.USE_iso = party_popularity@neutrality }
+		add_to_variable = { NUS.USE_party_count = 1 }
 		ai_chance = {
 			base = 100
 			modifier = {

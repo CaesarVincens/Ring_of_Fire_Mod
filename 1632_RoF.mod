@@ -1,4 +1,4 @@
-name="1632 - The Ring of Fire"
+﻿name="1632 - The Ring of Fire"
 path="mod/1632_RoF/"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
@@ -32,4 +32,4 @@ tags={
 }
 picture="1632_RoF.jpg"
 remote_file_id="1160009836"
-supported_version="1.5.*"
+supported_version="1.6.*"

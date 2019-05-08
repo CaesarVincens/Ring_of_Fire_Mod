@@ -2,6 +2,10 @@ focus_tree = {
 	id = directorate_russia_focus_tree
 	country = {
 		factor = 0
+		modifier = {
+			add = 2
+			has_country_flag = directorate_russia_focus_tree
+		}
 	}
 	default = no
 	####################

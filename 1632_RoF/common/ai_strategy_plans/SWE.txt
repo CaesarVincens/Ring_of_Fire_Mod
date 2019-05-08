@@ -1,6 +1,6 @@
 SWE_focus_on_germany_plan = {
 	name = "Focus on Germany"
-	desc = "War with Austria"
+	desc = "War with Austria1"
 	
 	enable = {
 		original_tag = SWE
@@ -53,7 +53,7 @@ SWE_ignore_russia = {
 
 SWE_Thirty_Years_War = {
 	name = "Focus on Germany"
-	desc = "War with Austria"
+	desc = "War with Austria2"
 	enable = {
 		OR = {
 			original_tag = SWE
@@ -111,6 +111,11 @@ SWE_Thirty_Years_War = {
 	ai_strategy = {
 		type = prepare_for_war
 		id = DEN
+		value = 200
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
 		value = 100
 	}
 }

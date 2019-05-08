@@ -394,7 +394,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_RUS.100.a
-		set_cosmetic_tag = Free_Russia
+		load_focus_tree = directorate_russia_focus_tree
 	}
 }
 

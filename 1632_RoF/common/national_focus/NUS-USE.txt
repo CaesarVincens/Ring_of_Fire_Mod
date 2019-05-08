@@ -2071,6 +2071,9 @@ focus_tree = {
 			add_state_core = 577
 		}
 	}
+	##############
+	## Form USE ##
+	##############
 	focus = {
 		id = NUS_patriotic_fervor
 		icon = GFX_goal_generic_demand_territory
@@ -2093,11 +2096,22 @@ focus_tree = {
 			}
 		}
 		select_effect = {
-			if = {
-				limit = {
-					has_country_flag = NUS_patriotic_fervor_flag
-				}
-				hidden_effect = {
+			hidden_effect = {
+				add_to_variable = { USE_abs = party_popularity@absolutist }
+				multiply_variable = { USE_abs = 4 }
+				add_to_variable = { USE_cons = party_popularity@constitutionalist }
+				multiply_variable = { USE_cons = 4 }
+				add_to_variable = { USE_lib = party_popularity@liberal }
+				multiply_variable = { USE_lib = 4 }
+				add_to_variable = { USE_rad = party_popularity@radical }
+				multiply_variable = { USE_rad = 4 }
+				add_to_variable = { USE_iso = party_popularity@neutrality }
+				multiply_variable = { USE_iso = 4 }
+				add_to_variable = { USE_party_count = 4 }
+				if = {
+					limit = {
+						has_country_flag = NUS_patriotic_fervor_flag
+					}
 					every_country = {
 						limit = {
 							OR = { is_german_tag = yes tag = SWE }
@@ -2111,10 +2125,13 @@ focus_tree = {
 				else = {
 					every_country = {
 						limit = {
+							NOT = { tag = NUS }
 							is_german_tag = yes
 							has_country_flag = NUS_coc_inspired
-							NOT = { tag = NUS }
+							exists = yes
+							has_capitulated = no
 						}
+						country_event = { id = RoF_USE.101 hours = 6 random = 25 }
 					}
 				}
 			}

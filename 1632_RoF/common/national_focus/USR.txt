@@ -7,8 +7,8 @@ focus_tree = {
 			tag = USR
 		}
 		modifier = {
-			add = 10
-			original_tag = USR
+			add = 2
+			has_country_flag = united_states_russia_focus_tree_flag
 		}
 	}
 	default = no
@@ -40,7 +40,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		x = 7
 		y = 0
-		cost = 1
+		cost = 5
 		completion_reward = {
 			country_event = {
 				id = RoF_RUS.119
@@ -56,7 +56,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 1
 		y = 1
-		cost = 9
+		cost = 10
 		prerequisite = { focus = USR_defend_kazan }
 		relative_position_id = USR_defend_kazan
 		completion_reward = {
@@ -128,9 +128,9 @@ focus_tree = {
 	focus = {
 		id = USR_good_will_tours
 		icon = GFX_goal_generic_propaganda
-		x = 7
+		x = 5
 		y = 0
-		cost = 1
+		cost = 10
 		completion_reward = {
 			add_ideas = USR_free_russia
 		}
