@@ -11,6 +11,7 @@ sub_unit_categories = {
 	category_fighter
 	category_heavy_fighter
 	category_cas
+	category_special_forces
 	
 	category_merc
 	category_early_inf
@@ -21,4 +22,5 @@ sub_unit_categories = {
 	category_steam_tanks
 	category_gas_tanks
 	category_apc
+	category_cavalry
 }

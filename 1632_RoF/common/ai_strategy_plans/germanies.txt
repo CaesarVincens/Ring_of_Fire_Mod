@@ -1,0 +1,79 @@
+germans_ally_swe = {
+	name = "Sweden will protect us"
+	desc = "Be friends with GARS"
+	enable = {
+		country_exists = SWE
+		is_german_tag = yes
+		is_in_faction_with = SWE
+	}
+	abort = {
+		OR = {
+			has_war_with = SWE
+			NOT = { country_exists = SWE }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 300
+	}
+	ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 100
+	}
+}
+
+SAX_BRA_ally_SWE = {
+	name = "Ally SWE"
+	desc = "Don't Leave the Faction"
+	enable = {
+		OR = {
+			has_country_flag = BRA_joins_SWE
+			has_country_flag = SAX_joins_SWE
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = SWE
+			NOT = { country_exists = SWE }
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 500
+	}
+
+}
+SXW_befriend_SWE = {
+	name = "support SWE"
+	desc = "support Sweden"
+	enable = {
+		original_tag = SXW
+	}
+	abort = {
+		has_war_with = SWE
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 100
+	}
+
+}

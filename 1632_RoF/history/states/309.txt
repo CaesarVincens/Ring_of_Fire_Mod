@@ -1,27 +1,32 @@
-state = {
-	id = 309
-	name= "STATE_309"
-	manpower = 68000
 
-	resources = {
-		chromium = 2
+state={
+	id=309
+	name="STATE_309"
+	resources={
+		chromium=2.000
 	}
-	state_category = rural
 
-	history = {
+	history={
 		owner = OIR
-		victory_points = { 7819 3 }
+		victory_points = {
+			7819 3 
+		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = MON
 		add_core_of = OIR
+
 	}
 
-	provinces = {
-		1676 1702 1749 1818 1864 1877 4674 4680 4781 4800 4867 7703 7731 7804 7819 7890 10531 10584 10597 10610 10627 10646 10713 12427 12509 12564 12594 12610 12625 12635 
+	provinces={
+		1676 1702 1749 1818 1864 1877 4674 4680 4781 4800 4867 7703 7731 7804 7819 7890 10531 10584 10597 10610 10627 10646 10713 12427 12509 12564 12594 12610 12625 12635 13151 
 	}
+	manpower=68000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

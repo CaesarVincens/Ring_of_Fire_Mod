@@ -4,18 +4,18 @@ state = {
 	name = "STATE_400"
 
 	history = {
-		owner = SOV
+		owner = RUS
 		victory_points = {
-			12580 3 
+			4659 10 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 
 	}
 

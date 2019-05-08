@@ -1,0 +1,99 @@
+﻿capital = 389
+set_research_slots = 2
+
+oob = "RUS_OOB"
+
+set_major = yes
+# Starting tech
+set_technology = {
+infrastructure_tech_base = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 73
+        }
+		neutrality = {
+            popularity = 2
+        }
+		constitutionalist = {
+			popularity = 25
+		}
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	military_focus_eco
+	RUS_filaret
+	state_religion_law
+	RUS_eastern_serfdom_1
+	RUS_boyar_cavalry_1
+	RUS_streltzi_1
+}
+add_timed_idea = {
+	idea = RUS_slow_fever
+	days = 35
+}
+country_event = { id = RoF_RUS.10 days = 325 }
+set_stability = 0.5
+create_country_leader = {
+    name = "Mikhail Romanov"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+		weak_czar
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Romanov"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+		weak_czar
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Romanov"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+		weak_czar
+    }
+}
+
+create_corps_commander = {
+	name = "Mikhail Borisovich Shein"
+	picture = "Portrait_Russia_Mikhail_Shein.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	logistics_skill = 1
+	planning_skill = 1
+	id = 1050
+}

@@ -1,16 +1,16 @@
 
-state = {
-	id = 352
-	name = "STATE_352"
+state={
+	id=352
+	name="STATE_352"
 
-	history = {
+	history={
 		owner = POL
 		victory_points = {
 			223 3 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
@@ -19,10 +19,10 @@ state = {
 
 	}
 
-	provinces = {
-		223 233 236 289 294 323 342 358 406 3210 3219 3267 3278 3297 3331 6220 6233 6243 6249 6326 6344 6354 6371 9241 9247 9288 9289 9323 9341 9342 9351 9371 9396 11220 11229 11230 11241 11271 11298 11322 11325 11336 11342 11355 11383 
+	provinces={
+		223 233 236 289 294 315 323 342 343 358 371 398 406 3210 3219 3267 3278 3297 3331 3364 3390 6220 6233 6249 6326 6344 6354 6371 9241 9247 9288 9289 9323 9341 9342 9351 9371 9396 11220 11229 11230 11241 11271 11298 11322 11325 11336 11342 11355 11383 
 	}
-	manpower = 2421980
-	buildings_max_level_factor = 1.000
-	state_category = large_town
+	manpower=2421980
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

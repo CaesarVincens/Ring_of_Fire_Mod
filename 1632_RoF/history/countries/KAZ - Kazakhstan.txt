@@ -21,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 80
         }
-        liberal = {
+        constitutionalist = {
             popularity = 17
         }
         neutrality = {
@@ -41,9 +41,9 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Bukei Kutebar uli"
+    name = "Salgam Zhangir Khan"
     desc = "POLITICS_BUKEI_KUTEBAR ULI_DESC"
-    picture = "gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"
+    picture = "gfx/leaders/leader_unknown.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

@@ -3,6 +3,7 @@ set_research_slots = 2
 
 oob = "SPR_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
@@ -18,7 +19,12 @@ prerof_man_of_war = 1
 # Research Bonuses
 set_convoys = 250
 
-
+NSP = {
+	set_country_flag = colony_flag
+}
+SPU = {
+	set_country_flag = colony_flag
+}
 # DIPLOMACY
     #set_autonomy = {
     #    target = SPN
@@ -28,19 +34,23 @@ set_convoys = 250
     set_autonomy = {
         target = NSP
         autonomous_state = autonomy_rof_colony
-        freedom_level = 0.75
+        freedom_level = 0.5
     }
     set_autonomy = {
         target = SPU
         autonomous_state = autonomy_rof_colony
-        freedom_level = 0.75
+        freedom_level = 0.5
     }
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = SPR_research
-}
+    set_autonomy = {
+        target = MLO
+        autonomous_state = autonomy_rof_auto_province
+        freedom_level = 0.5
+    }
+    set_autonomy = {
+        target = NAP
+        autonomous_state = autonomy_rof_auto_province
+        freedom_level = 0.5
+    }
 
 set_politics = {
 
@@ -65,6 +75,7 @@ set_politics = {
 add_ideas = {
 	military_focus_eco
 	habsburg_cousins
+	persecute_minorities
 }
 set_stability = 0.5
 create_country_leader = {

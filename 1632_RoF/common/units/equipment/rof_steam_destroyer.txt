@@ -5,7 +5,7 @@ equipments = {
 
 		is_archetype = yes
 		is_buildable = no
-		type = capital_ship
+		type = screen_ship
 		group_by = archetype
 		
 		interface_category = interface_category_screen_ships
@@ -17,17 +17,79 @@ equipments = {
 			ship_gun_upgrade
 		}
 
-		ap_attack = 10
-		attack = 10
-		fire_range = 15
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_light_battery }
+			}
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { ship_anti_air }
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = no
+				allowed_module_categories = { ship_fire_control_system ship_sonar }
+			}
+			fixed_ship_radar_slot = {
+				required = no
+				allowed_module_categories = { ship_radar ship_sonar }
+			}
+			fixed_ship_torpedo_slot = {
+				required = no
+				allowed_module_categories = { ship_torpedo }
+			}
+			fixed_ship_engine_slot = {
+				required = yes
+				allowed_module_categories = { light_ship_engine }
+			}
+
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo
+					ship_mine_warfare
+					ship_mine_layer
+					ship_anti_air
+					ship_depth_charge
+				}
+			}
+			rear_1_custom_slot = mid_1_custom_slot
+		}
+		
+		module_count_limit = {
+			category = ship_radar
+			count < 2
+		}
+		
+		module_count_limit = {
+			category = ship_sonar
+			count < 2
+		}
+		
+		default_modules = {
+			fixed_ship_battery_slot = empty
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		
+		lg_armor_piercing = 0
+		lg_attack = 0
+		
+		hg_armor_piercing = 0
+		hg_attack = 0
+		
 		torpedo_attack = 0
-		shore_bombardment = 1
+		sub_attack = 1
 		
-		anti_air_attack = 1
+		anti_air_attack = 0
 		
-		armor_value = 10
-		evasion = 40
-		
+		armor_value = 0
+
 		surface_detection = 15
 		sub_detection = 1
 		surface_visibility = 20
@@ -37,12 +99,12 @@ equipments = {
 		naval_range = 3000
 		
 		max_strength = 150
+
 		
-		port_capacity_usage = 1
-		
+		fuel_consumption = 10
+
 		build_cost_ic = 3500
 		resources = {
-			oil = 1
 			steel = 2
 		}
 		
@@ -54,6 +116,36 @@ equipments = {
 
 		archetype = steam_destroyer
 		priority = 40
+		module_slots = {
+		}
+		
+		lg_armor_piercing = 10
+		lg_attack = 10
+		torpedo_attack = 0
+		sub_attack = 1
+		
+		anti_air_attack = 1
+		
+		armor_value = 10
+		
+		surface_detection = 15
+		sub_detection = 1
+		surface_visibility = 20
+		naval_speed = 30
+		reliability = 0.80
+		
+		naval_range = 3000
+		
+		max_strength = 150
+		
+		fuel_consumption = 5
+		
+		build_cost_ic = 3500
+		resources = {
+			steel = 2
+		}
+		
+		manpower = 500
 		
 	}
 	
@@ -64,16 +156,16 @@ equipments = {
 		parent = steam_destroyer_1
 		priority = 40
 
-		ap_attack = 12
-		attack = 14
-		fire_range = 20
+		module_slots = {}
+		
+		lg_armor_piercing = 12
+		lg_attack = 14
 		torpedo_attack = 0
-		shore_bombardment = 2
+		sub_attack = 1
 		
 		anti_air_attack = 2
 		
 		armor_value = 12
-		evasion = 60
 		
 		surface_detection = 25
 		sub_detection = 2
@@ -85,11 +177,10 @@ equipments = {
 		
 		max_strength = 175
 		
-		port_capacity_usage = 1
+		fuel_consumption = 5
 
 		build_cost_ic = 4000
 		resources = {
-			oil = 1
 			steel = 3
 		}		
 		manpower = 700

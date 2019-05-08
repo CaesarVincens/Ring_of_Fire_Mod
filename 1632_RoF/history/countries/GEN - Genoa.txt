@@ -22,7 +22,7 @@ set_politics = {
         absolutist = {
             popularity = 14
         }
-        liberal = {
+        neutrality = {
             popularity = 13
         }
         constitutionalist = {
@@ -41,9 +41,9 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Andrea Spinola"
+    name = "Leonardo della Torre"
     desc = "POLITICS_ORESTE_PELLION DI PERSANO_DESC"
-    picture = "gfx/leaders/ITA/Portrait_Italy_Generic_2.dds"
+    picture = "gfx/leaders/italies/Portrait_Genoa_Leonardo_della_Torre.dds"
     expire = "1660.1.1"
     ideology = constitutional_republic
     traits = {

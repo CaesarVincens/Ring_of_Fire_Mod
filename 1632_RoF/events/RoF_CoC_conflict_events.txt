@@ -73,6 +73,7 @@ country_event = {
 			name = defensive_border_conflict_won
 			category = land_doctrine
 			bonus = 0.5
+			uses = 1
 		}
 		if = {
 			limit = { has_country_flag = show_effect_tooltips }
@@ -121,6 +122,7 @@ country_event = {
 						name = defensive_border_conflict_won
 						category = land_doctrine
 						bonus = 0.5
+						uses = 1
 					}
 				}
 			}

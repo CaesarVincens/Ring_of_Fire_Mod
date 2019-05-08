@@ -43,3 +43,89 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = RoF_POL.150
+	title = RoF_POL.150.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.150.d
+	fire_only_once = yes
+
+	trigger = {
+		tag = POL
+		OR = { date > 1634.5.1 has_country_flag = RUS_test }
+		has_war = no
+		RUS = { owns_state = 387 is_subject = no }
+		owns_state = 351
+		NOT = { is_in_faction_with = RUS }
+		is_subject = no
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.5
+			date > 1634.6.1
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			transfer_state = 387
+			387 = { set_demilitarized_zone = yes }
+			set_global_flag = rezhev_expedition
+			RUS = { news_event = { id = RoF_RUS.110 hours = 12 } }
+		}
+	}
+	option = {
+		name = RoF_POL.150.a
+		effect_tooltip = {
+			transfer_state = 387
+		}
+	}
+}
+
+country_event = {
+	id = RoF_POL.151
+	title = RoF_POL.151.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.151.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_POL.151.a
+	}
+}
+
+country_event = {
+	id = RoF_POL.152
+	title = RoF_POL.152.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.152.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_POL.152.a
+	}
+}
+
+country_event = {
+	id = RoF_POL.153
+	title = RoF_POL.153.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.153.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_POL.153.a
+	}
+}

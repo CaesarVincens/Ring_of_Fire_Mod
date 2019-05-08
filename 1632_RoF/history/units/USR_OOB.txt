@@ -1,0 +1,185 @@
+﻿start_equipment_factor = 0
+
+division_template = {
+	name = "Infantry"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Infantry Detachment"
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Cavalry Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Cavalry Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+}
+
+### No BHU air forces ###
+units = {
+	division = {
+		name = "1. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "10. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "11. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12. Infantry"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8. Infantry Detachment"
+		location = 291
+		division_template = "Infantry Detachment"
+		start_experience_factor = 0.3
+	}
+}

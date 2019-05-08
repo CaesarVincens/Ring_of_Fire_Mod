@@ -5,7 +5,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				industrial_capacity_factory = 0.1
 			}
 			removal_cost = -1
@@ -291,7 +291,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				firearms_weapons = 0.10
 			}
 			
 			traits = { infantry_equipment_manufacturer }

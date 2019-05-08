@@ -78,6 +78,7 @@ country_event = {
 	#don't join
 	option = {
 		name = RoF_FRA.102.b
+		set_country_flag = refused_ostend
 	}
 }
 
@@ -124,7 +125,7 @@ country_event = {
 		}
 		C13 = {
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = NFR
+			set_cosmetic_tag = New_France
 			if = {
 				limit = { 232 = { is_owned_by = FRA } }
 				transfer_state = 232
@@ -151,30 +152,6 @@ country_event = {
 	}
 	option = {
 		name = RoF_FRA.105.a
-	}
-}
-
-country_event = {
-	id = RoF_FRA.110
-	title = RoF_FRA.110.t
-	picture = GFX_report_event_fra_flag
-	desc = RoF_FRA.110.d
-	fire_only_once = yes
-
-	is_triggered_only = yes
-	
-	immediate = {
-		ENG = {
-			end_puppet = C13
-		}
-		C13 = {
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = NFR
-		}
-		set_autonomy = { target = C13 autonomy_state = autonomy_rof_colony }
-	}
-	option = {
-		name = RoF_FRA.110.a
 	}
 }
 
@@ -246,10 +223,17 @@ country_event = {
 				hostility_reason = asked_to_join
 			}
 		}
+		SWE = {
+			add_to_war = {
+				targeted_alliance = NUS
+				enemy = FRA
+				hostility_reason = asked_to_join
+			}
+		}
 	}
 	option = {
 		name = RoF_FRA.121.a
-		news_event = { id = RoF_news.21 days = 1 }
+		news_event = { id = RoF_news.21 hours = 2 }
 	}
 }
 
@@ -284,5 +268,41 @@ country_event = {
 	}
 	option = {
 		name = RoF_FRA.130.a
+	}
+}
+
+#Dutch Raids
+country_event = {
+	id = RoF_FRA.150
+	title = RoF_FRA.150.t
+	picture = GFX_report_event_ups_flag
+	desc = RoF_FRA.150.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_FRA.150.a
+		if = {
+			limit = {
+				135 = { is_controlled_by_ROOT_or_subject = yes }
+			}
+			WNA = { transfer_state = 135 }
+		}
+		if = {
+			limit = {
+				118 = { is_controlled_by_ROOT_or_subject = yes }
+			}
+			WNA = { transfer_state = 118 }
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = RoF_FRA.150.b
+		add_political_power = -120
+		add_manpower = -10000
+		ai_chance = { factor = 1 }
 	}
 }

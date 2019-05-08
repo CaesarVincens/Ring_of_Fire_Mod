@@ -29,6 +29,7 @@ technology_categories = {
 	apc_tech
 	engine_tech
 	air_research
+	jaeger_tech
 }
 
  

@@ -17,7 +17,7 @@ ideas = {
 				consumer_goods_factor = 0.4
 				production_speed_industrial_complex_factor = 0.3
 				conversion_cost_mil_to_civ_factor = -0.3
-				research_time_factor = -0.1
+				research_speed_factor = 0.1
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor = 0.3
 				conscription_factor = -0.5
@@ -42,7 +42,7 @@ ideas = {
 				consumer_goods_factor = 0.35
 				production_speed_industrial_complex_factor = 0.15
 				conversion_cost_mil_to_civ_factor = -0.15
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				production_speed_arms_factory_factor = -0.15
 				conversion_cost_civ_to_mil_factor = 0.15
 				conscription_factor = -0.25
@@ -161,7 +161,7 @@ ideas = {
 				consumer_goods_factor = 0.2
 				production_speed_industrial_complex_factor = -0.3
 				conversion_cost_mil_to_civ_factor = 0.3
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor = -0.3
 				conscription_factor = -0.2
@@ -186,6 +186,10 @@ ideas = {
 					manpower_per_military_factory <  3000
 				}
 				modifier = {
+					factor = 0
+					has_war = no
+				}
+				modifier = {
 					factor = 25
 					#Prio this if nation has a lot of manpower compared to MIC
 					manpower_per_military_factory >  10000
@@ -208,7 +212,7 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
-				research_time_factor = -0.10
+				research_speed_factor = 0.10
 			}
 			
 			cancel_if_invalid = no
@@ -225,7 +229,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 			
 			default = yes
@@ -242,7 +246,7 @@ ideas = {
 						has_government = liberal
 						has_war = yes
 						any_enemy_country = {
-							ic_ratio = { 
+							ic_ratio = {
 								tag = ROOT 
 								ratio > 0.2
 							}
@@ -266,7 +270,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
-				research_time_factor = -0.01
+				research_speed_factor = 0.01
 			}
 			
 			cancel_if_invalid = no

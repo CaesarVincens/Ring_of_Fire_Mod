@@ -50,8 +50,6 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-
-		ai_fascist = yes
 	}
 
 	constitutionalist = {
@@ -89,7 +87,6 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-		ai_democratic = yes
 	}
 	
 	liberal = {
@@ -108,12 +105,11 @@ ideologies = {
 		}
 		
 		dynamic_faction_names = {
-			"FACTION_NAME_DEMOCRATIC_1"
-			"FACTION_NAME_DEMOCRATIC_2"
-			"FACTION_NAME_DEMOCRATIC_3"
-			"FACTION_NAME_DEMOCRATIC_4"
-			"FACTION_NAME_DEMOCRATIC_5"
-			"FACTION_NAME_DEMOCRATIC_6"
+			"FACTION_NAME_LIBERAL_1"
+			"FACTION_NAME_LIBERAL_2"
+			"FACTION_NAME_LIBERAL_3"
+			"FACTION_NAME_LIBERAL_4"
+			"FACTION_NAME_LIBERAL_5"
 		}
 		
 		color = { 100 200 255 }
@@ -137,7 +133,6 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-		ai_communist = yes
 	}
 
 	radical = {
@@ -155,7 +150,6 @@ ideologies = {
 			"FACTION_NAME_RADICAL_3"
 			"FACTION_NAME_RADICAL_4"
 			"FACTION_NAME_RADICAL_5"
-			"FACTION_NAME_RADICAL_6"
 		}
 		
 		color = { 255 60 0 }
@@ -178,7 +172,6 @@ ideologies = {
 		faction_modifiers = {
 		}
 		can_collaborate = yes
-		ai_communist = yes
 	}
 
 	neutrality = {
@@ -233,8 +226,3 @@ ideologies = {
 	}
 
 }
-
-#catholic
-#protestant
-#secular
-#muslim

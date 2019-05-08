@@ -15,22 +15,22 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research_gen
+	shared_focus = air_research
 
 	####################
 	#    NAVAL TREE    #
 	####################
-	shared_focus = naval_research_focus_gen
+	shared_focus = naval_research_focus
 
 	####################
 	#    ARMY  TREE    #
 	####################
-	shared_focus = army_drilling_gen
+	shared_focus = army_drilling
 
 	####################
 	#  INDUSTRY  TREE  #
 	####################
-	shared_focus = industrial_advances_gen
+	shared_focus = industrial_advances
 
 	####################
 	#  POLITICAL TREE  #
@@ -55,6 +55,14 @@ focus_tree = {
 				gfx = "GFX_leader_SPN_Don_Fernando"
 				traits = {}
 				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			custom_effect_tooltip = SPN_don_fernando.tt
+			hidden_effect = {
+				load_oob = SPN_Don_Fernando_OOB
 			}
 		}
 		ai_will_do = {
@@ -79,7 +87,7 @@ focus_tree = {
 				FRA = {
 					focus_progress = {
 						focus = FRA_dunkirk
-						progress > 0.01
+						progress > 0
 					}
 				}
 			}
@@ -108,8 +116,11 @@ focus_tree = {
 		cost = 5
 		relative_position_id = SPN_don_fernando
 		completion_reward = {
-			set_province_controller = 68
-			load_OOB = "SPN_haarlem_gambit_OOB"
+			custom_effect_tooltip = SPN_haarlem_gambit.tt
+			hidden_effect = {
+				set_province_controller = 68
+				load_OOB = "SPN_haarlem_gambit_OOB"
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -128,6 +139,12 @@ focus_tree = {
 			OR = {
 				UPS = { has_capitulated = yes }
 				has_global_flag = congress_of_copenhagen_begins
+			}
+		}
+		bypass = {
+			OR = {
+				UPS = { is_subject_of = SPN }
+				NOT = { country_exists = UPS }
 			}
 		}
 		completion_reward = {
@@ -149,10 +166,16 @@ focus_tree = {
 		cost = 10
 		relative_position_id = SPN_don_fernando
 		available = {
+			OR = {
+				UPS = { is_subject_of = SPN }
+				NOT = { country_exists = UPS }
+				controls_state = 557
+				controls_state = 555
+			}
 		}
 		completion_reward = {
 			LIE = { country_event = { id = RoF_NED.115 } }
-			KLE = { country_event = { id = RoF_NED.115 } }
+			#KLE = { country_event = { id = RoF_NED.115 } }
 			EFR = { country_event = { id = RoF_NED.115 } }
 		}
 		ai_will_do = {
@@ -162,7 +185,7 @@ focus_tree = {
 	
 	focus = {
 		id = SPN_united_netherlands
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_hol_united_netherlands
 		x = 1
 		y = 4
 		prerequisite = { focus = SPN_expand_borders }
@@ -172,6 +195,7 @@ focus_tree = {
 			UPS = { is_subject_of = SPN }
 		}
 		completion_reward = {
+			set_cosmetic_tag = United_Netherlands
 			hidden_effect = { set_country_flag = take_UPS }
 			annex_country = { target = UPS transfer_troops = yes }
 		}

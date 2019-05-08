@@ -1,18 +1,18 @@
 
-state = {
-	id = 538
-	name = "STATE_538"
-	resources = {
-		steel = 17.000
+state={
+	id=538
+	name="STATE_538"
+	resources={
+		steel=17.000
 	}
 
-	history = {
+	history={
 		owner = TUR
 		victory_points = {
 			11939 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,10 +22,10 @@ state = {
 
 	}
 
-	provinces = {
-		1013 1145 1160 4046 4131 4146 7081 7166 9964 10078 11939 12051 12760 
+	provinces={
+		1013 1058 1145 1160 4046 4131 4146 7065 7081 7166 9964 9976 10078 11939 11953 12051 12760 
 	}
-	manpower = 976800
-	buildings_max_level_factor = 1.000
-	state_category = rural
+	manpower=976800
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

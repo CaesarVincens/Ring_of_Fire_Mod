@@ -8,9 +8,35 @@ Focus Tree Contributions: Principality of Lichenstein, King of Nords
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
 Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-the-ring-of-fire.1048836/
+Discord Link: https://discord.gg/VBqgExW
 
+Currently in Alpha; expect to find bugs and oddities
 
-Currently in Early Alpha; expect to find bugs and oddities
+Alpha 0.5.1 - Apr. 3, 2019
+Updated to HoI patch 1.6.2
+Add new party popularity merging mechanic for USE formation
+Other minor changes
+
+Alpha 0.5.0 - Crisis in the Kremlin - Mar. 24, 2019
+Updated to HoI Patch 1.6.1
+Started work on Denmark, Russia, and United Provinces focus trees
+Russia tree nearly complete up to beginning of Russian civil war, with bare-start for civil war trees.
+Updates to Sweden, New US, and other focus trees
+Added decision for NUS to buy Harlingen
+Minor fixes and removing unused vanilla code, update-proofing various files
+Updated much of the AI coding, hopefully for better play experience, still WIP
+Updated and added Technologies
+More map adjustments
+Added Jaeger and Heavy Weapons Units
+Added Crimea as a Protectorate of Ottoman Empire
+Added Alternate path to form USE (through Expand the Committees focus)
+Added Explanation of CoC mechanics
+Laid the groundwork for overhaul of Thirty Years War
+Many balance changes, expect different outcomes from 0.4.1
+
+Alpha 0.4.1 - Jul. 13, 2018
+Fix for missing English Civil War complete event for Constitutionalist path
+Revert ideology changes to prevent unwanted behavior
 
 Alpha 0.4.0 - North Sea Empires - Jul. 8, 2018
 Updated compatibility for HoI patch 1.5.4

@@ -79,6 +79,51 @@ news_event = {
 			NOT = { tag = SWE }
 			NOT = { tag = NUS }
 			NOT = { tag = AUS }
+			NOT = { tag = BOH }
+			NOT = { is_in_faction_with = AUS }
+			NOT = { is_in_faction_with = SWE }
+		}
+	}
+}
+
+#Wallenstein Revolts
+news_event = {
+	id = RoF_news.0201
+	title = RoF_news.0201.t
+	desc = RoF_news.0201.d
+	picture = GFX_news_event_destruction
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.0201.a
+		trigger = {
+			OR = {
+				tag = SWE
+				tag = NUS
+				tag = BOH
+				is_in_faction_with = SWE
+			}
+		}
+	}
+	option = {
+		name = RoF_news.0201.b
+		trigger = {
+			OR = {
+				tag = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.0201.c
+		trigger = { 
+			NOT = { tag = SWE }
+			NOT = { tag = NUS }
+			NOT = { tag = AUS }
+			NOT = { tag = BOH }
 			NOT = { is_in_faction_with = AUS }
 			NOT = { is_in_faction_with = SWE }
 		}

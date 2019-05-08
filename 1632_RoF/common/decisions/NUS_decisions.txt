@@ -16,6 +16,9 @@ NUS_major_decisions = {
 		
 		timeout_effect = {
 			add_political_power = -40
+			hidden_effect = {
+				news_event = { id = RoF_NUS.113 }
+			}
 		}
 		complete_effect = {
 			add_political_power = 20
@@ -165,9 +168,130 @@ NUS_major_decisions = {
 			base = 10
 		}		
 	}
+	NUS_negotiate_for_Harlingen = {
+		fire_only_once = yes
+		visible = {
+			has_global_flag = congress_of_copenhagen_begins
+		}
+		target_trigger = {
+			FROM = {
+				owns_state = 657
+			}
+		}
+		highlight_states = { state = 657 }
+		available = {
+			657 = {
+				OWNER = {
+					NOT = { has_war_with = NUS }
+				}
+			}
+		}
+		complete_effect = {
+			transfer_state = 657
+		}
+		cost = 50
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	USE_move_capital_to_magdeburg = {
+		visible = {
+			has_cosmetic_tag = USE
+			NOT = {
+				capital_scope = {
+					state = 247
+				}
+			}
+		}
+		available = {
+			owns_state = 247
+		}
+		complete_effect = {
+			set_capital = 247
+			if = {
+				limit = {
+					NOT = { 247 = { is_core_of = NUS } }
+				}
+				add_state_core = 247
+			}
+		}
+		cost = 50
+	}
 	
 }
 
 NUS_minor_decisions = {
+	NUS_test_decision2 = {
+		visible = {
+			always = no
+		}
+		available = {
+			
+		}
+		complete_effect = {
+			set_variable = { USE_abs = 0.424 }
+			set_variable = { USE_cons = 0.241 }
+			set_variable = { USE_lib = 0.105 }
+			set_variable = { USE_rad = 0.061 }
+			set_variable = { USE_iso = 0.166 }
 
+			set_USE_parties = yes
+		}
+	}
+	NUS_coc_speeches = {
+		visible = {
+			any_other_country = {
+				is_german_tag = yes
+				has_country_flag = CoC_present
+			}
+			has_completed_focus = NUS_establish_committees_of_correspondence
+			NOT = { has_completed_focus = NUS_patriotic_fervor }
+		}
+		available = {
+			has_completed_focus = NUS_expand_committees
+		}
+		target_trigger = {
+			FROM = {
+				is_german_tag = yes
+				has_country_flag = CoC_present
+				NOT = { has_country_flag = NUS_coc_inspired }
+			}
+		}
+		highlight_states = {
+			owner = {
+				is_german_tag = yes
+				#has_variable = CoC_strength
+				has_country_flag = CoC_present
+			}
+			is_capital = yes
+			is_controlled_by = FROM
+		}
+		days_re_enable = 60
+		fixed_random_seed = no
+		complete_effect = {
+			random_list ={
+				67 = {
+					add_to_variable = {
+						var = NUS_patriotic_fervor
+						value = 1
+					}
+					FROM = {
+						set_country_flag = NUS_coc_inspired
+					}
+					#custom_effect_tooltip = NUS_coc_speeches_success_TT
+					news_event = {
+						id = RoF_NUS.140
+					}
+				}
+				33 = {
+					#custom_effect_tooltip = NUS_coc_speeches_faliure_TT
+					news_event = {
+						id = RoF_NUS.141
+					}
+				}
+			}
+		}
+		cost = 50
+	}
 }

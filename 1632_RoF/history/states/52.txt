@@ -1,27 +1,31 @@
-state = {
-	id = 52
-	name= "STATE_52"
-	manpower = 926804
 
-	resources = {
-		oil = 10
-		#rubber = 138
+state={
+	id=52
+	name="STATE_52"
+	resources={
+		oil=10.000
 	}
-	state_category = pastoral
 
-	history = {
+	history={
 		owner = BRU
-		victory_points = { 2184 3 }
+		victory_points = {
+			2184 3 
+		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = BRU
+
 	}
 
-	provinces = {
-		1225 1230 1252 1304 1316 1404 1416 2047 2170 2184 2222 4236 4279 4323 4335 4409 5176 5226 7227 7231 7296 7299 7355 7415 7424 8221 10138 10178 10181 10237 10266 10282 10310 10325 12110 12129 12196 12225 12243 12252 12280 12955 
+	provinces={
+		1225 1252 1316 1404 1416 2047 2170 2184 4236 4323 4335 4409 5176 5226 7227 7231 7296 7299 7355 7415 7424 8221 10138 10178 10181 10237 10266 10282 10310 10325 12110 12196 12225 12243 12252 12280 12955 
 	}
+	manpower=926804
+	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

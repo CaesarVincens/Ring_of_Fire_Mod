@@ -1,0 +1,123 @@
+SWE_focus_on_germany_plan = {
+	name = "Focus on Germany"
+	desc = "War with Austria1"
+	
+	enable = {
+		original_tag = SWE
+	}
+	abort = {
+		OR = {
+			has_war_with = DEN
+			FRA = { has_completed_focus = FRA_ostend_league_focus }
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "DEN"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SXW"
+		value = 200
+	}
+}
+
+SWE_ignore_russia = {
+	name = "Ignore Russia"
+	desc = "Ignore Russia"
+	
+	enable = {
+		original_tag = SWE
+	}
+	abort = {
+		has_war_with = RUS
+	}
+	ai_strategy = {
+		type = ignore
+		id = "RUS"
+		value = 1000
+	}
+	ai_strategy = {
+		type = ignore
+		id = "USR"
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = russian_region
+		value = -1000
+	}
+}
+
+SWE_Thirty_Years_War = {
+	name = "Focus on Germany"
+	desc = "War with Austria2"
+	enable = {
+		OR = {
+			original_tag = SWE
+			is_in_faction_with = SWE
+		}
+		has_war_with = AUS
+		NOT = {
+			capital_scope = {
+				region = 205
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { is_in_faction_with = SWE }
+			NOT = { has_war_with = AUS }
+			capital_scope = {
+				region = 205
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = -50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = -50
+	}
+}
+
+SWE_Thirty_Years_War = {
+	name = "Watch for Denmark"
+	desc = "Ostend Prep"
+	enable = {
+		original_tag = SWE
+		DEN = { has_completed_focus = DEN_ostend_league }
+	}
+	abort = {
+		OR = {
+			has_war_with = FRA
+			has_war_with = DEN
+			NUS = { has_completed_focus = NUS_congress_of_copenhagen }
+			DEN = { is_subject_of = SWE }
+			DEN = { exists = no }
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = DEN
+		value = 200
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = 100
+	}
+}
+
+

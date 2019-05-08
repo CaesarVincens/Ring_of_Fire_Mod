@@ -1,15 +1,15 @@
 
-state = {
-	id = 18
-	name = "STATE_18"
+state={
+	id=18
+	name="STATE_18"
 
-	history = {
+	history={
 		owner = AUS
 		victory_points = {
 			673 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -19,10 +19,10 @@ state = {
 
 	}
 
-	provinces = {
-		3679 6680 6934 9655 
+	provinces={
+		3679 6680 6934 9655 13126 
 	}
-	manpower = 421600
-	buildings_max_level_factor = 1.000
-	state_category = town
+	manpower=421600
+	buildings_max_level_factor=1.000
+	state_category=town
 }

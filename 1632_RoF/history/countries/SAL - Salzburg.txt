@@ -22,7 +22,7 @@ set_politics = {
         absolutist = {
             popularity = 80
         }
-        liberal = {
+        constitutionalist = {
             popularity = 17
         }
         neutrality = {

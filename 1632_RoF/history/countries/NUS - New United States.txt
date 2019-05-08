@@ -3,6 +3,7 @@ set_research_slots = 4
 
 oob = "NUS_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
@@ -55,6 +56,7 @@ set_politics = {
 
 add_ideas = {
 	people_out_of_time
+	freedom_of_religion
 }
 set_stability = 0.5
 create_country_leader = {
@@ -83,6 +85,11 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ken Beasley"
 	ideology = dictatorship
+}
+
+create_country_leader = {
+	name = "Bobby Gene \"Red\" Sybolt"
+	ideology = socialism
 }
 
 create_country_leader = {

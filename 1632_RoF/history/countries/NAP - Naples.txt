@@ -1,0 +1,50 @@
+﻿capital = 450
+
+oob = "NAP_OOB"
+
+set_technology = {
+infrastructure_tech_base = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        absolutist = {
+            popularity = 73
+        }
+        constitutionalist = {
+            popularity = 25
+        }
+        neutrality = {
+            popularity = 2
+        }
+    }
+    
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	balanced_eco
+}
+create_country_leader = {
+    name = "Manuel de Acevedo y Zúñiga"
+    desc = "POLITICS_ALFONSO_PELLION DI PERSANO_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Naples_Manuel_Acebedo.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}

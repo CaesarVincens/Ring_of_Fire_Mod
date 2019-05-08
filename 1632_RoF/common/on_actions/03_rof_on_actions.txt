@@ -6,6 +6,10 @@ on_actions = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
 			}
+			random_country = {
+				limit = { is_ai = yes }
+				country_event = { id = RoF.006 }
+			}
 		}
 	}
 	# ROOT is capitulated country, FROM is winner
@@ -53,6 +57,7 @@ on_actions = {
 		effect = {
 			country_event = { id = RoF_ENG.155 days = 2 }
 			country_event = { id = RoF_ENG.156 days = 2 }
+			country_event = { id = RoF_ENG.172 days = 2 }
 		}
 	}
 	

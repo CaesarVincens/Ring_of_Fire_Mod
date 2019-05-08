@@ -8,7 +8,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 			}
 			research_bonus = {
 				rocketry = 0.1
@@ -32,7 +32,7 @@ ideas = {
 				liberal_drift = 0.2
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_house_of_lords_idea = {
 			allowed = {
@@ -47,7 +47,7 @@ ideas = {
 				constitutionalist_drift = 0.2
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_figurehead_monarchy = {
 			allowed = {
@@ -62,7 +62,7 @@ ideas = {
 				#constitutionalist_drift = 0.2
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_figurehead_monarchy_R = {
 			allowed = {
@@ -81,7 +81,7 @@ ideas = {
 				liberal_acceptance = 20
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = ENG_rupert
 		}
 		ENG_figurehead_monarchy_M = {
 			allowed = {
@@ -99,7 +99,7 @@ ideas = {
 				liberal_acceptance = 40
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = ENG_mary
 		}
 		ENG_figurehead_monarchy_E = {
 			allowed = {
@@ -118,7 +118,7 @@ ideas = {
 				liberal_acceptance = 20
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = ENG_elizabeth
 		}
 		ENG_strong_monarchy = {
 			allowed = {
@@ -133,7 +133,7 @@ ideas = {
 				#constitutionalist_drift = 0.2
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_strong_monarchy_R = {
 			allowed = {
@@ -148,7 +148,7 @@ ideas = {
 				military_leader_cost_factor = -0.25
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = ENG_rupert
 		}
 		ENG_strong_monarchy_M = {
 			allowed = {
@@ -163,7 +163,7 @@ ideas = {
 				constitutionalist_drift = 0.2
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = ENG_mary
 		}
 		ENG_strong_monarchy_E = {
 			allowed = {
@@ -178,7 +178,7 @@ ideas = {
 				liberal_drift = 0.005
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = ENG_elizabeth
 		}
 		ENG_elizabeth_second_idea = {
 			allowed = {
@@ -193,7 +193,7 @@ ideas = {
 				constitutionalist_drift = 0.2
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_mary_second_idea = {
 			allowed = {
@@ -207,7 +207,7 @@ ideas = {
 				constitutionalist_drift = 0.1
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_parliament_prorogued = {
 			allowed = {
@@ -238,7 +238,7 @@ ideas = {
 				constitutionalist_drift = 0.1
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_england_triumphant_idea = {
 			allowed = {
@@ -254,7 +254,7 @@ ideas = {
 				absolutist_drift = 0.1
 			}
 			removal_cost = -1
-			picture = brittish_stoicism
+			picture = stiff_upper_lip
 		}
 		ENG_emergency_measures = {
 			allowed = {
@@ -295,7 +295,7 @@ ideas = {
 				has_government = absolutist
 			}
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				production_speed_buildings_factor = 0.1
 			}
 			removal_cost = -1
@@ -309,7 +309,7 @@ ideas = {
 				has_government = absolutist
 			}
 			modifier = {
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.02
 				production_speed_buildings_factor = 0.1
 			}
 			removal_cost = -1
@@ -366,6 +366,7 @@ ideas = {
 			available = {
 				NOT = { has_completed_focus = ENG_changing_of_the_guard }				
 			}
+			traits = { ideological_crusader }
 			picture = laud_pic
 		}
 	}
@@ -542,7 +543,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				firearms_weapons = 0.10
 			}
 			
 			traits = { infantry_equipment_manufacturer }

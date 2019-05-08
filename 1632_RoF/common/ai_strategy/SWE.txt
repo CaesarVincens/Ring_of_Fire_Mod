@@ -1,5 +1,5 @@
 # Written by Henrik "Groogy" Hansson
-# Modified by Daniel "Da9L" Sjöberg
+# Modified by Daniel "Da9L" Sjï¿½berg
 
 # befriend
 # conquer
@@ -15,30 +15,6 @@
 # contain
 # area_priority
 
-SWE_focus_on_germany = {
-	enable = {
-		original_tag = SWE
-	}
-	abort = {
-		FRA = { has_completed_focus = FRA_ostend_league_focus }
-	}
-	ai_strategy = {
-		type = ignore
-		id = "DEN"
-		value = 100
-	}
-	ai_strategy = {
-		type = ignore
-		id = "SOV"
-		value = 100
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SXW"
-		value = 100
-	}
-}
-
 SWE_unit_production = {
 	enable = {
 		original_tag = SWE
@@ -48,17 +24,7 @@ SWE_unit_production = {
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = spears
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = tercio
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = line_inf
+		id = infantry
 		value = 80
 	}
 
@@ -157,63 +123,13 @@ SWE_area_priority = {
 
 	ai_strategy = {
 		type = area_priority
-		id = europe
+		id = north_germany
 		value = 100
 	}
-	
 	ai_strategy = {
 		type = area_priority
-		id = north_america
-		value = -10
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = south_america
-		value = -50
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = asia
-		value = -15
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = 50
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = africa
-		value = -90
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = pacific
-		value = -10
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = oceania
-		value = -10
-	}
-
-}
-
-default_area_priority = {
-	enable = {
-		original_tag = SWE
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = germany
-		value = 1000
+		id = south_germany
+		value = 100
 	}
 	ai_strategy = {
 		type = area_priority

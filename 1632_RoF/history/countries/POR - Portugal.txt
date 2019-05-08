@@ -17,7 +17,9 @@ prerof_man_of_war = 1
 # Research Bonuses
 set_convoys = 0
 
-
+BRZ = {
+	set_country_flag = colony_flag
+}
 # DIPLOMACY
     set_autonomy = {
         target = KEN
@@ -35,11 +37,6 @@ set_convoys = 0
         freedom_level = 0.8
     }
 
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = POR_research
-}
 
 set_politics = {
 
@@ -47,7 +44,7 @@ set_politics = {
         absolutist = {
             popularity = 80
         }
-        liberal = {
+        constitutionalist = {
             popularity = 17
         }
         neutrality = {
@@ -64,6 +61,7 @@ set_politics = {
 
 add_ideas = {
 	balanced_eco
+	POR_iberian_union
 }
 set_stability = 0.5
 create_country_leader = {

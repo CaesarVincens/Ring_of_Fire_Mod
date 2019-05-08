@@ -1,5 +1,5 @@
 # Written by Henrik "Groogy" Hansson
-# Modified by Daniel "Da9L" Sjöberg
+# Modified by Daniel "Da9L" Sjï¿½berg
 
 # befriend
 # conquer
@@ -15,27 +15,6 @@
 # contain
 # area_priority
 
-NUS_ironclads = {
-	enable = {
-		original_tag = NUS
-		has_completed_focus = NUS_ironclads_focus
-	}
-	abort = {
-		has_tech = ironclad_first
-		has_tech = timberclad_first
-	}
-	ai_strategy = {
-		type = research_tech
-		id = ironclad_first
-		value = 10000
-		
-	}
-	ai_strategy = {
-		type = research_tech
-		id = timberclad_first
-		value = 10000
-	}
-}
 NUS_unit_production = {
 	enable = {
 		original_tag = NUS
@@ -45,17 +24,7 @@ NUS_unit_production = {
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = spears
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = tercio
-		value = 1
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = line_inf
+		id = infantry
 		value = 80
 	}
 
@@ -172,26 +141,71 @@ NUS_area_priority = {
 
 	ai_strategy = {
 		type = area_priority
-		id = europe
+		id = scandinavian_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 500
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = netherlands_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = britain_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = french_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = iberian_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = polish_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = polish_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = russian_region
 		value = 100
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = north_america
-		value = -10
+		value = 10
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = south_america
-		value = -50
+		value = 10
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = asia
-		value = -15
+		value = 75
 	}
 	
 	ai_strategy = {
@@ -209,13 +223,13 @@ NUS_area_priority = {
 	ai_strategy = {
 		type = area_priority
 		id = pacific
-		value = -10
+		value = 20
 	}
 	
 	ai_strategy = {
 		type = area_priority
 		id = oceania
-		value = -10
+		value = 10
 	}
 
 }

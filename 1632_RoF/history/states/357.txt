@@ -1,19 +1,19 @@
 
-state = {
-	id = 357
-	name = "STATE_357"
-	resources = {
-		tungsten = 68.000
+state={
+	id=357
+	name="STATE_357"
+	resources={
+		tungsten=68.000
 	}
 
-	history = {
+	history={
 		owner = POR
 		victory_points = {
-			11805 40
+			11805 40 
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 			11805 = {
@@ -26,10 +26,10 @@ state = {
 
 	}
 
-	provinces = {
-		799 845 889 924 938 3798 3861 3969 6818 6924 6996 9787 11805 11885 
+	provinces={
+		799 844 845 889 924 938 970 3798 3861 3926 3969 6818 6924 6996 9787 11768 11805 11885 
 	}
-	manpower = 1060800
-	buildings_max_level_factor = 1.000
-	state_category = city
+	manpower=1060800
+	buildings_max_level_factor=1.000
+	state_category=city
 }

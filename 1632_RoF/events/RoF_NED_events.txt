@@ -70,13 +70,19 @@ country_event = {
 				traits = {
 				}
 			}
+			create_country_leader = {
+				name = "Fernando von Habsburg"
+				desc = "POLITICS_DON_FERNANDO_DESC"
+				picture = "GFX_leader_SPN_Don_Fernando"
+				ideology = monarchy_neutral
+				traits = {
+				}
+			}
 		}
 	}
 	
-	#join
-	#don't join
 	option = {
-		name = RoF_NED.102.1
+		name = RoF_NED.102.a
 		if = {
 			limit = { NOT = { has_government = constitutionalist } }
 			add_popularity = { ideology = constitutionalist popularity = 0.4 }
@@ -91,6 +97,13 @@ country_event = {
 				traits = {
 				}
 			}		
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
 		}
 	}
 	option = {
@@ -109,6 +122,9 @@ country_event = {
 				traits = {
 				}
 			}		
+		}
+		ai_chance = {
+			factor = 5
 		}
 	}
 }
@@ -182,23 +198,30 @@ country_event = {
 	
 	option = { # Accept
 		name =  RoF_NED.115.a
-		set_country_flag = @ROOT_accept_demand
+		#set_country_flag = accept_demand_@ROOT
 		SPN = {
-			country_event = { id = RoF_NED.116 }
+			country_event = { id = RoF_NED.116 hours = 1 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		ai_chance = {
 			base = 2
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = SPN
+					ratio < 0.75
+				}
+			}
 		}
 	}
 	option = { # Refuse
 		name =  RoF_NED.115.b
-		set_country_flag = @ROOT_refuse_demand
+		#set_country_flag = refuse_demand_@ROOT
 		every_owned_state = {
 			add_claim_by = SPN
 		}
 		SPN = {
-			country_event = { id = RoF_NED.116 }
+			country_event = { id = RoF_NED.117 }
 		}
 		ai_chance = {
 			base = 1
@@ -210,38 +233,33 @@ country_event = {
 country_event = {
 	id = RoF_NED.116
 	title = RoF_NED.116.t
-	desc = {
-		text = RoF_NED.116.da
-		trigger = {
-			FROM = { has_country_flag = @FROM_refuse_demand }
-		}
+	desc = RoF_NED.116.db
+
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.116.b
+		annex_country = { target = FROM }
 	}
-	desc = {
-		text = RoF_NED.116.db
-		trigger = {
-			FROM = { has_country_flag = @FROM_accept_demand }
-		}
-	}
+}
+
+country_event = {
+	id = RoF_NED.117
+	title = RoF_NED.116.t
+	desc = RoF_NED.116.da
+
 	picture = GFX_report_event_SPR_flag
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = RoF_NED.116.a
-		trigger = {
-			FROM = { has_country_flag = @FROM_refuse_demand }
-		}
 		create_wargoal = {
 			target = FROM
 			type = annex_everything
 		}
-	}
-	option = {
-		name = RoF_NED.116.b
-		trigger = {
-			FROM = { has_country_flag = @FROM_accept_demand }
-		}
-		annex_country = { target = FROM }
 	}
 }
 
@@ -282,3 +300,53 @@ country_event = {
 		name =  RoF_NED.120.b
 	}
 }
+
+#UPS-WIC and VOC events 200
+country_event = {
+	id = RoF_NED.200
+	title = RoF_NED.200.t
+	desc = RoF_NED.200.d
+	picture = GFX_report_event_ups_flag
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WIC
+		SPN = { has_completed_focus = SPN_battle_of_dunkirk }
+		NOT = { has_country_flag = WIC_dutch_raiders_arrive }
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name =  RoF_NED.200.a
+		set_country_flag = WIC_dutch_raiders_arrive
+	}
+}
+
+country_event = {
+	id = RoF_NED.201
+	title = RoF_NED.201.t
+	desc = RoF_NED.201.d
+	picture = GFX_report_event_ups_flag
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WIC
+		has_country_flag = WIC_dutch_raiders_arrive
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name =  RoF_NED.201.a
+		set_country_flag = WIC_dutch_raiders_go_raiding
+		hidden_effect = {
+			FRA = {
+				country_event = { id = RoF_FRA.150 days = 60 }
+			}
+		}
+	}
+}
+

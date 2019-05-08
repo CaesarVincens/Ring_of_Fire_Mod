@@ -34,20 +34,19 @@ set_convoys = 0
         autonomous_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
-
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = TUR_research
-}
-
+    set_autonomy = {
+        target = CRI
+        autonomy_state = autonomy_rof_protectorate
+        freedom_level = 0.6
+	}
+	
 set_politics = {
 
     parties = {
         absolutist = {
             popularity = 68
         }
-        liberal = {
+        constitutionalist = {
             popularity = 29
         }
         neutrality = {

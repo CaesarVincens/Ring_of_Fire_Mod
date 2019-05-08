@@ -50,6 +50,7 @@ DEN_HBC_decisions = {
 		fire_only_once = yes
 		visible = {
 			446 = { is_owned_by = WNA }
+			always = no
 		}
 		available = {
 		
@@ -77,10 +78,11 @@ DEN_HBC_decisions = {
 	DEN_launch_HBC_expedition = {
 		fire_only_once = yes
 		visible = {
-			date > 1633.6.1
-			NOT = { has_country_flag = DEN_HBC_start }
+			has_country_flag = DEN_launch_HBC
+			#NOT = { has_country_flag = DEN_HBC_start }
 		}
 		available = {
+			always = no
 			custom_trigger_tooltip = {
 				tooltip = DEN_Hudson_winter.tt
 				OR = {
@@ -96,12 +98,47 @@ DEN_HBC_decisions = {
 						date > 1636.1.1
 						date < 1636.4.1
 					}
+					AND = {
+						date > 1637.1.1
+						date < 1637.4.1
+					}
 				}
 			}
 			owns_state = 660
 		}
-		cost = 150
+		activation = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = DEN_Hudson_winter.tt
+				OR = {
+					AND = {
+						date > 1634.1.1
+						date < 1634.4.1
+					}
+					AND = {
+						date > 1635.1.1
+						date < 1635.4.1
+					}
+					AND = {
+						date > 1636.1.1
+						date < 1636.4.1
+					}
+					AND = {
+						date > 1637.1.1
+						date < 1637.4.1
+					}
+				}
+			}
+			owns_state = 660	
+		}
+		is_good = no
+		days_mission_timeout = 90
+		selectable_mission = yes
+		cost = 50
 		days_remove = 90
+		timeout_effect = {
+			add_political_power = -10
+		}
 		complete_effect = {
 			set_country_flag = DEN_HBC_start
 		}
@@ -109,7 +146,7 @@ DEN_HBC_decisions = {
 			country_event = { id = RoF_DEN.110 days = 5 }
 		}
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 	}
 

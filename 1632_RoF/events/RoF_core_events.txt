@@ -121,14 +121,29 @@ country_event = {
 	desc = RoF.002.d
 
 	immediate = {
+		add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+		every_country = {
+			limit = {
+				is_in_faction_with = AUS
+				NOT = { tag = AUS }
+				NOT = { is_subject_of = AUS }
+			}
+			add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }				
+			add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		}
 		every_country = {
 			limit = {
 				is_in_faction_with = SWE
 				NOT = { tag = SWE }
 				NOT = { is_subject_of = SWE }
 			}
-			add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
-			reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			SWE = { add_manpower = 10000 }
 		}
 	}
@@ -208,6 +223,161 @@ country_event = {
 		name = RoF.005.a
 	}
 	
+}
+
+country_event = {
+	id = RoF.006
+	title = RoF.006.t
+	desc = RoF.006.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = { tag = NUS }
+			}
+			add_ideas = early_modern_warfare
+		}
+	}
+	option = {
+		name = RoF.006.a
+	}
+}
+
+country_event = {
+	id = RoF.007
+	title = RoF.006.t
+	desc = RoF.006.d
+	picture = GFX_report_event_scottish_mercenaries
+	trigger = {
+		has_idea = wasteland
+		date > 1633.1.1
+	}
+	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				capital_scope = {
+					is_on_continent = europe
+				}
+				has_idea = early_modern_warfare
+			}
+			swap_ideas = {
+				remove_idea = early_modern_warfare
+				add_idea = early_uptime_influence_warfare
+			}
+		}
+	}
+	option = {
+		name = RoF.006.a
+	}
+}
+
+country_event = {
+	id = RoF.008
+	title = RoF.006.t
+	desc = RoF.006.d
+	picture = GFX_report_event_scottish_mercenaries
+	trigger = {
+		has_idea = wasteland
+		date > 1635.1.1
+	}
+	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_idea = early_uptime_influence_warfare
+			}
+			remove_ideas = early_uptime_influence_warfare
+		}
+		every_country = {
+			limit = {
+				has_idea = early_modern_warfare
+			}
+			swap_ideas = {
+				remove_idea = early_modern_warfare
+				add_idea = early_uptime_influence_warfare
+			}
+		}
+	}
+	option = {
+		name = RoF.006.a
+	}
+}
+
+country_event = {
+	id = RoF.0081
+	title = RoF.006.t
+	desc = RoF.006.d
+	picture = GFX_report_event_scottish_mercenaries
+	trigger = {
+		has_idea = wasteland
+		date > 1637.1.1
+	}
+	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_idea = early_uptime_influence_warfare
+			}
+			remove_ideas = early_uptime_influence_warfare
+		}
+		every_country = {
+			limit = {
+				has_idea = early_modern_warfare
+			}
+			swap_ideas = {
+				remove_idea = early_modern_warfare
+				add_idea = early_uptime_influence_warfare
+			}
+		}
+	}
+	option = {
+		name = RoF.006.a
+	}
+}
+
+country_event = {
+	id = RoF.009
+	title = RoF.010.t
+	desc = RoF.010.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = CoC_present
+			set_variable = { var = CoC_strength value = 5 }
+			set_variable = { var = CoC_anger value = 0 }
+			if = {
+				limit = {
+					has_government = absolutist
+				}
+				add_to_variable = { var = CoC_anger value = 5 }
+			}
+			else_if = {
+				limit = {
+					has_government = radical
+				}
+				add_to_variable = { var = CoC_anger value = -10 }				
+			}
+			set_party_name = {
+				ideology = radical
+				name = ADJ_CoC_party
+				long_name = ADJ_CoC_party_long
+			}
+		}
+	}
+	
+	option = {
+		name = RoF.010.a
+	}
 }
 
 country_event = {

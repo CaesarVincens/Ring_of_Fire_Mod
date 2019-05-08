@@ -1,4 +1,4 @@
-﻿capital = 215
+﻿capital = 214
 
 oob = "KGO_OOB"
 
@@ -21,7 +21,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        liberal = {
+        constitutionalist = {
             popularity = 19
         }
         neutrality = {

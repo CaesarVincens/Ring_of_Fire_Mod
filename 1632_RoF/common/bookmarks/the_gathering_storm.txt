@@ -17,7 +17,7 @@ bookmarks = {
 			focuses = {
 				NUS_new_american_revolution
 				NUS_form_CPoE
-				NUS_national_fervor
+				NUS_patriotic_fervor
 			}
 		}
 
@@ -26,6 +26,9 @@ bookmarks = {
 			ideology = constitutionalist
 			ideas = {
 				SWE_lion_of_the_north
+			}
+			focuses = {
+				SWE_cpoe
 			}
 		}
 		"AUS"={
@@ -61,23 +64,30 @@ bookmarks = {
 		}
 		"SPN"={
 			minor = yes
-			history = "RING_OF_FIRE_DESC"
+			history = "SPN_RING_OF_FIRE_DESC"
+			focuses = {
+				SPN_don_fernando
+				SPN_united_netherlands
+			}
 		}
 		"POL"={
 			minor = yes
-			history = "RING_OF_FIRE_DESC"
+			history = "POL_RING_OF_FIRE_DESC"
 		}
-		"BOH"={
+		"RUS"={
 			minor = yes
-			history = "RING_OF_FIRE_DESC"
-		}
-		"SOV"={
-			minor = yes
-			history = "RING_OF_FIRE_DESC"
+			history = "RUS_RING_OF_FIRE_DESC"
+			ideas = {
+				RUS_eastern_serfdom_1
+			}
+			focuses = {
+				RUS_russian_flight
+				RUS_siberian_expansion
+			}
 		}
 		"ENG"={
 			minor = yes
-			history = "RING_OF_FIRE_DESC"
+			history = "ENG_RING_OF_FIRE_DESC"
 			ideas = {
 				ENG_parliament_prorogued
 			}
@@ -85,6 +95,14 @@ bookmarks = {
 				ENG_cutting_the_cord
 				ENG_united_kingdom
 				ENG_commonwealth_of_england
+			}
+		}
+		"DEN"={
+			minor = yes
+			history = "DEN_RING_OF_FIRE_DESC"
+			focuses = {
+				DEN_prepare_HBC
+				DEN_ostend_league
 			}
 		}
 		effect = {

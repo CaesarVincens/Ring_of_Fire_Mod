@@ -8,6 +8,7 @@ infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
+musket_tech = 1
 heavy_artillery_1 = 1
 transport = 1
 prerof_heavy_frigate = 1
@@ -17,6 +18,16 @@ prerof_man_of_war = 1
 # Research Bonuses
 set_convoys = 0
 
+    set_autonomy = {
+        target = VOC
+        autonomous_state = autonomy_rof_colony
+        freedom_level = 0.6
+    }
+    set_autonomy = {
+        target = WIC
+        autonomous_state = autonomy_rof_colony
+        freedom_level = 0.6
+    }
 
 set_politics = {
 

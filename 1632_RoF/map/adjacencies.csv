@@ -115,6 +115,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3691;7813;sea;6261;-1;-1;-1;-1;;Cold Ass-Strait
 7259;1393;sea;5257;-1;-1;-1;-1;;Vancouver-Strait
 11047;198;sea;8370;-1;-1;-1;-1;;Barents-Strait
+12530;10207;sea;8370;-1;-1;-1;-1;;Barents-Strait
 11157;3145;sea;5792;-1;-1;-1;-1;;Northern-Straits
 11090;91;sea;5792;-1;-1;-1;-1;;Northern-Straits
 44;11050;sea;5792;-1;-1;-1;-1;;Northern-Straits
@@ -170,8 +171,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4391;4828;impassable;-1;-1;-1;-1;-1;;pamir mountains
 4391;1703;impassable;-1;-1;-1;-1;-1;;pamir mountains
 4391;12526;impassable;-1;-1;-1;-1;-1;;pamir mountains
-9171;9095;impassable;-1;-1;-1;-1;-1;;scandes mountains
-9208;9095;impassable;-1;-1;-1;-1;-1;;scandes mountains
 6111;9095;impassable;-1;-1;-1;-1;-1;;scandes mountains
 6111;6152;impassable;-1;-1;-1;-1;-1;;scandes mountains
 173;6152;impassable;-1;-1;-1;-1;-1;;scandes mountains
@@ -208,4 +207,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 9047;11037;impassable;-1;-1;-1;-1;-1;;scandes mountains
 9047;3059;impassable;-1;-1;-1;-1;-1;;scandes mountains
 9170;3059;impassable;-1;-1;-1;-1;-1;;scandes mountains
+6066;9228;sea;990;-1;-1;-1;-1;;Aland strait
 -1;-1;;-1;-1;-1;-1;-1;-1

@@ -12,10 +12,13 @@ state = {
 		owner = SWE
 		victory_points = { 9340 3 }
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
+			9340 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SWE
 	}

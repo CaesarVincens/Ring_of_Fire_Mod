@@ -1,4 +1,16 @@
 ideas = {
+	country = {
+		UPS_supported_remonstrants = {
+			allowed = {
+				always = no
+			}
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			removal_cost = -1
+		}
+	}
 	political_advisor = {
 		UPS_absolutist_advisor = {
 			allowed = {
@@ -226,7 +238,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				firearms_weapons = 0.10
 			}
 			
 			traits = { infantry_equipment_manufacturer }

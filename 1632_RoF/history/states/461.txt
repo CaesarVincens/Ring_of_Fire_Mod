@@ -10,10 +10,10 @@ state = {
 	history = {
 		owner = WRZ
 		victory_points = {
-			9416 8 
+			9416 15 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0

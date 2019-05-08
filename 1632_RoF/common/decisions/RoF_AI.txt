@@ -34,7 +34,7 @@ RoF_ai_decisions = {
 			add_timed_idea = { idea = CoC_timer days = 30 }
 			random_country = {
 				limit = {
-					not = { has_country_flag = CoC_present }
+					NOT = { has_country_flag = CoC_present }
 					any_neighbor_country = {
 						has_variable = CoC_strength
 					}

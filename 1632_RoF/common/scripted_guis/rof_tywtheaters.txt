@@ -1,0 +1,36 @@
+scripted_gui = {
+	rof_tywtheater_button = {
+		context_type = player_context
+		
+		window_name = "rof_tywtheaterbutton"
+		
+		visible = {
+			always = no
+            tag = SWE
+		}
+		
+		effects = {
+			rof_tyw_bg_click = {
+				set_temp_variable = { show = 1 }
+				subtract_from_temp_variable = { show = show_rof_tywtheater }
+				set_variable = { show_rof_tywtheater = show }
+			}
+		}
+	}
+
+	rof_tywtheaters = {
+		context_type = player_context
+		
+		window_name = "rof_tywtheaterwindow"
+		
+		visible = {
+			always = no
+			tag = SWE
+			OR = {
+				check_variable = { show_rof_tywtheater > 0.0 }
+				is_ai = YES
+			}
+		}
+		
+	}
+}

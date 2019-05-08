@@ -10,19 +10,19 @@ state = {
 	history = {
 		owner = UPS
 		victory_points = {
-			391 8 
+			391 30 
 		}
 		victory_points = {
-			3211 5
+			3211 10
 		}
 		victory_points = {
 			68 3
 		}
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-			arms_factory = 2
-			dockyard = 2
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
 			air_base = 0
 			3211 = {
 				naval_base = 2

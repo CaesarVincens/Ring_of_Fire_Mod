@@ -8,7 +8,7 @@ technologies = {
 		research_cost = 1
 		allow = { always = no }
 	}
-		
+
 	infrastructure_tech_1 = {
 		enable_building = {
 			building = infrastructure
@@ -21,34 +21,38 @@ technologies = {
 		research_cost = 1.5
 		start_year = 1631
 		on_research_complete = {
-			limit = { has_country_flag = infra_tech_1_flag }
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = infra_tech_1_flag }
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+											}
+											is_in_home_area = yes
+										}
 									}
-									is_in_home_area = yes
 								}
 							}
 						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}			
+			}
 		}
 		folder = {
 			name = industry_folder
@@ -62,7 +66,7 @@ technologies = {
 			infra_tech
 		}
 	}
-	
+
 	infrastructure_tech_2 = {
 		enable_building = {
 			building = infrastructure
@@ -72,38 +76,42 @@ technologies = {
 			leads_to_tech = infrastructure_tech_3
 			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 1.5
 		start_year = 1632
 		on_research_complete = {
-			limit = { has_country_flag = infra_tech_2_flag }
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = infra_tech_2_flag }
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+											}
+											is_in_home_area = yes
+										}
 									}
-									is_in_home_area = yes
 								}
 							}
 						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}			
+			}
 		}
 		folder = {
 			name = industry_folder
@@ -127,38 +135,42 @@ technologies = {
 			leads_to_tech = infrastructure_tech_4
 			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 1.5
 		start_year = 1634
 		on_research_complete = {
-			limit = { has_country_flag = infra_tech_3_flag }
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = infra_tech_3_flag }
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+											}
+											is_in_home_area = yes
+										}
 									}
-									is_in_home_area = yes
 								}
 							}
 						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
 					}
 				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}			
+			}
 		}
 		folder = {
 			name = industry_folder
@@ -178,7 +190,7 @@ technologies = {
 			building = infrastructure
 			level = 10
 		}
-		
+
 		research_cost = 1.5
 		start_year = 1636
 		folder = {
@@ -193,33 +205,33 @@ technologies = {
 			infra_tech
 		}
 	}
-	
+
 	steel_mill_tech = {
 
 		enable_building = {
 			building = steel_mill
 			level = 3
 		}
-		
+
 		#production_oil_factor = 0.1 #Can increase steel output - not used though.
-		
+
 		path = {
 			leads_to_tech = crucible_steel
 			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 3
 		start_year = 1632
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 4 }
 		}
-		
+
 		categories = {
 			industry
 			steel_tech
 		}
-		
+
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -229,20 +241,16 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				steel > 20
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				steel > 30
-			}			
-		}
-		
-		ai_research_weights = {
-			steel = -2.0
+			}
 		}
 	}
-	
+
 	crucible_steel = {
-		
+
 		on_research_complete = {
 			modify_building_resources = {
 				building = steel_mill
@@ -252,29 +260,29 @@ technologies = {
 		}
 
 		start_year = 1634
-		
+
 		path = {
 			leads_to_tech = bessemer_process
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = engine_factory_tech_0
 			research_cost_coeff = 1
 		}
 
 		research_cost = 1.5
-		
+
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 6 }
 		}
-		
+
 		categories = {
 			industry
 			steel_tech
 		}
-		
+
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -284,22 +292,18 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				steel > 20
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				steel > 30
-			}			
+			}
 		}
-		
-		ai_research_weights = {
-			steel = -2.0
-		}
-		
+
 		show_effect_as_desc = yes
 	}
 
 	bessemer_process = {
-		
+
 		on_research_complete = {
 			modify_building_resources = {
 				building = steel_mill
@@ -309,24 +313,24 @@ technologies = {
 		}
 
 		start_year = 1636
-		
+
 		path = {
 			leads_to_tech = electric_arc_process
 			research_cost_coeff = 1
 		}
-				
+
 		research_cost = 1.5
-		
+
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 8 }
 		}
-		
+
 		categories = {
 			industry
 			steel_tech
 		}
-		
+
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -336,22 +340,22 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				steel > 20
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				steel > 30
-			}			
+			}
 		}
-		
+
 		ai_research_weights = {
 			steel = -2.0
 		}
-		
+
 		show_effect_as_desc = yes
 	}
 
 	electric_arc_process = {
-		
+
 		on_research_complete = {
 			modify_building_resources = {
 				building = steel_mill
@@ -361,19 +365,19 @@ technologies = {
 		}
 
 		start_year = 1638
-		
+
 		research_cost = 1.5
-		
+
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 10 }
 		}
-		
+
 		categories = {
 			industry
 			steel_tech
 		}
-		
+
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -383,34 +387,34 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				steel > 20
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				steel > 30
-			}			
+			}
 		}
-		
+
 		ai_research_weights = {
 			steel = -2.0
 		}
-		
+
 		show_effect_as_desc = yes
 	}
-	
+
 	engine_factory_tech_0 = {
 
 		enable_building = {
 			building = engine_factory
 			level = 1
 		}
-		
+
 		#production_oil_factor = 0.1 #Can increase steel output - not used though.
-		
+
 		path = {
 			leads_to_tech = engine_factory_tech_1
 			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 3
 		start_year = 1635
 		folder = {
@@ -421,12 +425,12 @@ technologies = {
 			name = armour_folder
 			position = { x = 0 y = 5 } # x = 12 y = 0
 		}
-		
+
 		categories = {
 			industry
 			engine_tech
 		}
-		
+
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -436,20 +440,20 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				combustion_engine > 20
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				combustion_engine > 30
-			}			
+			}
 		}
-		
+
 		ai_research_weights = {
 			combustion_engine = -2.0
 		}
 	}
-	
+
 	engine_factory_tech_1 = {
-		
+
 		on_research_complete = {
 			modify_building_resources = {
 				building = engine_factory
@@ -464,19 +468,19 @@ technologies = {
 		#	leads_to_tech = improved_oil_processing
 		#	research_cost_coeff = 1
 		#}
-		
+
 		research_cost = 1.5
-		
+
 		folder = {
 			name = industry_folder
 			position = { x = 2 y = 9 }
 		}
-		
+
 		categories = {
 			industry
 			steel_tech
 		}
-		
+
 		ai_will_do = {
 			factor = 0.5
 			modifier = {
@@ -486,17 +490,17 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				combustion_engine > 20
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				combustion_engine > 30
-			}			
+			}
 		}
-		
+
 		ai_research_weights = {
 			combustion_engine = -2.0
 		}
-		
+
 		show_effect_as_desc = yes
 	}
 }

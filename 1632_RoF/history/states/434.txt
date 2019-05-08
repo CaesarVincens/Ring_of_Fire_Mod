@@ -10,15 +10,14 @@ state = {
 
 	history = {
 		owner = SPR
-		victory_points = { 9642 3 }
+		victory_points = { 9642 10 }
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}
-		add_core_of = FRA
-		add_core_of = SPR
+		add_claim_by = FRA
 	}
 
 	provinces = {

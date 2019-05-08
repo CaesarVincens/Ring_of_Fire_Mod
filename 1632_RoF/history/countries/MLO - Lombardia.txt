@@ -22,7 +22,7 @@ set_politics = {
         absolutist = {
             popularity = 73
         }
-        liberal = {
+        constitutionalist = {
             popularity = 25
         }
         neutrality = {
@@ -41,9 +41,9 @@ add_ideas = {
 	balanced_eco
 }
 create_country_leader = {
-    name = "Alfonso Pellion di Persano"
+    name = "Gómez Suárez de Figueroa y Córdoba"
     desc = "POLITICS_ALFONSO_PELLION DI PERSANO_DESC"
-    picture = "gfx/leaders/ITA/Portrait_Italy_Victor_Emmanuel_III.dds"
+    picture = "gfx/leaders/Italies/Portrait_Milan_Gomez_Suarez.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

@@ -49,11 +49,32 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SOV_flintlock_tech_medium"
+		name = "GFX_RUS_flintlock_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_USR_flintlock_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_weapons_tech_medium"
+		texturefile = "gfx/interface/technologies/support_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_jaegers_medium"
+		texturefile = "gfx/interface/technologies/jaegers.dds"
+	}
+	SpriteType = {
+		name = "GFX_jaegers2_medium"
+		texturefile = "gfx/interface/technologies/jaegers2.dds"
+	}
+	SpriteType = {
+		name = "GFX_jaegers3_medium"
+		texturefile = "gfx/interface/technologies/jaegers3.dds"
+	}
 
-	#generic flintlock
+	#generic caplock
 	SpriteType = {
 		name = "GFX_caplock_tech_medium"
 		texturefile = "gfx/interface/technologies/srg_caplock.dds"
@@ -70,7 +91,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_SOV_caplock_tech_medium"
+		name = "GFX_RUS_caplock_tech_medium"
+		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
+	}
+	SpriteType = {
+		name = "GFX_USR_caplock_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 
@@ -79,39 +104,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/cardinal_rifle.dds"
 	}
 
-	#generic
+	#generic repeating rifle
 	SpriteType = {
 		name = "GFX_repeating_rifle_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_SOV_repeating_rifle_tech_medium"
+		name = "GFX_RUS_repeating_rifle_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
-
 	SpriteType = {
-		name = "GFX_srg_flintlock_tech_medium"
-		texturefile = "gfx/interface/technologies/srg_rifle.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_srg_caplock_tech_medium"
-		texturefile = "gfx/interface/technologies/srg_caplock.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_cardinal_rifle_tech_medium"
-		texturefile = "gfx/interface/technologies/cardinal_rifle.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_ak3_rifle_tech_medium"
-		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_ak47_rifle_tech_medium"
+		name = "GFX_USR_repeating_rifle_tech_medium"
 		texturefile = "gfx/interface/technologies/ak3_rifle.dds"
 	}
 	
@@ -124,12 +128,22 @@ spriteTypes = {
 		name = "GFX_light_artillery_1_medium"
 		texturefile = "gfx/interface/technologies/light_art_1.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_light_artillery_casting_1_medium"
+		texturefile = "gfx/interface/technologies/artillery1.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_light_artillery_2_medium"
 		texturefile = "gfx/interface/technologies/light_art_2.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_light_artillery_ballistics_1_medium"
+		texturefile = "gfx/interface/technologies/artillery2.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_light_artillery_3_medium"
 		texturefile = "gfx/interface/technologies/light_art_3.dds"
@@ -141,10 +155,20 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_heavy_artillery_casting_1_medium"
+		texturefile = "gfx/interface/technologies/artillery3.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_heavy_artillery_2_medium"
 		texturefile = "gfx/interface/technologies/heavy_art_2.dds"
 	}
-	
+
+	SpriteType = {
+		name = "GFX_heavy_artillery_ballistics_1_medium"
+		texturefile = "gfx/interface/technologies/artillery5.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_heavy_artillery_3_medium"
 		texturefile = "gfx/interface/technologies/heavy_art_3.dds"

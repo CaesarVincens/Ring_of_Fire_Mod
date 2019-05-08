@@ -16,19 +16,13 @@ transport = 1
 set_convoys = 0
 
 
-if = {
-    limit = {has_dlc = "Together for Victory" }
-
-    add_to_tech_sharing_group = ENG_research
-}
-
 set_politics = {
 
     parties = {
         absolutist = {
             popularity = 80
         }
-        liberal = {
+        constitutionalist = {
             popularity = 17
         }
         neutrality = {

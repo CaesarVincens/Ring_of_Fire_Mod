@@ -14,49 +14,6 @@ defined_text = {
 		localization_key = ROF_COC_AGITATE_PROGRESS
 	}
 }
-defined_text = {
-	name = GetCoCAgitatedStateName
-	text = {
-		trigger = {
-			has_country_flag = CoC_agitator_alpha
-		}
-		localization_key = ROF_COC_AGITATED_ALPHA_NAME
-	}
-	text = {
-		trigger = {
-			has_country_flag = CoC_agitator_beta
-		}
-		localization_key = ROF_COC_AGITATED_BETA_NAME
-	}
-	text = {
-		trigger = {
-			has_country_flag = CoC_agitator_gamma
-		}
-		localization_key = ROF_COC_AGITATED_GAMMA_NAME
-	}
-}
-
-defined_text = {
-	name = GetCoCAgitatedStateVar
-	text = {
-		trigger = {
-			has_country_flag = CoC_agitator_alpha
-		}
-		localization_key = ROF_COC_AGITATED_ALPHA_VAR
-	}
-	text = {
-		trigger = {
-			has_country_flag = CoC_agitator_beta
-		}
-		localization_key = ROF_COC_AGITATED_BETA_VAR
-	}
-	text = {
-		trigger = {
-			has_country_flag = CoC_agitator_gamma
-		}
-		localization_key = ROF_COC_AGITATED_GAMMA_VAR
-	}
-}
 
 defined_text = { # Country
 	name = GetCoCStrength

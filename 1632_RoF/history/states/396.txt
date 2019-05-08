@@ -1,31 +1,31 @@
 
-state = {
-	id = 396
-	name = "STATE_396"
-	resources = {
-		chromium = 11.000
+state={
+	id=396
+	name="STATE_396"
+	resources={
+		chromium=11.000
 	}
 
-	history = {
-		owner = SOV
+	history={
+		owner = RUS
 		victory_points = {
-			9726 3 
+			11375 10 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 
 	}
 
-	provinces = {
-		731 748 3748 6750 6753 9688 9705 9707 9722 9726 9742 11678 11693 11694 11696 11727 
+	provinces={
+		256 270 325 368 3245 3261 3282 3303 3347 3349 3361 3383 6135 6215 6231 6295 6299 6307 6327 6358 6362 6370 6392 6403 6410 9033 9159 9257 9259 9267 9280 9291 9298 9325 9358 9360 9368 9389 11134 11239 11252 11275 11340 11375 
 	}
-	manpower = 277892
-	buildings_max_level_factor = 1.000
-	state_category = rural
+	manpower=277892
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

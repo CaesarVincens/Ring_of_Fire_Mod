@@ -1,12 +1,10 @@
 political_actions = {
-	
 
 	improved_worker_conditions = {
 
 		icon = generic_industry
 
 		available = {
-			
 		}
 
 		visible = {

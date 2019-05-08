@@ -1,0 +1,129 @@
+NUS_ironclad_research_plan = {
+	name = "Research Iron and Timberclad"
+	desc = "Get those OP ships"
+	
+	enable = {
+		original_tag = NUS
+		has_completed_focus = NUS_ironclads_focus
+	}
+	abort = {
+		has_tech = ironclad_first
+		has_tech = timberclad_first
+	}
+	
+	research = {
+		steamship_tech = 10
+		ironclad_tech = 5000
+		timberclad_tech = 5000
+	}
+}
+
+NUS_canon_focus_list = {
+	name = "Canon choices for New US and USE"
+	desc = "see name"
+	
+	enable = {
+		original_tag = NUS
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			always = no
+		}
+	}
+	ai_national_focuses = {
+		#do these as soon as possible
+		NUS_baltic_relief #1633 september 11 35
+		NUS_patriotic_fervor #1633 october 16 35
+		
+		NUS_new_american_revolution #1631 may 25 35
+		NUS_welcome_refugees #bypass by event
+		NUS_grantville_national_library #1631 june 29 35
+		NUS_gearing_down #1631 august 3 35
+		NUS_revitalize_mining #1631 september 7 35
+		NUS_establish_committees_of_correspondence #1631 october 12 35
+		NUS_new_constitution #1631 november 16 70
+		NUS_invite_thuringian_cities #1632 january 25 35
+		NUS_support_SWE #1632 march 1 35
+		NUS_upgrade_techniques #1632 april 4 35
+		NUS_build_an_army #1632 may 9 35
+		NUS_integrate_down_timers #1632 june 13 35
+		NUS_up_timer_elite_army
+		NUS_encourage_reinvention #1632 july 18 35
+		NUS_form_CPoE #1632 august 22 35
+		NUS_alte_veste #1632 september 26 35
+		NUS_promote_radio #1632 october 31 35
+		NUS_brown_navy #1632 december 5 35
+		NUS_army_reforms #1633 january 9 35
+		NUS_magdeburg_committee #1633 february 13 35
+		NUS_srg_design #1633 march 20 35
+		NUS_ironclads_focus #1633 april 24 35
+		NUS_las_vegas_belle #1633 may 29 35
+		NUS_wietze_oil #1633 july 3 35
+		NUS_steel_production #1633 august 7 35
+		#baltic relief
+		#national fervor
+		NUS_integrate_franconia #1633 november 20 70
+		NUS_german_committees #1634 january 29 35
+		NUS_force_hamburg #1634 march 5 35
+		NUS_relieve_lubeck #1634 april 9 35
+		NUS_little_germanies #1634 april 9 1634
+		NUS_congress_of_copenhagen #1634 june 18 35
+		NUS_organize_new_territory #1634 july 23 70
+		NUS_continue_air_research #1634 october 1 35
+		NUS_steam_engine_focus #1634 november 5 35
+		NUS_election_of_35 #1634 december 10 70
+		NUS_crown_loyalists_35 #1635 february 18 70
+		NUS_fourth_of_july_35 #if picked
+		NUS_lessons_of_history #1635 april 29 35
+		NUS_retake_saxony #1635 june 3 70
+	}
+}
+
+NUS_ally_swe = {
+	name = "Sweden will protect us"
+	desc = "Be friends with GARS"
+	enable = {
+		original_tag = NUS
+		country_exists = SWE
+		has_completed_focus = NUS_support_SWE
+	}
+	abort = {
+		OR = {
+			has_war_with = SWE
+			NOT = { country_exists = SWE }
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SWE"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 200
+	}
+}
+
+NUS_baltic_relief_strat = {
+	name = "Relieve Lubeck"
+	desc = "Get Ships in Baltic"
+	enable = {
+		original_tag = NUS
+		has_completed_focus = NUS_force_hamburg
+	}
+	abort = {
+		has_completed_focus = NUS_relieve_lubeck
+	}
+	ai_strategy = {
+		type = area_priority
+		id = baltic_sea
+		value = 1000
+	}
+}

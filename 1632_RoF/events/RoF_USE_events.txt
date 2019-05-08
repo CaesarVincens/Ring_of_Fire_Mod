@@ -5,7 +5,18 @@ country_event = {
 	id = RoF_USE.100
 	title = RoF_USE.100.t
 	picture = GFX_report_event_use_flag
-	desc = RoF_USE.100.d
+	desc = {
+		trigger = {
+			has_country_flag = NUS_patriotic_fervor_flag
+		}
+		text = RoF_USE.100.d
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = NUS_patriotic_fervor_flag }
+		}
+		text = RoF_USE.100.da
+	}
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -27,8 +38,18 @@ country_event = {
 					NUS = { set_state_controller = PREV }
 				}
 				clr_country_flag = USE_annex_country
-				NUS = {
-					annex_country = { target = PREV transfer_troops = no }
+				if = {
+					limit = {
+						OR = { tag = HES tag = BRS tag = BRA tag = SAX }
+					}
+					NUS = {
+						annex_country = { target = PREV transfer_troops = yes }
+					}
+				}
+				else = {
+					NUS = {
+						annex_country = { target = PREV transfer_troops = no }
+					}
 				}
 			}
 			every_owned_state = {
@@ -45,22 +66,26 @@ country_event = {
 			}
 			every_country = {
 				limit = { has_country_flag = USE_fed_prov }
+				set_country_flag = federal_state
 				NUS = { set_autonomy = { target = PREV autonomy_state = autonomy_rof_federal_state } }
 			}
 			set_cosmetic_tag = USE
 			set_country_flag = USE_formed
+			set_global_flag = USE_formed
 			if = {
 				limit = { owns_state = 247 }
 				set_capital = 247
 			}
-			every_country = {
-				limit = { is_in_faction_with = SWE }
-				SWE = {
-					dismantle_faction = yes
-					create_faction = "Vasa Empire"
-					add_to_faction = PREV
-				}
+			SWE = {
+				set_faction_name = Vasa_Empire
 			}
+			divide_variable = { USE_abs = USE_party_count }
+			divide_variable = { USE_cons = USE_party_count }
+			divide_variable = { USE_lib = USE_party_count }
+			divide_variable = { USE_rad = USE_party_count }
+			divide_variable = { USE_iso = USE_party_count }
+
+			set_USE_parties = yes
 		}
 	}
 	option = {
@@ -138,6 +163,12 @@ country_event = {
 		trigger = {
 			NOT = { tag = SWE }
 		}
+		add_to_variable = { NUS.USE_abs = party_popularity@absolutist }
+		add_to_variable = { NUS.USE_cons = party_popularity@constitutionalist }
+		add_to_variable = { NUS.USE_lib = party_popularity@liberal }
+		add_to_variable = { NUS.USE_rad = party_popularity@radical }
+		add_to_variable = { NUS.USE_iso = party_popularity@neutrality }
+		add_to_variable = { NUS.USE_party_count = 1 }
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -473,13 +504,13 @@ country_event = {
 	desc = {
 		text = RoF_USE.111.da
 		trigger = {
-			HAM = { has_country_flag = HAM_refuse_demand }
+			FROM = { has_country_flag = HAM_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_USE.111.db
 		trigger = {
-			HAM = { has_country_flag = HAM_accept_demand }
+			FROM = { has_country_flag = HAM_accept_demand }
 		}
 	}
 	picture = GFX_report_event_use_flag
@@ -489,25 +520,24 @@ country_event = {
 	option = {
 		name = RoF_USE.111.a
 		trigger = {
-			HAM = { has_country_flag = HAM_refuse_demand }
+			FROM = { has_country_flag = HAM_refuse_demand }
 		}
 		create_wargoal = {
-			target = HAM
-			type = annex_everything
+			target = FROM
+			type = take_state_focus
+			generator = {
+				168
+			}
 		}
 	}
 	option = {
 		name = RoF_USE.111.b
 		trigger = {
-			HAM = { has_country_flag = HAM_accept_demand }
+			FROM = { has_country_flag = HAM_accept_demand }
 		}
-		annex_country = { target = HAM }
-		#add_state_core = 168
-		load_oob = "NUS_Hamburg_navy"
+		transfer_state = 168
 		hidden_effect = {
-			NUS = {
-				#news_event = { days = 1 id = RoF_news.12 }
-			}
+			load_oob = "NUS_Hamburg_navy"
 		}
 	}
 }
@@ -567,7 +597,9 @@ country_event = {
 		name =  RoF_USE.120.a
 		#set_country_flag = attending_congress_of_copenhagen
 		set_country_flag = demand_holstein
-		custom_effect_tooltip = USE_holstein.tt
+		effect_tooltip = {
+			transfer_state = 662
+		}
 		add_political_power = -25
 		DEN = { country_event = { id = RoF_DEN.150 days = 7 } }
 		ai_chance = { base = 100 }
@@ -576,7 +608,11 @@ country_event = {
 		name =  RoF_USE.120.b
 		#set_country_flag = attending_congress_of_copenhagen
 		set_country_flag = demand_jutland
-		custom_effect_tooltip = USE_jutland.tt
+		effect_tooltip = {
+			transfer_state = 662
+			transfer_state = 111
+			transfer_state = 110
+		}
 		add_political_power = -100
 		DEN = { country_event = { id = RoF_DEN.150 days = 7 } }
 		ai_chance = { base = 0 }
@@ -690,6 +726,15 @@ country_event = {
 		white_peace = FRA
 		SWE = { white_peace = FRA }
 		FRA = { dismantle_faction = yes }
+		hidden_effect = {
+			DEN = {
+				every_owned_state = {
+					DEN = {
+						set_state_controller = PREV
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -859,6 +904,45 @@ country_event = {
 		add_stability = -0.1
 	}
 }
+
+#Tyrol Joins
+country_event = {
+	id = RoF_USE.150
+	title = RoF_USE.150.t
+	desc = RoF_USE.150.d
+	picture = GFX_report_event_use_flag
+	fire_only_once = yes
+	trigger = {
+		tag = NUS
+		has_cosmetic_tag = USE
+		OR = {
+			owns_state = 581
+			owns_state = 259
+		}
+		date > 1635.1.1
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = RoF_USE.150.a
+		transfer_state = 21
+		add_state_core = 21
+		transfer_state = 18
+		add_state_core = 18
+
+	}
+	option = {
+		name = RoF_USE.150.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
 
 #Embassy events: FRA-NED
 #embassy in France, meets with Richelieu - canon

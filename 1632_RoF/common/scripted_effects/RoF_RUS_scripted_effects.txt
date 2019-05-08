@@ -1,0 +1,77 @@
+#	Example:
+#
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+##########################################
+### adjust russian/polish serfdom idea ###
+##########################################
+
+lessen_RUS_serfdom = {
+	if = {
+		limit = { has_idea = RUS_eastern_serfdom_1 }
+		swap_ideas = {
+			remove_idea = RUS_eastern_serfdom_1
+			add_idea = RUS_eastern_serfdom_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_eastern_serfdom_2 }
+		swap_ideas = {
+			remove_idea = RUS_eastern_serfdom_2
+			add_idea = RUS_eastern_serfdom_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_eastern_serfdom_3 }
+		swap_ideas = {
+			remove_idea = RUS_eastern_serfdom_3
+			add_idea = RUS_eastern_serfdom_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_eastern_serfdom_4 }
+		remove_ideas = RUS_eastern_serfdom_4
+	}
+}
+
+lessen_POL_serfdom = {
+	if = {
+		limit = { has_idea = POL_eastern_serfdom_1 }
+		swap_ideas = {
+			remove_idea = POL_eastern_serfdom_1
+			add_idea = POL_eastern_serfdom_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_eastern_serfdom_2 }
+		swap_ideas = {
+			remove_idea = POL_eastern_serfdom_2
+			add_idea = POL_eastern_serfdom_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_eastern_serfdom_3 }
+		swap_ideas = {
+			remove_idea = POL_eastern_serfdom_3
+			add_idea = POL_eastern_serfdom_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_eastern_serfdom_4 }
+		remove_ideas = POL_eastern_serfdom_4
+	}
+}

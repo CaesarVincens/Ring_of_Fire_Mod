@@ -10,6 +10,7 @@ tercio_formation_tech = 1
 arquebus_weapons = 1
 heavy_artillery_1 = 1
 transport = 1
+jaegers = 1
 }
 
 # Research Bonuses
@@ -22,7 +23,7 @@ set_politics = {
         absolutist = {
             popularity = 78
         }
-        liberal = {
+        constitutionalist = {
             popularity = 19
         }
         neutrality = {

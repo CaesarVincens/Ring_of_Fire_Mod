@@ -172,5 +172,23 @@ units = {
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
+	division = {
+		name = "5. Tercio Detachment"
+		location = 11666
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Tercio Detachment"
+		location = 11666
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7. Tercio Detachment"
+		location = 11542
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
 
 }

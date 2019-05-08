@@ -1,0 +1,77 @@
+﻿capital = 400
+set_research_slots = 2
+
+#oob = "RUS_OOB"
+
+# Starting tech
+set_technology = {
+infrastructure_tech_base = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+
+    parties = {
+        constitutionalist = {
+            popularity = 23
+        }
+		neutrality = {
+            popularity = 52
+        }
+		absolutist = {
+			popularity = 25
+		}
+    }
+    
+    ruling_party = neutrality
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+
+add_ideas = {
+	military_focus_eco
+	secularism
+}
+set_stability = 0.5
+create_country_leader = {
+    name = "Mikhail Borisovich Shein"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
+    expire = "1660.1.1"
+    ideology = dictatorship
+    traits = {
+		
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Borisovich Shein"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_republic
+    traits = {
+		
+    }
+}
+
+create_country_leader = {
+    name = "Mikhail Borisovich Shein"
+    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
+    expire = "1660.1.1"
+    ideology = dictatorship_neutral
+    traits = {
+		
+    }
+}

@@ -1,0 +1,478 @@
+ideas = {
+	country = {
+		RUS_patriarch_filaret = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.25
+			}
+			removal_cost = -1
+			picture = RUS_filaret
+		}
+		USR_free_russia = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				weekly_manpower = 500
+				constitutionalist_drift = 0.05
+				liberal_drift = 0.1
+			}
+			picture = generic_democratic_drift_bonus
+		}
+		RUS_up_timer_advisor = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = absolutist }
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				constitutionalist_drift = 0.1
+				liberal_drift = 0.05
+			}
+			removal_cost = -1
+			picture = generic_research_bonus
+		}
+		RUS_boyar_cavalry_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+			}
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+		}
+		RUS_boyar_cavalry_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+		}
+		RUS_boyar_cavalry_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+			}
+			removal_cost = -1
+			picture = FRA_national_mobilization_focus
+		}
+		RUS_streltzi_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+			}
+			removal_cost = -1
+			picture = ast_volunteer_defence_corps
+		}
+		RUS_streltzi_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+			removal_cost = -1
+			picture = ast_volunteer_defence_corps
+		}
+		RUS_streltzi_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+			removal_cost = -1
+			picture = ast_volunteer_defence_corps
+		}
+		RUS_infrastructure = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+			removal_cost = -1
+			picture = generic_build_infrastructure
+		}
+		RUS_slow_fever = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+			removal_cost = -1
+			picture = raj_risk_of_famine
+		}
+		RUS_slow_fever_mitigated = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+			}
+			removal_cost = -1
+			picture = raj_risk_of_famine
+		}
+		RUS_eastern_serfdom_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				partisan_effect = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				consumer_goods_factor = 0.2
+				global_building_slots_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		RUS_eastern_serfdom_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.15
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+				partisan_effect = -0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				consumer_goods_factor = 0.15
+				global_building_slots_factor = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		RUS_eastern_serfdom_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.1
+				stability_factor = -0.15
+				war_support_factor = -0.05
+				conscription_factor = -0.15
+				partisan_effect = -0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.05
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+		RUS_eastern_serfdom_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				drift_defence_factor = 0.05
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				conscription_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+		}
+	}
+	
+	political_advisor = {
+		RUS_filaret = {
+			allowed = {
+				original_tag = RUS
+			}
+			traits = {
+				filaret_trait
+			}
+			picture = filaret_pic
+			removal_cost = -1
+			allowed_to_remove = {
+				has_country_flag = filaret_gone
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_absolutist_advisor = {
+			allowed = {
+				always = no
+				original_tag = RUS
+			}
+			traits = { absolutist_minister }
+			on_add = {
+				#country_event = conv.political.01
+			}
+			picture = triumphant_will
+			do_effect = {
+				NOT = {
+					has_government = absolutist
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		RUS_democratic_advisor = {
+			allowed = {
+				always = no
+				original_tag = RUS
+			}
+			traits = { liberal_minister }
+			on_add = {
+				#country_event = conv.political.25
+			}
+			do_effect = {
+				NOT = {
+					has_government = liberal
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		RUS_neutrality_advisor = {
+			allowed = {
+				always = no
+				original_tag = RUS
+			}
+			traits = { neutrality_minister }
+			picture = neutrality_idea
+			do_effect = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	tank_manufacturer = { 
+		designer = yes
+		
+		RUS_tank_manufacturer = {
+			picture = generic_tank_manufacturer_1
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { tank_manufacturer }
+		}
+	}
+	naval_manufacturer = { 
+		designer = yes
+		RUS_naval_manufacturer = {
+			
+			picture = generic_naval_manufacturer_1
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	industrial_concern = {
+		RUS_gorchakov_dacha = {
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = RUS
+			}
+			available = {
+				has_completed_focus = RUS_establish_dacha
+			}
+			cost = 100
+			removal_cost = 10
+			research_bonus = {
+				industry = 0.10
+				electronics = 0.05
+			}
+			traits = { industrial_concern }
+		}
+		RUS_industrial_concern = {
+			
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				industry = 0.10
+			}
+			
+			traits = { industrial_concern }
+		}
+		RUS_electronics_concern = {
+			
+			picture = generic_electronics_concern_1
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes
+		RUS_gun_shop = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				original_tag = RUS
+			}
+			available = {
+				has_completed_focus = RUS_establish_gun_shop
+			}
+			cost = 100
+			removal_cost = 10
+			
+			research_bonus = {
+				firearms_weapons = 0.10
+			}
+			traits = { infantry_equipment_manufacturer }
+		}
+		RUS_motorized_equipment_manufacturer = {
+			
+			picture = generic_motorized_equipment_manufacturer_3
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+		
+		RUS_infantry_equipment_manufacturer = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				firearms_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		RUS_artillery_manufacturer = {
+			
+			picture = generic_artillery_manufacturer_2
+			allowed = {
+				original_tag = RUS
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+	}
+}

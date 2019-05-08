@@ -9,14 +9,14 @@ state = {
 			9453 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 
 		}
 		add_core_of = KAZ
-		add_core_of = SOV
+		add_core_of = RUS
 
 	}
 

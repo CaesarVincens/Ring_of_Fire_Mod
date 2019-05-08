@@ -1,0 +1,978 @@
+focus_tree = {
+	id = danish_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DEN
+		}
+	}
+	default = no
+
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	#shared_focus = industrial_advances
+
+	focus = {
+		id = DEN_continue_recovery
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		x = 20
+		y = 0
+		available = {
+			owns_state = 112
+		}
+		completion_reward = {
+			112 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			#custom_effect_tooltip = increase_infra_tech.tt
+			add_tech_bonus = {
+				name = infra_bonus
+				bonus = 0.5
+				uses = 1
+				category = infra_tech
+			}
+			#set_country_flag = infra_tech_1_flag
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_jylland_construction
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		relative_position_id = DEN_continue_recovery
+		prerequisite = { focus = DEN_continue_recovery }
+		x = 2
+		y = 1
+		available = {
+			owns_state = 110
+			owns_state = 111
+			owns_state = 662
+		}
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			111 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			662 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_scania_construction
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		relative_position_id = DEN_continue_recovery
+		prerequisite = { focus = DEN_continue_recovery }
+		x = 0
+		y = 1
+		available = {
+			owns_state = 108
+			owns_state = 659
+			owns_state = 656
+		}
+		completion_reward = {
+			108 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			659 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			656 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_norway_construction
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		relative_position_id = DEN_continue_recovery
+		prerequisite = { focus = DEN_continue_recovery }
+		x = -2
+		y = 1
+		available = {
+			owns_state = 104
+			owns_state = 105
+			owns_state = 106
+			owns_state = 107
+		}
+		completion_reward = {
+			104 = {
+				#add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			105 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			106 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			107 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_naval_buildup
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		prerequisite = { focus = DEN_jylland_construction }
+		relative_position_id = DEN_jylland_construction
+		x = 0
+		y = 1
+		complete_tooltip = {
+			navy_experience = 25
+			random_state = {
+				limit = { has_state_flag = DEN_naval_buildup_state }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+					set_state_flag = DEN_naval_buildup_state
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+					set_state_flag = DEN_naval_buildup_state
+				}
+			}
+			else = {
+				random_state = {
+					limit = {
+						controller = {
+							tag = ROOT
+						}
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+					set_state_flag = DEN_naval_buildup_state
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DEN_improve_defences
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10
+		prerequisite = { focus = DEN_scania_construction }
+		relative_position_id = DEN_scania_construction
+		x = 0
+		y = 1
+		available = {
+			owns_state = 112
+			owns_state = 106
+			owns_state = 111
+		}
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 6287
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6287
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = 6361
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3325
+				}
+			}
+			106 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = 6115
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6115
+				}
+			}
+			111 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = 317
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 317
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####################
+	#  POLITICAL TREE  #
+	####################
+
+	focus = {
+		id = DEN_handle_Rigsradet
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		x = 15
+		y = 0
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_investigate_grantville
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = { focus = DEN_handle_Rigsradet }
+		relative_position_id = DEN_handle_Rigsradet
+		x = 0
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEN_investigate_grantville.tt
+				OR = {
+					date > 1632.1.1
+					has_country_flag = knows_about_grantville
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = up_time_knowledge_ideas
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_establish_workshops
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = { focus = DEN_investigate_grantville }
+		relative_position_id = DEN_handle_Rigsradet
+		x = 0
+		y = 2
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_ostend_league
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10
+		prerequisite = { focus = DEN_establish_workshops }
+		mutually_exclusive = { focus = DEN_ally_americans }
+		relative_position_id = DEN_establish_workshops
+		x = -1
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEN_ostend_league.tt
+				OR = {
+					FRA = {
+						focus_progress = {
+							focus = FRA_ostend_league_focus
+							progress > 0.01
+						}
+					}
+					has_country_flag = ostend_member
+				}
+			}
+		}
+		cancel = {
+			has_country_flag = refused_ostend
+		}
+		bypass = {
+			has_country_flag = ostend_member
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					FRA = { has_tech = caplock_tech }
+				}
+				FRA = {
+					create_production_license = {
+						target = DEN
+						equipment = {
+							type = caplock_rifle
+						}
+						cost_factor = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					FRA = { has_tech = flintlock_tech }
+				}
+				FRA = {
+					create_production_license = {
+						target = DEN
+						equipment = {
+							type = flintlock_rifle
+						}
+						cost_factor = 1
+					}
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = ostend_tech_bonus
+					bonus = 0.5
+					uses = 1
+					category = firearms_weapons
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_baltic_assault
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = { focus = DEN_ostend_league }
+		relative_position_id = DEN_ostend_league
+		x = -1
+		y = 1
+		available = {
+			any_enemy_country = {
+				custom_trigger_tooltip = {
+					tooltip = DEN_baltic_assault.tt
+					OR = {
+						owns_state = 424
+						owns_state = 472
+						owns_state = 355
+						owns_state = 258
+						owns_state = 661
+						owns_state = 242
+					}
+				}
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = RoF_DEN.120
+				hours = 2
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_invest_lubeck
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = { focus = DEN_baltic_assault }
+		relative_position_id = DEN_ostend_league
+		x = -1
+		y = 2
+		available = {
+			any_enemy_country = {
+				owns_state = 242
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = RoF_DEN.130
+				hours = 2
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_subjugate_sweden
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = { focus = DEN_invest_lubeck }
+		mutually_exclusive = { focus = DEN_submit_to_sweden }
+		relative_position_id = DEN_invest_lubeck
+		x = -1
+		y = 1
+		available = {
+			has_war_with = SWE
+			SWE = { has_capitulated = yes }
+		}
+		bypass = {
+			OR = {
+				SWE = { is_subject_of = DEN }
+				NOT = { country_exists = SWE }
+			}
+		}
+		#available_if_capitulated = yes
+		completion_reward = {
+			SWE = {
+				country_event = {
+					id = RoF_SWE.160
+					hours = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	focus = {
+		id = DEN_submit_to_sweden
+		icon = GFX_focus_CZE_german_puppet
+		cost = 10
+		prerequisite = { focus = DEN_invest_lubeck }
+		mutually_exclusive = { focus = DEN_subjugate_sweden }
+		relative_position_id = DEN_invest_lubeck
+		x = 1
+		y = 1
+		available = {
+			has_war_with = SWE
+			has_capitulated = yes
+		}
+		bypass = {
+			is_subject_of = SWE
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	#Join Americans
+	focus = {
+		id = DEN_ally_americans
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10
+		prerequisite = { focus = DEN_establish_workshops }
+		mutually_exclusive = { focus = DEN_ostend_league }
+		relative_position_id = DEN_establish_workshops
+		x = 1
+		y = 1
+		available = {
+			NOT = {
+				has_war_with = NUS
+			}
+			custom_trigger_tooltip = {
+				tooltip = DEN_ostend_league.tt
+				FRA = {
+					focus_progress = {
+						focus = FRA_ostend_league_focus
+						progress > 0.01
+					}
+				}
+				NOT = { has_country_flag = ostend_member }
+			}
+			has_country_flag = refused_ostend
+		}
+		cancel = {
+			has_country_flag = ostend_member
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					FRA = { has_tech = caplock_tech }
+				}
+				NUS = {
+					create_production_license = {
+						target = DEN
+						equipment = {
+							type = caplock_rifle
+						}
+						cost_factor = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					FRA = { has_tech = flintlock_tech }
+				}
+				NUS = {
+					create_production_license = {
+						target = DEN
+						equipment = {
+							type = flintlock_rifle
+						}
+						cost_factor = 1
+					}
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = nus_tech_bonus
+					bonus = 0.5
+					uses = 1
+					category = firearms_weapons
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				is_historical_focus_on = no
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_reenter_german_wars
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 10
+		prerequisite = { focus = DEN_ally_americans }
+		relative_position_id = DEN_ally_americans
+		x = 1
+		y = 1
+		available = {
+		}
+		bypass = {
+			NUS = {
+				NOT = { has_war_with = AUS }
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NUS = { has_war_with = AUS }
+				}
+				add_to_war = {
+					targeted_alliance = NUS
+					enemy = AUS
+					hostility_reason = asked_to_join
+				}
+			}
+			if = {
+				limit = {
+					NUS = { is_faction_leader = yes }
+				}
+				NUS = {
+					add_to_faction = DEN
+				}
+			}
+			else_if = {
+				limit = {
+					NUS = { is_in_faction = yes is_faction_leader = no }
+				}
+				random_country = {
+					limit = {
+						is_in_faction_with = NUS
+						is_faction_leader = yes
+					}
+					add_to_faction = DEN
+				}
+			}
+			else = {
+				custom_effect_tooltip = DEN_reenter_german_wars.tt
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_exploit_greenland
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = DEN_investigate_grantville }
+		prerequisite = { focus = DEN_norway_construction }
+		relative_position_id = DEN_norway_construction
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			446 = { is_owned_by = WNA }
+		}
+		completion_reward = {
+			transfer_state = 446
+			add_resource = {
+				type = aluminium
+				amount = 2
+				state = 446
+			}
+			add_resource = {
+				type = chromium
+				amount = 2
+				state = 446
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_develop_norwegian_resources
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = DEN_exploit_greenland }
+		prerequisite = { focus = DEN_improve_defences }
+		relative_position_id = DEN_exploit_greenland
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			OR = {
+				owns_state = 104
+				owns_state = 105
+				owns_state = 106
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { owns_state = 104 }
+				104 = { add_extra_state_shared_building_slots = 1 }
+				add_resource = {
+					type = chromium
+					amount = 5
+					state = 104
+				}
+				add_resource = {
+					type = oil
+					amount = 10
+					state = 104
+				}
+			}
+			if = {
+				limit = { owns_state = 105 }
+				105 = { add_extra_state_shared_building_slots = 1 }
+				add_resource = {
+					type = steel
+					amount = 20
+					state = 105
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+					state = 105
+				}
+			}
+			if = {
+				limit = { owns_state = 106 }
+				106 = { add_extra_state_shared_building_slots = 1 }
+				add_resource = {
+					type = steel
+					amount = 10
+					state = 106
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+					state = 106
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_redeem_orkneys
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = { focus = DEN_ostend_league focus = DEN_ally_americans }
+		relative_position_id = DEN_establish_workshops
+		x = 0
+		y = 2
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = DEN_ostend_league
+				}
+				ENG = { has_country_flag = pseudo_ostend_member }
+			}
+			custom_trigger_tooltip = {
+				tooltip = DEN_redeem_shetland_orkneys.tt
+				660 = {
+					OR = {
+						AND = {
+							is_owned_by = SCO
+							SCO = { is_subject_of = ENG }
+						}
+						is_owned_by = ENG
+					}
+				}
+			}
+		}
+		bypass = {
+			owns_state = 660
+		}
+		completion_reward = {
+			ENG = { country_event = { id = RoF_ENG.110 } }
+			effect_tooltip = {
+				transfer_state = 660
+				660 = {
+					if = {
+						limit = { is_core_of = SCO }
+						remove_core_of = SCO
+					}
+					if = {
+						limit = { is_core_of = ENG }
+						remove_core_of = ENG
+					}
+					add_core_of = DEN
+				}
+				ENG = { add_timed_idea = { idea = ENG_DEN_payment days = 180 } }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_prepare_HBC
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = DEN_redeem_orkneys }
+		relative_position_id = DEN_redeem_orkneys
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			owns_state = 660
+		}
+		completion_reward = {
+			custom_effect_tooltip = DEN_prepare_HBC.tt
+			set_country_flag = DEN_launch_HBC
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = DEN_expand_HBC
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = DEN_prepare_HBC }
+		relative_position_id = DEN_prepare_HBC
+		x = 0
+		y = 2
+		cost = 10
+		available = {
+			owns_state = 556
+			custom_trigger_tooltip = {
+				tooltip = DEN_expand_HBC_TT
+				135 = { is_owned_by = WNA }
+			}
+			
+		}
+		completion_reward = {
+			if = {
+				limit = { 135 = { is_owned_by = WNA } }
+				country_event = {
+					id = RoF_DEN.112
+				}
+			}
+			else = {
+				custom_effect_tooltip = DEN_expand_HBC.tt
+			}
+			#hudson bay
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+
+}

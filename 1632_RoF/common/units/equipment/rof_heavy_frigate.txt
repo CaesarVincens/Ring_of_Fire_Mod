@@ -17,17 +17,134 @@ equipments = {
 			ship_gun_upgrade
 		}
 
-		ap_attack = 8
-		attack = 10
-		fire_range = 8
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_light_battery ship_medium_battery}
+			}
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { ship_anti_air }
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = yes
+				allowed_module_categories = { ship_fire_control_system ship_sonar }
+			}
+			fixed_ship_radar_slot = {
+				required = no
+				allowed_module_categories = { ship_radar ship_sonar }
+			}
+			fixed_ship_engine_slot = {
+				required = yes
+				allowed_module_categories = { cruiser_ship_engine }
+			}
+			fixed_ship_secondaries_slot = {
+				required = no
+				allowed_module_categories = { ship_secondaries }
+			}
+			fixed_ship_armor_slot = {
+				required = no
+				allowed_module_categories = { ship_cruiser_armor }	
+			}
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo
+					ship_anti_air
+					ship_light_battery
+					ship_medium_battery
+					ship_secondaries
+					ship_airplane_launcher
+					ship_mine_layer
+				}
+			}
+			mid_2_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+					ship_light_battery
+					ship_medium_battery
+					ship_airplane_launcher
+					ship_mine_layer
+					ship_depth_charge
+				}
+			}
+		}
+		
+		module_count_limit = {
+			category = ship_radar
+			count < 2
+		}
+		
+		module_count_limit = {
+			category = ship_sonar
+			count < 2
+		}
+		
+		default_modules = {
+			fixed_ship_battery_slot = empty
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		
+		lg_armor_piercing = 0
+		lg_attack = 0
+		
+		hg_armor_piercing = 0
+		hg_attack = 0
+		
 		torpedo_attack = 0
-		shore_bombardment = 1
+		sub_attack = 0
+		
+		anti_air_attack = 0
+		
+		armor_value = 0
+
+		surface_detection = 12
+		sub_detection = 1
+		surface_visibility = 20
+		naval_speed = 18
+		reliability = 0.80
+		
+		naval_range = 3000
+		
+		max_strength = 150
+				
+		fuel_consumption = 10
+		build_cost_ic = 4200
+		resources = {
+			steel = 3
+		}
+		
+		manpower = 500
+	}
+
+	heavy_frigate_1 = {
+		year = 1600
+
+		visual_level = 0
+		archetype = heavy_frigate
+		priority = 40
+		
+		module_slots = {
+		}
+		lg_armor_piercing = 2
+		lg_attack = 5
+		
+		hg_armor_piercing = 6
+		hg_attack = 5
+		
+		torpedo_attack = 0
 		
 		anti_air_attack = 1
 		
 		armor_value = 9
-		evasion = 30
-		
 		surface_detection = 12
 		sub_detection = 1
 		surface_visibility = 20
@@ -38,42 +155,35 @@ equipments = {
 		
 		max_strength = 150
 		
-		port_capacity_usage = 1
-		
 		build_cost_ic = 4200
 		resources = {
-			oil = 1
 			steel = 3
 		}
 		
 		manpower = 500
 	}
-
-	heavy_frigate_1 = {
-		year = 1600
-
-		archetype = heavy_frigate
-		priority = 40
-		
-	}
 	
 	heavy_frigate_2 = {
 		year = 1635
 
+		visual_level = 1
 		archetype = heavy_frigate
 		parent = heavy_frigate_1
 		priority = 40
 
-		ap_attack = 12
-		attack = 14
-		fire_range = 12
+		module_slots = {
+		}
+		lg_armor_piercing = 4
+		lg_attack = 6
+		
+		hg_armor_piercing = 8
+		hg_attack = 10
+		
 		torpedo_attack = 0
-		shore_bombardment = 2
 		
 		anti_air_attack = 2
 		
 		armor_value = 11
-		evasion = 40
 		
 		surface_detection = 25
 		sub_detection = 2
@@ -84,12 +194,9 @@ equipments = {
 		naval_range = 4000
 		
 		max_strength = 175
-		
-		port_capacity_usage = 1
 
 		build_cost_ic = 4600
 		resources = {
-			oil = 1
 			steel = 4
 		}		
 		manpower = 700

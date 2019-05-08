@@ -2,7 +2,7 @@ technologies = {
 	electronic_mechanical_engineering = {
 
 		# small boost to research speed
-		research_time_factor = -0.02
+		research_speed_factor = 0.02
 		
 		path = {
 			leads_to_tech = radio 
@@ -257,7 +257,7 @@ technologies = {
 	mechanical_computing = {
 
 		# small boost to research speed
-		research_time_factor = -0.03
+		research_speed_factor = 0.03
 		
 		path = {
 			leads_to_tech = computing_machine 
@@ -284,7 +284,7 @@ technologies = {
 	computing_machine = {
 
 		# small boost to research speed
-		research_time_factor = -0.03
+		research_speed_factor = 0.03
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -332,7 +332,7 @@ technologies = {
 	improved_computing_machine = {
 
 		# small boost to research speed
-		research_time_factor = -0.05
+		research_speed_factor = 0.05
 		
 		path = {
 			leads_to_tech = advanced_computing_machine 
@@ -380,7 +380,7 @@ technologies = {
 	advanced_computing_machine = {
 
 		# small boost to research speed
-		research_time_factor = -0.05
+		research_speed_factor = 0.05
 		
 		path = {
 			leads_to_tech = advanced_encryption 
@@ -594,7 +594,6 @@ technologies = {
 
 		# can build v1s/rocket planes
 		enable_equipments = {
-			rocket_interceptor_equipment_1
 			guided_missile_equipment_1
 		}
 		
@@ -621,11 +620,6 @@ technologies = {
 			name = electronics_folder
 			position = { x = 0 y = 2 }
 		}
-			folder = {
-			name = secret_weapons_folder
-			position = { x = 10 y = 0 }
-		}
-		
 		
 		ai_will_do = {
 			factor = 1
@@ -643,7 +637,6 @@ technologies = {
 		# can build v2s
 		
 		enable_equipments = {
-			rocket_interceptor_equipment_2
 			guided_missile_equipment_2
 		}
 		
@@ -683,7 +676,6 @@ technologies = {
 		# can build ICBMs?
 		
 		enable_equipments = {
-			rocket_interceptor_equipment_3
 			guided_missile_equipment_3
 		}
 		
