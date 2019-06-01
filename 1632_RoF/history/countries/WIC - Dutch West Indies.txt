@@ -20,23 +20,17 @@ set_convoys = 0
 set_country_flag = colony_flag
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        constitutionalist = {
-            popularity = 84
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = constitutionalist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
+}
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
 }
 
 

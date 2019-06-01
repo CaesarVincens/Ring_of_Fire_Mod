@@ -17,23 +17,17 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 78
-        }
-        constitutionalist = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
+}
+set_popularities = {
+	absolutist = 38
+	constitutionalist = 49
+	liberal = 0
+	radical = 0
+	neutrality = 13
 }
 
 #add_to_war = {
@@ -51,7 +45,7 @@ create_country_leader = {
     desc = "POLITICS_WILHELM_VON SCHLIEFFEN_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Brunswick_George_Welf.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = constitutional_monarchy
     traits = {
     }
 }

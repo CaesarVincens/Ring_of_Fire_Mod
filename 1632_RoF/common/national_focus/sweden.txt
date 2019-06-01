@@ -402,7 +402,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SWE_advance_on_austria
+		id = SWE_proceed_on_prague
 		icon = GFX_focus_generic_little_entente
 		ai_will_do = {
 			factor = 10
@@ -520,8 +520,8 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = { focus = SWE_advance_on_austria }
-		relative_position_id = SWE_advance_on_austria
+		prerequisite = { focus = SWE_proceed_on_prague }
+		relative_position_id = SWE_proceed_on_prague
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
@@ -552,8 +552,8 @@ focus_tree = {
 				country_exists = BOH
 			}
 		}
-		prerequisite = { focus = SWE_advance_on_austria }
-		relative_position_id = SWE_advance_on_austria
+		prerequisite = { focus = SWE_proceed_on_prague }
+		relative_position_id = SWE_proceed_on_prague
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
@@ -599,7 +599,7 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = -2
 		y = 1
-		mutually_exclusive = { focus = SWE_advance_on_austria }
+		mutually_exclusive = { focus = SWE_proceed_on_prague }
 		prerequisite = { focus = SWE_strong_arm_saxony }
 		relative_position_id = SWE_strong_arm_saxony
 		cost = 5

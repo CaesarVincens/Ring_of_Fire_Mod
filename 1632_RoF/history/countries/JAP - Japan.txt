@@ -18,28 +18,21 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 73
-        }
-        constitutionalist = {
-            popularity = 25
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
-
+set_popularities = {
+	absolutist = 73
+	constitutionalist = 25
+	liberal = 0
+	radical = 0
+	neutrality = 2
+}
 
 add_ideas = {
-		balanced_eco
+	balanced_eco
 }
 set_stability = 0.5
 create_country_leader = {
@@ -48,6 +41,24 @@ create_country_leader = {
     picture = "gfx/leaders/JAP/Portrait_Japan_Tokugawa_Iemitsu.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Tokugawa Iemitsu"
+    desc = "POLITICS_GORO_MINAMI_DESC"
+    picture = "gfx/leaders/JAP/Portrait_Japan_Tokugawa_Iemitsu.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Tokugawa Iemitsu"
+    desc = "POLITICS_GORO_MINAMI_DESC"
+    picture = "gfx/leaders/JAP/Portrait_Japan_Tokugawa_Iemitsu.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

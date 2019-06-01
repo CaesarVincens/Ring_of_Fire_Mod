@@ -2,13 +2,11 @@ RUS_major_decisions = {
 	test_RUS = {
 		visible = {
 			tag = RUS
-			always = no
 		}
 		complete_effect = {
-			384 = { set_demilitarized_zone = yes }
-			392 = { set_demilitarized_zone = yes }
-			393 = { set_demilitarized_zone = yes }
-			394 = { set_demilitarized_zone = yes }
+			country_event = {
+				id = RoF_RUS.101
+			}
 		}
 	}
 }

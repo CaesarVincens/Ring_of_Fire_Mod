@@ -1102,6 +1102,112 @@ country_event = {
 
 }
 
+#Purchase Harlingen
+country_event = {
+	id = RoF_USE.206
+	title = RoF_USE.206.t
+	desc = RoF_USE.206.d
+	picture = GFX_report_event_use_flag
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RoF_USE.206.a
+		add_political_power = 10
+		effect_tooltip = {
+			NUS = {
+				transfer_state = 657
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = sold_harlingen
+				}
+			}
+		}
+		hidden_effect = {
+			NUS = {
+				set_country_flag = bought_harlingen
+				country_event = {
+					id = RoF_USE.207
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_war_with = NUS
+			}
+		}
+	}
+
+	option = {
+		name = RoF_USE.206.b
+		effect_tooltip = {
+			NUS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = kept_harlingen
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				has_war_with = NUS
+			}
+		}
+	}
+
+}
+
+#Purchase Harlingen
+country_event = {
+	id = RoF_USE.207
+	title = RoF_USE.207.t
+	desc = {
+		trigger = {
+			has_country_flag = bought_harlingen
+		}
+		text = RoF_USE.207.d
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = bought_harlingen }
+		}
+		text = RoF_USE.207.d_alt
+	}
+	picture = GFX_report_event_ups_flag
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			has_country_flag = bought_harlingen
+		}
+		name = RoF_USE.207.a
+		transfer_state = 657
+		add_opinion_modifier = {
+			target = FROM
+			modifier = sold_harlingen
+		}
+	}
+
+	option = {
+		trigger = {
+			NOT = { has_country_flag = bought_harlingen }
+		}
+		name = RoF_USE.207.b
+		add_opinion_modifier = {
+			target = FROM
+			modifier = kept_harlingen
+		}
+	}
+
+}
+
 #Embassy events: ENG-SCO
 #embassy in England, Cromwell arrested - canon
 country_event = {

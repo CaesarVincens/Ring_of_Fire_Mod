@@ -29,11 +29,6 @@ set_convoys = 100
 
 
 # DIPLOMACY
-    set_autonomy = {
-        target = POM
-        autonomous_state = autonomy_rof_vassal
-        freedom_level = 0.6
-    }
  #   set_autonomy = {
  #       target = MKL
  #       autonomous_state = autonomy_rof_vassal
@@ -44,24 +39,24 @@ set_convoys = 100
 diplomatic_relation = { country = RUS relation = non_aggression_pact active = yes }
 
 set_politics = {
-
-    parties = {
-        constitutionalist = {
-            popularity = 78
-        }
-        absolutist = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
     ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 79
+	liberal = 0
+	radical = 0
+	neutrality = 2
+}
+
+    set_autonomy = {
+        target = POM
+        autonomous_state = autonomy_rof_vassal
+        freedom_level = 0.6
+    }
 
 create_faction = Protestant_Union
 add_to_faction = SWE

@@ -25,6 +25,8 @@
  dictatorship_desc:0 "A form of government where a country or a group of countries is ruled by one person or political entity, and exercised through various mechanisms to ensure that the entity's power remains strong."
  bishopric:0 "Bishopric"
  bishopric_desc:0 "Bishoprics are ecclesiastical realms where the ruler is also bishop, usually of the Roman Catholic Church"
+ bishopric_neutral:0 "Bishopric"
+ bishopric_desc_neutral:0 "Bishoprics are ecclesiastical realms where the ruler is also bishop, usually of the Roman Catholic Church"
  absolute_monarchy_neutral:0 "Absolute Monarchy"
  absolute_monarchy_neutral_desc:0 "A form of monarchy in which one ruler has supreme authority that is not restricted by any written laws, legislature, or customs."
  dictatorship_neutral:0 "Dictatorship"

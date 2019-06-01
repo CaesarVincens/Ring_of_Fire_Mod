@@ -18,27 +18,16 @@ set_convoys = 100
 
 set_politics = {
 	ruling_party = constitutionalist
-	parties = {
-		absolutist = {
-			popularity = 10
-		}
-		liberal = {
-			popularity = 20
-		}
-		constitutionalist = {
-			popularity = 45
-		}
-		radical = {
-			popularity = 20
-		}
-		neutrality = {
-			popularity = 5
-		}
-	}
 	election_frequency = 48
 	elections_allowed = yes
 }
-
+set_popularities = {
+	absolutist = 10
+	constitutionalist = 45
+	liberal = 20
+	radical = 20
+	neutrality = 5
+}
 
 add_ideas = {
 }

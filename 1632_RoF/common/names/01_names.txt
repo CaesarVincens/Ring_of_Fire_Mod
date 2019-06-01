@@ -1189,31 +1189,6 @@ ENG = {
 		"Butcher" "Cocky" "Hawkeye" "Killer" "Mick" "Brandy" "The Baron" 
 	}
 }
-UKR = {
-	male = {
-		names = {
-			"Alexei" "Andrei" "Anton" "Arkadiy" "Borys" "Dmitro" "Fyodor" "Hryhoriy" "Ivan" "Lavr"
-			"Leonid" "Lev" "Mikhail" "Mykola" "Nikita" "Oleksandr" "Pavel" "Petro" "Roman" "Semyon"
-			"Sergiy" "Valeriy" "Viktor" "Volodimir" "Vladislav" "Yuriy" 
-		}
-	}
-	female = {
-		names = {
-			"Jelena" "Ludmila" 
-		}
-	}
-	surnames = {
-		"Bezruchko" "Chernyakhovsky" "Dyachenko" "Gamula" "Grigoriev" "Hrekov" "Ivanenko" "Ivanov" "Kapustiansky" "Kondratenko"
-		"Leshchenko" "Leshchinskiy" "Omelianovych-Pavlenko" "Paskevich" "Petliura" "Radchenko" "Shevchenko" "Skoropadskyi" "Stefaniv" "Tymoshenko"
-		"Vitovsky" 
-	}
-	callsigns = {
-		"Anvil" "Hammer" "Fury" "Arrow" "Storm" "Bear" "White Lily" "Devil" "Eagle" "Falcon"
-		"Fox" "Snowflake" "Greasy" "Guardian" "Gunman" "Hawk" "Hardball" "Howl" "Blizzard" "Husky"
-		"Ice" "Killer" "Steel" "Iron" "Skull" "Striker" "Thunder" "Warrior" "Wardog" "Vodka"
-		
-	}
-}
 UPS = {
 	male = {
 		names = {

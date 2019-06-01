@@ -127,3 +127,26 @@ NUS_baltic_relief_strat = {
 		value = 1000
 	}
 }
+
+NUS_protect_grantville = {
+	name = "Protect Grantville"
+	desc = "Don't worry about Saxony"
+	enable = {
+		original_tag = NUS
+		#is_in_faction_with = SAX
+		has_war_together_with = SAX
+	}
+	abort = {
+		NOT = { has_war_together_with = SAX }
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SAX
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BRA
+		value = 100
+	}
+}

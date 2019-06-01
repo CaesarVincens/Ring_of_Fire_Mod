@@ -17,28 +17,18 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        liberal = {
-            popularity = 13
-        }
-		constitutionalist = {
-			popularity = 70
-		}
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
     ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
 }
-
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 60
+	liberal = 13
+	radical = 0
+	neutrality = 13
+}
 
 add_ideas = {
 	civilian_focus_eco

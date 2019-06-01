@@ -17,25 +17,18 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 89
-        }
-        constitutionalist = {
-            popularity = 9
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
-
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 9
+	liberal = 0
+	radical = 0
+	neutrality = 72
+}
 
 add_ideas = {
 	balanced_eco
@@ -46,7 +39,7 @@ create_country_leader = {
     desc = "POLITICS_MARIA_PEIRE_DESC"
     picture = "gfx/leaders/Italies/Portrait_Knights_Antoine_de_Paule.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

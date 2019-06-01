@@ -16,28 +16,21 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 68
-        }
-        constitutionalist = {
-            popularity = 29
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
-
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
 add_ideas = {
-		balanced_eco
+	balanced_eco
 }
 set_stability = 0.5
 create_country_leader = {
@@ -45,7 +38,7 @@ create_country_leader = {
     desc = "POLITICS_KHORLOOGIIN_JAMYAN_DESC"
     picture = "gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

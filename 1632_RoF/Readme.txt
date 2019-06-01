@@ -12,6 +12,10 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.6.0 - 
+Updated to HoI Patch 1.7.0
+Realigned many countries to isolationist/neutral politics, for now.
+
 Alpha 0.5.1 - Apr. 3, 2019
 Updated to HoI patch 1.6.2
 Add new party popularity merging mechanic for USE formation

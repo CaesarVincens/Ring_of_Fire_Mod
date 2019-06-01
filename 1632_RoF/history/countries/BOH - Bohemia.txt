@@ -19,38 +19,33 @@ set_convoys = 0
 # DIPLOMACY
 
 set_politics = {
-
-	parties = {
-		absolutist = {
-			popularity = 38
-		}
-		constitutionalist = {
-			popularity = 58
-		}
-		neutrality = {
-			popularity = 4
-		}
-	}
-	
 	ruling_party = constitutionalist
 	last_election = "1631.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 38
+	constitutionalist = 58
+	liberal = 0
+	radical = 0
+	neutrality = 4
 }
 
 add_ideas = {
 	balanced_eco
 }
 set_stability = 0.5
-	create_country_leader = {
-		name = "Albrecht von Wallenstein"
-		desc = "POLITICS_WALLENSTEIN_DESC"
-		picture = "GFX_leader_BOH_Wallenstein"
-		ideology = constitutional_monarchy
-		traits = {
-		}
+
+create_country_leader = {
+	name = "Albrecht von Wallenstein"
+	desc = "POLITICS_WALLENSTEIN_DESC"
+	picture = "GFX_leader_BOH_Wallenstein"
+	ideology = constitutional_monarchy
+	traits = {
 	}
-	create_country_leader = {
+}
+create_country_leader = {
 	name = "Ferdinand II von Habsburg"
 	desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
 	picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"

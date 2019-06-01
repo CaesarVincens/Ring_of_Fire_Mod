@@ -17,25 +17,18 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        constitutionalist = {
-            popularity = 14
-        }
-        neutrality = {
-            popularity = 72
-        }
-    }
-    
     ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
 }
-
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 14
+	liberal = 0
+	radical = 0
+	neutrality = 72
+}
 
 set_country_flag = german_tag_flag
 add_ideas = {

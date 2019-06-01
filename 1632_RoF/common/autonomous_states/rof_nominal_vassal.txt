@@ -35,12 +35,12 @@ autonomy_state = {
 	}
 
 	can_take_level = {
-		has_country_flag = RoF_go_free
+		#has_country_flag = RoF_go_free
 		#trigger here
 	}
 
 	can_lose_level = {
-		has_country_flag = RoF_lower_autonomy
+		#has_country_flag = RoF_lower_autonomy
 		#trigger here
 	}
 }

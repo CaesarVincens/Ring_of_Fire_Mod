@@ -11,6 +11,9 @@ buildings = {
 		infrastructure = yes
 		max_level = 10
 		value = 1
+
+		show_modifier = yes
+		max_fuel_building = 0.75 #k
 	}
 
 	arms_factory = {
@@ -117,13 +120,16 @@ buildings = {
 		show_on_map = 1
 		base_cost = 13000
 		icon_frame = 10
-		local_resources_oil = 2 # May use local_resources_ + any resource name
+		#local_resources_oil = 2 # May use local_resources_ + any resource name
 		#local_resources_rubber = 2 # May use local_resources_ + any resource name
 		refinery = yes
 		max_level = 3 # This is the max unlock level
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+		fuel_gain_from_states = 2.0 #per hour
 	}
 
 	radar_station = {
@@ -149,6 +155,7 @@ buildings = {
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
+		show_modifier = yes
 	}
 	
 	engine_factory = {
@@ -161,6 +168,7 @@ buildings = {
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
+		show_modifier = yes
 	}
 
 	#deprecated buildings

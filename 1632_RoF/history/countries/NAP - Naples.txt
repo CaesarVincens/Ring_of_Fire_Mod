@@ -16,28 +16,30 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 73
-        }
-        constitutionalist = {
-            popularity = 25
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
-
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
 add_ideas = {
 	balanced_eco
+}
+create_country_leader = {
+    name = "Manuel de Acevedo y Zúñiga"
+    desc = "POLITICS_ALFONSO_PELLION DI PERSANO_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Naples_Manuel_Acebedo.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
 }
 create_country_leader = {
     name = "Manuel de Acevedo y Zúñiga"

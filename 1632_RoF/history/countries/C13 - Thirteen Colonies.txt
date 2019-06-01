@@ -16,23 +16,17 @@ transport = 1
 set_convoys = 0
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        constitutionalist = {
-            popularity = 13
-        }
-        neutrality = {
-            popularity = 73
-        }
-    }
-    
     ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
+}
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 13
+	liberal = 0
+	radical = 0
+	neutrality = 73
 }
 
 set_cosmetic_tag = New_England

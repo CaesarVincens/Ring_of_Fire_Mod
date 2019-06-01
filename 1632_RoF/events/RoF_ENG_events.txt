@@ -611,26 +611,16 @@ country_event = {
 		}
 		set_politics = {
 			ruling_party = constitutionalist
-			parties = {
-				absolutist = {
-					popularity = 10
-				}
-				liberal = {
-					popularity = 20
-				}
-				constitutionalist = {
-					popularity = 45
-				}
-				radical = {
-					popularity = 20
-				}
-				neutrality = {
-					popularity = 5
-				}
-			}
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		set_popularities = {
+			absolutist = 10
+			liberal = 20
+			constitutionalist = 45
+			radical = 20
+			neutrality = 5
+		}	
 		load_oob = "IRE_cw_revolt"
 	}
 
@@ -835,24 +825,15 @@ country_event = {
 	option = {
 		name = RoF_ENG.157.a
 		set_politics = {
-			parties = {
-				absolutist = {
-					popularity = 10
-				}
-				constitutionalist = {
-					popularity = 50
-				}
-				liberal = {
-					popularity = 35
-				}
-				neutrality = {
-					popularity = 5
-				}
-			}
-
 			ruling_party = constitutionalist
 			election_frequency = 48
 			elections_allowed = no
+		}
+		set_popularities = {
+			absolutist = 10
+			constitutionalist = 50
+			liberal = 35
+			neutrality = 5
 		}
 		ai_chance = {
 			factor = 10
@@ -861,24 +842,15 @@ country_event = {
 	option = {
 		name = RoF_ENG.157.b
 		set_politics = {
-			parties = {
-				absolutist = {
-					popularity = 45
-				}
-				constitutionalist = {
-					popularity = 30
-				}
-				liberal = {
-					popularity = 20
-				}
-				neutrality = {
-					popularity = 5
-				}
-			}
-
 			ruling_party = absolutist
 			election_frequency = 48
 			elections_allowed = no
+		}
+		set_popularities = {
+			absolutist = 45
+			constitutionalist = 30
+			liberal = 20
+			neutrality = 5
 		}
 		ai_chance = {
 			factor = 1

@@ -1,7 +1,7 @@
 ﻿l_english:
  RoF_German.100.t:0 "Burgundy Arises"
- RoF_German.100.d:0 "Burgundy Arises"
- RoF_German.100.a:0 "Burgundy Arises"
+ RoF_German.100.d:0 "Bernard of Saxe-Weimar, recently in the employ of Cardinal Richelieu has taken control of the Franche-Comté, declaring himself the Grand Duke of the Country of Burgundy."
+ RoF_German.100.a:0 "But Franche-Comté belongs to us!"
  RoF_German.101.t:0 "[SWE.GetNameDefCap] Responds to Our Offer"
  RoF_German.101.da:0 "[SWE.GetNameDefCap] has accepted our offer to join the war against [AUS.GetNameDef]"
  RoF_German.101.db:0 "[SWE.GetNameDefCap] has rejected our offer to join the war against [AUS.GetNameDef]"
@@ -40,7 +40,7 @@
  RoF_German.142.a:0 "We need his help."
  RoF_German.142.b:0 "We'll be fine on our own."
  RoF_German.150.t:0 "Seek aid from Poland?"
- RoF_German.150.d:0 "[NUS.GetNameDefCap] has attacked us! We could ask for help from our overlord, {POL.GetLeader], though it will likely come with high price."
+ RoF_German.150.d:0 "[NUS.GetNameDefCap] has attacked us! We could ask for help from our overlord, [POL.GetLeader], though it will likely come with high price."
  RoF_German.150.a:0 "We need his help."
  RoF_German.150.b:0 "We'll be fine on our own."
  RoF_German.151.t:0 "[BRA.GetLeader] Asks for Help"

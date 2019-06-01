@@ -39,12 +39,18 @@ political_actions = {
 	}
 }
 
+foreign_influence = {
+	icon = generic_political_actions
+}
 crisis = {
 	icon = generic_crisis
 	priority = 100
 
 	visible = {
-		has_country_flag = crisis_in_progress
+		OR = {
+			has_country_flag = crisis_in_progress
+			has_civil_war = yes
+		}
 	}
 }
 

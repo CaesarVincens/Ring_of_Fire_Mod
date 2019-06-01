@@ -413,20 +413,6 @@ country_event = {
 		SWE = { white_peace = AUS }
 		white_peace = SWE
 		white_peace = NUS
-		set_cosmetic_tag = AUH
-		every_state = {
-			limit = {
-				is_core_of = HUN
-			}
-			add_core_of = AUS
-			set_state_flag = hun_core
-		}
-		if = {
-			limit = {
-				is_faction_leader = yes
-			}
-			dismantle_faction = yes
-		}
 		ai_chance = {
 			factor = 100
 		}

@@ -1,5 +1,5 @@
 # Written by Henrik "Groogy" Hansson
-# Modified by Daniel "Da9L" Sj�berg
+# Modified by Daniel "Da9L" Sjöberg
 
 # befriend
 # conquer
@@ -579,26 +579,26 @@ dont_mess_with_wastelands = { # Reverse strategy
 	ai_strategy = {
 		type = ignore
 		id = WNA
-		value = -1000
+		value = 1000
 	}
 	ai_strategy = {
 		type = ignore
 		id = WSA
-		value = -1000
+		value = 1000
 	}
 	ai_strategy = {
 		type = ignore
 		id = WAS
-		value = -1000
+		value = 1000
 	}
 	ai_strategy = {
 		type = ignore
 		id = WAF
-		value = -1000
+		value = 1000
 	}
 	ai_strategy = {
 		type = ignore
 		id = WAU
-		value = -1000
+		value = 1000
 	}
 }

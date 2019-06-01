@@ -17,23 +17,17 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 80
-        }
-        constitutionalist = {
-            popularity = 17
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
+}
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
 }
 
 set_country_flag = crown_union_flag
@@ -46,6 +40,15 @@ create_country_leader = {
     picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Charles Stuart"
+    desc = "POLITICS_DEORSA_MACKENZIE_DESC"
+    picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

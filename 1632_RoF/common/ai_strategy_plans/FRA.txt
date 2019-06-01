@@ -25,6 +25,7 @@ FRA_contain_habsburgs_AUS = {
 		value = 200
 	}
 }
+
 FRA_contain_habsburgs_SPR = {
 	name = "Contain Habsburgs"
 	desc = "Support enemies of SPR"
@@ -49,6 +50,34 @@ FRA_contain_habsburgs_SPR = {
 	ai_strategy = {
 		type = contain
 		id = "SPR"
+		value = 200
+	}
+}
+
+FRA_watch_SPR = {
+	name = "Watch your back"
+	desc = "No One suspects"
+	
+	enable = {
+		original_tag = FRA
+		country_exists = SPR
+		NOT = { has_idea = anti_habsburg_diplomacy }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SPR }
+			NUS = { has_completed_focus = NUS_congress_of_copenhagen }
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = SPR
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SPN
 		value = 200
 	}
 }

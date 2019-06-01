@@ -167,6 +167,10 @@ focus_tree = {
 					}
 				}
 			}
+			modifier = {
+				factor = 0.5
+				has_government = neutrality
+			}
 		}
 
 	}

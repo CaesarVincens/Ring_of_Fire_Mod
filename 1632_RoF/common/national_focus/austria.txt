@@ -3,11 +3,11 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = AUS
 		}
 		modifier = {
-			add = 0
+			add = 10
 			original_tag = AUS
 		}
 	}
@@ -35,8 +35,183 @@ focus_tree = {
 	####################
 	#  POLITICAL TREE  #
 	####################
+
+	focus = {
+		id = AUS_ferdinand_3
+		icon = GFX_focus_hun_elect_a_king
+		ai_will_do = { factor = 10 }
+		x = 28
+		y = 0
+		available = {
+			has_country_leader = {
+				name = "Ferdinand III von Habsburg"
+			}
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+
+	focus = {
+		id = AUS_restore_austria
+		icon = GFX_focus_ger_revive_kaiserreich
+		ai_will_do = { factor = 10 }
+		x = -1
+		y = 1
+		relative_position_id = AUS_ferdinand_3
+		prerequisite = { focus = AUS_ferdinand_3 }
+		mutually_exclusive = { focus = AUS_new_empire }
+		available = {
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+
+	focus = {
+		id = AUS_new_empire
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		ai_will_do = { factor = 10 }
+		x = 1
+		y = 1
+		relative_position_id = AUS_ferdinand_3
+		prerequisite = { focus = AUS_ferdinand_3 }
+		mutually_exclusive = { focus = AUS_restore_austria }
+		available = {
+		}
+		bypass = {
+
+		}
+		cost = 5
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
 	
+	focus = {
+		id = AUS_sweet_talk_saxony
+		icon = GFX_goal_generic_improve_relations
+		ai_will_do = { factor = 10 }
+		x = 22
+		y = 0
+		available = {
+			SAX = { is_potential_friend_of_ROOT = yes }
+		}
+		bypass = {
+			OR = {
+				SAX = { is_not_potential_friend_of_ROOT = yes }
+				SAX = { is_in_faction_with = AUS }
+				has_global_flag = thirty_years_war_ended
+			}
+		}
+		cost = 15
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+	
+	focus = {
+		id = AUS_entrench_elbe
+		icon = GFX_focus_generic_coastal_fort
+		ai_will_do = { factor = 10 }
+		x = 2
+		y = 1
+		prerequisite = { focus = AUS_sweet_talk_saxony }
+		relative_position_id = AUS_sweet_talk_saxony
+		available = {
+			OR = {
+				is_in_faction_with = SAX
+				AND = {
+					controls_state = 414
+					controls_state = 412
+				}
+			}
+		}
+		bypass = {
+
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+	
+	focus = {
+		id = AUS_bolster_bohemia
+		icon = GFX_goal_generic_fortify_city
+		ai_will_do = { factor = 10 }
+		x = 0
+		y = 1
+		prerequisite = { focus = AUS_sweet_talk_saxony }
+		relative_position_id = AUS_sweet_talk_saxony
+		available = {
+			OR = {
+				controls_state = 37
+				controls_state = 573
+			}
+		}
+		bypass = {
+			NOT = {
+				#controls_state = 37
+				#controls_state = 573
+			}
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+
+	focus = {
+		id = AUS_reinforce_rhine
+		icon = GFX_focus_generic_coastal_fort
+		ai_will_do = { factor = 10 }
+		x = -2
+		y = 1
+		prerequisite = { focus = AUS_sweet_talk_saxony }
+		relative_position_id = AUS_sweet_talk_saxony
+		available = {
+			OR = {
+				#has_capitulated = nos
+				COL = { has_capitulated = no }
+				MNZ = { has_capitulated = no }
+			}
+		}
+		bypass = {
+			#COL = { has_capitulated = yes }
+			#MNZ = { has_capitulated = yes }
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 60
+			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+		}
+	}
+
 	#prosecute the war against Sweden 1631-1634
 	#july 33 Wallenstein takes Bohemia
 	#september 34 FIII ascends to throne
+
+
 }

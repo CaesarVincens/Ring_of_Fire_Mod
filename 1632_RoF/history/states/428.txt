@@ -11,14 +11,25 @@ state = {
 	history = {
 		owner = AUS
 		victory_points = {
-			6464 8 
+			9570 8 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
-
+			11517 = {
+				bunker = 1
+			}
+			6595 = {
+				bunker = 1
+			}
+			3438 = {
+				bunker = 1
+			}
+			9470 = {
+				bunker = 1
+			}
 		}
 		add_core_of = POL
 		add_core_of = SIL

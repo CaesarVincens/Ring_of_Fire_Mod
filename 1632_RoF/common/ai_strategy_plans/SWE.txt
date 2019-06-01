@@ -92,7 +92,7 @@ SWE_Thirty_Years_War = {
 	}
 }
 
-SWE_Thirty_Years_War = {
+SWE_Ostend_War = {
 	name = "Watch for Denmark"
 	desc = "Ostend Prep"
 	enable = {
@@ -112,6 +112,35 @@ SWE_Thirty_Years_War = {
 		type = prepare_for_war
 		id = DEN
 		value = 200
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = 100
+	}
+}
+
+SWE_Ostend_War2 = {
+	name = "Watch for Denmark"
+	desc = "Ostend Prep"
+	enable = {
+		original_tag = SWE
+		DEN = { has_completed_focus = DEN_ostend_league }
+		OR = {
+			has_war_with = FRA
+			has_war_with = DEN
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				has_war_with = FRA
+				has_war_with = DEN
+			}
+			NUS = { has_completed_focus = NUS_congress_of_copenhagen }
+			DEN = { is_subject_of = SWE }
+			DEN = { exists = no }
+		}
 	}
 	ai_strategy = {
 		type = area_priority

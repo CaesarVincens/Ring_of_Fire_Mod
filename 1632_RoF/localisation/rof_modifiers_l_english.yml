@@ -2,6 +2,8 @@
  SWE_tyw_support:0 "Supports in the 30 Years War"
  tyw_enemies:0 "Enemies in the 30 Years War"
  tyw_allies:0 "Allies in the 30 Years War"
+ sold_harlingen:0 "Sold Harlingen"
+ kept_harlingen:0 "Kept Harlingen"
  modifier_experience_gain_ironclad_training_factor:0 "Ironclad Experience Factor"
  modifier_experience_gain_ironclad_combat_factor:0 "Ironclad Combat Factor"
  modifier_experience_gain_timberclad_training_factor:0 "Timberclad Experience Factor"

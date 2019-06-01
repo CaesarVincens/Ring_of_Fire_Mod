@@ -18,23 +18,17 @@ set_convoys = 150
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 78
-        }
-        constitutionalist = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
+}
+set_popularities = {
+	absolutist = 78
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 3
 }
 
 
@@ -47,10 +41,28 @@ add_ideas = {
 set_stability = 0.5
 create_country_leader = {
     name = "Louis XIII de Bourbon"
-    desc = "POLITICS_AIMABLE_DE LANGLE DE CARY_DESC"
+    desc = "POLITICS_LOUIS_13_BOURBON_DESC"
     picture = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Louis XIII de Bourbon"
+    desc = "POLITICS_LOUIS_13_BOURBON_DESC"
+    picture = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Louis XIII de Bourbon"
+    desc = "POLITICS_LOUIS_13_BOURBON_DESC"
+    picture = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
+    expire = "1660.1.1"
+    ideology = monarchy_neutral
     traits = {
     }
 }

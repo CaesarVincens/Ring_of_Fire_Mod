@@ -23,6 +23,17 @@ ideas = {
 				absolutist_drift = -0.1
 			}
 		}
+		FRA_occupation_of_lorraine = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			modifier = {
+				constitutionalist_drift = 0.1
+				absolutist_drift = -0.1
+			}
+		}
 		anti_habsburg_diplomacy = {
 			allowed = {
 				always = no

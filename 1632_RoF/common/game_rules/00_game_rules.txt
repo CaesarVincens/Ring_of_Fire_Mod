@@ -561,4 +561,26 @@ maximum_fort_level = {
 #    #  # ## ## #       #   #    #  #  # #  # 
 # ## #### # # # ##       #  ##   #  #  # ###  
 #  # #  # #   # #         # #    #  #  # #    
- ##  #  # #   # ###     ##  ###  #   ##  #    
+ ##  #  # #   # ###     ##  ###  #   ##  #
+
+Thirty_Year_War_style = {
+	name = "RULE_TYW_STYLE"
+	#group = "RULE_GROUP_GAMEPLAY"
+	group = "RULE_GROUP_ROF_RULES"
+	icon = "GFX_wargoals"
+	default = {
+		name = "TYW_EVENT_ONLY"
+		text = "RULE_TYW_EVENT_ONLY"
+		desc = "RULE_TYW_EVENT_ONLY_DESC"
+	}
+	option = {
+		name = "TYW_EVENT_WAR"
+		text = "RULE_TYW_EVENT_WAR"
+		desc = "RULE_TYW_EVENT_WAR_DESC"
+	}
+	option = {
+		name = "TYW_REGULAR_WAR"
+		text = "RULE_TYW_REGULAR_WAR"
+		desc = "RULE_TYW_REGULAR_WAR_DESC"
+	}
+}

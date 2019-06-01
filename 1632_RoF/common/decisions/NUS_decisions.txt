@@ -187,7 +187,10 @@ NUS_major_decisions = {
 			}
 		}
 		complete_effect = {
-			transfer_state = 657
+			FROM = {
+				country_event = { id = RoF_USE.206 }
+			}
+			#transfer_state = 657
 		}
 		cost = 50
 		ai_will_do = {

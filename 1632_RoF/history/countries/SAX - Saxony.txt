@@ -16,31 +16,24 @@ transport = 1
 set_convoys = 0
 
 
-set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 78
-        }
-        constitutionalist = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
+set_politics = { 
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
+}
+set_popularities = {
+	absolutist = 69
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 12
 }
 
 #add_to_war = {
 #	targeted_alliance = SWE
 #	enemy = AUS
 #}
-
 
 set_country_flag = german_tag_flag
 add_ideas = {

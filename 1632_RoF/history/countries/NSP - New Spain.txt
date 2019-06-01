@@ -16,23 +16,17 @@ transport = 1
 set_convoys = 50
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        constitutionalist = {
-            popularity = 13
-        }
-        neutrality = {
-            popularity = 73
-        }
-    }
-    
     ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
+}
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 13
+	liberal = 0
+	radical = 0
+	neutrality = 73
 }
 
 set_country_flag = colony_flag
@@ -45,6 +39,15 @@ create_country_leader = {
     picture = "gfx/leaders/SPR/Portrait_New_Spain_Rodrigo_Pacheco_y_Osorio.dds"
     expire = "1660.1.1"
     ideology = colony_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Rodrigo Pacheco y Osorio"
+    desc = "POLITICS_VICENTE_BARRAGáN_DESC"
+    picture = "gfx/leaders/SPR/Portrait_New_Spain_Rodrigo_Pacheco_y_Osorio.dds"
+    expire = "1660.1.1"
+    ideology = dictatorship
     traits = {
     }
 }

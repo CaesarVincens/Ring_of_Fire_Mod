@@ -189,6 +189,8 @@ ideologies = {
 			dictatorship_neutral = {}
 		
 			conservatism_neutral = {}
+
+			bishopric_neutral = {}
 		
 		}
 		
