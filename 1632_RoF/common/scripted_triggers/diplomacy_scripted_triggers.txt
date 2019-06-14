@@ -781,11 +781,34 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	if = {
 		limit = {
 			is_historical_focus_on = yes
+			FROM = {
+				tag = SXW
+				is_ai = yes
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = SXW_NEUTRAL_TT
 			FROM = {
 				NOT = { has_country_flag = SXW_neutrality }
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_historical_focus_on = yes
+			FROM = {
+				tag = KUR
+				is_ai = yes
+			}
+			OR = {
+				has_war_with = NUS
+				has_war_with = SWE
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = KUR_NEUTRAL_TT
+			FROM = {
+				NOT = { has_country_flag = KUR_neutrality }
 			}
 		}
 	}
@@ -795,10 +818,23 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	if = {
 		limit = {
 			is_historical_focus_on = yes
+			tag = SXW
+			is_ai = yes
 		}
 		custom_trigger_tooltip = {
 			tooltip = SXW_NEUTRAL_TT
 			NOT = { has_country_flag = SXW_neutrality }
+		}
+	}
+	if = {
+		limit = {
+			is_historical_focus_on = yes
+			tag = KUR
+			is_ai = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = KUR_NEUTRAL_TT
+			NOT = { has_country_flag = KUR_neutrality }
 		}
 	}
 }

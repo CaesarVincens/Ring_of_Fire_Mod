@@ -34,6 +34,10 @@ autonomy_state = {
 		always = no
 	}
 
+	use_for_peace_conference_weight = {
+		base = 10
+	}
+
 	allowed = {
 		NOT = { has_country_flag = crown_union_flag }
 		NOT = { has_country_flag = colony_flag }

@@ -1,0 +1,43 @@
+﻿RoF_Default_Research = {
+	name = "Default Research"
+	desc = ""
+	enable = {
+		always = yes
+	}
+	abort = {
+
+	}
+	research = {
+		industry = 100
+		electronics = 100
+		infantry_weapons = 100
+		infantry_tech = 100
+		marine_tech = 100
+		support_tech = 100
+		naval_equipment = 100
+		naval_doctrine = 100
+		rocketry = 100
+		air_doctrine = 100
+		land_doctrine = 100
+
+		firearms_weapons = 100
+		cat_pike_weapons = 100
+		jaeger_tech = 100
+
+		air_research = 100
+
+		air_equipment = 100
+		fixed_wing_tech = 100
+		balloon_tech = 100
+
+		armor = 100
+		gas_tank_tech = 100
+		steam_tank_tech = 100
+
+		apc_tech = 100
+
+		artillery = 100
+		light_artillery = 100
+		heavy_artillery = 100
+	}
+}

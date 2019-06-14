@@ -37,8 +37,10 @@ set_popularities = {
 	neutrality = 3
 }
 
+set_country_flag = religion_islam
 add_ideas = {
-	}
+	secularism
+}
 set_stability = 0.5
 create_country_leader = {
     name = "Shâh Jehân Timurid"

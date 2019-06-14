@@ -32,6 +32,7 @@ set_popularities = {
 	neutrality = 12
 }
 
+set_country_flag = religion_orthodox
 add_ideas = {
 	military_focus_eco
 	RUS_filaret
@@ -48,7 +49,7 @@ country_event = { id = RoF_RUS.10 days = 325 }
 set_stability = 0.5
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
@@ -59,7 +60,7 @@ create_country_leader = {
 
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = constitutional_monarchy
@@ -70,7 +71,7 @@ create_country_leader = {
 
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy_neutral

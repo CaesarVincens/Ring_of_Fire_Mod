@@ -66,6 +66,7 @@ set_popularities = {
 	neutrality = 2
 }
 
+set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
 	habsburg_cousins

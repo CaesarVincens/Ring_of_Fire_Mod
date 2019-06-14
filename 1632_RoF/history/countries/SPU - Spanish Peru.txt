@@ -30,6 +30,7 @@ set_popularities = {
 	neutrality = 72
 }
 
+set_country_flag = religion_catholic
 set_country_flag = colony_flag
 add_ideas = {
 }

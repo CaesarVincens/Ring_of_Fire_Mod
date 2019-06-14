@@ -164,8 +164,8 @@ country_event = {
 		}
 		hidden_effect = {
 			random_list = {
-				75 = { country_event = { id = RoF_AUS.102 hours = 12 } }
-				25 = { country_event = { id = RoF_AUS.103 hours = 12 } }
+				80 = { country_event = { id = RoF_AUS.102 hours = 12 } set_global_flag = BOH_wins_white_mountain_2 }
+				20 = { country_event = { id = RoF_AUS.103 hours = 12 } }
 			}
 		}
 		ai_chance = {
@@ -317,9 +317,44 @@ country_event = {
 	}
 	option = {
 		name = RoF_AUS.110.a
+		hidden_effect = {
+			country_event = {
+				id = RoF_AUS.1101
+				hours = 24
+			}
+		}
 	}
 }
 
+#Reinstate Wallenstein
+country_event = {
+	id = RoF_AUS.1101
+	title = RoF_AUS.1101.t
+	picture = GFX_report_event_breitenfeld
+	desc = RoF_AUS.1101.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_AUS.1101.a
+		create_corps_commander = {
+			name = "Abrecht von Wallenstein"
+			gfx = "GFX_leader_BOH_Wallenstein"
+			traits = { }
+			skill = 5
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 5
+			id = 1001
+		}		
+	}
+}
+
+#alte veste
 country_event = {
 	id = RoF_AUS.111
 	title = RoF_AUS.111.t
@@ -346,8 +381,12 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = AUS
 		NOT = { country_exists = BOH }
-		NOT = { controls_state = 37 }
+		OR = {
+			NOT = { controls_state = 37 }
+			BAV = { has_capitulated = yes }
+		}
 	}
 	
 	immediate = {
@@ -360,6 +399,263 @@ country_event = {
 	}
 }
 
+#bolster Bohemia
+country_event = {
+	id = RoF_AUS.120
+	title = RoF_AUS.120.t
+	picture = GFX_report_event_boh_flag
+	desc = RoF_AUS.120.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_AUS.120.a
+		37 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_manpower = 5000
+		load_oob = AUS_bolster_boh
+	}
+}
+
+#reinforce Rhine set-up
+country_event = {
+	id = RoF_AUS.121
+	title = RoF_AUS.121.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.121.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_AUS.121.a
+		if = {
+			limit = {
+				COL = { has_capitulated = no is_in_faction_with = AUS }
+			}
+			effect_tooltip = {
+				COL = {
+					add_manpower = 5000
+					capital_scope = {
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				MNZ = { has_capitulated = no is_in_faction_with = AUS }
+			}
+			effect_tooltip = {
+				MNZ = {
+					add_manpower = 5000
+					capital_scope = {
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					COL = { has_capitulated = no }
+				}
+				COL = {
+					country_event = {
+						id = RoF_AUS.122
+						hours = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					MNZ = { has_capitulated = no }
+				}
+				MNZ = {
+					country_event = {
+						id = RoF_AUS.122
+						hours = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+#reinforce Rhine complete
+country_event = {
+	id = RoF_AUS.122
+	title = RoF_AUS.122.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.122.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_AUS.122.a
+		add_manpower = 5000
+		capital_scope = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#Saxony joins
+country_event = {
+	id = RoF_AUS.125
+	title = RoF_AUS.125.t
+	picture = GFX_report_event_sax_flag
+	desc = RoF_AUS.125.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_AUS.125.a
+		add_manpower = 5000
+		add_war_support = 0.05
+		add_to_faction = SAX
+		SAX = {
+			add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			#add_to_war = {
+			#	targeted_alliance = SWE
+			#	enemy = AUS
+			#	hostility_reason = asked_to_join
+			#}
+		}
+	}
+}
+
+#Saxony refuses
+country_event = {
+	id = RoF_AUS.126
+	title = RoF_AUS.126.t
+	picture = GFX_report_event_sax_flag
+	desc = RoF_AUS.126.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_AUS.126.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SAX
+		}
+	}
+}
+
+#Reichsthalers
+country_event = {
+	id = RoF_AUS.130
+	title = RoF_AUS.130.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.130.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#free money
+	option = {
+		name = RoF_AUS.130.a
+		add_political_power = 60
+		add_timed_idea = {
+			idea = AUS_reichsthalers_1
+			days = 360
+		}
+		hidden_effect = {
+			country_event = {
+				id = RoF_AUS.131
+				days = 180
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	#siver-backed, limited
+	option = {
+		name = RoF_AUS.130.b
+		add_political_power = 30
+		add_timed_idea = {
+			idea = AUS_reichsthalers_2
+			days = 180
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0.5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+#Reichsthalers
+country_event = {
+	id = RoF_AUS.131
+	title = RoF_AUS.131.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.131.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#crash
+	option = {
+		name = RoF_AUS.131.a
+		swap_ideas = {
+			remove_idea = AUS_reichsthalers_1
+			add_idea = AUS_reichsthalers_3
+		}
+		set_country_flag = reichsthalers_crash
+	}
+}
+
+#ferdinand II dies
 country_event = {
 	id = RoF_AUS.150
 	title = RoF_AUS.150.t
@@ -389,6 +685,22 @@ country_event = {
 				traits = {
 				}
 			}
+			create_country_leader = {
+				name = "Ferdinand III von Habsburg"
+				desc = "POLITICS_FERDINAND_III_DESC"
+				picture = "GFX_leader_AUS_Ferdinand_III"
+				ideology = lib_constitutional_monarchy
+				traits = {
+				}
+			}
+			create_country_leader = {
+				name = "Ferdinand III von Habsburg"
+				desc = "POLITICS_FERDINAND_III_DESC"
+				picture = "GFX_leader_AUS_Ferdinand_III"
+				ideology = monarchy_neutral
+				traits = {
+				}
+			}
 		}
 		if = {
 			limit = { has_government = absolutist }
@@ -412,7 +724,21 @@ country_event = {
 		name = RoF_AUS.150.a
 		SWE = { white_peace = AUS }
 		white_peace = SWE
-		white_peace = NUS
+		#white_peace = NUS
+		set_cosmetic_tag = AUH
+		every_state = {
+			limit = {
+				is_core_of = HUN
+			}
+			add_core_of = AUS
+			set_state_flag = hun_core
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			dismantle_faction = yes
+		}
 		ai_chance = {
 			factor = 100
 		}

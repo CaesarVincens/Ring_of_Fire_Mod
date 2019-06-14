@@ -73,4 +73,10 @@ instant_effect = {
 	}
 }
 units = {
+	division = {
+		name = "1. Infantry Detachment"
+		location = 538
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
 }

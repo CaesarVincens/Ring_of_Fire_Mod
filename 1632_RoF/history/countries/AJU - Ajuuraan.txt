@@ -29,7 +29,7 @@ set_popularities = {
 	radical = 0
 	neutrality = 52
 }
-
+set_country_flag = religion_islam
 add_ideas = {
 }
 set_stability = 0.5

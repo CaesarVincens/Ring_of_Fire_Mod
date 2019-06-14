@@ -13,18 +13,19 @@ NUS_ironclad_research_plan = {
 	
 	research = {
 		steamship_tech = 10
-		ironclad_tech = 5000
-		timberclad_tech = 5000
+		ironclad_tech = 50
+		timberclad_tech = 50
 	}
 }
 
 NUS_canon_focus_list = {
-	name = "Canon choices for New US and USE"
-	desc = "see name"
-	
+	name = "New US/USE Canon Plan"
+	desc = ""
 	enable = {
 		original_tag = NUS
-		is_historical_focus_on = yes
+		OR = {
+			is_historical_focus_on = yes
+		}
 	}
 	abort = {
 		OR = {
@@ -42,24 +43,24 @@ NUS_canon_focus_list = {
 		NUS_gearing_down #1631 august 3 35
 		NUS_revitalize_mining #1631 september 7 35
 		NUS_establish_committees_of_correspondence #1631 october 12 35
-		NUS_new_constitution #1631 november 16 70
-		NUS_invite_thuringian_cities #1632 january 25 35
-		NUS_support_SWE #1632 march 1 35
-		NUS_upgrade_techniques #1632 april 4 35
-		NUS_build_an_army #1632 may 9 35
-		NUS_integrate_down_timers #1632 june 13 35
-		NUS_up_timer_elite_army
+		NUS_constitutional_convention #1631 november 16 70
+		NUS_invite_thuringia #1632 january 25 35
+		NUS_support_sweden #1632 march 1 35
+		NUS_uptime_techniques #1632 april 4 35
+		NUS_form_militia_army #1632 may 9 35
+		NUS_integrated_army #1632 june 13 35
+		NUS_uptimer_elite_corp
 		NUS_encourage_reinvention #1632 july 18 35
-		NUS_form_CPoE #1632 august 22 35
+		NUS_establish_CPoE #1632 august 22 35
 		NUS_alte_veste #1632 september 26 35
 		NUS_promote_radio #1632 october 31 35
-		NUS_brown_navy #1632 december 5 35
+		NUS_brownwater_navy #1632 december 5 35
 		NUS_army_reforms #1633 january 9 35
 		NUS_magdeburg_committee #1633 february 13 35
-		NUS_srg_design #1633 march 20 35
+		NUS_rifle_meeting #1633 march 20 35
 		NUS_ironclads_focus #1633 april 24 35
-		NUS_las_vegas_belle #1633 may 29 35
-		NUS_wietze_oil #1633 july 3 35
+		NUS_first_flight #1633 may 29 35
+		NUS_wietze_oilfields #1633 july 3 35
 		NUS_steel_production #1633 august 7 35
 		#baltic relief
 		#national fervor
@@ -67,14 +68,14 @@ NUS_canon_focus_list = {
 		NUS_german_committees #1634 january 29 35
 		NUS_force_hamburg #1634 march 5 35
 		NUS_relieve_lubeck #1634 april 9 35
-		NUS_little_germanies #1634 april 9 1634
+		NUS_annex_little_germanies #1634 april 9 1634
 		NUS_congress_of_copenhagen #1634 june 18 35
-		NUS_organize_new_territory #1634 july 23 70
+		NUS_organize_country #1634 july 23 70
 		NUS_continue_air_research #1634 october 1 35
-		NUS_steam_engine_focus #1634 november 5 35
+		NUS_introduce_steam_power #1634 november 5 35
 		NUS_election_of_35 #1634 december 10 70
-		NUS_crown_loyalists_35 #1635 february 18 70
-		NUS_fourth_of_july_35 #if picked
+		NUS_form_new_administration #1635 february 18 70
+		NUS_continue_stearns_administration #if picked
 		NUS_lessons_of_history #1635 april 29 35
 		NUS_retake_saxony #1635 june 3 70
 	}
@@ -86,7 +87,7 @@ NUS_ally_swe = {
 	enable = {
 		original_tag = NUS
 		country_exists = SWE
-		has_completed_focus = NUS_support_SWE
+		has_completed_focus = NUS_support_sweden
 	}
 	abort = {
 		OR = {
@@ -148,5 +149,124 @@ NUS_protect_grantville = {
 		type = dont_defend_ally_borders
 		id = BRA
 		value = 100
+	}
+}
+
+NUS_avoid_NED = {
+	name = "Stay out of Lowlands"
+	desc = "How did this happen?"
+	enable = {
+		original_tag = NUS
+		#is_in_faction_with = SAX
+		has_war_together_with = UPS
+	}
+	abort = {
+		NOT = { has_war_together_with = UPS }
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = UPS
+		value = 100
+	}
+}
+
+NUS_avoid_KUR = {
+	name = "Stay out of Kurland"
+	desc = "They aren't fighting"
+	enable = {
+		OR = {
+			original_tag = NUS
+			original_tag = SWE
+		}
+		#is_in_faction_with = SAX
+		has_war_with = POL
+	}
+	abort = {
+		OR = {
+			has_war_with = KUR
+			NOT = { has_war_with = POL }
+		}
+	}
+	ai_strategy = {
+		type = ignore
+		id = KUR
+		value = 2000
+	}
+	ai_strategy = {
+		type = conquer
+		id = KUR
+		value = -2000
+	}
+}
+
+NUS_engines_308 = { #grantville 308
+
+	name = "Build Engines"
+	desc = "Grantville"
+	enable = {
+		tag = NUS
+		#has_war = no
+		has_tech = engine_factory_tech_0
+		308 = {
+			is_controlled_by = NUS
+			engine_factory < 3
+			free_building_slots = {
+				building = engine_factory
+				size > 0
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = engine_factory
+		target = 308
+		value = 5
+	}	
+}
+
+NUS_engines_247 = { #Magdeburg 247
+	name = "Build Engines"
+	desc = "Magdeburg"
+	enable = {
+		tag = NUS
+		#has_war = no
+		has_tech = engine_factory_tech_0
+		247 = {
+			is_controlled_by = NUS
+			engine_factory < 3
+			free_building_slots = {
+				building = engine_factory
+				size > 0
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = engine_factory
+		target = 247
+		value = 5
+	}	
+}
+
+NUS_air = { #Magdeburg 247
+	name = "Planes"
+	desc = ""
+	enable = {
+		tag = NUS
+		#has_war = no
+		has_tech = first_plane
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 35
 	}
 }

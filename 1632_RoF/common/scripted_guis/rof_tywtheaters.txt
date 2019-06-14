@@ -1,36 +1,194 @@
 scripted_gui = {
-	rof_tywtheater_button = {
+	rof_tyw_button = {
 		context_type = player_context
 		
-		window_name = "rof_tywtheaterbutton"
+		window_name = "rof_tyw_button"
 		
 		visible = {
+			has_global_flag = thirty_years_war_ongoing
+			tag = SWE
 			always = no
-            tag = SWE
 		}
 		
+
 		effects = {
 			rof_tyw_bg_click = {
 				set_temp_variable = { show = 1 }
 				subtract_from_temp_variable = { show = show_rof_tywtheater }
 				set_variable = { show_rof_tywtheater = show }
+				set_variable = { tyw_filter_minors = 2 }
 			}
 		}
 	}
 
-	rof_tywtheaters = {
+	rof_tyw_country_view = {
 		context_type = player_context
 		
-		window_name = "rof_tywtheaterwindow"
+		window_name = "rof_overviewwindow"
 		
 		visible = {
-			always = no
-			tag = SWE
+			#always = no
+			#tag = SWE
 			OR = {
 				check_variable = { show_rof_tywtheater > 0.0 }
-				is_ai = YES
+				#is_ai = YES
+			}
+		}
+		dynamic_lists = {
+			protestant_union = {
+				array = protestant_union
+				change_scope = yes
+				entry_container = "[tyw_minor_countries_filter]"
+			}
+			catholic_league = {
+				array = catholic_league
+				change_scope = yes
+				entry_container = "[tyw_minor_countries_filter]"
+			}
+		}
+		effects = {
+			close_button_click = {
+				set_variable = { show_rof_tywtheater = 0 }
+			}
+			tyw_filter_minors_click = {
+				if = {
+					limit = { 
+						check_variable = { tyw_filter_minors = 2 }
+					}
+					subtract_from_variable = { tyw_filter_minors = 1 }
+					else = {
+						add_to_variable = { tyw_filter_minors = 1 }
+					}
+				}
+			}
+			tyw_flag_click = {
+				set_temp_variable = { show = 1 }
+				subtract_from_temp_variable = { show = show_rof_tyw_state }
+				set_variable = { show_rof_tyw_state = show }
+			}
+		}
+		triggers = {
+			tyw_major_country_overlay_visible = {
+				is_major = yes
+			}
+			tyw_surrender_flag_visible = {
+				OR = {
+					has_capitulated = yes
+					exists = no
+				}
+			}
+			tyw_call_visible = {
+				always = no
+			}
+		}
+		properties = {
+			#change flag textures to actual flag texture
+            tyw_flag = {
+                image = "[This.GetFlag]"
+            }
+			tyw_filter_minors = {
+				frame = tyw_filter_minors # this temp variable is calculated in button_buy_click_enabled
+			}
+		}
+	}
+	rof_tyw_state_view = {
+		    
+        context_type = player_context
+		
+		window_name = "tyw_state_view"
+		
+		visible = {
+			check_variable = { show_rof_tyw_state > 0 }
+		}
+		
+		dynamic_lists = {
+			# name of the grid box gui element
+			state_grid = {
+				array = owned_states # this is also an array but it is populated by the game
+				change_scope = yes
+				entry_container = "[scripted_gui_example_8_state_entry_loc]" #this time we are reading the entry container from a scripted loc. Depending on entry, you can use different child containers. Also you can return "" from scripted loc to not include this entry
+				
+				# ai_weights of lists are stored under its list entry
+				ai_weights = {
+					buy_click = {
+						ai_will_do = {
+							base = 0
+							
+							modifier = {
+								# AI won't know that the current element is invisible (filtered by scripted_gui_example_8_state_entry_loc) so you need to check it here as well
+								check_variable = {  building_level@arms_factory = 0 }
+								check_variable = { building_level@industrial_complex = 0 }
+								add = -100
+							}
+							
+							# higher building levels are more desirable for AI
+							modifier = {
+								set_temp_variable = { t = building_level@arms_factory }
+								add_to_temp_variable = { t = building_level@industrial_complex }
+								
+								add = t
+							}
+						}
+					}
+				}
 			}
 		}
 		
-	}
+		effects = {
+			# cheat for free pp for root country
+			button_free_pp_click = {
+				root = {
+					add_political_power = 100
+				}
+			}
+			
+			# this one is a button under a list element
+			# root is as always player/ai
+			# from is the selected country
+			# and this is current state in the list
+			# it will trade 50 pp from player to its subject and give control of state to player
+			buy_click = {
+				# root = player/ai
+				# from = selected country/root's subject
+				# this = state
+				root = {
+					add_political_power = -50
+				}
+				from = {
+					add_political_power = 50
+				}
+				root = {
+					transfer_state = prev
+				}
+				
+				# used in gui/scripted loc last_taken_state_text
+				set_variable = { root.last_taken_state = this }
+				set_variable = { root.last_taken_country = from }
+			}
+		}
+		
+		triggers = {
+			buy_click_enabled = {
+				root = {
+					has_political_power > 50
+				}
+			}
+		}
+		
+		ai_enabled = {
+			always = yes
+		}
+		
+		ai_weights = {
+			button_free_pp_click = {
+				ai_will_do = {
+					base = -1
+					modifier = {
+						root = { has_political_power < 50 }
+						add = 1000 #omg AI literally cheats. someone make a forum thread
+					}
+				}
+			}
+		}
+    }
 }

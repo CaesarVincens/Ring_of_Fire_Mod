@@ -1,0 +1,169 @@
+
+guiTypes = {
+	containerWindowType = {
+		name = "tyw_state_view"
+		position = { x = -250 y = -250}	
+		
+		size = { width = 500 height = 630 }
+		
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		show_sound = menu_open_window
+		click_to_front = yes
+        
+		orientation = center
+        
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+        
+		instantTextboxType = {
+			name = "title"
+			position = { x = 15 y = 8 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Example 8"
+			maxWidth = 240
+			maxHeight = 20
+			format = left	
+		}
+
+		# display info about our last action
+		instantTextBoxType = {
+			name = "taken_state_text"
+			position = { x = 140 y = 55 }
+			font = "hoi_18mbs"
+			text = "[last_taken_state_text]"
+			format = left
+			maxWidth = 400
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+		
+		buttonType = {
+            name = "button_free_pp"
+            position = {x = 20 y = 50}
+            spriteType = "GFX_sort_button_100x29_2"
+            frame = 2
+			buttonFont = "hoi_16mbs"
+			buttonText = "Free pp"
+        }
+		
+		# if you want a scroll bar, you have to add a parent container to your grid
+		containerWindowType = {
+			name = "country_grid_container"
+			position = {x = 20 y = 80}
+			size = {width = 460 height = 320 } 
+            margin = { top = 10 bottom = 10 }
+			Orientation = upper_left
+
+			verticalScrollbar = "right_vertical_slider"
+
+			# background is necesarry for scrollbars to work
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+			
+			# this grid will be dynamically populated
+			gridboxtype = {
+				name = "state_grid"
+				position = { x = 10 y = 0 }
+				size = { width = 442 height = 100%% }
+				slotsize = { width = 442 height = 1 } #if width or height is 1, it will use slot element's dimension
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+        
+		
+        instantTextBoxType = {
+            name = "help"
+            position = { x = 20 y = 400 }
+            font = "hoi_18mbs"
+            text = "example_8_text"
+            maxWidth = 470
+            maxHeight = 300
+            Orientation = "UPPER_LEFT"	
+            allwaystransparent = yes
+        }
+    }
+	
+	# this entry will be used to populate state_grid in scripted_gui_example_8
+	containerWindowType = {
+		name = "scripted_gui_example_8_state_entry"
+		position = { x = 0 y = 0}	
+		size = { width = 422 height = 140 }
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 40 y = 15 }
+			font = "hoi_18mbs"
+			text = "[?this.GetName]"
+			format = left
+			maxWidth = 200
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+		
+		instantTextBoxType = {
+			name = "info"
+			position = { x = 40 y = 35 }
+			font = "hoi_18mbs"
+			text = "military_factory = [?this.building_level@arms_factory][br]civilian_factory = [?this.building_level@industrial_complex]"
+			format = left
+			maxWidth = 200
+			maxHeight = 44
+			fixedsize = yes
+		}
+		
+        buttonType = {
+            name = "buy"
+            position = {x = 20 y = 90}
+            spriteType = "GFX_sort_button_100x29_2"
+            frame = 2
+			buttonFont = "hoi_16mbs"
+			buttonText = "Buy for 50pp"
+        }
+	}
+	
+	
+	containerWindowType = {
+		name = "scripted_gui_example_8_info"
+		position = { x = 250 y = -250}	
+		
+		size = { width = 200 height = 100 }
+		
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		show_sound = menu_open_window
+		click_to_front = yes
+        
+		orientation = center
+        
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+        
+		instantTextBoxType = {
+			name ="text"
+			position = { x = 15 y = 20 }
+			font = "hoi_18mbs"
+			text = "Left click on one of your puppets"
+			format = left
+			maxWidth = 150
+			maxHeight = 24
+		}
+     }
+}

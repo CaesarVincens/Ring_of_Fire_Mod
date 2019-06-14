@@ -29,8 +29,9 @@ set_popularities = {
 	neutrality = 62
 }
 
+set_country_flag = religion_islam
 add_ideas = {
-		military_focus_eco
+	military_focus_eco
 }
 set_stability = 0.5
 create_country_leader = {

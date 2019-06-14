@@ -24,6 +24,15 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			NUS = { transfer_state = 472 transfer_state = 406 }
+			every_state = {
+				limit = {
+					is_controlled_by = SWE
+					NOT = { is_owned_by = SWE }
+					has_state_flag = USE_control_state
+				}
+				clr_state_flag = USE_control_state
+				NUS = { set_state_controller = PREV }
+			}
 			every_country = {
 				limit = {
 					has_country_flag = USE_annex_country
@@ -172,7 +181,7 @@ country_event = {
 		ai_chance = {
 			base = 100
 			modifier = {
-				factor = 5
+				factor = 10
 				OR = {
 					tag = HES
 					tag = BRS
@@ -221,6 +230,8 @@ country_event = {
 			NOT = { tag = SWE }
 		}
 		set_country_flag = USE_rejected_country
+		clr_country_flag = SAX_joins_SWE
+		clr_country_flag = BRA_joins_SWE
 		if = {
 			limit = { has_opinion_modifier = SWE_tyw_support }
 			remove_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
@@ -238,7 +249,7 @@ country_event = {
 		if = {
 			limit = { has_war_together_with = NUS }
 			every_enemy_country = {
-				limit = { has_war_with = NUS has_war_with = ROOT }
+				limit = { has_war_with = NUS has_war_with = ROOT is_faction_leader = yes }
 				white_peace = ROOT
 			}
 		}
@@ -572,7 +583,14 @@ news_event = {
 		name = RoF_USE.116.a
 		set_province_controller = 6287
 		hidden_effect = {
-			DEN = { add_war_support = -0.4 }
+			112 = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+					owner = NUS
+					prioritize_location = 6287
+				}
+			}
+			DEN = { add_war_support = -0.6 }
 		}
 	}
 }
@@ -803,6 +821,69 @@ country_event = {
 
 }
 
+#Capture of Silesia
+country_event = {
+	id = RoF_USE.133
+	title = RoF_USE.133.t
+	desc = RoF_USE.133.d
+	picture = GFX_report_event_pol_flag
+	fire_only_once = yes
+
+	trigger = {
+		tag = NUS
+		has_war_with = POL
+		OR = {
+			controls_state = 428
+			any_allied_country = {
+				controls_state = 428
+			}
+		}
+		NOT = { country_exists = SIL }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = { transfer_state = 428 }
+	}
+	option = {
+		name = RoF_USE.133.a
+		release_autonomy = {
+			target = SIL
+			autonomy_state = autonomy_rof_protectorate
+		}
+		hidden_effect = {
+			SIL = {
+				create_country_leader = {
+					name = "Gretchen Richterin"
+					picture = "gfx/leaders/leader_unknown_female.dds"
+					ideology = democracy
+					#female = yes
+				}
+				create_country_leader = {
+					name = "Gretchen Richterin"
+					picture = "gfx/leaders/leader_unknown_female.dds"
+					ideology = radical_democracy
+					#female = yes
+				}
+				set_popularities = {
+					liberal = 40
+					radical = 30
+					constitutionalist = 10
+					neutrality = 10
+					absolutist = 10
+				}
+				set_politics = {
+					ruling_party = liberal
+				}
+			}
+		}
+	}
+
+}
+
 #election of '35
 country_event = {
 	id = RoF_USE.135
@@ -815,13 +896,13 @@ country_event = {
 	option = {
 		name = RoF_USE.135.a
 		hidden_effect = {
-			set_political_party = {
-				ideology = constitutionalist
-				popularity = 40
-			}
-			set_political_party = {
+			add_popularity = {
 				ideology = absolutist
-				popularity = 12
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.4
 			}
 		}
 		set_country_flag = crown_loyalists_win
@@ -829,13 +910,13 @@ country_event = {
 	option = {
 		name = RoF_USE.135.b
 		hidden_effect = {
-			set_political_party = {
-				ideology = liberal
-				popularity = 40
-			}
-			set_political_party = {
+			add_popularity = {
 				ideology = radical
-				popularity = 12
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.4
 			}
 		}
 		set_country_flag = fojp_win
@@ -859,13 +940,18 @@ country_event = {
 		hidden_effect = {
 			create_corps_commander = {
 				name = "Michael Stearns"
-				picture = "gfx/leaders/USA/Portrait_USA_Generic_Land_1.dds"
+				gfx = "GFX_leader_NUS_Michael_Stearns"
 				traits = { }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
 				planning_skill = 1
 				logistics_skill = 1
+			}
+			create_country_leader = {
+				name = "Ed Piazza"
+				ideology = democracy
+				picture = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
 			}
 		}
 	}
@@ -956,7 +1042,7 @@ country_event = {
 	trigger = {
 		tag = NUS
 		has_country_flag = NUS_embassy_FRA
-		FRA = { has_completed_focus = FRA_countermeasures_focus }
+		FRA = { has_completed_focus = FRA_counter_american_influence }
 	}
 
 	mean_time_to_happen = {
@@ -981,7 +1067,7 @@ country_event = {
 	trigger = {
 		tag = NUS
 		has_country_flag = NUS_embassy_FRA
-		FRA = { has_completed_focus = FRA_make_overtures }
+		FRA = { has_completed_focus = FRA_approach_americans }
 	}
 
 	mean_time_to_happen = {
@@ -1278,7 +1364,7 @@ country_event = {
 		tag = NUS
 		has_country_flag = NUS_embassy_ENG
 		has_country_flag = embassy_in_ENG
-		FRA = { has_completed_focus = FRA_dunkirk }
+		FRA = { has_completed_focus = FRA_strike_dutch }
 	}
 
 	mean_time_to_happen = {

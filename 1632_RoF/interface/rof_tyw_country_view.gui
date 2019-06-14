@@ -1,0 +1,293 @@
+guiTypes = {
+
+	#Button
+	containerWindowType = {
+		name = "rof_tyw_button"
+		position = { x = 970 y = 4 }
+		
+		buttonType ={
+			name ="rof_tyw_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }
+			shortcut = "ctrl+k"
+		}
+		
+		iconType = {
+			name ="rof_tyw_icon"
+			spriteType = "GFX_relation_war_relation"
+			position = { x= 2 y = 0 }
+		}
+		
+		instantTextBoxType = {
+			name ="rof_tyw_text"
+			position = { x= 23 y = 4 }
+			font = "hoi_18mbs"
+			text = "ROF_TYW"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+			
+			pdx_tooltip = "ROF_TYW_TOOLTIP"
+			pdx_tooltip_delayed = "ROF_TYW_TOOLTIP_DELAYED"
+		}
+		
+	}
+	# THIRTY YEAR WAR THEATERS
+	containerWindowType = {
+		name = "rof_overviewwindow"
+		size = { width = 1167 height = 85%%}
+		position = { x=-583 y=-297 }
+		Orientation = center
+		moveable = yes
+		clipping = no
+		fade_time = 500
+		fade_type = linear
+		click_to_front = yes		
+				
+		background = {
+			name = "tyw_Background"		
+			spriteType ="GFX_tiled_waroverview_bg"
+		}
+
+		buttonType = {
+			name = "close_button"
+			position = { x = -44 y = 22 }
+			quadTextureSprite ="GFX_closebutton"
+			shortcut = "ESCAPE"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		
+		instantTextboxType = {
+			name = "tywtheater_headline"
+			position = { x = -177 y = 23 }
+			font = "hoi_24header"
+			text = "ROF_TYW_HEADER"
+			Orientation = center_up
+			format = center			
+			maxWidth = 350
+			maxHeight = 30
+		}
+		
+		iconType = {
+			name = "warscore_progressbar_disabled"
+			spriteType = "GFX_war_overview_progress_disabled"
+			position = { x=294 y=72 }
+			
+			pdx_tooltip = "WAR_OVERVIEW_AGGREGATE_PROGRESS"
+		}
+		
+		iconType = {
+			name = "warscore_progressbar"
+			spriteType = "GFX_warscore_progressbar"
+			position = { x=294 y=71 }
+		}
+
+		iconType = {
+			name = "warscore_progressbar_frame"
+			spriteType = "GFX_warscore_progressbar_frame"
+			position = { x=287 y=66 }
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "tyw_filter_minors"
+			position = { x = 374 y = 113 }
+			quadTextureSprite ="GFX_sort_button_140x29"
+			font = "hoi_18mbs"
+			buttonText = "WAR_OVERVIEW_FILTER_MINORS"
+			pdx_tooltip = "WAR_OVERVIEW_FILTER_MINORS_DESC"
+		}
+
+		containerWindowType = {
+			name = "protestant_union"
+			size = { width = 555 height = 96%%}
+			position = { x=25 y=192 }
+			margin = { top = 5 bottom = 5 }
+			verticalScrollbar = "right_vertical_slider"
+
+			background =
+			{
+				name = "protestant_union_window"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			instantTextBoxType = {
+				name = "north_germany_theater_header"
+				position = { x = 0 y = 5 }
+				font = "hoi_18mbs"
+				text = "[SWE.GetFactionName]"
+				maxWidth = 200
+				maxHeight = 30
+				format = left
+				Orientation = left_up
+			}
+			buttonType ={
+				name ="attacker_divisions"
+				quadTextureSprite = "GFX_division_icon"
+				position = { x= 362 y = 10 }
+				pdx_tooltip = "DIVISIONS"
+			}
+		
+			# this grid will be dynamically populated
+			gridboxtype = {
+				name = "protestant_union"
+				position = { x = 20 y = 40 }
+				size = { width = 100% height = 100%% }
+				slotsize = { width = 556 height = 42 } #if width or height is 1, it will use slot element's dimension
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		containerWindowType = {
+			name = "catholic_league"
+			size = { width = 555 height = 96%%}
+			position = { x=593 y=192 }
+			margin = { top = 5 bottom = 5 }
+			verticalScrollbar = "right_vertical_slider"
+
+			background =
+			{
+				name = "catholic_league_window"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			instantTextBoxType = {
+				name = "south_germany_theater_header"
+				position = { x = 0 y = 5 }
+				font = "hoi_18mbs"
+				text = "[AUS.GetFactionName]"
+				maxWidth = 200
+				maxHeight = 30
+				format = left
+				Orientation = left_up
+			}
+			buttonType ={
+				name ="attacker_divisions"
+				quadTextureSprite = "GFX_division_icon"
+				position = { x= 362 y = 10 }
+				pdx_tooltip = "DIVISIONS"
+			}
+		
+			# this grid will be dynamically populated
+			gridboxtype = {
+				name = "catholic_league"
+				position = { x = 20 y = 40 }
+				size = { width = 100% height = 100%% }
+				slotsize = { width = 556 height = 42 } #if width or height is 1, it will use slot element's dimension
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "rof_tywtheater_country_entry"
+		position = { x = 0 y = -4 }	
+		size = { width = 530 height = 41 }
+		
+		
+		background = {
+			name = "tyw_country_Background"		
+			quadTextureSprite = "GFX_war_participant_entry"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 56 y = 4 }
+			font = "hoi_18mbs"
+			text = "[?this.GetName]"
+			format = left
+			maxWidth = 200
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+
+		buttonType = {
+			name = "tyw_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 8 y = 6 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = { 
+			name = "country_flag_frame"
+			position = {x= 4 y = 3}
+			spriteType = "GFX_small_flag_frame_thin2"
+			alwaystransparent = yes
+		}	
+		iconType = { 
+			name = "tyw_major_country_overlay"
+			position = {x= 8 y = 6}
+			spriteType = "GFX_major_country_flag_overlay"
+			alwaystransparent = yes
+		}
+		iconType = { 
+			name = "tyw_surrender_flag"
+			position = {x= 32 y = 17}
+			spriteType = "GFX_surrender_tiny_flag"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "surrender_progressbar"
+			spriteType = "GFX_surrender_progressbar"
+			position = { x=55 y=26 }		
+		}
+
+		iconType = {
+			name = "surrender_progress_frame"
+			spriteType = "GFX_surrender_progress_frame"
+			position = { x=54 y=26 }
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "warscore"
+			position = { x = 269 y = 11 }
+			font = "hoi_18mbs"
+			text = "-"
+			maxWidth = 50
+			maxHeight = 30
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "divisions"
+			position = { x = 317 y = 11 }
+			font = "hoi_18mbs"
+			text = "[?this.num_divisions]"
+			maxWidth = 80
+			maxHeight = 30
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "ic"
+			position = { x = 393 y = 11 }
+			font = "hoi_18mbs"
+			text = "[?this.num_of_factories]"
+			maxWidth = 80
+			maxHeight = 30
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "casualties"
+			position = { x = 466 y = 11 }
+			font = "hoi_18mbs"
+			text = "[tyw_casualties]"
+			maxWidth = 60
+			maxHeight = 30
+			format = center
+		}
+		buttonType = {
+			name = "tyw_call"
+			position = { x= 220 y = 6 }
+			quadTextureSprite = "GFX_stop_training_leadergroup_button"
+			frame = 1
+			font = "hoi_16mbs"
+			buttonText = "CALL"
+		}
+	}
+	
+}

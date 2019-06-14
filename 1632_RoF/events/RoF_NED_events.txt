@@ -187,6 +187,79 @@ country_event = {
 		add_political_power = -150
 	}
 }
+
+# UPS-SPN cease-fire
+country_event = {
+	id = RoF_NED.112
+	title = RoF_NED.112.t
+	desc = RoF_NED.112.d
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NED.112.a
+		#set_country_flag = accept_demand_@ROOT
+		SPN = {
+			country_event = { id = RoF_NED.113 hours = 1 }
+			effect_tooltip = {
+				white_peace = UPS
+				set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }	
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = { # Refuse
+		name =  RoF_NED.112.b
+		#set_country_flag = refuse_demand_@ROOT
+		SPN = {
+			country_event = { id = RoF_NED.114 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# UPS-SPN cease-fire accepted
+country_event = {
+	id = RoF_NED.113
+	title = RoF_NED.113.t
+	desc = RoF_NED.113.db
+
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.113.b
+		white_peace = UPS
+		set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }
+	}
+}
+
+# UPS-SPN cease-fire rejected
+country_event = {
+	id = RoF_NED.114
+	title = RoF_NED.114.t
+	desc = RoF_NED.114.da
+
+	picture = GFX_report_event_SPR_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.114.a
+	}
+}
+
 # SPN gobbles up border states
 country_event = {
 	id = RoF_NED.115
@@ -298,6 +371,25 @@ country_event = {
 	}
 	option = { # Refuse
 		name =  RoF_NED.120.b
+	}
+}
+
+# SPN goes to Congress of Copenhagen
+country_event = {
+	id = RoF_NED.130
+	title = RoF_NED.130.t
+	desc = RoF_NED.130.d
+	picture = GFX_report_event_spr_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NED.130.a
+		set_country_flag = attending_congress_of_copenhagen
+		ai_chance = { base = 100 }
+	}
+	option = { # Refuse
+		name =  RoF_NED.130.b
 	}
 }
 

@@ -1,5 +1,5 @@
 ﻿capital = 508
-set_research_slots = 3
+set_research_slots = 2
 
 oob = "TUR_OOB"
 
@@ -54,8 +54,9 @@ set_popularities = {
 	neutrality = 12
 }
 
+set_country_flag = religion_islam
 add_ideas = {
-	emperor_rank
+	#emperor_rank
 }
 set_stability = 0.5
 create_country_leader = {

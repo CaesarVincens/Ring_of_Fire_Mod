@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = LOR
 		victory_points = {
-			3629 3 
+			11502 10
 		}
 		buildings = {
 			infrastructure = 2

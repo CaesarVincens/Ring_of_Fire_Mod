@@ -72,55 +72,55 @@ instant_effect = {
 units = {
 	division = {
 		name = "1. Infantry Detachment"
-		location = 161
+		location = 6050
 		division_template = "Infantry Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "2. Infantry Detachment"
-		location = 161
+		location = 6050
 		division_template = "Infantry Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "3. Infantry Detachment"
-		location = 161
+		location = 6050
 		division_template = "Infantry Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "4. Infantry Detachment"
-		location = 161
+		location = 6050
 		division_template = "Infantry Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "1. Infantry Division"
-		location = 161
+		location = 6050
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "2. Infantry Division"
-		location = 161
+		location = 6050
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "3. Infantry Division"
-		location = 161
+		location = 6050
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "4. Infantry Division"
-		location = 161
+		location = 6050
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "1. Cavalry Division"
-		location = 161
+		location = 6050
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.3
 	}

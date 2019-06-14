@@ -28,7 +28,7 @@ set_popularities = {
 	radical = 0
 	neutrality = 63
 }
-
+set_country_flag = religion_buddhist
 add_ideas = {
 		military_focus_eco
 }

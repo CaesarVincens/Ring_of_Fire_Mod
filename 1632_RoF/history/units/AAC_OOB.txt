@@ -75,7 +75,7 @@ instant_effect = {
 units = {
 	division = {
 		name = "1. Infantry Brigade"
-		location = 9522
+		location = 3512
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}

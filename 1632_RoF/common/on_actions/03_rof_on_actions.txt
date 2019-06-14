@@ -2,6 +2,14 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
+			WNA = {
+				add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
+				send_equipment = {
+					equipment = up_time_weapons
+					amount = 1000
+					target = NUS
+				}
+			}
 			every_country = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
@@ -11,6 +19,14 @@ on_actions = {
 				country_event = { id = RoF.006 }
 			}
 			set_global_flag = thirty_years_war_ongoing
+			every_country = {
+				limit = {
+					is_in_faction_with = AUS
+				}
+				TYR = {
+					give_military_access = PREV
+				}
+			}
 		}
 	}
 	# ROOT is capitulated country, FROM is winner

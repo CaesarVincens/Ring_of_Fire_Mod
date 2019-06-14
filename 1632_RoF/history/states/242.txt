@@ -7,14 +7,17 @@ state = {
 
 	history = {
 		owner = LUB
-		victory_points = { 11331 8 }
+		victory_points = { 11331 20 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
+			dockyard = 1
 			air_base = 0
 			11331 = {
 				naval_base = 2
+				bunker = 1
+				coastal_bunker = 1
 			}
 		}
 		add_core_of = LUB

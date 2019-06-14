@@ -7,6 +7,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6345;6287;sea;2382;-1;-1;-1;-1;;Skåne-Sjaelland
 3260;3325;;2408;-1;-1;-1;-1;;Sjaelland-Fyn
 3260;3374;;2408;-1;-1;2973;1625;;Sjaelland-SdFyn
+3305;3374;;2408;-1;-1;2976;1622;;Lolland-SdFyn
 3277;3325;;2408;-1;-1;-1;-1;;Fyn-Jylland
 11251;3325;;2408;2956;1628;2960;1629;;Fyn-SdrJylland
 83;185;sea;1885;-1;-1;-1;-1;;Estonia-Ösel
@@ -197,7 +198,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3183;6207;impassable;-1;-1;-1;-1;-1;;scandes mountains
 3183;11206;impassable;-1;-1;-1;-1;-1;;scandes mountains
 9139;11206;impassable;-1;-1;-1;-1;-1;;scandes mountains
-111;11206;impassable;-1;-1;-1;-1;-1;;scandes mountains
 6118;6114;impassable;-1;-1;-1;-1;-1;;scandes mountains
 3096;6114;impassable;-1;-1;-1;-1;-1;;scandes mountains
 3093;6136;impassable;-1;-1;-1;-1;-1;;scandes mountains

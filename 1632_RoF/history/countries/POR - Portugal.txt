@@ -52,6 +52,7 @@ set_popularities = {
 	neutrality = 62
 }
 
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 	POR_iberian_union

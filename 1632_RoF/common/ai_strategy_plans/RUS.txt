@@ -1,3 +1,21 @@
+RUS_canon_focuses = {
+	name = "Russia Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = RUS
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+
+	}
+}
+
+
 Russian_Civil_war_Free_RUS = {
 	name = "Fight Sheremetev"
 	desc = "do it"

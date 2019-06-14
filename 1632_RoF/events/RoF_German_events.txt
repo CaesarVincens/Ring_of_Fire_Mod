@@ -315,7 +315,13 @@ country_event = {
 			#	hostility_reason = asked_to_join
 			#}
 		}
-		ai_chance = { base = 100 }
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
 	}
 	option = {
 		name = RoF_German.130.b
@@ -328,9 +334,68 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { base = 0 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = no
+				add = 5
+			}
+		}
 	}
 	
+}
+
+#Saxony joins aus
+country_event = {
+	id = RoF_German.131
+	title = RoF_German.131.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_German.131.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.131.a
+		AUS = { country_event = { id = RoF_AUS.125 hours = 12 } }
+		set_country_flag = SAX_joins_AUS
+		effect_tooltip = {
+			AUS = { add_to_faction = SAX }
+			add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = no
+				add = 5
+			}
+		}
+	}
+	option = {
+		name = RoF_German.131.b
+		AUS = { country_event = { id = RoF_AUS.126 hours = 12 } }
+		effect_tooltip = {
+			AUS = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAX
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+	}
 }
 
 #German joins swe

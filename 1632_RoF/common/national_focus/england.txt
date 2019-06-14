@@ -597,7 +597,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				NUS = {
-					has_completed_focus = NUS_las_vegas_belle
+					has_completed_focus = NUS_first_flight
 				}
 				tooltip = Rof_first_flight.tt
 			}

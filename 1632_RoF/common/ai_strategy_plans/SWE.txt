@@ -1,12 +1,39 @@
+SWE_canon_focuses = {
+	name = "Sweden Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = SWE
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		SWE_bully_brandenburg
+		SWE_secure_baltic_coast
+		SWE_strong_arm_saxony
+		SWE_force_franconia
+		SWE_secure_north_germany
+		SWE_move_on_the_main
+		SWE_rally_south_germany
+		SWE_improve_industry
+		SWE_buildup_arms
+	}
+}
+
 SWE_focus_on_germany_plan = {
 	name = "Focus on Germany"
 	desc = "War with Austria1"
 	
 	enable = {
 		original_tag = SWE
+		has_global_flag = thirty_years_war_ongoing
 	}
 	abort = {
 		OR = {
+			has_global_flag = thirty_years_war_ended
 			has_war_with = DEN
 			FRA = { has_completed_focus = FRA_ostend_league_focus }
 		}
@@ -15,7 +42,7 @@ SWE_focus_on_germany_plan = {
 	ai_strategy = {
 		type = ignore
 		id = "DEN"
-		value = 200
+		value = 500
 	}
 	ai_strategy = {
 		type = befriend
@@ -52,14 +79,14 @@ SWE_ignore_russia = {
 }
 
 SWE_Thirty_Years_War = {
-	name = "Focus on Germany"
+	name = "PU Focus on Germany"
 	desc = "War with Austria2"
 	enable = {
 		OR = {
 			original_tag = SWE
 			is_in_faction_with = SWE
 		}
-		has_war_with = AUS
+		has_global_flag = thirty_years_war_ongoing
 		NOT = {
 			capital_scope = {
 				region = 205
@@ -69,7 +96,7 @@ SWE_Thirty_Years_War = {
 	abort = {
 		OR = {
 			NOT = { is_in_faction_with = SWE }
-			NOT = { has_war_with = AUS }
+			has_global_flag = thirty_years_war_ended
 			capital_scope = {
 				region = 205
 			}
@@ -83,12 +110,17 @@ SWE_Thirty_Years_War = {
 	ai_strategy = {
 		type = area_priority
 		id = north_germany
-		value = 1000
+		value = 100
 	}
 	ai_strategy = {
 		type = area_priority
 		id = south_germany
-		value = -50
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = AUS
+		value = -500
 	}
 }
 
@@ -97,7 +129,10 @@ SWE_Ostend_War = {
 	desc = "Ostend Prep"
 	enable = {
 		original_tag = SWE
-		DEN = { has_completed_focus = DEN_ostend_league }
+		OR = {
+			DEN = { has_completed_focus = DEN_ostend_league }
+			FRA = { has_completed_focus = FRA_ostend_league_focus }
+		}
 	}
 	abort = {
 		OR = {
@@ -114,9 +149,14 @@ SWE_Ostend_War = {
 		value = 200
 	}
 	ai_strategy = {
+		type = invade
+		id = DEN
+		value = -200
+	}
+	ai_strategy = {
 		type = area_priority
 		id = scandinavian_region
-		value = 100
+		value = 150
 	}
 }
 
@@ -125,7 +165,10 @@ SWE_Ostend_War2 = {
 	desc = "Ostend Prep"
 	enable = {
 		original_tag = SWE
-		DEN = { has_completed_focus = DEN_ostend_league }
+		OR = {
+			DEN = { has_completed_focus = DEN_ostend_league }
+			FRA = { has_completed_focus = FRA_ostend_league_focus }
+		}
 		OR = {
 			has_war_with = FRA
 			has_war_with = DEN

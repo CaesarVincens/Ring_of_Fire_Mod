@@ -111,19 +111,19 @@ units = {
 	}
 	division = {
 		name = "7. Tercio Detachment"
-		location = 564
+		location = 9443
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "8. Tercio Detachment"
-		location = 564
+		location = 3524
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "9. Tercio Detachment"
-		location = 564
+		location = 3524
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}

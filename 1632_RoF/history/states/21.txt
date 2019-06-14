@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = AUS
+		owner = TYR
 		victory_points = {
 			6631 3
 		}
@@ -17,11 +17,12 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}
-		add_core_of = AUS
+		add_core_of = TYR
+		#add_claim_by = AUS
 
 	}
 

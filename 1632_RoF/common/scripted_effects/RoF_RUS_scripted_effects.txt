@@ -16,6 +16,67 @@
 #	}
 #
 
+
+#########################################
+###     set USR constitution idea     ###
+#########################################
+
+set_USR_constition = {
+	if = {
+		limit = {
+			check_variable = {
+				var = USR_constitution
+				value = -5
+				compare = less_than_or_equals
+			}
+		}
+		add_ideas = USR_reactionary_constitution
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = USR_constitution
+				value = -2
+				compare = less_than_or_equals
+			}
+		}
+		add_ideas = USR_noble_constitution
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = USR_constitution
+				value = 1
+				compare = less_than_or_equals
+			}
+		}
+		add_ideas = USR_moderate_constitution
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = USR_constitution
+				value = 4
+				compare = less_than_or_equals
+			}
+		}
+		add_ideas = USR_liberal_constitution
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = USR_constitution
+				value = 4
+				compare = greater_than
+			}
+		}
+		add_ideas = USR_radical_constitution
+	}
+	else = {
+		add_ideas = error_idea
+	}
+}
+
 ##########################################
 ### adjust russian/polish serfdom idea ###
 ##########################################

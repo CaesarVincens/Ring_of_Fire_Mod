@@ -26,7 +26,7 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
-				factor = 0
+				base = 0
 			}
 		}
 		
@@ -46,17 +46,15 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 			ai_will_do = {
-				factor = 1
+				base = 0
 				modifier = {
-					factor = 5
-					has_government = absolutist
+					add = 1
+					has_stability < 0.25
+					NOT = { has_government = radical }
 				}
 				modifier = {
-					factor = 0
-					OR = {
-						has_government = liberal
-						has_government = radical
-					}
+					add = 5
+					has_government = absolutist
 				}
 			}
 		}
@@ -78,7 +76,7 @@ ideas = {
 			cancel_if_invalid = no
 			#default = yes
 			ai_will_do = {
-				factor = 1
+				base = 1
 				modifier = {
 					factor = 5
 					has_government = constitutionalist
@@ -103,7 +101,7 @@ ideas = {
 				political_power_gain = -0.1
 			}
 			ai_will_do = {
-				factor = 1
+				base = 1
 				modifier = {
 					factor = 5
 					has_government = liberal
@@ -128,20 +126,16 @@ ideas = {
 				political_power_gain = 0.25
 			}
 			ai_will_do = {
-				factor = 1
+				base = 0
 				modifier = {
-					factor = 0
-					NOT = { has_government = radical }
-				}
-				modifier = {
-					factor = 2
+					add = 2
 					has_government = radical
 				}
 			}
 		}
 	}
 	
-	conscription_system = {
+	mobilization_laws = {
 		law = yes
 		mercenary_army = {
 			cost = 100

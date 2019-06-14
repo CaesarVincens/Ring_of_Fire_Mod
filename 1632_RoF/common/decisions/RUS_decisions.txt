@@ -1,12 +1,3 @@
 RUS_major_decisions = {
-	test_RUS = {
-		visible = {
-			tag = RUS
-		}
-		complete_effect = {
-			country_event = {
-				id = RoF_RUS.101
-			}
-		}
-	}
+
 }

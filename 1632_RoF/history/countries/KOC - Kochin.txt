@@ -27,6 +27,7 @@ set_popularities = {
 	neutrality = 73
 }
 
+set_country_flag = religion_hindu
 add_ideas = {
 	}
 set_stability = 0.5

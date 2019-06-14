@@ -1,12 +1,137 @@
+AUS_canon_focuses = {
+	name = "Austria Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = AUS
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+
+	}
+}
+
+AUS_dont_kill_SAX = {
+	name = "Saxony will fight soon enough"
+	desc = ""
+	enable = {
+		original_tag = AUS
+		#has_wargoal_against = SAX
+		SAX = {
+			is_in_faction = no
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = SAX
+			NUS = { has_cosmetic_tag = USE }
+			has_global_flag = thirty_years_war_ended
+		}
+	}
+	ai_strategy = {
+		type = conquer
+		id = SAX
+		value = -5000
+	}
+	ai_strategy = {
+		type = ignore
+		id = SAX
+		value = 1000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = SAX
+		value = -1000
+	}
+}
+
 AUS_Thirty_Years_War = {
 	name = "Focus on Germany"
 	desc = "War with Sweden"
 	enable = {
-		OR = {
-			original_tag = AUS
-			is_in_faction_with = AUS
-		}
-		has_war_with = SWE
+		tag = AUS
+		has_global_flag = thirty_years_war_ongoing
+	}
+	abort = {
+		has_global_flag = thirty_years_war_ended
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = -50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = WRZ
+		value = 50
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = MNZ
+		value = 50
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = COL
+		value = 50
+	}
+}
+
+AUS_TYR_friendship = {
+	name = "Tyrol is part of Austria"
+	desc = "Be friends"
+	enable = {
+		tag = TYR
+		country_exists = AUS
+	}
+	abort = {
+		NOT = { country_exists = AUS }
+	}
+	ai_strategy = {
+		type = befriend
+		id = AUS
+		value = 200
+	}
+}
+
+TYR_AUS_friendship = {
+	name = "Tyrol is part of Austria"
+	desc = "Be friends"
+	enable = {
+		tag = AUS
+		country_exists = TYR
+	}
+	abort = {
+		NOT = { country_exists = TYR }
+	}
+	ai_strategy = {
+		type = befriend
+		id = TYR
+		value = 200
+	}
+	ai_strategy = {
+		type = ignore_claim
+		id = TYR
+		value = 1000
+	}
+}
+
+AUS_Thirty_Years_War = {
+	name = "CL Focus on Germany"
+	desc = "War with Sweden"
+	enable = {
+		NOT = { tag = AUS }
+		is_in_faction_with = AUS
+		has_global_flag = thirty_years_war_ongoing
 		NOT = {
 			capital_scope = {
 				OR = {
@@ -19,7 +144,7 @@ AUS_Thirty_Years_War = {
 	abort = {
 		OR = {
 			NOT = { is_in_faction_with = AUS }
-			NOT = { has_war_with = SWE }
+			has_global_flag = thirty_years_war_ended
 			capital_scope = {
 				OR = {
 					region = 6
@@ -36,7 +161,7 @@ AUS_Thirty_Years_War = {
 	ai_strategy = {
 		type = area_priority
 		id = south_germany
-		value = 1000
+		value = 100
 	}
 }
 

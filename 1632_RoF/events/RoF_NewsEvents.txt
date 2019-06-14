@@ -465,3 +465,17 @@ news_event = {
 	}
 	
 }
+
+news_event = {
+	id = RoF_news.22
+	title = RoF_news.22.t
+	desc = RoF_news.22.d
+	picture = GFX_news_event_destruction
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_news.22.a
+	}
+	
+}

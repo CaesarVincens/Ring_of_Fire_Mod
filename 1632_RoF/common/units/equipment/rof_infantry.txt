@@ -193,7 +193,7 @@ equipments = {
 		year = 1950
 		archetype = firearm_equipment
 		is_buildable = no
-		#parent = arquebus_equipment
+		parent = arquebus_equipment
 		
 		active = no
 		priority = 20

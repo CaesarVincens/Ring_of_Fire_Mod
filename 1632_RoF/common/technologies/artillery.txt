@@ -798,6 +798,19 @@ technologies = {
 				factor = 5
 				date > "1634.1.1"
 			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_country = {
+						OR = {
+							has_tech = apc_tech_0
+							has_tech = apc_tech_1
+							has_tech = early_gas_tank
+							has_tech = early_steam_tank
+						}
+					}
+				}
+			}
 		}
 		
 		categories = {

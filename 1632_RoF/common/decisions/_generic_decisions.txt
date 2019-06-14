@@ -1,58 +1,109 @@
 political_actions = {
-	test_flags = {
+	toggle_religion_ideas = {
 		visible = {
-			#always = no
+			
 		}
 		complete_effect = {
 			if = {
-				limit = { has_government = absolutist }
-				set_politics = { ruling_party = constitutionalist }
+				limit = {
+					has_global_flag = show_religions
+				}
+				clr_global_flag = show_religions
+				hidden_effect = {
+					every_country = {
+						hide_religion_idea = yes
+					}
+				}
+				else = {
+					set_global_flag = show_religions
+					hidden_effect = {
+						every_country = {
+							show_religion_idea = yes
+						}
+					}
+				}
 			}
-			else_if = {
-				limit = { has_government = constitutionalist }
-				set_politics = { ruling_party = liberal }
-			}
-			else_if = {
-				limit = { has_government = liberal }
-				set_politics = { ruling_party = radical }
-			}
-			else_if = {
-				limit = { has_government = radical }
-				set_politics = { ruling_party = neutrality }
-			}
-			else_if = {
-				limit = { has_government = neutrality }
-				set_politics = { ruling_party = absolutist }
-			}
-			#activate_decision = test_flags2
 		}
 	}
-	test_flags2 = {
+	test_gui = {
 		visible = {
-			#always = no
+			always = no
 		}
 		complete_effect = {
+			SWE = {
+				clear_array = ROOT.protestant_union
+				for_each_loop = {
+					array = faction_members
+					if = {
+						limit = {
+							NOT = {
+								is_in_array = {
+									ROOT.protestant_union = v
+								}
+							}
+						}
+						add_to_array = {
+							ROOT.protestant_union = v
+						}
+					}
+				}
+			}
+			AUS = {
+				clear_array = ROOT.catholic_league
+				for_each_loop = {
+					array = faction_members
+					if = {
+						limit = {
+							NOT = {
+								is_in_array = {
+									ROOT.catholic_league = v
+								}
+							}
+						}
+						add_to_array = {
+							ROOT.catholic_league = v
+						}
+					}
+				}
+			}
+		}
+	}
+	test_limit = {
+		visible = {
+			always = no
+		}
+		complete_effect = {
+			set_temp_variable = {
+				upper_limit = num_of_factories
+			}
+			multiply_temp_variable = {
+				upper_limit = 1.15
+			}
 			if = {
-				limit = { has_government = absolutist }
-				set_politics = { ruling_party = constitutionalist }
+				limit = {
+					has_war = yes
+				}
+				multiply_temp_variable = {
+					upper_limit = 1.2
+				}
 			}
-			else_if = {
-				limit = { has_government = constitutionalist }
-				set_politics = { ruling_party = liberal }
+			if = {
+				limit = {
+					is_major = yes
+				}
+				multiply_temp_variable = {
+					upper_limit = 1.15
+				}
 			}
-			else_if = {
-				limit = { has_government = liberal }
-				set_politics = { ruling_party = radical }
+			if = {
+				limit = {
+					threat > 0.75
+				}
+				multiply_temp_variable = {
+					upper_limit = 1.05
+				}
 			}
-			else_if = {
-				limit = { has_government = radical }
-				set_politics = { ruling_party = neutrality }
-			}
-			else_if = {
-				limit = { has_government = neutrality }
-				set_politics = { ruling_party = absolutist }
-			}
-			#activate_decision = test_flags
+			add_political_power = upper_limit
 		}
 	}
 	improved_worker_conditions = {

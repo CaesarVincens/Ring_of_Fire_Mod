@@ -1,5 +1,5 @@
 ﻿capital = 128
-set_research_slots = 3
+set_research_slots = 2
 
 oob = "ENG_OOB"
 
@@ -51,6 +51,7 @@ set_popularities = {
 	neutrality = 7
 }
 
+set_country_flag = religion_anglican
 add_ideas = {
 	ENG_parliament_prorogued
 	state_religion_law

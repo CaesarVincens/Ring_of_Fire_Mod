@@ -60,7 +60,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 30
 			
 			modifier = {
 				factor = 5
@@ -94,7 +94,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		
 		categories = {
@@ -121,7 +121,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		
 		categories = {
@@ -157,7 +157,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		
 		categories = {
@@ -188,7 +188,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		
 		categories = {
@@ -219,7 +219,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		
 		categories = {
@@ -245,7 +245,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		
 		categories = {
@@ -272,7 +272,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 7
+			factor = 20
 		}
 		
 		categories = {
@@ -308,7 +308,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 6
+			factor = 15
 			
 			modifier = {
 				factor = 3
@@ -356,7 +356,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 15
 			
 			modifier = {
 				factor = 3
@@ -400,7 +400,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 15
 			
 			modifier = {
 				factor = 3
@@ -435,7 +435,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		categories = {
@@ -458,7 +458,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		categories = {
@@ -481,7 +481,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		categories = {
@@ -504,7 +504,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		categories = {
@@ -527,7 +527,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		categories = {
@@ -550,7 +550,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		categories = {
@@ -581,6 +581,9 @@ technologies = {
 	
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+			}
 		}
 		
 		categories = {

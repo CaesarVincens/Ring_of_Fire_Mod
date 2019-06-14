@@ -29,9 +29,10 @@ set_popularities = {
 	radical = 0
 	neutrality = 13
 }
-
+set_country_flag = religion_secular
 add_ideas = {
 	civilian_focus_eco
+	secularism
 }
 set_stability = 0.5
 create_country_leader = {

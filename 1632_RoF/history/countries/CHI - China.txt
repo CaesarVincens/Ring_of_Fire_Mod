@@ -31,7 +31,7 @@ set_popularities = {
 	neutrality = 3
 }
 
-
+set_country_flag = religion_confucian
 add_ideas = {
 	
 }

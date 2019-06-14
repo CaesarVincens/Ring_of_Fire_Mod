@@ -11,12 +11,12 @@ state = {
 	history = {
 		owner = SAL
 		victory_points = {
-			688 8 
+			688 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}

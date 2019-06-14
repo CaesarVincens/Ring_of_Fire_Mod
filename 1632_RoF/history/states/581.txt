@@ -9,17 +9,16 @@ state = {
 	history = {
 		owner = WRT
 		victory_points = {
-			9517 8 
+			9517 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}
 		add_core_of = WRT
-		add_core_of = AUS
 
 	}
 

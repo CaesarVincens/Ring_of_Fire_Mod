@@ -30,7 +30,7 @@ set_popularities = {
 	neutrality = 52
 }
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
 }
@@ -41,6 +41,15 @@ create_country_leader = {
     picture = "gfx/leaders/Germanies/Portrait_Lorraine_Charles_IV.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Charles IV"
+    desc = "POLITICS_AUGUSTIN_COUSIN-MOUNTAUBAN_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Lorraine_Charles_IV.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
     traits = {
     }
 }

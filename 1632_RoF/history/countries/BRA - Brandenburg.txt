@@ -36,6 +36,7 @@ give_military_access = SWE
 #	enemy = AUS
 #}
 
+set_country_flag = religion_lutheran
 set_country_flag = german_tag_flag
 add_ideas = {
 }

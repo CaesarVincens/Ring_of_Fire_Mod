@@ -1,0 +1,60 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+    name = tyw_casualties
+    
+    text = {
+		trigger = {
+			check_variable = {
+				casualties > 0
+			}
+		}
+        localization_key = "[?this.casualties_k]"
+	}
+	
+    text = {
+        localization_key = "-"
+    }
+}
+
+defined_text = {
+    name = tyw_minor_countries_filter
+    
+    text = {
+		trigger = {
+			is_major = no
+			ROOT = {
+				check_variable = {
+					tyw_filter_minors = 2
+				}
+			}
+		}
+        localization_key = "rof_tywtheater_country_entry"
+	}
+	
+	text = {
+		trigger = {
+			is_major = yes
+		}
+        localization_key = "rof_tywtheater_country_entry"
+	}
+	
+    text = {
+        localization_key = ""
+    }
+}
+
+defined_text = {
+	name = GetCoCProgress
+	text = {
+		localization_key = ROF_COC_AGITATE_PROGRESS
+	}
+}

@@ -17,6 +17,91 @@
 #
 
 ##########################################
+###     Show/Hide Religion Ideas      ####
+##########################################
+show_religion_idea = {
+	if = {
+		limit = { has_country_flag = religion_catholic }
+		add_ideas = religion_catholic
+	}
+	if = {
+		limit = { has_country_flag = religion_lutheran }
+		add_ideas = religion_lutheran
+	}
+	if = {
+		limit = { has_country_flag = religion_reformed }
+		add_ideas = religion_reformed
+	}
+	if = {
+		limit = { has_country_flag = religion_orthodox }
+		add_ideas = religion_orthodox
+	}
+	if = {
+		limit = { has_country_flag = religion_anglican }
+		add_ideas = religion_anglican
+	}
+		if = {
+		limit = { has_country_flag = religion_islam }
+		add_ideas = religion_sunni
+	}
+	if = {
+		limit = { has_country_flag = religion_shia }
+		add_ideas = religion_shia
+	}
+	if = {
+		limit = { has_country_flag = religion_buddhist }
+		add_ideas = religion_buddhist
+	}
+	if = {
+		limit = { has_country_flag = religion_hindu }
+		add_ideas = religion_hindu
+	}
+	if = {
+		limit = { has_country_flag = religion_confucian }
+		add_ideas = religion_confucian
+	}
+	if = {
+		limit = { has_country_flag = religion_shinto }
+		add_ideas = religion_shinto
+	}
+	if = {
+		limit = { has_country_flag = religion_tengri }
+		add_ideas = religion_tengri
+	}
+	if = {
+		limit = { has_country_flag = religion_african }
+		add_ideas = religion_african
+	}
+	if = {
+		limit = { has_country_flag = religion_north_american }
+		add_ideas = religion_north_american
+	}
+	if = {
+		limit = { has_country_flag = religion_secular }
+		add_ideas = religion_secular
+	}
+}
+
+hide_religion_idea = {
+	remove_ideas = {
+		religion_african
+		religion_anglican
+		religion_buddhist
+		religion_catholic
+		religion_confucian
+		religion_hindu
+		religion_lutheran
+		religion_north_american
+		religion_orthodox
+		religion_reformed
+		religion_secular
+		religion_shia
+		religion_shinto
+		religion_sunni
+		religion_tengri
+	}
+}
+##########################################
 ###     Set USE Party Popularity      ####
 ##########################################
 set_USE_parties = {
@@ -611,26 +696,21 @@ check_CoC_strength_anger = {
 		add_to_variable = { CoC_anger = 10 }
 		add_to_variable = { CoC_strength = 5 }
 	}
-	#if = {
-	#	limit = { has_government = absolutist }
-	#	add_to_variable = { CoC_anger = 5 }
-	#	add_to_variable = { CoC_strength = 2.5 }
-	#}
-	#if = {
-	#	limit = { has_government = constitutionalist }
-	#	add_to_variable = { CoC_anger = 2.5 }
-	#	add_to_variable = { CoC_strength = 1 }
-	#}
-	#if = {
-	#	limit = { has_government = radical }
-	#	add_to_variable = { CoC_anger = -5 }
-	#	add_to_variable = { CoC_strength = -2.5 }
-	#}
-	#if = {
-	#	limit = { has_government = liberal }
-	#	add_to_variable = { CoC_anger = -2.5 }
-	#	add_to_variable = { CoC_strength = -1 }
-	#}
+	if = {
+		limit = { has_idea = NUS_CoC_1 }
+		add_to_variable = { CoC_anger = -1 }
+		add_to_variable = { CoC_strength = 1 }
+	}
+	if = {
+		limit = { has_idea = NUS_CoC_2 }
+		add_to_variable = { CoC_anger = -2 }
+		add_to_variable = { CoC_strength = 2 }
+	}
+	if = {
+		limit = { has_idea = NUS_CoC_3 }
+		add_to_variable = { CoC_anger = -5 }
+		add_to_variable = { CoC_strength = 5 }
+	}
 	round_variable = CoC_anger
 	round_variable = CoC_strength
 	divide_variable = { CoC_anger = 2 }
@@ -638,13 +718,13 @@ check_CoC_strength_anger = {
 	clamp_variable = { var = CoC_anger min = -20 max = 20 }
 	clamp_variable = { var = CoC_strength min = -10 max = 30 }
 	if = {
+		limit = { NOT = { is_german_tag = yes } }
+		clamp_variable = { var = CoC_strength min = -10 max = 20 }
+	}
+	if = {
 		limit = { has_country_flag = CoC_banned }
 		clamp_variable = { var = CoC_strength min = -10 max = 10 }
 	}
-	#clear_variable = templib
-	#clear_variable = temprad
-	#clear_variable = tempcon
-	#clear_variable = tempabs
 }
 check_CoC_effects_for_this = {
 	remove_ideas = Coc_good_4
@@ -758,27 +838,27 @@ check_CoC_effects_for_this = {
 			limit = {
 				check_variable = { var = CoC_anger value = -10 compare = less_than }
 			}
-			add_ideas = Coc_good_2 #max-1
+			add_ideas = Coc_good_2 #max-2
 		}
 		else_if = { #happy
 			limit = {
 				check_variable = { var = CoC_anger value = -10 compare = greater_than_or_equals }
 				check_variable = { var = CoC_anger value = -5 compare = less_than }
 			}
-			add_ideas = CoC_good_1 #max-2
+			add_ideas = CoC_good_1 #max-3
 		}
 		else_if = { #angry
 			limit = {
 				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
 				check_variable = { var = CoC_anger value = 10 compare = less_than }
 			}
-			add_ideas = CoC_bad_1 #max-2
+			add_ideas = CoC_bad_1 #max-3
 		}
 		else_if = { #furious
 			limit = {
 				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }
 			}
-			add_ideas = CoC_bad_2 #max-1
+			add_ideas = CoC_bad_2 #max-2
 		}
 
 	}
@@ -791,13 +871,13 @@ check_CoC_effects_for_this = {
 			limit = {
 				check_variable = { var = CoC_anger value = -10 compare = less_than }
 			}
-			add_ideas = Coc_good_1 #max-1
+			add_ideas = Coc_good_1 #max-3
 		}
 		else_if = { #furious
 			limit = {
 				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }
 			}
-			add_ideas = CoC_bad_1 #max-1
+			add_ideas = CoC_bad_1 #max-3
 		}
 
 	}

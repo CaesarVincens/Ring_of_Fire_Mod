@@ -1,6 +1,6 @@
 ﻿add_namespace = RoF_SWE
 
-#Breitenfeld
+#GA's birthday
 news_event = {
 	id = RoF_SWE.1
 	title = RoF_SWE.1.t
@@ -209,8 +209,8 @@ country_event = {
 		add_state_core = 108
 		transfer_state = 656
 		add_state_core = 656
-		transfer_state = 659
-		add_state_core = 659
+		#transfer_state = 659
+		#add_state_core = 659
 		transfer_state = 109
 		add_state_core = 109
 		DEN = {
@@ -637,6 +637,12 @@ country_event = {
 		}
 		if = {
 			limit = {
+				BAD = { is_potential_friend_of_ROOT = yes }
+			}
+			BAD = { country_event = { id = RoF_German.142 hours = 12 } }
+		}
+		if = {
+			limit = {
 				FRK = { is_potential_friend_of_ROOT = yes }
 			}
 			FRK = { country_event = { id = RoF_German.140 hours = 12 } }
@@ -646,6 +652,12 @@ country_event = {
 				NUR = { is_potential_friend_of_ROOT = yes }
 			}
 			NUR = { country_event = { id = RoF_German.140 hours = 12 } }
+		}
+		if = {
+			limit = {
+				ULM = { is_potential_friend_of_ROOT = yes }
+			}
+			ULM = { country_event = { id = RoF_German.140 hours = 12 } }
 		}
 		if = {
 			limit = {
@@ -700,5 +712,31 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+#Seize Mainz
+country_event = {
+	id = RoF_SWE.161
+	title = RoF_SWE.161.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.161.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				BAV = {
+					controls_state = 655
+				}
+			}
+			set_state_controller = 655
+		}
+	}
+	option = {
+		name = RoF_SWE.161.a
+		add_manpower = 1000
 	}
 }

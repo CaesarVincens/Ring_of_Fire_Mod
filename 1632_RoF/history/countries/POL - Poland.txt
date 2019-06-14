@@ -1,5 +1,5 @@
 ﻿capital = 347
-set_research_slots = 4
+set_research_slots = 2
 
 oob = "POL_OOB"
 
@@ -24,6 +24,11 @@ set_convoys = 0
         autonomous_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
+    set_autonomy = {
+        target = KUR
+        autonomous_state = autonomy_rof_vassal
+        freedom_level = 0.6
+    }
 set_politics = {
     ruling_party = absolutist
     last_election = "1631.1.1"
@@ -38,6 +43,7 @@ set_popularities = {
 	neutrality = 2
 }
 
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 }

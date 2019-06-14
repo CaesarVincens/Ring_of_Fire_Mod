@@ -191,6 +191,10 @@ technologies = {
 				factor = 1.2
 				date > "1640.1.1"
 			}
+			modifier = {
+				factor = 0
+				date < 1634.1.1
+			}
 		}
 		
 		categories = {

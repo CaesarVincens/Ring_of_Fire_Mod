@@ -37,7 +37,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 		}
-
+		ai_will_do = {
+			base = 2
+		}
 	}
 	focus = {
 		id = moderate_path
@@ -77,6 +79,11 @@ focus_tree = {
 						}
 					}
 				}
+			}
+			modifier = {
+				factor = 2
+				tag = AAC
+				is_historical_focus_on = yes
 			}
 		}
 

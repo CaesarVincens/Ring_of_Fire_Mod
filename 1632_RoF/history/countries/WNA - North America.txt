@@ -2,7 +2,7 @@
 
 # Starting tech
 set_technology = {
-
+up_time_weapons_tech = 1
 }
 
 # Research Bonuses

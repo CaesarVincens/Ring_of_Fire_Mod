@@ -33,7 +33,7 @@ set_popularities = {
 	neutrality = 62
 }
 
-
+set_country_flag = religion_reformed
 add_ideas = {
 	military_focus_eco
 }

@@ -9,7 +9,7 @@ state={
 	history={
 		owner = BRE
 		victory_points = {
-			3326 8
+			3326 10
 		}
 		victory_points = {
 			374 3
@@ -17,7 +17,7 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 			3326 = {
 				naval_base = 1

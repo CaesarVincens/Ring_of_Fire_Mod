@@ -29,6 +29,7 @@ set_popularities = {
 	neutrality = 62
 }
 
+set_country_flag = religion_buddhist
 add_ideas = {
 	balanced_eco
 }

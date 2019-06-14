@@ -30,6 +30,7 @@ set_popularities = {
 }
 
 set_country_flag = german_tag_flag
+set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
 }
@@ -40,6 +41,15 @@ create_country_leader = {
     picture = "gfx/leaders/AUS/Portrait_Austria_Leopold_Wilhelm.dds"
     expire = "1660.1.1"
     ideology = bishopric
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Leopold Wilhelm von Habsburg"
+    desc = "POLITICS_GERHARD_VON HAYNAU_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Austria_Leopold_Wilhelm.dds"
+    expire = "1660.1.1"
+    ideology = bishopric_neutral
     traits = {
     }
 }

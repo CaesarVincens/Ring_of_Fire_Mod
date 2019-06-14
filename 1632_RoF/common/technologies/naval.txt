@@ -21,7 +21,13 @@ technologies = {
 			position = { x = 0 y = @prerof }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					is_coastal = no
+				}
+			}
 		}
 		categories = {
 			naval_equipment
@@ -40,7 +46,7 @@ technologies = {
 			position = { x = 0 y = @1635 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -64,7 +70,13 @@ technologies = {
 			position = { x = -1 y = @prerof }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					is_coastal = no
+				}
+			}
 		}
 		categories = {
 			naval_equipment
@@ -87,7 +99,7 @@ technologies = {
 			position = { x = -1 y = @1635 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -111,7 +123,13 @@ technologies = {
 			position = { x = 1 y = @prerof }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					is_coastal = no
+				}
+			}
 		}
 		categories = {
 			naval_equipment
@@ -134,7 +152,7 @@ technologies = {
 			position = { x = 1 y = @1635 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -158,7 +176,7 @@ technologies = {
 			position = { x = -1 y = @1635 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -181,7 +199,7 @@ technologies = {
 			position = { x = 1 y = @1634 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -204,7 +222,7 @@ technologies = {
 			position = { x = 1 y = @1638 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -228,7 +246,7 @@ technologies = {
 			position = { x = 3 y = @1634 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -251,7 +269,7 @@ technologies = {
 			position = { x = 3 y = @1638 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -268,17 +286,22 @@ technologies = {
 			leads_to_tech = timberclad_second
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1633
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = @1633 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 100
 				has_completed_focus = NUS_ironclads_focus
+			}
+			modifier = {
+				factor = 0.5
+				tag = NUS
+				NOT = { has_completed_focus = NUS_ironclads_focus }
 			}
 		}
 		categories = {
@@ -292,14 +315,14 @@ technologies = {
 		enable_equipments = {
 			timberclad_2
 		}
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1635
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = @1635 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -317,17 +340,22 @@ technologies = {
 			leads_to_tech = ironclad_second
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1633
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = @1633 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 100
 				has_completed_focus = NUS_ironclads_focus
+			}
+			modifier = {
+				factor = 0.5
+				tag = NUS
+				NOT = { has_completed_focus = NUS_ironclads_focus }
 			}
 		}
 		categories = {
@@ -341,14 +369,14 @@ technologies = {
 		enable_equipments = {
 			ironclad_2
 		}
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1635
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = @1635 }
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		categories = {
 			naval_equipment
@@ -377,11 +405,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			
 			modifier = {
 				factor = 0.5
 				NOT = { has_war = yes }
+			}
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					is_coastal = no
+				}
+			}
+			modifier = {
+				factor = 5
+				count_triggers = {
+					amount = 5
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
 			}
 		}
 		
@@ -411,11 +454,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 10
 			
 			modifier = {
 				factor = 0.5
 				NOT = { has_war = yes }
+			}
+			modifier = {
+				factor = 5
+				count_triggers = {
+					amount = 5
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
 			}
 		}
 		
@@ -440,11 +492,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 10
 			
 			modifier = {
 				factor = 0.5
 				NOT = { has_war = yes }
+			}
+			modifier = {
+				factor = 5
+				count_triggers = {
+					amount = 5
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
 			}
 		}
 		

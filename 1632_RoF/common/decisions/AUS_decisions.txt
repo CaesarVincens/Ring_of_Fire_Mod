@@ -1,0 +1,21 @@
+AUS_major_decisions = {
+
+	reissue_reichsthalers = {
+		visible = {
+			has_country_flag = reichsthalers_crash
+		}
+		available = {
+			NOT = {
+				has_idea = AUS_reichsthalers_3
+			}
+		}
+		cost = 100
+		days_remove = 60
+		remove_effect = {
+			add_timed_idea = {
+				idea = AUS_reichsthalers_2
+				days = 360
+			}
+		}
+	}
+}

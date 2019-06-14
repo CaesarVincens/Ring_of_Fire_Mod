@@ -6,17 +6,16 @@ state={
 	history={
 		owner = AUS
 		victory_points = {
-			11542 40
+			11542 40 
 		}
 		victory_points = {
-			9541 5
+			9541 5 
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-			arms_factory = 1
+			industrial_complex = 3
+			arms_factory = 2
 			air_base = 0
-
 			11401 = {
 				bunker = 1
 
@@ -37,7 +36,7 @@ state={
 	}
 
 	provinces={
-		421 445 469 494 543 583 3462 5283 6418 6440 6592 7857 9414 9421 9429 9541 9569 11401 11414 11542 11556
+		421 445 469 494 543 583 3462 5283 6418 6440 6592 7857 9414 9421 9429 9541 9555 9569 11401 11414 11542 11556 
 	}
 	manpower=1219212
 	buildings_max_level_factor=1.000

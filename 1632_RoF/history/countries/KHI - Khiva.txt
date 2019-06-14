@@ -27,9 +27,10 @@ set_popularities = {
 	constitutionalist = 19
 	liberal = 0
 	radical = 0
-	neutrality = 62
+	neutrality = 63
 }
 
+set_country_flag = religion_islam
 add_ideas = {
 	balanced_eco
 }

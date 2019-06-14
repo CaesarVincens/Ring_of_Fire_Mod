@@ -31,14 +31,15 @@ set_popularities = {
 	neutrality = 3
 }
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 	FRA_cardinal_richelieu
 	anti_habsburg_diplomacy
 	FRA_gaston
 	state_religion_law
+	FRA_edict_of_nantes
 }
-set_stability = 0.5
+set_stability = 0.4
 create_country_leader = {
     name = "Louis XIII de Bourbon"
     desc = "POLITICS_LOUIS_13_BOURBON_DESC"

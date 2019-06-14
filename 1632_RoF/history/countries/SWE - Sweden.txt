@@ -70,6 +70,7 @@ add_to_faction = SXW
 
 news_event = { id = RoF_SWE.1 days = 208 }
 
+set_country_flag = religion_lutheran
 add_ideas = {
 	military_focus_eco
 	drafted_army

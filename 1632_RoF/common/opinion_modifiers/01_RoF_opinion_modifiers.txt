@@ -18,6 +18,9 @@ opinion_modifiers = {
 	hates_BOH = {
 		value = -100
 	}
+	friendly_relations = {
+		value = 20
+	}
 	sold_harlingen = {
 		value = 20
 	}

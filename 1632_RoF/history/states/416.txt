@@ -13,12 +13,13 @@ state = {
 
 	history = {
 		owner = SCO
-		victory_points = { 9392 10 }
+		victory_points = { 9392 20 }
 		victory_points = { 3273 3 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
+			dockyard = 1
 			air_base = 0
 			9392 = {
 				naval_base = 2

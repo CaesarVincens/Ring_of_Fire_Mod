@@ -24,13 +24,14 @@ set_politics = {
     elections_allowed = no
 }
 set_popularities = {
-	absolutist = 0
-	constitutionalist = 79
-	liberal = 10
-	radical = 0
-	neutrality = 2
+	absolutist = 5
+	constitutionalist = 58
+	liberal = 30
+	radical = 4
+	neutrality = 3
 }
 
+set_country_flag = religion_orthodox
 add_ideas = {
 	military_focus_eco
 	secularism
@@ -38,7 +39,7 @@ add_ideas = {
 set_stability = 0.5
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
@@ -49,7 +50,7 @@ create_country_leader = {
 
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = constitutional_monarchy
@@ -60,7 +61,7 @@ create_country_leader = {
 
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = lib_constitutional_monarchy
@@ -71,7 +72,7 @@ create_country_leader = {
 
 create_country_leader = {
     name = "Mikhail Romanov"
-    desc = "POLITICS_DMITRY_GOLIVIN_DESC"
+    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
     picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
     expire = "1660.1.1"
     ideology = monarchy_neutral

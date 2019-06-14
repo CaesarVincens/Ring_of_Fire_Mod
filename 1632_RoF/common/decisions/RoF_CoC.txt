@@ -1,36 +1,6 @@
 #Strength 20-15-10-5-0
 #Anger 10-5-0-0-5-10
 RoF_CoC_decisions = {
-	NUS_test_decision = {
-		allowed = { always = no }
-		visible = {
-			always = no
-		}
-		available = {
-			#original_tag = NUS
-		}
-		complete_effect = {
-			random_state = {
-				limit = { has_state_flag = CoC_agitating_by_@ROOT }
-				clr_state_flag = CoC_agitating_by_@ROOT
-				#ROOT = { set_variable = { var = CoC_agitating_state_name_@THIS value = THIS } }
-			}
-			print_variables = {
-				file = log_file
-				text = header_text
-				append = yes
-				print_global = yes
-			}
-			clear_CoC_vars_and_flags = yes
-			clr_country_flag = CoC_agitate_timer
-			clr_country_flag = support_CoC_timer
-			clr_country_flag = incite_CoC_timer
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 	ban_CoC = {
 		available = {
 			has_country_flag = CoC_present
@@ -302,8 +272,8 @@ RoF_CoC_covert_decisions = {
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
-				is_neighbor_of = ROOT
 				has_country_flag = CoC_present
+				is_neighbor_of = ROOT
 				check_variable = { var = CoC_strength value = 10 compare = less_than }
 				check_variable = { var = CoC_anger value = 0 compare = greater_than_or_equals }
 			}
@@ -347,8 +317,8 @@ RoF_CoC_covert_decisions = {
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
-				is_neighbor_of = ROOT
 				has_country_flag = CoC_present
+				is_neighbor_of = ROOT
 				check_variable = { var = CoC_strength value = 10 compare = less_than }
 				check_variable = { var = CoC_anger value = 5 compare = less_than }
 			}
@@ -451,8 +421,8 @@ RoF_CoC_covert_decisions = {
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
-				is_neighbor_of = ROOT
 				has_country_flag = CoC_present
+				is_neighbor_of = ROOT
 				check_variable = { var = CoC_strength value = 5 compare = greater_than_or_equals }
 				check_variable = { var = CoC_anger value = -5 compare = greater_than_or_equals }
 			}

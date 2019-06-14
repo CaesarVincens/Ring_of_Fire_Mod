@@ -9,12 +9,15 @@ state = {
 	history = {
 		owner = BRS
 		victory_points = {
-			11493 8 
+			6377 10 
+		}
+		victory_points = {
+			9375 10
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}
@@ -25,7 +28,7 @@ state = {
 	provinces = {
 		526 3234 3395 6377 6513 9375 11402 11468 11493 
 	}
-	manpower = 444400
+	manpower = 144400
 	buildings_max_level_factor = 1.000
 	state_category = large_town
 }

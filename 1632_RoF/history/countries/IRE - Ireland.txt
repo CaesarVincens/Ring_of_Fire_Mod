@@ -29,6 +29,7 @@ set_popularities = {
 	neutrality = 5
 }
 
+set_country_flag = religion_catholic
 add_ideas = {
 }
 create_country_leader = {

@@ -30,6 +30,7 @@ set_popularities = {
 	neutrality = 12
 }
 
+set_country_flag = religion_confucian
 add_ideas = {
 	balanced_eco
 }

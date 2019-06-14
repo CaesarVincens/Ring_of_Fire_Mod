@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = SAX
 		victory_points = {
-			514 9 
+			514 20 
 		}
 		buildings = {
 			infrastructure = 2

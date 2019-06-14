@@ -1,5 +1,5 @@
 ﻿capital = 20
-set_research_slots = 3
+set_research_slots = 2
 
 oob = "AUS_OOB"
 
@@ -44,11 +44,13 @@ add_to_faction = COL
 add_to_faction = ALS
 add_to_faction = MEM
 
+set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
 	#mercenary_army
 	hre_emperor
 	archduke_rank
+	AUS_kipper_und_wipper
 }
 set_stability = 0.5
 create_country_leader = {
@@ -82,17 +84,6 @@ create_country_leader = {
     traits = {
 		stand_against_ottoman
     }
-}
-create_corps_commander = {
-	name = "Abrecht von Wallenstein"
-	gfx = "GFX_leader_BOH_Wallenstein"
-	traits = { }
-	skill = 5
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 5
-	id = 1001
 }
 
 create_corps_commander = {

@@ -28,7 +28,7 @@ set_popularities = {
 	radical = 0
 	neutrality = 53
 }
-
+set_country_flag = religion_islam
 add_ideas = {
 	balanced_eco
 }

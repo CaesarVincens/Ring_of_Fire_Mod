@@ -3,8 +3,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 2
-			has_country_flag = directorate_russia_focus_tree
+			add = 10
+			has_country_flag = directorate_russia_focus_tree_flag
 		}
 	}
 	default = no
@@ -27,6 +27,48 @@ focus_tree = {
 	#  INDUSTRY  TREE  #
 	####################
 
+
+	focus = {
+		id = DIRRUS_advance_arms
+		icon = GFX_goal_generic_small_arms
+		x = 4
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.5
+				technology = repeating_rifle_tech
+				name = AK47_bonus
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = DIRRUS_build_more_airships
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = DIRRUS_advance_arms
+		prerequisite = { focus = DIRRUS_advance_arms }
+		completion_reward = {
+			air_experience = 20
+			add_ideas = RUS_airship_production
+		}
+		ai_will_do = {
+			factor = 17
+		}
+	}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
 	####################
 	#  POLITICAL TREE  #
 	####################
@@ -39,6 +81,32 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_political_power = 100
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_recapture_arkhangelsk
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = DIRRUS_secure_bureaus
+		prerequisite = { focus = DIRRUS_secure_bureaus }
+		completion_reward = {
+			transfer_state = 381
+			381 = {
+				hidden_effect = {
+					reduce_state_category = yes
+				}
+				custom_effect_tooltip = reduce_state_category_tt
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -48,13 +116,18 @@ focus_tree = {
 	focus = {
 		id = DIRRUS_start_civil_war
 		icon = GFX_goal_generic_occupy_start_war
-		x = 10
-		y = 0
-		cost = 10
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = DIRRUS_secure_bureaus
+		prerequisite = { focus = DIRRUS_secure_bureaus }
 		completion_reward = {
 			country_event = {
 				id = RoF_RUS.120
 			}
+		}
+		bypass = {
+			has_war_with = USR
 		}
 		ai_will_do = {
 			factor = 10
@@ -63,15 +136,22 @@ focus_tree = {
 
 	focus = {
 		id = DIRRUS_hire_kazakh
-		icon = GFX_goal_generic_occupy_start_war
-		x = 7
-		y = 5
+		icon = GFX_goal_tripartite_pact
+		x = 0
+		y = 1
 		cost = 10
+		relative_position_id = DIRRUS_start_civil_war
+		prerequisite = { focus = DIRRUS_start_civil_war }
 		available = {
-			date > 1637.1.1
+			#date > 1637.1.1
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			KAZ = {
+				country_event = {
+					id = RoF_RUS.128
+					hours = 2
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 10

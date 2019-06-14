@@ -11,9 +11,6 @@ state = {
 
 	history = {
 		owner = AUS
-		victory_points = {
-			9679 3 
-		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

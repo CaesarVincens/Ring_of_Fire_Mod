@@ -23,14 +23,14 @@ set_politics = {
     elections_allowed = no
 }
 set_popularities = {
-	absolutist = 23
+	absolutist = 22
 	constitutionalist = 25
 	liberal = 0
 	radical = 0
 	neutrality = 53
 }
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 }

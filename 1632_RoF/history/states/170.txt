@@ -6,12 +6,12 @@ state = {
 	history = {
 		owner = HES
 		victory_points = {
-			564 8 
+			564 10 
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
 			air_base = 0
 			564 = {
 				bunker = 2

@@ -1,0 +1,68 @@
+﻿capital = 21
+set_research_slots = 2
+
+oob = "TYR_OOB"
+
+# Starting tech
+set_technology = {
+infrastructure_tech_base = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+
+# DIPLOMACY
+
+set_politics = {
+    ruling_party = absolutist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_popularities = {
+	absolutist = 78
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 3
+}
+
+set_country_flag = religion_catholic
+add_ideas = {
+	balanced_eco
+}
+give_military_access = AUS
+set_stability = 0.5
+create_country_leader = {
+    name = "Claudia de' Medici"
+    desc = "POLITICS_CLAUDIA_MEDICI_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Tyrol_Claudia_Medici.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}
+
+create_country_leader = {
+    name = "Claudia de' Medici"
+    desc = "POLITICS_CLAUDIA_MEDICI_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Tyrol_Claudia_Medici.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+	}
+}
+
+create_country_leader = {
+    name = "Claudia de' Medici"
+    desc = "POLITICS_CLAUDIA_MEDICI_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Tyrol_Claudia_Medici.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}

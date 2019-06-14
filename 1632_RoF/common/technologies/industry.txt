@@ -28,7 +28,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 50
+			factor = 1500
 		}
 		
 		categories = {
@@ -318,10 +318,6 @@ technologies = {
 		categories = {
 			industry
 		}
-		
-		ai_research_weights = {
-			offensive = -1.0
-		}
 	}
 	
 	concentrated_industry2 = {
@@ -356,10 +352,6 @@ technologies = {
 		categories = {
 			industry
 		}
-		
-		ai_research_weights = {
-			offensive = -1.0
-		}
 	}
 	
 	concentrated_industry3 = {
@@ -392,10 +384,6 @@ technologies = {
 		
 		categories = {
 			industry
-		}
-		
-		ai_research_weights = {
-			offensive = -1.0
 		}
 	}
 	
@@ -430,10 +418,6 @@ technologies = {
 		categories = {
 			industry
 		}
-		
-		ai_research_weights = {
-			offensive = -1.0
-		}
 	}
 	
 	concentrated_industry5 = {
@@ -451,7 +435,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 10
 			
 			modifier = {
 				factor = 5
@@ -466,10 +450,6 @@ technologies = {
 		
 		categories = {
 			industry
-		}
-		
-		ai_research_weights = {
-			offensive = -1.0
 		}
 	}
 	
@@ -521,10 +501,6 @@ technologies = {
 		categories = {
 			industry
 		}
-		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 	
 	dispersed_industry2 = {
@@ -560,10 +536,6 @@ technologies = {
 		
 		categories = {
 			industry
-		}
-		
-		ai_research_weights = {
-			defensive = -1.0
 		}
 	}
 	
@@ -601,10 +573,6 @@ technologies = {
 		categories = {
 			industry
 		}
-		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 	
 	dispersed_industry4 = {
@@ -641,10 +609,6 @@ technologies = {
 		categories = {
 			industry
 		}
-		
-		ai_research_weights = {
-			defensive = -1.0
-		}
 	}
 	
 	dispersed_industry5 = {
@@ -677,10 +641,6 @@ technologies = {
 		
 		categories = {
 			industry
-		}
-		
-		ai_research_weights = {
-			defensive = -1.0
 		}
 	}
 	#####################################
@@ -724,11 +684,11 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				oil > 30
-			}			
-		}
-		
-		ai_research_weights = {
-			oil = -2.0
+			}
+			modifier = {
+				factor = 0
+				date < 1634.1.1
+			}		
 		}
 	}
 	
@@ -777,10 +737,6 @@ technologies = {
 			}			
 		}
 		
-		ai_research_weights = {
-			oil = -2.0
-		}
-		
 		show_effect_as_desc = yes
 	}
 	
@@ -826,107 +782,6 @@ technologies = {
 				factor = 0.5
 				oil > 30
 			}			
-		}
-		
-		ai_research_weights = {
-			oil = -2.0
-		}
-		
-		show_effect_as_desc = yes
-	}
-	
-	advanced_oil_processing = {
-
-		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = oil
-				amount = 1
-			}
-		}
-
-		path = {
-			leads_to_tech = modern_oil_processing
-			research_cost_coeff = 1
-		}
-		
-		research_cost = 1.5
-		start_year = 1636
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 8 }
-		}
-		
-		categories = {
-			industry
-			synth_resources
-		}
-		
-		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				factor = 0.5
-				oil > 10
-			}
-			modifier = {
-				factor = 0.5
-				oil > 20
-			}	
-			modifier = {
-				factor = 0.5
-				oil > 30
-			}			
-		}
-		
-		ai_research_weights = {
-			oil = -2.0
-		}
-		
-		show_effect_as_desc = yes
-	}
-
-	modern_oil_processing = {
-
-		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = oil
-				amount = 1
-			}
-		}
-		
-		research_cost = 1.5
-		start_year = 1638
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 10 }
-		}
-		
-		categories = {
-			industry
-			synth_resources
-		}
-		
-		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				factor = 0.5
-				oil > 10
-			}
-			modifier = {
-				factor = 0.5
-				oil > 20
-			}	
-			modifier = {
-				factor = 0.5
-				oil > 30
-			}			
-		}
-		
-		ai_research_weights = {
-			oil = -2.0
 		}
 		
 		show_effect_as_desc = yes
@@ -992,7 +847,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			
 			modifier = {
 				factor = 5.0
@@ -1048,7 +903,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 40
 			
 			modifier = {
 				factor = 10
@@ -1079,7 +934,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			
 			modifier = {
 				factor = 5.0
@@ -1136,7 +991,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 30
 			
 			modifier = {
 				factor = 1.5
@@ -1178,7 +1033,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			
 			modifier = {
 				factor = 5.0
@@ -1234,7 +1089,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 20
 			
 			modifier = {
 				factor = 10
@@ -1265,7 +1120,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			
 			modifier = {
 				factor = 5.0
@@ -1318,7 +1173,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 10
 			
 			modifier = {
 				factor = 10
@@ -1350,7 +1205,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 10
 			
 			modifier = {
 				factor = 5.0

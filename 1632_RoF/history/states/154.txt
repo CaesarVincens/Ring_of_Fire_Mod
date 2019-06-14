@@ -7,11 +7,11 @@ state = {
 
 	history = {
 		owner = FRK
-		victory_points = { 6488 8 }
+		victory_points = { 6488 10 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 		}
 		add_core_of = FRK

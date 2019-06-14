@@ -30,6 +30,7 @@ set_popularities = {
 	neutrality = 72
 }
 
+set_country_flag = religion_lutheran
 add_ideas = {
 	military_focus_eco
 }

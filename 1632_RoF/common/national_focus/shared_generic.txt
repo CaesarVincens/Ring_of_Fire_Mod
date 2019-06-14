@@ -11,7 +11,7 @@
 		available = {
 			custom_trigger_tooltip = {
 				NUS = {
-					has_completed_focus = NUS_las_vegas_belle
+					has_completed_focus = NUS_first_flight
 				}
 				tooltip = Rof_first_flight.tt
 			}
@@ -886,16 +886,12 @@
 			}
 		}
 		ai_will_do = {
-			factor = 3
+			base = 2
 			modifier = {
-				factor = 0
-				date < 1633.1.1
-				OR = {
-					num_of_controlled_states < 2
-				}
+				factor = 2
+				num_of_factories < 10
 			}
 		}
-
 	}
 	shared_focus = {
 		id = machined_parts
@@ -951,7 +947,13 @@
 				set_state_flag = machined_parts_state_@ROOT
 			}
 		}
-
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				num_of_military_factories < 5
+			}
+		}
 	}
 	shared_focus = {
 		id = improved_materials
@@ -1007,7 +1009,13 @@
 				set_state_flag = improved_materials_state_@ROOT
 			}
 		}
-
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				num_of_military_factories < 5
+			}
+		}
 	}
 	shared_focus = {
 		id = assembly_lines
@@ -1063,7 +1071,13 @@
 				set_state_flag = assembly_lines_state_@ROOT
 			}
 		}
-
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				num_of_military_factories < 5
+			}
+		}
 	}
 	shared_focus = {
 		id = steam_power
@@ -1117,6 +1131,13 @@
 					instant_build = yes
 				}
 				set_state_flag = steam_power_state_@ROOT
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				num_of_civilian_factories < 5
 			}
 		}
 	}
@@ -1174,6 +1195,13 @@
 				set_state_flag = electricity_focus_state_@ROOT
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				num_of_civilian_factories < 5
+			}
+		}
 	}
 	shared_focus = {
 		id = joint_stock_companies
@@ -1227,6 +1255,13 @@
 					instant_build = yes
 				}
 				set_state_flag = joint_stock_companies_state_@ROOT
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				num_of_civilian_factories < 5
 			}
 		}
 	}

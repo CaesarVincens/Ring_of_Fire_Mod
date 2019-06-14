@@ -31,6 +31,7 @@ set_popularities = {
 	neutrality = 12
 }
 
+set_country_flag = religion_lutheran
 add_ideas = {
 	balanced_eco
 }

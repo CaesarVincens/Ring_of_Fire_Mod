@@ -32,6 +32,39 @@ focus_tree = {
 	####################
 	shared_focus = industrial_advances
 
+	focus = {
+		id = UPS_send_japan_gifts
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		x = 19
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_heard_of_RoF_TT
+				OR = {
+					date > 1631.10.1
+					has_country_flag = knows_about_grantville
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 120
+			JAP = {
+				country_event = {
+					id = RoF_JAP.100
+					days = 220
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
 	####################
 	#  POLITICAL TREE  #
 	####################
@@ -58,8 +91,11 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
 		}
-
 	}
 	
 	focus = {
@@ -137,6 +173,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = UPS_support_counter_remonstrants
+		prerequisite = { focus = UPS_support_counter_remonstrants focus = UPS_seek_middle_ground focus = UPS_support_remonstrants }
 		available = {
 			NOT = { has_war_with = SPN }
 			NOT = { owns_state = 458 }
@@ -178,6 +215,67 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = {
+					date < 1631.10.31
+				}
+				add_timed_idea = {
+					idea = UPS_maastricht_campaign
+					days = 210
+				}
+				set_variable = { maastricht_campaign = 6 }
+			}
+			else_if = {
+				limit = {
+					date > 1631.11.1
+					date < 1631.11.30
+				}
+				add_timed_idea = {
+					idea = UPS_maastricht_campaign
+					days = 175
+				}
+				set_variable = { maastricht_campaign = 5 }
+			}
+			else_if = {
+				limit = {
+					date > 1631.12.1
+					date < 1631.12.31
+				}
+				add_timed_idea = {
+					idea = UPS_maastricht_campaign
+					days = 140
+				}
+				set_variable = { maastricht_campaign = 4 }
+			}
+			else_if = {
+				limit = {
+					date > 1632.1.1
+					date < 1632.1.31
+				}
+				add_timed_idea = {
+					idea = UPS_maastricht_campaign
+					days = 105
+				}
+				set_variable = { maastricht_campaign = 3 }
+			}
+			else_if = {
+				limit = {
+					date > 1632.2.1
+					date < 1632.2.28
+				}
+				add_timed_idea = {
+					idea = UPS_maastricht_campaign
+					days = 70
+				}
+				set_variable = { maastricht_campaign = 2 }
+			}
+			else = {
+				add_timed_idea = {
+					idea = UPS_maastricht_campaign
+					days = 35
+				}
+				set_variable = { maastricht_campaign = 1 }
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -196,6 +294,7 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = SPN }
 			NOT = { owns_state = 458 }
+			NOT = { has_idea = UPS_maastricht_campaign }
 		}
 		bypass = {
 			OR = {
@@ -209,7 +308,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
 	
 	focus = {

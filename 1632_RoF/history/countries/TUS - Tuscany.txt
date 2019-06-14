@@ -30,6 +30,7 @@ set_popularities = {
 	neutrality = 62
 }
 
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 }
@@ -40,6 +41,24 @@ create_country_leader = {
     picture = "gfx/leaders/Italies/Portrait_Tuscany_Ferdinando_II.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Ferdinando II de' Medici"
+    desc = "POLITICS_ANDREA_DI SAVOIA_DESC"
+    picture = "gfx/leaders/Italies/Portrait_Tuscany_Ferdinando_II.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Ferdinando II de' Medici"
+    desc = "POLITICS_ANDREA_DI SAVOIA_DESC"
+    picture = "gfx/leaders/Italies/Portrait_Tuscany_Ferdinando_II.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
     traits = {
     }
 }

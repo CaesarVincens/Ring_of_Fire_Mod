@@ -9,8 +9,8 @@ RoF_ai_decisions = {
 		}
 		available = {
 			is_ai = yes
-			date > 1631.9.16
 			NOT = { has_global_flag = breitenfeld_fired }
+			date > 1631.9.16
 		}
 		complete_effect = {
 			set_global_flag = breitenfeld_fired
@@ -27,8 +27,8 @@ RoF_ai_decisions = {
 		}
 		available = {
 			is_ai = yes
-			NOT = { any_country = { has_idea = CoC_timer } }
 			has_global_flag = CoC_established
+			NOT = { any_country = { has_idea = CoC_timer } }
 		}
 		complete_effect = {
 			add_timed_idea = { idea = CoC_timer days = 30 }
@@ -51,6 +51,27 @@ RoF_ai_decisions = {
 				check_CoC_strength_anger = yes
 				check_CoC_effects_for_this = yes
 			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	rename_stetin = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			is_ai = yes
+			472 = {
+				NOT = {
+					is_owned_by = SWE
+					has_state_flag = name_reset
+				}
+			}
+		}
+		complete_effect = {
+			472 = { reset_state_name = yes set_state_flag = name_reset }
 		}
 		ai_will_do = {
 			base = 1
