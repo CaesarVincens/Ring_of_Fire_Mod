@@ -1576,7 +1576,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_princess_elizabeth
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_focus_princess_elizabeth
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_constitutional_monarchy
@@ -1611,7 +1611,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_prince_rupert
-		icon = GFX_focus_eng_god_save_the_king
+		icon = GFX_focus_prince_rupert
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_constitutional_monarchy

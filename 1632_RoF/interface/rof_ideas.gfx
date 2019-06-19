@@ -59,6 +59,35 @@ spriteTypes = {
 		name = "GFX_idea_drafted_army"
 		texturefile = "gfx/interface/ideas/idea_extensive_conscription.dds"
 	}
+	### RELIGION FLAVOR
+	spriteType = {
+		name = "GFX_idea_religion_catholic"
+		texturefile = "gfx/interface/ideas/idea_religion_catholic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religion_lutheran"
+		texturefile = "gfx/interface/ideas/idea_religion_lutheran.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religion_reformed"
+		texturefile = "gfx/interface/ideas/idea_religion_reformed.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religion_orthodox"
+		texturefile = "gfx/interface/ideas/idea_religion_orthodox.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religion_sunni"
+		texturefile = "gfx/interface/ideas/idea_religion_islam.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religion_shia"
+		texturefile = "gfx/interface/ideas/idea_religion_islam.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religion_secular"
+		texturefile = "gfx/interface/ideas/idea_free_religion.dds"
+	}
 	### ADVISORS
 	spriteType = {
 		name = "GFX_idea_richelieu_pic"

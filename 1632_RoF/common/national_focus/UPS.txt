@@ -34,7 +34,7 @@ focus_tree = {
 
 	focus = {
 		id = UPS_send_japan_gifts
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		cost = 10
 		x = 19
 		y = 0

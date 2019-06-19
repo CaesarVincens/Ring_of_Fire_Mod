@@ -41,8 +41,41 @@ ideas = {
 			removal_cost = -1
 			picture = chi_hyper_inflation3
 			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		AUS_kipper_und_wipper_3 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = chi_hyper_inflation2
+			modifier = {
 				consumer_goods_factor = 0.1
 				production_speed_buildings_factor = -0.1
+			}
+		}
+		AUS_kipper_und_wipper_4 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = chi_hyper_inflation1
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_speed_buildings_factor = -0.5
+			}
+		}
+		AUS_race_track_city = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		AUS_patent_sales = {

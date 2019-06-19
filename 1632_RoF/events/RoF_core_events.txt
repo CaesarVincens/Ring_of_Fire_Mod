@@ -586,3 +586,60 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = RoF.100
+	title = "Test Event 1"
+	desc = "test"
+	picture = GFX_report_event_aus_sax_swe_flag
+
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = RoF.101
+			days = 1
+			random = 5
+		}
+	}
+	option = {
+		name = "Test option"
+		country_event = {
+			id = RoF.102
+			hours = 24
+			random = 60
+		}
+	}
+}
+
+country_event = {
+	id = RoF.101
+	title = "Test Event 2"
+	desc = "test"
+	picture = GFX_report_event_aus_sax_swe_flag
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	option = {
+		name = "Test option"
+	}
+}
+
+country_event = {
+	id = RoF.102
+	title = "Test Event 3"
+	desc = "test"
+	picture = GFX_report_event_aus_sax_swe_flag
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	option = {
+		name = "Test option"
+	}
+}

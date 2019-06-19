@@ -2488,6 +2488,9 @@ focus_tree = {
 			}
 			add_popularity = { ideology = radical popularity = 0.05 }
 			every_neighbor_country = {
+				limit = {
+					NOT = { has_variable = CoC_strength }
+				}
 				country_event = { id = RoF.009 random = 24 }
 			}
 			every_other_country = {

@@ -12,12 +12,18 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
-Alpha 0.6.0 - 
+Alpha 0.6.0 - Viennese Waltz - 
 Updated to HoI Patch 1.7.0
-Realigned many countries to isolationist/neutral politics, for now.
+Realigned many countries to isolationist/neutral politics, for now
 Many changes to AI behavior, especially around tech
 Started work on Austria focus Tree
-Updates to several focus trees
+Updates to several focus trees, especially the Russian trees, with constitutional convention
+Several new events, some events stand in for focuses until focus trees for certain countries are made
+New Religion Flavor ideas (toggled by decision)
+Added a few new focus icons
+Updates to some flags
+Minor map changes
+Air bases and naval bases now store some fuel
 Removed Merc battalions
 
 Alpha 0.5.1 - Apr. 3, 2019

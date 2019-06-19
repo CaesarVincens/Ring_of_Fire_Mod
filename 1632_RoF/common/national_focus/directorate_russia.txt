@@ -63,11 +63,6 @@ focus_tree = {
 			factor = 17
 		}
 	}
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
 
 	####################
 	#  POLITICAL TREE  #

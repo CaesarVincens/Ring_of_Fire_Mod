@@ -28,7 +28,7 @@ guiTypes = {
 			name ="status_senate"
 			position = { x = @SENATE_TEXT_X y = @STATUS_Y }
 			font = "hoi_18mbs"
-			text = "USA_congress_senate_support_amount"
+			text = "NUS_congress_senate_support_amount"
 			format = center
 		}
 
@@ -42,7 +42,7 @@ guiTypes = {
 			name ="status_house"
 			position = { x= @HOUSE_TEXT_X y = @STATUS_Y }
 			font = "hoi_18mbs"
-			text = "USA_congress_house_support_amount"
+			text = "NUS_congress_house_support_amount"
 			format = center
 			fixedsize = yes
 			maxWidth = 280

@@ -1,0 +1,27 @@
+﻿add_namespace = RoF_BAV
+
+country_event = {
+	id = RoF_BAV.100
+	title = RoF_BAV.100.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_BAV.100.d
+	fire_only_once = yes
+
+	trigger = {
+		date > 1634.1.1
+		tag = BAV
+		has_country_leader = {
+			name = "Maximilian von Wittelsbach"
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		set_global_flag = max_wife_dead
+	}
+	option = {
+		name = RoF_BAV.100.a
+	}
+}

@@ -37,7 +37,7 @@ focus_tree = {
 	####################
 	focus = {
 		id = SPN_don_fernando
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_don_fernando
 		cost = 5
 		x = 22
 		y = 0
@@ -249,8 +249,8 @@ focus_tree = {
 			has_global_flag = maria_anna_escaped
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
-			#country_event = { id = RoF_NED.115 }
+			#custom_effect_tooltip = focus_effect_WIP_TT
+			country_event = { id = RoF_NED.105 }
 		}
 		ai_will_do = {
 			factor = 20

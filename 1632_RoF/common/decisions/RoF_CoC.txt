@@ -7,7 +7,7 @@ RoF_CoC_decisions = {
 			NOT = { has_country_flag = CoC_banned }
 			custom_trigger_tooltip = {
 				tooltip = CoC_strength_under_10.tt
-				check_variable = { var = CoC_strength value = 10 compare = less_than }
+				check_variable = { var = CoC_strength value = 10 compare = less_than_or_equals }
 			}
 		}
 		visible = {
@@ -65,7 +65,7 @@ RoF_CoC_decisions = {
 			NOT = { has_country_flag = CoC_banned }
 			custom_trigger_tooltip = {
 				tooltip = CoC_strength_under_20.tt
-				check_variable = { var = CoC_strength value = 20 compare = less_than }
+				check_variable = { var = CoC_strength value = 20 compare = less_than_or_equals }
 			}
 		}
 		visible = {

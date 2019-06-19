@@ -36,11 +36,29 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Maximilian I von Wittelsbach"
-    desc = "POLITICS_MAXIMILIAN_VON HESS_DESC"
+    name = "Maximilian von Wittelsbach"
+    desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
     picture = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Maximilian von Wittelsbach"
+    desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+    picture = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Maximilian von Wittelsbach"
+    desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+    picture = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
     traits = {
     }
 }

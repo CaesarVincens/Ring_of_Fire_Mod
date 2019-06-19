@@ -53,6 +53,29 @@ SAX_BRA_ally_SWE = {
 
 }
 
+SAX_BRA_stay_out_ostend = {
+	name = "Stay Out of Ostend"
+	desc = "Leave the Faction"
+	enable = {
+		OR = {
+			tag = SAX
+			tag = BRA
+		}
+		is_historical_focus_on = yes
+		is_in_faction_with = NUS
+	}
+	abort = {
+
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = FRA
+		id = NUS
+		value = 500
+	}
+
+}
+
 SAX_BRA_watch_AUS = {
 	name = "Watch AUS"
 	desc = ""

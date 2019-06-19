@@ -48,6 +48,7 @@ buildings = {
 		max_level = 10
 		value = 1
 		damage_factor = 0.5
+		max_fuel_building = 1 #k
 	}
 
 	naval_base = {
@@ -61,6 +62,7 @@ buildings = {
 		icon_frame = 6
 		max_level = 10
 		value = 1
+		max_fuel_building = 0.05 #k
 	}
 
 	bunker = {

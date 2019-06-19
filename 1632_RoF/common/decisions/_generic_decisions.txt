@@ -256,6 +256,14 @@ propaganda_efforts = {
 					has_offensive_war = yes
 				}
 			}
+			if = {
+				limit = {
+					FROM = {
+						is_neighbor_of = ROOT
+					}
+					set_temp_variable = { war_propaganda_cost = 50 }
+				}
+			}
 		}
 
 		visible = {
@@ -374,6 +382,7 @@ propaganda_efforts = {
 		}
 
 		visible = {
+			always = no
 			FROM = { NOT = { has_government = ROOT } }
 			FROM = {
 				is_neighbor_of = ROOT

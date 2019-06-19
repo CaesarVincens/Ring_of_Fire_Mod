@@ -11,7 +11,25 @@ AUS_canon_focuses = {
 
 	}
 	ai_national_focuses = {
-
+		AUS_sweet_talk_saxony
+		AUS_bolster_bohemia
+		AUS_reinforce_rhine
+		AUS_sell_patents
+		AUS_reinstate_wallenstein
+		AUS_cheat_sheets
+		AUS_improved_weapons
+		AUS_issue_reichsthalers
+		AUS_industrial_investments
+		AUS_military_investments
+		AUS_handle_wallenstein
+		AUS_develop_inner_austria
+		AUS_develop_hungary
+		AUS_bavarian_alliance
+		AUS_illness_ferdinand_2
+		AUS_hire_americans
+		AUS_ferdinand_3
+		AUS_new_empire
+		AUS_race_track_city
 	}
 }
 

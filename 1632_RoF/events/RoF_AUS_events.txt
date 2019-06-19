@@ -10,6 +10,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		set_global_flag = wallenstein_takes_BOH
 		hidden_effect = {
 			if = {
 				limit = {
@@ -240,7 +241,7 @@ country_event = {
 country_event = {
 	id = RoF_AUS.104
 	title = RoF_AUS.104.t
-	picture = GFX_report_event_boh_flag
+	picture = GFX_report_event_aus_flag
 	desc = RoF_AUS.104.d
 	fire_only_once = yes
 
@@ -248,14 +249,14 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			news_event = { id = RoF_news.0201 days = 1 }
+			#news_event = { id = RoF_news.0201 days = 1 }
 		}
 	}
 	
 	option = {
-		name = RoF_AUS.103.a
+		name = RoF_AUS.104.a
 		remove_unit_leader = 1001
-		remove_unit_leader = 1002
+		#remove_unit_leader = 1002
 		ai_chance = {
 			factor = 10
 		}
@@ -314,6 +315,7 @@ country_event = {
 	
 	immediate = {
 		remove_unit_leader = 1003
+		set_country_flag = tilly_dead
 	}
 	option = {
 		name = RoF_AUS.110.a
@@ -340,7 +342,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_AUS.1101.a
-		create_corps_commander = {
+		create_field_marshal = {
 			name = "Abrecht von Wallenstein"
 			gfx = "GFX_leader_BOH_Wallenstein"
 			traits = { }
@@ -365,6 +367,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		set_country_flag = wallenstein_injured
 		remove_unit_leader = 1001
 	}
 	option = {
@@ -524,6 +527,121 @@ country_event = {
 	}
 }
 
+
+#reinforce Rhine set-up
+country_event = {
+	id = RoF_AUS.123
+	title = RoF_AUS.123.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.123.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_AUS.123.a
+		if = {
+			limit = {
+				TRI = { is_potential_friend_of_ROOT = yes }
+			}
+			effect_tooltip = {
+				add_to_faction = TRI
+				TRI = {
+					add_manpower = 5000
+					capital_scope = {
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				PAL = { is_potential_friend_of_ROOT = yes }
+			}
+			effect_tooltip = {
+				add_to_faction = PAL
+				PAL = {
+					add_manpower = 5000
+					capital_scope = {
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					TRI = { is_potential_friend_of_ROOT = yes  }
+				}
+				TRI = {
+					country_event = {
+						id = RoF_AUS.124
+						hours = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					PAL = { has_capitulated = no }
+				}
+				PAL = {
+					country_event = {
+						id = RoF_AUS.124
+						hours = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+#reinforce Rhine complete
+country_event = {
+	id = RoF_AUS.124
+	title = RoF_AUS.124.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.124.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_AUS.124.a
+		AUS = {
+			add_to_faction = ROOT
+		}
+		add_manpower = 5000
+		capital_scope = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_AUS.124.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
 #Saxony joins
 country_event = {
 	id = RoF_AUS.125
@@ -580,6 +698,27 @@ country_event = {
 
 #Reichsthalers
 country_event = {
+	id = RoF_AUS.129
+	title = RoF.hidden.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF.hidden.d
+#	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#crash
+	option = {
+		name = RoF_AUS.129.a
+		lessen_AUS_kipper = yes
+	}
+}
+
+
+#Reichsthalers
+country_event = {
 	id = RoF_AUS.130
 	title = RoF_AUS.130.t
 	picture = GFX_report_event_aus_flag
@@ -621,6 +760,7 @@ country_event = {
 			idea = AUS_reichsthalers_2
 			days = 180
 		}
+		lessen_AUS_kipper = yes
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -652,6 +792,78 @@ country_event = {
 			add_idea = AUS_reichsthalers_3
 		}
 		set_country_flag = reichsthalers_crash
+	}
+}
+
+#Maria and Max
+country_event = {
+	id = RoF_AUS.140
+	title = RoF_AUS.140.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.140.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = RoF_AUS.141
+				days = 70
+			}
+		}
+	}
+
+	option = {
+		name = RoF_AUS.140.a
+		set_global_flag = maria_anna_in_bavaria
+	}
+}
+
+#Maria escapes
+country_event = {
+	id = RoF_AUS.141
+	title = RoF_AUS.141.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.141.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = RoF_AUS.141.a
+		set_global_flag = maria_anna_escaped
+	}
+}
+
+#ferdinand II sick
+country_event = {
+	id = RoF_AUS.149
+	title = RoF_AUS.149.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.149.d
+	fire_only_once = yes
+
+	#is_triggered_only = yes
+	
+	trigger = {
+		tag = AUS
+		date > 1634.6.1
+		has_country_leader = {
+			ruling_only = yes
+			name = "Ferdinand II von Habsburg"
+		}
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	option = {
+		name = RoF_AUS.149.a
+		set_country_flag = ferdinand_2_sickness
 	}
 }
 
@@ -704,7 +916,13 @@ country_event = {
 		}
 		if = {
 			limit = { has_government = absolutist }
-			add_popularity = { ideology = constitutionalist popularity = 0.55 }
+			set_temp_variable = {
+				abs_pop = party_popularity@absolutist
+			}
+			multiply_temp_variable = {
+				abs_pop = 0.75
+			}
+			add_popularity = { ideology = constitutionalist popularity = abs_pop }
 		}
 		create_country_leader = {
 			name = "Ferdinand III von Habsburg"
@@ -739,6 +957,7 @@ country_event = {
 			}
 			dismantle_faction = yes
 		}
+		complete_national_focus = AUS_new_empire
 		ai_chance = {
 			factor = 100
 		}
@@ -746,6 +965,7 @@ country_event = {
 	option = {
 		name = RoF_AUS.150.b
 		set_country_flag = AUS_seek_hre_flag
+		complete_national_focus = AUS_restore_austria
 		ai_chance = {
 			factor = 10
 		}

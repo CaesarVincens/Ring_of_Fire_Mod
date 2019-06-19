@@ -57,6 +57,7 @@
  atheism:0 "State Atheism"
  atheism_desc:0 "If God wants nobles to rule over commoners, we have no use for that God."
  increase_infra_tech.tt:0 "§YFree infrastructure after researching higher Infrastructure Technology.§!\n"
+ need_infra_tech.tt:0 "§YWill add free infrastructure if we increase our Infrastructure technology level.§!\n"
  need_tech_for_airfields:0 "Once we research Aerial Technology, we can build airfields.\n"
  NUS_settled_in.tt:0 "We have to take stock of our circumstances first."
  NUS_abs_pol.tt:0 "May cause an absolutist coup in the government."

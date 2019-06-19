@@ -101,6 +101,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_aus_sax_swe_flag"
+		texturefile = "gfx/event_pictures/report_event_aus_sax_swe_flag.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_boh_flag"
 		texturefile = "gfx/event_pictures/report_event_boh_flag.dds"
 	}
@@ -113,6 +118,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_breitenfeld"
 		texturefile = "gfx/event_pictures/report_event_breitenfeld.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_battle_east"
+		texturefile = "gfx/event_pictures/report_event_battle_east.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_battle_east2"
+		texturefile = "gfx/event_pictures/report_event_battle_east2.dds"
 	}
 
 	spriteType = {
@@ -158,6 +172,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_battle_sea"
 		texturefile = "gfx/event_pictures/news_event_battle_sea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_battle_east"
+		texturefile = "gfx/event_pictures/news_event_battle_east.dds"
 	}
 
 }

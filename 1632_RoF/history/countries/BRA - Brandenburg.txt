@@ -50,3 +50,21 @@ create_country_leader = {
     traits = {
     }
 }
+create_country_leader = {
+    name = "George William von Hohenzollern"
+    desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "George William von Hohenzollern"
+    desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}

@@ -262,7 +262,21 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		completion_reward = {
-			SAX = { country_event = { id = RoF_German.130 hours = 12 } }
+			if = {
+				limit = {
+					AUS = {
+						focus_progress = {
+							focus = AUS_sweet_talk_saxony
+							progress > 0
+						}
+						NOT = { has_completed_focus = AUS_sweet_talk_saxony }
+					}
+				}
+				SAX = { country_event = { id = RoF_German.132 hours = 12 } }
+				else = {
+					SAX = { country_event = { id = RoF_German.130 hours = 12 } }
+				}
+			}
 		}
 	}
 	
@@ -396,7 +410,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_restore_frederick
+		id = SWE_restore_bohemia
+		dynamic = yes
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		ai_will_do = {
 			factor = 10
@@ -450,7 +465,7 @@ focus_tree = {
 				NOT = { AUS = { owns_state = 20 } }
 			}
 		}
-		prerequisite = { focus = SWE_restore_frederick }
+		prerequisite = { focus = SWE_restore_bohemia }
 		prerequisite = { focus = SWE_secure_silesia }
 		relative_position_id = SWE_secure_silesia
 		cost = 10

@@ -129,6 +129,22 @@ country_event = {
 	}
 }
 
+
+#Maria Anna Rescued
+country_event = {
+	id = RoF_NED.105
+	title = RoF_NED.105.t
+	desc = RoF_NED.105.d
+
+	picture = GFX_report_event_aus_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.105.a
+	}
+}
+
 #UPS capitulates
 country_event = {
 	id = RoF_NED.110

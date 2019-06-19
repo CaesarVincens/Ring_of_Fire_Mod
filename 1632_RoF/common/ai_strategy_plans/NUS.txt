@@ -199,58 +199,21 @@ NUS_avoid_KUR = {
 	}
 }
 
-NUS_engines_308 = { #grantville 308
-
+NUS_build_engines = {
 	name = "Build Engines"
-	desc = "Grantville"
+	desc = ""
 	enable = {
 		tag = NUS
 		#has_war = no
 		has_tech = engine_factory_tech_0
-		308 = {
-			is_controlled_by = NUS
-			engine_factory < 3
-			free_building_slots = {
-				building = engine_factory
-				size > 0
-			}
-		}
 	}
 
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = engine_factory
-		target = 308
-		value = 5
-	}	
-}
-
-NUS_engines_247 = { #Magdeburg 247
-	name = "Build Engines"
-	desc = "Magdeburg"
-	enable = {
-		tag = NUS
-		#has_war = no
-		has_tech = engine_factory_tech_0
-		247 = {
-			is_controlled_by = NUS
-			engine_factory < 3
-			free_building_slots = {
-				building = engine_factory
-				size > 0
-			}
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = build_building
-		id = engine_factory
-		target = 247
-		value = 5
+		value = 10
 	}	
 }
 
