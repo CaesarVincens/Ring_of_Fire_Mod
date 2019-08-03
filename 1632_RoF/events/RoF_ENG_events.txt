@@ -1,5 +1,35 @@
 ﻿add_namespace = RoF_ENG
 
+country_event = {
+	id = RoF_ENG.101
+	title = RoF_ENG.101.t
+	picture = GFX_report_event_swe_flag
+	desc = {
+		trigger = {
+			has_country_flag = SWE_accepted
+		}
+		text = RoF_ENG.101.da
+	}
+	desc = {
+		trigger = {
+			has_country_flag = SWE_rejected
+		}
+		text = RoF_ENG.101.db
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_ENG.101.a
+		trigger = { has_country_flag = SWE_accepted }
+		SWE = { add_to_faction = ROOT }
+	}
+	option = {
+		name = RoF_ENG.101.b
+		trigger = { has_country_flag = SWE_rejected }
+	}
+}
+
 #return Orkneys to DEN
 country_event = {
 	id = RoF_ENG.110

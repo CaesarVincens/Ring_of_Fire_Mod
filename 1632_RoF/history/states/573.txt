@@ -36,7 +36,7 @@ state={
 		}
 		add_core_of = BOH
 		add_core_of = AUS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces={

@@ -67,7 +67,7 @@ ideas = {
 				production_speed_buildings_factor = -0.5
 			}
 		}
-		AUS_race_track_city = {
+		AUS_american_industry_idea = {
 			allowed = {
 				always = no
 			}
@@ -76,6 +76,17 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.1
+			}
+		}
+		AUS_bohemian_rail = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_infrastructure
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_infrastructure_factor = 0.1
 			}
 		}
 		AUS_patent_sales = {

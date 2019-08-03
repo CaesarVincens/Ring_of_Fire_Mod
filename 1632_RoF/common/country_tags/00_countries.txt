@@ -1,11 +1,12 @@
 #Major Countries
 NUS = "countries/New United States.txt"
 SWE = "countries/Sweden.txt"
-ENG = "countries/England.txt"
+FRA = "countries/France.txt"
 AUS = "countries/Austria.txt"
 TUR = "countries/The Ottoman Empire.txt"
 POL = "countries/Poland-Lithuania.txt"
 RUS = "countries/Russia.txt"
+ENG = "countries/England.txt"
 
 #Germany
 AAC = "countries/Aachen.txt"
@@ -52,7 +53,6 @@ WRT = "countries/Wurttemberg.txt"
 WRZ = "countries/Wurzburg.txt"
 
 #Europe
-FRA = "countries/France.txt"
 IRE = "countries/Ireland.txt"
 KNI = "countries/The Knights.txt"
 POR = "countries/Portugal.txt"
@@ -90,8 +90,10 @@ VEN = "countries/Venice.txt"
 AJU = "countries/Ajuuraan.txt"
 ASA = "countries/Aussa.txt"
 ASH = "countries/Ashanti.txt"
+ALG = "countries/Algeria.txt"
 BEN = "countries/Benin.txt"
 DAR = "countries/Darfur.txt"
+EGY = "countries/Egypt.txt"
 ETH = "countries/Ethiopia.txt"
 FUL = "countries/Fulo.txt"
 JOL = "countries/Jolof.txt"
@@ -107,6 +109,8 @@ NUB = "countries/Funj.txt"
 NUP = "countries/Nupe.txt"
 SON = "countries/Songhai.txt"
 TIM = "countries/Timbuktu.txt"
+TRP = "countries/Tripolitania.txt"
+TUN = "countries/Tunisia.txt"
 
 #India
 AMD = "countries/Ahmadnagar.txt"

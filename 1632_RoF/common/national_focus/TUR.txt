@@ -1,0 +1,63 @@
+focus_tree = {
+	id = united_provinces_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TUR
+		}
+		modifier = {
+			add = 10
+			original_tag = TUR
+		}
+	}
+	default = no
+	####################
+	#     AIR TREE     #
+	####################
+	#shared_focus = air_research
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	#shared_focus = naval_research_focus
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	#shared_focus = army_drilling
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	#shared_focus = industrial_advances
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	
+	#bring janissaries to heel
+
+	#reconquer iraq
+	focus = {
+		id = TUR_rumors_from_europe
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = 10
+		y = 0
+		available = {
+
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+}

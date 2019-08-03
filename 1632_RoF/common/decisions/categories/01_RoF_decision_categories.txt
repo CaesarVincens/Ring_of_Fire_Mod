@@ -40,6 +40,14 @@ RoF_CoC_Border_Clashes = {
 	}
 }
 
+RoF_temp_ships = {
+	visible = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+		always = no
+	}
+}
 absolutist_on_the_rise = {
 	allowed = {
 		always = yes

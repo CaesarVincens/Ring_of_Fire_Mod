@@ -126,6 +126,13 @@ equipments = {
 
 		archetype = man_of_war
 		priority = 50
+		upgrades = {
+			ship_reliability_upgrade
+			ship_sail_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
 		module_slots = {
 		}
 
@@ -168,6 +175,13 @@ equipments = {
 		parent = man_of_war_1
 		priority = 50
 	
+		upgrades = {
+			ship_reliability_upgrade
+			ship_sail_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
 		module_slots = {
 		}
 

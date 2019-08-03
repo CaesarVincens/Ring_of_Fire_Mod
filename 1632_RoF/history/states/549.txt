@@ -8,7 +8,7 @@ state={
 	}
 
 	history={
-		owner = TUR
+		owner = EGY
 		victory_points = {
 			4068 3 
 		}
@@ -20,7 +20,7 @@ state={
 
 		}
 		add_core_of = NUB
-		add_core_of = TUR
+		add_core_of = EGY
 
 	}
 

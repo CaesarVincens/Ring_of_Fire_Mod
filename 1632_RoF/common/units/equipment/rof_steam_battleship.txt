@@ -128,7 +128,13 @@ equipments = {
 
 		archetype = steam_battleship
 		priority = 40
-		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
 		module_slots = {}
 		
 		lg_armor_piercing = 10
@@ -171,6 +177,12 @@ equipments = {
 		archetype = steam_battleship
 		parent = steam_battleship_1
 		priority = 40
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
 
 		module_slots = {}
 		

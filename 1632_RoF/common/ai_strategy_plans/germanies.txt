@@ -10,6 +10,7 @@ germans_ally_swe = {
 		OR = {
 			has_war_with = SWE
 			NOT = { country_exists = SWE }
+			NOT = { is_in_faction_with = SWE }
 		}
 	}
 	ai_strategy = {

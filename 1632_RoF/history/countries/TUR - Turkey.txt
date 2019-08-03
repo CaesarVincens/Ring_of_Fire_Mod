@@ -15,7 +15,7 @@ prerof_heavy_frigate = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 10
 
 
 # DIPLOMACY
@@ -36,7 +36,27 @@ set_convoys = 0
     }
     set_autonomy = {
         target = CRI
-        autonomy_state = autonomy_rof_protectorate
+        autonomous_state = autonomy_rof_protectorate
+        freedom_level = 0.6
+	}
+    set_autonomy = {
+        target = EGY
+        autonomous_state = autonomy_rof_vassal
+        freedom_level = 0.6
+    }
+    set_autonomy = {
+        target = TRP
+        autonomous_state = autonomy_rof_vassal
+        freedom_level = 0.6
+    }
+    set_autonomy = {
+        target = TUN
+        autonomous_state = autonomy_rof_protectorate
+        freedom_level = 0.6
+    }
+    set_autonomy = {
+        target = ALG
+        autonomous_state = autonomy_rof_protectorate
         freedom_level = 0.6
 	}
 	

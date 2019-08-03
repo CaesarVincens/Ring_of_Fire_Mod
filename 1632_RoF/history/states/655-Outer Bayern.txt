@@ -17,7 +17,7 @@ state = {
 		}
 		add_core_of = BAV
 		add_core_of = PAL
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

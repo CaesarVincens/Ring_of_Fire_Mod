@@ -1,1 +1,150 @@
-﻿
+﻿##### Ring of Fire NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+RoF_SWE_ironclad_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_ironclad
+
+	for_countries = { SWE }
+	type = ship
+	ship_types = { ironclad }			
+
+	prefix = "SRN "
+	fallback_name = "Ironclad %d"					
+
+	unique = {											
+		"Abolition" "Grace" "Free Man" "Thrust" "Hope" 
+	}
+}
+
+
+### LIGHT CRUISER NAMES###
+RoF_SWE_timberclad_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_timberclad
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { timberclad }
+	
+	prefix = "SRN "
+	fallback_name = "Timberclad %d"
+
+	unique = {
+		"Abolition" "Grace" "Free Man" "Thrust" "Hope" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+RoF_SWE_man_of_war_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_man_of_war
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { man_of_war }
+	
+	prefix = "HMS "
+	fallback_name = "Man'o'war %d"
+
+	unique = {
+		"Abolition" "Grace" "Free Man" "Thrust" "Hope" 
+	}
+}
+
+### BATTLESHIP NAMES ###
+RoF_SWE_heavy_frigate_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_heavy_frigate
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { heavy_frigate }
+	
+	prefix = "HMS "
+	fallback_name = "Heavy Frigate %d"		
+
+	unique = {
+		"Monrovia" "Freedom" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+RoF_SWE_light_frigate_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_light_frigate
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { light_frigate }
+	
+	prefix = "HMS "
+	fallback_name = "Light Frigate %d"		
+
+	unique = {
+		"Monrovia" "Freedom" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+RoF_SWE_steam_battleship_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_steam_battleship
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { steam_battleship }
+	
+	prefix = "HMS "
+	fallback_name = "Battleship %d"		
+
+	unique = {
+		"Republic of Liberia" "Promised Land" 
+	}
+}
+
+
+### SUBMARINES ###
+RoF_SWE_steam_cruiser_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_steam_cruiser
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { steam_cruiser }
+	
+	prefix = "HMS "
+	fallback_name = "Cruiser %d"
+	
+	unique = {
+		"Abolition" "Grace" "Free Man" "Thrust" "Hope" 
+	}
+}
+
+### SUBMARINES ###
+RoF_SWE_steam_destroyer_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_steam_destroyer
+
+	for_countries = { SWE }
+
+	type = ship
+	ship_types = { steam_destroyer }
+	
+	prefix = "HMS "
+	fallback_name = "Destroyer %d"
+	
+	unique = {
+		"Abolition" "Grace" "Free Man" "Thrust" "Hope" 
+	}
+}
+
+### SUBMARINES ###
+RoF_SWE_ships = {
+	name = NAME_THEME_ships
+
+	for_countries = { SWE }
+
+	type = ship
+	
+	prefix = "HMS "
+	fallback_name = "Ship %d"
+
+}

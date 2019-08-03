@@ -14,7 +14,7 @@ prerof_heavy_frigate = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 10
 
 
 set_politics = {

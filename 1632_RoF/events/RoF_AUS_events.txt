@@ -707,7 +707,22 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		
+		if = {
+			limit = { has_idea = AUS_kipper_und_wipper }
+			set_country_flag = AUS_sell_patents_kipper_1
+		}
+		else_if = {
+			limit = { has_idea = AUS_kipper_und_wipper_2 }
+			set_country_flag = AUS_sell_patents_kipper_2
+		}
+		else_if = {
+			limit = { has_idea = AUS_kipper_und_wipper_3 }
+			set_country_flag = AUS_sell_patents_kipper_3
+		}
+		else_if = {
+			limit = { has_idea = AUS_kipper_und_wipper_4 }
+			set_country_flag = AUS_sell_patents_kipper_4
+		}
 	}
 	#crash
 	option = {
@@ -715,7 +730,6 @@ country_event = {
 		lessen_AUS_kipper = yes
 	}
 }
-
 
 #Reichsthalers
 country_event = {
@@ -733,6 +747,7 @@ country_event = {
 	#free money
 	option = {
 		name = RoF_AUS.130.a
+		set_country_flag = AUS_free_reichsthalers
 		add_political_power = 60
 		add_timed_idea = {
 			idea = AUS_reichsthalers_1
@@ -755,10 +770,27 @@ country_event = {
 	#siver-backed, limited
 	option = {
 		name = RoF_AUS.130.b
+		set_country_flag = AUS_limited_reichsthalers
 		add_political_power = 30
 		add_timed_idea = {
 			idea = AUS_reichsthalers_2
 			days = 180
+		}
+		if = {
+			limit = { has_idea = AUS_kipper_und_wipper }
+			set_country_flag = AUS_issue_reichsthalers_kipper_1
+		}
+		else_if = {
+			limit = { has_idea = AUS_kipper_und_wipper_2 }
+			set_country_flag = AUS_issue_reichsthalers_kipper_2
+		}
+		else_if = {
+			limit = { has_idea = AUS_kipper_und_wipper_3 }
+			set_country_flag = AUS_issue_reichsthalers_kipper_3
+		}
+		else_if = {
+			limit = { has_idea = AUS_kipper_und_wipper_4 }
+			set_country_flag = AUS_issue_reichsthalers_kipper_4
 		}
 		lessen_AUS_kipper = yes
 		ai_chance = {
@@ -965,9 +997,155 @@ country_event = {
 	option = {
 		name = RoF_AUS.150.b
 		set_country_flag = AUS_seek_hre_flag
+		every_state = {
+			limit = {
+				is_german_state = yes
+				NOT = {
+					is_core_of = AUS
+					is_claimed_by = AUS
+				}
+				OWNER = {
+					NOT = {
+						tag = AUS
+						is_in_faction_with = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			add_claim_by = AUS
+		}
 		complete_national_focus = AUS_restore_austria
 		ai_chance = {
 			factor = 10
 		}
 	}
 }
+
+#Bohemia Rail
+country_event = {
+	id = RoF_AUS.155
+	title = RoF_AUS.155.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.155.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	#accept Rail
+	option = {
+		name = RoF_AUS.155.a
+		add_tech_bonus = {
+			uses = 1
+			category = infra_tech
+			bonus = 0.5
+			name = infra_bonus
+		}
+		37 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		38 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		429 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_ideas = AUS_bohemian_rail
+		hidden_effect = {
+			AUS = {
+				country_event = {
+					id = RoF_AUS.156
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	#reject Rail
+	option = {
+		name = RoF_AUS.155.a
+		add_political_power = 50
+		hidden_effect = {
+			AUS = {
+				country_event = {
+					id = RoF_AUS.157
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#bohemia Accepts
+country_event = {
+	id = RoF_AUS.156
+	title = RoF_AUS.156.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.156.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	#accept Rail
+	option = {
+		name = RoF_AUS.156.a
+		add_tech_bonus = {
+			uses = 1
+			category = infra_tech
+			bonus = 0.5
+			name = infra_bonus
+		}
+		20 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_ideas = AUS_bohemian_rail
+		add_political_power = 50
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#bohemia Accepts
+country_event = {
+	id = RoF_AUS.157
+	title = RoF_AUS.157.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.157.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	#accept Rail
+	option = {
+		name = RoF_AUS.157.a
+	}
+}
+

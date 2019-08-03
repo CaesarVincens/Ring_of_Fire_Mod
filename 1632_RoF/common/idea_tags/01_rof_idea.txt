@@ -20,6 +20,7 @@ idea_categories = {
 		slot = economy
 		slot = state_religion
 		slot = mobilization_laws
+		slot = industrialization
 		slot = political_advisor
 		slot = political_advisor
 		slot = political_advisor

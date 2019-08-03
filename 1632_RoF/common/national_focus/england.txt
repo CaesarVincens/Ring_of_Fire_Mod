@@ -1745,9 +1745,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			has_global_flag = ENG_civil_war_done
+		}
 		#available_if_capitulated = yes
 		completion_reward = {
-			#event
+			SWE = {
+				country_event = {
+					id = RoF_SWE.50
+					hours = 2
+				}
+			}
 		}
 
 	}

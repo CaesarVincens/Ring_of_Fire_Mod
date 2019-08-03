@@ -4,6 +4,7 @@ Play an alternate history set in the middle of the Thirty Years war where a town
 
 Lead Developer: CaesarVincens
 Focus Tree Contributions: Principality of Lichenstein, King of Nords
+Testers and Feedback: DPBR8, TheCapitan157, Dylan Hultman
 
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
@@ -12,7 +13,11 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
-Alpha 0.6.0 - Viennese Waltz - 
+
+Alpha 0.6.1 - Jul. 3, 2019
+Fixed ships to be deployable - thanks to AngelBlue
+
+Alpha 0.6.0 - Viennese Waltz - Jun. 22, 2019
 Updated to HoI Patch 1.7.0
 Realigned many countries to isolationist/neutral politics, for now
 Many changes to AI behavior, especially around tech

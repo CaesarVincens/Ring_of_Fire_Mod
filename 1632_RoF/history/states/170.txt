@@ -15,36 +15,28 @@ state = {
 			air_base = 0
 			564 = {
 				bunker = 2
-
 			}
 			3524 = {
 				bunker = 1
-
 			}
 			6549 = {
 				bunker = 1
-
 			}
 			9443 = {
 				bunker = 1
-
 			}
 			9524 = {
 				bunker = 1
-
 			}
 			9547 = {
 				bunker = 1
-
 			}
 			11431 = {
 				bunker = 1
-
 			}
-
 		}
 		add_core_of = HES
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {
