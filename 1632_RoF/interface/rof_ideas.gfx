@@ -142,6 +142,10 @@ spriteTypes = {
 		name = "GFX_idea_RUS_filaret"
 		texturefile = "gfx/interface/ideas/idea_RUS_filaret.dds"
 	}	
+	spriteType = {
+		name = "GFX_idea_TUR_kosem_sultan"
+		texturefile = "gfx/interface/ideas/idea_TUR_kosem_sultan.dds"
+	}	
 	##COC IDEAS
 	spriteType = {
 		name = "GFX_idea_CoC_good_4"

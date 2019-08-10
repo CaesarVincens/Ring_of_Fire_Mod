@@ -13,16 +13,11 @@ state = {
 		victory_points = {
 			11858 3 
 		}
-		victory_points = {
-			6889 3
-		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
-			6889 = { naval_base = 1 }
-
 		}
 		add_core_of = SER
 		add_core_of = TUR
@@ -31,7 +26,7 @@ state = {
 	}
 
 	provinces = {
-		937 982 3868 3922 6889 6913 9809 11845 11858 
+		937 982 3922 6913 9809 11845 11858 
 	}
 	manpower = 265600
 	buildings_max_level_factor = 1.000

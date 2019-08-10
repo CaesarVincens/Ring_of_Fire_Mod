@@ -179,3 +179,41 @@ is_ally_or_subject_of_ROOT = {
 		}
 	}
 }
+
+mod_agr_focus_block = {
+	custom_trigger_tooltip = {
+		tooltip = industrialization_focus_block_TT
+	}
+	OR = {
+		always = yes
+	}
+}
+
+early_ind_focus_block = {
+	custom_trigger_tooltip = {
+		tooltip = industrialization_focus_block_TT
+		OR = {
+			NOT = {
+				tag = RUS
+				tag = AUS
+			}
+			AND = {
+				tag = RUS
+				has_country_flag = RUS_build_factories_flag
+			}
+			AND = {
+				tag = AUS
+				has_country_flag = AUS_american_industry_flag
+			}
+		}
+	}
+}
+
+fully_ind_focus_block = {
+	custom_trigger_tooltip = {
+		tooltip = industrialization_focus_block_TT
+	}
+	OR = {
+		always = yes
+	}
+}

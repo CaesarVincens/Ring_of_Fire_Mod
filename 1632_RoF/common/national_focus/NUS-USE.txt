@@ -1841,33 +1841,20 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = NUS_constitutional_convention_flag
 			if = {
-				limit = {
-					has_idea = americans_first
-				}
+				limit = { has_idea = americans_first }
 				remove_ideas = americans_first
 			}
 			if = {
-				limit = {
-					has_idea = refuge_from_the_storm
-				}
+				limit = { has_idea = refuge_from_the_storm }
 				remove_ideas = refuge_from_the_storm
 			}
 			if = {
-				limit = {
-					has_idea = new_american_revolution
-				}
+				limit = { has_idea = new_american_revolution }
 				remove_ideas = new_american_revolution
 			}
 			if = {
-				limit = {
-					has_idea = people_out_of_time
-				}
+				limit = { has_idea = people_out_of_time }
 				remove_ideas = people_out_of_time
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = NUS_constitution_convention }
-				}
 			}
 			if = {
 				limit = {

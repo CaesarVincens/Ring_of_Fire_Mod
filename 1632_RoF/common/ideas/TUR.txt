@@ -1,4 +1,36 @@
 ideas = {
+	country = {
+		TUR_kosem_sultan = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+		TUR_janissaries_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.1
+				war_support_factor = -0.1
+				stability_factor = -0.1
+				special_forces_min = 10
+			}
+		}
+		TUR_beylerbeys_1 = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.2
+				political_power_gain = -0.2
+			}
+		}
+	}
 	political_advisor = {
 		TUR_absolutist_advisor = {
 			allowed = {

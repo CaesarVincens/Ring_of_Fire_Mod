@@ -191,9 +191,8 @@ focus_tree = {
 		cost = 10
 		relative_position_id = RUS_support_streltzi
 		available = {
-			POL = {
-				owns_state = 387
-			}
+			POL = { owns_state = 387 }
+			has_completed_focus = RUS_war_gaming
 		}
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -736,7 +735,8 @@ focus_tree = {
 		id = RUS_build_factories
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = RUS_expand_infrastructure }
-		x = 0
+		prerequisite = { focus = RUS_new_monetary_system }
+		x = 1
 		y = 1
 		cost = 10
 		relative_position_id = RUS_expand_infrastructure
@@ -771,6 +771,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						has_idea = modern_agrarian
+						has_country_flag = RUS_build_factories_flag
+					}
+				}
+				swap_ideas = {
+					remove_idea = modern_agrarian
+					add_idea = early_industrial
+				}
+			}
+			set_country_flag = RUS_build_factories_flag
 		}
 	}
 
@@ -780,7 +793,7 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = RUS_new_ideas }
 		prerequisite = { focus = RUS_build_factories }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RUS_build_factories
 		cost = 10
@@ -1109,13 +1122,14 @@ focus_tree = {
 		id = RUS_siberian_expansion
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = RUS_build_factories }
-		prerequisite = { focus = RUS_new_monetary_system }
+		#prerequisite = { focus = RUS_new_monetary_system }
 		x = 0
 		y = 2
 		cost = 20
 		relative_position_id = RUS_new_monetary_system
 		available = {
-			OR = {
+			count_triggers = {
+				amount = 3
 				owns_state = 215
 				owns_state = 393
 				owns_state = 398

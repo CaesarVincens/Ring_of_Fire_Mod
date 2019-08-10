@@ -21,7 +21,7 @@ state={
 
 		}
 		add_core_of = CIR
-		add_core_of = GEN
+		#add_core_of = GEN
 
 	}
 

@@ -329,8 +329,8 @@ focus_tree = {
 						include_locked = yes
 					}
 					OR = {
-						state = 19
 						state = 20
+						state = 19
 						state = 22
 						state = 229
 						state = 23
@@ -735,6 +735,10 @@ focus_tree = {
 				limit = { has_country_flag = AUS_american_industry_kipper_4 }
 				remove_ideas = AUS_kipper_und_wipper_4
 			}
+			swap_ideas = {
+				remove_idea = modern_agrarian
+				add_idea = early_industrial
+			}
 		}
 		completion_reward = {
 			if = {
@@ -761,6 +765,11 @@ focus_tree = {
 				category = industry
 			}
 			lessen_AUS_kipper = yes
+			swap_ideas = {
+				remove_idea = modern_agrarian
+				add_idea = early_industrial
+			}
+			set_country_flag = AUS_american_industry_flag
 		}
 		ai_will_do = {
 			base = 10

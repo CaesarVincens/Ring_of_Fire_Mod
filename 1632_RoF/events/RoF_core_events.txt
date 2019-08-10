@@ -377,6 +377,10 @@ country_event = {
 	
 	option = {
 		name = RoF.010.a
+		hidden_effect = {
+			check_CoC_strength_anger = yes
+			check_CoC_effects_for_this = yes
+		}
 	}
 }
 
@@ -420,6 +424,10 @@ country_event = {
 	
 	option = {
 		name = RoF.010.a
+		hidden_effect = {
+			check_CoC_strength_anger = yes
+			check_CoC_effects_for_this = yes
+		}
 	}
 }
 

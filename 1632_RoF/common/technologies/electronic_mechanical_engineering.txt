@@ -273,6 +273,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
+			modifier = {
+				factor = 2
+				has_idea = modern_agrarian
+			}
 		}
 		
 		categories = {

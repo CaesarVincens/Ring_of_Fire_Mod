@@ -134,101 +134,139 @@ hide_religion_idea = {
 ###     Set USE Party Popularity      ####
 ##########################################
 set_USE_parties = {
-	set_variable = { USE_abs2 = USE_abs }
-	set_variable = { USE_cons2 = USE_cons }
-	set_variable = { USE_lib2 = USE_lib }
-	set_variable = { USE_rad2 = USE_rad }
-	set_variable = { USE_iso2 = USE_iso }
+	set_temp_variable = { percent_check = 0 }
+	multiply_variable = { USE_abs = 100 }
+	multiply_variable = { USE_cons = 100 }
+	multiply_variable = { USE_lib = 100 }
+	multiply_variable = { USE_rad = 100 }
+	multiply_variable = { USE_iso = 100 }
+	add_to_temp_variable = { percent_check = USE_abs }
+	add_to_temp_variable = { percent_check = USE_cons }
+	add_to_temp_variable = { percent_check = USE_lib }
+	add_to_temp_variable = { percent_check = USE_rad }
+	add_to_temp_variable = { percent_check = USE_iso }
+	if = {
+		limit = {
+			check_variable = { percent_check = 100 }
+		}
+		set_popularities = {
+			absolutist = USE_abs
+			constitutionalist = USE_cons
+			liberal = USE_lib
+			radical = USE_rad
+			neutrality = USE_iso
+		}
+		else = {
+			set_variable = { USE_iso_rest = 100 }
+			subtract_from_variable = { USE_iso_rest = USE_abs }
+			subtract_from_variable = { USE_iso_rest = USE_cons }
+			subtract_from_variable = { USE_iso_rest = USE_lib }
+			subtract_from_variable = { USE_iso_rest = USE_rad }
+			set_popularities = {
+				absolutist = USE_abs
+				constitutionalist = USE_cons
+				liberal = USE_lib
+				radical = USE_rad
+				neutrality = USE_iso_rest
+			}
+		}
+	}
 
-	set_variable = { other_parties = 0 }
-	add_to_variable = { other_parties = USE_cons }
-	add_to_variable = { other_parties = USE_lib }
-	add_to_variable = { other_parties = USE_rad }
-	add_to_variable = { other_parties = USE_iso }
+	#set_variable = { USE_abs2 = USE_abs }
+	#set_variable = { USE_cons2 = USE_cons }
+	#set_variable = { USE_lib2 = USE_lib }
+	#set_variable = { USE_rad2 = USE_rad }
+	#set_variable = { USE_iso2 = USE_iso }
+
+	#set_variable = { other_parties = 0 }
+	#add_to_variable = { other_parties = USE_cons }
+	#add_to_variable = { other_parties = USE_lib }
+	#add_to_variable = { other_parties = USE_rad }
+	#add_to_variable = { other_parties = USE_iso }
 	#multiply_variable = { other_parties = 1.1 }
-	add_to_variable = { other_parties = 1 }
-	add_popularity = {
-		ideology = neutrality
-		popularity = 1
-	}
-	multiply_variable = { USE_abs = other_parties }
-	add_popularity = {
-		ideology = absolutist
-		popularity = USE_abs
-	}
-	subtract_from_variable = { other_parties = USE_cons }
-	multiply_variable = { USE_cons = other_parties }
-	add_popularity = {
-		ideology = constitutionalist
-		popularity = USE_cons
-	}
-	subtract_from_variable = { other_parties = USE_rad }
-	multiply_variable = { USE_rad = other_parties }
-	add_popularity = {
-		ideology = radical
-		popularity = USE_rad
-	}
-	add_popularity = {
-		ideology = liberal
-		popularity = USE_lib
-	}
+	#add_to_variable = { other_parties = 1 }
+	#add_popularity = {
+	#	ideology = neutrality
+	#	popularity = 1
+	#}
+	#multiply_variable = { USE_abs = other_parties }
+	#add_popularity = {
+	#	ideology = absolutist
+	#	popularity = USE_abs
+	#}
+	#subtract_from_variable = { other_parties = USE_cons }
+	#multiply_variable = { USE_cons = other_parties }
+	#add_popularity = {
+	#	ideology = constitutionalist
+	#	popularity = USE_cons
+	#}
+	#subtract_from_variable = { other_parties = USE_rad }
+	#multiply_variable = { USE_rad = other_parties }
+	#add_popularity = {
+	#	ideology = radical
+	#	popularity = USE_rad
+	#}
+	#add_popularity = {
+	#	ideology = liberal
+	#	popularity = USE_lib
+	#}
 
-	set_variable = { USE_abs = USE_abs2 }
-	set_variable = { USE_cons = USE_cons2 }
-	set_variable = { USE_lib = USE_lib2 }
-	set_variable = { USE_rad = USE_rad2 }
-	set_variable = { USE_iso = USE_iso2 }
+	#set_variable = { USE_abs = USE_abs2 }
+	#set_variable = { USE_cons = USE_cons2 }
+	#set_variable = { USE_lib = USE_lib2 }
+	#set_variable = { USE_rad = USE_rad2 }
+	#set_variable = { USE_iso = USE_iso2 }
 
-	subtract_from_variable = { USE_iso2 = party_popularity@neutrality }
-	add_popularity = {
-		ideology = neutrality
-		popularity = USE_iso2
-	}
-	subtract_from_variable = { USE_abs2 = party_popularity@absolutist }
-	add_popularity = {
-		ideology = absolutist
-		popularity = USE_abs2
-	}
-	subtract_from_variable = { USE_cons2 = party_popularity@constitutionalist }
-	add_popularity = {
-		ideology = constitutionalist
-		popularity = USE_cons2
-	}
-	subtract_from_variable = { USE_rad2 = party_popularity@radical }
-	add_popularity = {
-		ideology = radical
-		popularity = USE_rad2
-	}
-	subtract_from_variable = { USE_lib2 = party_popularity@liberal }
-	add_popularity = {
-		ideology = liberal
-		popularity = USE_lib2
-	}
-	subtract_from_variable = { USE_iso = party_popularity@neutrality }
-	add_popularity = {
-		ideology = neutrality
-		popularity = USE_iso
-	}
-	subtract_from_variable = { USE_abs = party_popularity@absolutist }
-	add_popularity = {
-		ideology = absolutist
-		popularity = USE_abs
-	}
-	subtract_from_variable = { USE_cons = party_popularity@constitutionalist }
-	add_popularity = {
-		ideology = constitutionalist
-		popularity = USE_cons
-	}
-	subtract_from_variable = { USE_rad = party_popularity@radical }
-	add_popularity = {
-		ideology = radical
-		popularity = USE_rad
-	}
-	subtract_from_variable = { USE_lib = party_popularity@liberal }
-	add_popularity = {
-		ideology = liberal
-		popularity = USE_lib
-	}
+	#subtract_from_variable = { USE_iso2 = party_popularity@neutrality }
+	#add_popularity = {
+	#	ideology = neutrality
+	#	popularity = USE_iso2
+	#}
+	#subtract_from_variable = { USE_abs2 = party_popularity@absolutist }
+	#add_popularity = {
+	#	ideology = absolutist
+	#	popularity = USE_abs2
+	#}
+	#subtract_from_variable = { USE_cons2 = party_popularity@constitutionalist }
+	#add_popularity = {
+	#	ideology = constitutionalist
+	#	popularity = USE_cons2
+	#}
+	#subtract_from_variable = { USE_rad2 = party_popularity@radical }
+	#add_popularity = {
+	#	ideology = radical
+	#	popularity = USE_rad2
+	#}
+	#subtract_from_variable = { USE_lib2 = party_popularity@liberal }
+	#add_popularity = {
+	#	ideology = liberal
+	#	popularity = USE_lib2
+	#}
+	#ubtract_from_variable = { USE_iso = party_popularity@neutrality }
+	#add_popularity = {
+	#	ideology = neutrality
+	#	popularity = USE_iso
+	#}
+	#subtract_from_variable = { USE_abs = party_popularity@absolutist }
+	#add_popularity = {
+	#	ideology = absolutist
+	#	popularity = USE_abs
+	#}
+	#subtract_from_variable = { USE_cons = party_popularity@constitutionalist }
+	#add_popularity = {
+	#	ideology = constitutionalist
+	#	popularity = USE_cons
+	#}
+	#subtract_from_variable = { USE_rad = party_popularity@radical }
+	#add_popularity = {
+	#	ideology = radical
+	#	popularity = USE_rad
+	#}
+	#subtract_from_variable = { USE_lib = party_popularity@liberal }
+	#add_popularity = {
+	#	ideology = liberal
+	#	popularity = USE_lib
+	#}
 }
 
 ##########################################

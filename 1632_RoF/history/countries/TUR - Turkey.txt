@@ -21,42 +21,42 @@ set_convoys = 10
 # DIPLOMACY
     set_autonomy = {
         target = MDA
-        autonomous_state = autonomy_rof_vassal
+        autonomy_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
     set_autonomy = {
         target = TRA
-        autonomous_state = autonomy_rof_vassal
+        autonomy_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
     set_autonomy = {
         target = WAL
-        autonomous_state = autonomy_rof_vassal
+        autonomy_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
     set_autonomy = {
         target = CRI
-        autonomous_state = autonomy_rof_protectorate
+        autonomy_state = autonomy_rof_protectorate
         freedom_level = 0.6
 	}
     set_autonomy = {
         target = EGY
-        autonomous_state = autonomy_rof_vassal
+        autonomy_state = autonomy_rof_auto_province
         freedom_level = 0.6
     }
     set_autonomy = {
         target = TRP
-        autonomous_state = autonomy_rof_vassal
+        autonomy_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
     set_autonomy = {
         target = TUN
-        autonomous_state = autonomy_rof_protectorate
+        autonomy_state = autonomy_rof_protectorate
         freedom_level = 0.6
     }
     set_autonomy = {
         target = ALG
-        autonomous_state = autonomy_rof_protectorate
+        autonomy_state = autonomy_rof_protectorate
         freedom_level = 0.6
 	}
 	
@@ -76,6 +76,9 @@ set_popularities = {
 
 set_country_flag = religion_islam
 add_ideas = {
+	TUR_kosem_sultan
+	TUR_janissaries_1
+	TUR_beylerbeys_1
 	#emperor_rank
 }
 set_stability = 0.5

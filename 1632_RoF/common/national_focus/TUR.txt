@@ -1,5 +1,5 @@
 focus_tree = {
-	id = united_provinces_focus
+	id = ottoman_focus
 	country = {
 		factor = 0
 		modifier = {
@@ -35,21 +35,239 @@ focus_tree = {
 	####################
 	#  POLITICAL TREE  #
 	####################
-	
-	#bring janissaries to heel
-
-	#reconquer iraq
 	focus = {
-		id = TUR_rumors_from_europe
-		icon = GFX_goal_generic_construct_civ_factory
+		id = TUR_end_regency
+		icon = GFX_focus_rom_handle_king
 		cost = 10
-		x = 10
+		x = 2
 		y = 0
 		available = {
 
 		}
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 60
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_depose_husrev_pasha
+		icon = GFX_focus_mex_arrest_general_cedillo
+		relative_position_id = TUR_end_regency
+		prerequisite = { focus = TUR_end_regency }
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_beaurocrats_support
+		icon = GFX_goal_generic_intelligence_exchange
+		relative_position_id = TUR_end_regency
+		prerequisite = { focus = TUR_end_regency }
+		cost = 10
+		x = 2
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	focus = {
+		id = TUR_generals_support
+		icon = GFX_goal_generic_military_deal
+		relative_position_id = TUR_end_regency
+		prerequisite = { focus = TUR_end_regency }
+		cost = 10
+		x = -2
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_assume_throne
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = TUR_depose_husrev_pasha
+		prerequisite = { focus = TUR_depose_husrev_pasha }
+		prerequisite = { focus = TUR_beaurocrats_support }
+		prerequisite = { focus = TUR_generals_support }
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			remove_ideas = TUR_kosem_sultan
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_support_kadizadelis
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = TUR_assume_throne
+		prerequisite = { focus = TUR_assume_throne }
+		mutually_exclusive = { focus = TUR_support_sufis }
+		cost = 10
+		x = -2
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = TUR_support_sufis
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = TUR_assume_throne
+		prerequisite = { focus = TUR_assume_throne }
+		mutually_exclusive = { focus = TUR_support_kadizadelis }
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	
+	#restore mecca
+
+	#bring janissaries to heel
+
+	#reconquer iraq
+	focus = {
+		id = TUR_rumors_from_europe
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = 10
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_heard_of_RoF_TT
+				OR = {
+					date > 1632.5.1
+					has_country_flag = knows_about_grantville
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_deny_grantville
+		icon = GFX_focus_generic_strike_at_democracy2
+		relative_position_id = TUR_rumors_from_europe
+		prerequisite = { focus = TUR_rumors_from_europe }
+		mutually_exclusive = { focus = TUR_embrace_grantville }
+		cost = 10
+		x = -1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_embrace_grantville
+		icon = GFX_goal_support_democracy
+		relative_position_id = TUR_rumors_from_europe
+		prerequisite = { focus = TUR_rumors_from_europe }
+		mutually_exclusive = { focus = TUR_deny_grantville }
+		cost = 10
+		x = 1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 		ai_will_do = {
 			factor = 20

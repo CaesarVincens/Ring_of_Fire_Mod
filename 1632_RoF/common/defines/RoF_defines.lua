@@ -6,8 +6,8 @@ NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 15
 NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "1631.1.1.12"
 
 NDefines.NCountry.SUPPLY_BASE_MULT = 0.8							-- multiplier on supply base values
-NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 10 						-- When supply route reach more than X nodes, the manpower+equipment delivery speed reach 100% penalty.
-NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.1,  -- accessible recruitable factor base
+NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 10 					-- When supply route reach more than X nodes, the manpower+equipment delivery speed reach 100% penalty.
+NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.1	-- accessible recruitable factor base
 
 NDefines.NBuildings.INFRA_TO_SUPPLY = 3
 

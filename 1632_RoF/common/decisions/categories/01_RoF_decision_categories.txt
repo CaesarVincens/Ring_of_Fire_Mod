@@ -6,7 +6,6 @@ RoF_test_decisions = {
 
 RoF_economy_decisions = {
 	icon = generic_economy
-
 }
 RoF_ai_decisions = {
 	

@@ -361,7 +361,7 @@ country_event = {
 		trigger = {
 			OR = {
 				radical < 0.3
-				and = {
+				AND = {
 					liberal < 0.3
 					radical < 0.6
 				}
@@ -398,6 +398,9 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = -5 }
 		add_to_variable = { var = CoC_anger value = -5 }
 		custom_effect_tooltip = RoF_accomodate_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -411,6 +414,9 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = 5 }
 		add_to_variable = { var = CoC_anger value = 5 }
 		custom_effect_tooltip = RoF_anger_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -427,6 +433,9 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = -5 }
 		add_to_variable = { var = CoC_anger value = -5 }
 		custom_effect_tooltip = RoF_accomodate_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -440,6 +449,9 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = 5 }
 		add_to_variable = { var = CoC_anger value = 5 }
 		custom_effect_tooltip = RoF_anger_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -487,6 +499,9 @@ country_event = {
 			add_to_variable = { var = CoC_anger value = -5 }
 			custom_effect_tooltip = RoF_accomodate_CoC.tt
 		}
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -513,6 +528,9 @@ country_event = {
 			add_to_variable = { var = CoC_strength value = 5 }
 			add_to_variable = { var = CoC_anger value = 5 }
 			custom_effect_tooltip = RoF_anger_CoC.tt
+		}
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
 		}
 		ai_chance = {
 			factor = 40
@@ -547,6 +565,9 @@ country_event = {
 			add_to_variable = { var = CoC_anger value = -5 }
 			custom_effect_tooltip = RoF_accomodate_CoC.tt
 		}
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 		ai_chance = {
 			factor = 40
 		}
@@ -573,6 +594,9 @@ country_event = {
 			add_to_variable = { var = CoC_strength value = 5 }
 			add_to_variable = { var = CoC_anger value = 5 }
 			custom_effect_tooltip = RoF_anger_CoC.tt
+		}
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
 		}
 		ai_chance = {
 			factor = 40
@@ -609,6 +633,9 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = -5 }
 		add_to_variable = { var = CoC_anger value = -5 }
 		custom_effect_tooltip = RoF_accomodate_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 	}
 	option = {
 		name = RoF_CoC.023.a2
@@ -620,12 +647,15 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = 5 }
 		add_to_variable = { var = CoC_anger value = 5 }
 		custom_effect_tooltip = RoF_anger_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 	}
 	option = {
 		name = RoF_CoC.023.b1
 		trigger = {
 			liberal < 0.3
-			radical > 0.3
+			NOT = { radical < 0.3 }
 		}
 		add_popularity = {
 			ideology = liberal
@@ -634,22 +664,28 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = -5 }
 		add_to_variable = { var = CoC_anger value = -5 }
 		custom_effect_tooltip = RoF_accomodate_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 	}
 	option = {
 		name = RoF_CoC.023.b2
 		trigger = {
 			liberal < 0.3
-			radical > 0.3
+			NOT = { radical < 0.3 }
 		}
 		add_political_power = -50
 		add_to_variable = { var = CoC_strength value = 5 }
 		add_to_variable = { var = CoC_anger value = 5 }
 		custom_effect_tooltip = RoF_anger_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 	}
 	option = {
 		name = RoF_CoC.023.c1
 		trigger = {
-			liberal > 0.3
+			NOT = { liberal < 0.3 }
 			radical < 0.3
 		}
 		add_popularity = {
@@ -659,16 +695,22 @@ country_event = {
 		add_to_variable = { var = CoC_strength value = -5 }
 		add_to_variable = { var = CoC_anger value = -5 }
 		custom_effect_tooltip = RoF_accomodate_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 	}
 	option = {
 		name = RoF_CoC.023.c2
 		trigger = {
-			liberal > 0.3
+			NOT = { liberal < 0.3 }
 			radical < 0.3
 		}
 		add_political_power = -50
 		add_to_variable = { var = CoC_strength value = 5 }
 		add_to_variable = { var = CoC_anger value = 5 }
 		custom_effect_tooltip = RoF_anger_CoC.tt
+		hidden_effect = {
+			check_CoC_effects_for_this = yes
+		}
 	}
 }

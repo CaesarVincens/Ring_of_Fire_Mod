@@ -18,9 +18,15 @@ idea_categories = {
 		#slot = mobilization_laws
 		slot = trade_laws
 		slot = economy
-		slot = state_religion
 		slot = mobilization_laws
 		slot = industrialization
+		slot = state_religion
+		slot = placeholder_gov
+		
+		cost = 150
+		removal_cost = 0
+	}
+	government_advisors = {
 		slot = political_advisor
 		slot = political_advisor
 		slot = political_advisor
@@ -28,7 +34,6 @@ idea_categories = {
 		cost = 150
 		removal_cost = 0
 	}
-	
 	research_production = {
 		slot = tank_manufacturer
 		slot = naval_manufacturer
@@ -44,7 +49,7 @@ idea_categories = {
 	
 	military_staff = {
 		slot = army_chief 
-		slot = navy_chief 
+		slot = navy_chief
 		slot = air_chief
 		slot = high_command
 		slot = high_command

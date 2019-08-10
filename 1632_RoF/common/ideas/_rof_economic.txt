@@ -17,10 +17,10 @@ ideas = {
 				consumer_goods_factor = 0.4
 				production_speed_industrial_complex_factor = 0.3
 				conversion_cost_mil_to_civ_factor = -0.3
-				research_speed_factor = 0.1
+				research_speed_factor = 0.2
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor = 0.3
-				conscription_factor = -0.5
+				conscription_factor = -0.3
 				stability_weekly = 0.001
 			}
 			cancel_if_invalid = no
@@ -45,7 +45,7 @@ ideas = {
 				research_speed_factor = 0.05
 				production_speed_arms_factory_factor = -0.15
 				conversion_cost_civ_to_mil_factor = 0.15
-				conscription_factor = -0.25
+				conscription_factor = -0.1
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -189,11 +189,6 @@ ideas = {
 					factor = 0
 					has_war = no
 				}
-				modifier = {
-					factor = 25
-					#Prio this if nation has a lot of manpower compared to MIC
-					manpower_per_military_factory >  10000
-				}
 			}
 		}
 	}
@@ -335,7 +330,19 @@ ideas = {
 			level = 4
 			cost = 150
 			removal_cost = -1
-			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = cannot_revert_TT
+					always = no
+				}
+			}
+			allowed_to_remove = {
+				num_of_factories > 20
+				has_tech = infrastructure_tech_1
+				has_tech = electronic_mechanical_engineering
+				has_tech = construction1
+			}
+
 			modifier = {
 				consumer_goods_factor = 0.2
 				industrial_capacity_factory = -0.15
@@ -344,7 +351,7 @@ ideas = {
 				research_speed_factor = -0.10
 				conscription_factor = -0.4
 			}
-			
+			picture = generic_agrarian_society
 			cancel_if_invalid = no
 		}
 		
@@ -352,7 +359,31 @@ ideas = {
 			level = 3
 			cost = 150
 			removal_cost = -1
-			
+			available = {
+				if = {
+					limit = { mod_agr_focus_block = no }
+					mod_agr_focus_block = yes
+					else_if = {
+						limit = { has_idea = primitive_agrarian }
+						num_of_factories > 20
+						has_tech = infrastructure_tech_1
+						has_tech = electronic_mechanical_engineering
+						has_tech = construction1
+					}
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = cannot_revert_TT
+							always = no
+						}
+					}
+				}
+			}
+			allowed_to_remove = {
+				num_of_factories > 40
+				has_tech = infrastructure_tech_2
+				has_tech = mechanical_computing
+				has_tech = construction2
+			}
 			modifier = {
 				consumer_goods_factor = 0.1
 				industrial_capacity_factory = -0.1
@@ -363,27 +394,58 @@ ideas = {
 			}
 			
 			default = yes
-			
+			picture = generic_agrarian_reform
 			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 10
+			}
 		}
 		
 		early_industrial = {
 			
 			level = 2
 			available = {
-
+				if = {
+					limit = { early_ind_focus_block = no }
+					early_ind_focus_block = yes
+					else_if = {
+						limit = { has_idea = modern_agrarian }
+						num_of_factories > 40
+						has_tech = infrastructure_tech_2
+						has_tech = mechanical_computing
+						has_tech = construction2
+					}
+					else_if = {
+						limit = { has_idea = fully_industrial }
+						custom_trigger_tooltip = {
+							tooltip = cannot_revert_TT
+							always = no
+						}
+					}
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = cannot_skip_TT
+							always = no
+						}
+					}
+				}
 			}
-		
+			allowed_to_remove = {
+				num_of_factories > 60
+				has_tech = infrastructure_tech_3
+				has_tech = computing_machine
+				has_tech = construction3
+			}
 			cost = 150
 			removal_cost = -1
 			
 			modifier = {
 			}
-			
+			picture = generic_central_management
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 1
+				factor = 10
    			}
 		}
 		
@@ -391,12 +453,27 @@ ideas = {
 			
 			level = 1
 			available = {
-
+				if = {
+					limit = { fully_ind_focus_block = no }
+					fully_ind_focus_block = yes
+					else_if = {
+						limit = { has_idea = early_industrial }
+						num_of_factories > 60
+						has_tech = infrastructure_tech_3
+						has_tech = computing_machine
+						has_tech = construction3
+					}
+					else = {
+						custom_trigger_tooltip = {
+							tooltip = cannot_skip_TT
+							always = no
+						}
+					}
+				}
 			}
 			
 			cost = 150
 			removal_cost = -1
-			
 			
 			modifier = {
 				consumer_goods_factor = -0.1
@@ -406,10 +483,11 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 
+			picture = man_five_year_plan_industry
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 1
+				factor = 10
    			}
 		}
 	}
