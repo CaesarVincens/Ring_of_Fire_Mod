@@ -194,7 +194,11 @@ focus_tree = {
 			create_navy_leader = {
 				name = "John Chandler Simpson"
 				gfx = GFX_leader_NUS_John_Simpson
-				traits = {}
+				#traits = {}
+				coordination_skill = 2
+				attack_skill = 2
+				maneuvering_skill = 2
+				defense_skill = 2
 				skill = 3
 			}
 		}

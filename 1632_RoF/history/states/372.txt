@@ -9,7 +9,7 @@ state={
 	history={
 		owner = PER
 		victory_points = {
-			12971 3 
+			2097 5 
 		}
 		buildings = {
 			infrastructure = 2
@@ -18,14 +18,14 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = PER
+		add_core_of = TUR
 
 	}
 
 	provinces={
-		78 2097 6826 8123 10793 12855 
+		78 2004 2097 7977 7994 10744 10876 12046 12839 12855 
 	}
 	manpower=366400
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }

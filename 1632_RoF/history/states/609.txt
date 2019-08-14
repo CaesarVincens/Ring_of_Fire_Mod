@@ -1,26 +1,31 @@
-state = {
-	id = 609
-	name= "STATE_609"
-	manpower = 264500
 
-	resources = {
-		oil = 11
+state={
+	id=609
+	name="STATE_609"
+	resources={
+		oil=11.000
 	}
-	state_category = rural
 
-	history = {
-		owner = NSP
-		victory_points = { 8113 3 }
+	history={
+		owner = TUR
+		victory_points = {
+			8113 3 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
-		add_core_of = NSP
+		add_core_of = TUR
+
 	}
 
-	provinces = {
-		7968 8113 
+	provinces={
+		6919 6976 9868 9886 9954 11797 11853 
 	}
+	manpower=264500
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

@@ -1,0 +1,124 @@
+﻿add_namespace = RoF_TUR
+
+country_event = {
+	id = RoF_TUR.100
+	title = RoF_TUR.100.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_TUR.100.d
+	fire_only_once = yes
+
+	trigger = {
+		always = no
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Władysław IV Vasa"
+				desc = "POLITICS_WALLENSTEIN_DESC"
+				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+				ideology = absolute_monarchy
+				traits = {
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_TUR.100.a
+		effect_tooltip = {
+			create_country_leader = {
+				name = "Władysław IV Vasa"
+				desc = "POLITICS_WALLENSTEIN_DESC"
+				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+				ideology = absolute_monarchy
+				traits = {
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.150
+	title = RoF_TUR.150.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_TUR.150.d
+	fire_only_once = yes
+
+	trigger = {
+		always = no
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.5
+			date > 1634.6.1
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			transfer_state = 387
+			387 = { set_demilitarized_zone = yes }
+			set_global_flag = rezhev_expedition
+			RUS = { news_event = { id = RoF_RUS.110 hours = 12 } }
+		}
+	}
+	option = {
+		name = RoF_TUR.150.a
+		effect_tooltip = {
+			transfer_state = 387
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.151
+	title = RoF_TUR.151.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_TUR.151.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.151.a
+	}
+}
+
+country_event = {
+	id = RoF_TUR.152
+	title = RoF_TUR.152.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_TUR.152.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.152.a
+	}
+}
+
+country_event = {
+	id = RoF_TUR.153
+	title = RoF_TUR.153.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_TUR.153.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.153.a
+	}
+}

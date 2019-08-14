@@ -17,7 +17,7 @@ transport = 1
 prerof_heavy_frigate = 1
 }
 
-add_named_threat = { threat = 10 name = swedish_intervention }
+#add_named_threat = { threat = 10 name = swedish_intervention }
 
 declare_war_on = {
 	target = AUS

@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = TUR
+		owner = PER
 		victory_points = {
 			4951 3 
 		}
@@ -23,7 +23,7 @@ state={
 	}
 
 	provinces={
-		1631 3795 4951 7994 10744 10876 12046 12372 12413 12839 
+		3916 5014 6826 8123 10793 10811 
 	}
 	manpower=569892
 	buildings_max_level_factor=1.000

@@ -80,7 +80,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TUR_beaurocrats_support
+		id = TUR_bureaucrats_support
 		icon = GFX_goal_generic_intelligence_exchange
 		relative_position_id = TUR_end_regency
 		prerequisite = { focus = TUR_end_regency }
@@ -129,7 +129,7 @@ focus_tree = {
 		icon = GFX_focus_rom_royal_dictatorship
 		relative_position_id = TUR_depose_husrev_pasha
 		prerequisite = { focus = TUR_depose_husrev_pasha }
-		prerequisite = { focus = TUR_beaurocrats_support }
+		prerequisite = { focus = TUR_bureaucrats_support }
 		prerequisite = { focus = TUR_generals_support }
 		cost = 10
 		x = 0
@@ -148,7 +148,27 @@ focus_tree = {
 			}
 		}
 	}
-	
+
+	focus = {
+		id = TUR_support_sufis
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = TUR_assume_throne
+		prerequisite = { focus = TUR_assume_throne }
+		mutually_exclusive = { focus = TUR_support_kadizadelis }
+		cost = 10
+		x = -2
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
 	focus = {
 		id = TUR_support_kadizadelis
 		icon = GFX_focus_rom_royal_dictatorship
@@ -156,7 +176,7 @@ focus_tree = {
 		prerequisite = { focus = TUR_assume_throne }
 		mutually_exclusive = { focus = TUR_support_sufis }
 		cost = 10
-		x = -2
+		x = 0
 		y = 1
 		available = {
 
@@ -174,13 +194,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = TUR_support_sufis
+		id = TUR_combat_corruption
 		icon = GFX_focus_rom_royal_dictatorship
 		relative_position_id = TUR_assume_throne
 		prerequisite = { focus = TUR_assume_throne }
-		mutually_exclusive = { focus = TUR_support_kadizadelis }
 		cost = 10
-		x = 0
+		x = 2
 		y = 1
 		available = {
 
@@ -243,7 +262,55 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			add_research_slot = 1
+			add_ideas = TUR_anti_NUS_ideas
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_military_advances
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = TUR_deny_grantville
+		prerequisite = { focus = TUR_deny_grantville }
+		cost = 10
+		x = -1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = firearm_bonus
+				bonus = 0.5
+				uses = 1
+				category = firearms_weapons
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_artillery
+				category = heavy_artillery
+			}
+			if = {
+				limit = {
+					has_idea = TUR_advances_1
+				}
+				swap_ideas = {
+					add_idea = TUR_advances_4
+					remove_idea = TUR_advances_1
+				}
+				else = {
+					add_ideas = TUR_advances_2
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -267,15 +334,224 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			add_research_slot = 1
+			add_ideas = TUR_NUS_ideas
 		}
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				factor = 2
-				is_historical_focus_on = yes
+		}
+	}
+	
+	focus = {
+		id = TUR_industrial_advances
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = TUR_deny_grantville
+		prerequisite = { focus = TUR_deny_grantville focus = TUR_embrace_grantville }
+		cost = 10
+		x = 1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				uses = 2
+				bonus = 0.5
+				category = industry
 			}
+			if = {
+				limit = {
+					has_idea = TUR_advances_2
+				}
+				swap_ideas = {
+					add_idea = TUR_advances_4
+					remove_idea = TUR_advances_2
+				}
+				else_if = {
+					limit = { has_idea = TUR_advances_3 }
+					swap_ideas = {
+						add_idea = TUR_advances_5
+						remove_idea = TUR_advances_3
+					}
+				}
+				else = {
+					add_ideas = TUR_advances_1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
 		}
 	}
 
+	focus = {
+		id = TUR_civic_advances
+		icon = GFX_goal_generic_radar
+		relative_position_id = TUR_embrace_grantville
+		prerequisite = { focus = TUR_embrace_grantville }
+		cost = 10
+		x = 1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = radio_bonus
+				uses = 2
+				bonus = 0.5
+				category = electronics
+				category = radar_tech
+			}
+			if = {
+				limit = {
+					has_idea = TUR_advances_1
+				}
+				swap_ideas = {
+					add_idea = TUR_advances_5
+					remove_idea = TUR_advances_1
+				}
+				else = {
+					add_ideas = TUR_advances_3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	focus = {
+		id = TUR_arms_production
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = TUR_industrial_advances
+		prerequisite = { focus = TUR_industrial_advances }
+		cost = 10
+		x = -1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	focus = {
+		id = TUR_civilian_production
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = TUR_industrial_advances
+		prerequisite = { focus = TUR_industrial_advances }
+		cost = 10
+		x = 1
+		y = 1
+		available = {
+
+		}
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	focus = {
+		id = TUR_industrialize_greece
+		icon = GFX_goal_generic_construct_civilian
+		relative_position_id = TUR_civilian_production
+		prerequisite = { focus = TUR_civilian_production }
+		prerequisite = { focus = TUR_arms_production }
+		cost = 10
+		x = 0
+		y = 1
+		available = {
+
+		}
+		complete_tooltip = {
+			every_state = {
+				limit = {
+					has_state_flag = TUR_industrialize_greece_state
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 502
+						state = 503
+						state = 504
+						state = 507
+						state = 509
+						state = 510
+						state = 512
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = TUR_industrialize_greece_state
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_flag = TUR_industrialize_greece_state
+					}
+					OR = {
+						state = 502
+						state = 503
+						state = 504
+						state = 507
+						state = 509
+						state = 510
+						state = 512
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = TUR_industrialize_greece_state
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
 }

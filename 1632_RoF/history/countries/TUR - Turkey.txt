@@ -84,10 +84,28 @@ add_ideas = {
 set_stability = 0.5
 create_country_leader = {
     name = "Murad IV Osmanoglu"
-    desc = "POLITICS_YUNUS_BEY_DESC"
+    desc = "POLITICS_MURAD_OSMANOGLU_DESC"
     picture = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Murad IV Osmanoglu"
+    desc = "POLITICS_MURAD_OSMANOGLU_DESC"
+    picture = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Murad IV Osmanoglu"
+    desc = "POLITICS_MURAD_OSMANOGLU_DESC"
+    picture = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

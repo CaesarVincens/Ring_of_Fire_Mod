@@ -5,10 +5,7 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = RUS
-		}
-		modifier = {
-			add = 2
-			has_country_flag = russia_focus_tree_flag
+			NOT = { has_cosmetic_tag = Directorate_Russia }
 		}
 	}
 	default = no
@@ -816,7 +813,7 @@ focus_tree = {
 				}
 			}
 			add_tech_bonus = {
-				name = radar_bonus
+				name = radar_tech_bonus
 				bonus = 0.5
 				uses = 1
 				category = radar_tech
@@ -888,7 +885,7 @@ focus_tree = {
 				set_state_flag = RUS_radio_network_state
 			}
 			add_tech_bonus = {
-				name = radar_bonus
+				name = radar_tech_bonus
 				bonus = 0.5
 				uses = 1
 				category = radar_tech

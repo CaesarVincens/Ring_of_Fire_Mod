@@ -6,6 +6,11 @@ focus_tree = {
 			add = 10
 			has_country_flag = directorate_russia_focus_tree_flag
 		}
+		modifier = {
+			add = 5
+			tag = RUS
+			has_cosmetic_tag = Directorate_Russia
+		}
 	}
 	default = no
 	####################
