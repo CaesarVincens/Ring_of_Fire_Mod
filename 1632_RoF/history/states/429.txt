@@ -17,7 +17,7 @@ state = {
 		}
 		add_core_of = POL
 		add_core_of = SIL
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

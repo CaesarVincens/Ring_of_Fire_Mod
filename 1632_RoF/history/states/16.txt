@@ -19,6 +19,7 @@ state = {
 		}
 		add_core_of = TYR
 		#add_claim_by = AUS
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

@@ -76,6 +76,7 @@ ideas = {
 				conscription = 0.015
 				subversive_activites_upkeep = -0.1
 				monthly_population = 0.05
+				radical_drift = 0.001
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
@@ -91,6 +92,7 @@ ideas = {
 				conscription = 0.02
 				subversive_activites_upkeep = -0.15
 				monthly_population = 0.1
+				radical_drift = 0.002
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
@@ -106,6 +108,7 @@ ideas = {
 				conscription = 0.025
 				subversive_activites_upkeep = -0.2
 				monthly_population = 0.15
+				radical_drift = 0.005
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus

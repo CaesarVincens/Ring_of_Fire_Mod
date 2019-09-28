@@ -16,7 +16,7 @@ state = {
 
 		}
 		add_core_of = COL
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

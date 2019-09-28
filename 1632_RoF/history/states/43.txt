@@ -22,7 +22,7 @@ state = {
 
 		}
 		add_core_of = BRS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

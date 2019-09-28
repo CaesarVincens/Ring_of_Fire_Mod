@@ -21,6 +21,7 @@ state = {
 			}
 		}
 		add_core_of = LUB
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

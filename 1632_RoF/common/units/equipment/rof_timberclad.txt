@@ -129,6 +129,12 @@ equipments = {
 
 		archetype = timberclad
 		priority = 40
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
 		module_slots = {
 		}
 		
@@ -169,7 +175,12 @@ equipments = {
 		archetype = timberclad
 		parent = timberclad_1
 		priority = 40
-
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
 		module_slots = {
 		}
 

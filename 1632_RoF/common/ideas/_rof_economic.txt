@@ -17,10 +17,10 @@ ideas = {
 				consumer_goods_factor = 0.4
 				production_speed_industrial_complex_factor = 0.3
 				conversion_cost_mil_to_civ_factor = -0.3
-				research_speed_factor = 0.1
+				research_speed_factor = 0.2
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor = 0.3
-				conscription_factor = -0.5
+				conscription_factor = -0.3
 				stability_weekly = 0.001
 			}
 			cancel_if_invalid = no
@@ -45,7 +45,7 @@ ideas = {
 				research_speed_factor = 0.05
 				production_speed_arms_factory_factor = -0.15
 				conversion_cost_civ_to_mil_factor = 0.15
-				conscription_factor = -0.25
+				conscription_factor = -0.1
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -188,11 +188,6 @@ ideas = {
 				modifier = {
 					factor = 0
 					has_war = no
-				}
-				modifier = {
-					factor = 25
-					#Prio this if nation has a lot of manpower compared to MIC
-					manpower_per_military_factory >  10000
 				}
 			}
 		}

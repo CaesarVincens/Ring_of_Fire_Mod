@@ -16,6 +16,7 @@ state = {
 
 		}
 		add_core_of = POM
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

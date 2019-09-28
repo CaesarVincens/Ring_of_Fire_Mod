@@ -1247,7 +1247,6 @@ focus_tree = {
 				ideology = absolutist
 				popularity = 0.1
 			}
-			#custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 

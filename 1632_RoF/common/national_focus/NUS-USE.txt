@@ -16,7 +16,10 @@ focus_tree = {
 
 	default = no
 
-	#army tree
+	####################
+	#    ARMY  TREE    #
+	####################
+
 	focus = {
 		id = NUS_form_militia_army
 		icon = GFX_goal_generic_army_doctrines
@@ -164,7 +167,10 @@ focus_tree = {
 		}
 	}
 
-	#navy tree
+	####################
+	#    NAVAL TREE    #
+	####################
+
 	focus = {
 		id = NUS_brownwater_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -188,7 +194,11 @@ focus_tree = {
 			create_navy_leader = {
 				name = "John Chandler Simpson"
 				gfx = GFX_leader_NUS_John_Simpson
-				traits = {}
+				#traits = {}
+				coordination_skill = 2
+				attack_skill = 2
+				maneuvering_skill = 2
+				defense_skill = 2
 				skill = 3
 			}
 		}
@@ -366,7 +376,9 @@ focus_tree = {
 		}
 	}
 
-	#tech tree
+	####################
+	# TECHNOLOGY  TREE #
+	####################
 	focus = {
 		id = NUS_grantville_national_library
 		icon = GFX_focus_research
@@ -612,7 +624,9 @@ focus_tree = {
 		}
 	}
 
-	#industry tree
+	####################
+	#  INDUSTRY  TREE  #
+	####################
 	focus = {
 		id = NUS_gearing_down
 		icon = GFX_goal_generic_production2
@@ -1334,6 +1348,9 @@ focus_tree = {
 		}
 	}
 
+	####################
+	# ABSOLUTIST  TREE #
+	####################
 	focus = {
 		id = NUS_fortress_america
 		icon = GFX_goal_generic_fortify_city
@@ -1772,8 +1789,6 @@ focus_tree = {
 		cost = 5
 		relative_position_id = NUS_welcome_refugees
 		available_if_capitulated = yes
-		cancel_if_invalid = no
-		continue_if_invalid = yes
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = battle_of_jena_fired
@@ -1820,6 +1835,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = NUS_establish_committees_of_correspondence
+		available_if_capitulated = yes
 		available = {
 		}
 		select_effect = {
@@ -1829,33 +1845,20 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = NUS_constitutional_convention_flag
 			if = {
-				limit = {
-					has_idea = americans_first
-				}
+				limit = { has_idea = americans_first }
 				remove_ideas = americans_first
 			}
 			if = {
-				limit = {
-					has_idea = refuge_from_the_storm
-				}
+				limit = { has_idea = refuge_from_the_storm }
 				remove_ideas = refuge_from_the_storm
 			}
 			if = {
-				limit = {
-					has_idea = new_american_revolution
-				}
+				limit = { has_idea = new_american_revolution }
 				remove_ideas = new_american_revolution
 			}
 			if = {
-				limit = {
-					has_idea = people_out_of_time
-				}
+				limit = { has_idea = people_out_of_time }
 				remove_ideas = people_out_of_time
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = NUS_constitution_convention }
-				}
 			}
 			if = {
 				limit = {
@@ -1917,8 +1920,6 @@ focus_tree = {
 		bypass = {
 			579 = { is_owned_by = NUS }
 			580 = { is_owned_by = NUS }
-		}
-		select_effect = {
 		}
 		completion_reward = {
 			set_country_flag = invite_thuringia
@@ -2223,6 +2224,13 @@ focus_tree = {
 							has_country_flag = NUS_coc_inspired
 							exists = yes
 							has_capitulated = no
+							OR = {
+								is_subject = no
+								is_subject_of = NUS
+								OVERLORD = {
+									has_country_flag = NUS_coc_inspired
+								}
+							}
 						}
 						country_event = { id = RoF_USE.101 hours = 6 random = 25 }
 					}

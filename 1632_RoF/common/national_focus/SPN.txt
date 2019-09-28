@@ -249,7 +249,6 @@ focus_tree = {
 			has_global_flag = maria_anna_escaped
 		}
 		completion_reward = {
-			#custom_effect_tooltip = focus_effect_WIP_TT
 			country_event = { id = RoF_NED.105 }
 		}
 		ai_will_do = {
@@ -270,9 +269,12 @@ focus_tree = {
 			UPS = { is_subject_of = SPN }
 		}
 		completion_reward = {
-			set_cosmetic_tag = United_Netherlands
 			hidden_effect = { set_country_flag = take_UPS }
-			annex_country = { target = UPS transfer_troops = yes }
+			UPS = {
+				country_event = {
+					id = RoF_NED.140
+				}
+			}
 		}
 		cost = 15
 		ai_will_do = {
@@ -294,7 +296,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = focus_effect_WIP_TT
 		}
-		cost = 15
+		cost = 10
 		ai_will_do = {
 			factor = 20
 		}
@@ -308,20 +310,30 @@ focus_tree = {
 		prerequisite = { focus = SPN_united_netherlands }
 		relative_position_id = SPN_united_netherlands
 		available = {
+			has_global_flag = gaston_in_lorraine
 			OR = {
-				LOR = {
-					is_subject_of = FRA
-				}
+				LOR = { is_subject_of = FRA }
 				FRA = {
 					owns_state = 240
 					owns_state = 241
 				}
 			}
+			NOT = {
+				has_war_with = LOR
+				has_war_with = FRA
+				if = {
+					limit = { country_exists = BRG }
+					has_war_with = BRG
+				}
+			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			country_event = {
+				id = RoF_NED.150
+				hours = 1
+			}
 		}
-		cost = 15
+		cost = 10
 		ai_will_do = {
 			factor = 20
 		}

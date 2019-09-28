@@ -20,7 +20,7 @@ state = {
 
 		}
 		add_core_of = WRZ
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

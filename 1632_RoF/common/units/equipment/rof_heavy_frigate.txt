@@ -5,10 +5,10 @@ equipments = {
 
 		is_archetype = yes
 		is_buildable = no
-		type = capital_ship
+		type = screen_ship
 		group_by = archetype
 		
-		interface_category = interface_category_capital_ships
+		interface_category = interface_category_screen_ships
 
 		upgrades = {
 			ship_reliability_upgrade
@@ -131,7 +131,12 @@ equipments = {
 		visual_level = 0
 		archetype = heavy_frigate
 		priority = 40
-		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_sail_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
 		module_slots = {
 		}
 		lg_armor_piercing = 2
@@ -170,7 +175,12 @@ equipments = {
 		archetype = heavy_frigate
 		parent = heavy_frigate_1
 		priority = 40
-
+		upgrades = {
+			ship_reliability_upgrade
+			ship_sail_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
 		module_slots = {
 		}
 		lg_armor_piercing = 4

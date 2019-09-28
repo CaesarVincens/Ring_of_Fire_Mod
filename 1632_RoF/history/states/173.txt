@@ -19,9 +19,8 @@ state={
 
 		}
 		add_core_of = HUN
-		add_core_of = AUS
-		add_claim_by = TUR
-
+		#add_core_of = AUS
+		#add_claim_by = TUR
 	}
 
 	provinces={

@@ -39,6 +39,7 @@ bookmarks = {
 			}
 			focuses = {
 				AUS_new_empire
+				AUS_anti_ottoman_alliance
 			}
 		}
 		"FRA"={

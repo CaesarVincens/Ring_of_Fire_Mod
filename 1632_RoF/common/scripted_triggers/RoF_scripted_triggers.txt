@@ -83,16 +83,27 @@ check_has_focus_tree_to_switch_to_constitutionalist = {
 is_independent_country = {
 	custom_trigger_tooltip = {
 		tooltip = is_independent_country_tt
-		is_subject = no
 		exists = yes
+		is_subject = no
 		has_capitulated = no
+	}
+}
+
+is_subjected_country = {
+	custom_trigger_tooltip = {
+		tooltip = is_subjected_country_tt
+		OR = {
+			exists = no
+			is_subject = yes
+			has_capitulated = yes
+		}
 	}
 }
 
 is_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_potential_friend_of_ROOT_tt
-		is_puppet = no
+		is_subject = no
 		is_in_faction = no
 		exists = yes
 		NOT = { has_war_with = ROOT }
@@ -104,8 +115,8 @@ is_friend_or_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_friend_or_potential_friend_of_ROOT_tt
 		OR = {
-			is_puppet_of = ROOT
-			is_puppet = no
+			is_subject_of = ROOT
+			is_subject = no
 		}
 		OR = {
 			is_in_faction_with = ROOT
@@ -121,9 +132,9 @@ is_not_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_not_potential_friend_of_ROOT_tt
 		NOT = { is_in_faction_with = ROOT }
-		NOT = { is_puppet_of = ROOT }
+		NOT = { is_subject_of = ROOT }
 		OR = {
-			is_puppet = yes
+			is_subject = yes
 			is_in_faction = yes
 			has_war_with = ROOT
 			has_capitulated = yes
@@ -153,6 +164,16 @@ is_free_ally_or_subject_of_ROOT = {
 				is_subject = no
 				is_in_faction_with = ROOT
 			}
+			is_subject_of = ROOT
+		}
+	}
+}
+
+is_ally_or_subject_of_ROOT = {
+	custom_trigger_tooltip = {
+		tooltip = is_ally_or_subject_of_root_tt
+		OR = {
+			is_in_faction_with = ROOT
 			is_subject_of = ROOT
 		}
 	}

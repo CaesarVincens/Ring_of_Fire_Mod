@@ -135,6 +135,7 @@ equipments = {
 			ship_gun_upgrade
 			ship_anti_air_upgrade
 		}
+
 		module_slots = {
 		}
 
@@ -176,6 +177,13 @@ equipments = {
 		archetype = light_frigate
 		parent = light_frigate_1
 		priority = 30
+		
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_gun_upgrade
+			ship_anti_air_upgrade
+		}
 		
 		module_slots = {
 		}

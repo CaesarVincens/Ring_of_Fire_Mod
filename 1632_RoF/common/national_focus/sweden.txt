@@ -685,6 +685,7 @@ focus_tree = {
 		relative_position_id = SWE_rally_south_germany
 		cost = 10
 		#available_if_capitulated = yes
+		continue_if_invalid = yes
 		available = {
 			has_global_flag = thirty_years_war_ongoing
 			306 = { is_controlled_by_ROOT_or_ally = yes }

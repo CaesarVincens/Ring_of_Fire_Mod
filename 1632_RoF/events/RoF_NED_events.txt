@@ -142,6 +142,7 @@ country_event = {
 	
 	option = {
 		name = RoF_NED.105.a
+		add_political_power = 100
 	}
 }
 
@@ -209,12 +210,12 @@ country_event = {
 	id = RoF_NED.112
 	title = RoF_NED.112.t
 	desc = RoF_NED.112.d
-	picture = GFX_report_event_SPR_flag
+	picture = GFX_report_event_spr_flag
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NED.112.a
+		name = RoF_NED.112.a
 		#set_country_flag = accept_demand_@ROOT
 		SPN = {
 			country_event = { id = RoF_NED.113 hours = 1 }
@@ -233,7 +234,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NED.112.b
+		name = RoF_NED.112.b
 		#set_country_flag = refuse_demand_@ROOT
 		SPN = {
 			country_event = { id = RoF_NED.114 }
@@ -248,14 +249,14 @@ country_event = {
 country_event = {
 	id = RoF_NED.113
 	title = RoF_NED.113.t
-	desc = RoF_NED.113.db
+	desc = RoF_NED.113.d
 
-	picture = GFX_report_event_SPR_flag
+	picture = GFX_report_event_ups_flag
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = RoF_NED.113.b
+		name = RoF_NED.113.a
 		white_peace = UPS
 		set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }
 	}
@@ -265,9 +266,9 @@ country_event = {
 country_event = {
 	id = RoF_NED.114
 	title = RoF_NED.114.t
-	desc = RoF_NED.114.da
+	desc = RoF_NED.114.d
 
-	picture = GFX_report_event_SPR_flag
+	picture = GFX_report_event_ups_flag
 	
 	is_triggered_only = yes
 	
@@ -281,12 +282,12 @@ country_event = {
 	id = RoF_NED.115
 	title = RoF_NED.115.t
 	desc = RoF_NED.115.d
-	picture = GFX_report_event_SPR_flag
+	picture = GFX_report_event_spr_flag
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NED.115.a
+		name = RoF_NED.115.a
 		#set_country_flag = accept_demand_@ROOT
 		SPN = {
 			country_event = { id = RoF_NED.116 hours = 1 }
@@ -304,7 +305,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NED.115.b
+		name = RoF_NED.115.b
 		#set_country_flag = refuse_demand_@ROOT
 		every_owned_state = {
 			add_claim_by = SPN
@@ -324,7 +325,7 @@ country_event = {
 	title = RoF_NED.116.t
 	desc = RoF_NED.116.db
 
-	picture = GFX_report_event_SPR_flag
+	picture = GFX_report_event_spr_flag
 	
 	is_triggered_only = yes
 	
@@ -339,7 +340,7 @@ country_event = {
 	title = RoF_NED.116.t
 	desc = RoF_NED.116.da
 
-	picture = GFX_report_event_SPR_flag
+	picture = GFX_report_event_spr_flag
 	
 	is_triggered_only = yes
 	
@@ -362,12 +363,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NED.120.a
+		name = RoF_NED.120.a
 		set_country_flag = attending_congress_of_copenhagen
 		ai_chance = { base = 100 }
 	}
 	option = { # Refuse
-		name =  RoF_NED.120.b
+		name = RoF_NED.120.b
 	}
 }
 
@@ -381,12 +382,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NED.120.a
+		name = RoF_NED.120.a
 		set_country_flag = attending_congress_of_copenhagen
 		ai_chance = { base = 100 }
 	}
 	option = { # Refuse
-		name =  RoF_NED.120.b
+		name = RoF_NED.120.b
 	}
 }
 
@@ -400,12 +401,225 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NED.130.a
+		name = RoF_NED.130.a
 		set_country_flag = attending_congress_of_copenhagen
 		ai_chance = { base = 100 }
 	}
 	option = { # Refuse
-		name =  RoF_NED.130.b
+		name = RoF_NED.130.b
+	}
+}
+
+
+# annexing UPS
+country_event = {
+	id = RoF_NED.140
+	title = RoF_NED.140.t
+	desc = RoF_NED.140.d
+	picture = GFX_report_event_spr_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = RoF_NED.140.a
+		#set_country_flag = accept_demand_@ROOT
+		SPN = {
+			country_event = { id = RoF_NED.141 hours = 1 }
+			effect_tooltip = {
+				annex_country = {
+					target = UPS
+					transfer_troops = yes
+				}	
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = { # Refuse
+		name = RoF_NED.140.b
+		#set_country_flag = refuse_demand_@ROOT
+		SPN = {
+			country_event = { id = RoF_NED.142 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		trigger = { is_ai = no SPN = { is_ai = yes } }
+		name = RoF_NED.140.c
+		#set_country_flag = refuse_demand_@ROOT
+		SPN = {
+			change_tag_from = UPS
+			country_event = { id = RoF_NED.141 }
+		}
+	}
+}
+
+# UPS annexed
+country_event = {
+	id = RoF_NED.141
+	title = RoF_NED.141.t
+	desc = RoF_NED.141.d
+
+	picture = GFX_report_event_ups_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.141.a
+		set_cosmetic_tag = United_Netherlands
+		annex_country = {
+			target = UPS
+			transfer_troops = yes
+		}
+	}
+}
+
+# UPS autonomy
+country_event = {
+	id = RoF_NED.142
+	title = RoF_NED.142.t
+	desc = RoF_NED.142.d
+
+	picture = GFX_report_event_ups_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.142.a
+	}
+}
+
+# Gaston in Lorraine
+country_event = {
+	id = RoF_NED.150
+	title = RoF_NED.150.t
+	desc = RoF_NED.150.d
+	picture = GFX_report_event_fra_flag
+	
+	is_triggered_only = yes
+	
+	option = { # BRG helps
+		trigger = { country_exists = BRG }
+		name = RoF_NED.150.a
+		BRG = {
+			country_event = { id = RoF_NED.151 hours = 1 }
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = { # Alone
+		name = RoF_NED.150.b
+		country_event = { id = RoF_NED.152 days = 10 }
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# BRG Gaston
+country_event = {
+	id = RoF_NED.151
+	title = RoF_NED.151.t
+	desc = RoF_NED.151.d
+
+	picture = GFX_report_event_ups_flag
+	
+	is_triggered_only = yes
+	
+	option = { #agree
+		name = RoF_NED.151.a
+		SPN = {
+			set_country_flag = BRG_assisting_with_gaston
+			country_event = { id = RoF_NED.152 days = 10 }
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = { #refuse
+		name = RoF_NED.151.b
+		add_political_power = -20
+		SPN = {
+			country_event = { id = RoF_NED.152 days = 10 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# capture of Gaston
+country_event = {
+	id = RoF_NED.152
+	title = RoF_NED.152.t
+	desc = RoF_NED.152.d
+
+	picture = GFX_report_event_ups_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NED.152.a
+		if = {
+			limit = {
+				FRA = {
+					owns_state = 240
+				}
+			}
+			FRA = { release = LOR }
+		}
+		if = {
+			limit = {
+				FRA = {
+					owns_state = 241
+				}
+			}
+			LOR = { transfer_state = 241 }
+		}
+		set_autonomy = {
+			target = LOR
+			autonomy_state = autonomy_rof_protectorate
+		}
+	}
+	option = {
+		trigger = { has_country_flag = BRG_assisting_with_gaston }
+		name = RoF_NED.152.b
+		if = {
+			limit = {
+				240 = {
+					OR = {
+						is_owned_by = FRA
+						is_owned_by = LOR
+					}
+				}
+			}
+			BRG = { transfer_state = 240 }
+		}
+		if = {
+			limit = {
+				241 = {
+					OR = {
+						is_owned_by = FRA
+						is_owned_by = LOR
+					}
+				}
+			}
+			SPN = { transfer_state = 241 }
+		}
 	}
 }
 
@@ -427,7 +641,7 @@ country_event = {
 	}
 	
 	option = {
-		name =  RoF_NED.200.a
+		name = RoF_NED.200.a
 		set_country_flag = WIC_dutch_raiders_arrive
 	}
 }
@@ -448,7 +662,7 @@ country_event = {
 	}
 	
 	option = {
-		name =  RoF_NED.201.a
+		name = RoF_NED.201.a
 		set_country_flag = WIC_dutch_raiders_go_raiding
 		hidden_effect = {
 			FRA = {

@@ -131,6 +131,13 @@ equipments = {
 
 		archetype = steam_cruiser
 		priority = 40
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
+
 		module_slots = {}
 		
 		lg_armor_piercing = 10
@@ -170,6 +177,12 @@ equipments = {
 		archetype = steam_cruiser
 		parent = steam_cruiser_1
 		priority = 40
+		upgrades = {
+			ship_reliability_upgrade
+			ship_engine_upgrade
+			ship_armor_upgrade
+			ship_gun_upgrade
+		}
 
 		module_slots = {}
 		

@@ -28,7 +28,7 @@ state = {
 
 		}
 		add_core_of = SAX
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

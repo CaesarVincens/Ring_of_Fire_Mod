@@ -26,7 +26,7 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
-				base = 0
+				factor = 0
 			}
 		}
 		
@@ -46,7 +46,7 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 			ai_will_do = {
-				base = 0
+				factor = 0
 				modifier = {
 					add = 1
 					has_stability < 0.25
@@ -76,7 +76,7 @@ ideas = {
 			cancel_if_invalid = no
 			#default = yes
 			ai_will_do = {
-				base = 1
+				factor = 1
 				modifier = {
 					factor = 5
 					has_government = constitutionalist
@@ -101,7 +101,7 @@ ideas = {
 				political_power_gain = -0.1
 			}
 			ai_will_do = {
-				base = 1
+				factor = 1
 				modifier = {
 					factor = 5
 					has_government = liberal
@@ -126,7 +126,7 @@ ideas = {
 				political_power_gain = 0.25
 			}
 			ai_will_do = {
-				base = 0
+				factor = 0
 				modifier = {
 					add = 2
 					has_government = radical
@@ -178,7 +178,8 @@ ideas = {
 			cancel_if_invalid = no
 			modifier = {
 				conscription = 0.02
-				conscription_factor = 0.2			
+				training_time_army_factor = -0.1
+				#conscription_factor = 0.2			
 			}
 			ai_will_do = {
 				factor = 1

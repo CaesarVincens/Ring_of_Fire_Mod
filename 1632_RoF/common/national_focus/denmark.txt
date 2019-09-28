@@ -406,7 +406,7 @@ focus_tree = {
 		y = 1
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = DEN_investigate_grantville.tt
+				tooltip = has_heard_of_RoF_TT
 				OR = {
 					date > 1632.1.1
 					has_country_flag = knows_about_grantville

@@ -7,7 +7,7 @@ focus_tree = {
 			tag = USR
 		}
 		modifier = {
-			add = 10
+			add = 5
 			has_country_flag = united_states_russia_focus_tree_flag
 		}
 	}

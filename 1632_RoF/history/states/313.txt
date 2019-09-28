@@ -17,9 +17,9 @@ state = {
 				naval_base = 1
 			}
 		}
-		add_claim_by = DEN
+		#add_claim_by = DEN
 		add_core_of = OLD
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

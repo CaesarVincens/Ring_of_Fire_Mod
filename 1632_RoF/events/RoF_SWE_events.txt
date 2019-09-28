@@ -18,6 +18,37 @@ news_event = {
 
 	}
 }
+#FROM asks to join
+country_event = {
+	id = RoF_SWE.50
+	title = RoF_SWE.50.t
+	picture = GFX_report_event_eng_flag
+	desc = RoF_SWE.50.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_SWE.50.a
+		effect_tooltip = {
+			add_to_faction = FROM
+		}
+		FROM = {
+			set_country_flag = SWE_accepted
+			country_event = { id = RoF_ENG.101 hours = 12 }
+		}
+	}
+	option = {
+		name = RoF_SWE.50.b
+		FROM = {
+			set_country_flag = SWE_rejected
+			country_event = { id = RoF_ENG.101 hours = 12 }
+		}
+	}
+}
 
 country_event = {
 	id = RoF_SWE.100

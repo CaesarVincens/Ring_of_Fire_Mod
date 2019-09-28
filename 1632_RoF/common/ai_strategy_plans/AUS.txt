@@ -29,7 +29,7 @@ AUS_canon_focuses = {
 		AUS_hire_americans
 		AUS_ferdinand_3
 		AUS_new_empire
-		AUS_race_track_city
+		AUS_american_industry
 	}
 }
 

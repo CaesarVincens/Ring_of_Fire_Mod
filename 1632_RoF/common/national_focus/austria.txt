@@ -51,6 +51,38 @@ focus_tree = {
 		}
 		cost = 10
 		#available_if_capitulated = yes
+		complete_tooltip = {
+			add_political_power = 30
+			add_timed_idea = {
+				idea = AUS_patent_sales
+				days = 360
+			}
+			if = {
+				limit = { has_country_flag = AUS_sell_patents_kipper_1 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper
+					add_idea = AUS_kipper_und_wipper_2
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_sell_patents_kipper_2 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper_2
+					add_idea = AUS_kipper_und_wipper_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_sell_patents_kipper_3 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper_3
+					add_idea = AUS_kipper_und_wipper_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_sell_patents_kipper_4 }
+				remove_ideas = AUS_kipper_und_wipper_4
+			}
+		}
 		completion_reward = {
 			add_political_power = 30
 			add_timed_idea = {
@@ -272,6 +304,14 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = AUS_investment_inner_austria_state }
+				if = {
+					limit = { has_state_flag = AUS_investment_inner_austria_state_infra }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -298,13 +338,17 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						owner = { has_tech = infrastructure_tech_1 }
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
 					}
 					add_building_construction = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = AUS_investment_inner_austria_state_infra
 					else = {
 						custom_effect_tooltip = need_infra_tech.tt
 					}
@@ -337,13 +381,17 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						owner = { has_tech = infrastructure_tech_1 }
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
 					}
 					add_building_construction = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = AUS_investment_inner_austria_state_infra
 					else = {
 						custom_effect_tooltip = need_infra_tech.tt
 					}
@@ -383,6 +431,14 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = AUS_develop_hungary_state }
+				if = {
+					limit = { has_state_flag = AUS_develop_hungary_state_infra }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -403,13 +459,17 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						owner = { has_tech = infrastructure_tech_1 }
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
 					}
 					add_building_construction = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = AUS_develop_hungary_state_infra
 					else = {
 						custom_effect_tooltip = need_infra_tech.tt
 					}
@@ -436,13 +496,17 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						owner = { has_tech = infrastructure_tech_1 }
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
 					}
 					add_building_construction = {
 						type = infrastructure
 						level = 1
 						instant_build = yes
 					}
+					set_state_flag = AUS_develop_hungary_state_infra
 					else = {
 						custom_effect_tooltip = need_infra_tech.tt
 					}
@@ -540,6 +604,49 @@ focus_tree = {
 		}
 		cost = 10
 		#available_if_capitulated = yes
+		complete_tooltip = {
+			if = {
+				limit = { has_country_flag = AUS_free_reichsthalers }
+				add_political_power = 60
+				add_timed_idea = {
+					idea = AUS_reichsthalers_1
+					days = 360
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_limited_reichsthalers }
+				add_political_power = 30
+				add_timed_idea = {
+					idea = AUS_reichsthalers_2
+					days = 180
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_issue_reichsthalers_kipper_1 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper
+					add_idea = AUS_kipper_und_wipper_2
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_issue_reichsthalers_kipper_2 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper_2
+					add_idea = AUS_kipper_und_wipper_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_issue_reichsthalers_kipper_3 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper_3
+					add_idea = AUS_kipper_und_wipper_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_issue_reichsthalers_kipper_4 }
+				remove_ideas = AUS_kipper_und_wipper_4
+			}
+		}
 		completion_reward = {
 			country_event = { id = RoF_AUS.130 hours = 2 }
 			effect_tooltip = {
@@ -580,7 +687,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = AUS_race_track_city
+		id = AUS_american_industry
 		icon = GFX_goal_generic_construction
 		x = -1
 		y = 1
@@ -595,8 +702,64 @@ focus_tree = {
 		}
 		cost = 10
 		#available_if_capitulated = yes
+		complete_tooltip = {
+			add_ideas = AUS_american_industry_idea
+			add_tech_bonus = {
+				name = industrial_bonus
+				uses = 1
+				bonus = 0.5
+				category = industry
+			}
+			if = {
+				limit = { has_country_flag = AUS_american_industry_kipper_1 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper
+					add_idea = AUS_kipper_und_wipper_2
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_american_industry_kipper_2 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper_2
+					add_idea = AUS_kipper_und_wipper_3
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_american_industry_kipper_3 }
+				swap_ideas = {
+					remove_idea = AUS_kipper_und_wipper_3
+					add_idea = AUS_kipper_und_wipper_4
+				}
+			}
+			if = {
+				limit = { has_country_flag = AUS_american_industry_kipper_4 }
+				remove_ideas = AUS_kipper_und_wipper_4
+			}
+		}
 		completion_reward = {
-			add_ideas = AUS_race_track_city
+			if = {
+				limit = { has_idea = AUS_kipper_und_wipper }
+				set_country_flag = AUS_american_industry_kipper_1
+			}
+			else_if = {
+				limit = { has_idea = AUS_kipper_und_wipper_2 }
+				set_country_flag = AUS_american_industry_kipper_2
+			}
+			else_if = {
+				limit = { has_idea = AUS_kipper_und_wipper_3 }
+				set_country_flag = AUS_american_industry_kipper_3
+			}
+			else_if = {
+				limit = { has_idea = AUS_kipper_und_wipper_4 }
+				set_country_flag = AUS_american_industry_kipper_4
+			}
+			add_ideas = AUS_american_industry_idea
+			add_tech_bonus = {
+				name = industrial_bonus
+				uses = 1
+				bonus = 0.5
+				category = industry
+			}
 			lessen_AUS_kipper = yes
 		}
 		ai_will_do = {
@@ -609,11 +772,20 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
-		relative_position_id = AUS_race_track_city
-		prerequisite = { focus = AUS_race_track_city }
+		relative_position_id = AUS_american_industry
+		prerequisite = { focus = AUS_american_industry }
 		prerequisite = { focus = AUS_new_empire }
 		available = {
 			has_tech = infrastructure_tech_2
+			OR = {
+				BOH = {
+					NOT = { has_war_with = AUS }
+				}
+				AUS = {
+					owns_state = 37
+					owns_state = 38
+				}
+			}
 			#has_country_flag = ferdinand_2_sickness
 		}
 		bypass = {
@@ -622,17 +794,21 @@ focus_tree = {
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
-			add_tech_bonus = {
-				uses = 1
-				category = infra_tech
-				bonus = 0.5
-				name = infra_bonus
+			BOH = {
+				country_event = {
+					id = RoF_AUS.155
+				}
 			}
-			20 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			custom_effect_tooltip = AUS_bohmeian_railway_boh_TT
+			custom_effect_tooltip = AUS_bohmeian_railway_aus_TT
+			custom_effect_tooltip = AUS_bohmeian_railway_both_TT
+			effect_tooltip = {
+				show_ideas_tooltip = AUS_bohemian_rail
+				add_tech_bonus = {
+					uses = 1
+					category = infra_tech
+					bonus = 0.5
+					name = infra_bonus
 				}
 			}
 		}
@@ -666,7 +842,6 @@ focus_tree = {
 			country_event = {
 				id = RoF_AUS.140
 			}
-			#custom_effect_tooltip = focus_effect_WIP_TT
 		}
 		ai_will_do = {
 			factor = 5
@@ -720,13 +895,17 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		completion_reward = {
-			add_political_power = 60
-			#BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+			custom_effect_tooltip = focus_effect_WIP_TT
+			#add_political_power = 60
 		}
 		ai_will_do = {
 			base = 10
 		}
 	}
+
+	########################
+	#  REBUILD  HRE  TREE  #
+	########################
 
 	focus = {
 		id = AUS_restore_austria
@@ -745,12 +924,131 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			every_state = {
+				limit = {
+					is_german_state = yes
+					NOT = {
+						is_core_of = AUS
+						is_claimed_by = AUS
 					}
+					OWNER = {
+						NOT = {
+							tag = AUS
+							is_in_faction_with = AUS
+							is_subject_of = AUS
+						}
+					}
+				}
+				add_claim_by = AUS
+			}
+			custom_effect_tooltip = claims_on_HRE_TT
+		}
 		ai_will_do = {
 			base = 0
 		}
 	}
+
+	focus = {
+		id = AUS_reclaim_bohemia
+		icon = GFX_goal_poland_goal
+		x = 0
+		y = 1
+		relative_position_id = AUS_restore_austria
+		prerequisite = { focus = AUS_restore_austria }
+		available = {
+			country_exists = BOH
+		}
+		bypass = {
+			OR = {
+				has_war_with = BOH
+				NOT = { country_exists = BOH }
+				BOH = {
+					is_ally_or_subject_of_ROOT = yes
+				}
+			}
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	
+	focus = {
+		id = AUS_restore_princes
+		icon = GFX_goal_generic_military_deal
+		x = 2
+		y = 1
+		relative_position_id = AUS_restore_austria
+		prerequisite = { focus = AUS_restore_austria }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	
+	focus = {
+		id = AUS_retake_lowlands
+		icon = GFX_goal_generic_military_deal
+		x = 2
+		y = 1
+		relative_position_id = AUS_restore_princes
+		prerequisite = { focus = AUS_restore_princes }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	
+	focus = {
+		id = AUS_italian_hegemony
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 1
+		relative_position_id = AUS_restore_princes
+		prerequisite = { focus = AUS_restore_princes }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	
+	#########################
+	# AUSTRIA-HUNGARY/CANON #
+	#########################
 
 	focus = {
 		id = AUS_new_empire
@@ -769,6 +1067,35 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		completion_reward = {
+			set_cosmetic_tag = AUH
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	
+	focus = {
+		id = AUS_bohemian_accords
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 1
+		relative_position_id = AUS_new_empire
+		prerequisite = { focus = AUS_new_empire }
+		available = {
+			BOH = { is_independent_country = yes }
+			NOT = { has_war_with = BOH }
+		}
+		bypass = {
+			OR = {
+				BOH = { is_subjected_country = yes }
+				BOH = {
+					is_ally_or_subject_of_ROOT = yes
+				}
+			}
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
 			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 		ai_will_do = {
@@ -776,6 +1103,38 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = AUS_anti_ottoman_alliance
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		relative_position_id = AUS_bohemian_accords
+		prerequisite = { focus = AUS_bohemian_accords }
+		available = {
+			TUR = { is_independent_country = yes }
+		}
+		bypass = {
+			#OR = {
+			#	NOT = { country_exists = TUR }
+			#	TUR = {
+			#		is_ally_or_subject_of_ROOT = yes
+			#	}
+			#}
+		}
+		cost = 10
+		#available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+	
+	#####################
+	# 30 YEARS WAR TREE #
+	#####################
+
 	focus = {
 		id = AUS_sweet_talk_saxony
 		icon = GFX_goal_generic_improve_relations
