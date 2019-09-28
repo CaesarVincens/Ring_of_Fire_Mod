@@ -9,6 +9,92 @@
 # that'll be used if trigger passes
 
 defined_text = {
+    name = SWE_restore_bohemia_script
+    
+    text = {
+		trigger = {
+			has_country_flag = SWE_wallenstein_gambit
+		}
+        localization_key = SWE_install_wallenstein
+	}
+
+    text = {
+		trigger = {
+			NOT = { has_global_flag = winter_king_dead }
+		}
+        localization_key = SWE_restore_frederick
+	}
+	
+    text = {
+		trigger = {
+			NOT = { has_global_flag = karl_ludwig_catholic }
+		}
+        localization_key = SWE_restore_karl
+    }
+    text = {
+        localization_key = SWE_restore_bohemia_gen
+    }
+}
+
+defined_text = {
+	name = SWE_restore_bohemia_desc_script
+	
+	text = {
+		trigger = {
+			has_country_flag = SWE_wallenstein_gambit
+		}
+        localization_key = SWE_install_wallenstein_desc
+	}
+
+    text = {
+		trigger = {
+			NOT = { has_global_flag = winter_king_dead }
+		}
+        localization_key = SWE_restore_frederick_desc
+	}
+	
+    text = {
+		trigger = {
+			NOT = { has_global_flag = karl_ludwig_catholic }
+		}
+        localization_key = SWE_restore_karl_desc
+    }
+    text = {
+        localization_key = SWE_restore_bohemia_gen_desc
+    }
+}
+
+defined_text = {
+    name = show_hide_religion_ideas
+    
+    text = {
+		trigger = {
+			has_global_flag = show_religions
+		}
+        localization_key = hide_religion_ideas
+	}
+	
+    text = {
+        localization_key = show_religion_ideas
+    }
+}
+
+defined_text = {
+    name = show_hide_religion_ideas_desc
+    
+    text = {
+		trigger = {
+			has_global_flag = show_religions
+		}
+        localization_key = hide_religion_ideas_desc
+	}
+	
+    text = {
+        localization_key = show_religion_ideas_desc
+    }
+}
+
+defined_text = {
 	name = GetCoCProgress
 	text = {
 		localization_key = ROF_COC_AGITATE_PROGRESS

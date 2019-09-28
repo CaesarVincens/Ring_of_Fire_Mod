@@ -1,7 +1,7 @@
 state = {
 	id = 103
 	name= "STATE_103"
-	manpower = 63200
+	manpower = 43200
 
 	resources = {
 		aluminium = 18
@@ -10,7 +10,7 @@ state = {
 
 	history = {
 		owner = DEN
-		victory_points = { 12674 3 }
+		victory_points = { 12674 1 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

@@ -9,7 +9,7 @@ state={
 	history={
 		owner = AUS
 		victory_points = {
-			11432 3
+			11432 3 
 		}
 		buildings = {
 			infrastructure = 2
@@ -32,14 +32,15 @@ state={
 				bunker = 1
 
 			}
+
 		}
 		add_core_of = BOH
 		add_core_of = AUS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces={
-		424 3418 3585 6470 9555 11432 
+		424 3418 3585 6470 11432 
 	}
 	manpower=216000
 	buildings_max_level_factor=1.000

@@ -1,0 +1,141 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = {
+    name = USR_KAZ_battle_negotiations
+    
+    text = {
+		trigger = {
+			KAZ = { has_country_flag = USR_negotiations }
+		}
+        localization_key = USR_KAZ_battle_negotiations_2
+	}
+	
+    text = {
+        localization_key = USR_KAZ_battle_negotiations_1
+    }
+}
+
+defined_text = {
+    name = USR_constitution_serfdom
+    
+    text = {
+		trigger = {
+			has_country_flag = USR_serfdom_allowed
+		}
+        localization_key = USR_serfdom_allowed
+	}
+    text = {
+		trigger = {
+			has_country_flag = USR_serfdom_by_state
+		}
+        localization_key = USR_serfdom_by_state
+	}
+    text = {
+		trigger = {
+			has_country_flag = USR_serfdom_outlawed
+		}
+        localization_key = USR_serfdom_outlawed
+	}
+	
+    text = {
+        localization_key = USR_serfdom_unknown
+    }
+}
+
+defined_text = {
+    name = USR_constitution_executive
+    
+    text = {
+		trigger = {
+			has_country_flag = USR_lords_elect_lord
+		}
+        localization_key = USR_lords_elect_lord
+	}
+    text = {
+		trigger = {
+			has_country_flag = USR_commons_elect_lord
+		}
+        localization_key = USR_commons_elect_lord
+	}
+
+    text = {
+		trigger = {
+			has_country_flag = USR_commons_elect_common
+		}
+        localization_key = USR_commons_elect_common
+	}
+    text = {
+		trigger = {
+			has_country_flag = USR_dual_consuls
+		}
+        localization_key = USR_dual_consuls
+	}
+	
+    text = {
+        localization_key = USR_executive_unknown
+    }
+}
+
+defined_text = {
+    name = USR_constitution_religion
+    
+    text = {
+		trigger = {
+			has_country_flag = USR_orthodox_only
+		}
+        localization_key = USR_orthodox_only
+	}
+    text = {
+		trigger = {
+			has_country_flag = USR_states_choice
+		}
+        localization_key = USR_states_choice
+	}
+
+    text = {
+		trigger = {
+			has_country_flag = USR_free_religion
+		}
+        localization_key = USR_free_religion
+	}
+
+    text = {
+        localization_key = USR_religion_unknown
+    }
+}
+
+defined_text = {
+    name = USR_constitution_voting
+    
+    text = {
+		trigger = {
+			has_country_flag = USR_noble_vote
+		}
+        localization_key = USR_noble_vote
+	}
+    text = {
+		trigger = {
+			has_country_flag = USR_free_vote
+		}
+        localization_key = USR_free_vote
+	}
+
+    text = {
+		trigger = {
+			has_country_flag = USR_all_vote
+		}
+        localization_key = USR_all_vote
+	}
+
+    text = {
+        localization_key = USR_voting_unknown
+    }
+}

@@ -17,26 +17,20 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 78
-        }
-        constitutionalist = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = constitutionalist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 49
+	liberal = 0
+	radical = 0
+	neutrality = 32
+}
 
-
+set_country_flag = religion_lutheran
 set_country_flag = german_tag_flag
 add_ideas = {
 	military_focus_eco
@@ -47,7 +41,7 @@ create_country_leader = {
     desc = "POLITICS_MANFRED_BROMMY_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Nassau_Louis_Henry.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = constitutional_monarchy
     traits = {
     }
 }

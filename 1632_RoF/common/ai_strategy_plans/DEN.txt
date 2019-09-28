@@ -1,3 +1,33 @@
+DEN_canon_focuses = {
+	name = "Denmark Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = DEN
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		DEN_continue_recovery
+		DEN_jylland_construction
+		DEN_scania_construction
+		DEN_norway_construction
+		DEN_handle_Rigsradet
+		DEN_investigate_grantville
+		DEN_exploit_greenland
+		DEN_establish_workshops
+		DEN_naval_buildup
+		DEN_ostend_league
+		DEN_improve_defences
+		DEN_baltic_assault
+		DEN_redeem_orkneys
+		DEN_prepare_HBC
+		DEN_invest_lubeck
+	}
+}
 
 ostend_war = {
 	name = "Baltic War"

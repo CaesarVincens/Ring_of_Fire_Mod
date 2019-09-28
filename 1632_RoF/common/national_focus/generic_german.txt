@@ -44,9 +44,12 @@ focus_tree = {
 			add_political_power = 120
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1632.1.1
+			}
 		}
-
 	}
 	focus = {
 		id = shun_americans
@@ -156,6 +159,14 @@ focus_tree = {
 			add_ideas = GG_tyw_neutrality
 			set_country_flag = tyw_neutral
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				is_in_faction = no
+				num_of_controlled_states < 2
+			}
+		}
 
 	}
 	focus = {
@@ -182,6 +193,16 @@ focus_tree = {
 		completion_reward = {
 			SWE = {
 				country_event = { id = RoF_SWE.132 days = 1 }
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = SWE
+					value = 30
+				}
 			}
 		}
 
@@ -212,6 +233,16 @@ focus_tree = {
 				country_event = { id = RoF_AUS.105 days = 1 }
 			}
 		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = AUS
+					value = 30
+				}
+			}
+		}
 	}
 	focus = {
 		id = representative_democracy_focus
@@ -231,7 +262,7 @@ focus_tree = {
 			add_ideas = GG_democracy_idea
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 7.5
 		}
 	}
 	focus = {
@@ -486,6 +517,9 @@ focus_tree = {
 			remove_ideas = GG_prohibit_american_influence
 			add_ideas = GG_royal_dictatorship_focus
 		}
+		ai_will_do = {
+			base = 5
+		}
 	}
 	focus = {
 		id = nobles_republic
@@ -503,6 +537,9 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = GG_prohibit_american_influence
 			add_ideas = GG_nobles_republic
+		}
+		ai_will_do = {
+			base = 7.5
 		}
 	}
 	focus = {

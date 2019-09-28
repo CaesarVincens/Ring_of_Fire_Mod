@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = DEN
 		victory_points = {
-			185 3 
+			185 1
 		}
 		buildings = {
 			infrastructure = 2

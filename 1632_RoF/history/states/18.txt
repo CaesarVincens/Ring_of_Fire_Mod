@@ -4,7 +4,7 @@ state={
 	name="STATE_18"
 
 	history={
-		owner = AUS
+		owner = TYR
 		victory_points = {
 			673 3 
 		}
@@ -15,8 +15,9 @@ state={
 			air_base = 0
 
 		}
-		add_core_of = AUS
-
+		add_core_of = TYR
+		#add_claim_by = AUS
+		set_state_flag = german_state_flag
 	}
 
 	provinces={

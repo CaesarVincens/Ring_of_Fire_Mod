@@ -1,0 +1,36 @@
+﻿POL_canon_focuses = {
+	name = "Poland Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = POL
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+
+	}
+}
+
+POL_ignore_Kurland = {
+	name = "Ignore Kurland"
+	desc = "They aren't in the war"
+	enable = {
+		original_tag = POL
+		has_war_with = SWE
+	}
+	abort = {
+		OR = {
+			NOT = { has_war_with = SWE }
+			has_war_together_with = KUR
+		}
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = KUR
+		value = 1000
+	}
+}

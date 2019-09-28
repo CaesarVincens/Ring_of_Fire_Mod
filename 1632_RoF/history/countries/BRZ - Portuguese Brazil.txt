@@ -16,25 +16,20 @@ transport = 1
 set_convoys = 0
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        constitutionalist = {
-            popularity = 13
-        }
-        neutrality = {
-            popularity = 73
-        }
-    }
-    
     ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
 }
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 13
+	liberal = 0
+	radical = 0
+	neutrality = 73
+}
 
+set_country_flag = religion_catholic
 set_country_flag = colony_flag
 add_ideas = {
 }
@@ -45,6 +40,15 @@ create_country_leader = {
     picture = "gfx/leaders/SPR/Portrait_Brasil_Matias_de_Albuquerque.dds"
     expire = "1660.1.1"
     ideology = colony_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Matias de Albuquerque"
+    desc = "POLITICS_JERóNIMO_COELHO_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Brasil_Matias_de_Albuquerque.dds"
+    expire = "1660.1.1"
+    ideology = dictatorship
     traits = {
     }
 }

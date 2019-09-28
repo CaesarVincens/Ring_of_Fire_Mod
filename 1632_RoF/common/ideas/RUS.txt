@@ -176,7 +176,7 @@ ideas = {
 				global_building_slots_factor = -0.1
 				production_speed_buildings_factor = -0.1
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_2 = {
@@ -199,7 +199,7 @@ ideas = {
 				global_building_slots_factor = -0.05
 				production_speed_buildings_factor = -0.1
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_3 = {
@@ -221,7 +221,7 @@ ideas = {
 				consumer_goods_factor = 0.1
 				production_speed_buildings_factor = -0.05
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_4 = {
@@ -241,7 +241,120 @@ ideas = {
 				industrial_capacity_dockyard = -0.05
 				consumer_goods_factor = 0.05
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
+			removal_cost = -1
+		}
+		RUS_new_serfdom = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				absolutist_drift = 0.05
+				consumer_goods_factor = -0.01
+				stability_factor = 0.05
+				conscription_factor = -0.1
+				industrial_capacity_factory = 0.05
+				political_power_gain = -0.1
+			}
+			picture = generic_oppression
+			removal_cost = -1
+		}
+		RUS_airship_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				airship_equipment = {
+					instant = yes
+					build_cost_ic = -0.20
+				}
+			}
+		}
+		USR_reactionary_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				absolutist_drift = 0.1
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.1
+				mobilization_speed = 0.1
+				offensive_war_stability_factor = 0.1
+				non_core_manpower = -0.01
+			}
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+		}
+		USR_noble_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				absolutist_drift = 0.05
+				constitutionalist_drift = 0.05
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.1
+				political_power_gain = 0.01
+				offensive_war_stability_factor = 0.1
+			}
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+		}
+		USR_moderate_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				constitutionalist_drift = 0.1
+				army_core_defence_factor = 0.1
+				conscription_factor = 0.1
+				mobilization_speed = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+		}
+		USR_liberal_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				liberal_drift = 0.1
+				army_core_defence_factor = 0.1
+				stability_factor = 0.1
+				mobilization_speed = 0.1
+				defensive_war_stability_factor = 0.1
+				non_core_manpower = 0.03
+			}
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+		}
+		USR_radical_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				liberal_drift = 0.05
+				radical_drift = 0.05
+				army_core_attack_factor = 0.1
+				war_support_factor = 0.1
+				mobilization_speed = 0.1
+				defensive_war_stability_factor = 0.1
+				non_core_manpower = 0.08
+			}
+			picture = generic_constitutional_guarantees
 			removal_cost = -1
 		}
 	}

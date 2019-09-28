@@ -4,7 +4,10 @@ state = {
 	history = {
 		owner = DEN
 		victory_points = {
-			6389 3 
+			6389 3
+		}
+		victory_points = {
+			3368 3 
 		}
 		buildings = {
 			infrastructure = 2
@@ -14,6 +17,9 @@ state = {
 			6389 = {
 				naval_base = 1
 			}
+			3368 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = DEN
 
@@ -21,7 +27,7 @@ state = {
 	provinces = {
 		3231 3368 6257 6389 13207
 	}
-	manpower = 296208
+	manpower = 96208
 	buildings_max_level_factor = 1.000
 	state_category = town
 }

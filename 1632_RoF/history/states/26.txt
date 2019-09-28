@@ -9,17 +9,17 @@ state = {
 	history = {
 		owner = BAD
 		victory_points = {
-			6542 8 
+			6542 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}
 		add_core_of = BAD
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

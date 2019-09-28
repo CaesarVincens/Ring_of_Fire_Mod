@@ -9,17 +9,17 @@ state={
 	history={
 		owner = COL
 		victory_points = {
-			587 8 
+			587 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}
 		add_core_of = COL
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces={

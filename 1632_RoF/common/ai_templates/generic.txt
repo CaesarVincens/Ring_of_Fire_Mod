@@ -691,11 +691,11 @@ infantry_generic = {
 		}
 		allowed_types = {
 			tercio_infantry
-			merc_tercio_infantry
+			#merc_tercio_infantry
 			line_infantry
-			merc_line_infantry
+			#merc_line_infantry
 			cavalry
-			merc_cavalry
+			#merc_cavalry
 			heavy_artillery_brigade
 			jaeger_brigade
 		}
@@ -777,11 +777,11 @@ infantry_generic = {
 		}
 		allowed_types = {
 			line_infantry
-			merc_line_infantry
+			#merc_line_infantry
 			heavy_weapons_company
 			light_artillery_brigade
 			cavalry
-			merc_cavalry
+			#merc_cavalry
 			jaeger_brigade
 		}
 	}
@@ -847,7 +847,7 @@ cavalry_generic = {
 		}
 		allowed_types = {
 			cavalry
-			merc_cavalry
+			#merc_cavalry
 		}
 	}
 
@@ -937,11 +937,11 @@ garrison_generic = {
 
 		allowed_types = {
 			cavalry
-			merc_cavalry
+			#merc_cavalry
 			line_infantry
-			merc_line_infantry
+			#merc_line_infantry
 			tercio_infantry
-			merc_tercio_infantry
+			#merc_tercio_infantry
 			spear_infantry
 			military_police
 		}
@@ -1010,11 +1010,11 @@ garrison_generic = {
 		
 		allowed_types = {
 			cavalry
-			merc_cavalry
+			#merc_cavalry
 			line_infantry
-			merc_line_infantry
+			#merc_line_infantry
 			tercio_infantry
-			merc_tercio_infantry
+			#merc_tercio_infantry
 			spear_infantry
 			military_police
 		}
@@ -1082,7 +1082,7 @@ garrison_generic = {
 		
 		allowed_types = {
 			cavalry
-			merc_cavalry
+			#merc_cavalry
 			line_infantry
 			tercio_infantry
 			spear_infantry

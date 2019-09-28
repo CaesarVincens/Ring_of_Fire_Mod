@@ -17,30 +17,33 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 82
-        }
-        constitutionalist = {
-            popularity = 15
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
-
+set_country_flag = religion_reformed
 add_ideas = {
 		balanced_eco
 }
 set_stability = 0.5
+create_country_leader = {
+    name = "George Rákóczi"
+    desc = "POLITICS_ILIE_VAITOIANU_DESC"
+    picture = "gfx/leaders/TUR/Portrait_Transylvania_George_Rakoczi.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
 create_country_leader = {
     name = "George Rákóczi"
     desc = "POLITICS_ILIE_VAITOIANU_DESC"

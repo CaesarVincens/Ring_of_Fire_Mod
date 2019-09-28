@@ -65,11 +65,18 @@ ideas = {
 	
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+		error_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
 		early_modern_warfare = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
+			picture = generic_infantry_bonus
 			modifier = {
 				army_attack_factor = -0.2
 				army_defence_factor = 0.2
@@ -81,6 +88,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
+			picture = generic_infantry_bonus
 			modifier = {
 				army_attack_factor = -0.1
 				army_defence_factor = 0.1
@@ -494,6 +502,101 @@ ideas = {
 				training_time_factor = 0.1
 			}
 		}
+
+		### Religion Flavor
+
+		religion_catholic = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_lutheran = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_reformed = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_orthodox = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_anglican = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_sunni = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_shia = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_hindu = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_buddhist = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_confucian = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_shinto = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_tengri = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_african = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_north_american = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+		religion_secular = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+		}
+
+		### End Religions
 
 		
 	}

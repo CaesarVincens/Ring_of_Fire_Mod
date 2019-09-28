@@ -16,7 +16,7 @@ bookmarks = {
 			}
 			focuses = {
 				NUS_new_american_revolution
-				NUS_form_CPoE
+				NUS_establish_CPoE
 				NUS_patriotic_fervor
 			}
 		}
@@ -34,6 +34,13 @@ bookmarks = {
 		"AUS"={
 			history = "AUS_RING_OF_FIRE_DESC"
 			ideology = absolutist
+			ideas = {
+				AUS_kipper_und_wipper
+			}
+			focuses = {
+				AUS_new_empire
+				AUS_anti_ottoman_alliance
+			}
 		}
 		"FRA"={
 			history = "FRA_RING_OF_FIRE_DESC"
@@ -58,6 +65,9 @@ bookmarks = {
 		"UPS"={
 			history = "UPS_RING_OF_FIRE_DESC"
 			ideology = constitutionalist
+			focuses = {
+				UPS_besiege_maastricht
+			}
 		}
 		"---"={
 			history = "RING_OF_FIRE_DESC"

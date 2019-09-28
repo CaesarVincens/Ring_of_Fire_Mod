@@ -1,7 +1,14 @@
 ﻿start_equipment_factor = 0
 
 units = {
-						
+	division = {
+		name = "Infantry Division"
+		location = 9347 #Grantville
+		division_template = "Infantry Division"
+		#force_equipment_variants = { arquebus_equipment = { owner = NUS } }
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}					
 	fleet = {			
 		name = "USE Fleet 1"
 		naval_base = 9347

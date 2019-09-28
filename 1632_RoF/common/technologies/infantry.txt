@@ -38,15 +38,24 @@ technologies = {
 		}
 		categories = {
 			cat_pike_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
+			modifier = {
+				factor = 0
+				has_tech = musket_tech
+			}
+			modifier = {
+				factor = 0.1
+				tag = NUS
+			}
 		}
 	}
 	tercio_formation_tech = {
 		enable_subunits = {
 			tercio_infantry
-			merc_tercio_infantry
+			#merc_tercio_infantry
 		}
 		allow = {
 			has_tech = arquebus_weapons
@@ -56,9 +65,14 @@ technologies = {
 		
 		categories = {
 			cat_pike_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
+			modifier = {
+				factor = 0
+				has_tech = musket_tech
+			}
 		}
 	}
 	
@@ -79,9 +93,10 @@ technologies = {
 		}
 		categories = {
 			firearms_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 	}
 	
@@ -91,7 +106,7 @@ technologies = {
 		}
 		enable_subunits = {
 			line_infantry
-			merc_line_infantry
+			#merc_line_infantry
 		}
 		path = {
 			leads_to_tech = cartridges_tech
@@ -105,9 +120,37 @@ technologies = {
 		}
 		categories = {
 			firearms_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 5
+			factor = 10
+			modifier = {
+				factor = 10
+				tag = NUS
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				any_enemy_country = {
+					has_tech = musket_tech
+				}
+			}
+			modifier = {
+				factor = 2
+				any_allied_country = {
+					has_tech = musket_tech
+				}
+			}
+			modifier = {
+				factor = 5
+				capital_scope = {
+					is_on_continent = europe
+				}
+				date > 1632.1.1
+			}
 		}
 	}
 	
@@ -124,6 +167,7 @@ technologies = {
 		}
 		categories = {
 			firearms_weapons
+			infantry_weapons
 		}
 		category_musket = {
 			soft_attack = 0.1
@@ -136,7 +180,7 @@ technologies = {
 			
 		}
 		ai_will_do = {
-			factor = 5
+			factor = 50
 		}
 	}
 	
@@ -160,9 +204,20 @@ technologies = {
 		}
 		categories = {
 			firearms_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 50
+			modifier = {
+				factor = 0
+				original_tag = NUS
+				NOT = { has_completed_focus = NUS_rifle_meeting }
+			}
+			modifier = {
+				factor = 0
+				original_tag = SWE
+				NOT = { has_completed_focus = SWE_innovate_arms }
+			}
 		}
 	}
 
@@ -171,7 +226,7 @@ technologies = {
 			heavy_weapons_company
 		}
 		research_cost = 1.5
-		start_year = 1634
+		start_year = 1635
 		folder = {
 			name = infantry_folder
 			position = { x = 2 y = 8 }
@@ -181,7 +236,7 @@ technologies = {
 			support_tech
 		}
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 	}
 
@@ -194,16 +249,22 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 1636
+		start_year = 1635
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = 9 }
 		}
 		categories = {
 			firearms_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 50
+			modifier = {
+				factor = 0
+				original_tag = NUS
+				NOT = { has_completed_focus = NUS_srg_upgrades }
+			}
 		}
 	}
 	
@@ -219,9 +280,10 @@ technologies = {
 		}
 		categories = {
 			firearms_weapons
+			infantry_weapons
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 50
 		}
 	}
 
@@ -239,10 +301,10 @@ technologies = {
 			max_organisation = 5
 			defense = 0.05
 		}
-		merc_tercio_infantry = {
-			max_organisation = 5
-			defense = 0.05
-		}
+		#merc_tercio_infantry = {
+		#	max_organisation = 5
+		#	defense = 0.05
+		#}
 	}
 
 	swedish_line_tech = {
@@ -252,10 +314,10 @@ technologies = {
 			max_organisation = 5
 			breakthrough = 0.05
 		}
-		merc_line_infantry = {
-			max_organisation = 5
-			breakthrough = 0.05
-		}
+		#merc_line_infantry = {
+		#	max_organisation = 5
+		#	breakthrough = 0.05
+		#}
 	}
 
 	jaegers = {
@@ -285,6 +347,7 @@ technologies = {
 		}
 		categories = {
 			jaeger_tech
+			infantry_tech
 		}
 		ai_will_do = {
 			factor = 0.5
@@ -313,6 +376,7 @@ technologies = {
 		
 		categories = {
 			jaeger_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -335,6 +399,7 @@ technologies = {
 		
 		categories = {
 			jaeger_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -463,6 +528,7 @@ technologies = {
 		
 		categories = {
 			marine_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -491,6 +557,7 @@ technologies = {
 		
 		categories = {
 			marine_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -513,6 +580,7 @@ technologies = {
 		
 		categories = {
 			marine_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -694,6 +762,7 @@ technologies = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -730,6 +799,7 @@ technologies = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -761,6 +831,7 @@ technologies = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -795,6 +866,7 @@ technologies = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -828,6 +900,7 @@ technologies = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {
@@ -857,6 +930,7 @@ technologies = {
 			mountaineers_tech
 			marine_tech
 			para_tech
+			infantry_tech
 		}
 		
 		ai_will_do = {

@@ -37,13 +37,13 @@ focus_tree = {
 		available = {
 			OR = {
 				is_in_faction_with = NUS
-				NUS = { has_completed_focus = NUS_support_SWE }
+				NUS = { has_completed_focus = NUS_support_sweden }
 			}
 		}
 		bypass = {
 			OR = {
 				is_in_faction_with = NUS
-				NUS = { has_completed_focus = NUS_support_SWE }
+				NUS = { has_completed_focus = NUS_support_sweden }
 			}
 		}
 		completion_reward = {
@@ -72,95 +72,25 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = SWE_improve_industry_state }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 		}
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}	
-							}
-						}
-					}
-					OR = {
-						is_capital = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_capital = yes
-								}	
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = SWE_improve_industry_state
-			}
-			random_owned_controlled_state = {
-				limit = {
-					NOT = { has_state_flag = SWE_improve_industry_state }
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}	
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = SWE_improve_industry_state
 			}
 		}
-
 	}
 
 	focus = {
@@ -180,89 +110,20 @@ focus_tree = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = SWE_buildup_arms_state }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 		}
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}	
-							}
-						}
-					}
-					OR = {
-						is_capital = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_capital = yes
-								}	
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = SWE_buildup_arms_state
-			}
-			random_owned_controlled_state = {
-				limit = {
-					NOT = { has_state_flag = SWE_buildup_arms_state }
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}	
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = SWE_buildup_arms_state
@@ -334,13 +195,14 @@ focus_tree = {
 		x = 22
 		y = 0
 		available = {
+			has_global_flag = thirty_years_war_ongoing
 			BRA = { is_potential_friend_of_ROOT = yes }
 		}
 		bypass = {
 			OR = {
-				BRA = { is_not_potential_friend_of_ROOT = yes }
+				has_global_flag = thirty_years_war_ended
 				BRA = { is_in_faction_with = SWE }
-				NOT = { has_war_with = AUS }
+				BRA = { is_not_potential_friend_of_ROOT = yes }
 			}
 		}
 		cost = 5
@@ -362,13 +224,14 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		available = {
+			has_global_flag = thirty_years_war_ongoing
 			MKL = { is_potential_friend_of_ROOT = yes }
 		}
 		bypass = {
 			OR = {
-				MKL = { is_not_potential_friend_of_ROOT = yes }
+				has_global_flag = thirty_years_war_ended
 				MKL = { is_in_faction_with = SWE }
-				NOT = { has_war_with = AUS }
+				MKL = { is_not_potential_friend_of_ROOT = yes }
 			}
 		}
 		completion_reward = {
@@ -383,13 +246,15 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = {
+			has_global_flag = thirty_years_war_ongoing
 			SAX = { is_potential_friend_of_ROOT = yes }
+			45 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 		bypass = {
 			OR = {
-				SAX = { is_not_potential_friend_of_ROOT = yes }
+				has_global_flag = thirty_years_war_ended
 				SAX = { is_in_faction_with = SWE }
-				NOT = { has_war_with = AUS }
+				SAX = { is_not_potential_friend_of_ROOT = yes }
 			}
 		}
 		prerequisite = { focus = SWE_bully_brandenburg }
@@ -397,12 +262,26 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		completion_reward = {
-			SAX = { country_event = { id = RoF_German.130 hours = 12 } }
+			if = {
+				limit = {
+					AUS = {
+						focus_progress = {
+							focus = AUS_sweet_talk_saxony
+							progress > 0
+						}
+						NOT = { has_completed_focus = AUS_sweet_talk_saxony }
+					}
+				}
+				SAX = { country_event = { id = RoF_German.132 hours = 12 } }
+				else = {
+					SAX = { country_event = { id = RoF_German.130 hours = 12 } }
+				}
+			}
 		}
 	}
 	
 	focus = {
-		id = SWE_advance_on_austria
+		id = SWE_proceed_on_prague
 		icon = GFX_focus_generic_little_entente
 		ai_will_do = {
 			factor = 10
@@ -413,16 +292,17 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
-		cancel_if_invalid = no
+		#cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
-			has_war_with = AUS
-			alliance_strength_ratio > 1
+			has_global_flag = thirty_years_war_ongoing
+			#alliance_strength_ratio > 1
 			#enemies_strength_ratio < 0.75
-			strength_ratio = {
-				tag = AUS
-				ratio > 1.5
-			}
+			#strength_ratio = {
+			#	tag = AUS
+			#	ratio > 1.5
+			#}
+			414 = { is_controlled_by_ROOT_or_ally = yes }
 			37 = {
 				custom_trigger_tooltip = {
 					tooltip = is_owned_by_AUS_or_ally
@@ -438,7 +318,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				NOT = { has_war_with = AUS }
+				has_global_flag = thirty_years_war_ended
 				37 = { is_controlled_by_ROOT_or_ally = yes }
 				37 = {
 					NOT = { is_owned_by = AUS }
@@ -471,7 +351,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		available = {
-			has_war_with = AUS
+			has_global_flag = thirty_years_war_ongoing
 			37 = { is_controlled_by_ROOT_or_ally = yes }
 			428 = {
 				custom_trigger_tooltip = {
@@ -499,7 +379,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				NOT = { has_war_with = AUS }
+				has_global_flag = thirty_years_war_ended
 				AND = {
 					428 = { is_controlled_by_ROOT_or_ally = yes }
 					429 = { is_controlled_by_ROOT_or_ally = yes }
@@ -520,8 +400,8 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = { focus = SWE_advance_on_austria }
-		relative_position_id = SWE_advance_on_austria
+		prerequisite = { focus = SWE_proceed_on_prague }
+		relative_position_id = SWE_proceed_on_prague
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
@@ -530,7 +410,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SWE_restore_frederick
+		id = SWE_restore_bohemia
+		dynamic = yes
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		ai_will_do = {
 			factor = 10
@@ -542,18 +423,18 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = {
-			has_war_with = AUS
+			has_global_flag = thirty_years_war_ongoing
 			37 = { is_controlled_by_ROOT_or_ally = yes }
 			NOT = { country_exists = BOH }
 		}
 		bypass = {
 			OR = {
-				NOT = { has_war_with = AUS }
+				has_global_flag = thirty_years_war_ended
 				country_exists = BOH
 			}
 		}
-		prerequisite = { focus = SWE_advance_on_austria }
-		relative_position_id = SWE_advance_on_austria
+		prerequisite = { focus = SWE_proceed_on_prague }
+		relative_position_id = SWE_proceed_on_prague
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
@@ -574,16 +455,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = {
-			has_war_with = AUS
+			has_global_flag = thirty_years_war_ongoing
 			AUS = { owns_state = 20 }
+			37 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 		bypass = {
 			OR = {
-				NOT = { has_war_with = AUS }
+				has_global_flag = thirty_years_war_ended
 				NOT = { AUS = { owns_state = 20 } }
 			}
 		}
-		prerequisite = { focus = SWE_restore_frederick }
+		prerequisite = { focus = SWE_restore_bohemia }
 		prerequisite = { focus = SWE_secure_silesia }
 		relative_position_id = SWE_secure_silesia
 		cost = 10
@@ -599,28 +481,35 @@ focus_tree = {
 		ai_will_do = { factor = 10 }
 		x = -2
 		y = 1
-		mutually_exclusive = { focus = SWE_advance_on_austria }
+		mutually_exclusive = { focus = SWE_proceed_on_prague }
 		prerequisite = { focus = SWE_strong_arm_saxony }
 		relative_position_id = SWE_strong_arm_saxony
 		cost = 5
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
-			has_war_with = WRZ
-			alliance_strength_ratio > 1
-			strength_ratio = {
-				tag = WRZ
-				ratio > 1.5
+			has_global_flag = thirty_years_war_ongoing
+			414 = { is_controlled_by_ROOT_or_ally = yes }
+			custom_trigger_tooltip = {
+				tooltip = SXW_is_controlled_by_SWE_or_ally
+				579 = { is_controlled_by_ROOT_or_ally = yes }
+				580 = { is_controlled_by_ROOT_or_ally = yes }
 			}
+			#alliance_strength_ratio > 1
+			#strength_ratio = {
+			#	tag = WRZ
+			#	ratio > 1.5
+			#}
 		}
 		bypass = {
 			OR = {
+				has_global_flag = thirty_years_war_ended
+				NOT = { country_exists = WRZ }
+				WRZ = { has_capitulated = yes }
 				AND = {
 					NOT = { has_war_with = WRZ }
 					NOT = { WRZ = { is_in_faction_with = AUS } }
 				}
-				NOT = { country_exists = WRZ }
-				WRZ = { has_capitulated = yes }
 			}
 		}
 		select_effect = { country_event = { id = RoF_SWE.144 hours = 12 } }
@@ -642,21 +531,26 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
-			has_war_with = MNZ
-			alliance_strength_ratio > 1
-			strength_ratio = {
-				tag = MNZ
-				ratio > 1.5
+			has_global_flag = thirty_years_war_ongoing
+			#alliance_strength_ratio > 1
+			#strength_ratio = {
+			#	tag = MNZ
+			#	ratio > 1.5
+			#}
+			OR = {
+				578 = { is_controlled_by_ROOT_or_ally = yes }
+				577 = { is_controlled_by_ROOT_or_ally = yes }
 			}
 		}
 		bypass = {
 			OR = {
-				AND = {
-					NOT = { has_war_with = MNZ }
-					NOT = { WRZ = { is_in_faction_with = MNZ } }
-				}
+				has_global_flag = thirty_years_war_ended
 				NOT = { country_exists = MNZ }
 				MNZ = { has_capitulated = yes }
+				AND = {
+					NOT = { has_war_with = MNZ }
+					NOT = { MNZ = { is_in_faction_with = AUS } }
+				}
 			}
 		}
 		completion_reward = {
@@ -675,6 +569,7 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		available = {
+			has_global_flag = thirty_years_war_ongoing
 			OR = {
 				BRS = { is_potential_friend_of_ROOT = yes }
 				BRE = { is_potential_friend_of_ROOT = yes }
@@ -683,11 +578,14 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			AND = {
-				BRS = { is_not_potential_friend_of_ROOT = yes }
-				BRE = { is_not_potential_friend_of_ROOT = yes }
-				LUB = { is_not_potential_friend_of_ROOT = yes }
-				MAG = { is_not_potential_friend_of_ROOT = yes }
+			OR = {
+				has_global_flag = thirty_years_war_ended
+				AND = {
+					BRS = { is_not_potential_friend_of_ROOT = yes }
+					BRE = { is_not_potential_friend_of_ROOT = yes }
+					LUB = { is_not_potential_friend_of_ROOT = yes }
+					MAG = { is_not_potential_friend_of_ROOT = yes }
+				}
 			}
 		}
 		completion_reward = {
@@ -708,19 +606,27 @@ focus_tree = {
 		cost = 10
 		#available_if_capitulated = yes
 		available = {
+			has_global_flag = thirty_years_war_ongoing
 			OR = {
 				ANS = { is_potential_friend_of_ROOT = yes }
+				BAD = { is_potential_friend_of_ROOT = yes }
 				FRK = { is_potential_friend_of_ROOT = yes }
 				NUR = { is_potential_friend_of_ROOT = yes }
+				ULM = { is_potential_friend_of_ROOT = yes }
 				WRT = { is_potential_friend_of_ROOT = yes }
 			}
 		}
 		bypass = {
-			AND = {
-				ANS = { is_not_potential_friend_of_ROOT = yes }
-				FRK = { is_not_potential_friend_of_ROOT = yes }
-				NUR = { is_not_potential_friend_of_ROOT = yes }
-				WRT = { is_not_potential_friend_of_ROOT = yes }
+			OR = {
+				has_global_flag = thirty_years_war_ended
+				AND = {
+					ANS = { is_not_potential_friend_of_ROOT = yes }
+					BAD = { is_not_potential_friend_of_ROOT = yes }
+					FRK = { is_not_potential_friend_of_ROOT = yes }
+					NUR = { is_not_potential_friend_of_ROOT = yes }
+					ULM = { is_not_potential_friend_of_ROOT = yes }
+					WRT = { is_not_potential_friend_of_ROOT = yes }
+				}
 			}
 		}
 		completion_reward = {
@@ -733,11 +639,11 @@ focus_tree = {
 		id = SWE_cpoe
 		icon = GFX_goal_generic_major_alliance
 		ai_will_do = { factor = 10 }
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = SWE_rally_south_germany }
 		relative_position_id = SWE_rally_south_germany
-		cost = 10
+		cost = 5
 		#available_if_capitulated = yes
 		available = {
 			custom_trigger_tooltip ={
@@ -745,7 +651,7 @@ focus_tree = {
 				NUS = {
 					has_country_flag = NUS_start_CPoE
 					OR = {
-						has_completed_focus = NUS_support_SWE
+						has_completed_focus = NUS_support_sweden
 						is_guaranteed_by = SWE
 					}
 				}
@@ -753,7 +659,7 @@ focus_tree = {
 			NOT = {
 				NUS = {
 					focus_progress = {
-						focus = NUS_form_CPoE
+						focus = NUS_establish_CPoE
 						progress > 0
 					}
 				}
@@ -761,11 +667,47 @@ focus_tree = {
 		}
 		bypass = {
 			NUS = {
-				has_completed_focus = NUS_form_CPoE
+				has_completed_focus = NUS_establish_CPoE
 			}
 		}
 		completion_reward = {
 			country_event = { id = RoF_NUS.151 hours = 1 }
+		}
+	}
+
+	focus = {
+		id = SWE_occupy_oberpfalz
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		ai_will_do = { factor = 10 }
+		x = -1
+		y = 1
+		prerequisite = { focus = SWE_rally_south_germany }
+		relative_position_id = SWE_rally_south_germany
+		cost = 10
+		#available_if_capitulated = yes
+		continue_if_invalid = yes
+		available = {
+			has_global_flag = thirty_years_war_ongoing
+			306 = { is_controlled_by_ROOT_or_ally = yes }
+			461 = { is_controlled_by_ROOT_or_ally = yes }
+			if = {
+				limit = { is_ai = yes }
+				NUS = {
+					focus_progress = {
+						focus = NUS_alte_veste
+						progress > 0
+					}
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				has_global_flag = thirty_years_war_ended
+				655 = { is_controlled_by_ROOT_or_ally = yes }
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_SWE.161 hours = 1 }
 		}
 	}
 

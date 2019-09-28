@@ -17,30 +17,33 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        neutrality = {
-            popularity = 13
-        }
-        constitutionalist = {
-            popularity = 73
-        }
-    }
-    
-    ruling_party = constitutionalist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 }
 set_stability = 0.5
+create_country_leader = {
+    name = "Francesco Erizzo"
+    desc = "POLITICS_ANGELO_MENABREA_DESC"
+    picture = "gfx/leaders/Italies/Portrait_Venice_Francesco_Erizzo.dds"
+    expire = "1660.1.1"
+    ideology = republican_neutral
+    traits = {
+    }
+}
 create_country_leader = {
     name = "Francesco Erizzo"
     desc = "POLITICS_ANGELO_MENABREA_DESC"

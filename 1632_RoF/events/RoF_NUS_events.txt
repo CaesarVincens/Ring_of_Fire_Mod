@@ -156,7 +156,7 @@ country_event = {
 			create_country_leader = {
 				name = "Gretchen Richterin"
 				ideology = radical_democracy
-				#picture
+				picture = "gfx/leaders/leader_unknown_female.dds"
 			}
 			set_party_name = {
 				ideology = radical
@@ -708,6 +708,103 @@ country_event = {
 	}
 }
 
+# NUS wants to Annex Elbe River
+country_event = {
+	id = RoF_NUS.128
+	title = RoF_NUS.128.t
+	desc = RoF_NUS.128.d
+	picture = GFX_report_event_nus_flag
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name =  RoF_NUS.128.a
+		ai_chance = { base = 100 }
+		set_country_flag = NUS_accept_demand@ROOT
+		NUS = {
+			country_event = { id = RoF_NUS.129 }
+		}
+		if = {
+			limit = {
+				all_owned_state = {
+					has_state_flag = NUS_elbe_inv
+				}
+			}
+			custom_effect_tooltip = GAME_OVER_TT
+		}
+	}
+	option = { # Refuse
+		name =  RoF_NUS.128.b
+		set_country_flag = NUS_refuse_demand@ROOT
+		NUS = {
+			country_event = { id = RoF_NUS.129 }
+		}
+	}
+}
+
+# Wurzburg Responds
+country_event = {
+	id = RoF_NUS.129
+	title = RoF_NUS.129.t
+	desc = {
+		text = RoF_NUS.129.da
+		trigger = {
+			FROM = { has_country_flag = NUS_refuse_demand@FROM }
+		}
+	}
+	desc = {
+		text = RoF_NUS.129.db
+		trigger = {
+			FROM = { has_country_flag = NUS_accept_demand@FROM }
+		}
+	}
+	picture = GFX_report_event_nus_flag
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF_NUS.129.a
+		trigger = {
+			FROM = { has_country_flag = NUS_refuse_demand@FROM }
+		}
+		create_wargoal = {
+			target = FROM
+			type = take_state_focus
+			generator = {
+				406 41
+			}
+		}
+	}
+	option = {
+		name = RoF_NUS.129.b
+		trigger = {
+			FROM = { has_country_flag = NUS_accept_demand@FROM }
+		}
+		if = {
+			limit = {
+				FROM = {
+					all_owned_state = {
+						has_state_flag = NUS_elbe_inv
+					}
+				}
+			}
+			annex_country = { target = FROM }
+		}
+		else = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = NUS_elbe_inv
+					}
+					NUS = {
+						transfer_state = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
 #Constitutional Convention Opener
 country_event = {
 	id = RoF_NUS.130
@@ -1171,7 +1268,7 @@ country_event = {
 		NOT = { has_country_flag = NUS_battle_of_grantville }
 		date > 1632.10.1
 		OR = {
-			has_completed_focus = NUS_support_SWE
+			has_completed_focus = NUS_support_sweden
 			is_in_faction_with = SWE
 			is_guaranteed_by = SWE
 		}
@@ -1274,6 +1371,7 @@ country_event = {
 	trigger = {
 		tag = NUS
 		NOT = { has_country_flag = NUS_annex_WRZ }
+		WRZ = { has_capitulated = yes is_ai = yes }
 		NUS = {
 			NOT = { owns_state = 578 }
 			OR = {
@@ -1283,7 +1381,6 @@ country_event = {
 				}
 			}	
 		}
-		WRZ = { has_capitulated = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -1312,6 +1409,7 @@ country_event = {
 	trigger = {
 		tag = NUS
 		NOT = { has_country_flag = NUS_annex_WRZ }
+		WRZ = { exists = no }
 		NUS = {
 			OR = {
 				controls_state = 578
@@ -1320,7 +1418,6 @@ country_event = {
 				}
 			}	
 		}
-		WRZ = { exists = no }
 	}
 	
 	mean_time_to_happen = {
@@ -1333,16 +1430,88 @@ country_event = {
 	option = {
 		name = RoF_NUS.155.a
 		if = {
-			limit = { any_allied_country = { controls_state = 461 } }
+			limit = {
+				OR = {
+					any_allied_country = { controls_state = 461 }
+					NUS = { controls_state = 461 }
+				}
+			}
 			NUS = { transfer_state = 461 }
 		}
 		if = {
-			limit = { any_allied_country = { controls_state = 577 } }
+			limit = {
+				OR = {
+					any_allied_country = { controls_state = 577 }
+					NUS = { controls_state = 577 }
+				}
+			}
 			NUS = { transfer_state = 577 }
 		}
 		if = {
-			limit = { any_allied_country = { controls_state = 578 } }
+			limit = {
+				OR = {
+					any_allied_country = { controls_state = 578 }
+					NUS = { controls_state = 578 }
+				}
+			}
 			NUS = { transfer_state = 578 }
+		}
+	}
+}
+
+country_event = {
+	id = RoF_NUS.157
+	title = RoF_NUS.157.t
+	desc = RoF_NUS.157.d
+	
+	picture = GFX_report_event_nus_flag
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NUS
+		has_completed_focus = NUS_alte_veste
+		NOT = { has_country_flag = NUS_annex_OBF }
+		NUS = {
+			OR = {
+				controls_state = 655
+				any_allied_country = {
+					controls_state = 655
+				}
+			}	
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		set_country_flag = NUS_annex_OBF
+	}
+	
+	option = {
+		name = RoF_NUS.157.a
+		if = {
+			limit = {
+				is_in_faction_with = PAL
+				OR = {
+					any_allied_country = { controls_state = 655 }
+					NUS = { controls_state = 655 }
+				}
+			}
+			PAL = { transfer_state = 655 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					any_allied_country = { controls_state = 655 }
+					NUS = { controls_state = 655 }
+				}
+			}
+			NUS = { transfer_state = 655 }
+		}
+		else = {
+			clr_country_flag = NUS_annex_OBF
 		}
 	}
 }

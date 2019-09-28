@@ -17,10 +17,12 @@ state = {
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
-
+			444 = {
+				bunker = 1
+			}
 		}
 		add_core_of = BRA
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

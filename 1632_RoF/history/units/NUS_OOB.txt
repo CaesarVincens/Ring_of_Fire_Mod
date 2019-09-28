@@ -19,7 +19,7 @@ instant_effect = {
 		progress = 0.88
 		efficiency = 80
 	}
-	add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = NUS }
+	#add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
 }
 
 #Starting Units
@@ -30,6 +30,6 @@ units = {
 		division_template = "Militia"
 		#force_equipment_variants = { up_time_weapons = { owner = "NUS" } }
 		start_experience_factor = 0.1
-		start_equipment_factor = 1
+		start_equipment_factor = 0
 	}
 }

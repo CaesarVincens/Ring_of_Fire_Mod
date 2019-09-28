@@ -15,29 +15,22 @@ transport = 1
 # Research Bonuses
 set_convoys = 0
 
-
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 80
-        }
-        constitutionalist = {
-            popularity = 17
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
-
+set_popularities = {
+	absolutist = 80
+	constitutionalist = 17
+	liberal = 0
+	radical = 0
+	neutrality = 3
+}
 
 set_country_flag = german_tag_flag
+set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
 }
@@ -48,6 +41,15 @@ create_country_leader = {
     picture = "gfx/leaders/AUS/Portrait_Austria_Leopold_Wilhelm.dds"
     expire = "1660.1.1"
     ideology = bishopric
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Leopold Wilhelm von Habsburg"
+    desc = "POLITICS_GERHARD_VON HAYNAU_DESC"
+    picture = "gfx/leaders/AUS/Portrait_Austria_Leopold_Wilhelm.dds"
+    expire = "1660.1.1"
+    ideology = bishopric_neutral
     traits = {
     }
 }

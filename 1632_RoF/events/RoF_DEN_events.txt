@@ -388,8 +388,8 @@ country_event = {
 				add_state_core = 108
 				transfer_state = 656
 				add_state_core = 656
-				transfer_state = 659
-				add_state_core = 659
+				#transfer_state = 659
+				#add_state_core = 659
 				transfer_state = 109
 				add_state_core = 109
 			}

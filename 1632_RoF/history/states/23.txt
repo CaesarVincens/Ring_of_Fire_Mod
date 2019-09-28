@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = AUS
 		victory_points = {
-			3631 8 
+			9648 3 
 		}
 		buildings = {
 			infrastructure = 2
@@ -19,7 +19,7 @@ state = {
 
 		}
 		add_core_of = AUS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

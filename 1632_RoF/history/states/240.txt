@@ -10,14 +10,14 @@ state = {
 
 	history = {
 		owner = LOR
-		victory_points = { 11516 8 }
+		victory_points = { 11516 10 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 		}
-		add_claim_by = FRA
+		#add_claim_by = FRA
 		add_core_of = LOR
 	}
 

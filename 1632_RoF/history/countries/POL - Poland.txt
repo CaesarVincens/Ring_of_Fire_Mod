@@ -1,5 +1,5 @@
 ﻿capital = 347
-set_research_slots = 4
+set_research_slots = 2
 
 oob = "POL_OOB"
 
@@ -24,48 +24,26 @@ set_convoys = 0
         autonomous_state = autonomy_rof_vassal
         freedom_level = 0.6
     }
-PRU = {
-set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 74
-        }
-        constitutionalist = {
-            popularity = 24
-        }
-        neutrality = {
-            popularity = 2
-        }
+    set_autonomy = {
+        target = KUR
+        autonomous_state = autonomy_rof_vassal
+        freedom_level = 0.6
     }
-    
+set_politics = {
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 69
+	constitutionalist = 29
+	liberal = 0
+	radical = 0
+	neutrality = 2
 }
 
-set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 68
-        }
-        constitutionalist = {
-            popularity = 29
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
-    last_election = "1631.1.1"
-    election_frequency = 48
-    elections_allowed = no
-}
-
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 }

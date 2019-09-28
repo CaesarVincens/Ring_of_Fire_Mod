@@ -5,6 +5,9 @@ state = {
 
 	history = {
 		owner = BAV
+		victory_points = {
+			3541 10 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -14,7 +17,7 @@ state = {
 		}
 		add_core_of = BAV
 		add_core_of = PAL
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

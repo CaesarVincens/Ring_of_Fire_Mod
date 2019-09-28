@@ -1,0 +1,69 @@
+﻿RoF_enough_spears = {
+	name = "enough spears"
+	desc = "you have enough"
+	enable = {
+		has_equipment = {
+			pike_equipment > 50000
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = pike_equipment
+		value = -2000
+	}
+}
+
+RoF_enough_inf = {
+	name = "enough firearms"
+	desc = "you have enough"
+	enable = {
+		has_equipment = {
+			firearm_equipment > 100000
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = firearm_equipment
+		value = -1000
+	}
+	#ai_strategy = { type = equipment_production_min_factories id = infantry value = -100 }
+
+}
+
+RoF_enough_cannon = {
+	name = "enough cannons"
+	desc = "you have enough"
+	enable = {
+		has_equipment = {
+			heavy_artillery_equipment > 10000
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_artillery_equipment
+		value = -1000
+	}
+	#ai_strategy = { type = equipment_production_min_factories id = infantry value = -100 }
+
+}
+
+RoF_enough_field_guns = {
+	name = "enough field guns"
+	desc = "you have enough"
+	enable = {
+		has_equipment = {
+			light_artillery_equipment > 10000
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_artillery_equipment
+		value = -1000
+	}
+	#ai_strategy = { type = equipment_production_min_factories id = infantry value = -100 }
+
+}

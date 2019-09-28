@@ -35,3 +35,7 @@ Free_Russia = {
 	color = rgb { 47 21 108 }
 	color_ui = rgb { 47 21 108 }
 }
+USSR = {
+	color = rgb { 47 121 208 }
+	color_ui = rgb { 47 121 208 }
+}

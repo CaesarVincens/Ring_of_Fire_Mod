@@ -39,26 +39,20 @@ BRZ = {
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 80
-        }
-        constitutionalist = {
-            popularity = 17
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 	POR_iberian_union
@@ -69,7 +63,25 @@ create_country_leader = {
     desc = "POLITICS_GABRIEL_DE ALBORNOZ_DESC"
     picture = "gfx/leaders/SPR/Portrait_Spain_Filipe_IV.dds"
     expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Felipe III von Habsburg"
+    desc = "POLITICS_GABRIEL_DE ALBORNOZ_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Spain_Filipe_IV.dds"
+    expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Felipe III von Habsburg"
+    desc = "POLITICS_GABRIEL_DE ALBORNOZ_DESC"
+    picture = "gfx/leaders/SPR/Portrait_Spain_Filipe_IV.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
     traits = {
     }
 }

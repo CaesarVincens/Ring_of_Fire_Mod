@@ -1,0 +1,16 @@
+﻿
+units = {
+	division = {
+		name = "1. Bohemian Tercio Detachment"
+		location = 11542
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Bohemian Tercio Detachment"
+		location = 11542
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
+
+}

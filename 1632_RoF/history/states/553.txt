@@ -9,17 +9,20 @@ state = {
 	history = {
 		owner = ULM
 		victory_points = {
-			3690 8 
+			3690 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
+			3690 = {
+				bunker = 1
+			}
 
 		}
 		add_core_of = ULM
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

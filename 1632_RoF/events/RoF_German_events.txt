@@ -14,7 +14,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 30
+		days = 60
 	}
 	
 	immediate = {
@@ -31,7 +31,7 @@ country_event = {
 				add_state_claim = 434
 				add_state_claim = 435
 			}
-			AUS = {
+			TYR = {
 				remove_state_core = 16
 				remove_state_core = 17
 				add_state_claim = 16
@@ -55,6 +55,24 @@ country_event = {
 					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
 					expire = "1660.1.1"
 					ideology = constitutional_monarchy
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Bernard Wettin"
+					desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
+					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
+					expire = "1660.1.1"
+					ideology = absolute_monarchy
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Bernard Wettin"
+					desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
+					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
+					expire = "1660.1.1"
+					ideology = monarchy_neutral
 					traits = {
 					}
 				}
@@ -128,7 +146,7 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			has_country_flag = SWE_rejected
+			has_country_flag = AUS_rejected
 		}
 		text = RoF_German.102.db
 	}
@@ -164,7 +182,7 @@ country_event = {
 #	fire_only_once = yes
 
 	is_triggered_only = yes
-	
+
 	immediate = {
 		
 	}
@@ -291,13 +309,14 @@ country_event = {
 			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
 			add_opinion_modifier = { target = SWE modifier = tyw_allies }
 			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
-			#add_to_war = {
-			#	targeted_alliance = SWE
-			#	enemy = AUS
-			#	hostility_reason = asked_to_join
-			#}
 		}
-		ai_chance = { base = 100 }
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
 	}
 	option = {
 		name = RoF_German.130.b
@@ -310,7 +329,151 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { base = 0 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = no
+				add = 5
+			}
+		}
+	}
+	
+}
+
+#Saxony joins aus
+country_event = {
+	id = RoF_German.131
+	title = RoF_German.131.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_German.131.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_German.131.a
+		AUS = { country_event = { id = RoF_AUS.125 hours = 12 } }
+		set_country_flag = SAX_joins_AUS
+		effect_tooltip = {
+			AUS = { add_to_faction = SAX }
+			add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = no
+				add = 5
+			}
+		}
+	}
+	option = {
+		name = RoF_German.131.b
+		AUS = { country_event = { id = RoF_AUS.126 hours = 12 } }
+		effect_tooltip = {
+			AUS = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAX
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+	}
+}
+
+#Saxony joins swe
+country_event = {
+	id = RoF_German.132
+	title = RoF_German.132.t
+	picture = GFX_report_event_aus_sax_swe_flag
+	desc = RoF_German.132.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	#sweden
+	option = {
+		name = RoF_German.132.a
+		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
+		set_country_flag = SAX_joins_SWE
+		effect_tooltip = {
+			SWE = { add_to_faction = SAX }
+			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_enemies }
+			add_opinion_modifier = { target = SWE modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_allies }
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+	}
+	#austria
+	option = {
+		name = RoF_German.132.b
+		AUS = { country_event = { id = RoF_AUS.125 hours = 12 } }
+		set_country_flag = SAX_joins_AUS
+		effect_tooltip = {
+			AUS = { add_to_faction = SAX }
+			add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			reverse_add_opinion_modifier = { target = SWE modifier = tyw_enemies }
+			add_opinion_modifier = { target = AUS modifier = tyw_allies }
+			reverse_add_opinion_modifier = { target = AUS modifier = tyw_allies }
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = no
+				add = 5
+			}
+		}
+	}
+	#neutral
+	option = {
+		name = RoF_German.132.c
+		SWE = { country_event = { id = RoF_SWE.141 hours = 12 } }
+		effect_tooltip = {
+			SWE = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAX
+				}
+			}
+		}
+		AUS = { country_event = { id = RoF_AUS.126 hours = 12 } }
+		effect_tooltip = {
+			AUS = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAX
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_historical_focus_on = no
+				add = 10
+			}
+		}
 	}
 	
 }
@@ -559,27 +722,7 @@ country_event = {
 	#Help
 	option = {
 		name = "test"
-		set_politics = {
-
-			parties = {
-				absolutist = {
-					#popularity = 0
-					banned = yes
-				}
-				constitutionalist = {
-					#popularity = 88
-					banned = no
-				}
-				liberal = {
-					#popularity = 9
-					banned = no
-				}
-				neutrality = {
-					#popularity = 3
-					banned = no
-				}
-			}
-			
+		set_politics = {			
 			ruling_party = constitutionalist
 			#last_election = "1631.1.1"
 			election_frequency = 48

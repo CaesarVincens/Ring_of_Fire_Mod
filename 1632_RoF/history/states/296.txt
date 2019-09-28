@@ -6,17 +6,17 @@ state = {
 	history = {
 		owner = NAS
 		victory_points = {
-			6444 3 
+			6444 5 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
 
 		}
 		add_core_of = NAS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

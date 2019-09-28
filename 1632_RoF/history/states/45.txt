@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = BRA
 		victory_points = {
-			6521 9 
+			6521 20 
 		}
 		buildings = {
 			infrastructure = 2
@@ -19,7 +19,7 @@ state = {
 
 		}
 		add_core_of = BRA
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

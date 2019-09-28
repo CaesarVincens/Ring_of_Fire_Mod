@@ -236,6 +236,14 @@ technologies = {
 			factor = 2
 			
 			modifier = {
+				factor = 0.5
+				OR = {
+					tag = SWE
+					tag = NUS
+					tag = UPS
+				}
+			}
+			modifier = {
 				factor = 2
 				date > "1632.1.1"
 			}
@@ -273,7 +281,14 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 2
-			
+			modifier = {
+				factor = 0.5
+				OR = {
+					tag = SWE
+					tag = NUS
+					tag = UPS
+				}
+			}
 			modifier = {
 				factor = 2
 				date > "1632.1.1"
@@ -320,7 +335,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
-			
+			modifier = {
+				factor = 0.5
+				OR = {
+					tag = SWE
+					tag = NUS
+					tag = UPS
+				}
+			}
 			modifier = {
 				factor = 2
 				date > "1633.1.9"
@@ -364,7 +386,14 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 2
-			
+			modifier = {
+				factor = 0.5
+				OR = {
+					tag = SWE
+					tag = NUS
+					tag = UPS
+				}
+			}
 			modifier = {
 				factor = 2
 				date > "1632.1.1"
@@ -402,7 +431,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
-			
+			modifier = {
+				factor = 0.5
+				OR = {
+					tag = SWE
+					tag = NUS
+					tag = UPS
+				}
+			}
 			modifier = {
 				factor = 2
 				date > "1636.1.9"
@@ -797,6 +833,19 @@ technologies = {
 			modifier = {
 				factor = 5
 				date > "1634.1.1"
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_country = {
+						OR = {
+							has_tech = apc_tech_0
+							has_tech = apc_tech_1
+							has_tech = early_gas_tank
+							has_tech = early_steam_tank
+						}
+					}
+				}
 			}
 		}
 		

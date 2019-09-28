@@ -10,6 +10,19 @@ ideas = {
 			}
 			removal_cost = -1
 		}
+		UPS_maastricht_campaign = {
+			allowed = {
+				always = no
+			}
+			picture = generic_goods_red_bonus
+			modifier = {
+				training_time_factor = -0.1
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+			removal_cost = -1
+		}
 	}
 	political_advisor = {
 		UPS_absolutist_advisor = {

@@ -17,36 +17,48 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 89
-        }
-        constitutionalist = {
-            popularity = 9
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 89
+	constitutionalist = 9
+	liberal = 0
+	radical = 0
+	neutrality = 2
+}
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Maximilian I von Wittelsbach"
-    desc = "POLITICS_MAXIMILIAN_VON HESS_DESC"
+    name = "Maximilian von Wittelsbach"
+    desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
     picture = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Maximilian von Wittelsbach"
+    desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+    picture = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Maximilian von Wittelsbach"
+    desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+    picture = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
     traits = {
     }
 }

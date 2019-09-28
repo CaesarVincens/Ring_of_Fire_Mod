@@ -8,6 +8,9 @@ state = {
 		victory_points = {
 			6626 3 
 		}
+		victory_points = {
+			3631 8 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -16,10 +19,11 @@ state = {
 			air_base = 0
 			6626 = {
 				naval_base = 1
+				coastal_bunker = 2
 			}
 		}
 		add_core_of = AUS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

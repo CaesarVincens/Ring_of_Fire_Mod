@@ -16,28 +16,22 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 87
-        }
-        constitutionalist = {
-            popularity = 10
-        }
-        neutrality = {
-            popularity = 3
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 27
+	constitutionalist = 10
+	liberal = 0
+	radical = 0
+	neutrality = 63
+}
 
-
+set_country_flag = religion_buddhist
 add_ideas = {
-		military_focus_eco
+	military_focus_eco
 }
 set_stability = 0.5
 create_country_leader = {
@@ -45,7 +39,7 @@ create_country_leader = {
     desc = "POLITICS_SATHA_MEY_DESC"
     picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

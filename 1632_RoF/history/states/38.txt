@@ -10,18 +10,18 @@ state = {
 	history = {
 		owner = AUS
 		victory_points = {
-			3553 9 
+			3569 10
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 1
 			air_base = 0
 
 		}
 		add_core_of = BOH
 		add_core_of = AUS
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

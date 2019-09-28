@@ -17,26 +17,20 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 70
-        }
-        constitutionalist = {
-            popularity = 28
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 20
+	constitutionalist = 18
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 }
 set_stability = 0.5
@@ -45,7 +39,7 @@ create_country_leader = {
     desc = "POLITICS_ALBRECHT_HOFFMANN_DESC"
     picture = "gfx/leaders/Germanies/Portrait_Cologne_Ferdinand_von_Wittelsbach.dds"
     expire = "1660.1.1"
-    ideology = bishopric
+    ideology = bishopric_neutral
     traits = {
     }
 }

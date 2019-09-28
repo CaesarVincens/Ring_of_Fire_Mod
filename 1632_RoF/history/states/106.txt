@@ -1,13 +1,13 @@
-state = {
-	id = 106
-	name= "STATE_106"
-	manpower = 352904
 
-	state_category = large_town
+state={
+	id=106
+	name="STATE_106"
 
-	history = {
+	history={
 		owner = DEN
-		victory_points = { 6115 3 }
+		victory_points = {
+			6115 3 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -15,12 +15,18 @@ state = {
 			air_base = 0
 			6115 = {
 				naval_base = 2
+
 			}
+
 		}
 		add_core_of = DEN
+
 	}
 
-	provinces = {
-		14 10 27 111 133 144 179 3007 3021 3059 3105 3136 3171 6042 6080 6114 6115 6136 6160 9032 9103 9135 9157 9204 9227 11028 11037 11078 11113 11135 11151 11184 11206 
+	provinces={
+		10 14 27 111 133 144 171 179 3007 3021 3059 3105 3136 3171 6042 6080 6114 6115 6136 6160 6310 9032 9103 9135 9157 9204 9227 11028 11037 11078 11113 11135 11151 11184 11206 
 	}
+	manpower=252904
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

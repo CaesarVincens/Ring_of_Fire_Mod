@@ -37,13 +37,14 @@ focus_tree = {
 	####################
 	focus = {
 		id = SPN_don_fernando
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_don_fernando
 		cost = 5
-		x = 21
+		x = 22
 		y = 0
 		available = {
 			OR = {
 				has_global_flag = ostend_war_begins
+				SPR = { is_in_faction_with = FRA }
 				SPR = { has_country_flag = ostend_member }
 			}
 		}
@@ -75,7 +76,7 @@ focus_tree = {
 		id = SPN_battle_of_dunkirk
 		icon = GFX_goal_generic_occupy_start_war
 		cost = 5
-		x = -1
+		x = -2
 		y = 1
 		prerequisite = { focus = SPN_don_fernando }
 		relative_position_id = SPN_don_fernando
@@ -83,14 +84,16 @@ focus_tree = {
 		available = {
 			OR = {
 				has_global_flag = ostend_war_begins
-				has_war_with = UPS
 				FRA = {
 					focus_progress = {
-						focus = FRA_dunkirk
+						focus = FRA_strike_dutch
 						progress > 0
 					}
 				}
 			}
+		}
+		bypass = {
+			has_war_with = UPS
 		}
 		completion_reward = {
 			declare_war_on = {
@@ -105,16 +108,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		
 	}
+
 	focus = {
 		id = SPN_haarlem_gambit
 		icon = GFX_goal_generic_amphibious_assault
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		prerequisite = { focus = SPN_battle_of_dunkirk }
 		cost = 5
-		relative_position_id = SPN_don_fernando
+		relative_position_id = SPN_battle_of_dunkirk
 		completion_reward = {
 			custom_effect_tooltip = SPN_haarlem_gambit.tt
 			hidden_effect = {
@@ -130,7 +133,7 @@ focus_tree = {
 	focus = {
 		id = SPN_come_to_terms
 		icon = GFX_goal_generic_improve_relations
-		x = 1
+		x = 0
 		y = 2
 		prerequisite = { focus = SPN_don_fernando }
 		cost = 10
@@ -148,8 +151,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			white_peace = UPS
-			set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }
+			UPS = {
+				country_event = {
+					id = RoF_NED.112
+					hours = 2
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -160,11 +167,11 @@ focus_tree = {
 	focus = {
 		id = SPN_expand_borders
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 0
-		y = 3
+		x = -1
+		y = 1
 		prerequisite = { focus = SPN_haarlem_gambit focus = SPN_come_to_terms }
 		cost = 10
-		relative_position_id = SPN_don_fernando
+		relative_position_id = SPN_come_to_terms
 		available = {
 			OR = {
 				UPS = { is_subject_of = SPN }
@@ -175,8 +182,74 @@ focus_tree = {
 		}
 		completion_reward = {
 			LIE = { country_event = { id = RoF_NED.115 } }
-			#KLE = { country_event = { id = RoF_NED.115 } }
 			EFR = { country_event = { id = RoF_NED.115 } }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+		
+	focus = {
+		id = SPN_break_with_spain
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 2
+		y = 1
+		prerequisite = { focus = SPN_don_fernando }
+		cost = 10
+		relative_position_id = SPN_don_fernando
+		available = {
+			OR = {
+				has_war_with = UPS
+				UPS = { is_subject_of = SPN }
+			}
+			OR = {
+				SPR = { has_war = yes }
+				has_global_flag = congress_of_copenhagen_begins
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	focus = {
+		id = SPN_petition_to_relinquish
+		icon = GFX_focus_generic_concessions
+		x = 0
+		y = 1
+		prerequisite = { focus = SPN_break_with_spain }
+		cost = 10
+		relative_position_id = SPN_break_with_spain
+		available = {
+			has_country_leader = {
+				name = "Fernando von Habsburg"
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+			#country_event = { id = RoF_NED.115 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	
+	focus = {
+		id = SPN_rescue_maria_anna
+		icon = GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+		prerequisite = { focus = SPN_petition_to_relinquish }
+		cost = 10
+		relative_position_id = SPN_petition_to_relinquish
+		available = {
+			has_global_flag = maria_anna_escaped
+		}
+		completion_reward = {
+			country_event = { id = RoF_NED.105 }
 		}
 		ai_will_do = {
 			factor = 20
@@ -186,20 +259,81 @@ focus_tree = {
 	focus = {
 		id = SPN_united_netherlands
 		icon = GFX_focus_hol_united_netherlands
-		x = 1
-		y = 4
+		x = 0
+		y = 2
 		prerequisite = { focus = SPN_expand_borders }
 		prerequisite = { focus = SPN_come_to_terms }
-		relative_position_id = SPN_don_fernando
+		prerequisite = { focus = SPN_petition_to_relinquish }
+		relative_position_id = SPN_come_to_terms
 		available = {
 			UPS = { is_subject_of = SPN }
 		}
 		completion_reward = {
-			set_cosmetic_tag = United_Netherlands
 			hidden_effect = { set_country_flag = take_UPS }
-			annex_country = { target = UPS transfer_troops = yes }
+			UPS = {
+				country_event = {
+					id = RoF_NED.140
+				}
+			}
 		}
 		cost = 15
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+
+	focus = {
+		id = SPN_reestablish_overseas_connections
+		icon = GFX_goal_generic_improve_relations
+		x = -2
+		y = 1
+		prerequisite = { focus = SPN_united_netherlands }
+		relative_position_id = SPN_united_netherlands
+		available = {
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = SPN_extend_protection_to_lorraine
+		icon = GFX_goal_generic_alliance
+		x = 2
+		y = 1
+		prerequisite = { focus = SPN_united_netherlands }
+		relative_position_id = SPN_united_netherlands
+		available = {
+			has_global_flag = gaston_in_lorraine
+			OR = {
+				LOR = { is_subject_of = FRA }
+				FRA = {
+					owns_state = 240
+					owns_state = 241
+				}
+			}
+			NOT = {
+				has_war_with = LOR
+				has_war_with = FRA
+				if = {
+					limit = { country_exists = BRG }
+					has_war_with = BRG
+				}
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = RoF_NED.150
+				hours = 1
+			}
+		}
+		cost = 10
 		ai_will_do = {
 			factor = 20
 		}

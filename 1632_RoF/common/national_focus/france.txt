@@ -39,7 +39,7 @@ focus_tree = {
 		id = FRA_investigate_grantville
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
-		x = 24
+		x = 26
 		y = 0
 		completion_reward = {
 			add_political_power = 100
@@ -47,10 +47,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
+
 	focus = {
-		id = FRA_learn_from_history
+		id = FRA_lessons_of_history
 		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
@@ -62,127 +62,136 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 10
 			navy_experience = 10
-			add_ideas = NUS_uptime_knowledge_idea
+			add_ideas = FRA_future_knowledge
 		}
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
+
 	focus = {
-		id = FRA_make_overtures
-		icon = GFX_focus_chi_mission_to_the_us
+		id = FRA_religious_sanctuaries
+		icon = GFX_focus_research
 		cost = 10.00
 		prerequisite = {
-			focus = FRA_learn_from_history
+			focus = FRA_lessons_of_history
 		}
-		mutually_exclusive = {
-			focus = FRA_countermeasures_focus
-		}
-		x = 2
-		y = 2
-		relative_position_id = FRA_investigate_grantville
+		x = -1
+		y = 1
+		relative_position_id = FRA_lessons_of_history
 		completion_reward = {
-			if = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_popularity = {
+				ideology = absolutist
+				popularity = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = FRA_industrial_investments
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = FRA_religious_sanctuaries
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_religious_sanctuaries
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = FRA_industrial_investments_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = FRA_industrial_investments_state
+			}
+			random_owned_controlled_state = {
 				limit = {
-					NUS = {
-						OR = {
-							has_government = liberal
-							has_government = radical
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						NOT = { has_state_flag = FRA_industrial_investments_state }
+						owner = {
+							all_owned_state = {
+								has_state_flag = FRA_industrial_investments_state
+							}
+						}
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
 						}
 					}
 				}
-				swap_ideas = {
-					remove_idea = NUS_uptime_knowledge_idea
-					add_idea = FRA_ally_grantville_liberal
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
-				else = {
-					add_ideas = FRA_ally_grantville_absolutist
-				}
+				set_state_flag = FRA_industrial_investments_state
 			}
 		}
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
+			factor = 20
 		}
-
 	}
-	focus = {
-		id = FRA_make_reforms
-		icon = GFX_focus_generic_self_management
-		cost = 10.00
-		prerequisite = {
-			focus = FRA_make_overtures
-		}
-		x = 1
-		y = 3
-		relative_position_id = FRA_investigate_grantville
-		completion_reward = {
-			add_ideas = FRA_constitutionalism
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
 
-	}
-	focus = {
-		id = FRA_anti_habsburg_alliance
-		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 10.00
-		prerequisite = {
-			focus = FRA_make_overtures
-		}
-		x = 3
-		y = 3
-		relative_position_id = FRA_investigate_grantville
-		available = {
-			NUS = {
-				OR = {
-					has_war_with = AUS
-					has_war_with = SPR
-				}
-			}
-		}
-		completion_reward = {
-			add_political_power = 100
-			country_event = {
-				id = RoF_FRA.130
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-
-	}
 	focus = {
 		id = FRA_strengthen_crown
 		icon = GFX_focus_rom_royal_dictatorship
 		cost = 10.00
 		prerequisite = {
-			focus = FRA_learn_from_history
+			focus = FRA_lessons_of_history
 		}
 		x = -4
-		y = 2
-		relative_position_id = FRA_investigate_grantville
+		y = 1
+		relative_position_id = FRA_lessons_of_history
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.1
 		}
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
+
 	focus = {
 		id = FRA_promote_from_history
 		icon = GFX_focus_generic_military_academy
@@ -190,17 +199,17 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_strengthen_crown
 		}
-		x = -4
-		y = 3
-		relative_position_id = FRA_investigate_grantville
+		x = 1
+		y = 1
+		relative_position_id = FRA_strengthen_crown
 		completion_reward = {
 			add_ideas = FRA_promote_future
 		}
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
+
 	focus = {
 		id = FRA_new_model_army
 		icon = GFX_goal_generic_axis_build_infantry
@@ -208,36 +217,67 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_promote_from_history
 		}
-		x = -4
-		y = 4
-		relative_position_id = FRA_investigate_grantville
+		x = 0
+		y = 1
+		relative_position_id = FRA_promote_from_history
 		completion_reward = {
 			add_tech_bonus = {
 				name = cardinal_tech_bonus
 				bonus = 0.5
-				uses = 1
-				ahead_reduction = 0.8
+				uses = 2
+				ahead_reduction = 2
 				technology = caplock_tech
+				technology = flintlock_tech
 			}
 		}
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
+	
 	focus = {
-		id = FRA_countermeasures_focus
-		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 5.00
+		id = FRA_occupy_lorraine
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
 		prerequisite = {
-			focus = FRA_learn_from_history
+			focus = FRA_strengthen_crown
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_strengthen_crown
+		will_lead_to_war_with = LOR
+		available = {
+			LOR = {
+				is_independent_country = yes
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			LOR = {
+				country_event = {
+					id = RoF_FRA.160
+					hours = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	focus = {
+		id = FRA_counter_american_influence
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = FRA_lessons_of_history
 		}
 		mutually_exclusive = {
-			focus = FRA_make_overtures
+			focus = FRA_approach_americans
 		}
-		x = -2
-		y = 2
-		relative_position_id = FRA_investigate_grantville
+		x = 1
+		y = 1
+		relative_position_id = FRA_lessons_of_history
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
@@ -245,10 +285,7 @@ focus_tree = {
 				OR = {
 					is_guaranteed_by = SWE
 					is_in_faction = yes
-					focus_progress = {
-						focus = NUS_support_SWE
-						progress > 0
-					}
+					has_completed_focus = NUS_support_sweden
 					has_completed_focus = NUS_expand_committees
 				}
 			}
@@ -262,18 +299,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-
 	}
+
 	focus = {
 		id = FRA_strike_grantville
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 5.00
 		prerequisite = {
-			focus = FRA_countermeasures_focus
+			focus = FRA_counter_american_influence
 		}
-		x = -2
-		y = 3
-		relative_position_id = FRA_investigate_grantville
+		x = 0
+		y = 1
+		relative_position_id = FRA_counter_american_influence
 		available = {
 			date > 1632.5.1
 		}
@@ -293,8 +330,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-
 	}
+
 	focus = {
 		id = FRA_ostend_league_focus
 		icon = GFX_goal_tripartite_pact
@@ -302,9 +339,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_strike_grantville
 		}
-		x = -2
-		y = 4
-		relative_position_id = FRA_investigate_grantville
+		x = 0
+		y = 1
+		relative_position_id = FRA_strike_grantville
 		available = {
 			NUS = {
 				is_in_faction = yes
@@ -321,18 +358,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-
 	}
+	
 	focus = {
-		id = FRA_dunkirk
+		id = FRA_strike_dutch
 		icon = GFX_goal_generic_navy_battleship
 		cost = 10.00
 		prerequisite = {
 			focus = FRA_ostend_league_focus
 		}
-		x = -2
-		y = 5
-		relative_position_id = FRA_investigate_grantville
+		x = 0
+		y = 1
+		relative_position_id = FRA_ostend_league_focus
 		will_lead_to_war_with = NUS
 		available = {
 			country_exists = UPS
@@ -354,6 +391,108 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 40
+		}
+	}
+
+	focus = {
+		id = FRA_approach_americans
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10.00
+		prerequisite = {
+			focus = FRA_lessons_of_history
+		}
+		mutually_exclusive = {
+			focus = FRA_counter_american_influence
+		}
+		x = 4
+		y = 1
+		relative_position_id = FRA_lessons_of_history
+		completion_reward = {
+			if = {
+				limit = {
+					NUS = {
+						OR = {
+							has_government = liberal
+							has_government = radical
+						}
+					}
+				}
+				swap_ideas = {
+					remove_idea = FRA_future_knowledge
+					add_idea = FRA_ally_grantville_liberal
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = FRA_future_knowledge
+						add_idea = FRA_ally_grantville_absolutist
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_make_reforms
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = FRA_approach_americans
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_approach_americans
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_constitutionalism
+				days = 360
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+	}
+	focus = {
+		id = FRA_anti_habsburg_alliance
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = FRA_approach_americans
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_approach_americans
+		available = {
+			NUS = {
+				OR = {
+					has_war_with = AUS
+					has_war_with = SPR
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			country_event = {
+				id = RoF_FRA.130
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 
 	}

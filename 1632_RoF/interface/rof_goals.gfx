@@ -9,5 +9,35 @@ spriteTypes = {
 		name = "GFX_focus_germany_committee"
 		texturefile = "gfx/interface/goals/focus_germany_committee.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_wallenstein"
+		texturefile = "gfx/interface/goals/focus_wallenstein.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_kill_wallenstein"
+		texturefile = "gfx/interface/goals/focus_kill_wallenstein.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_prince_rupert"
+		texturefile = "gfx/interface/goals/focus_prince_rupert.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_princess_elizabeth"
+		texturefile = "gfx/interface/goals/focus_princess_elizabeth.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ferdinand_3"
+		texturefile = "gfx/interface/goals/focus_ferdinand_3.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_don_fernando"
+		texturefile = "gfx/interface/goals/focus_don_fernando.dds"
+	}
 	
 }

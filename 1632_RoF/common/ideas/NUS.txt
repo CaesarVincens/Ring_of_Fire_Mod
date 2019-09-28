@@ -76,6 +76,7 @@ ideas = {
 				conscription = 0.015
 				subversive_activites_upkeep = -0.1
 				monthly_population = 0.05
+				radical_drift = 0.001
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
@@ -91,6 +92,7 @@ ideas = {
 				conscription = 0.02
 				subversive_activites_upkeep = -0.15
 				monthly_population = 0.1
+				radical_drift = 0.002
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
@@ -106,6 +108,7 @@ ideas = {
 				conscription = 0.025
 				subversive_activites_upkeep = -0.2
 				monthly_population = 0.15
+				radical_drift = 0.005
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
@@ -116,7 +119,9 @@ ideas = {
 			}
 			modifier = {
 				liberal_drift = 0.05
-				enemy_partisan_effect = -0.1
+				enemy_partisan_effect = -0.2
+				non_core_manpower = 0.08
+				defensive_war_stability_factor = 0.1
 			}
 			removal_cost = -1
 			picture = generic_constitutional_guarantees
@@ -137,8 +142,9 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				absolutist_drift = 0.2
-				production_speed_buildings_factor = 0.2				
+				absolutist_drift = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05			
 			}
 			removal_cost = -1
 			picture = generic_fascism_drift_bonus

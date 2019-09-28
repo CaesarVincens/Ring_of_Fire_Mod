@@ -4,6 +4,7 @@ Play an alternate history set in the middle of the Thirty Years war where a town
 
 Lead Developer: CaesarVincens
 Focus Tree Contributions: Principality of Lichenstein, King of Nords
+Testers and Feedback: DPBR8, TheCapitan157, Dylan Hultman
 
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
@@ -11,6 +12,26 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
+
+
+Alpha 0.6.1 - Aug. 14, 2019
+Fixed ships to be deployable - thanks to AngelBlue
+Changed Gaston idea to be flat stability penalty until more of France's focus tree is complete.
+Other minor fixes and updates
+
+Alpha 0.6.0 - Viennese Waltz - Jun. 22, 2019
+Updated to HoI Patch 1.7.0
+Realigned many countries to isolationist/neutral politics, for now
+Many changes to AI behavior, especially around tech
+Started work on Austria focus Tree
+Updates to several focus trees, especially the Russian trees, with constitutional convention
+Several new events, some events stand in for focuses until focus trees for certain countries are made
+New Religion Flavor ideas (toggled by decision)
+Added a few new focus icons
+Updates to some flags
+Minor map changes
+Air bases and naval bases now store some fuel
+Removed Merc battalions
 
 Alpha 0.5.1 - Apr. 3, 2019
 Updated to HoI patch 1.6.2

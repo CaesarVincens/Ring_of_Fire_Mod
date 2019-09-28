@@ -9,7 +9,7 @@ state = {
 	state_category = town
 
 	history = {
-		owner = AUS
+		owner = TYR
 		victory_points = { 678 3 }
 		buildings = {
 			infrastructure = 2
@@ -17,7 +17,9 @@ state = {
 			arms_factory = 0
 			air_base = 0
 		}
-		add_core_of = AUS
+		add_core_of = TYR
+		#add_claim_by = AUS
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

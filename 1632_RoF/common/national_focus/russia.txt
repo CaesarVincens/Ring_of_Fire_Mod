@@ -934,13 +934,15 @@ focus_tree = {
 		prerequisite = { focus = RUS_dirrigible_designs }
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		relative_position_id = RUS_dirrigible_designs
 		available = {
 			has_tech = first_airship
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			add_political_power = 60
+			add_war_support = 0.05
+			air_experience = 10
 		}
 	}
 
@@ -950,7 +952,7 @@ focus_tree = {
 	#may 32
 	focus = {
 		id = RUS_slow_fever_treatment
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = RUS_establish_dacha }
 		x = 3
 		y = 1
@@ -1028,6 +1030,9 @@ focus_tree = {
 					add_idea = RUS_slow_fever_mitigated
 				}
 			}
+		}
+		ai_will_do = {
+			base = 10
 		}
 	}
 	
@@ -1238,7 +1243,10 @@ focus_tree = {
 			has_country_flag = crisis_in_kremlin
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -1251,9 +1259,20 @@ focus_tree = {
 		cost = 10
 		relative_position_id = RUS_sideline_czar
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_serfdom_abolished.tt
+				NOT = {
+					has_idea = RUS_eastern_serfdom_1
+					has_idea = RUS_eastern_serfdom_2
+					has_idea = RUS_eastern_serfdom_3
+					has_idea = RUS_eastern_serfdom_4
+				}				
+			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			add_ideas = {
+				RUS_new_serfdom
+			}
 		}
 	}
 	
@@ -1264,7 +1283,7 @@ focus_tree = {
 		prerequisite = { focus = RUS_launch_czarina_evdokia }
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		relative_position_id = RUS_launch_czarina_evdokia
 		available = {
 		}

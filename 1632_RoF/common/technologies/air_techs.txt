@@ -19,11 +19,35 @@ technologies = {
 			air_research
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { tag = NUS }
-				date < 1634.1.1
+				date < 1633.1.1
+			}
+			modifier = {
+				factor =  10
+				original_tag = RUS
+				has_completed_focus = RUS_russian_flight
+			}
+			modifier = {
+				factor =  10
+				has_completed_focus = air_research
+			}
+			modifier = {
+				factor =  10
+				AND = {
+					is_neighbor_of = NUS
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor =  10
+				is_major = yes
+				date > 1634.1.1
+			}
+			modifier = {
+				factor =  10
+				date > 1636.1.1
 			}
 		}
 	}
@@ -51,11 +75,19 @@ technologies = {
 			air_research
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 0
 				NOT = { tag = NUS }
-				date < 1634.1.1
+				date < 1636.1.1
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_tech = single_plane_tech_1
+					has_tech = multi_plane_tech_1
+					has_tech = airship_tech_2
+				}
 			}
 		}
 	}
@@ -75,7 +107,20 @@ technologies = {
 			air_research
 		}
 		ai_will_do = {
-			factor = 2
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { tag = NUS }
+				date < 1638.1.1
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_tech = single_plane_tech_2
+					has_tech = multi_plane_tech_2
+					has_tech = airship_tech_3
+				}
+			}
 		}
 	}
 	
@@ -94,7 +139,16 @@ technologies = {
 			air_research
 		}
 		ai_will_do = {
-			factor = 2
+			factor = 10
+			modifier = {
+				factor = 10
+				any_enemy_country = {
+					OR = {
+						has_tech = first_plane
+						has_tech = first_airship
+					}
+				}
+			}
 		}
 	}
 	
@@ -130,11 +184,25 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 0
 				NOT = { tag = NUS }
 				date < 1634.1.1
+			}
+			modifier = {
+				factor = 10
+				original_tag = NUS
+				has_completed_focus = NUS_first_flight
+			}
+			modifier = {
+				factor = 0
+				original_tag = NUS
+				NOT = { has_completed_focus = NUS_first_flight }
+			}
+			modifier = {
+				factor = 10
+				has_completed_focus = heavier_than_air
 			}
 		}
 	}
@@ -315,7 +383,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 10
+			modifier = {
+				factor = 10
+				has_completed_focus = lighter_than_air
+			}
+			modifier = {
+				factor = 10
+				original_tag = RUS
+				has_completed_focus = RUS_dirrigible_designs
+			}
 		}
 	}
 	

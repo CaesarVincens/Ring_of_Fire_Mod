@@ -1,26 +1,39 @@
-state = {
-	id = 229
-	name= "STATE_229"
-	manpower = 178000
 
-	resources = {
-		steel = 2
+state={
+	id=229
+	name="STATE_229"
+	resources={
+		steel=2.000
 	}
-	state_category = rural
 
-	history = {
-		owner = LAD
-		victory_points = { 12763 3 }
+	history={
+		owner = AUS
+		victory_points = {
+			9665 10 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			9665 = {
+				bunker = 1
+			}
+			3684 = {
+				bunker = 1
+			}
+			732 = {
+				bunker = 1
+			}
 		}
-		add_core_of = LAD
+		add_core_of = AUS
+		set_state_flag = german_state_flag
 	}
 
-	provinces = {
-		2084 4558 12763 
+	provinces={
+		732 3684 6723 9650 9665 11651 
 	}
+	manpower=178000
+	buildings_max_level_factor=1.000
+	state_category=town
 }

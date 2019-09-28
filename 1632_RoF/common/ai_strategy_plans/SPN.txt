@@ -1,0 +1,41 @@
+﻿SPN_canon_focuses = {
+	name = "Spanish Netherlands Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = SPN
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+
+	}
+}
+
+SPN_neutrality = {
+	name = "Spanish Netherlands Alone"
+	desc = ""
+	enable = {
+		original_tag = SPN
+	}
+	abort = {
+		OR = {
+			has_war_with = NUS
+			has_war_with = SWE
+			threat > 0.6
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = FRA
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = SWE
+		value = -200
+	}
+}

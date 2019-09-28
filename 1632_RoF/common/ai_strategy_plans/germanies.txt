@@ -10,6 +10,7 @@ germans_ally_swe = {
 		OR = {
 			has_war_with = SWE
 			NOT = { country_exists = SWE }
+			NOT = { is_in_faction_with = SWE }
 		}
 	}
 	ai_strategy = {
@@ -41,6 +42,7 @@ SAX_BRA_ally_SWE = {
 	abort = {
 		OR = {
 			has_war_with = SWE
+			NUS = { has_cosmetic_tag = USE }
 			NOT = { country_exists = SWE }
 		}
 	}
@@ -51,6 +53,59 @@ SAX_BRA_ally_SWE = {
 	}
 
 }
+
+SAX_BRA_stay_out_ostend = {
+	name = "Stay Out of Ostend"
+	desc = "Leave the Faction"
+	enable = {
+		OR = {
+			tag = SAX
+			tag = BRA
+		}
+		is_historical_focus_on = yes
+		is_in_faction_with = NUS
+	}
+	abort = {
+
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		target_country = FRA
+		id = NUS
+		value = 500
+	}
+
+}
+
+SAX_BRA_watch_AUS = {
+	name = "Watch AUS"
+	desc = ""
+	enable = {
+		OR = {
+			tag = SAX
+			tag = BRA
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = AUS
+			NOT = { country_exists = AUS }
+			NUS = {
+				focus_progress = {
+					focus = NUS_patriotic_fervor
+					progress > 0
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "AUS"
+		value = 100
+	}
+
+}
+
 SXW_befriend_SWE = {
 	name = "support SWE"
 	desc = "support Sweden"
@@ -76,4 +131,29 @@ SXW_befriend_SWE = {
 		value = 100
 	}
 
+}
+
+BAV_watch_ANS_WRT = {
+	name = "Watch for ANS and WRT"
+	desc = ""
+	enable = {
+		tag = BAV
+	}
+	abort = {
+		OR = {
+			has_war_with = ANS
+			has_war_with = WRT
+			has_global_flag = thirty_years_war_ended
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ANS
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = WRT
+		value = 100
+	}
 }

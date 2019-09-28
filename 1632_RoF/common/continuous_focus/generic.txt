@@ -176,7 +176,7 @@ continuous_focus_palette = {
 			
 		}
 
-		enabled = {
+		enable = {
 			is_in_faction = yes
 			num_faction_members > 1
 
@@ -245,7 +245,7 @@ continuous_focus_palette = {
 			hidden_trigger = { has_dlc = "Together for Victory" }
 		}
 
-		enabled = {
+		enable = {
 			num_subjects > 0
 		}
 

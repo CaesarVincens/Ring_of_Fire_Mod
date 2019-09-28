@@ -1,43 +1,13 @@
 #Strength 20-15-10-5-0
 #Anger 10-5-0-0-5-10
 RoF_CoC_decisions = {
-	NUS_test_decision = {
-		allowed = { always = no }
-		visible = {
-			always = no
-		}
-		available = {
-			#original_tag = NUS
-		}
-		complete_effect = {
-			random_state = {
-				limit = { has_state_flag = CoC_agitating_by_@ROOT }
-				clr_state_flag = CoC_agitating_by_@ROOT
-				#ROOT = { set_variable = { var = CoC_agitating_state_name_@THIS value = THIS } }
-			}
-			print_variables = {
-				file = log_file
-				text = header_text
-				append = yes
-				print_global = yes
-			}
-			clear_CoC_vars_and_flags = yes
-			clr_country_flag = CoC_agitate_timer
-			clr_country_flag = support_CoC_timer
-			clr_country_flag = incite_CoC_timer
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 	ban_CoC = {
 		available = {
 			has_country_flag = CoC_present
 			NOT = { has_country_flag = CoC_banned }
 			custom_trigger_tooltip = {
 				tooltip = CoC_strength_under_10.tt
-				check_variable = { var = CoC_strength value = 10 compare = less_than }
+				check_variable = { var = CoC_strength value = 10 compare = less_than_or_equals }
 			}
 		}
 		visible = {
@@ -48,12 +18,16 @@ RoF_CoC_decisions = {
 			custom_effect_tooltip = RoF_ban_CoC.tt
 			set_variable = { var = CoC_strength value = 0 }
 			add_to_variable = { var = CoC_anger value = 10 }
+			hidden_effect = {
+				check_CoC_effects_for_this = yes
+			}
 		}
 		cost = 150
 		ai_will_do = {
 			factor = 0
 			modifier = {
 				add = 10
+				has_political_power > 200
 				OR = {
 					has_government = absolutist
 					has_government = constitutionalist
@@ -76,12 +50,16 @@ RoF_CoC_decisions = {
 			custom_effect_tooltip = RoF_unban_CoC.tt
 			add_to_variable = { var = CoC_strength value = 5 }
 			add_to_variable = { var = CoC_anger value = -5 }
+			hidden_effect = {
+				check_CoC_effects_for_this = yes
+			}
 		}
 		cost = 50
 		ai_will_do = {
 			factor = 0
 			modifier = {
 				add = 1
+				has_political_power > 100
 				OR = {
 					has_government = radical
 					has_government = liberal
@@ -95,7 +73,7 @@ RoF_CoC_decisions = {
 			NOT = { has_country_flag = CoC_banned }
 			custom_trigger_tooltip = {
 				tooltip = CoC_strength_under_20.tt
-				check_variable = { var = CoC_strength value = 20 compare = less_than }
+				check_variable = { var = CoC_strength value = 20 compare = less_than_or_equals }
 			}
 		}
 		visible = {
@@ -109,6 +87,9 @@ RoF_CoC_decisions = {
 				popularity = 0.05
 			}
 			custom_effect_tooltip = RoF_strengthen_CoC.tt
+			hidden_effect = {
+				check_CoC_effects_for_this = yes
+			}
 		}
 		cost = 50
 		days_re_enable = 30
@@ -116,6 +97,7 @@ RoF_CoC_decisions = {
 			factor = 0
 			modifier = {
 				add = 1
+				has_political_power > 100
 				OR = {
 					has_government = radical
 					has_government = liberal
@@ -138,6 +120,9 @@ RoF_CoC_decisions = {
 			add_to_variable = { var = CoC_strength value = -10 }
 			add_to_variable = { var = CoC_anger value = 10 }
 			custom_effect_tooltip = RoF_weaken_CoC.tt
+			hidden_effect = {
+				check_CoC_effects_for_this = yes
+			}
 		}
 		cost = 75
 		days_re_enable = 30
@@ -145,6 +130,7 @@ RoF_CoC_decisions = {
 			factor = 0
 			modifier = {
 				add = 1
+				has_political_power > 100
 				OR = {
 					has_government = absolutist
 					has_government = constitutionalist
@@ -191,6 +177,7 @@ RoF_CoC_decisions = {
 			factor = 0
 			modifier = {
 				add = 1
+				has_political_power > 100
 				OR = {
 					has_government = radical
 					has_government = liberal
@@ -198,6 +185,7 @@ RoF_CoC_decisions = {
 			}
 			modifier = {
 				add = 1
+				has_political_power > 100
 				NOT = { has_government = absolutist }
 				check_variable = { var = CoC_strength value = 10 compare = greater_than_or_equals }
 				check_variable = { var = CoC_anger value = 10 compare = greater_than_or_equals }
@@ -262,10 +250,12 @@ RoF_CoC_decisions = {
 			factor = 0
 			modifier = {
 				add = 1
+				has_political_power > 200
 				has_government = liberal
 			}
 			modifier = {
 				add = 10
+				has_political_power > 200
 				has_government = radical
 			}
 		}
@@ -302,8 +292,8 @@ RoF_CoC_covert_decisions = {
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
-				is_neighbor_of = ROOT
 				has_country_flag = CoC_present
+				is_neighbor_of = ROOT
 				check_variable = { var = CoC_strength value = 10 compare = less_than }
 				check_variable = { var = CoC_anger value = 0 compare = greater_than_or_equals }
 			}
@@ -315,6 +305,9 @@ RoF_CoC_covert_decisions = {
 			custom_effect_tooltip = support_foreign_CoC.tt
 			FROM = {
 				add_to_variable = { CoC_strength = 5 }
+				hidden_effect = {
+					check_CoC_effects_for_this = yes
+				}		
 			}
 			set_country_flag = {
 				flag = support_CoC_timer
@@ -347,8 +340,8 @@ RoF_CoC_covert_decisions = {
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
-				is_neighbor_of = ROOT
 				has_country_flag = CoC_present
+				is_neighbor_of = ROOT
 				check_variable = { var = CoC_strength value = 10 compare = less_than }
 				check_variable = { var = CoC_anger value = 5 compare = less_than }
 			}
@@ -360,6 +353,9 @@ RoF_CoC_covert_decisions = {
 			custom_effect_tooltip = incite_foreign_CoC.tt
 			FROM = {
 				add_to_variable = { CoC_anger = 5 }
+				hidden_effect = {
+					check_CoC_effects_for_this = yes
+				}		
 			}
 			set_country_flag = {
 				flag = incite_CoC_timer
@@ -451,8 +447,8 @@ RoF_CoC_covert_decisions = {
 			FROM = {
 				NOT = { has_government = radical }
 				capital_scope = { is_on_continent = europe }
-				is_neighbor_of = ROOT
 				has_country_flag = CoC_present
+				is_neighbor_of = ROOT
 				check_variable = { var = CoC_strength value = 5 compare = greater_than_or_equals }
 				check_variable = { var = CoC_anger value = -5 compare = greater_than_or_equals }
 			}

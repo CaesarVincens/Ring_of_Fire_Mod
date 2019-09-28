@@ -6,45 +6,37 @@ state = {
 	history = {
 		owner = HES
 		victory_points = {
-			564 8 
+			564 10 
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-			arms_factory = 0
+			industrial_complex = 2
+			arms_factory = 1
 			air_base = 0
 			564 = {
 				bunker = 2
-
 			}
 			3524 = {
 				bunker = 1
-
 			}
 			6549 = {
 				bunker = 1
-
 			}
 			9443 = {
 				bunker = 1
-
 			}
 			9524 = {
 				bunker = 1
-
 			}
 			9547 = {
 				bunker = 1
-
 			}
 			11431 = {
 				bunker = 1
-
 			}
-
 		}
 		add_core_of = HES
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

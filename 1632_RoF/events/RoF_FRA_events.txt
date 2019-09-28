@@ -11,7 +11,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		FRA = { set_country_flag = ostend_leader } #create_faction = "Ostend League" }
+		FRA = { set_country_flag = ostend_leader create_faction = "Ostend League" }
 		ENG = { country_event = { id = RoF_FRA.101 days = 7 } }
 		DEN = { country_event = { id = RoF_FRA.102 days = 7 } }
 		SPR = { country_event = { id = RoF_FRA.103 days = 7 } }
@@ -37,7 +37,7 @@ country_event = {
 	option = {
 		name = RoF_FRA.101.a
 		FRA = {
-			#add_to_faction = ENG
+			add_to_faction = ENG
 			country_event = { id = RoF_FRA.105 days = 14 }
 		}
 		add_timed_idea = { idea = ENG_FRA_payment days = 180 }
@@ -70,7 +70,7 @@ country_event = {
 	option = {
 		name = RoF_FRA.102.a
 		FRA = {
-			#add_to_faction = DEN
+			add_to_faction = DEN
 		}
 		set_country_flag = ostend_member
 		ai_chance = { factor = 100 }
@@ -98,7 +98,7 @@ country_event = {
 	option = {
 		name = RoF_FRA.103.a
 		FRA = {
-			#add_to_faction = SPR
+			add_to_faction = SPR
 		}
 		set_country_flag = ostend_member 
 		ai_chance = { factor = 100 }
@@ -168,14 +168,14 @@ country_event = {
 	immediate = {
 		FRA = {
 			set_global_flag = ostend_war_begins
-			create_faction = "League of Ostend"
+			#create_faction = "League of Ostend"
 		}
-		every_country = {
-			limit = { has_country_flag = ostend_member }
-			FRA = {
-				add_to_faction = PREV
-			}
-		}
+		#every_country = {
+		#	limit = { has_country_flag = ostend_member }
+		#	FRA = {
+		#		add_to_faction = PREV
+		#	}
+		#}
 		SPN = {
 			#declare_war_on = {
 			#	target = UPS
@@ -223,11 +223,16 @@ country_event = {
 				hostility_reason = asked_to_join
 			}
 		}
-		SWE = {
-			add_to_war = {
-				targeted_alliance = NUS
-				enemy = FRA
-				hostility_reason = asked_to_join
+		if = {
+			limit = {
+				NUS = { is_in_faction_with = SWE }
+			}
+			SWE = {
+				add_to_war = {
+					targeted_alliance = NUS
+					enemy = FRA
+					hostility_reason = asked_to_join
+				}
 			}
 		}
 	}
@@ -306,3 +311,171 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
+
+#Lorraine Occupation
+country_event = {
+	id = RoF_FRA.160
+	title = RoF_FRA.160.t
+	picture = GFX_report_event_fra_flag
+	desc = RoF_FRA.160.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	#acquiesce
+	option = {
+		name = RoF_FRA.160.a
+		effect_tooltip = {
+			FRA = {
+				set_autonomy = {
+					target = LOR
+					autonomy_state = autonomy_rof_protectorate
+				}
+			}
+		}
+		set_country_flag = LOR_submits_FRA
+		hidden_effect = {
+			FRA = {
+				country_event = {
+					id = RoF_FRA.161
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	#resist
+	option = {
+		name = RoF_FRA.160.b
+		effect_tooltip = {
+			FRA = {
+				create_wargoal = {
+					target = LOR
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+		set_country_flag = LOR_resists_FRA
+		hidden_effect = {
+			FRA = {
+				country_event = {
+					id = RoF_FRA.161
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+#Lorraine Occupation
+country_event = {
+	id = RoF_FRA.161
+	title = RoF_FRA.161.t
+	picture = GFX_report_event_rof_placeholder
+	desc = {
+		trigger = {
+			LOR = { has_country_flag = LOR_submits_FRA }
+		}
+		text = RoF_FRA.161.da
+	}
+	desc = {
+		trigger = {
+			LOR = { has_country_flag = LOR_resists_FRA }
+		}
+		text = RoF_FRA.161.db
+	}
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	#acquiesce
+	option = {
+		name = RoF_FRA.161.a
+		trigger = {
+			LOR = { has_country_flag = LOR_submits_FRA }
+		}
+		set_autonomy = {
+			target = LOR
+			autonomy_state = autonomy_rof_protectorate
+		}
+		add_named_threat = { threat = 2 name = FRA_LOR.1.t }
+	}
+	#resist
+	option = {
+		name = RoF_FRA.161.b
+		trigger = {
+			LOR = { has_country_flag = LOR_resists_FRA }
+		}
+		create_wargoal = {
+			target = LOR
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+#Lorraine Occupation
+country_event = {
+	id = RoF_FRA.165
+	title = RoF_FRA.165.t
+	picture = GFX_report_event_rof_placeholder
+	desc = RoF_FRA.161.d
+	fire_only_once = yes
+
+	trigger = {
+		date > 1635.2.1
+		if = {
+			limit = {
+				LOR = { is_subject = yes exists = yes }
+			}
+			LOR = {
+				OVERLORD = {
+					tag = FRA
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				LOR = { exists = no }
+			}
+			tag = FRA
+			owns_state = 240
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 60		
+	}
+
+	immediate = {
+
+	}
+	#leave him
+	option = {
+		name = RoF_FRA.161.a
+		set_global_flag = gaston_in_lorraine
+		ai_chance = {
+			base = 10
+		}
+	}
+	#arrest him
+	option = {
+		name = RoF_FRA.161.b
+		add_manpower = -10000
+		add_political_power = -100
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+

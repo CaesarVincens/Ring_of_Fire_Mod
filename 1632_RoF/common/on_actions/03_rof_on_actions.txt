@@ -2,6 +2,14 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
+			WNA = {
+				add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
+				send_equipment = {
+					equipment = up_time_weapons
+					amount = 1000
+					target = NUS
+				}
+			}
 			every_country = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
@@ -9,6 +17,15 @@ on_actions = {
 			random_country = {
 				limit = { is_ai = yes }
 				country_event = { id = RoF.006 }
+			}
+			set_global_flag = thirty_years_war_ongoing
+			every_country = {
+				limit = {
+					is_in_faction_with = AUS
+				}
+				TYR = {
+					give_military_access = PREV
+				}
 			}
 		}
 	}
@@ -35,6 +52,36 @@ on_actions = {
 			}
 		}
 	}
+	
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = thirty_years_war_ongoing
+					OR = {
+						AND = {
+							FROM = { tag = SWE }
+							OR = {
+								tag = AUS
+								is_in_faction_with = AUS
+							}
+						}
+						AND = {
+							FROM = { tag = AUS }
+							OR = {
+								tag = SWE
+								is_in_faction_with = SWE
+							}
+						}
+					}
+				}
+				clr_global_flag = thirty_years_war_ongoing
+				set_global_flag = thirty_years_war_ended
+			}
+		}
+	}
+	
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	on_annex = {
 		effect = {
@@ -49,9 +96,65 @@ on_actions = {
 				}
 				country_event = { id = RoF_NED.111 days = 2 }
 			}
+			if = {
+				limit = {
+					has_global_flag = thirty_years_war_ongoing
+					OR = {
+						AND = {
+							FROM = { tag = SWE }
+							OR = {
+								tag = AUS
+								is_in_faction_with = AUS
+							}
+						}
+						AND = {
+							FROM = { tag = AUS }
+							OR = {
+								tag = SWE
+								is_in_faction_with = SWE
+							}
+						}
+					}
+				}
+				clr_global_flag = thirty_years_war_ongoing
+				set_global_flag = thirty_years_war_ended
+			}
 		}
 	}
-	
+
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = thirty_years_war_ongoing
+					OR = {
+						AND = {
+							tag = SWE
+							FROM = { 
+								OR = {
+									tag = AUS
+									is_in_faction_with = AUS
+								}
+							}
+						}
+						AND = {
+							tag = AUS
+							FROM = { 
+								OR = {
+									tag = SWE
+									is_in_faction_with = SWE
+								}
+							}
+						}
+					}
+				}
+				clr_global_flag = thirty_years_war_ongoing
+				set_global_flag = thirty_years_war_ended
+			}
+		}
+	}
+
 	#ROOT is winner #FROM gets annexed
 	on_civil_war_end = {
 		effect = {

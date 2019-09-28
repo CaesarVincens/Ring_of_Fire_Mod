@@ -1,5 +1,5 @@
 ﻿capital = 128
-set_research_slots = 3
+set_research_slots = 2
 
 oob = "ENG_OOB"
 
@@ -38,25 +38,20 @@ C13 = {
     }
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 60
-        }
-        constitutionalist = {
-            popularity = 33
-        }
-        neutrality = {
-            popularity = 7
-        }
-    }
-    
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 60
+	constitutionalist = 33
+	liberal = 0
+	radical = 0
+	neutrality = 7
+}
 
+set_country_flag = religion_anglican
 add_ideas = {
 	ENG_parliament_prorogued
 	state_religion_law
@@ -90,7 +85,7 @@ create_country_leader = {
     desc = "POLITICS_GRAHAM_BROWN_DESC"
     picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
+    ideology = monarchy_neutral
     traits = {
     }
 }

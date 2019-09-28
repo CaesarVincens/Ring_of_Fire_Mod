@@ -17,26 +17,20 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 14
-        }
-        neutrality = {
-            popularity = 13
-        }
-        constitutionalist = {
-            popularity = 73
-        }
-    }
-    
-    ruling_party = constitutionalist
+    ruling_party = neutrality
     last_election = "1629.6.26"
     election_frequency = 24
     elections_allowed = yes
 }
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 23
+	liberal = 0
+	radical = 0
+	neutrality = 63
+}
 
-
+set_country_flag = religion_catholic
 add_ideas = {
 }
 set_stability = 0.5
@@ -46,6 +40,15 @@ create_country_leader = {
     picture = "gfx/leaders/italies/Portrait_Genoa_Leonardo_della_Torre.dds"
     expire = "1660.1.1"
     ideology = constitutional_republic
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Leonardo della Torre"
+    desc = "POLITICS_ORESTE_PELLION DI PERSANO_DESC"
+    picture = "gfx/leaders/italies/Portrait_Genoa_Leonardo_della_Torre.dds"
+    expire = "1660.1.1"
+    ideology = republican_neutral
     traits = {
     }
 }

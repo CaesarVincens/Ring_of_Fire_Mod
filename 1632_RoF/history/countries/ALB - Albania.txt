@@ -17,35 +17,29 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 73
-        }
-        constitutionalist = {
-            popularity = 25
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 33
+	constitutionalist = 25
+	liberal = 0
+	radical = 0
+	neutrality = 42
+}
 
-
+set_country_flag = religion_orthodox
 add_ideas = {
-		balanced_eco
+	balanced_eco
 }
 create_country_leader = {
     name = "Behxhet Evangjeli"
     desc = "POLITICS_BEHXHET_EVANGJELI_DESC"
 	picture = "gfx/leaders/leader_unknown.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

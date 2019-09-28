@@ -17,9 +17,12 @@ state = {
 			11305 = {
 				naval_base = 1
 			}
+			9320 = {
+				bunker = 1
+			}
 		}
 		add_core_of = MKL
-
+		set_state_flag = german_state_flag
 	}
 	provinces = {
 		9294 9320 11305 

@@ -17,18 +17,17 @@ country_event = {
 		name = RoF_RUS.10.a
 		if = {
 			limit = {
-				NOT = { has_completed_focus = RUS_slow_fever_treatment }
+				has_completed_focus = RUS_slow_fever_treatment
 			}
-			add_timed_idea = {
-				idea = RUS_slow_fever
-				days = 75
-			}
-		}
-		else_if = {
-			limit = { has_completed_focus = RUS_slow_fever_treatment }
 			add_timed_idea = {
 				idea = RUS_slow_fever_mitigated
 				days = 75
+			}
+			else = {
+				add_timed_idea = {
+					idea = RUS_slow_fever
+					days = 75
+				}
 			}
 		}
 		hidden_effect = {
@@ -39,6 +38,7 @@ country_event = {
 		}
 	}
 }
+#Slow Fever
 
 country_event = {
 	id = RoF_RUS.50
@@ -69,174 +69,7 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = RoF_RUS.99
-	title = RoF_RUS.99.t
-	picture = GFX_report_event_rus_coa
-	desc = RoF_RUS.99.d
-
-	is_triggered_only = yes
-
-	immediate = {
-		#215 = { add_core_of = USR }
-		#391 = { add_core_of = USR }
-		#393 = { add_core_of = USR }
-		#394 = { add_core_of = USR }
-		#395 = { add_core_of = USR }
-		398 = { add_core_of = SIB }
-		399 = { add_core_of = SIB }
-		400 = { add_core_of = SIB }
-		401 = { add_core_of = SIB }
-		402 = { add_core_of = SIB }
-
-		#USR = {
-		#	set_cosmetic_tag = Free_Russia
-		#}
-		#random_other_country = {
-		#	limit = {
-		#		original_tag = RUS
-		#		has_government = constitutionalist
-		#	}
-		#	USR = {
-		#		annex_country = {
-		#			target = PREV
-		#			transfer_troops = yes
-		#		}
-		#	}
-		#}
-		release = SIB
-		#USR = {
-		#	inherit_technology = RUS
-		#	load_oob = USR_OOB
-		#	every_owned_state = {
-		#		add_core_of = RUS
-		#	}
-		#}
-		if = {
-			limit = {
-				has_idea = RUS_streltzi_3
-			}
-			SIB = {
-				add_ideas = RUS_streltzi_3
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_streltzi_2 }
-			SIB = {
-				add_ideas = RUS_streltzi_2
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_streltzi_1 }
-			SIB = {
-				add_ideas = RUS_streltzi_1
-			}
-		}
-		if = {
-			limit = {
-				has_idea = RUS_boyar_cavalry_3
-			}
-			SIB = {
-				add_ideas = RUS_boyar_cavalry_3
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_boyar_cavalry_2 }
-			SIB = {
-				add_ideas = RUS_boyar_cavalry_2
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_boyar_cavalry_1 }
-			SIB = {
-				add_ideas = RUS_boyar_cavalry_1
-			}
-		}
-		SIB = {
-			inherit_technology = RUS
-			every_owned_state = {
-				add_core_of = RUS
-				#add_core_of = USR
-			}
-		}
-		random_unit_leader = {
-			limit = {
-				has_id = 1050
-			}
-			set_nationality = SIB
-		}
-
-	}
-	option = {
-		name = RoF_RUS.99.a
-		set_cosmetic_tag = Directorate_Russia
-		start_civil_war = {
-			ruling_party = absolutist
-			ideology = constitutionalist
-			size = 0.5
-			capital = 215
-			states = { 215 391 393 394 395 }
-		}
-		random_other_country = {
-			limit = {
-				original_tag = RUS
-				has_government = constitutionalist
-			}
-			set_cosmetic_tag = Free_Russia
-			hidden_effect = {
-				384 = { set_demilitarized_zone = yes }
-				392 = { set_demilitarized_zone = yes }
-				393 = { set_demilitarized_zone = yes }
-				394 = { set_demilitarized_zone = yes }
-			}
-		}
-		hidden_effect = {
-			384 = { set_demilitarized_zone = yes }
-			392 = { set_demilitarized_zone = yes }
-			393 = { set_demilitarized_zone = yes }
-			394 = { set_demilitarized_zone = yes }
-		}
-	}
-	
-	option = {
-		name = RoF_RUS.99.a
-		set_cosmetic_tag = Free_Russia
-		set_capital = 215
-		start_civil_war = {
-			ruling_party = constitutionalist
-			ideology = absolutist
-			size = 0.5
-			states = { 379 381 382 383 384 385 386 387 388 389 390 392 396 397 433 534 664 }
-			capital = 389
-		}
-		random_other_country = {
-			limit = {
-				original_tag = RUS
-				has_government = absolutist
-			}
-			hidden_effect = {
-				set_capital = 389
-			}
-			set_cosmetic_tag = Directorate_Russia
-			hidden_effect = {
-				384 = { set_demilitarized_zone = yes }
-				392 = { set_demilitarized_zone = yes }
-				393 = { set_demilitarized_zone = yes }
-				394 = { set_demilitarized_zone = yes }
-			}
-		}
-		hidden_effect = {
-			384 = { set_demilitarized_zone = yes }
-			392 = { set_demilitarized_zone = yes }
-			393 = { set_demilitarized_zone = yes }
-			394 = { set_demilitarized_zone = yes }
-		}
-		ai_chance = {
-			base = 0
-		}
-	}
-}
+#Death of Filaret
 
 country_event = {
 	id = RoF_RUS.100
@@ -248,19 +81,24 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			215 = { add_core_of = USR }
-			391 = { add_core_of = USR }
-			393 = { add_core_of = USR }
-			394 = { add_core_of = USR }
-			395 = { add_core_of = USR }
-			398 = { add_core_of = SIB }
-			399 = { add_core_of = SIB }
-			400 = { add_core_of = SIB }
-			401 = { add_core_of = SIB }
-			402 = { add_core_of = SIB }
+			USR = {
+				add_state_core = 215
+				add_state_core = 391
+				add_state_core = 393
+				add_state_core = 394
+				add_state_core = 395
+			}
+			SIB = {
+				add_state_core = 398
+				add_state_core = 399
+				add_state_core = 400
+				add_state_core = 401
+				add_state_core = 402
+			}
 			release = USR
 			release = SIB
 			every_owned_state = { add_core_of = USR }
+			set_country_flag = directorate_russia_focus_tree_flag
 			load_focus_tree = directorate_russia_focus_tree
 			USR = {
 				set_cosmetic_tag = Free_Russia 
@@ -268,6 +106,7 @@ country_event = {
 				load_oob = USR_OOB
 				every_owned_state = { add_core_of = RUS }
 				RUS = { split_equipment_half = yes }
+				set_country_flag = united_states_russia_focus_tree_flag
 				load_focus_tree = united_states_russia_focus_tree
 			}
 			SIB = {
@@ -347,6 +186,9 @@ country_event = {
 				}
 				set_nationality = SIB
 			}
+			WAS = {
+				transfer_state = 381
+			}
 			set_cosmetic_tag = Directorate_Russia
 		}
 	}
@@ -367,6 +209,9 @@ country_event = {
 			release = USR
 			release = SIB
 		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_RUS.100.c
@@ -380,23 +225,7 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = RoF_RUS.101
-	title = RoF_RUS.100.t
-	picture = GFX_report_event_rus_coa
-	desc = RoF_RUS.100.d
-
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-	option = {
-		name = RoF_RUS.100.a
-		load_focus_tree = directorate_russia_focus_tree
-	}
-}
+#Flight of the Czar
 
 news_event = {
 	id = RoF_RUS.110
@@ -413,6 +242,7 @@ news_event = {
 		name = RoF_RUS.110.a
 	}
 }
+#Rezhev Captured
 
 country_event = {
 	id = RoF_RUS.111
@@ -447,6 +277,7 @@ country_event = {
 		name = RoF_RUS.111.a
 	}
 }
+#Rezhev Campaign
 
 country_event = {
 	id = RoF_RUS.112
@@ -470,6 +301,7 @@ country_event = {
 		name = RoF_RUS.112.a
 	}
 }
+#Rezhev Recapture
 
 country_event = {
 	id = RoF_RUS.113
@@ -485,6 +317,7 @@ country_event = {
 		name = RoF_RUS.113.a
 	}
 }
+#Poles Push on
 
 country_event = {
 	id = RoF_RUS.114
@@ -500,6 +333,7 @@ country_event = {
 		name = RoF_RUS.114.a
 	}
 }
+#Rezhev Lost
 
 country_event = {
 	id = RoF_RUS.119
@@ -528,6 +362,7 @@ country_event = {
 		}
 	}
 }
+#Defend Kazan
 
 country_event = {
 	id = RoF_RUS.120
@@ -547,6 +382,7 @@ country_event = {
 		}
 	}
 }
+#Russian Civil War
 
 country_event = {
 	id = RoF_RUS.121
@@ -557,30 +393,20 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		start_border_war = {
-			change_state_after_war = yes
-			minimum_duration_in_days = 60
-			attacker = {
-				state = 396
-				num_provinces = 5
-				on_win = RoF_RUS.122
-				on_lose = RoF_RUS.123
-				on_cancel = RoF_RUS.124
+		hidden_effect = {
+			SIB = {
+				country_event = {
+					id = RoF_RUS.122
+					hours = 12
+				}
 			}
-			defender = {
-				state = 391
-				num_provinces = 6
-				on_win = RoF_RUS.125
-				on_lose = RoF_RUS.126
-				on_cancel = RoF_RUS.127
-			}
-			
 		}
 	}
 	option = {
 		name = RoF_RUS.121.a
 	}
 }
+#Siberian Corridor
 
 country_event = {
 	id = RoF_RUS.122
@@ -591,19 +417,46 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					POL = { owns_state = 387 }
-				}
-				transfer_state = 387
-			}
-		}
+
 	}
 	option = {
 		name = RoF_RUS.122.a
+		add_opinion_modifier = {
+			target = USR
+			modifier = friendly_relations
+		}
+		hidden_effect = {
+			USR = {
+				country_event = { 
+					id = RoF_RUS.123
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_RUS.122.b
+		hidden_effect = {
+			USR = {
+				country_event = { 
+					id = RoF_RUS.124
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
 	}
 }
+#Czar's Offer
 
 country_event = {
 	id = RoF_RUS.123
@@ -617,8 +470,14 @@ country_event = {
 	}
 	option = {
 		name = RoF_RUS.123.a
+		set_country_flag = SIB_joins_convention
+		add_opinion_modifier = {
+			target = SIB
+			modifier = friendly_relations
+		}
 	}
 }
+#Shein's Reply
 
 country_event = {
 	id = RoF_RUS.124
@@ -634,56 +493,1120 @@ country_event = {
 		name = RoF_RUS.124.a
 	}
 }
+#Shein's Reply
 
 country_event = {
-	id = RoF_RUS.125
-	title = RoF_RUS.122.t
+	id = RoF_RUS.128
+	title = RoF_RUS.128.t
 	picture = GFX_report_event_rus_coa
-	desc = RoF_RUS.122.d
+	desc = RoF_RUS.128.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.128.a
+		RUS = {
+			set_country_flag = RUS_hired_kazakhs
+			country_event = {
+				id = RoF_RUS.129
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_RUS.128.b
+		country_event = {
+			id = RoF_RUS.129
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+#hire Kazakhs
+
+country_event = {
+	id = RoF_RUS.129
+	title = RoF_RUS.129.t
+	picture = GFX_report_event_rus_coa
+	desc = {
+		text = RoF_RUS.129.da
+		trigger = { has_country_flag = RUS_hired_kazakhs }
+	}
+	desc = {
+		text = RoF_RUS.129.db
+		trigger = { NOT = { has_country_flag = RUS_hired_kazakhs } }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_RUS.129.a
+		trigger = { has_country_flag = RUS_hired_kazakhs }
+		#set_country_flag = RUS_hired_kazakhs
+	}
+	option = {
+		name = RoF_RUS.129.b
+		trigger = { NOT = { has_country_flag = RUS_hired_kazakhs } }
+		#set_country_flag = RUS_hired_kazakhs
+	}
+}
+#Kazakh Reply
+
+country_event = {
+	id = RoF_RUS.130
+	title = RoF_RUS.130.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.130.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_begin_convention
+		set_variable = { USR_constitution = 0 }
+		hidden_effect = {
+			country_event = {
+				id = RoF_RUS.131
+				hours = 12
+				random = 12
+			}
+			if = {
+				limit = {
+					RUS = { has_country_flag = RUS_hired_kazakhs }
+				}
+				country_event = {
+					id = RoF_RUS.132
+					hours = 24
+					random = 48
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.130.a
+	}
+}
+#convention begins
+
+country_event = {
+	id = RoF_RUS.131
+	title = RoF_RUS.131.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.131.d
 
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = {
-					POL = { owns_state = 387 }
-				}
-				transfer_state = 387
+			country_event = {
+				id = RoF_RUS.133
+				hours = 12
+				random = 12
 			}
 		}
 	}
 	option = {
-		name = RoF_RUS.122.a
+		name = RoF_RUS.131.a
+		add_popularity = {
+			ideology = absolutist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.1
+		}
+		set_country_flag = USR_serfdom_allowed
+		add_to_variable = { USR_constitution = -2 }
+		custom_effect_tooltip = USR_gain_noble_states
+		custom_effect_tooltip = USR_lose_common_states
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.131.b
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.1
+		}
+		set_country_flag = USR_serfdom_by_state
+		add_to_variable = { USR_constitution = 0 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.131.c
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = radical
+			popularity = 0.1
+		}
+		set_country_flag = USR_serfdom_outlawed
+		add_to_variable = { USR_constitution = 2 }
+		custom_effect_tooltip = USR_lose_noble_states
+		custom_effect_tooltip = USR_gain_common_states
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 	}
 }
+#Russian Slavery
 
 country_event = {
-	id = RoF_RUS.126
-	title = RoF_RUS.123.t
+	id = RoF_RUS.132
+	title = RoF_RUS.132.t
+	picture = GFX_report_event_battle_east2
+	desc = RoF_RUS.132.d
+	fire_only_once = yes
+	trigger = {
+		tag = USR
+		has_country_flag = USR_begin_convention
+		RUS = { has_country_flag = RUS_hired_kazakhs }
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		set_country_flag = USR_kazakh_attack
+	}
+	#siege
+	option = {
+		name = RoF_RUS.132.a
+		hidden_effect = {
+			country_event = {
+				id = RoF_RUS.135
+				hours = 48
+				random = 48
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	#negotiate
+	option = {
+		name = RoF_RUS.132.b
+		hidden_effect = {
+			KAZ = {
+				country_event = {
+					id = RoF_RUS.137
+					hours = 24
+					random = 24
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+#Kazakh Attack
+
+country_event = {
+	id = RoF_RUS.133
+	title = RoF_RUS.133.t
 	picture = GFX_report_event_rus_coa
-	desc = RoF_RUS.123.d
+	desc = RoF_RUS.133.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			hidden_effect = {
+				country_event = {
+					id = RoF_RUS.134
+					hours = 12
+					random = 12
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.133.a
+		add_popularity = {
+			ideology = absolutist
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.025
+		}
+		set_country_flag = USR_lords_elect_lord
+		add_to_variable = { USR_constitution = -1 }
+		custom_effect_tooltip = USR_gain_noble_states
+		custom_effect_tooltip = USR_lose_common_states
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.133.b
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.05
+		}
+		set_country_flag = USR_commons_elect_lord
+		add_to_variable = { USR_constitution = 0 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.133.c
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.025
+		}
+		add_popularity = {
+			ideology = radical
+			popularity = 0.075
+		}
+		set_country_flag = USR_commons_elect_common
+		add_to_variable = { USR_constitution = 1 }
+		custom_effect_tooltip = USR_lose_noble_states
+		custom_effect_tooltip = USR_gain_common_states
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.133.d
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.1
+		}
+		set_country_flag = USR_dual_consuls
+		add_to_variable = { USR_constitution = 0 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+#Executive Branch
+
+country_event = {
+	id = RoF_RUS.134
+	title = RoF_RUS.134.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.134.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_next_issue
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							RUS = { has_country_flag = RUS_hired_kazakhs }
+						}
+						has_country_flag = USR_continue_convention
+					}
+				}
+				country_event = {
+					id = RoF_RUS.141
+					hours = 12
+					random = 12
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.134.a
+		set_country_flag = USR_orthodox_only
+		if = {
+			limit = {
+				NOT = { has_idea = state_religion_law }
+			}
+			add_ideas = state_religion_law
+		}
+		add_to_variable = { USR_constitution = -1 }
+		custom_effect_tooltip = USR_gain_noble_states
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.134.b
+		set_country_flag = USR_states_choice
+		if = {
+			limit = {
+				NOT = { has_idea = secularism }
+			}
+			add_ideas = secularism
+		}
+		add_to_variable = { USR_constitution = 0 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.134.c
+		set_country_flag = USR_free_religion
+		if = {
+			limit = {
+				NOT = { has_idea = freedom_of_religion }
+			}
+			add_ideas = freedom_of_religion
+		}
+		custom_effect_tooltip = USR_gain_common_states
+		add_to_variable = { USR_constitution = 1 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+#Religion
+
+country_event = {
+	id = RoF_RUS.135
+	title = RoF_RUS.135.t
+	picture = GFX_report_event_battle_east2
+	desc = RoF_RUS.135.d
 
 	is_triggered_only = yes
 
 	immediate = {
 	}
+	#counter-attack
 	option = {
-		name = RoF_RUS.123.a
+		name = RoF_RUS.135.a
+		hidden_effect = {
+			random_list = {
+				25 = {
+					set_country_flag = USR_KAZ_attack_succeeds
+					modifier = {
+						factor = 0.2
+						is_ai = yes
+						is_historical_focus_on = yes
+					}
+					country_event = {
+						id = RoF_RUS.136
+						hours = 24
+						random = 24
+					}
+				}
+				75 = {
+					country_event = {
+						id = RoF_RUS.136
+						hours = 24
+						random = 24
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	#negotiate
+	option = {
+		name = RoF_RUS.135.b
+		hidden_effect = {
+			KAZ = {
+				country_event = {
+					id = RoF_RUS.137
+					hours = 24
+					random = 24
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 	}
 }
+#Kazakh Siege
 
 country_event = {
-	id = RoF_RUS.127
-	title = RoF_RUS.124.t
-	picture = GFX_report_event_rus_coa
-	desc = RoF_RUS.124.d
+	id = RoF_RUS.1351
+	title = RoF_RUS.1351.t
+	picture = GFX_report_event_battle_east2
+	desc = RoF_RUS.1351.d
 
 	is_triggered_only = yes
 
 	immediate = {
 	}
+	#counter-attack
 	option = {
-		name = RoF_RUS.124.a
+		name = RoF_RUS.1351.a
+		hidden_effect = {
+			random_list = {
+				25 = {
+					set_country_flag = USR_KAZ_attack_succeeds
+					modifier = {
+						factor = 0.2
+						is_ai = yes
+						is_historical_focus_on = yes
+					}
+					country_event = {
+						id = RoF_RUS.136
+						hours = 24
+						random = 24
+					}
+				}
+				75 = {
+					country_event = {
+						id = RoF_RUS.136
+						hours = 24
+						random = 24
+					}
+				}
+			}
+		}
 	}
 }
+#Kazakh Siege
+
+country_event = {
+	id = RoF_RUS.136
+	title = RoF_RUS.136.t
+	picture = GFX_report_event_battle_east2
+	desc = {
+		text = RoF_RUS.136.da
+		trigger = { has_country_flag = USR_KAZ_attack_succeeds }
+	}
+	desc = {
+		text = RoF_RUS.136.db
+		trigger = { NOT = { has_country_flag = USR_KAZ_attack_succeeds } }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_counter_attack
+	}
+	#counter-attack
+	option = {
+		trigger = { has_country_flag = USR_KAZ_attack_succeeds }
+		name = RoF_RUS.136.a
+		hidden_effect = {
+			country_event = {
+				id = RoF_RUS.140
+				hours = 12
+				random = 12
+			}
+		}
+	}
+	#negotiate
+	option = {
+		trigger = { NOT = { has_country_flag = USR_KAZ_attack_succeeds } }
+		name = RoF_RUS.136.b
+		hidden_effect = {
+			KAZ = {
+				country_event = {
+					id = RoF_RUS.138
+					hours = 12
+					random = 12
+				}
+			}
+		}
+	}
+}
+#Counter Attack
+
+country_event = {
+	id = RoF_RUS.137
+	title = RoF_RUS.137.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.137.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_negotiations
+	}
+	#talk
+	option = {
+		name = RoF_RUS.137.a
+		hidden_effect = {
+			RUS = {
+				country_event = {
+					id = RoF_RUS.139
+					hours = 12
+					random = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	#attack
+	option = {
+		name = RoF_RUS.137.b
+		hidden_effect = {
+			RUS = {
+				country_event = {
+					id = RoF_RUS.1351
+					hours = 24
+					random = 24
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+#Negotiations
+
+country_event = {
+	id = RoF_RUS.138
+	title = RoF_RUS.138.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.138.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_negotiations
+	}
+	#talk
+	option = {
+		name = RoF_RUS.138.a
+		hidden_effect = {
+			RUS = {
+				country_event = {
+					id = RoF_RUS.139
+					hours = 12
+					random = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+
+	}
+	#leave
+	option = {
+		name = RoF_RUS.138.b
+		hidden_effect = {
+			RUS = {
+				country_event = {
+					id = RoF_RUS.140
+					hours = 12
+					random = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+	}
+}
+#Negotiations
+
+country_event = {
+	id = RoF_RUS.139
+	title = RoF_RUS.139.t
+	picture = GFX_report_event_battle_east2
+	desc = RoF_RUS.139.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_continue_convention
+		set_country_flag = USR_kazakhs_join
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = USR_next_issue
+				}
+				country_event = {
+					id = RoF_RUS.141
+					hours = 12
+					random = 12
+				}
+			}
+		}
+	}
+	#talk
+	option = {
+		name = RoF_RUS.139.a
+	}
+}
+#Kazakhs Join Convention
+
+country_event = {
+	id = RoF_RUS.140
+	title = RoF_RUS.140.t
+	picture = GFX_report_event_battle_east2
+	desc = RoF_RUS.140.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = USR_continue_convention
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = USR_next_issue
+				}
+				country_event = {
+					id = RoF_RUS.141
+					hours = 12
+					random = 12
+				}
+			}
+		}
+	}
+	#talk
+	option = {
+		name = RoF_RUS.140.a
+	}
+}
+#Kazakhs leave
+
+country_event = {
+	id = RoF_RUS.141
+	title = RoF_RUS.141.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.141.d
+	fire_only_once = yes
+	trigger = {
+		tag = USR
+		has_country_flag = USR_next_issue
+		if = {
+			limit = {
+				RUS = { has_country_flag = RUS_hired_kazakhs }
+			}
+			has_country_flag = USR_continue_convention
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = RoF_RUS.142
+				hours = 12
+				random = 12
+			}
+		}
+	}
+	#nobles only vote
+	option = {
+		name = RoF_RUS.141.a
+		add_popularity = {
+			ideology = absolutist
+			popularity = 0.15
+		}
+		set_country_flag = USR_noble_vote
+		custom_effect_tooltip = USR_lose_common_states
+		add_to_variable = { USR_constitution = -2 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	#free only vote - 3/5ths
+	option = {
+		name = RoF_RUS.141.b
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		set_country_flag = USR_free_vote
+		add_to_variable = { USR_constitution = 0 }
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	#all vote
+	option = {
+		name = RoF_RUS.141.c
+		add_popularity = {
+			ideology = radical
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		set_country_flag = USR_all_vote
+		custom_effect_tooltip = USR_gain_common_states
+		add_to_variable = { USR_constitution = 2 }
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+#Voting Rights
+
+country_event = {
+	id = RoF_RUS.142
+	title = RoF_RUS.142.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.142.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_USR_constition = yes
+		drop_cosmetic_tag = yes
+	}
+	option = {
+		name = RoF_RUS.142.a
+		if = {
+			limit = { has_country_flag = SIB_joins_convention }
+			SIB = {
+				country_event = {
+					id = RoF_RUS.143
+					hours = 12
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = USR_kazakhs_join }
+			KAZ = {
+				country_event = {
+					id = RoF_RUS.143
+					hours = 12
+				}
+			}
+		}
+		random_list = {
+			5 = {
+				modifier = {
+					add = 20
+					has_idea = USR_reactionary_constitution
+				}
+				modifier = {
+					add = 15
+					has_idea = USR_noble_constitution
+				}
+			}
+			20 = {
+				modifier = {
+					add = 5
+					has_idea = USR_moderate_constitution
+				}
+				modifier = {
+					add = 10
+					has_idea = USR_liberal_constitution
+				}
+				modifier = {
+					add = 20
+					has_idea = USR_radical_constitution
+				}
+				if = {
+					limit = {
+						380 = { is_owned_and_controlled_by = WAS }
+					}
+					transfer_state = 380
+					add_state_core = 380
+				}
+				if = {
+					limit = {
+						378 = { is_owned_and_controlled_by = WAS }
+					}
+					transfer_state = 378
+					add_state_core = 378
+				}
+			}
+		}
+	}
+}
+#Conclusion
+
+country_event = {
+	id = RoF_RUS.143
+	title = RoF_RUS.143.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.143.d
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	#
+	option = {
+		name = RoF_RUS.143.a
+		custom_effect_tooltip = GAME_OVER_TT
+		USR = {
+			effect_tooltip = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = RoF_RUS.144
+					hours = 12
+				}
+			}
+		}
+		set_country_flag = USR_annex
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 5
+				USR = { has_idea = USR_noble_constitution }
+			}
+			modifier = {
+				add = 5
+				USR = { has_idea = USR_moderate_constitution }
+			}
+			modifier = {
+				add = 5
+				USR = { has_idea = USR_liberal_constitution }
+			}
+		}
+	}
+	option = {
+		name = RoF_RUS.143.b
+		hidden_effect = {
+			set_country_flag = USR_rejected
+			USR = {
+				country_event = {
+					id = RoF_RUS.145
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 5
+				USR = { has_idea = USR_reactionary_constitution }
+			}
+			modifier = {
+				add = 5
+				USR = { has_idea = USR_radical_constitution }
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_ai = no
+		}
+		name = RoF_RUS.143.c
+		USR = {
+			effect_tooltip = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_rof_federal_state
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = RoF_RUS.144
+					hours = 12
+				}
+			}
+		}
+		set_country_flag = USR_state
+		set_country_flag = federal_state
+	}
+}
+#join USR?
+
+country_event = {
+	id = RoF_RUS.144
+	title = RoF_RUS.144.t
+	picture = GFX_report_event_rus_coa
+	desc = {
+		text = RoF_RUS.144.da
+		trigger = { FROM = { tag = KAZ } }
+	}
+	desc = {
+		text = RoF_RUS.144.db
+		trigger = { FROM = { NOT = { tag = KAZ } } }
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	option = {
+		name = RoF_RUS.144.a
+		trigger = {
+			FROM = { has_country_flag = USR_annex NOT = { tag = KAZ } }
+		}
+		FROM = {
+			every_owned_state = { add_core_of = ROOT }
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+	}
+	option = {
+		trigger = {
+			FROM = { has_country_flag = USR_state NOT = { tag = KAZ } }
+		}
+		name = RoF_RUS.144.a
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_rof_federal_state
+		}
+	}
+	option = {
+		name = RoF_RUS.144.b
+		trigger = {
+			FROM = { has_country_flag = USR_annex tag = KAZ }
+		}
+		FROM = {
+			every_owned_state = { add_core_of = ROOT }
+		}
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}
+		set_cosmetic_tag = USSR
+	}
+	option = {
+		trigger = {
+			FROM = { has_country_flag = USR_state tag = KAZ }
+		}
+		name = RoF_RUS.144.b
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_rof_federal_state
+		}
+		set_cosmetic_tag = USSR
+	}
+}
+#FROM joins
+
+country_event = {
+	id = RoF_RUS.145
+	title = RoF_RUS.145.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.145.d
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	#
+	option = {
+		name = RoF_RUS.145.a
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_RUS.145.b
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+#FROM joins

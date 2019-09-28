@@ -34,6 +34,10 @@ autonomy_state = {
 		always = no
 	}
 
+	use_for_peace_conference_weight = {
+		base = 10
+	}
+
 	allowed = {
 		NOT = { has_country_flag = crown_union_flag }
 		NOT = { has_country_flag = colony_flag }
@@ -41,12 +45,12 @@ autonomy_state = {
 	}
 
 	can_take_level = {
-		has_country_flag = RoF_raise_autonomy
+		#has_country_flag = RoF_raise_autonomy
 		#trigger here
 	}
 
 	can_lose_level = {
-		has_country_flag = RoF_lower_autonomy
+		#has_country_flag = RoF_lower_autonomy
 		#trigger here
 	}
 }

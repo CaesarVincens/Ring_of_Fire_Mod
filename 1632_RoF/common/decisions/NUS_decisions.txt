@@ -1,3 +1,12 @@
+USA_congress = {
+	test = {
+		icon = GFX_decision_generic_nationalism
+		complete_effect = {
+			USA_recalc_congress_icon_frames = yes
+		}
+	}
+}
+
 NUS_major_decisions = {
 
 	NUS_protect_Jena_mission = {
@@ -47,8 +56,9 @@ NUS_major_decisions = {
 	NUS_send_embassy_FRA = {
 		fire_only_once = yes
 		visible = {
+			NOT = { has_country_flag = NUS_embassy_FRA }
 			OR = {
-				has_completed_focus = NUS_srg_design
+				has_completed_focus = NUS_rifle_meeting
 				FRA = { has_completed_focus = FRA_ostend_league_focus }
 				date > 1633.7.1
 			}
@@ -56,9 +66,17 @@ NUS_major_decisions = {
 		available = {
 			NOT = { has_war_with = FRA }
 		}
+		targets = { FRA }
 		target_trigger = {
 			FROM = {
 				tag = FRA
+			}
+		}
+		highlight_states = {
+			FROM = {
+				capital_scope = {
+					is_capital = yes
+				}
 			}
 		}
 		complete_effect = {
@@ -73,15 +91,24 @@ NUS_major_decisions = {
 	NUS_send_embassy_ENG = {
 		fire_only_once = yes
 		visible = {
+			NOT = { has_country_flag = NUS_embassy_ENG }
 			OR = {
-				has_completed_focus = NUS_srg_design
+				has_completed_focus = NUS_rifle_meeting
 				FRA = { has_completed_focus = FRA_ostend_league_focus }
 				date > 1633.7.1
 			}
 		}
+		targets = { ENG }
 		target_trigger = {
 			FROM = {
 				tag = ENG
+			}
+		}
+		highlight_states = {
+			FROM = {
+				capital_scope = {
+					is_capital = yes
+				}
 			}
 		}
 		available = {
@@ -100,11 +127,15 @@ NUS_major_decisions = {
 		fire_only_once = yes
 		allowed = { always = no }
 		available = {
+			NOT = { has_country_flag = NUS_embassy_break_out }
 			OR = {
 				has_completed_focus = NUS_force_hamburg
 				ENG = { has_completed_focus = ENG_move_to_oxford }
 				date > 1634.4.1
 			}
+		}
+		highlight_states = {
+			state = 128
 		}
 		complete_effect = {
 			set_country_flag = NUS_embassy_break_out
@@ -118,15 +149,24 @@ NUS_major_decisions = {
 	NUS_send_embassy_VEN = {
 		fire_only_once = yes
 		visible = {
+			NOT = { has_country_flag = NUS_embassy_VEN }
 			OR = {
-				has_completed_focus = NUS_srg_design
+				has_completed_focus = NUS_rifle_meeting
 				FRA = { has_completed_focus = FRA_ostend_league_focus }
 				date > 1633.11.1
 			}
 		}
+		targets = { VEN }
 		target_trigger = {
 			FROM = {
 				tag = VEN
+			}
+		}
+		highlight_states = {
+			FROM = {
+				capital_scope = {
+					is_capital = yes
+				}
 			}
 		}
 		available = {
@@ -146,14 +186,22 @@ NUS_major_decisions = {
 		visible = {
 			always = no
 			OR = {
-				has_completed_focus = NUS_srg_design
+				has_completed_focus = NUS_rifle_meeting
 				FRA = { has_completed_focus = FRA_ostend_league_focus }
 				date > 1634.3.1
 			}
 		}
+		targets = { MUG }
 		target_trigger = {
 			FROM = {
 				tag = MUG
+			}
+		}
+		highlight_states = {
+			FROM = {
+				capital_scope = {
+					is_capital = yes
+				}
 			}
 		}
 		available = {
@@ -173,9 +221,11 @@ NUS_major_decisions = {
 		visible = {
 			has_global_flag = congress_of_copenhagen_begins
 		}
+		targets = { UPS SPN }
 		target_trigger = {
 			FROM = {
 				owns_state = 657
+				exists = yes
 			}
 		}
 		highlight_states = { state = 657 }
@@ -187,11 +237,14 @@ NUS_major_decisions = {
 			}
 		}
 		complete_effect = {
-			transfer_state = 657
+			FROM = {
+				country_event = { id = RoF_USE.206 }
+			}
+			#transfer_state = 657
 		}
 		cost = 50
 		ai_will_do = {
-			base = 10
+			base = 50
 		}
 	}
 
@@ -217,29 +270,16 @@ NUS_major_decisions = {
 			}
 		}
 		cost = 50
+		ai_will_do = {
+			base = 100
+		}
 	}
 	
 }
 
 NUS_minor_decisions = {
-	NUS_test_decision2 = {
-		visible = {
-			always = no
-		}
-		available = {
-			
-		}
-		complete_effect = {
-			set_variable = { USE_abs = 0.424 }
-			set_variable = { USE_cons = 0.241 }
-			set_variable = { USE_lib = 0.105 }
-			set_variable = { USE_rad = 0.061 }
-			set_variable = { USE_iso = 0.166 }
-
-			set_USE_parties = yes
-		}
-	}
 	NUS_coc_speeches = {
+		icon = GFX_decision_generic_nationalism
 		visible = {
 			any_other_country = {
 				is_german_tag = yes
@@ -248,14 +288,15 @@ NUS_minor_decisions = {
 			has_completed_focus = NUS_establish_committees_of_correspondence
 			NOT = { has_completed_focus = NUS_patriotic_fervor }
 		}
-		available = {
+		target_root_trigger = {
 			has_completed_focus = NUS_expand_committees
 		}
+		targets = { ALS ANS BAD BRA BRE BRS COL FRK HES LUB MAG MEM MKL MNZ NAS NUR OLD PAL POM RAV SAX SXW TRI ULM VER WRT WRZ }
 		target_trigger = {
 			FROM = {
-				is_german_tag = yes
 				has_country_flag = CoC_present
 				NOT = { has_country_flag = NUS_coc_inspired }
+				is_german_tag = yes
 			}
 		}
 		highlight_states = {

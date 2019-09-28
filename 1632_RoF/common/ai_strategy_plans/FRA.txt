@@ -1,3 +1,36 @@
+FRA_canon_focuses = {
+	name = "France Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = FRA
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		#ASAP
+		FRA_counter_american_influence
+		FRA_strike_grantville
+		
+		FRA_investigate_grantville
+		FRA_lessons_of_history
+		FRA_strengthen_crown
+		FRA_occupy_lorraine
+		FRA_religious_sanctuaries
+		FRA_industrial_investments
+		#machined_parts #temp
+		FRA_ostend_league_focus
+		industrial_advances #temp
+		FRA_promote_from_history
+		FRA_strike_dutch
+		FRA_new_model_army
+	}
+
+}
+
 FRA_contain_habsburgs_AUS = {
 	name = "Contain Habsburgs"
 	desc = "Support enemies of AUS"
@@ -25,6 +58,7 @@ FRA_contain_habsburgs_AUS = {
 		value = 200
 	}
 }
+
 FRA_contain_habsburgs_SPR = {
 	name = "Contain Habsburgs"
 	desc = "Support enemies of SPR"
@@ -51,6 +85,39 @@ FRA_contain_habsburgs_SPR = {
 		id = "SPR"
 		value = 200
 	}
+	ai_strategy = {
+		type = antagonize
+		id = "SPN"
+		value = 20
+	}
+}
+
+FRA_watch_SPR = {
+	name = "Watch your back"
+	desc = "No One suspects"
+	
+	enable = {
+		original_tag = FRA
+		country_exists = SPR
+		NOT = { has_idea = anti_habsburg_diplomacy }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SPR }
+			NUS = { has_completed_focus = NUS_congress_of_copenhagen }
+		}
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = SPR
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SPN
+		value = 200
+	}
 }
 
 FRA_support_SWE_plan = {
@@ -64,7 +131,7 @@ FRA_support_SWE_plan = {
 	abort = {
 		OR = {
 			NOT = { country_exists = SWE }
-			has_completed_focus = FRA_countermeasures_focus
+			has_completed_focus = FRA_counter_american_influence
 		}
 	}
 	ai_strategy = {
@@ -87,12 +154,15 @@ FRA_anti_grantville_plan = {
 	enable = {
 		original_tag = FRA
 		country_exists = NUS
-		has_completed_focus = FRA_countermeasures_focus
+		has_completed_focus = FRA_counter_american_influence
 	}
 	abort = {
-		NOT = { country_exists = NUS }
-		NUS = {
-			has_completed_focus = NUS_congress_of_copenhagen
+		OR = {
+			NOT = { country_exists = NUS }
+			NUS = {
+				has_completed_focus = NUS_congress_of_copenhagen
+			}
+			has_completed_focus = FRA_strike_dutch
 		}
 	}
 	ai_strategy = {
@@ -116,6 +186,27 @@ FRA_anti_grantville_plan = {
 		value = 200
 	}
 
+}
+
+ostend_war_prep = {
+	name = "Baltic War"
+	desc = "Don't tip your hand"
+	enable = {
+		OR = {
+			original_tag = FRA
+			#original_tag = SPR
+		}
+		has_completed_focus = FRA_ostend_league_focus
+		#has_war_with = SWE
+	}
+	abort = {
+		has_completed_focus = FRA_strike_dutch
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "DEN"
+		value = 10
+	}
 }
 
 ostend_war = {
@@ -155,6 +246,15 @@ ostend_war = {
 		id = "DEN"
 		value = 0
 	}
+	ai_strategy = {
+		type = conquer
+		id = "SWE"
+		value = -1000
+	}
+	ai_strategy = {
+		type = garrison
+		value = 1000
+	}
 }
 
 ostend_war = {
@@ -165,11 +265,15 @@ ostend_war = {
 			#original_tag = FRA
 			original_tag = SPR
 		}
-		has_war_with = NUS
+		OR = {
+			is_in_faction_with = FRA
+			has_war_with = NUS
+		}
 		#has_war_with = SWE
 	}
 	abort = {
 		NOT = {
+			is_in_faction_with = FRA
 			has_war_with = NUS
 			has_war_with = SWE
 		}

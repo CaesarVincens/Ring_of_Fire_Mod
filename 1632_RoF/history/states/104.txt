@@ -12,7 +12,7 @@ state={
 	history={
 		owner = DEN
 		victory_points = {
-			3096 3 
+			3096 1
 		}
 		buildings = {
 			infrastructure = 2
@@ -28,7 +28,8 @@ state={
 	provinces={
 		21 102 107 115 188 3018 3022 3093 3096 3098 3126 3180 3183 6038 6041 6116 6118 6173 6187 6204 9069 9127 9132 9139 9208 9216 11100 11118 11173 
 	}
-	manpower=305260
+	manpower=35260
 	buildings_max_level_factor=1.000
 	state_category=rural
+	impassable = yes
 }

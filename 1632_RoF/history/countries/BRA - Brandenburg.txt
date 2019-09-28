@@ -17,23 +17,17 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 79
-        }
-        constitutionalist = {
-            popularity = 19
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
     ruling_party = absolutist
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
+}
+set_popularities = {
+	absolutist = 79
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 2
 }
 
 give_military_access = SWE
@@ -42,6 +36,7 @@ give_military_access = SWE
 #	enemy = AUS
 #}
 
+set_country_flag = religion_lutheran
 set_country_flag = german_tag_flag
 add_ideas = {
 }
@@ -52,6 +47,24 @@ create_country_leader = {
     picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "George William von Hohenzollern"
+    desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "George William von Hohenzollern"
+    desc = "POLITICS_NIKOLAUS_VON HINDENBURG_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Brandenburg_George_William.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

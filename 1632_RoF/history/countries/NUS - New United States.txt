@@ -13,7 +13,7 @@ radio = 1
 mechanical_computing = 1
 basic_machine_tools = 1
 construction1 = 1
-up_time_weapons_tech = 1
+#up_time_weapons_tech = 1
 superior_firepower = 1
 #pike_weapons = 1
 #tercio_formation_tech = 1
@@ -23,37 +23,33 @@ NUS_line_infantry_tech = 1
 aerial_research_tech = 1
 }
 
+set_variable = { var = senators_support value = 48 }
+set_variable = { var = senators_total value = 96 }
+set_variable = { var = representatives_support value = 218 }
+set_variable = { var = representatives_total value = 435 }
+set_variable = { var = quorum_low value = 39 }
+set_variable = { var = quorum_medium value = 49 }
+set_variable = { var = quorum_high value = 58 }
+
 # Research Bonuses
 set_convoys = 0
-
+add_manpower = 500
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 10
-        }
-		constitutionalist = {
-			popularity = 21
-		}
-        liberal = {
-            popularity = 61
-        }
-		radical = {
-			popularity = 2
-		}
-        neutrality = {
-            popularity = 6
-        }
-    }
-    
     ruling_party = liberal
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = yes
 }
+set_popularities = {
+	absolutist = 10
+	constitutionalist = 21
+	liberal = 61
+	radical = 2
+	neutrality = 6
+}
 
-
+set_country_flag = religion_secular
 add_ideas = {
 	people_out_of_time
 	freedom_of_religion
@@ -85,6 +81,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Ken Beasley"
 	ideology = dictatorship
+	picture = "gfx/leaders/USA/Portrait_USA_Generic_3.dds"
 }
 
 create_country_leader = {
@@ -95,6 +92,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Quentin B. Underwood"
 	ideology = conservatism_neutral
+	picture = "gfx/leaders/USA/portrait_USA_earl_browder.dds"
 }
 
 create_corps_commander = {

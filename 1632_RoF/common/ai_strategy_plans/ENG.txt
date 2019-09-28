@@ -1,0 +1,110 @@
+﻿ENG_canon_focuses = {
+	name = "England Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = ENG
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		ENG_collect_tarriffs
+		ENG_a_new_princess
+		ENG_lennoxs_holiday
+		ENG_treaty_of_stgermain-en-laye
+		ENG_cutting_the_cord
+		ENG_refurbishments
+		ENG_royal_roads
+		ENG_royal_docks
+		ENG_an_island_nation
+		ENG_navy_reforms
+		ENG_arrest_cromwell
+		ENG_state_of_emergency
+		ENG_return_orkneys
+		ENG_restock_royal_arsenals
+		ENG_move_to_oxford
+		ENG_changing_of_the_guard
+		ENG_expand_royal_arsenals
+		ENG_fortify_thames_medway
+		ENG_experimental_concepts
+		ENG_grand_fleet
+		ENG_army_for_the_realm
+		ENG_air_experiments
+		ENG_artillery_regiments
+		ENG_frigate_concept
+		ENG_raf
+		ENG_the_scottish_question
+	}
+
+}
+
+ostend_war = {
+	name = "Baltic War"
+	desc = "ENG stays home"
+	enable = {
+		OR = {
+			original_tag = ENG
+			#original_tag = SPR
+		}
+		OR = {
+			is_in_faction_with = FRA
+			has_war_with = NUS
+		}
+		#has_war_with = SWE
+	}
+	abort = {
+		NOT = {
+			is_in_faction_with = FRA
+			has_war_with = NUS
+			has_war_with = SWE
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = -1000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "DEN"
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "FRA"
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SPR"
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "C13"
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SPN"
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "LOR"
+		value = 10
+	}
+}

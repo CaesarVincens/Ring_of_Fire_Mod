@@ -46,17 +46,15 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 			ai_will_do = {
-				factor = 1
+				factor = 0
 				modifier = {
-					factor = 5
-					has_government = absolutist
+					add = 1
+					has_stability < 0.25
+					NOT = { has_government = radical }
 				}
 				modifier = {
-					factor = 0
-					OR = {
-						has_government = liberal
-						has_government = radical
-					}
+					add = 5
+					has_government = absolutist
 				}
 			}
 		}
@@ -128,20 +126,16 @@ ideas = {
 				political_power_gain = 0.25
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 0
 				modifier = {
-					factor = 0
-					NOT = { has_government = radical }
-				}
-				modifier = {
-					factor = 2
+					add = 2
 					has_government = radical
 				}
 			}
 		}
 	}
 	
-	conscription_system = {
+	mobilization_laws = {
 		law = yes
 		mercenary_army = {
 			cost = 100
@@ -167,29 +161,9 @@ ideas = {
 				factor = 1
 			}
 		}
-		volunteer_army = {
-			cost = 100
-			level = 3
-			removal_cost = -1
-			available = {
-				if = {
-					limit = { has_completed_focus = shun_americans }
-					NOT = { has_idea = GG_conscripts }
-				}			
-			}
-			cancel_if_invalid = no
-			modifier = {
-				conscription = 0.02
-				experience_gain_army_factor = 0.1
-				army_core_defence_factor = 0.1
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		levy_army = {
 			cost = 100
-			level = 2
+			level = 3
 			removal_cost = -1
 			available = {
 				if = {
@@ -203,13 +177,34 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			modifier = {
-				conscription = 0.03
-				conscription_factor = 0.2			
+				conscription = 0.02
+				training_time_army_factor = -0.1
+				#conscription_factor = 0.2			
 			}
 			ai_will_do = {
 				factor = 1
 			}
 			default = yes
+		}
+		volunteer_army = {
+			cost = 100
+			level = 2
+			removal_cost = -1
+			available = {
+				if = {
+					limit = { has_completed_focus = shun_americans }
+					NOT = { has_idea = GG_conscripts }
+				}			
+			}
+			cancel_if_invalid = no
+			modifier = {
+				conscription = 0.03
+				experience_gain_army_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
 		}
 		drafted_army = {
 			cost = 100
@@ -228,7 +223,6 @@ ideas = {
 			cancel_if_invalid = no
 			modifier = {
 				conscription = 0.05
-				conscription_factor = 0.05
 				training_time_army_factor = 0.1
 			}
 			ai_will_do = {

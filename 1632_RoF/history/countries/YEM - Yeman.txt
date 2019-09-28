@@ -16,28 +16,22 @@ set_convoys = 0
 
 
 set_politics = {
-
-    parties = {
-        absolutist = {
-            popularity = 89
-        }
-        constitutionalist = {
-            popularity = 9
-        }
-        neutrality = {
-            popularity = 2
-        }
-    }
-    
-    ruling_party = absolutist
+    ruling_party = neutrality
     last_election = "1631.1.1"
     election_frequency = 48
     elections_allowed = no
 }
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
 
-
+set_country_flag = religion_islam
 add_ideas = {
-		military_focus_eco
+	military_focus_eco
 }
 set_stability = 0.5
 create_country_leader = {
@@ -45,7 +39,7 @@ create_country_leader = {
     desc = "POLITICS_HALIL_IBN AHMAD_DESC"
     picture = "gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"
     expire = "1660.1.1"
-    ideology = absolute_monarchy
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

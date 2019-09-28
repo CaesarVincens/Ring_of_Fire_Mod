@@ -22,7 +22,7 @@ state = {
 		}
 		add_core_of = NUS
 		add_core_of = SXW
-
+		set_state_flag = german_state_flag
 	}
 
 	provinces = {

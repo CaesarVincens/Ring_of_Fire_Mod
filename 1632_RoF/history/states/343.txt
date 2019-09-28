@@ -6,12 +6,13 @@ state={
 	history={
 		owner = POL
 		victory_points = {
-			362 3 
+			362 10
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
+			dockyard = 1
 			air_base = 0
 			362 = {
 				naval_base = 2
