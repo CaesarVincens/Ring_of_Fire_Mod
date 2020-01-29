@@ -16,6 +16,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_murad"
+		texturefile = "gfx/event_pictures/report_event_murad.dds"
+	}
+
+	spriteType = {
 		name = "GFX_report_event_nus_flag"
 		texturefile = "gfx/event_pictures/report_event_nus_flag.dds"
 	}
@@ -98,6 +103,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_aus_flag"
 		texturefile = "gfx/event_pictures/report_event_aus_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_tur_flag"
+		texturefile = "gfx/event_pictures/report_event_tur_flag.dds"
 	}
 
 	spriteType = {

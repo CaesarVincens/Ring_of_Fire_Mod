@@ -79,6 +79,9 @@ add_ideas = {
 	TUR_kosem_sultan
 	TUR_janissaries_1
 	TUR_beylerbeys_1
+	limited_exports
+	TUR_husrev_pasha
+	TUR_self_dealing_bureaucrats
 	#emperor_rank
 }
 set_stability = 0.5

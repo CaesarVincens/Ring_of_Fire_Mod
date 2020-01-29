@@ -1,5 +1,9 @@
-﻿name="1632 - The Ring of Fire"
-path="mod/1632_RoF/"
+version="1.8.*"
+tags={
+	"Alternative History"
+}
+name="1632 - The Ring of Fire"
+picture="1632_RoF.jpg"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_strategy"
@@ -29,10 +33,4 @@ replace_path="history/states"
 replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
-user_dir="1632_RoF_user_dir"
-tags={
-	"Alternative History"
-}
-picture="1632_RoF.jpg"
-remote_file_id="1160009836"
-supported_version="1.7.*"
+path="C:/Users/sveni_000/Documents/Paradox Interactive/Hearts of Iron IV/mod/1632_RoF"

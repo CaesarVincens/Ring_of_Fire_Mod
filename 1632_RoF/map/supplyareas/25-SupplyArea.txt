@@ -2,7 +2,7 @@
 supply_area={
 	id=25
 	name="SUPPLYAREA_25"
-	value=20
+	value=10
 	states={
 		5 241 16 17 26 
 	}

@@ -777,7 +777,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = AUS_bohmeian_railway
+		id = AUS_bohemian_railway
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
@@ -803,21 +803,66 @@ focus_tree = {
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
-			BOH = {
-				country_event = {
-					id = RoF_AUS.155
+			if = {
+				limit = {
+					BOH = { exists = no }
+					owns_state = 37
+					owns_state = 38
 				}
-			}
-			custom_effect_tooltip = AUS_bohmeian_railway_boh_TT
-			custom_effect_tooltip = AUS_bohmeian_railway_aus_TT
-			custom_effect_tooltip = AUS_bohmeian_railway_both_TT
-			effect_tooltip = {
-				show_ideas_tooltip = AUS_bohemian_rail
 				add_tech_bonus = {
 					uses = 1
 					category = infra_tech
 					bonus = 0.5
 					name = infra_bonus
+				}
+				20 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				37 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				38 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				429 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_ideas = AUS_bohemian_rail
+				else = {
+
+					BOH = {
+						country_event = {
+							id = RoF_AUS.155
+						}
+					}
+					custom_effect_tooltip = AUS_bohemian_railway_boh_TT
+					custom_effect_tooltip = AUS_bohemian_railway_aus_TT
+					custom_effect_tooltip = AUS_bohemian_railway_both_TT
+					effect_tooltip = {
+						show_ideas_tooltip = AUS_bohemian_rail
+						add_tech_bonus = {
+							uses = 1
+							category = infra_tech
+							bonus = 0.5
+							name = infra_bonus
+						}
+					}
 				}
 			}
 		}
@@ -976,10 +1021,22 @@ focus_tree = {
 				}
 			}
 		}
+		will_lead_to_war_with = BOH
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			add_state_claim = 37
+			add_state_claim = 38
+			add_state_claim = 573
+			create_wargoal = {
+				target = BOH
+				type = take_claimed_state
+				generator = {
+					37
+					38
+					573
+				}
+			}
 		}
 		ai_will_do = {
 			base = 5
@@ -1180,6 +1237,7 @@ focus_tree = {
 					SAX = { country_event = { id = RoF_German.131 hours = 12 } }
 				}
 			}
+			custom_effect_tooltip = AUS_sweet_talk_saxony.TT
 		}
 		ai_will_do = {
 			factor = 5
@@ -1209,6 +1267,7 @@ focus_tree = {
 		cost = 10
 		#available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
 			#add_political_power = 60
 		}
 		ai_will_do = {

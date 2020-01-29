@@ -53,6 +53,14 @@ ideas = {
 				factor = 0
 			}
 		}
+		SCO_robert_forbes = {
+
+			allowed = {
+				original_tag = SCO
+			}
+			
+			traits = { captain_of_industry }
+		}
 	}
 	tank_manufacturer = { 
 		designer = yes

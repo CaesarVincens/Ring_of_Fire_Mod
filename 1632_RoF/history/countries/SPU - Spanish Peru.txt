@@ -1,5 +1,5 @@
-﻿capital = 623
-
+﻿capital = 621
+set_research_slots = 1
 oob = "SPU_OOB"
 
 # Starting tech

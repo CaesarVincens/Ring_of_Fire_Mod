@@ -1,4 +1,5 @@
-﻿capital = 591
+﻿capital = 595
+set_research_slots = 1
 
 oob = "NSP_OOB"
 

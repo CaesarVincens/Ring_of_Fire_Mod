@@ -20,3 +20,1238 @@ AUS_major_decisions = {
 		}
 	}
 }
+
+AUS_restoring_princes = {
+	AUS_alsace = {
+		visible = {
+			OR = {
+				ALS = { exists = no }
+				ALS = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 5
+			OR = {
+				ALS = { exists = no }
+				ALS = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 5 }
+				ALS = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 5 }
+					controls_state = 5
+				}
+				set_state_owner = 5
+			}
+			release_autonomy = {
+				target = ALS
+				autonomy_state = autonomy_rof_vassal
+			}
+			ALS = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_ansbach = {
+		visible = {
+			OR = {
+				ANS = { exists = no }
+				ANS = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 9
+			OR = {
+				ANS = { exists = no }
+				ANS = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 9 }
+				ANS = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 9 }
+					controls_state = 9
+				}
+				set_state_owner = 9
+			}
+			release_autonomy = {
+				target = ANS
+				autonomy_state = autonomy_rof_vassal
+			}
+			ANS = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_augsburg = {
+		visible = {
+			OR = {
+				MEM = { exists = no }
+				MEM = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 259
+			OR = {
+				MEM = { exists = no }
+				MEM = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 259 }
+				MEM = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 259 }
+					controls_state = 259
+				}
+				set_state_owner = 259
+			}
+			release_autonomy = {
+				target = MEM
+				autonomy_state = autonomy_rof_vassal
+			}
+			MEM = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_baden = {
+		visible = {
+			OR = {
+				BAD = { exists = no }
+				BAD = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 26
+			OR = {
+				BAD = { exists = no }
+				BAD = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 26 }
+				BAD = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 26 }
+					controls_state = 26
+				}
+				set_state_owner = 26
+			}
+			release_autonomy = {
+				target = BAD
+				autonomy_state = autonomy_rof_vassal
+			}
+			BAD = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_bavaria = {
+		visible = {
+			OR = {
+				BAV = { exists = no }
+				BAV = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 30
+			OR = {
+				BAV = { exists = no }
+				BAV = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 30 }
+				BAV = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 30 }
+					controls_state = 30
+				}
+				set_state_owner = 30
+			}
+			release_autonomy = {
+				target = BAV
+				autonomy_state = autonomy_rof_vassal
+			}
+			BAV = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_brandenburg = {
+		visible = {
+			OR = {
+				BRA = { exists = no }
+				BRA = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 45
+			OR = {
+				BRA = { exists = no }
+				BRA = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 45 }
+				BRA = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 45 }
+					controls_state = 45
+				}
+				set_state_owner = 45
+			}
+			release_autonomy = {
+				target = BRA
+				autonomy_state = autonomy_rof_vassal
+			}
+			BRA = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_bremen = {
+		visible = {
+			OR = {
+				BRE = { exists = no }
+				BRE = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 48
+			OR = {
+				BRE = { exists = no }
+				BRE = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 48 }
+				BRE = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 48 }
+					controls_state = 48
+				}
+				set_state_owner = 48
+			}
+			release_autonomy = {
+				target = BRE
+				autonomy_state = autonomy_rof_vassal
+			}
+			BRE = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_brunswick = {
+		visible = {
+			OR = {
+				BRS = { exists = no }
+				BRS = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 43
+			OR = {
+				BRS = { exists = no }
+				BRS = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 43 }
+				BRS = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 43 }
+					controls_state = 43
+				}
+				set_state_owner = 43
+			}
+			release_autonomy = {
+				target = BRS
+				autonomy_state = autonomy_rof_vassal
+			}
+			BRS = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_cologne = {
+		visible = {
+			OR = {
+				COL = { exists = no }
+				COL = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 212
+			OR = {
+				COL = { exists = no }
+				COL = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 212 }
+				ALS = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 212 }
+					controls_state = 212
+				}
+				set_state_owner = 212
+			}
+			release_autonomy = {
+				target = COL
+				autonomy_state = autonomy_rof_vassal
+			}
+			COL = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_frankfurt = {
+		visible = {
+			OR = {
+				FRK = { exists = no }
+				FRK = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 154
+			OR = {
+				FRK = { exists = no }
+				FRK = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 154 }
+				FRK = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 154 }
+					controls_state = 154
+				}
+				set_state_owner = 154
+			}
+			release_autonomy = {
+				target = FRK
+				autonomy_state = autonomy_rof_vassal
+			}
+			FRK = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_hamburg = {
+		visible = {
+			OR = {
+				HAM = { exists = no }
+				HAM = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 168
+			OR = {
+				HAM = { exists = no }
+				HAM = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 168 }
+				HAM = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 168 }
+					controls_state = 168
+				}
+				set_state_owner = 168
+			}
+			release_autonomy = {
+				target = HAM
+				autonomy_state = autonomy_rof_vassal
+			}
+			HAM = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_hesse = {
+		visible = {
+			OR = {
+				HES = { exists = no }
+				HES = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 170
+			OR = {
+				HES = { exists = no }
+				HES = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 170 }
+				HES = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 170 }
+					controls_state = 170
+				}
+				set_state_owner = 170
+			}
+			release_autonomy = {
+				target = HES
+				autonomy_state = autonomy_rof_vassal
+			}
+			HES = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_lubeck = {
+		visible = {
+			OR = {
+				LUB = { exists = no }
+				LUB = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 242
+			OR = {
+				LUB = { exists = no }
+				LUB = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 242 }
+				LUB = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 242 }
+					controls_state = 242
+				}
+				set_state_owner = 242
+			}
+			release_autonomy = {
+				target = LUB
+				autonomy_state = autonomy_rof_vassal
+			}
+			LUB = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_magdeburg = {
+		visible = {
+			OR = {
+				MAG = { exists = no }
+				MAG = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 247
+			OR = {
+				MAG = { exists = no }
+				MAG = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 247 }
+				MAG = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 247 }
+					controls_state = 247
+				}
+				set_state_owner = 247
+			}
+			release_autonomy = {
+				target = MAG
+				autonomy_state = autonomy_rof_vassal
+			}
+			MAG = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_mecklenburg = {
+		visible = {
+			OR = {
+				MKL = { exists = no }
+				MKL = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 661
+			OR = {
+				MKL = { exists = no }
+				MKL = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 661 }
+				MKL = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 661 }
+					controls_state = 661
+				}
+				set_state_owner = 661
+			}
+			release_autonomy = {
+				target = MKL
+				autonomy_state = autonomy_rof_vassal
+			}
+			MKL = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_mainz = {
+		visible = {
+			OR = {
+				MNZ = { exists = no }
+				MNZ = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 248
+			OR = {
+				MNZ = { exists = no }
+				MNZ = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 248 }
+				MNZ = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 248 }
+					controls_state = 248
+				}
+				set_state_owner = 248
+			}
+			release_autonomy = {
+				target = MNZ
+				autonomy_state = autonomy_rof_vassal
+			}
+			MNZ = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_nassau = {
+		visible = {
+			OR = {
+				NAS = { exists = no }
+				NAS = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 296
+			OR = {
+				NAS = { exists = no }
+				NAS = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 296 }
+				NAS = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 296 }
+					controls_state = 296
+				}
+				set_state_owner = 296
+			}
+			release_autonomy = {
+				target = NAS
+				autonomy_state = autonomy_rof_vassal
+			}
+			NAS = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_nurenburg = {
+		visible = {
+			OR = {
+				NUR = { exists = no }
+				NUR = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 306
+			OR = {
+				NUR = { exists = no }
+				NUR = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 306 }
+				NUR = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 306 }
+					controls_state = 306
+				}
+				set_state_owner = 306
+			}
+			release_autonomy = {
+				target = NUR
+				autonomy_state = autonomy_rof_vassal
+			}
+			NUR = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_oldenburg = {
+		visible = {
+			OR = {
+				OLD = { exists = no }
+				OLD = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 313
+			OR = {
+				OLD = { exists = no }
+				OLD = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 313 }
+				OLD = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 313 }
+					controls_state = 313
+				}
+				set_state_owner = 313
+			}
+			release_autonomy = {
+				target = OLD
+				autonomy_state = autonomy_rof_vassal
+			}
+			OLD = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_palantinate = {
+		visible = {
+			OR = {
+				PAL = { exists = no }
+				PAL = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 320
+			OR = {
+				PAL = { exists = no }
+				PAL = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 320 }
+				PAL = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 320 }
+					controls_state = 320
+				}
+				set_state_owner = 320
+			}
+			release_autonomy = {
+				target = PAL
+				autonomy_state = autonomy_rof_vassal
+			}
+			PAL = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_pomerania = {
+		visible = {
+			OR = {
+				POM = { exists = no }
+				POM = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 355
+			OR = {
+				POM = { exists = no }
+				POM = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 355 }
+				POM = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 355 }
+					controls_state = 355
+				}
+				set_state_owner = 355
+			}
+			release_autonomy = {
+				target = POM
+				autonomy_state = autonomy_rof_vassal
+			}
+			POM = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_salzburg = {
+		visible = {
+			OR = {
+				SAL = { exists = no }
+				SAL = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 432
+			OR = {
+				SAL = { exists = no }
+				SAL = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 432 }
+				SAL = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 432 }
+					controls_state = 432
+				}
+				set_state_owner = 432
+			}
+			release_autonomy = {
+				target = SAL
+				autonomy_state = autonomy_rof_vassal
+			}
+			SAL = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_saxony = {
+		visible = {
+			OR = {
+				SAX = { exists = no }
+				SAX = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 414
+			OR = {
+				SAX = { exists = no }
+				SAX = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 414 }
+				SAX = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 414 }
+					controls_state = 414
+				}
+				set_state_owner = 414
+			}
+			release_autonomy = {
+				target = SAX
+				autonomy_state = autonomy_rof_vassal
+			}
+			SAX = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_saxe_weimar = {
+		visible = {
+			OR = {
+				SXW = { exists = no }
+				SXW = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 580
+			OR = {
+				SXW = { exists = no }
+				SXW = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 580 }
+				SXW = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 580 }
+					controls_state = 580
+				}
+				set_state_owner = 580
+			}
+			release_autonomy = {
+				target = SXW
+				autonomy_state = autonomy_rof_vassal
+			}
+			SXW = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_trier = {
+		visible = {
+			OR = {
+				TRI = { exists = no }
+				TRI = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 476
+			OR = {
+				TRI = { exists = no }
+				TRI = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 476 }
+				TRI = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 476 }
+					controls_state = 476
+				}
+				set_state_owner = 476
+			}
+			release_autonomy = {
+				target = TRI
+				autonomy_state = autonomy_rof_vassal
+			}
+			TRI = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_ulm = {
+		visible = {
+			OR = {
+				ULM = { exists = no }
+				ULM = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 553
+			OR = {
+				ULM = { exists = no }
+				ULM = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 553 }
+				ULM = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 553 }
+					controls_state = 553
+				}
+				set_state_owner = 553
+			}
+			release_autonomy = {
+				target = ULM
+				autonomy_state = autonomy_rof_vassal
+			}
+			ULM = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_wurtemburg = {
+		visible = {
+			OR = {
+				WRT = { exists = no }
+				WRT = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 581
+			OR = {
+				WRT = { exists = no }
+				WRT = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 581 }
+				WRT = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 581 }
+					controls_state = 581
+				}
+				set_state_owner = 581
+			}
+			release_autonomy = {
+				target = WRT
+				autonomy_state = autonomy_rof_vassal
+			}
+			WRT = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+	AUS_wurzburg = {
+		visible = {
+			OR = {
+				WRZ = { exists = no }
+				WRZ = { has_capitulated = yes }
+			}
+		}
+		available = {
+			NOT = { political_power_daily < 0.25 }
+			controls_state = 578
+			OR = {
+				WRZ = { exists = no }
+				WRZ = { has_capitulated = yes }
+			}
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.25
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 578 }
+				WRZ = { exists = yes has_capitulated = no }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { owns_state = 578 }
+					controls_state = 578
+				}
+				set_state_owner = 578
+			}
+			release_autonomy = {
+				target = WRZ
+				autonomy_state = autonomy_rof_vassal
+			}
+			WRZ = {
+				hidden_effect = { transfer_occupied_cores_PREV = yes }
+			}
+			add_stability = 0.01
+		}
+	}
+}

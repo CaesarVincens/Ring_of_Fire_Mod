@@ -1,0 +1,106 @@
+TUR_major_decisions = {
+	TUR_test = {
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = TUR_new_bureaucrats
+				add_idea = TUR_self_dealing_bureaucrats
+			}
+			swap_ideas = {
+				remove_idea = TUR_beylerbeys_2
+				add_idea = TUR_beylerbeys_1
+			}
+		}
+	}
+}
+
+TUR_combating_corruption_cat = {
+	TUR_ban_coffee = {
+		cost = 25
+		icon = eng_trade_unions_demand
+		days_remove = 180
+		modifier = {
+			stability_factor = -0.1
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+	}
+	TUR_reform_bureaucracy = {
+		cost = 50
+		icon = generic_political_discourse
+		visible = {
+			has_idea = TUR_self_dealing_bureaucrats
+		}
+		days_remove = 365
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = TUR_self_dealing_bureaucrats
+				add_idea = TUR_new_bureaucrats
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_decision = TUR_reform_bureaucracy
+				}
+				swap_ideas = {
+					remove_idea = TUR_new_bureaucrats
+					add_idea = TUR_loyal_bureaucrats
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = TUR_self_dealing_bureaucrats
+							add_idea = TUR_loyal_bureaucrats
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TUR_new_bureaucrats
+					add_idea = TUR_loyal_bureaucrats
+				}
+			}
+		}
+	}
+	TUR_rein_in_beylerbeys = {
+		cost = 50
+		icon = oppression
+		visible = {
+			has_idea = TUR_beylerbeys_1
+		}
+		days_remove = 365
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = TUR_beylerbeys_1
+				add_idea = TUR_beylerbeys_2
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_decision = TUR_rein_in_beylerbeys
+				}
+				swap_ideas = {
+					remove_idea = TUR_beylerbeys_2
+					add_idea = TUR_beylerbeys_3
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = TUR_beylerbeys_1
+							add_idea = TUR_beylerbeys_3
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TUR_beylerbeys_2
+					add_idea = TUR_beylerbeys_3
+				}
+			}
+		}
+	}
+}

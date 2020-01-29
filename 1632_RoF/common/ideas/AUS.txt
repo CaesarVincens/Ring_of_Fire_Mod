@@ -63,8 +63,8 @@ ideas = {
 			removal_cost = -1
 			picture = chi_hyper_inflation1
 			modifier = {
-				consumer_goods_factor = 0.5
-				production_speed_buildings_factor = -0.5
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
 			}
 		}
 		AUS_american_industry_idea = {

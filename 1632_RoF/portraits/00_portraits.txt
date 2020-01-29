@@ -354,17 +354,17 @@ continent = {
 		}
 		absolutist = {
 				male = { 
-					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
 			}
 		}
 		constitutionalist = {
 				male = { 
-					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+					"gfx/leaders/TUR/Portrait_Ottoman_generic.dds"
 			}
 		}
 		neutrality = {
 				male = { 
-					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+					"gfx/leaders/TUR/Portrait_Ottoman_generic.dds"
 			}
 		}
 	}

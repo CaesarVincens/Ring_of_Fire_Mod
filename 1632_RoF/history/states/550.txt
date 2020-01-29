@@ -3,9 +3,9 @@ state = {
 	name= "STATE_550"
 	manpower = 108000
 
-	resources = {
+	#resources = {
 		#rubber = 1
-	}
+	#}
 	state_category = rural
 
 	history = {
@@ -13,7 +13,7 @@ state = {
 		victory_points = { 1977 3 }
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 		}

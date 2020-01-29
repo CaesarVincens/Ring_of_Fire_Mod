@@ -13,9 +13,16 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.7.0 - ?? - ??
+Ottoman focus tree and reworked starting position
+Added North African provinces/vassals for the Ottomans of Egypt, Tripolitania, Tunisia, and Algeria
+Add a new Industrialization mechanic for all countries
+Other minor fixes and improvements
 
-Alpha 0.6.1 - Jul. 3, 2019
+Alpha 0.6.1 - Aug. 14, 2019
 Fixed ships to be deployable - thanks to AngelBlue
+Changed Gaston idea to be flat stability penalty until more of France's focus tree is complete.
+Other minor fixes and updates
 
 Alpha 0.6.0 - Viennese Waltz - Jun. 22, 2019
 Updated to HoI Patch 1.7.0

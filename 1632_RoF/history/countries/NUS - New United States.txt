@@ -54,6 +54,7 @@ add_ideas = {
 	people_out_of_time
 	freedom_of_religion
 	early_industrial
+	free_trade
 }
 set_stability = 0.5
 create_country_leader = {

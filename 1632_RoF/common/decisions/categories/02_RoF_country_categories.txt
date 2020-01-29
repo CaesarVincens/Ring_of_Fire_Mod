@@ -87,3 +87,37 @@ AUS_major_decisions = {
 		
 	}
 }
+
+AUS_restoring_princes = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_hre
+	priority = 100
+	allowed = {
+		original_tag = AUS
+	}
+	visible = {
+		#has_completed_focus = AUS_restore_princes
+	}
+}
+
+TUR_major_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	allowed = {
+		original_tag = TUR
+	}
+	visible = {
+		
+	}
+}
+
+TUR_combating_corruption_cat = {
+	icon = power_struggle
+	priority = 100
+	allowed = {
+		original_tag = TUR
+	}
+	visible = {
+		#has_completed_focus = TUR_combat_corruption
+	}
+}

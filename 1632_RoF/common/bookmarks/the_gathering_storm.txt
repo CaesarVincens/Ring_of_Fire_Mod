@@ -57,6 +57,14 @@ bookmarks = {
 		"TUR"={
 			history = "TUR_RING_OF_FIRE_DESC"
 			ideology = absolutist
+			ideas = {
+				TUR_kosem_sultan
+				TUR_janissaries_1
+				TUR_beylerbeys_1
+			}
+			focuses = {
+				TUR_assume_throne
+			}
 		}
 		"SPR"={
 			history = "SPR_RING_OF_FIRE_DESC"
@@ -75,6 +83,7 @@ bookmarks = {
 		"SPN"={
 			minor = yes
 			history = "SPN_RING_OF_FIRE_DESC"
+			ideology = absolutist
 			focuses = {
 				SPN_don_fernando
 				SPN_united_netherlands
@@ -83,10 +92,12 @@ bookmarks = {
 		"POL"={
 			minor = yes
 			history = "POL_RING_OF_FIRE_DESC"
+			ideology = absolutist
 		}
 		"RUS"={
 			minor = yes
 			history = "RUS_RING_OF_FIRE_DESC"
+			ideology = absolutist
 			ideas = {
 				RUS_eastern_serfdom_1
 			}
@@ -98,6 +109,7 @@ bookmarks = {
 		"ENG"={
 			minor = yes
 			history = "ENG_RING_OF_FIRE_DESC"
+			ideology = absolutist
 			ideas = {
 				ENG_parliament_prorogued
 			}
@@ -110,6 +122,7 @@ bookmarks = {
 		"DEN"={
 			minor = yes
 			history = "DEN_RING_OF_FIRE_DESC"
+			ideology = absolutist
 			focuses = {
 				DEN_prepare_HBC
 				DEN_ostend_league

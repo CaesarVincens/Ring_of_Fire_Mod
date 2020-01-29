@@ -16,6 +16,16 @@
 #	}
 #
 
+transfer_occupied_cores_PREV = {
+	every_state = {
+		limit = {
+			is_controlled_by = ROOT
+			is_core_of = PREV
+		}
+		PREV = { transfer_state = PREV }
+	}
+}
+
 lessen_AUS_kipper = {
 	if = {
 		limit = { has_idea = AUS_kipper_und_wipper }
