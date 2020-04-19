@@ -1386,4 +1386,3 @@ country_event = {
 	}
 }
 
-
