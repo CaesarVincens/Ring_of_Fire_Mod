@@ -117,6 +117,7 @@ is_friend_or_potential_friend_of_ROOT = {
 		OR = {
 			is_subject_of = ROOT
 			is_subject = no
+			is_in_faction_with = ROOT
 		}
 		OR = {
 			is_in_faction_with = ROOT
@@ -176,5 +177,43 @@ is_ally_or_subject_of_ROOT = {
 			is_in_faction_with = ROOT
 			is_subject_of = ROOT
 		}
+	}
+}
+
+mod_agr_focus_block = {
+	custom_trigger_tooltip = {
+		tooltip = industrialization_focus_block_TT
+	}
+	OR = {
+		always = yes
+	}
+}
+
+early_ind_focus_block = {
+	custom_trigger_tooltip = {
+		tooltip = industrialization_focus_block_TT
+		OR = {
+			NOT = {
+				original_tag = RUS
+				original_tag = AUS
+			}
+			AND = {
+				original_tag = RUS
+				has_country_flag = RUS_build_factories_flag
+			}
+			AND = {
+				original_tag = AUS
+				has_country_flag = AUS_american_industry_flag
+			}
+		}
+	}
+}
+
+fully_ind_focus_block = {
+	custom_trigger_tooltip = {
+		tooltip = industrialization_focus_block_TT
+	}
+	OR = {
+		always = yes
 	}
 }

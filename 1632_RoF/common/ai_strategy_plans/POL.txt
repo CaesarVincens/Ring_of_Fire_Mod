@@ -13,6 +13,9 @@
 	ai_national_focuses = {
 
 	}
+	research = {
+		cat_mass_assault = 50
+	}
 }
 
 POL_ignore_Kurland = {

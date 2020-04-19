@@ -41,6 +41,7 @@ focus_tree = {
 		cost = 10.00
 		x = 26
 		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -59,6 +60,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_investigate_grantville
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			army_experience = 10
 			navy_experience = 10
@@ -79,6 +81,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = FRA_lessons_of_history
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_research_slot = 1
 			add_tech_bonus = {
@@ -107,6 +110,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_religious_sanctuaries
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = FRA_industrial_investments_state }
@@ -175,7 +179,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_strengthen_crown
-		icon = GFX_focus_rom_royal_dictatorship
+		icon = GFX_focus_focus_fra_orleans_restoration
 		cost = 10.00
 		prerequisite = {
 			focus = FRA_lessons_of_history
@@ -183,6 +187,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = FRA_lessons_of_history
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.1
@@ -202,6 +207,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = FRA_strengthen_crown
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			add_ideas = FRA_promote_future
 		}
@@ -220,6 +226,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_promote_from_history
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			add_tech_bonus = {
 				name = cardinal_tech_bonus
@@ -252,11 +259,11 @@ focus_tree = {
 			}
 			is_subject = no
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			LOR = {
 				country_event = {
 					id = RoF_FRA.160
-					hours = 2
 				}
 			}
 		}
@@ -290,6 +297,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			remove_ideas = anti_habsburg_diplomacy
 			SWE = {
@@ -320,6 +328,7 @@ focus_tree = {
 				NUS = { has_country_flag = NUS_battle_of_grantville }
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			NUS = {
 				country_event = {
@@ -350,6 +359,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = {
 				id = RoF_FRA.100
@@ -384,6 +394,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = {
 				id = RoF_FRA.120
@@ -407,6 +418,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = FRA_lessons_of_history
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
 				limit = {
@@ -448,6 +460,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = FRA_approach_americans
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_timed_idea = {
 				idea = FRA_constitutionalism
@@ -481,6 +494,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 			country_event = {

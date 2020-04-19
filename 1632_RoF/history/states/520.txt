@@ -13,14 +13,14 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = ARM
+		#add_core_of = ARM
 		add_core_of = GEO
-		add_core_of = PER
+		#add_core_of = PER
 		add_core_of = TUR
 
 	}

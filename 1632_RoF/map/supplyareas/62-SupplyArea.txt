@@ -4,6 +4,6 @@ supply_area={
 	name="SUPPLYAREA_62"
 	value=10
 	states={
-		417 536 535 418 299 338 
+		524 417 535 418 299 338 
 	}
 }

@@ -8,6 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
+	continuous_focus_position = { x = 50 y = 1300 }
 	focus = {
 		id = ENG_collect_tarriffs
 		icon = GFX_focus_usa_reestablish_the_gold_standard
@@ -18,6 +19,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			#idea tariffs
 			add_ideas = ENG_tarrifs
@@ -49,6 +51,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
 			navy_experience = 25
@@ -184,6 +187,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_an_island_nation
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
 			navy_experience = 25
@@ -203,6 +207,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ENG_an_island_nation
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = steamship_bonus bonus = 0.5 uses = 1 category = steamship_tech }
 			#tech bonuses?
@@ -223,6 +228,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_experimental_concepts
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
 			#navy bonuses?
@@ -252,6 +258,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_grand_fleet
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = frigate_bonus bonus = 0.5 uses = 1 category = frigate_tech }
 			#navy bonuses?
@@ -281,6 +288,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ENG_grand_fleet
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = ironclad_bonus bonus = 0.5 uses = 1 category = ironclad_tech }
 			#navy bonuses?
@@ -310,6 +318,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ENG_grand_fleet
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_NAVY }
 		complete_tooltip = {
 			random_state = {
 				limit = { has_state_flag = ENG_coordinated_production_state }
@@ -467,6 +476,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_experimental_concepts
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
 			add_tech_bonus = {
@@ -496,6 +506,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_army_for_the_realm
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
 			add_tech_bonus = {
@@ -521,6 +532,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ENG_army_for_the_realm
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
 			add_tech_bonus = {
@@ -544,6 +556,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ENG_army_for_the_realm
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
 			add_tech_bonus = {
@@ -570,6 +583,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ENG_army_for_the_realm
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
 			add_tech_bonus = {
@@ -603,6 +617,7 @@ focus_tree = {
 			}
 			has_tech = aerial_research_tech
 		}
+		search_filters = { FOCUS_FILTER_AIR }
 		complete_tooltip = {
 			air_experience = 25
 			if = {
@@ -711,6 +726,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_air_experiments
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
 			air_experience = 25
 			add_tech_bonus = {
@@ -738,6 +754,7 @@ focus_tree = {
 			focus = ENG_collect_tarriffs
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = ENG_refurbishments_state }
@@ -818,6 +835,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_refurbishments
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			if = {
 				limit = {
@@ -943,6 +961,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ENG_refurbishments
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY }
 		complete_tooltip = {
 			random_state = {
 				limit = { has_state_flag = ENG_royal_docks_state }
@@ -1091,6 +1110,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ENG_refurbishments
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = ENG_seize_traitors_lands_state }
@@ -1181,6 +1201,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_refurbishments
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			random_state = {
 				limit = { has_state_flag = ENG_restock_royal_arsenals_state }
@@ -1270,6 +1291,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_restock_royal_arsenals
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			random_state = {
 				limit = { has_state_flag = ENG_expand_royal_arsenals_state }
@@ -1338,6 +1360,7 @@ focus_tree = {
 			controls_state = 128
 			controls_state = 127
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			country_event = { id = RoF_ENG.111 }
 			custom_effect_tooltip = ENG_fortify_thames_medway.tt
@@ -1366,6 +1389,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.1
@@ -1387,6 +1411,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			custom_effect_tooltip = ENG_lennoxs_holiday.tt
 			hidden_effect = {
@@ -1429,8 +1454,9 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_ENG.120 hours = 12 }
+			country_event = { id = RoF_ENG.120 }
 			#event
 		}
 
@@ -1449,6 +1475,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_ENG.131 days = 1 }
 			add_political_power = 50
@@ -1486,6 +1513,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.135 days = 1 }
 			custom_effect_tooltip = ENG_hide_cromwell.tt
@@ -1507,6 +1535,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.170 days = 1 }
 			#event
@@ -1533,6 +1562,7 @@ focus_tree = {
 			}
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.171 days = 1 }
 			custom_effect_tooltip = parliamentarians_chosen
@@ -1568,6 +1598,7 @@ focus_tree = {
 			has_country_flag = ENG_queen_mary_2
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = ENG_mary_regent.tt
 			#event
@@ -1601,6 +1632,7 @@ focus_tree = {
 			has_country_flag = ENG_queen_elizabeth_2
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			create_country_leader = {
 				name = "Elizabeth Wittelsbach"
@@ -1636,6 +1668,7 @@ focus_tree = {
 			has_country_flag = ENG_king_rupert
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			create_country_leader = {
 				name = "Rupert Wittelsbach"
@@ -1660,6 +1693,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			#country_event = { id = RoF_ENG.148 days = 2 }
 			if = {
@@ -1704,6 +1738,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
 				limit = { has_completed_focus = ENG_prince_rupert }
@@ -1749,11 +1784,11 @@ focus_tree = {
 			has_global_flag = ENG_civil_war_done
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			SWE = {
 				country_event = {
 					id = RoF_SWE.50
-					hours = 2
 				}
 			}
 		}
@@ -1775,6 +1810,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_ENG.135 days = 1 }
 			custom_effect_tooltip = ENG_arrest_cromwell.tt
@@ -1795,6 +1831,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_ideas = ENG_emergency_measures
 		}
@@ -1813,6 +1850,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_ENG.140 days = 1 }
 		}
@@ -1849,6 +1887,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_ENG.110 days = 1 }
 		}
@@ -1868,6 +1907,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			custom_effect_tooltip = ENG_boyle.tt
 			hidden_effect = {
@@ -1909,11 +1949,12 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ENG_rules_SCO.tt
 				OR = {
-					ENG = { owns_state = 415 owns_state = 416 }
+					AND = { owns_state = 415 owns_state = 416 }
 					SCO = { is_subject_of = ENG }
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.145 days = 1 }
 		}
@@ -1939,6 +1980,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.147 days = 2 }
 			custom_effect_tooltip = royalists_chosen
@@ -1970,6 +2012,7 @@ focus_tree = {
 				has_completed_focus = ENG_hide_cromwell
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_completed_focus = ENG_hide_cromwell } }
@@ -1999,7 +2042,7 @@ focus_tree = {
 				custom_trigger_tooltip = {
 					tooltip = ENG_not_rules_IRE.tt
 					OR = {
-						ENG = {
+						AND = {
 							owns_state = 97
 							owns_state = 120
 							owns_state = 121
@@ -2019,7 +2062,7 @@ focus_tree = {
 				tooltip = ENG_rules_IRE.tt
 				has_completed_focus = ENG_crush_the_rebels
 				OR = {
-					ENG = {
+					AND = {
 						owns_state = 97
 						owns_state = 120
 						owns_state = 121
@@ -2029,6 +2072,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			if = {
 				limit = {
@@ -2064,7 +2108,7 @@ focus_tree = {
 				custom_trigger_tooltip = {
 					tooltip = ENG_not_rules_IRE.tt
 					OR = {
-						ENG = {
+						AND = {
 							owns_state = 97
 							owns_state = 120
 							owns_state = 121
@@ -2084,7 +2128,7 @@ focus_tree = {
 				tooltip = ENG_rules_IRE.tt
 				has_completed_focus = ENG_constitutional_reforms
 				OR = {
-					ENG = {
+					AND = {
 						owns_state = 97
 						owns_state = 120
 						owns_state = 121
@@ -2094,6 +2138,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			country_event = { id = RoF_ENG.161 days = 1 }
 		}
@@ -2113,7 +2158,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ENG_rules_IRE.tt
 				OR = {
-					ENG = {
+					AND = {
 						owns_state = 97
 						owns_state = 120
 						owns_state = 121
@@ -2125,7 +2170,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ENG_rules_SCO.tt
 				OR = {
-					ENG = { owns_state = 415 owns_state = 416 }
+					AND = { owns_state = 415 owns_state = 416 }
 					SCO = { is_subject_of = ENG }
 				}
 			}
@@ -2134,6 +2179,7 @@ focus_tree = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.160 days = 2 }
 		}
@@ -2155,40 +2201,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.180 days = 7 }
 			if = {
 				limit = {
-					NOT = {
-						custom_trigger_tooltip = {
-							tooltip = ENG_not_rules_SCO.tt
-							OR = {
-								ENG = { owns_state = 415 owns_state = 416 }
-								SCO = { is_subject_of = ENG }
-							}
-						}
+					SCO = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
 					}
 				}
-				country_event = { id = RoF_ENG.181 hours = 12 }
+				country_event = { id = RoF_ENG.181 }
 			}
 			if = {
 				limit = {
-					NOT = {
-						custom_trigger_tooltip = {
-							tooltip = ENG_not_rules_IRE.tt
-							OR = {
-								ENG = {
-									owns_state = 97
-									owns_state = 120
-									owns_state = 121
-									owns_state = 122
-								}
-								IRE = { is_subject_of = ENG }
-							}
-						}
+					IRE = {
+						exists = yes
+						NOT = { is_subject_of = ROOT }
 					}
 				}
-				country_event = { id = RoF_ENG.182 hours = 12 }
+				country_event = { id = RoF_ENG.182 }
 			}
 		}
 		#available_if_capitulated = yes
@@ -2211,6 +2243,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.185 days = 2 }
 			add_ideas = ENG_house_of_lords_idea
@@ -2235,6 +2268,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = { id = RoF_ENG.186 days = 2 }
 			add_ideas = ENG_democracy_idea
@@ -2256,6 +2290,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
 			add_ideas = NUS_uptime_knowledge_idea
@@ -2275,6 +2310,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = ENG_trident
 		}
@@ -2293,6 +2329,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
 		}

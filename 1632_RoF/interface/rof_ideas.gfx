@@ -142,6 +142,14 @@ spriteTypes = {
 		name = "GFX_idea_RUS_filaret"
 		texturefile = "gfx/interface/ideas/idea_RUS_filaret.dds"
 	}	
+	spriteType = {
+		name = "GFX_idea_TUR_kosem_sultan"
+		texturefile = "gfx/interface/ideas/idea_TUR_kosem_sultan.dds"
+	}
+	SpriteType = { 
+		name = "GFX_idea_BAV_defender_catholicism"
+		texturefile = "gfx/interface/ideas/idea_BAV_defender_catholicism.dds"
+	}
 	##COC IDEAS
 	spriteType = {
 		name = "GFX_idea_CoC_good_4"
@@ -235,6 +243,10 @@ spriteTypes = {
 		name = "GFX_idea_generic_backroom_backstabber_western_european_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
 	#east europe
 	spriteType = {
 		name = "GFX_idea_radical_advisor_eastern_european_2d"
@@ -292,6 +304,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_backroom_backstabber_eastern_european_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
 	}
 	#commonwealth
 	spriteType = {
@@ -351,6 +367,10 @@ spriteTypes = {
 		name = "GFX_idea_generic_backroom_backstabber_commonwealth_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
 	#asian
 	spriteType = {
 		name = "GFX_idea_radical_advisor_asia_2d"
@@ -408,6 +428,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_backroom_backstabber_asia_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_asia_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
 	}
 	#south american
 	spriteType = {
@@ -467,6 +491,10 @@ spriteTypes = {
 		name = "GFX_idea_generic_backroom_backstabber_southamerican_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_southamerican_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
 	#arabic
 	spriteType = {
 		name = "GFX_idea_radical_advisor_middle_eastern_2d"
@@ -524,6 +552,43 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_backroom_backstabber_middle_eastern_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	#Turkish
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_1"
+		texturefile = "gfx/interface/ideas/turkish_vizier_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_2"
+		texturefile = "gfx/interface/ideas/turkish_vizier_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_3"
+		texturefile = "gfx/interface/ideas/turkish_vizier_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_4"
+		texturefile = "gfx/interface/ideas/turkish_vizier_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_5"
+		texturefile = "gfx/interface/ideas/turkish_vizier_5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_6"
+		texturefile = "gfx/interface/ideas/turkish_vizier_6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_7"
+		texturefile = "gfx/interface/ideas/turkish_vizier_7.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_imam_1"
+		texturefile = "gfx/interface/ideas/turkish_imam_1.dds"
 	}
 	#African
 	spriteType = {
@@ -583,4 +648,9 @@ spriteTypes = {
 		name = "GFX_idea_generic_backroom_backstabber_african_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_generic_ambassador_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	
 }

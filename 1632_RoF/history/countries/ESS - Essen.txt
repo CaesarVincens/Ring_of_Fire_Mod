@@ -1,0 +1,46 @@
+﻿capital = 1
+
+oob = "ESS_OOB"
+
+# Starting tech
+set_technology = {
+infrastructure_tech_base = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+    ruling_party = constitutionalist
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = yes
+}
+set_popularities = {
+	absolutist = 14
+	constitutionalist = 60
+	liberal = 13
+	radical = 0
+	neutrality = 13
+}
+set_country_flag = religion_secular
+add_ideas = {
+	civilian_focus_eco
+	secularism
+}
+set_stability = 0.5
+create_country_leader = {
+    name = "Louis de Geer"
+    desc = "POLITICS_ALFRED_VON ROON_DESC"
+    picture = "gfx/leaders/Germanies/Portrait_Essen_Louis_de_Geer.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_republic
+    traits = {
+    }
+}

@@ -8,19 +8,19 @@ state={
 	}
 
 	history={
-		owner = TUR
+		owner = EGY
 		victory_points = {
 			4068 3 
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = NUB
-		add_core_of = TUR
+		#add_core_of = NUB
+		add_core_of = EGY
 
 	}
 

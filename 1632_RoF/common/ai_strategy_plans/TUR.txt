@@ -1,0 +1,112 @@
+TUR_canon_focuses = {
+	name = "Ottoman Canon Plan"
+	desc = ""
+	enable = {
+		original_tag = TUR
+		OR = {
+			is_historical_focus_on = yes
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		TUR_end_regency
+		TUR_dismiss_husrev_pasha
+		TUR_secure_beylerbey_support
+		TUR_secure_bureaucratic_backing
+		TUR_assume_throne #5
+		TUR_deny_grantville
+		TUR_combat_corruption
+		TUR_military_reforms
+		TUR_military_advances
+		TUR_industrial_advances #10
+		TUR_secret_projects
+		TUR_new_doctrines
+		TUR_continue_janissary_reforms
+		TUR_support_kadizadelis
+		TUR_aerial_research #15
+		TUR_dirrigibles
+		TUR_arms_production
+		TUR_special_weapons_focus
+		TUR_new_corps
+		TUR_baghdad_campaign #20
+		TUR_revan_feignt
+		TUR_civilian_production
+		TUR_industrialize_anatolia
+		TUR_industrialize_greece
+		TUR_attack_austria
+		TUR_siege_vienna
+	}
+	research = {
+		cat_mass_assault = 100
+	}
+}
+
+TUR_research = {
+	name = "Ottoman research"
+	desc = ""
+	enable = {
+		original_tag = TUR
+		is_historical_focus_on = yes
+	}
+	abort = {
+		has_tech = rocket_artillery2
+		has_tech = light_airship_tech_2
+		has_tech = early_steam_tank
+	}
+	research = {
+		air_research = 10
+		balloon_tech = 500
+		rocketry = 500
+		steam_tank_tech = 500
+	}
+}
+
+TUR_special_weapons = {
+	name = "Special Weapons"
+	desc = "Turkish Surprise"
+	enable = {
+		original_tag = TUR
+		OR = {
+			has_tech = rocket_artillery
+			has_tech = early_steam_tank
+			has_tech = light_airship_tech_1
+		}
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = rocket_artillery_equipment
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = steam_tank_equipment
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_airship_equipment
+		value = 10
+	}
+}
+
+TUR_baghdad = {
+	name = "take baghdad"
+	desc = ""
+	enable = {
+		original_tag = TUR
+	}
+	abort = {
+		OR = {
+			owns_state = 372
+			has_war_with = PER
+			PER = { exists = no }
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = PER
+		value = 200
+	}
+}

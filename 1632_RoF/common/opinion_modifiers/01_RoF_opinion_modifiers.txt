@@ -27,4 +27,10 @@ opinion_modifiers = {
 	kept_harlingen = {
 		value = -20
 	}
+	sold_rifles = {
+		value = 20
+	}
+	did_not_sell_rifles = {
+		value = -20
+	}
 }

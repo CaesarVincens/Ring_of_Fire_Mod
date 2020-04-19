@@ -180,7 +180,7 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_first_plane_medium"
+		name = "GFX_single_plane_tech_0_medium"
 		texturefile = "gfx/interface/technologies/early_fighter.dds"
 	}
 
@@ -215,7 +215,22 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_first_airship_medium"
+		name = "GFX_light_airship_tech_1_medium"
+		texturefile = "gfx/interface/technologies/light_airship_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_light_airship_tech_2_medium"
+		texturefile = "gfx/interface/technologies/light_airship_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_light_airship_tech_3_medium"
+		texturefile = "gfx/interface/technologies/light_airship_equipment_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_airship_tech_1_medium"
 		texturefile = "gfx/interface/technologies/airship_equipment_1.dds"
 	}
 
@@ -326,6 +341,10 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_engine_factory_tech_0_medium"
+		texturefile = "gfx/interface/technologies/engine_factory_tech.dds"
+	}
+	spriteType = {
+		name = "GFX_engine_factory_tech_1_medium"
 		texturefile = "gfx/interface/technologies/engine_factory_tech.dds"
 	}
 

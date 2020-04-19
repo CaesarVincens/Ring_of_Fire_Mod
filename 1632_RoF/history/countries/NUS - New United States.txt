@@ -35,6 +35,8 @@ set_variable = { var = quorum_high value = 58 }
 set_convoys = 0
 add_manpower = 500
 
+news_event = { id = RoF_NUS.1 days = 40 }
+
 set_politics = {
     ruling_party = liberal
     last_election = "1631.1.1"
@@ -53,6 +55,8 @@ set_country_flag = religion_secular
 add_ideas = {
 	people_out_of_time
 	freedom_of_religion
+	early_industrial
+	free_trade
 }
 set_stability = 0.5
 create_country_leader = {

@@ -99,11 +99,40 @@ country_event = {
 			release = SIB
 			every_owned_state = { add_core_of = USR }
 			set_country_flag = directorate_russia_focus_tree_flag
+			set_country_flag = directorate_russia
 			load_focus_tree = directorate_russia_focus_tree
+			transfer_units_fraction = {
+				target = SIB
+				size = 0.2 # Fallback in case one of the ratios below are not stipulated
+				stockpile_ratio = 0.2
+				army_ratio = 0.2
+				navy_ratio = 0.1
+				air_ratio = 0.0
+				keep_unit_leaders = {
+					
+				}
+				keep_unit_leaders_trigger = {
+					
+				}
+			}
+			transfer_units_fraction = {
+				target = USR
+				size = 0.5 # Fallback in case one of the ratios below are not stipulated
+				stockpile_ratio = 0.5
+				army_ratio = 0.4
+				navy_ratio = 0.0
+				air_ratio = 0.8
+				keep_unit_leaders = {
+					
+				}
+				keep_unit_leaders_trigger = {
+					
+				}
+			}
 			USR = {
 				set_cosmetic_tag = Free_Russia 
 				inherit_technology = RUS
-				load_oob = USR_OOB
+				#load_oob = USR_OOB
 				every_owned_state = { add_core_of = RUS }
 				RUS = { split_equipment_half = yes }
 				set_country_flag = united_states_russia_focus_tree_flag
@@ -380,6 +409,7 @@ country_event = {
 			target = USR
 			type = civil_war
 		}
+		add_civil_war_target = USR
 	}
 }
 #Russian Civil War

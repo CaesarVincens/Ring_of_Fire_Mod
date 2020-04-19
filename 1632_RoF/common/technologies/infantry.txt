@@ -320,6 +320,36 @@ technologies = {
 		#}
 	}
 
+	TUR_cavalry_tech = {
+		research_cost = 1
+		allow = { always = no }
+		cavalry = {
+			max_organisation = 5
+			breakthrough = 0.1
+			maximum_speed = 0.1
+		}
+	}
+	TUR_infantry_tech = {
+		research_cost = 1
+		allow = { always = no }
+		line_infantry = {
+			max_organisation = 5
+			soft_attack = 0.1
+		}
+	}
+	TUR_special_weapons_tech = {
+		research_cost = 1
+		allow = { always = no }
+		rocket_artillery = {
+			max_organisation = 5
+			soft_attack = 0.1
+		}
+		rocket_artillery_brigade = {
+			max_organisation = 5
+			soft_attack = 0.1
+		}
+	}
+	#Special Forces
 	jaegers = {
 		enable_subunits = {
 			jaeger_brigade

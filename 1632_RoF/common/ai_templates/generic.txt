@@ -1,5 +1,9 @@
 armor_generic = {
 
+	blocked_for = {
+		TUR
+	}
+
 	roles = {
 		armor
 	}
@@ -529,6 +533,9 @@ infantry_generic = {
 	roles = {
 		infantry
 	}
+	blocked_for = {
+		TUR
+	}
 	upgrade_prio = {
 		factor = 2
 		modifier = {
@@ -783,6 +790,7 @@ infantry_generic = {
 			cavalry
 			#merc_cavalry
 			jaeger_brigade
+			rocket_artillery
 		}
 	}
 }

@@ -81,25 +81,25 @@ units = {
 	}
 	division = {
 		name = "2. Tercio Detachment"
-		location = 564
+		location = 11431
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "3. Tercio Detachment"
-		location = 564
+		location = 9547
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "4. Tercio Detachment"
-		location = 564
+		location = 9524
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "5. Tercio Detachment"
-		location = 564
+		location = 6549
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}

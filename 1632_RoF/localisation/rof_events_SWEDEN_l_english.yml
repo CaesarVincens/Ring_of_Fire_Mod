@@ -18,9 +18,9 @@
  RoF_SWE.120.t:0 "The Congress of Copenhagen"
  RoF_SWE.120.d:0 "With the immediate conflict concluded, it is time to make peace. We have demands of Denmark, although there are some concessions we are willing to make in order to smooth the process."
  RoF_SWE.120.a:0 "The Kalmar Union must be restored"
- SWE_kalmar.tt:0 "A marriage between our houses will cement the union.\n"
+ SWE_kalmar.tt:0 "A marriage between our houses will cement the union."
  RoF_SWE.120.b:0 "And Scania and Gotland must be returned to us as well. Osel too"
- SWE_scania_gotland.tt:0 "§H[DEN.GetName]§! may not accept the demand for Scania and Gotland.\n"
+ SWE_scania_gotland.tt:0 "§H[DEN.GetName]§! may not accept the demand for Scania and Gotland."
  RoF_SWE.121.t:0 "The Congress of Copenhagen - Denmark Responds"
  RoF_SWE.121.da:0 "[DEN.GetLeader] has agreed to restore the Union of Kalmar with [SWE.GetLeader] as High King. To confirm the union, Princess Kristina will be betrothed to his son, Prince Ulrik."
  RoF_SWE.121.db:0 "[DEN.GetLeader] has refused to cede any territory, but he agreed to restore the Union of Kalmar with [SWE.GetLeader] as High King, provided that Princess Kristina will be betrothed to his son, Prince Ulrik."
@@ -99,8 +99,8 @@
  RoF_DEN.120.t:0 "Attack on Wismar"
  RoF_DEN.120.d:0 "Our part in the war against Sweden and the New US is to seize the German Baltic ports and prevent Gustavus Adolphus from shipping over more supplies from Sweden. Because of the sudden nature of this war, their defences shouldn't be too built up yet."
  RoF_DEN.120.a:0 "This will be over by Christmas"
- RoF_DEN.130.t:0 "Siege of Luebeck"
- RoF_DEN.130.d:0 "Luebeck is the largest port on the German Baltic coast and also the closest to Denmark. We will close off the port and invest the city to prevent the movement of the Swedish supplies and troops.
+ RoF_DEN.130.t:0 "Siege of Lübeck"
+ RoF_DEN.130.d:0 "Lübeck is the largest port on the German Baltic coast and also the closest to Denmark. We will close off the port and invest the city to prevent the movement of the Swedish supplies and troops.
  RoF_DEN.130.a:0 "We will squeeze them dry."
  RoF_DEN.150.t:0 "The Congress of Copenhagen - USE Demands"
  RoF_DEN.150.da:0 "[USE.GetNameDef] has demanded the province of Holstein be granted to them."

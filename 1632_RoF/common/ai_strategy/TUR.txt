@@ -1,0 +1,457 @@
+# Written by Henrik "Groogy" Hansson
+# Modified by Daniel "Da9L" Sjöberg
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+TUR_unit_production = {
+	enable = {
+		original_tag = TUR
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 60
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 4
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20
+	}
+	
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 80
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = 10
+	}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 20
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 30
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 35
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 25
+	}
+
+}
+
+TUR_industrialize = {
+	enable = {
+		original_tag = TUR
+	}
+	abort = {
+		date > 1634.1.1
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -40
+	}
+}
+
+TUR_pp_spend_amount = {
+	enable = {
+		original_tag = TUR
+	}
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 100
+	}
+}
+
+coup_pp_spend_amount = {
+	enable = {
+		original_tag = TUR
+		has_active_mission = TUR_coup_threat
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 1000
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 1000
+	}
+}
+
+TUR_area_priority = {
+	enable = {
+		original_tag = TUR
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavian_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = netherlands_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = britain_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = french_region
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = iberian_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = polish_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = polish_region
+		value = 50
+	}
+	ai_strategy = {
+		type = area_priority
+		id = russian_region
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 75
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 10
+	}
+
+}
+
+TUR_template_design = {
+	enable = {
+		original_tag = TUR
+		date < 1633.1.1
+	}
+	abort = { 
+		date > 1633.1.1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = apc
+		value = -10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = gas_tank
+		value = -50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = steam_tank
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = spear_infantry
+		value = -20
+	}
+	ai_strategy = {
+		type = template_prio
+		id = tercio_infantry
+		value = -60
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = line_infantry
+		value = 20
+	}
+}
+
+TUR_template_design = {
+	enable = {
+		original_tag = TUR
+		date > 1635.1.1				
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = apc
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = gas_tank
+		value = 20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = steam_tank
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -50
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = spear_infantry
+		value = -20
+	}
+	ai_strategy = {
+		type = template_prio
+		id = tercio_infantry
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = line_infantry
+		value = 80
+	}
+}
+
+TUR_save_admiral_pp_for_later = {
+	enable = {
+		original_tag = TUR
+		has_war = no
+		threat < 0.3
+		has_political_power < 200		
+	}
+	abort = {
+		OR = {
+			has_war = yes	
+			threat > 0.3
+			has_political_power > 200
+		}
+	}
+
+	ai_strategy = { # dont burn PP on admirals (can still get free ones)
+		type = pp_spend_priority
+		id = admiral
+		value = -100
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = general
+		value = -100
+	}
+}
+
+TUR_ignore_minors = {
+	reversed = yes
+	enable = {
+		NOT = { has_war_with = TUR original_tag = TUR }
+	}
+	enable_reverse = {
+		original_tag = TUR
+	}
+	targets = {
+		YEM SHA NUB ETH CIR GEO
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ignore
+		id = "TUR"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "TUR"
+		value = -200
+	}
+}
+
+TUR_air_force = {
+	enable = {
+		original_tag = TUR
+		num_of_military_factories > 30
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 30
+	}
+}
+
+TUR_alone = {
+	enable = {
+		NOT = { original_tag = TUR }
+		TUR = { has_war = yes }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = TUR
+		value = -200
+	}
+}

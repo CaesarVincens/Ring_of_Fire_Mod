@@ -12,7 +12,7 @@ transport = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 10
 
 
 set_politics = {
@@ -37,7 +37,7 @@ set_stability = 0.5
 create_country_leader = {
     name = "Canibek Giray"
     desc = "POLITICS_BUKEI_KUTEBAR ULI_DESC"
-    picture = "gfx/leaders/leader_unknown.dds"
+    picture = "gfx/leaders/TUR/Portrait_Crimea_Khan.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy
     traits = {

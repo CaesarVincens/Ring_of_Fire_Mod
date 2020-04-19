@@ -9,6 +9,49 @@ USA_congress = {
 
 NUS_major_decisions = {
 
+	NUS_ottoman_overtures = {
+		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = NUS_ottoman_overtures_flag }
+			OR = {
+				has_completed_focus = NUS_constitutional_convention
+				has_completed_focus = NUS_martial_law
+				date > 1632.3.1
+			}
+		}
+		available = {
+			NOT = { has_war_with = TUR }
+		}
+		targets = { TUR }
+		target_trigger = {
+			FROM = {
+				tag = TUR
+			}
+		}
+		highlight_states = {
+			FROM = {
+				capital_scope = {
+					is_capital = yes
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = NUS_ottoman_overtures_flag
+			custom_effect_tooltip = NUS_ottoman_overtures.tt
+			#hidden_effect = {
+				TUR = {
+					country_event = {
+						id = RoF_TUR.110
+						days = 30
+					}
+				}
+			#}
+		}
+		cost = 15
+		ai_will_do = {
+			base = 10
+		}		
+	}
 	NUS_protect_Jena_mission = {
 		icon = generic_prepare_civil_war 
 		
@@ -43,6 +86,7 @@ NUS_major_decisions = {
 		}
 		available = {
 			has_active_mission = NUS_protect_Jena_mission
+			num_divisions > 2
 		}
 		complete_effect = {
 			#set_country_flag = NUS_start_CoC
@@ -83,7 +127,7 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_FRA
 			custom_effect_tooltip = NUS_embassy_FRA.tt
 		}
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			base = 10
 		}		
@@ -118,7 +162,7 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_ENG
 			custom_effect_tooltip = NUS_embassy_ENG.tt
 		}
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			base = 10
 		}		
@@ -176,7 +220,7 @@ NUS_major_decisions = {
 			set_country_flag = NUS_embassy_VEN
 			custom_effect_tooltip = NUS_embassy_VEN.tt
 		}
-		cost = 25
+		cost = 15
 		ai_will_do = {
 			base = 10
 		}		
@@ -269,15 +313,25 @@ NUS_major_decisions = {
 				add_state_core = 247
 			}
 		}
-		cost = 50
+		cost = 10
 		ai_will_do = {
-			base = 100
+			base = 1000
 		}
 	}
 	
 }
 
 NUS_minor_decisions = {
+	NUS_test = {
+		visible = {
+			always = no
+		}
+		complete_effect = {
+			add_to_faction = AUS
+			add_to_faction = SWE
+			add_to_faction = BOH
+		}
+	}
 	NUS_coc_speeches = {
 		icon = GFX_decision_generic_nationalism
 		visible = {
@@ -291,7 +345,7 @@ NUS_minor_decisions = {
 		target_root_trigger = {
 			has_completed_focus = NUS_expand_committees
 		}
-		targets = { ALS ANS BAD BRA BRE BRS COL FRK HES LUB MAG MEM MKL MNZ NAS NUR OLD PAL POM RAV SAX SXW TRI ULM VER WRT WRZ }
+		target_array = german_tags
 		target_trigger = {
 			FROM = {
 				has_country_flag = CoC_present
@@ -309,7 +363,6 @@ NUS_minor_decisions = {
 			is_controlled_by = FROM
 		}
 		days_re_enable = 60
-		fixed_random_seed = no
 		complete_effect = {
 			random_list ={
 				67 = {

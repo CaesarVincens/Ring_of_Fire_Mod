@@ -1,8 +1,52 @@
 has_unsupported_economic_law = {
-	always = no
+	if = {
+		limit = { has_idea = civilian_focus_eco }
+		has_idea = civilian_focus_eco
+		has_war_support < 0.15
+		else_if = {
+			limit = { has_idea = balanced_eco }
+			has_idea = balanced_eco
+			has_war_support < 0.3
+		}
+		else_if = {
+			limit = { has_idea = military_focus_eco }
+			has_idea = military_focus_eco
+			has_war_support < 0.5
+			has_war = no
+			NOT = {
+				has_government = absolutist
+				has_government = radical
+			}
+		}
+		else_if = {
+			limit = { has_idea = full_military_eco }
+			has_idea = full_military_eco
+			has_war = no
+			OR = {
+				has_war_support < 0.75
+				has_stability < 0.5
+			}
+		}
+		else = {
+			always = no
+		}
+	}
 }
 has_unsupported_manpower_law = {
-	always = no
+	if = {
+		limit = { has_idea = levy_army }
+		has_idea = levy_army
+		has_war_support < 0.1
+		else_if = {
+			limit = { has_idea = drafted_army }
+			has_idea = drafted_army
+			has_war = no
+			NOT = { has_government = absolutist }
+		}
+		else = {
+			always = no
+		}
+	}
 }
 has_excessive_army_size = { #not currently used due to AI concerns
 	always = no

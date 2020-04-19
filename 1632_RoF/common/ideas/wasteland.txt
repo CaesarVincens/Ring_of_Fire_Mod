@@ -28,7 +28,6 @@ ideas = {
 				consumer_goods_factor = 1
 				MONTHLY_POPULATION = 0
 				training_time_army_factor = 1000000
-				consumer_goods_factor = 1
 				local_resources_factor = -1
 				max_command_power = -100
 				improve_relations_maintain_cost_factor = 100

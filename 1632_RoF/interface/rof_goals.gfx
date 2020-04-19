@@ -39,5 +39,10 @@ spriteTypes = {
 		name = "GFX_focus_don_fernando"
 		texturefile = "gfx/interface/goals/focus_don_fernando.dds"
 	}
+
+	SpriteType = { 
+		name = "GFX_focus_murad"
+		texturefile = "gfx/interface/goals/focus_murad.dds"
+	}
 	
 }

@@ -188,7 +188,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.110.a
-		SWE = { country_event = { id = RoF_SWE.130 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.130 hours = 1 } }
 		set_country_flag = BRA_joins_SWE
 		effect_tooltip = {
 			SWE = { add_to_faction = BRA }
@@ -206,7 +206,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.110.b
-		SWE = { country_event = { id = RoF_SWE.131 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.131 hours = 1 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -248,7 +248,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.120.b
-		SWE = { country_event = { id = RoF_SWE.136 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.136 hours = 1 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -301,7 +301,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.130.a
-		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.140 hours = 1 } }
 		set_country_flag = SAX_joins_SWE
 		effect_tooltip = {
 			SWE = { add_to_faction = SAX }
@@ -320,7 +320,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.130.b
-		SWE = { country_event = { id = RoF_SWE.141 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.141 hours = 1 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -355,7 +355,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.131.a
-		AUS = { country_event = { id = RoF_AUS.125 hours = 12 } }
+		AUS = { country_event = { id = RoF_AUS.125 hours = 1 } }
 		set_country_flag = SAX_joins_AUS
 		effect_tooltip = {
 			AUS = { add_to_faction = SAX }
@@ -374,7 +374,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.131.b
-		AUS = { country_event = { id = RoF_AUS.126 hours = 12 } }
+		AUS = { country_event = { id = RoF_AUS.126 hours = 1 } }
 		effect_tooltip = {
 			AUS = {
 				create_wargoal = {
@@ -409,7 +409,7 @@ country_event = {
 	#sweden
 	option = {
 		name = RoF_German.132.a
-		SWE = { country_event = { id = RoF_SWE.140 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.140 hours = 1 } }
 		set_country_flag = SAX_joins_SWE
 		effect_tooltip = {
 			SWE = { add_to_faction = SAX }
@@ -429,7 +429,7 @@ country_event = {
 	#austria
 	option = {
 		name = RoF_German.132.b
-		AUS = { country_event = { id = RoF_AUS.125 hours = 12 } }
+		AUS = { country_event = { id = RoF_AUS.125 hours = 1 } }
 		set_country_flag = SAX_joins_AUS
 		effect_tooltip = {
 			AUS = { add_to_faction = SAX }
@@ -449,7 +449,7 @@ country_event = {
 	#neutral
 	option = {
 		name = RoF_German.132.c
-		SWE = { country_event = { id = RoF_SWE.141 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.141 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -458,7 +458,7 @@ country_event = {
 				}
 			}
 		}
-		AUS = { country_event = { id = RoF_AUS.126 hours = 12 } }
+		AUS = { country_event = { id = RoF_AUS.126 } }
 		effect_tooltip = {
 			AUS = {
 				create_wargoal = {
@@ -493,7 +493,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.140.a
-		SWE = { country_event = { id = RoF_SWE.148 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.148 } }
 		effect_tooltip = {
 			SWE = { add_to_faction = ROOT }
 			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
@@ -510,7 +510,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.140.b
-		SWE = { country_event = { id = RoF_SWE.149 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.149 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -552,7 +552,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_German.141.b
-		SWE = { country_event = { id = RoF_SWE.149 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.149 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -582,7 +582,7 @@ country_event = {
 	#Swedes occupy Baden-Baden
 	option = {
 		name = RoF_German.141.a
-		SWE = { country_event = { id = RoF_SWE.148 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.148 } }
 		effect_tooltip = {
 			SWE = { add_to_faction = ROOT }
 			add_opinion_modifier = { target = AUS modifier = tyw_enemies }
@@ -604,7 +604,7 @@ country_event = {
 	#Baden-Baden remains free
 	option = {
 		name = RoF_German.141.b
-		SWE = { country_event = { id = RoF_SWE.149 hours = 12 } }
+		SWE = { country_event = { id = RoF_SWE.149 } }
 		effect_tooltip = {
 			SWE = {
 				create_wargoal = {
@@ -635,7 +635,7 @@ country_event = {
 	option = {
 		name = RoF_German.150.a
 		hidden_effect = {
-			POL = { country_event = { id = RoF_German.151 hours = 12 } }
+			POL = { country_event = { id = RoF_German.151 } }
 		}
 		add_political_power = -50
 		effect_tooltip = {

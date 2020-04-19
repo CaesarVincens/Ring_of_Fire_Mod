@@ -65,6 +65,56 @@ defined_text = {
 }
 
 defined_text = {
+	name = TUR_new_corps_script
+	text = {
+		trigger = {
+			has_completed_focus = TUR_cavalry_focus
+		}
+		localization_key = TUR_new_corps_sipahi
+	}
+	text = {
+		trigger = {
+			has_completed_focus = TUR_infantry_focus
+		}
+		localization_key = TUR_new_corps_janissary
+	}
+	text = {
+		trigger = {
+			has_completed_focus = TUR_special_weapons_focus
+		}
+		localization_key = TUR_new_corps_rocket
+	}
+	text = {
+		localization_key = TUR_new_corps_base
+	}
+}
+
+defined_text = {
+	name = TUR_new_corps_desc_script
+	text = {
+		trigger = {
+			has_completed_focus = TUR_cavalry_focus
+		}
+		localization_key = TUR_new_corps_desc_sipahi
+	}
+	text = {
+		trigger = {
+			has_completed_focus = TUR_infantry_focus
+		}
+		localization_key = TUR_new_corps_desc_janissary
+	}
+	text = {
+		trigger = {
+			has_completed_focus = TUR_special_weapons_focus
+		}
+		localization_key = TUR_new_corps_desc_rocket
+	}
+	text = {
+		localization_key = TUR_new_corps_desc_base
+	}
+}
+
+defined_text = {
     name = show_hide_religion_ideas
     
     text = {

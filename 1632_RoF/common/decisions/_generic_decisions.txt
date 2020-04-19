@@ -190,8 +190,91 @@ political_actions = {
 	}
 }
 
-economy_decisions = {
-
+RoF_economy_decisions = {
+	advance_industrial_mod_agr_TEMP = {
+		available = {
+			has_idea = primitive_agrarian
+			if = {
+				limit = { mod_agr_focus_block = no }
+				mod_agr_focus_block = yes
+				else = {
+					num_of_factories > 20
+					has_tech = infrastructure_tech_1
+					has_tech = electronic_mechanical_engineering
+					has_tech = construction1
+				}
+			}
+		}
+		visible = {
+			is_ai = yes
+		}
+		cost = 75
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = primitive_agrarian
+				add_idea = modern_agrarian
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	advance_industrial_early_ind_TEMP = {
+		available = {
+			has_idea = modern_agrarian
+			if = {
+				limit = { early_ind_focus_block = no }
+				early_ind_focus_block = yes
+				else = {
+					num_of_factories > 40
+					has_tech = infrastructure_tech_2
+					has_tech = mechanical_computing
+					has_tech = construction2
+				}
+			}
+		}
+		visible = {
+			is_ai = yes
+		}
+		cost = 75
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = modern_agrarian
+				add_idea = early_industrial
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	advance_industrial_fully_ind_TEMP = {
+		available = {
+			has_idea = early_industrial
+			if = {
+				limit = { fully_ind_focus_block = no }
+				fully_ind_focus_block = yes
+				else = {
+					num_of_factories > 60
+					has_tech = infrastructure_tech_3
+					has_tech = computing_machine
+					has_tech = construction3
+				}
+			}
+		}
+		visible = {
+			is_ai = yes
+		}
+		cost = 75
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = early_industrial
+				add_idea = fully_industrial
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
 }
 
 propaganda_efforts = {
@@ -541,13 +624,128 @@ war_measures = {
 		}
 	}
 
+    war_bonds = {
+
+    	icon = generic_industry
+
+    	allowed = {
+            always = yes
+        }
+
+        available = {
+            has_war = yes
+            OR = {
+                AND = {
+                    has_government = liberal
+                    has_war_support > 0.79
+                }
+                AND = {
+                    has_government = radical
+                    has_war_support > 0.79
+                }
+                AND = {
+                    has_government = constitutionalist
+                    has_war_support > 0.79
+                }
+                AND = {
+                    has_government = absolutist
+                    OR = {
+                        has_war_support > 0.89
+                        surrender_progress > 0
+                    }
+                }
+                AND = {
+                    has_government = neutrality
+                    has_war_support > 0.84
+                    has_stability > 0.7
+                }
+            }
+        }
+        visible = {
+            has_war = yes
+        }
+
+        fire_only_once = no
+
+		days_remove = 180
+
+		cost = GER_war_bonds_var?50
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power < 100
+				factor = 0 #use as pp dump
+			}
+		}
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_var
+						value = 50
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = GER_war_bonds_var
+					value = 50
+				}
+			}
+			add_to_variable = {
+				var = GER_war_bonds_var
+				value = 25
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_var
+						value = 100
+						compare = greater_than_or_equals
+					}
+					check_variable = {
+						var = GER_war_bonds_war_support_var
+						value = -0.025
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = GER_war_bonds_war_support_var
+					value = -0.025
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_war_support_var
+						value = -0.025
+						compare = less_than_or_equals
+					}
+				}
+				add_to_variable = {
+					var = GER_war_bonds_war_support_var
+					value = -0.025
+				}
+				add_war_support = GER_war_bonds_war_support_var
+			}
+		}
+    }
 }
 
 foreign_politics = {
 	object_to_attaches = {
 
 		allowed = {
-            always = yes
+            has_dlc = "Waking the Tiger"
         }
 
         cost = 50

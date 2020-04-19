@@ -1,0 +1,16 @@
+﻿start_equipment_factor = 0
+
+units = {				
+	fleet = {			
+		name = "Hired Man-o-War"
+		naval_base = 8621
+		task_force = {
+			name = "Man-o-War"
+			location = 8621 # Hamburg?
+
+			ship = { name = "Man-o-War" definition = man_of_war equipment = { man_of_war_1 = { amount = 1 owner = WNA creator = WNA } } }
+		}
+	}
+}
+
+

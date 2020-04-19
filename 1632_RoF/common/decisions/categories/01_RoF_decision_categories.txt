@@ -6,7 +6,6 @@ RoF_test_decisions = {
 
 RoF_economy_decisions = {
 	icon = generic_economy
-
 }
 RoF_ai_decisions = {
 	
@@ -40,6 +39,14 @@ RoF_CoC_Border_Clashes = {
 	}
 }
 
+RoF_temp_ships = {
+	visible = {
+		any_owned_state = {
+			is_coastal = yes
+		}
+		always = no
+	}
+}
 absolutist_on_the_rise = {
 	allowed = {
 		always = yes

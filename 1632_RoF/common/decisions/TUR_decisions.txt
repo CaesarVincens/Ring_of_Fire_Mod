@@ -1,0 +1,402 @@
+TUR_major_decisions = {
+	TUR_test = {
+		visible = {
+			always = no
+		}
+		complete_effect = {
+			every_neighbor_country = {
+				TUR = {
+					annex_country = {
+						target = prev
+					}
+				}
+			}
+		}
+	}
+	TUR_offer_PER_peace = {
+		visible = {
+			has_country_flag = PER_rejected_peace
+			has_war_with = PER
+		}
+		complete_effect = {
+			PER = {
+				country_event = {
+					id = RoF_TUR.165
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+TUR_coup_category = {
+	TUR_coup_threat = {
+		priority = 100
+		icon = revolt
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = TUR_end_regency
+		}
+		available = {
+			#OR = {
+				#has_completed_focus = TUR_assume_throne
+				custom_trigger_tooltip = {
+					tooltip = TUR_coup_threat_vars
+					OR = {
+						check_variable = { TUR_coup_threat_var < 0.01 }
+						AND = {
+							check_variable = { beylerbey_threat < 0.01 }
+							check_variable = { bureau_threat < 0.01 }
+							check_variable = { janissary_threat < 0.01 }
+						}
+					}
+				}
+			#}
+		}
+		days_mission_timeout = 360
+		is_good = no
+		timeout_effect = {
+			if = {
+				limit = {
+					has_government = absolutist
+				}
+				hidden_effect = {
+					create_country_leader = {
+						name = "Ibrahim Osmanoglu"
+						picture = "gfx/leaders/TUR/Portrait_Ottoman_Ibrahim.dds"
+						ideology = absolute_monarchy_neutral
+					}
+				}
+				start_civil_war = {
+					ideology = neutrality
+					ruling_party = absolutist
+					size = TUR_coup_threat_var
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_government = absolutist }
+				}
+				hidden_effect = {
+					create_country_leader = {
+						name = "Ibrahim Osmanoglu"
+						picture = "gfx/leaders/TUR/Portrait_Ottoman_Ibrahim.dds"
+						ideology = absolute_monarchy
+					}
+				}
+				start_civil_war = {
+					ideology = absolutist
+					size = TUR_coup_threat_var
+				}
+			}
+		}
+		complete_effect = {
+			add_stability = 0.1
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+	}
+	TUR_placate_janissaries = {
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = TUR_end_regency
+			has_active_mission = TUR_coup_threat
+			check_variable = { janissary_threat > 0 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TUR_janissary_threat
+				check_variable = { janissary_threat > 0 }
+			}
+		}
+		cost = var:TUR_placate_janissaries_cost?10
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+			custom_effect_tooltip = TUR_janissaries_coup_better
+			add_to_variable = {
+				janissary_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+			if = {
+				limit = {
+					has_variable = TUR_placate_janissaries_cost
+				}
+				add_to_variable = {
+					TUR_placate_janissaries_cost = 5
+				}
+				else = {
+					set_variable = {
+						TUR_placate_janissaries_cost = 15
+					}
+				}
+			}
+		}
+		days_remove = 70
+		modifier = {
+			consumer_goods_factor = 0.05
+			war_support_factor = 0.05
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = {
+					var = days_mission_timeout@TUR_coup_threat
+					value = 120
+					compare = less_than_or_equals
+				}
+			}
+		}
+	}
+	TUR_placate_beylerbeys = {
+		icon = generic_political_discourse
+		visible = {
+			has_completed_focus = TUR_end_regency
+			has_active_mission = TUR_coup_threat
+			check_variable = { beylerbey_threat > 0 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TUR_beylerbey_threat
+				check_variable = { beylerbey_threat > 0 }
+			}
+		}
+		cost = var:TUR_placate_beylerbeys_cost?10
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+			custom_effect_tooltip = TUR_beylerbeys_coup_better
+			add_to_variable = {
+				beylerbey_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+			if = {
+				limit = {
+					has_variable = TUR_placate_beylerbeys_cost
+				}
+				add_to_variable = {
+					TUR_placate_beylerbeys_cost = 5
+				}
+				else = {
+					set_variable = {
+						TUR_placate_beylerbeys_cost = 15
+					}
+				}
+			}
+		}
+		days_remove = 70
+		modifier = {
+			consumer_goods_factor = 0.05
+			stability_factor = 0.05
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 5
+				check_variable = {
+					var = days_mission_timeout@TUR_coup_threat
+					value = 120
+					compare = less_than_or_equals
+				}
+			}
+		}
+	}
+}
+
+TUR_combating_corruption_cat = {
+	TUR_ban_coffee = {
+		cost = 25
+		icon = eng_trade_unions_demand
+		fire_only_once = yes
+		days_remove = 180
+		modifier = {
+			stability_factor = -0.1
+			consumer_goods_factor = -0.025
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	TUR_reform_bureaucracy = {
+		cost = 50
+		icon = generic_political_discourse
+		visible = {
+			has_idea = TUR_placated_bureaucrats
+		}
+		days_remove = 180
+		complete_effect = {
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_bureaucracy_coup_worse
+				add_to_variable = { bureau_threat = 0.2 }
+				set_TUR_coup_threat = yes
+				add_days_mission_timeout = {
+					mission = TUR_coup_threat
+					days = 60
+				}
+			}
+			swap_ideas = {
+				remove_idea = TUR_placated_bureaucrats
+				add_idea = TUR_new_bureaucrats
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_bureaucracy_coup_better
+				subtract_from_variable = { bureau_threat = 0.3 }
+				set_TUR_coup_threat = yes
+			}
+			if = {
+				limit = {
+					has_decision = TUR_reform_bureaucracy
+				}
+				swap_ideas = {
+					remove_idea = TUR_new_bureaucrats
+					add_idea = TUR_loyal_bureaucrats
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = TUR_placated_bureaucrats
+							add_idea = TUR_loyal_bureaucrats
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TUR_new_bureaucrats
+					add_idea = TUR_loyal_bureaucrats
+				}
+			}
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 10
+				check_variable = {
+					days_mission_timeout@TUR_coup_threat < 180
+				}
+			}
+		}
+	}
+	TUR_rein_in_beylerbeys = {
+		cost = 50
+		icon = oppression
+		visible = {
+			has_idea = TUR_beylerbeys_1b
+		}
+		days_remove = 180
+		complete_effect = {
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_beylerbeys_coup_worse
+				add_to_variable = { beylerbey_threat = 0.2 }
+				set_TUR_coup_threat = yes
+				add_days_mission_timeout = {
+					mission = TUR_coup_threat
+					days = 60
+				}
+			}
+			swap_ideas = {
+				remove_idea = TUR_beylerbeys_1b
+				add_idea = TUR_beylerbeys_2
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_beylerbeys_coup_better
+				subtract_from_variable = { beylerbey_threat = 0.3 }
+				set_TUR_coup_threat = yes
+			}
+			if = {
+				limit = {
+					has_decision = TUR_rein_in_beylerbeys
+				}
+				swap_ideas = {
+					remove_idea = TUR_beylerbeys_2
+					add_idea = TUR_beylerbeys_3
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = TUR_beylerbeys_1b
+							add_idea = TUR_beylerbeys_3
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TUR_beylerbeys_2
+					add_idea = TUR_beylerbeys_3
+				}
+			}
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 10
+				check_variable = {
+					days_mission_timeout@TUR_coup_threat < 180
+				}
+			}
+		}
+	}
+	TUR_begin_reforming_janissaries = {
+		cost = 50
+		icon = generic_army_support
+		visible = {
+			has_idea = TUR_janissaries_1
+		}
+		days_remove = 180
+		complete_effect = {
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_janissaries_coup_worse
+				add_to_variable = { janissary_threat = 0.2 }
+				set_TUR_coup_threat = yes
+				add_days_mission_timeout = {
+					mission = TUR_coup_threat
+					days = 60
+				}
+			}
+			custom_effect_tooltip = TUR_begin_reforming_janissaries_TT
+		}
+		remove_effect = {
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_janissaries_coup_better
+				add_to_variable = { janissary_threat = -0.25 }
+				set_TUR_coup_threat = yes
+			}
+			swap_ideas = {
+				remove_idea = TUR_janissaries_1
+				add_idea = TUR_janissaries_2
+			}
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				add = 15
+				NOT = { has_active_mission = TUR_coup_threat }
+			}
+			modifier = {
+				factor = 10
+				check_variable = {
+					days_mission_timeout@TUR_coup_threat < 180
+				}
+			}
+		}
+	}
+}

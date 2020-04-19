@@ -218,7 +218,7 @@ country_event = {
 		name = RoF_NED.112.a
 		#set_country_flag = accept_demand_@ROOT
 		SPN = {
-			country_event = { id = RoF_NED.113 hours = 1 }
+			country_event = { id = RoF_NED.113 }
 			effect_tooltip = {
 				white_peace = UPS
 				set_autonomy = { target = UPS autonomy_state = autonomy_rof_vassal }	
@@ -290,7 +290,7 @@ country_event = {
 		name = RoF_NED.115.a
 		#set_country_flag = accept_demand_@ROOT
 		SPN = {
-			country_event = { id = RoF_NED.116 hours = 1 }
+			country_event = { id = RoF_NED.116 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		ai_chance = {
@@ -424,7 +424,7 @@ country_event = {
 		name = RoF_NED.140.a
 		#set_country_flag = accept_demand_@ROOT
 		SPN = {
-			country_event = { id = RoF_NED.141 hours = 1 }
+			country_event = { id = RoF_NED.141 }
 			effect_tooltip = {
 				annex_country = {
 					target = UPS
@@ -510,7 +510,7 @@ country_event = {
 		trigger = { country_exists = BRG }
 		name = RoF_NED.150.a
 		BRG = {
-			country_event = { id = RoF_NED.151 hours = 1 }
+			country_event = { id = RoF_NED.151 }
 		}
 		ai_chance = {
 			base = 2

@@ -149,7 +149,6 @@ focus_tree = {
 			KAZ = {
 				country_event = {
 					id = RoF_RUS.128
-					hours = 2
 				}
 			}
 		}

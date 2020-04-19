@@ -15,7 +15,7 @@ prerof_man_of_war = 1
 }
 
 # Research Bonuses
-set_convoys = 0
+set_convoys = 10
 
 BRZ = {
 	set_country_flag = colony_flag

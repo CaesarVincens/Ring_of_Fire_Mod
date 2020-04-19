@@ -86,9 +86,28 @@ leader_traits = {
 		random = no
 		political_power_gain = -0.25
 	}
+	
 	#generic ministers
-	absolutist_minister = {
+	valide_sultan = {
 		random = no
+		stability_factor = 0.1
+		political_power_gain = 0.1
+	}
+	grand_vizier = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.05
+	}
+
+	powerful_vizier = {
+		random = no
+		sprite = 13
+		political_power_gain = -0.05
+		stability_factor = -0.05
+	}
+	
+ 	absolutist_minister = {
+	random = no
 		sprite = 13
 		absolutist_drift = 0.1
 		ai_will_do = {
@@ -131,6 +150,17 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
+	ambassador = {
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.05
+		opinion_gain_monthly_factor = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#aircraft manufacturers
 
 	light_airframe_manufacturer = {
 		random = no

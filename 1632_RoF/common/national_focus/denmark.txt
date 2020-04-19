@@ -38,6 +38,7 @@ focus_tree = {
 		available = {
 			owns_state = 112
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			112 = {
 				add_extra_state_shared_building_slots = 1
@@ -74,6 +75,7 @@ focus_tree = {
 			owns_state = 111
 			owns_state = 662
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			110 = {
 				add_extra_state_shared_building_slots = 1
@@ -115,6 +117,7 @@ focus_tree = {
 			#owns_state = 659
 			owns_state = 656
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			108 = {
 				add_extra_state_shared_building_slots = 1
@@ -157,6 +160,7 @@ focus_tree = {
 			owns_state = 106
 			owns_state = 107
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			104 = {
 				#add_extra_state_shared_building_slots = 1
@@ -213,6 +217,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			navy_experience = 25
 			if = {
@@ -316,6 +321,7 @@ focus_tree = {
 			owns_state = 106
 			owns_state = 111
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			112 = {
 				add_building_construction = {
@@ -388,6 +394,7 @@ focus_tree = {
 		y = 0
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -413,6 +420,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = up_time_knowledge_ideas
 		}
@@ -431,6 +439,7 @@ focus_tree = {
 		y = 2
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -468,6 +477,7 @@ focus_tree = {
 		bypass = {
 			has_country_flag = ostend_member
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_popularity = {
 				ideology = absolutist
@@ -540,10 +550,10 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
 			country_event = {
 				id = RoF_DEN.120
-				hours = 2
 			}
 		}
 		ai_will_do = {
@@ -564,10 +574,15 @@ focus_tree = {
 				owns_state = 242
 			}
 		}
+		bypass = {
+			242 = {
+				is_controlled_by_ROOT_or_ally = yes
+			}
+		}
+		search_filters = { FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
 			country_event = {
 				id = RoF_DEN.130
-				hours = 2
 			}
 		}
 		ai_will_do = {
@@ -577,7 +592,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_subjugate_sweden
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		cost = 10
 		prerequisite = { focus = DEN_invest_lubeck }
 		mutually_exclusive = { focus = DEN_submit_to_sweden }
@@ -595,11 +610,11 @@ focus_tree = {
 			}
 		}
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
 			SWE = {
 				country_event = {
 					id = RoF_SWE.160
-					hours = 2
 				}
 			}
 		}
@@ -625,8 +640,9 @@ focus_tree = {
 			is_subject_of = SWE
 		}
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
-
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 		ai_will_do = {
 			factor = 20
@@ -664,6 +680,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_popularity = {
 				ideology = constitutionalist
@@ -732,6 +749,7 @@ focus_tree = {
 				NOT = { has_war_with = AUS }
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
 			if = {
 				limit = {
@@ -784,6 +802,7 @@ focus_tree = {
 		available = {
 			446 = { is_owned_by = WNA }
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			transfer_state = 446
 			add_resource = {
@@ -818,6 +837,7 @@ focus_tree = {
 				owns_state = 106
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			if = {
 				limit = { owns_state = 104 }
@@ -898,6 +918,7 @@ focus_tree = {
 		bypass = {
 			owns_state = 660
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			ENG = { country_event = { id = RoF_ENG.110 } }
 			effect_tooltip = {
@@ -932,6 +953,7 @@ focus_tree = {
 		available = {
 			owns_state = 660
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			custom_effect_tooltip = DEN_prepare_HBC.tt
 			set_country_flag = DEN_launch_HBC
@@ -957,6 +979,7 @@ focus_tree = {
 			}
 			
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			if = {
 				limit = { 135 = { is_owned_by = WNA } }

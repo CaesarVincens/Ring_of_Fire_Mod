@@ -119,7 +119,7 @@ ideas = {
 			}
 			modifier = {
 				liberal_drift = 0.05
-				enemy_partisan_effect = -0.2
+				resistance_damage_to_garrison = -0.2
 				non_core_manpower = 0.08
 				defensive_war_stability_factor = 0.1
 			}

@@ -161,12 +161,12 @@ country_event = {
 	option = {
 		name = RoF_AUS.101.a
 		effect_tooltip = {
-			country_event = { id = RoF_AUS.102 hours = 12 }
+			country_event = { id = RoF_AUS.102 }
 		}
 		hidden_effect = {
 			random_list = {
-				80 = { country_event = { id = RoF_AUS.102 hours = 12 } set_global_flag = BOH_wins_white_mountain_2 }
-				20 = { country_event = { id = RoF_AUS.103 hours = 12 } }
+				80 = { country_event = { id = RoF_AUS.102 } set_global_flag = BOH_wins_white_mountain_2 }
+				20 = { country_event = { id = RoF_AUS.103 } }
 			}
 		}
 		ai_chance = {
@@ -180,7 +180,7 @@ country_event = {
 	
 	option = {
 		name = RoF_AUS.101.b
-		country_event = { id = RoF_AUS.100 hours = 12 }
+		country_event = { id = RoF_AUS.100 }
 		ai_chance = {
 			factor = 10
 		}
@@ -204,7 +204,7 @@ country_event = {
 	
 	option = {
 		name = RoF_AUS.102.a
-		country_event = { id = RoF_AUS.100 hours = 12 }
+		country_event = { id = RoF_AUS.100 }
 		ai_chance = {
 			factor = 10
 		}
@@ -224,6 +224,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			news_event = { id = RoF_news.0201 days = 1 }
+			set_global_flag = wallenstein_dead
 		}
 	}
 	
@@ -292,14 +293,14 @@ country_event = {
 		}
 		FROM = {
 			set_country_flag = AUS_accepted
-			country_event = { id = RoF_German.102 hours = 12 }
+			country_event = { id = RoF_German.102 }
 		}
 	}
 	option = {
 		name = RoF_AUS.105.b
 		FROM = {
 			set_country_flag = AUS_rejected
-			country_event = { id = RoF_German.102 hours = 12 }
+			country_event = { id = RoF_German.102 }
 		}
 	}
 }
@@ -342,6 +343,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_AUS.1101.a
+		set_country_flag = wallenstein_reinstated
 		create_field_marshal = {
 			name = "Abrecht von Wallenstein"
 			gfx = "GFX_leader_BOH_Wallenstein"
@@ -484,7 +486,6 @@ country_event = {
 				COL = {
 					country_event = {
 						id = RoF_AUS.122
-						hours = 2
 					}
 				}
 			}
@@ -495,7 +496,6 @@ country_event = {
 				MNZ = {
 					country_event = {
 						id = RoF_AUS.122
-						hours = 2
 					}
 				}
 			}
@@ -586,7 +586,6 @@ country_event = {
 				TRI = {
 					country_event = {
 						id = RoF_AUS.124
-						hours = 2
 					}
 				}
 			}
@@ -597,7 +596,6 @@ country_event = {
 				PAL = {
 					country_event = {
 						id = RoF_AUS.124
-						hours = 2
 					}
 				}
 			}
@@ -1146,6 +1144,245 @@ country_event = {
 	#accept Rail
 	option = {
 		name = RoF_AUS.157.a
+	}
+}
+
+#Accords
+country_event = {
+	id = RoF_AUS.160
+	title = RoF_AUS.160.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.160.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = RoF_AUS.160.a
+		BOH = {
+			country_event = {
+				id = RoF_AUS.161
+			}
+		}
+	}
+}
+
+#Accords
+country_event = {
+	id = RoF_AUS.161
+	title = RoF_AUS.161.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.161.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = RoF_AUS.161.a
+		AUS = {
+			effect_tooltip = {
+				remove_state_claim = 37
+				remove_state_claim = 38
+				remove_state_claim = 428
+				remove_state_claim = 429
+				remove_state_claim = 573
+			}
+			country_event = {
+				id = RoF_AUS.162
+			}
+		}
+		set_global_flag = AUS_BOH_peace
+		remove_opinion_modifier = {
+			target = AUS
+			modifier = hates_AUS
+		}
+		give_guarantee = AUS
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name = RoF_AUS.161.b
+		AUS = {
+			country_event = {
+				id = RoF_AUS.163
+			}
+		}
+	}
+}
+
+#accepts
+country_event = {
+	id = RoF_AUS.162
+	title = RoF_AUS.162.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.162.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = RoF_AUS.162.a
+		remove_opinion_modifier = {
+			target = BOH
+			modifier = hates_BOH
+		}
+		give_guarantee = BOH
+		remove_state_claim = 37
+		remove_state_claim = 38
+		remove_state_claim = 428
+		remove_state_claim = 429
+		remove_state_claim = 573
+	}
+}
+
+#Accords
+country_event = {
+	id = RoF_AUS.163
+	title = RoF_AUS.163.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.163.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		name = RoF_AUS.163.a
+	}
+}
+
+#MEVO
+country_event = {
+	id = RoF_AUS.170
+	title = RoF_AUS.170.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.170.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = RoF_AUS.170.a
+		if = {
+			limit = {
+				SWE = { is_ai = no }
+				NUS = { is_ai = yes }
+			}
+			SWE = {
+				country_event = {
+					id = RoF_AUS.171
+				}
+			}
+			else = {
+				NUS = {
+					country_event = {
+						id = RoF_AUS.171
+					}
+				}
+			}
+		}
+	}
+}
+
+#MEVO
+country_event = {
+	id = RoF_AUS.171
+	title = RoF_AUS.171.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.171.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = RoF_AUS.171.a
+		set_faction_name = "MEVO"
+		if = {
+			limit = {
+				tag = NUS
+			}
+			set_faction_leader = yes
+		}
+		add_to_faction = AUS
+		if = {
+			limit = {
+				has_global_flag = AUS_BOH_peace
+			}
+			add_to_faction = BOH
+		}
+		AUS = {
+			country_event = {
+				id = RoF_AUS.172
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_AUS.171.b
+		AUS = {
+			country_event = {
+				id = RoF_AUS.173
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_AUS.172
+	title = RoF_AUS.172.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.172.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = RoF_AUS.172.a
+		FROM = {
+			add_to_faction = AUS
+			add_to_faction = BOH
+		}
+	}
+}
+
+country_event = {
+	id = RoF_AUS.173
+	title = RoF_AUS.173.t
+	picture = GFX_report_event_aus_flag
+	desc = RoF_AUS.173.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = RoF_AUS.173.a
 	}
 }
 

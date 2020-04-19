@@ -33,6 +33,7 @@ set_popularities = {
 set_country_flag = religion_catholic
 add_ideas = {
 	military_focus_eco
+	BAV_defender_catholicism
 }
 set_stability = 0.5
 create_country_leader = {

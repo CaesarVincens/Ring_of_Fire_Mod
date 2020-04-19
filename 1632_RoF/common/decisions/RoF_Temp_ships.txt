@@ -1,0 +1,11 @@
+RoF_temp_ships = {
+	hire_man_o_war = {
+
+	}
+	hire_heavy_frigate = {
+
+	}
+	hire_light_frigate = {
+
+	}
+}

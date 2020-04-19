@@ -15,7 +15,10 @@ focus_tree = {
 	}
 
 	default = no
-
+	initial_show_position = {
+		x = 20
+		y = 0
+	}
 	####################
 	#    ARMY  TREE    #
 	####################
@@ -37,6 +40,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		completion_reward = {
@@ -62,6 +66,7 @@ focus_tree = {
 		available = {
 			has_completed_focus = NUS_welcome_refugees
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			add_ideas = NUS_down_timer_army
 			add_manpower = 5000
@@ -80,6 +85,7 @@ focus_tree = {
 		available = {
 			has_completed_focus = NUS_conscript_refugees
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			add_ideas = NUS_up_timer_army
 		}
@@ -96,6 +102,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = NUS_form_militia_army
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 10
 			add_tech_bonus = {
@@ -117,6 +124,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = NUS_army_reforms
+		search_filters = { FOCUS_FILTER_MILITARY }
 		available = {
 			custom_trigger_tooltip = {
 				OR = {
@@ -154,6 +162,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		bypass = {
 			has_tech = caplock_tech
 		}
@@ -188,6 +197,7 @@ focus_tree = {
 				tooltip = NUS_elbe.tt
 			}
 		}
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 2 category = naval_doctrine }
 			#add_tech_bonus = { bonus = 0.5 uses = 1 category = ironclad_tech }
@@ -217,6 +227,7 @@ focus_tree = {
 		relative_position_id = NUS_brownwater_navy
 		x = 0
 		y = 1
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = ironclad_bonus bonus = 0.5 uses = 1 category = ironclad_tech }
 			add_tech_bonus = { name = timberclad_bonus bonus = 0.5 uses = 1 category = timberclad_tech }
@@ -247,6 +258,7 @@ focus_tree = {
 				48 = { is_owned_and_controlled_by = NUS }
 			}
 		}
+		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = steamship_bonus bonus = 0.5 uses = 2 category = steamship_tech }
 
@@ -323,17 +335,17 @@ focus_tree = {
 		bypass = {
 			owns_state = 168
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_CANON FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
 			if = {
 				limit = { HAM = { owns_state = 168 } }
-				HAM = { country_event = { id = RoF_USE.110 hours = 1 } }
+				HAM = { country_event = { id = RoF_USE.110 } }
 			}
 			else = {
 				168 = {
 					owner = {
 						country_event = {
 							id = RoF_USE.110
-							hours = 1
 						}
 					}
 				}
@@ -363,6 +375,7 @@ focus_tree = {
 			}
 			has_war_with = DEN
 		}
+		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_BALTIC_WAR }
 		bypass = {
 			has_war_with = DEN
 			DEN = { has_capitulated = yes }
@@ -399,6 +412,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = Grantville_National_Library
 		}
@@ -416,6 +430,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -437,12 +452,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = NUS_encourage_reinvention
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_CANON FOCUS_FILTER_AIR }
 		complete_tooltip = {
 			add_tech_bonus = {
 				name = fighter_bonus
 				bonus = 0.5
 				uses = 1
-				technology = first_plane
+				technology = single_plane_tech_0
 				technology = single_plane_tech_1
 			}
 			if = {
@@ -464,7 +480,7 @@ focus_tree = {
 				name = fighter_bonus
 				bonus = 0.5
 				uses = 1
-				technology = first_plane
+				technology = single_plane_tech_0
 				technology = single_plane_tech_1
 			}
 			if = {
@@ -554,6 +570,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
 			random_country = {
 				limit = { owns_state = 258 }
@@ -573,7 +590,7 @@ focus_tree = {
 					}
 				}
 			}
-			country_event = { id = RoF_NUS.170 hours = 1 }
+			country_event = { id = RoF_NUS.170 }
 		}
 		ai_will_do = {
 			factor = 10
@@ -591,6 +608,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR }
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_equip_bonus
@@ -613,6 +631,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = radio_bonus
@@ -646,6 +665,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			add_ideas = NUS_gearing_down_1
 			add_tech_bonus = {
@@ -720,6 +740,7 @@ focus_tree = {
 		available = {
 			num_of_controlled_states > 2
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			random_state = {
 				limit = { has_state_flag = NUS_uptime_techniques_state }
@@ -817,6 +838,7 @@ focus_tree = {
 				add_idea = NUS_gearing_down_3
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			if = {
 				limit = {
@@ -872,6 +894,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			if = {
 				limit = {
@@ -993,6 +1016,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = NUS_introduce_steam_power
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			if = {
 				limit = {
@@ -1132,6 +1156,7 @@ focus_tree = {
 		available = {
 			owns_state = 308
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			add_resource = {
 				type = oil
@@ -1202,6 +1227,7 @@ focus_tree = {
 			owns_state = 308
 			num_of_controlled_states > 2
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			add_resource = {
 				type = steel
@@ -1289,6 +1315,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			add_resource = {
 				type = oil
@@ -1360,6 +1387,7 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_popularity = { ideology = absolutist popularity = 0.05 }
 			hidden_effect = {
@@ -1367,7 +1395,7 @@ focus_tree = {
 				set_country_flag = NUS_fortress_america_flag
 				if = {
 					limit = { date > 1631.6.29 }
-					country_event = { id = RoF_NUS.110 hours = 1 }
+					country_event = { id = RoF_NUS.110 }
 				}
 				if = {
 					limit = { date > 1631.6.28 date < 1631.6.30}
@@ -1410,6 +1438,7 @@ focus_tree = {
 				has_country_flag = NUS_conscript_refugees_flag
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		bypass = {
 			has_country_flag = NUS_conscript_refugees_flag
 		}
@@ -1431,6 +1460,7 @@ focus_tree = {
 		relative_position_id = NUS_conscript_refugees
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			remove_ideas = people_out_of_time
 			add_popularity = { ideology = absolutist popularity = 0.1 }
@@ -1452,6 +1482,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 60
 			add_popularity = { ideology = absolutist popularity = 0.05 }
@@ -1481,6 +1512,7 @@ focus_tree = {
 			579 = { is_owned_by = NUS }
 			580 = { is_owned_by = NUS }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		available = {
 			OR = {
 				has_completed_focus = NUS_martial_law
@@ -1501,12 +1533,12 @@ focus_tree = {
 				limit = {
 					country_exists = SXW
 				}
-				SXW = { country_event = { id = RoF_NUS.1201 hours = 1 } }
+				SXW = { country_event = { id = RoF_NUS.1201 } }
 			}
 			else = {
 				580 = {
 					owner = {
-						country_event = { id = RoF_NUS.1201 hours = 1 }
+						country_event = { id = RoF_NUS.1201 }
 					}
 				}
 			}
@@ -1538,6 +1570,7 @@ focus_tree = {
 		bypass = {
 			247 = { is_owned_by = NUS }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		available = {
 			579 = { is_owned_by = NUS }
 			580 = { is_owned_by = NUS }
@@ -1554,12 +1587,12 @@ focus_tree = {
 				limit = {
 					country_exists = MAG
 				}
-				MAG = { country_event = { id = RoF_NUS.1221 hours = 1 } }
+				MAG = { country_event = { id = RoF_NUS.1221 } }
 			}
 			else = {
 				247 = {
 					owner = {
-						country_event = { id = RoF_NUS.1221 hours = 1 }
+						country_event = { id = RoF_NUS.1221 }
 					}
 				}
 			}
@@ -1587,6 +1620,7 @@ focus_tree = {
 				ratio > 1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			hidden_effect = {
 				412 = { set_state_flag = NUS_sax_inv }
@@ -1596,12 +1630,12 @@ focus_tree = {
 				limit = {
 					country_exists = SAX
 				}
-				SAX = { country_event = { id = RoF_NUS.124 hours = 1 } }
+				SAX = { country_event = { id = RoF_NUS.124 } }
 			}
 			else = {
 				412 = {
 					owner = {
-						country_event = { id = RoF_NUS.124 hours = 1 }
+						country_event = { id = RoF_NUS.124 }
 					}
 				}
 			}
@@ -1633,6 +1667,7 @@ focus_tree = {
 				ratio > 1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			hidden_effect = {
 				461 = { set_state_flag = NUS_franc_inv }
@@ -1643,12 +1678,12 @@ focus_tree = {
 				limit = {
 					country_exists = WRZ
 				}
-				WRZ = { country_event = { id = RoF_NUS.126 hours = 1 } }
+				WRZ = { country_event = { id = RoF_NUS.126 } }
 			}
 			else = {
 				578 = {
 					owner = {
-						country_event = { id = RoF_NUS.126 hours = 1 }
+						country_event = { id = RoF_NUS.126 }
 					}
 				}
 			}
@@ -1681,6 +1716,7 @@ focus_tree = {
 				has_tech = timberclad_first
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			hidden_effect = {
 				406 = { set_state_flag = NUS_elbe_inv }
@@ -1696,13 +1732,13 @@ focus_tree = {
 				}
 				41 = {
 					owner = {
-						country_event = { id = RoF_NUS.128 hours = 1 }
+						country_event = { id = RoF_NUS.128 }
 					}
 				}
 			}
 			406 = {
 				owner = {
-					country_event = { id = RoF_NUS.128 hours = 1 }
+					country_event = { id = RoF_NUS.128 }
 				}
 			}
 		}
@@ -1719,6 +1755,7 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_ideas = new_american_revolution
 			hidden_effect = {
@@ -1726,23 +1763,23 @@ focus_tree = {
 				set_country_flag = NUS_new_american_revolution_flag
 				if = {
 					limit = { date > 1631.6.29 }
-					country_event = { id = RoF_NUS.110 hours = 1 }
+					country_event = { id = RoF_NUS.110 }
 				}
 				if = {
-					limit = { date > 1631.6.28 date < 1631.6.30}
-					country_event = { id = RoF_NUS.110 days = 1}
+					limit = { date > 1631.6.28 date < 1631.6.30 }
+					country_event = { id = RoF_NUS.110 days = 1 }
 				}
 				if = {
-					limit = { date > 1631.6.27 date < 1631.6.29}
-					country_event = { id = RoF_NUS.110 days = 2}
+					limit = { date > 1631.6.27 date < 1631.6.29 }
+					country_event = { id = RoF_NUS.110 days = 2 }
 				}
 				if = {
-					limit = { date > 1631.6.26 date < 1631.6.28}
-					country_event = { id = RoF_NUS.110 days = 3}
+					limit = { date > 1631.6.26 date < 1631.6.28 }
+					country_event = { id = RoF_NUS.110 days = 3 }
 				}
 				if = {
 					limit = { date < 1631.6.27}
-					country_event = { id = RoF_NUS.110 days = 4}
+					country_event = { id = RoF_NUS.110 days = 4 }
 				}
 			}
 		}
@@ -1771,6 +1808,7 @@ focus_tree = {
 		bypass = {
 			has_country_flag = NUS_welcome_refugees_flag
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			effect_tooltip = { add_ideas = refuge_from_the_storm add_manpower = 6000 }
 		}
@@ -1795,6 +1833,7 @@ focus_tree = {
 				has_country_flag = NUS_start_CoC
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			hidden_effect = {
 				set_country_flag = CoC_present
@@ -1839,9 +1878,10 @@ focus_tree = {
 		available = {
 		}
 		select_effect = {
-			country_event = { id = RoF_NUS.130 hours = 1 }
+			country_event = { id = RoF_NUS.130 }
 			set_country_flag = NUS_constitution_convention
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			set_country_flag = NUS_constitutional_convention_flag
 			if = {
@@ -1921,6 +1961,7 @@ focus_tree = {
 			579 = { is_owned_by = NUS }
 			580 = { is_owned_by = NUS }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			set_country_flag = invite_thuringia
 			hidden_effect = {
@@ -1931,12 +1972,12 @@ focus_tree = {
 				limit = {
 					country_exists = SXW
 				}
-				SXW = { country_event = { id = RoF_NUS.120 hours = 1 } }
+				SXW = { country_event = { id = RoF_NUS.120 } }
 			}
 			else = {
 				580 = {
 					owner = {
-						country_event = { id = RoF_NUS.120 hours = 1 }
+						country_event = { id = RoF_NUS.120 }
 					}
 				}
 			}
@@ -2001,7 +2042,7 @@ focus_tree = {
 					}
 				}
 				else = {
-					MAG = { country_event = { id = RoF_NUS.122 hours = 1 } }
+					MAG = { country_event = { id = RoF_NUS.122 } }
 				}
 			}
 		}
@@ -2035,9 +2076,10 @@ focus_tree = {
 		}
 		bypass = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			SWE = {
-				country_event = { id = RoF_SWE.105 hours = 1 }
+				country_event = { id = RoF_SWE.105 }
 			}
 			add_tech_bonus = {
 				name = light_art_bonus
@@ -2079,9 +2121,10 @@ focus_tree = {
 				has_completed_focus = SWE_cpoe
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			SWE = { country_event = { id = RoF_NUS.151 hours = 1 } }
+			SWE = { country_event = { id = RoF_NUS.151 } }
 		}
 		ai_will_do = {
 			factor = 10
@@ -2101,13 +2144,14 @@ focus_tree = {
 		available = {
 			has_global_flag = thirty_years_war_ongoing
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_NUS.160 hours = 1 }
+			country_event = { id = RoF_NUS.160 }
 			if = {
 				limit = {
 					NUR = { is_subject = no }
 				}
-				NUR = { country_event = { id = RoF_NUS.161 hours = 12 } }
+				NUR = { country_event = { id = RoF_NUS.161 } }
 			}
 		}
 		ai_will_do = {
@@ -2134,6 +2178,7 @@ focus_tree = {
 			578 = { is_core_of = NUS }
 			577 = { is_core_of = NUS }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			if = {
 				limit = {
@@ -2189,6 +2234,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION FOCUS_FILTER_BALTIC_WAR }
 		select_effect = {
 			hidden_effect = {
 				add_to_variable = { USE_abs = party_popularity@absolutist }
@@ -2213,7 +2259,7 @@ focus_tree = {
 							NOT = { tag = NUS }
 							NOT = { tag = NUR }
 						}
-						country_event = { id = RoF_USE.101 hours = 6 random = 25 }
+						country_event = { id = RoF_USE.101 random_days = 7 }
 					}
 				}
 				else = {
@@ -2232,13 +2278,13 @@ focus_tree = {
 								}
 							}
 						}
-						country_event = { id = RoF_USE.101 hours = 6 random = 25 }
+						country_event = { id = RoF_USE.101 random_days = 7 }
 					}
 				}
 			}
 		}
 		completion_reward = {
-			country_event = { id = RoF_USE.100 hours = 1 }
+			country_event = { id = RoF_USE.100 }
 		}
 	}
 	focus = {
@@ -2253,8 +2299,9 @@ focus_tree = {
 			has_war = no
 			date > 1634.11.1
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_USE.135 days = 1 }
+			country_event = { id = RoF_USE.135 }
 		}
 	}
 	focus = {
@@ -2271,8 +2318,9 @@ focus_tree = {
 			#has_war = no
 			#date > 1634.11.1
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_USE.136 days = 1 }
+			country_event = { id = RoF_USE.136 }
 		}
 	}
 	focus = {
@@ -2289,8 +2337,9 @@ focus_tree = {
 			#has_war = no
 			#date > 1634.11.1
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = { id = RoF_USE.137 days = 1 }
+			country_event = { id = RoF_USE.137 }
 		}
 	}
 	focus = {
@@ -2305,6 +2354,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION FOCUS_FILTER_BALTIC_WAR }
 		select_effect = {
 			#hidden_effect = {
 				every_country = {
@@ -2314,7 +2364,7 @@ focus_tree = {
 						NOT = { has_war_with = NUS }
 						NOT = { has_civil_war = yes }
 					}
-					country_event = { id = RoF_USE.102 hours = 1 }
+					country_event = { id = RoF_USE.102 }
 				}
 				every_country = {
 					limit = {
@@ -2323,12 +2373,12 @@ focus_tree = {
 						has_war_with = NUS
 						NOT = { has_civil_war = yes }
 					}
-					country_event = { id = RoF_USE.103 hours = 1 }
+					country_event = { id = RoF_USE.103 }
 				}
 			#}
 		}
 		completion_reward = {
-			country_event = { id = RoF_USE.104 hours = 1 }
+			country_event = { id = RoF_USE.104 }
 		}
 	}
 
@@ -2349,8 +2399,9 @@ focus_tree = {
 			set_global_flag = congress_of_copenhagen_begins
 			country_event = { id = RoF_USE.120 days = 7 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_BALTIC_WAR }
 		completion_reward = {
-			country_event = { id = RoF_USE.130 hours = 1 }
+			country_event = { id = RoF_USE.130 }
 		}
 	}
 
@@ -2363,6 +2414,7 @@ focus_tree = {
 		relative_position_id = NUS_congress_of_copenhagen
 		prerequisite = { focus = NUS_congress_of_copenhagen }
 		prerequisite = { focus = NUS_annex_little_germanies }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -2396,6 +2448,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = NUS_organize_country
 		prerequisite = { focus = NUS_organize_country }
+		prerequisite = {
+			focus = NUS_continue_stearns_administration focus = NUS_form_new_administration
+		}
 		will_lead_to_war_with = SAX
 		will_lead_to_war_with = BRA
 		available = {
@@ -2414,6 +2469,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			country_event = {
 				id = RoF_USE.131
@@ -2449,6 +2505,7 @@ focus_tree = {
 				tooltip = NUS_madg.tt
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			hidden_effect = {
 				add_to_variable = { var = CoC_strength value = 5 }
@@ -2478,6 +2535,7 @@ focus_tree = {
 				has_government = absolutist
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			hidden_effect = {
 				add_to_variable = { var = CoC_strength value = 5 }
@@ -2526,6 +2584,7 @@ focus_tree = {
 				has_government = absolutist
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			hidden_effect = {
 				add_to_variable = { var = CoC_strength value = 5 }
@@ -2550,8 +2609,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_USE.140 days = 2 }
+			country_event = { id = RoF_USE.140 }
 		}
 	}
 

@@ -5,13 +5,11 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = RUS
-		}
-		modifier = {
-			add = 2
-			has_country_flag = russia_focus_tree_flag
+			NOT = { has_cosmetic_tag = Directorate_Russia }
 		}
 	}
 	default = no
+	continuous_focus_position = { x = 50 y = 1300 }
 	####################
 	#     AIR TREE     #
 	####################
@@ -43,9 +41,9 @@ focus_tree = {
 		x = 7
 		y = 0
 		cost = 20
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 120
-			
 		}
 		ai_will_do = {
 			factor = 10
@@ -61,6 +59,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_investigate_grantville
+		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = RUS_up_timer_advisor
 		}
@@ -75,6 +74,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		relative_position_id = RUS_investigate_grantville
+		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -92,6 +92,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_dacha
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			add_tech_bonus = {
 				name = ak1_tech_bonus
@@ -120,6 +121,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_gun_shop
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 10
 			add_tech_bonus = {
@@ -141,6 +143,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_war_gaming
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RUS_streltzi_1
@@ -166,6 +169,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_war_gaming
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RUS_boyar_cavalry_1
@@ -191,9 +195,8 @@ focus_tree = {
 		cost = 10
 		relative_position_id = RUS_support_streltzi
 		available = {
-			POL = {
-				owns_state = 387
-			}
+			POL = { owns_state = 387 }
+			has_completed_focus = RUS_war_gaming
 		}
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -207,6 +210,7 @@ focus_tree = {
 			}
 			set_country_flag = RUS_retake_rezhev_flag
 		}
+		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_CANON }
 		complete_tooltip = {
 			custom_effect_tooltip = RUS_retake_rezhev.tt2
 		}
@@ -243,6 +247,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RUS_streltzi_2
@@ -265,6 +270,7 @@ focus_tree = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RUS_boyar_cavalry_2
@@ -288,6 +294,7 @@ focus_tree = {
 				owns_state = 387
 			}
 		}
+		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			create_wargoal = {
 				target = POL
@@ -311,6 +318,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_gun_shop
+		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_CANON }
 		complete_tooltip = {
 			add_tech_bonus = {
 				name = ak3_tech_bonus
@@ -399,6 +407,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_ak3
+		search_filters = { FOCUS_FILTER_MILITARY }
 		complete_tooltip = {
 			add_tech_bonus = {
 				name = artillery_bonus
@@ -494,6 +503,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = RUS_expand_factories_state }
@@ -587,6 +597,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_establish_dacha
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_tech_bonus = {
 				name = infra_bonus
@@ -607,6 +618,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_fresno_scrapers
+		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_tech_bonus
@@ -626,6 +638,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RUS_russian_flight
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_SERFDOM }
 		complete_tooltip = {
 			add_tech_bonus = {
 				name = research_tech_bonus
@@ -698,6 +711,7 @@ focus_tree = {
 		available = {
 			has_tech = infrastructure_tech_1
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = RUS_infrastructure
 			389 = {
@@ -736,12 +750,14 @@ focus_tree = {
 		id = RUS_build_factories
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = RUS_expand_infrastructure }
-		x = 0
+		prerequisite = { focus = RUS_new_monetary_system }
+		x = 1
 		y = 1
 		cost = 10
 		relative_position_id = RUS_expand_infrastructure
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			389 = {
 				add_building_construction = {
@@ -771,6 +787,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						has_idea = modern_agrarian
+						has_country_flag = RUS_build_factories_flag
+					}
+				}
+				swap_ideas = {
+					remove_idea = modern_agrarian
+					add_idea = early_industrial
+				}
+			}
+			set_country_flag = RUS_build_factories_flag
 		}
 	}
 
@@ -780,7 +809,7 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = RUS_new_ideas }
 		prerequisite = { focus = RUS_build_factories }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RUS_build_factories
 		cost = 10
@@ -793,6 +822,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = RUS_radio_network_state }
@@ -803,7 +833,7 @@ focus_tree = {
 				}
 			}
 			add_tech_bonus = {
-				name = radar_bonus
+				name = radar_tech_bonus
 				bonus = 0.5
 				uses = 1
 				category = radar_tech
@@ -875,7 +905,7 @@ focus_tree = {
 				set_state_flag = RUS_radio_network_state
 			}
 			add_tech_bonus = {
-				name = radar_bonus
+				name = radar_tech_bonus
 				bonus = 0.5
 				uses = 1
 				category = radar_tech
@@ -910,6 +940,7 @@ focus_tree = {
 		available = {
 			has_tech = aerial_research_tech
 		}
+		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
 			396 = {
 				add_building_construction = {
@@ -937,8 +968,9 @@ focus_tree = {
 		cost = 5
 		relative_position_id = RUS_dirrigible_designs
 		available = {
-			has_tech = first_airship
+			has_tech = airship_tech_1
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 60
 			add_war_support = 0.05
@@ -971,6 +1003,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
+		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_SERFDOM }
 		available = {
 			has_idea = RUS_slow_fever
 		}
@@ -1056,6 +1089,7 @@ focus_tree = {
 				}				
 			}
 		}
+		search_filters = { FOCUS_FILTER_SERFDOM }
 		complete_tooltip = {
 			if = {
 				limit = { has_country_flag = new_money_serfdom_1 }
@@ -1109,13 +1143,14 @@ focus_tree = {
 		id = RUS_siberian_expansion
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = RUS_build_factories }
-		prerequisite = { focus = RUS_new_monetary_system }
+		#prerequisite = { focus = RUS_new_monetary_system }
 		x = 0
 		y = 2
 		cost = 20
 		relative_position_id = RUS_new_monetary_system
 		available = {
-			OR = {
+			count_triggers = {
+				amount = 3
 				owns_state = 215
 				owns_state = 393
 				owns_state = 398
@@ -1128,6 +1163,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SERFDOM }
 		complete_tooltip = {
 			every_owned_state = {
 				limit = {
@@ -1242,6 +1278,7 @@ focus_tree = {
 		available = {
 			has_country_flag = crisis_in_kremlin
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_popularity = {
 				ideology = absolutist
@@ -1269,6 +1306,7 @@ focus_tree = {
 				}				
 			}
 		}
+		search_filters = { FOCUS_FILTER_SERFDOM }
 		completion_reward = {
 			add_ideas = {
 				RUS_new_serfdom
@@ -1287,10 +1325,10 @@ focus_tree = {
 		relative_position_id = RUS_launch_czarina_evdokia
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = {
 				id = RoF_RUS.100
-				hours = 2
 			}
 			custom_effect_tooltip = load_new_focus_tree_TT
 		}

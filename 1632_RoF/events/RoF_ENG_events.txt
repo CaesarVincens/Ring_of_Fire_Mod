@@ -36,7 +36,7 @@ country_event = {
 	title = RoF_ENG.110.t
 	picture = GFX_report_event_den_flag
 	desc = RoF_ENG.110.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -73,7 +73,7 @@ country_event = {
 	title = RoF_ENG.111.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.111.d
-	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -150,7 +150,7 @@ country_event = {
 	title = RoF_ENG.120.t
 	picture = GFX_report_event_fra_flag
 	desc = RoF_ENG.120.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -183,7 +183,7 @@ country_event = {
 	title = RoF_ENG.130.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.130.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -210,7 +210,7 @@ country_event = {
 	title = RoF_ENG.131.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.131.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -234,7 +234,7 @@ country_event = {
 		trigger = { has_completed_focus = ENG_hide_cromwell }
 		text = RoF_ENG.135.db
 	}
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -326,7 +326,7 @@ country_event = {
 	title = RoF_ENG.140.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.140.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -344,7 +344,7 @@ country_event = {
 	title = RoF_ENG.145.t
 	picture = GFX_report_event_sco_flag
 	desc = RoF_ENG.145.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -372,7 +372,7 @@ country_event = {
 	title = RoF_ENG.147.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.148.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -404,7 +404,7 @@ country_event = {
 					original_tag = ENG
 					has_government = constitutionalist
 				}
-				load_oob = "SCO_Civil_War"
+				load_oob = "ENL_Civil_War"
 				set_equipment_fraction = 0.5
 				set_stability = 0.9
 				set_war_support = 0.8
@@ -425,6 +425,7 @@ country_event = {
 					traits = {
 					}
 				}
+				set_cosmetic_tag = ENL_civil_war
 			}
 			load_oob = "ENG_Civil_War"
 			set_equipment_fraction = 0.5
@@ -436,13 +437,6 @@ country_event = {
 				popularity = 0.8
 			}
 			set_cosmetic_tag = ENG_civil_war
-			random_other_country = {
-				limit = {
-					original_tag = ENG
-					has_government = constitutionalist
-				}
-				set_cosmetic_tag = SCO_civil_war
-			}
 		}
 		ai_chance = {
 			factor = 10
@@ -456,7 +450,7 @@ country_event = {
 	title = RoF_ENG.148.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.148.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -484,7 +478,7 @@ country_event = {
 	title = RoF_ENG.149.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.149.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -526,8 +520,9 @@ country_event = {
 					ideology = neutrality
 					popularity = 0.25
 				}
+				set_cosmetic_tag = ENG_civil_war
 			}
-			load_oob = "SCO_Civil_War"
+			load_oob = "ENL_Civil_War"
 			set_equipment_fraction = 0.5
 			set_stability = 0.9
 			set_war_support = 0.8
@@ -558,14 +553,7 @@ country_event = {
 				ideology = absolutist
 				popularity = -1
 			}
-			set_cosmetic_tag = SCO_civil_war
-			random_other_country = {
-				limit = {
-					original_tag = ENG
-					has_government = absolutist
-				}
-				set_cosmetic_tag = ENG_civil_war
-			}
+			set_cosmetic_tag = ENL_civil_war
 		}
 		ai_chance = {
 			factor = 0
@@ -606,6 +594,8 @@ country_event = {
 	option = {
 		name = RoF_ENG.150.b
 		add_political_power = -100
+		add_stability = -0.2
+		add_war_support = -0.2
 		ai_chance = {
 			factor = 1
 		}
@@ -692,6 +682,8 @@ country_event = {
 	option = {
 		name = RoF_ENG.150.b
 		add_political_power = -100
+		add_stability = -0.2
+		add_war_support = -0.2
 		ai_chance = {
 			factor = 1
 		}
@@ -742,14 +734,14 @@ country_event = {
 			autonomy_state = autonomy_rof_union
 			freedom_level = 0.2
 		}
-		SCO = { inherit_technology = ROOT }
-		if = {
-			limit = {
-				SCO = {
+		SCO = {
+			inherit_technology = ROOT
+			if = {
+				limit = {
 					NOT = { has_country_flag = crown_union_flag }
 				}
+				set_country_flag = crown_union_flag
 			}
-			SCO = { set_country_flag = crown_union_flag }
 		}
 		if = {
 			limit = {
@@ -829,7 +821,7 @@ country_event = {
 	title = RoF_ENG.157.t
 	desc = RoF_ENG.157.d
 	picture = GFX_report_event_sco_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -904,7 +896,7 @@ country_event = {
 		text = RoF_ENG.160.db
 	}
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -944,7 +936,7 @@ country_event = {
 	title = RoF_ENG.161.t
 	desc = RoF_ENG.161.d
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -985,7 +977,7 @@ country_event = {
 		text = RoF_ENG.162.db
 	}
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -997,7 +989,7 @@ country_event = {
 			has_country_flag = ENG_IRE_concessions
 		}
 		name = RoF_ENG.162.a
-		ENG = { set_country_flag = IRE_approve_concessions country_event = { id = RoF_ENG.163 days = 1 } }
+		FROM = { set_country_flag = IRE_approve_concessions country_event = { id = RoF_ENG.163 days = 1 } }
 		custom_effect_tooltip = GAME_OVER_TT
 		ai_chance = {
 			factor = 10
@@ -1008,7 +1000,7 @@ country_event = {
 			has_country_flag = ENG_IRE_concessions
 		}
 		name = RoF_ENG.162.b
-		ENG = { set_country_flag = IRE_reject_concessions country_event = { id = RoF_ENG.163 days = 1 } }
+		FROM = { set_country_flag = IRE_reject_concessions country_event = { id = RoF_ENG.163 days = 1 } }
 		ai_chance = {
 			factor = 10
 		}
@@ -1018,7 +1010,7 @@ country_event = {
 			has_country_flag = ENG_IRE_autonomy
 		}
 		name = RoF_ENG.162.c
-		ENG = { set_country_flag = IRE_approve_autonomy country_event = { id = RoF_ENG.163 days = 1 } }
+		FROM = { set_country_flag = IRE_approve_autonomy country_event = { id = RoF_ENG.163 days = 1 } }
 		ai_chance = {
 			factor = 10
 		}
@@ -1028,7 +1020,7 @@ country_event = {
 			has_country_flag = ENG_IRE_autonomy
 		}
 		name = RoF_ENG.162.do
-		ENG = { set_country_flag = IRE_reject_autonomy country_event = { id = RoF_ENG.163 days = 1 } }
+		FROM = { set_country_flag = IRE_reject_autonomy country_event = { id = RoF_ENG.163 days = 1 } }
 		ai_chance = {
 			factor = 5
 		}
@@ -1063,7 +1055,7 @@ country_event = {
 		}
 		text = RoF_ENG.163.de
 	}	picture = GFX_report_event_ire_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1128,7 +1120,7 @@ country_event = {
 	title = RoF_ENG.170.t
 	desc = RoF_ENG.170.d
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1137,14 +1129,14 @@ country_event = {
 
 	option = { #rupert
 		name = RoF_ENG.170.a
-			add_ideas = ENG_elizabeth_second_idea
+		add_ideas = ENG_elizabeth_second_idea
 		ai_chance = {
 			factor = 10
 		}
 	}
 	option = { #mary
 		name = RoF_ENG.170.b
-			add_ideas = ENG_mary_second_idea
+		add_ideas = ENG_mary_second_idea
 		ai_chance = {
 			factor = 10
 		}
@@ -1157,7 +1149,7 @@ country_event = {
 	title = RoF_ENG.171.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_ENG.171.d
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1200,8 +1192,9 @@ country_event = {
 					ideology = neutrality
 					popularity = 0.25
 				}
+				set_cosmetic_tag = ENG_civil_war
 			}
-			load_oob = "SCO_Civil_War"
+			load_oob = "ENL_Civil_War"
 			set_equipment_fraction = 0.5
 			set_stability = 0.9
 			set_war_support = 0.8
@@ -1224,14 +1217,7 @@ country_event = {
 				ideology = absolutist
 				popularity = -1
 			}
-			set_cosmetic_tag = SCO_civil_war
-			random_other_country = {
-				limit = {
-					original_tag = ENG
-					has_government = absolutist
-				}
-				set_cosmetic_tag = ENG_civil_war
-			}
+			set_cosmetic_tag = ENL_civil_war
 		}
 		ai_chance = {
 			factor = 5
@@ -1333,7 +1319,7 @@ country_event = {
 	title = RoF_ENG.180.t
 	desc = RoF_ENG.180.d
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1373,7 +1359,7 @@ country_event = {
 	title = RoF_ENG.181.t
 	desc = RoF_ENG.181.d
 	picture = GFX_report_event_sco_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1423,7 +1409,7 @@ country_event = {
 	title = RoF_ENG.182.t
 	desc = RoF_ENG.182.d
 	picture = GFX_report_event_ire_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1484,7 +1470,7 @@ country_event = {
 		text = RoF_ENG.183.db
 	}
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1496,7 +1482,7 @@ country_event = {
 		trigger = {
 			has_country_flag = ENG_auto_prov
 		}
-		ENG = {
+		FROM = {
 			set_country_flag = accept_auto_prov_@ROOT
 			effect_tooltip = {
 				set_autonomy = {
@@ -1504,6 +1490,9 @@ country_event = {
 					autonomy_state = autonomy_rof_auto_province
 					freedom_level = 0.2
 				}
+			}
+			country_event = {
+				id = RoF_ENG.184 days = 1
 			}
 		}
 		ai_chance = {
@@ -1515,13 +1504,16 @@ country_event = {
 		trigger = {
 			has_country_flag = ENG_auto_prov
 		}
-		ENG = {
+		FROM = {
 			set_country_flag = reject_auto_prov_@ROOT
 			effect_tooltip = {
 				create_wargoal = {
 					target = ROOT
 					type = puppet_wargoal_focus
 				}
+			}
+			country_event = {
+				id = RoF_ENG.184 days = 1
 			}
 		}
 		ai_chance = {
@@ -1537,13 +1529,16 @@ country_event = {
 		every_owned_state = {
 			add_core_of = ENG
 		}
-		ENG = {
+		FROM = {
 			set_country_flag = accept_annex_@ROOT
 			effect_tooltip = {
 				annex_country = {
 					target = ROOT
 					transfer_troops = yes
 				}
+			}
+			country_event = {
+				id = RoF_ENG.184 days = 1
 			}
 		}
 		ai_chance = {
@@ -1555,13 +1550,16 @@ country_event = {
 		trigger = {
 			has_country_flag = ENG_annex
 		}
-		ENG = {
+		FROM = {
 			set_country_flag = reject_annex_@ROOT
 			effect_tooltip = {
 				create_wargoal = {
 					target = ROOT
 					type = annex_everything
 				}
+			}
+			country_event = {
+				id = RoF_ENG.184 days = 1
 			}
 		}
 		ai_chance = {
@@ -1599,7 +1597,7 @@ country_event = {
 		text = RoF_ENG.184.dd
 	}
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1654,7 +1652,7 @@ country_event = {
 	title = RoF_ENG.185.t
 	desc = RoF_ENG.185.d
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -1686,7 +1684,7 @@ country_event = {
 	title = RoF_ENG.186.t
 	desc = RoF_ENG.186.d
 	picture = GFX_report_event_eng_flag
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {

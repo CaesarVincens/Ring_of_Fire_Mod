@@ -56,7 +56,6 @@ guiTypes = {
 				margin = {top =36 bottom = 13}
 				scroll_wheel_factor = 40
 				verticalScrollbar = "right_vertical_slider"
-				vertical_scroll_step = 50
 				smooth_scrolling = yes
 				
 				background = {
@@ -408,14 +407,14 @@ guiTypes = {
 				
 				iconType = {
 					name = "tutorial_glow"
-					position = { x = 20 y = 120 }
+					position = { x = 21 y = 120 }
 					spriteType = "GFX_production_lines_icon_glow"
 					hide = yes
 				}
 				
 				iconType = {
 					name = "tutorial_glow_2"
-					position = { x = 352 y = 120 }
+					position = { x = 349 y = 120 }
 					spriteType = "GFX_production_navy_icon_glow"
 					hide = yes
 				}				

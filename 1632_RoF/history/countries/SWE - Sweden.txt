@@ -17,7 +17,7 @@ transport = 1
 prerof_heavy_frigate = 1
 }
 
-add_named_threat = { threat = 10 name = swedish_intervention }
+#add_named_threat = { threat = 10 name = swedish_intervention }
 
 declare_war_on = {
 	target = AUS
@@ -78,8 +78,8 @@ add_ideas = {
 	SWE_UPS_support
 	SWE_lion_of_the_north
 }
-set_stability = 0.6
-set_war_support = 0.6
+set_stability = 0.7
+set_war_support = 0.8
 create_country_leader = {
     name = "Gustavus II Adolphus Vasa"
     desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"

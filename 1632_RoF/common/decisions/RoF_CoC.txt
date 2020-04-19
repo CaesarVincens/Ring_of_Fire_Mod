@@ -22,18 +22,27 @@ RoF_CoC_decisions = {
 				check_CoC_effects_for_this = yes
 			}
 		}
-		cost = 150
+		cost = 100
 		ai_will_do = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_political_power > 200
+				has_political_power > 100
 				OR = {
 					has_government = absolutist
 					has_government = constitutionalist
 					has_government = neutrality
 				}
 				check_variable = { var = CoC_anger value = 5 compare = greater_than_or_equals }
+			}
+			modifier = {
+				add = 10
+				OR = {
+					has_government = absolutist
+					has_government = constitutionalist
+					has_government = neutrality
+				}
+				check_variable = { var = CoC_strength value = 10 compare = less_than_or_equals }
 			}
 		}
 	}
@@ -54,7 +63,7 @@ RoF_CoC_decisions = {
 				check_CoC_effects_for_this = yes
 			}
 		}
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -91,7 +100,7 @@ RoF_CoC_decisions = {
 				check_CoC_effects_for_this = yes
 			}
 		}
-		cost = 50
+		cost = 25
 		days_re_enable = 30
 		ai_will_do = {
 			factor = 0
@@ -124,18 +133,19 @@ RoF_CoC_decisions = {
 				check_CoC_effects_for_this = yes
 			}
 		}
-		cost = 75
+		cost = 50
 		days_re_enable = 30
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				add = 1
+				add = 10
 				has_political_power > 100
 				OR = {
 					has_government = absolutist
 					has_government = constitutionalist
 					has_government = neutrality
 				}
+				NOT = { has_country_flag = CoC_banned }
 			}
 		}
 	}

@@ -1,0 +1,15 @@
+state={
+	id=673
+	name="STATE_673"
+
+	history = {
+		owner = WAU
+	}
+
+	provinces = {
+		7293 10191 12162 12219 12234
+	}
+	manpower = 10000
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

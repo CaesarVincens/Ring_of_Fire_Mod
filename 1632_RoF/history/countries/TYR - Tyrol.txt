@@ -36,6 +36,10 @@ add_ideas = {
 	balanced_eco
 }
 give_military_access = AUS
+diplomatic_relation = {
+	country = AUS
+	relation = non_aggression_pact
+}
 set_stability = 0.5
 create_country_leader = {
     name = "Claudia de' Medici"

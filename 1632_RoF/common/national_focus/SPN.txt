@@ -48,13 +48,14 @@ focus_tree = {
 				SPR = { has_country_flag = ostend_member }
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 120
 			set_country_flag = SPN_don_fernando_arrives
 			create_corps_commander = {
 				name = "Fernando von Habsburg"
 				gfx = "GFX_leader_SPN_Don_Fernando"
-				traits = {}
+				#traits = {}
 				skill = 3
 				attack_skill = 3
 				defense_skill = 3
@@ -95,6 +96,7 @@ focus_tree = {
 		bypass = {
 			has_war_with = UPS
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			declare_war_on = {
 				target = UPS
@@ -118,6 +120,7 @@ focus_tree = {
 		prerequisite = { focus = SPN_battle_of_dunkirk }
 		cost = 5
 		relative_position_id = SPN_battle_of_dunkirk
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			custom_effect_tooltip = SPN_haarlem_gambit.tt
 			hidden_effect = {
@@ -150,11 +153,11 @@ focus_tree = {
 				NOT = { country_exists = UPS }
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			UPS = {
 				country_event = {
 					id = RoF_NED.112
-					hours = 2
 				}
 			}
 		}
@@ -180,6 +183,7 @@ focus_tree = {
 				controls_state = 555
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			LIE = { country_event = { id = RoF_NED.115 } }
 			EFR = { country_event = { id = RoF_NED.115 } }
@@ -207,6 +211,7 @@ focus_tree = {
 				has_global_flag = congress_of_copenhagen_begins
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			custom_effect_tooltip = focus_effect_WIP_TT
 		}
@@ -228,6 +233,7 @@ focus_tree = {
 				name = "Fernando von Habsburg"
 			}
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			custom_effect_tooltip = focus_effect_WIP_TT
 			#country_event = { id = RoF_NED.115 }
@@ -248,6 +254,7 @@ focus_tree = {
 		available = {
 			has_global_flag = maria_anna_escaped
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_NED.105 }
 		}
@@ -268,6 +275,7 @@ focus_tree = {
 		available = {
 			UPS = { is_subject_of = SPN }
 		}
+		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			hidden_effect = { set_country_flag = take_UPS }
 			UPS = {
@@ -330,7 +338,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = RoF_NED.150
-				hours = 1
 			}
 		}
 		cost = 10

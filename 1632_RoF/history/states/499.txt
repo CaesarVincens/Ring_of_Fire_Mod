@@ -1,16 +1,14 @@
 
-state = {
-	id = 499
-	name = "STATE_499"
-	resources = {
-		steel = 1.000
+state={
+	id=499
+	name="STATE_499"
+	resources={
+		steel=1.000
 	}
 
-	history = {
+	history={
 		owner = TUR
-		victory_points = {
-			11586 8 
-		}
+
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -18,16 +16,14 @@ state = {
 			air_base = 0
 
 		}
-		add_core_of = HUN
-		add_core_of = SER
 		add_core_of = TUR
 
 	}
 
-	provinces = {
-		630 797 3609 3956 3984 6634 9599 11583 11586 
+	provinces={
+		901 1549 1578 1606 1631 1634 2013 3942 4951 6883 7513 9823 10383 10882 11871 12316 12413 12416 12442 
 	}
-	manpower = 809680
-	buildings_max_level_factor = 1.000
-	state_category = large_town
+	manpower=809680
+	buildings_max_level_factor=1.000
+	state_category=large_town
 }

@@ -12,12 +12,21 @@ default = {
 		#female = {
 		#}
 	#}
-	
+
+	operative = {
+		male = {
+			"gfx/leaders/operative_unknown.dds"
+		}
+		female = {
+			"gfx/leaders/operative_unknown.dds"
+		}
+	}
+
 	male = {
 		"gfx/leaders/leader_unknown.dds"
 	}
 	female = {
-		"gfx/leaders/leader_unknown.dds"
+		"gfx/leaders/leader_unknown_female.dds"
 	}
 }
 
@@ -231,6 +240,8 @@ continent = {
 			"gfx/leaders/Africa/Portrait_Africa_Generic_land_1.dds"
 			"gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
 			"gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+			"gfx/leaders/SAF/Portrait_South_Africa_Army_Generic.dds"
+			"gfx/leaders/SAF/Portrait_South_Africa_Army_Generic_2.dds"
 		}
 	}
 	
@@ -246,11 +257,15 @@ continent = {
 		radical = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_1.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic_2.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic.dds"
 			}
 		}
 		liberal = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_2.dds" 
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic_2.dds"		
 			}
 		}
 		absolutist = {
@@ -261,11 +276,17 @@ continent = {
 		constitutionalist = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic_2.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Army_Generic.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Army_Generic_2.dds"
 			}
 		}
 		neutrality = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds" 
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic.dds"
+					"gfx/leaders/SAF/Portrait_South_Africa_Political_Leader_Generic_2.dds"
 			}
 		}
 	}
@@ -354,17 +375,17 @@ continent = {
 		}
 		absolutist = {
 				male = { 
-					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
 			}
 		}
 		constitutionalist = {
 				male = { 
-					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+					"gfx/leaders/TUR/Portrait_Ottoman_generic.dds"
 			}
 		}
 		neutrality = {
 				male = { 
-					"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds" 
+					"gfx/leaders/TUR/Portrait_Ottoman_generic.dds"
 			}
 		}
 	}
