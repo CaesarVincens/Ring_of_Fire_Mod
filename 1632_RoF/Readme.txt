@@ -13,10 +13,24 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
-Alpha 0.7.0 - ?? - ??
+Alpha 0.7.2 - Mar. 23, 2020
+Cleaned up map errors by adding several new states and adjusting a few strategic regions.
+
+Alpha 0.7.1 - Mar. 17, 2020
+Fixed demobilization mission; should be fewer civil wars now
+Fixed position of Russia's continuous focuses to not overlap other focuses
+Some adjustments to the Ottomans focuses, decisions, and AI
+A few adjustments to Ottoman supply areas
+
+Alpha 0.7.0 - Turkish Delight - Mar. 16, 2020
+Updated for HoI4 1.9
 Ottoman focus tree and reworked starting position
+Updates to the Austrian focus tree
+Added filters to most focuses
+New decisions for Ottomans and Austria
 Added North African provinces/vassals for the Ottomans of Egypt, Tripolitania, Tunisia, and Algeria
 Add a new Industrialization mechanic for all countries
+Added back some vanilla decisions and events around crises and subject interactions
 Other minor fixes and improvements
 
 Alpha 0.6.1 - Aug. 14, 2019

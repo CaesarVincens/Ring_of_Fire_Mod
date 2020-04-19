@@ -123,7 +123,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = RoF_RUS.121
-				hours = 2
 			}
 		}
 		ai_will_do = {

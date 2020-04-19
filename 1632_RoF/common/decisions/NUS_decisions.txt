@@ -16,7 +16,7 @@ NUS_major_decisions = {
 			OR = {
 				has_completed_focus = NUS_constitutional_convention
 				has_completed_focus = NUS_martial_law
-				date > 1631.3.1
+				date > 1632.3.1
 			}
 		}
 		available = {
@@ -327,13 +327,9 @@ NUS_minor_decisions = {
 			always = no
 		}
 		complete_effect = {
-			every_neighbor_country = {
-				ROOT = {
-					annex_country = {
-						target = PREV
-					}
-				}
-			}
+			add_to_faction = AUS
+			add_to_faction = SWE
+			add_to_faction = BOH
 		}
 	}
 	NUS_coc_speeches = {
@@ -349,7 +345,7 @@ NUS_minor_decisions = {
 		target_root_trigger = {
 			has_completed_focus = NUS_expand_committees
 		}
-		targets = { ALS ANS BAD BRA BRE BRS COL FRK HES LUB MAG MEM MKL MNZ NAS NUR OLD PAL POM RAV SAX SXW TRI ULM VER WRT WRZ }
+		target_array = german_tags
 		target_trigger = {
 			FROM = {
 				has_country_flag = CoC_present
@@ -367,7 +363,6 @@ NUS_minor_decisions = {
 			is_controlled_by = FROM
 		}
 		days_re_enable = 60
-		fixed_random_seed = no
 		complete_effect = {
 			random_list ={
 				67 = {

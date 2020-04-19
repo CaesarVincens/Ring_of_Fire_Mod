@@ -17,6 +17,26 @@ transport = 1
 # Research Bonuses
 set_convoys = 10
 
+#create_dynamic_country = {
+#	original_tag = RUS
+#	set_country_flag = united_states_of_russia
+#	set_politics = {
+#		ruling_party = constitutionalist
+#	}
+#	set_cosmetic_tag = Free_Russia
+#	set_research_slots = 3
+#	reserve_dynamic_country = yes
+#}
+#create_dynamic_country = {
+#	original_tag = RUS
+#	set_country_flag = siberia_russia
+#	set_politics = {
+#		ruling_party = neutrality
+#	}
+#	set_cosmetic_tag = Siberia
+#	set_research_slots = 2
+#	reserve_dynamic_country = yes
+#}
 
 set_politics = {
     ruling_party = absolutist
@@ -34,7 +54,7 @@ set_popularities = {
 
 set_country_flag = religion_orthodox
 add_ideas = {
-	military_focus_eco
+	#military_focus_eco
 	RUS_filaret
 	state_religion_law
 	RUS_eastern_serfdom_1

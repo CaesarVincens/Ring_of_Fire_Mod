@@ -46,6 +46,7 @@ focus_tree = {
 				NUS = { has_completed_focus = NUS_support_sweden }
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -69,6 +70,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = SWE_improve_industry_state }
@@ -107,6 +109,7 @@ focus_tree = {
 		bypass = {
 
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = SWE_buildup_arms_state }
@@ -146,7 +149,7 @@ focus_tree = {
 		bypass = {
 			has_tech = flintlock_tech
 		}
-
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = srg_tech_bonus
@@ -172,7 +175,7 @@ focus_tree = {
 		bypass = {
 			has_tech = light_artillery_3
 		}
-
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
 				name = light_art_bonus
@@ -207,9 +210,10 @@ focus_tree = {
 		}
 		cost = 5
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 60
-			BRA = { country_event = { id = RoF_German.110 hours = 12 } }
+			BRA = { country_event = { id = RoF_German.110 hours = 1 } }
 		}
 	}
 
@@ -234,8 +238,9 @@ focus_tree = {
 				MKL = { is_not_potential_friend_of_ROOT = yes }
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_SWE.135 hours = 12 }
+			country_event = { id = RoF_SWE.135 hours = 1 }
 		}
 	}
 
@@ -261,6 +266,7 @@ focus_tree = {
 		relative_position_id = SWE_bully_brandenburg
 		cost = 5
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
 			if = {
 				limit = {
@@ -272,9 +278,9 @@ focus_tree = {
 						NOT = { has_completed_focus = AUS_sweet_talk_saxony }
 					}
 				}
-				SAX = { country_event = { id = RoF_German.132 hours = 12 } }
+				SAX = { country_event = { id = RoF_German.132 hours = 1  } }
 				else = {
-					SAX = { country_event = { id = RoF_German.130 hours = 12 } }
+					SAX = { country_event = { id = RoF_German.130 hours = 1 } }
 				}
 			}
 		}
@@ -333,8 +339,9 @@ focus_tree = {
 		relative_position_id = SWE_strong_arm_saxony
 		cost = 15
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 
@@ -404,8 +411,9 @@ focus_tree = {
 		relative_position_id = SWE_proceed_on_prague
 		cost = 10
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 
@@ -437,8 +445,9 @@ focus_tree = {
 		relative_position_id = SWE_proceed_on_prague
 		cost = 10
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 
@@ -470,8 +479,9 @@ focus_tree = {
 		relative_position_id = SWE_secure_silesia
 		cost = 10
 		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			
+			custom_effect_tooltip = focus_effect_WIP_TT
 		}
 	}
 	
@@ -512,9 +522,10 @@ focus_tree = {
 				}
 			}
 		}
-		select_effect = { country_event = { id = RoF_SWE.144 hours = 12 } }
+		select_effect = { country_event = { id = RoF_SWE.144 } }
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_SWE.145 hours = 12 }
+			country_event = { id = RoF_SWE.145 hours = 1 }
 		}
 	}
 
@@ -553,8 +564,9 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_SWE.147 hours = 12 }
+			country_event = { id = RoF_SWE.147 hours = 1 }
 		}
 	}
 	
@@ -588,9 +600,10 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 50
-			country_event = { id = RoF_SWE.146 hours = 12 }
+			country_event = { id = RoF_SWE.146 hours = 1 }
 		}
 	}
 	
@@ -629,9 +642,10 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
 			add_political_power = 50
-			country_event = { id = RoF_SWE.150 hours = 12 }
+			country_event = { id = RoF_SWE.150 hours = 1 }
 		}
 	}
 
@@ -670,6 +684,7 @@ focus_tree = {
 				has_completed_focus = NUS_establish_CPoE
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_NUS.151 hours = 1 }
 		}
@@ -706,6 +721,7 @@ focus_tree = {
 				655 = { is_controlled_by_ROOT_or_ally = yes }
 			}
 		}
+		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = { id = RoF_SWE.161 hours = 1 }
 		}

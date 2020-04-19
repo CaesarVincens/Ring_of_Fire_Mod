@@ -1,4 +1,15 @@
 ideas = {
+	country = {
+		BAV_defender_catholicism = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+	}
 	political_advisor = {
 		BAV_absolutist_advisor = {
 			allowed = {

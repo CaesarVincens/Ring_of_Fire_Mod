@@ -5,14 +5,14 @@ division_template = {
 
 	regiments = {
 		tercio_infantry = { x = 0 y = 0 }
-		tercio_infantry = { x = 0 y = 1 }
-		tercio_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
 		tercio_infantry = { x = 1 y = 0 }
-		tercio_infantry = { x = 1 y = 1 }
-		tercio_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
 		tercio_infantry = { x = 2 y = 0 }
-		tercio_infantry = { x = 2 y = 1 }
-		tercio_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
 	}
 	support = {
 	}
@@ -23,8 +23,8 @@ division_template = {
 
 	regiments = {
 		tercio_infantry = { x = 0 y = 0 }
-		tercio_infantry = { x = 0 y = 1 }
-		tercio_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}

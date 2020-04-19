@@ -78,8 +78,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_infantry_bonus
 			modifier = {
-				army_attack_factor = -0.2
-				army_defence_factor = 0.2
+				breakthrough_factor = -0.2
+				army_core_defence_factor = 0.2
 			}
 		}
 
@@ -90,8 +90,8 @@ ideas = {
 			removal_cost = -1
 			picture = generic_infantry_bonus
 			modifier = {
-				army_attack_factor = -0.1
-				army_defence_factor = 0.1
+				breakthrough_factor = -0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 
@@ -201,7 +201,7 @@ ideas = {
 			modifier = {
 				constitutionalist_drift = 0.1
 				conscription = 0.01
-				enemy_partisan_effect = -0.1
+				resistance_damage_to_garrison = -0.1
 				opinion_gain_monthly_factor = 0.5
 			}
 		}
@@ -341,7 +341,7 @@ ideas = {
 	
 			modifier = {
 				justify_war_goal_time = -0.5
-				take_states_cost_factor = 0.5
+				annex_cost_factor = -0.25
 			}
 		}
 		
@@ -500,6 +500,297 @@ ideas = {
 			modifier = {
 				conscription = 0.025
 				training_time_factor = 0.1
+			}
+		}
+
+		idea_weapons_for_the_resistance = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_war_of_resistance3
+			
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.1 
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25 
+			}
+		}
+
+		### Subject Influence
+
+		hearts_and_minds_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = liberal
+			}
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				liberal_drift = 0.1
+			}
+		}
+
+		republican_ideals_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = constitutionalist
+			}
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				constitutionalist_drift = 0.1
+			}
+		}
+		
+		strengthen_governor_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = absolutist
+			}
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				absolutist_drift = 0.1
+			}
+		}
+		
+		seeding_coc_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = radical
+			}
+			picture = generic_communism_drift_bonus
+			modifier = {
+				radical_drift = 0.1
+			}
+		}
+
+		military_parade = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			picture = generic_pp_unity_bonus
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		political_turmoil = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		### Crisis ideas
+
+		draft_dodging = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = -0.2
+			}
+		}
+
+		draft_dodging_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = -0.3
+			}
+		}
+
+		draft_dodging_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription_factor = -0.4
+			}
+		}
+
+		strikes_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				local_resources_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		strikes_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+				local_resources_factor = -0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+			}
+		}
+		strikes_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.5
+				local_resources_factor = -0.5
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+			}
+		}
+		mutiny_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+			
+			modifier = {
+				army_morale_factor = -0.2
+				training_time_factor = 0.2
+				army_attack_factor = -0.25
+				experience_gain_army = -0.1
+				army_org_factor = -0.1
+			}
+		}
+		mutiny_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+			
+			modifier = {
+				army_morale_factor = -0.35
+				training_time_factor = 0.35
+				army_attack_factor = -0.5
+				experience_gain_army = -0.2
+				army_org_factor = -0.20
+			}
+		}
+		mutiny_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+			
+			modifier = {
+				army_morale_factor = -0.5
+				training_time_factor = 0.5
+				army_attack_factor = -0.75
+				experience_gain_army = -0.3
+				army_org_factor = -0.5
 			}
 		}
 

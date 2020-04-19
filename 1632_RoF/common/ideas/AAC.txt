@@ -1,9 +1,9 @@
 ideas = {
 	political_advisor = {
-		AAC_absolutist_advisor = {
+		ESS_absolutist_advisor = {
 			allowed = {
 				always = no
-				original_tag = AAC
+				original_tag = ESS
 			}
 			traits = { absolutist_minister }
 			on_add = {
@@ -19,10 +19,10 @@ ideas = {
 				factor = 0
 			}
 		}
-		AAC_democratic_advisor = {
+		ESS_democratic_advisor = {
 			allowed = {
 				always = no
-				original_tag = AAC
+				original_tag = ESS
 			}
 			traits = { liberal_minister }
 			on_add = {
@@ -37,10 +37,10 @@ ideas = {
 				factor = 0
 			}
 		}
-		AAC_neutrality_advisor = {
+		ESS_neutrality_advisor = {
 			allowed = {
 				always = no
-				original_tag = AAC
+				original_tag = ESS
 			}
 			traits = { neutrality_minister }
 			picture = neutrality_idea
@@ -57,11 +57,11 @@ ideas = {
 	tank_manufacturer = { 
 		designer = yes
 		
-		AAC_tank_manufacturer = {
+		ESS_tank_manufacturer = {
 			picture = generic_tank_manufacturer_1
 			
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -76,11 +76,11 @@ ideas = {
 	}
 	naval_manufacturer = { 
 		designer = yes
-		AAC_naval_manufacturer = {
+		ESS_naval_manufacturer = {
 			
 			picture = generic_naval_manufacturer_1
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -95,11 +95,11 @@ ideas = {
 	}
 	aircraft_manufacturer = { 
 		designer = yes
-		AAC_light_aircraft_manufacturer = {
+		ESS_light_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_1
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -112,11 +112,11 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 		}
 		
-		AAC_medium_aircraft_manufacturer = {
+		ESS_medium_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_3
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -129,11 +129,11 @@ ideas = {
 			traits = { medium_aircraft_manufacturer }
 		}
 		
-		AAC_heavy_aircraft_manufacturer = {
+		ESS_heavy_aircraft_manufacturer = {
 			picture = generic_air_manufacturer_2
 			
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -146,11 +146,11 @@ ideas = {
 			traits = { heavy_aircraft_manufacturer }
 		}
 		
-		AAC_naval_aircraft_manufacturer = {
+		ESS_naval_aircraft_manufacturer = {
 			
 			picture = generic_naval_manufacturer_2
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -164,11 +164,11 @@ ideas = {
 		}
 	}
 	industrial_concern = {
-		AAC_industrial_concern = {
+		ESS_industrial_concern = {
 			
 			picture = generic_industrial_concern_1
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -180,11 +180,11 @@ ideas = {
 			
 			traits = { industrial_concern }
 		}
-		AAC_electronics_concern = {
+		ESS_electronics_concern = {
 			
 			picture = generic_electronics_concern_1
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -199,11 +199,11 @@ ideas = {
 	}
 	materiel_manufacturer = {
 		designer = yes
-		AAC_motorized_equipment_manufacturer = {
+		ESS_motorized_equipment_manufacturer = {
 			
 			picture = generic_motorized_equipment_manufacturer_3
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -216,11 +216,11 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 		}
 		
-		AAC_infantry_equipment_manufacturer = {
+		ESS_infantry_equipment_manufacturer = {
 			
 			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150
@@ -233,11 +233,11 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 		}
 		
-		AAC_artillery_manufacturer = {
+		ESS_artillery_manufacturer = {
 			
 			picture = generic_artillery_manufacturer_2
 			allowed = {
-				original_tag = AAC
+				original_tag = ESS
 			}
 			
 			cost = 150

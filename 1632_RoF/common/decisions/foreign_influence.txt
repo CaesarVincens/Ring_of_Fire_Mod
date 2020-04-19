@@ -1,0 +1,499 @@
+foreign_influence = {
+
+	# Decisions for masters to push their ideology onto puppets
+	# Note that subject status is not checked due to those only appearing in DLC
+	# (Subjects are puppets with high autonomy)
+	hearts_and_minds_decision = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				liberal < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+
+		visible = {
+			has_government = liberal
+			FROM = {
+				is_subject_of = ROOT
+				liberal < 0.99
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = { add_timed_idea = { idea = hearts_and_minds_idea days = 120 } }
+		}
+
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	seeding_coc_decision = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				radical < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+
+		visible = {
+			has_government = radical
+			FROM = {
+				is_subject_of = ROOT
+				radical < 0.99
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = seeding_coc_idea days = 120 }
+			}
+		}
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	republican_ideals_decision = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				constitutionalist < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+
+		visible = {
+			has_government = constitutionalist
+			FROM = {
+				is_subject_of = ROOT
+				constitutionalist < 0.99
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = republican_ideals_idea days = 120 }
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	strengthen_governor_decision = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				absolutist < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+
+		visible = {
+			has_government = absolutist
+			FROM = {
+				is_subject_of = ROOT
+				absolutist < 0.99
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = strengthen_governor_idea days = 120 }
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	military_parade = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+				neutrality < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+
+		visible = {
+			has_government = neutrality
+			FROM = {
+				is_subject_of = ROOT
+				neutrality < 0.99
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = military_parade days = 120 }
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	police_action = {
+
+		icon = generic_prepare_civil_war
+		
+		cost = 50
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				liberal > 0.6
+			}
+			FROM = {
+				NOT = { has_government = liberal }
+			}
+		}
+
+		visible = {
+			has_government = liberal
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { has_government = liberal }
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = { country_event = { id = mtg_generic.1 } }
+			FROM = {
+				add_timed_idea = {
+					idea = political_turmoil
+					days = 365
+				}
+			}
+			FROM = {
+				set_politics = {
+					ruling_party = liberal
+					elections_allowed = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	fraternal_republic = {
+
+		icon = generic_prepare_civil_war
+		
+		cost = 50
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				radical > 0.6
+			}
+			FROM = {
+				NOT = { has_government = radical }
+			}
+		}
+
+		visible = {
+			has_government = radical
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { has_government = radical }
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = { country_event = { id = mtg_generic.1 } }
+			FROM = {
+				add_timed_idea = {
+					idea = political_turmoil
+					days = 365
+				}
+			}
+			FROM = {
+				set_politics = {
+					ruling_party = radical
+					elections_allowed = no
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ultranationalist_coup = {
+
+		icon = generic_prepare_civil_war
+		
+		cost = 50
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				absolutist > 0.6
+			}
+			FROM = {
+				NOT = { has_government = absolutist }
+			}
+		}
+
+		visible = {
+			has_government = absolutist
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { has_government = absolutist }
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = { country_event = { id = mtg_generic.1 } }
+			FROM = {
+				add_timed_idea = {
+					idea = political_turmoil
+					days = 365
+				}
+			}
+			FROM = {
+				set_politics = {
+					ruling_party = absolutist
+					elections_allowed = no
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	military_dictatorship = {
+
+		icon = generic_prepare_civil_war
+		
+		cost = 50
+		
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+			FROM = {
+				neutrality > 0.6
+			}
+			FROM = {
+				NOT = { has_government = neutrality }
+			}
+		}
+
+		visible = {
+			has_government = neutrality
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { has_government = neutrality }
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = { country_event = { id = mtg_generic.1 } }
+			FROM = {
+				add_timed_idea = {
+					idea = political_turmoil
+					days = 365
+				}
+			}
+			FROM = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	instantiate_collaboration = {
+		icon = generic_prepare_civil_war
+		
+		cost = 0
+
+		available = {
+			has_core_occupation_modifier = {
+				occupied_country_tag = FROM
+				modifier = compliance_80
+			}
+		}
+        visible = {
+			has_rule = can_create_collaboration_government
+			is_available_to_collaboration_government = yes
+			has_core_occupation_modifier = {
+				occupied_country_tag = FROM
+				modifier = compliance_60
+			}
+        }
+
+		complete_effect = {
+			set_temp_variable = { country_to_initiate = FROM }
+			instantiate_collaboration_government = yes
+		}
+		
+		target_non_existing = yes
+		target_array = occupied_countries
+	}
+}

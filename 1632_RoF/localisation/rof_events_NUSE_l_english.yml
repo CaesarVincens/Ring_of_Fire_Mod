@@ -1,4 +1,7 @@
 ﻿l_english:
+ RoF_NUS.1.t:0 "The Fourth of July"
+ RoF_NUS.1.d:0 "Few traditions are as important for remembering our American heritage as the Fourth of July, Independence Day. Although the down-timers don't quite understand the importance yet, they are happy to join the festivities."
+ RoF_NUS.1.a:0 "Happy Fourth!"
  RoF_NUS.100.t:0 "Up-Time Knowledge"
  RoF_NUS.100.d:0 "The up-timers from Grantville are offering knowledge of future technologies for any who wish to research them. Shall we send agents to learn what we can?"
  RoF_NUS.100.a:0 "Of course, what an opportunity!"
@@ -159,8 +162,8 @@
  RoF_USE.103.d:0 "Join the USE?"
  RoF_USE.103.a:0 "We shall"
  RoF_USE.103.b:0 "We shall not"
- RoF_USE.104.t:0 "The Fate of [From.GetNameDef]"
- RoF_USE.104.d:0 "[From.GetLeader] has agreed to become part of our country."
+ RoF_USE.104.t:0 "The Little Germanies"
+ RoF_USE.104.d:0 "We have swept up the remaining states in the defunct HRE into our new country."
  RoF_USE.104.a:0 "Huzzah, let us begin the integration."
  RoF_USE.104.b:0 "On second thought, we don't really want that land."
  RoF_USE.105.t:0 "The Fate of [ROOT.GetNameDef]"

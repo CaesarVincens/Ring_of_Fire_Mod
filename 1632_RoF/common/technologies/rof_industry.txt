@@ -507,7 +507,7 @@ technologies = {
 			modifier = {
 				factor = 10
 				OR = {
-					has_tech = first_plane
+					has_tech = single_plane_tech_0
 					has_tech = aerial_experiements
 				}
 			}
@@ -567,7 +567,7 @@ technologies = {
 			modifier = {
 				factor = 10
 				OR = {
-					has_tech = first_plane
+					has_tech = single_plane_tech_0
 					has_tech = aerial_experiements
 				}
 			}

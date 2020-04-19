@@ -238,7 +238,7 @@ NUS_area_priority = {
 NUS_template_design = {
 	enable = {
 		original_tag = NUS
-		date < 1631.1.1				
+		date < 1633.1.1
 	}
 	abort = { 
 		date > 1633.1.1
@@ -347,3 +347,27 @@ NUS_template_design = {
 	}
 }
 
+USE_annex_germans = {
+	reversed = yes
+	enable_reverse = {
+		focus_progress = {
+			focus = NUS_annex_little_germanies
+			progress > 0
+		}
+	}
+	enable = {
+		is_german_tag = yes
+	}
+	#abort_when_not_enabled = yes
+	target_array = german_tags
+	ai_strategy = {
+		type = prepare_for_war
+		id = "NUS"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "NUS"
+		value = 100
+	}
+}

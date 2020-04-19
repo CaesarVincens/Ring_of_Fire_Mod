@@ -1,4 +1,16 @@
 ideas = {
+	country = {
+		HES_homeland_defence = {
+			allowed = {
+				always = no
+			}
+			picture = YUG_federal_defense_council
+			modifier = {
+				army_core_defence_factor = 0.2
+				conscription = 0.01
+			}
+		}
+	}
 	political_advisor = {
 		HES_absolutist_advisor = {
 			allowed = {

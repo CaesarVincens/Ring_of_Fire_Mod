@@ -27,6 +27,10 @@ on_actions = {
 					give_military_access = PREV
 				}
 			}
+			every_country = {
+				limit = { is_german_tag = yes }
+				add_to_array = { german_tags = THIS }
+			}
 		}
 	}
 	# ROOT is capitulated country, FROM is winner
@@ -205,5 +209,21 @@ on_actions = {
 			}
 		}
 	}
-
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { state = 372 }
+					FROM = { tag = PER }
+					ROOT = { tag = TUR }
+				}
+				ROOT = {
+					country_event = {
+						id = RoF_TUR.164
+					}
+				}
+			}
+		}
+	}
 }

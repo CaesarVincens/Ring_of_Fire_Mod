@@ -145,7 +145,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_TUR_kosem_sultan"
 		texturefile = "gfx/interface/ideas/idea_TUR_kosem_sultan.dds"
-	}	
+	}
+	SpriteType = { 
+		name = "GFX_idea_BAV_defender_catholicism"
+		texturefile = "gfx/interface/ideas/idea_BAV_defender_catholicism.dds"
+	}
 	##COC IDEAS
 	spriteType = {
 		name = "GFX_idea_CoC_good_4"
@@ -571,6 +575,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/turkish_vizier_4.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_turkish_vizier_5"
+		texturefile = "gfx/interface/ideas/turkish_vizier_5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_6"
+		texturefile = "gfx/interface/ideas/turkish_vizier_6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_turkish_vizier_7"
+		texturefile = "gfx/interface/ideas/turkish_vizier_7.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_turkish_imam_1"
 		texturefile = "gfx/interface/ideas/turkish_imam_1.dds"
 	}
@@ -636,4 +652,5 @@ spriteTypes = {
 		name = "GFX_idea_generic_ambassador_african_2d"
 		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
 	}
+	
 }

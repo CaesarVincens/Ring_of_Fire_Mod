@@ -79,6 +79,9 @@ NUS_canon_focus_list = {
 		NUS_lessons_of_history #1635 april 29 35
 		NUS_retake_saxony #1635 june 3 70
 	}
+	research = {
+		cat_superior_firepower = 50
+	}
 }
 
 NUS_ally_swe = {
@@ -223,7 +226,7 @@ NUS_air = { #Magdeburg 247
 	enable = {
 		tag = NUS
 		#has_war = no
-		has_tech = first_plane
+		has_tech = single_plane_tech_0
 	}
 
 	abort_when_not_enabled = yes
@@ -231,5 +234,33 @@ NUS_air = { #Magdeburg 247
 	ai_strategy = {
 		type = air_factory_balance
 		value = 35
+	}
+}
+
+USE_MEVO = {
+	name = "MEVO"
+	desc = "don't leave"
+	enable = {
+		is_in_faction_with = NUS
+		OR = {
+			original_tag = AUS
+			original_tag = SWE
+			original_tag = BOH
+		}
+	}
+	abort = {
+		NOT = {
+			is_in_faction_with = NUS
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NUS"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NUS"
+		value = 200
 	}
 }

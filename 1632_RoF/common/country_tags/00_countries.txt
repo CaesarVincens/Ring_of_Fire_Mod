@@ -9,7 +9,7 @@ RUS = "countries/Russia.txt"
 ENG = "countries/England.txt"
 
 #Germany
-AAC = "countries/Aachen.txt"
+ESS = "countries/Essen.txt"
 ALS = "countries/Alsace.txt"
 ANS = "countries/Ansbach.txt"
 BAD = "countries/Baden.txt"

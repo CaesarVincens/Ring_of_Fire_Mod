@@ -194,15 +194,15 @@ early_ind_focus_block = {
 		tooltip = industrialization_focus_block_TT
 		OR = {
 			NOT = {
-				tag = RUS
-				tag = AUS
+				original_tag = RUS
+				original_tag = AUS
 			}
 			AND = {
-				tag = RUS
+				original_tag = RUS
 				has_country_flag = RUS_build_factories_flag
 			}
 			AND = {
-				tag = AUS
+				original_tag = AUS
 				has_country_flag = AUS_american_industry_flag
 			}
 		}

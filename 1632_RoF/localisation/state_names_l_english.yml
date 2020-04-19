@@ -508,7 +508,7 @@
  STATE_507:0 "Thessalía"
  STATE_508:0 "Thrace"
  STATE_509:0 "Attica"
- STATE_510:0 "Peloponnese"
+ STATE_510:0 "Morea"
  STATE_511:0 "Aegean Islands"
  STATE_512:0 "Albania"
  STATE_513:0 "Cyprus"
@@ -663,3 +663,4 @@
  STATE_662:0 "Holstein"
  STATE_663:0 "Ingolstadt"
  STATE_664:0 "Beloozero"
+ STATE_665:0 "Inner Austria"

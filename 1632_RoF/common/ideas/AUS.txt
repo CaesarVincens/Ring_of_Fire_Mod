@@ -61,7 +61,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = chi_hyper_inflation1
+			picture = chi_hyper_inflation
 			modifier = {
 				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = -0.05
@@ -83,7 +83,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = generic_infrastructure
+			picture = generic_build_infrastructure
 			modifier = {
 				consumer_goods_factor = -0.02
 				production_speed_infrastructure_factor = 0.1

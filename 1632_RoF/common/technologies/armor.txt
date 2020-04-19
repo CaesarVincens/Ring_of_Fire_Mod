@@ -175,7 +175,7 @@ technologies = {
 		}
 				
 		ai_will_do = {
-			factor = 0.8
+			factor = 1
 			
 			modifier = {
 				factor = 1.2
@@ -195,6 +195,12 @@ technologies = {
 				factor = 0
 				date < 1634.1.1
 			}
+			modifier = {
+				factor = 10
+				original_tag = TUR
+				has_completed_focus = TUR_secret_projects
+			}
+
 		}
 		
 		categories = {

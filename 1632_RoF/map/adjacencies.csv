@@ -124,6 +124,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6062;6205;sea;3590;-1;-1;-1;-1;;West Scottish-Strait
 8435;6550;sea;7452;-1;-1;-1;-1;;Aegan Isle-Strait
 7304;4360;sea;8614;-1;-1;-1;-1;;New Foundland-Strait
+13023;12140;sea;2901;-1;-1;-1;-1;;Marianas
+4579;7269;sea;8945;-1;-1;-1;-1;;New Guinea
+12162;12219;sea;2291;-1;-1;-1;-1;;Sunda
 2455;2506;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
 5412;7678;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
 3314;6336;sea;8622;2886;1574;2891;1577;;Zuidersee

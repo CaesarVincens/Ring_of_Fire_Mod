@@ -19,7 +19,7 @@ ENG_civil_war = {
 	color = rgb { 143 26 14 }
 	color_ui = rgb { 143 26 14 }
 }
-SCO_civil_war = {
+ENL_civil_war = {
 	color = rgb { 225 10 0 }
 	color_ui = rgb { 225 10 0 }
 }

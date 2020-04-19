@@ -142,7 +142,7 @@ RUS_airship_research_plan = {
 		has_completed_focus = RUS_dirrigible_designs
 	}
 	abort = {
-		has_tech = first_airship
+		has_tech = airship_tech_1
 	}
 	
 	research = {

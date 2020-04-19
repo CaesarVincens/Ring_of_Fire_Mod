@@ -144,15 +144,15 @@ technologies = {
 				factor = 10
 				any_enemy_country = {
 					OR = {
-						has_tech = first_plane
-						has_tech = first_airship
+						has_tech = single_plane_tech_0
+						has_tech = airship_tech_1
 					}
 				}
 			}
 		}
 	}
 	
-	first_plane = {
+	single_plane_tech_0 = {
 		enable_equipments = {
 			single_plane_equipment_0
 		}
@@ -184,7 +184,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 5
 			modifier = {
 				factor = 0
 				NOT = { tag = NUS }
@@ -355,14 +355,18 @@ technologies = {
 		}
 	}
 
-	first_airship = {
+	light_airship_tech_1 = {
 
 		enable_equipments = {
-			airship_equipment_1
+			light_airship_equipment_1
 		}
 	
 		path = {
-			leads_to_tech = airship_tech_2
+			leads_to_tech = light_airship_tech_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = airship_tech_1
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -373,6 +377,111 @@ technologies = {
 		folder = {
 			name = air_techs_folder
 			position = { x = 0 y = 4 }
+		}
+		
+		categories = {
+			heavy_air
+			air_equipment
+			cat_strategic_bomber
+			balloon_tech
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_completed_focus = lighter_than_air
+			}
+			modifier = {
+				factor = 10
+				original_tag = RUS
+				has_completed_focus = RUS_dirrigible_designs
+			}
+			modifier = {
+				factor = 10
+				original_tag = TUR
+				has_completed_focus = TUR_dirrigibles
+			}
+		}
+	}
+	
+	light_airship_tech_2 = {
+
+		enable_equipments = {
+			light_airship_equipment_2
+		}
+	
+		path = {
+			leads_to_tech = light_airship_tech_3
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1636
+		folder = {
+			name = air_techs_folder
+			position = { x = -2 y = 6 }
+		}
+		
+		categories = {
+			heavy_air
+			air_equipment
+			cat_strategic_bomber
+			balloon_tech
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_completed_focus = lighter_than_air
+			}
+		}
+	}
+	
+	light_airship_tech_3 = {
+
+		enable_equipments = {
+			light_airship_equipment_3
+		}
+
+		research_cost = 2
+		start_year = 1638
+		folder = {
+			name = air_techs_folder
+			position = { x = -2 y = 8 }
+		}
+		
+		categories = {
+			heavy_air
+			air_equipment
+			cat_strategic_bomber
+			balloon_tech
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_completed_focus = lighter_than_air
+			}
+		}
+	}
+	
+	airship_tech_1 = {
+
+		enable_equipments = {
+			airship_equipment_1
+		}
+	
+		path = {
+			leads_to_tech = airship_tech_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1636
+		folder = {
+			name = air_techs_folder
+			position = { x = 1 y = 6 }
 		}
 		
 		categories = {
@@ -408,10 +517,10 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1636
+		start_year = 1638
 		folder = {
 			name = air_techs_folder
-			position = { x = 0 y = 6 }
+			position = { x = 1 y = 8 }
 		}
 		
 		categories = {
@@ -433,10 +542,10 @@ technologies = {
 		}
 	
 		research_cost = 2
-		start_year = 1638
+		start_year = 1640
 		folder = {
 			name = air_techs_folder
-			position = { x = 0 y = 8 }
+			position = { x = 1 y = 10 }
 		}
 		
 		categories = {

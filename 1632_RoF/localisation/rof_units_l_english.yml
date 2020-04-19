@@ -29,6 +29,8 @@
  multi_plane_desc:0 "Heavy Airplanes use multiple engines, as many as six or eight, to lift heavy payloads aloft. They find primary use as transport planes, able to carry important or sensitive cargoes."
  airship:0 "Airship"
  airship_desc:0 "Airships were mostly novelties up-time, but with the difficulty of heavier-than-air flight, they are becoming quite popular down-time. Their gasbag, filled with hot air, hydrogen, or helium, provides the lifting power, so even heavy, down-time-made engines can be used to propel them through the sky. Airships can be used for transport, but with some modifications, aerial combat and other applications may be possible."
+ light_airship:0 "Light Airship"
+ light_airship_desc:0 "Airships were mostly novelties up-time, but with the difficulty of heavier-than-air flight, they are becoming quite popular down-time. Their gasbag, filled with hot air, hydrogen, or helium, provides the lifting power, so even heavy, down-time-made engines can be used to propel them through the sky. Smaller airships like these are more suitable as scouting platforms or for closer support of infantry."
  apc:0 "Armored Personnel Carrier"
  apc_desc:0 "Armored Personnel Carriers are heavily armored vehicles designed to bring infantry to the front in relative safety from small arms fire. It can also serve as an impromptu firing platform or mobile fortress."
  gas_tank:0 "Tank"

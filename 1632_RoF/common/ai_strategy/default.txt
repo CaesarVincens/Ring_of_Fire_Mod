@@ -17,10 +17,10 @@
 
 default_unit_production = {
 	enable = {
-		always = yes
 		NOT = {
 			original_tag = NUS
 			original_tag = SWE
+			original_tag = TUR
 		}
 	}
 	ai_strategy = {
@@ -120,8 +120,7 @@ default_unit_production = {
 
 default_pp_spend_amount = {
 	enable = {
-		always = yes
-		NOT = { original_tag = NUS }
+		NOT = { original_tag = NUS original_tag = TUR }
 	}
 	
 	ai_strategy = {
@@ -134,11 +133,6 @@ default_pp_spend_amount = {
 		type = pp_spend_amount
 		id = decision
 		value = 100
-	}
-	ai_strategy = {
-		type = pp_spend_amount
-		id = decision
-		value = 1
 	}
 }
 
@@ -321,6 +315,47 @@ more_naval_focused_nation = {
 	}
 }
 
+default_infrastructure_10 = {
+	enable = {
+		has_tech = infrastructure_tech_2
+		num_of_controlled_states < 11
+	}
+	abort = {
+		num_of_controlled_states > 10
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 30
+	}
+}
+
+default_infrastructure_20 = {
+	enable = {
+		has_tech = infrastructure_tech_2
+		num_of_controlled_states < 21
+	}
+	abort = {
+		num_of_controlled_states > 20
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 60
+	}
+}
+
+default_infrastructure_more = {
+	enable = {
+		has_tech = infrastructure_tech_2
+		num_of_controlled_states > 20
+	}
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 100
+	}
+}
 
 default_area_priority = {
 	enable = {
@@ -429,7 +464,7 @@ DEFAULT_template_design = {
 			original_tag = NUS
 			original_tag = SWE
 		}
-		date < 1631.1.1				
+		date < 1633.1.1
 	}
 	abort = { 
 		date > 1633.1.1
@@ -489,7 +524,7 @@ DEFAULT_template_design = {
 			original_tag = NUS
 			original_tag = SWE
 		}
-		date > 1635.1.1				
+		date > 1635.1.1
 	}
 
 	ai_strategy = {
@@ -562,7 +597,7 @@ save_admiral_pp_for_later = {
 }
 
 dont_mess_with_wastelands = { # Reverse strategy
-	reversed = yes
+	#reversed = yes
 
 	enable = {
 		NOT = { tag = WNA }

@@ -8,7 +8,7 @@ continuous_focus_palette = {
 	default = yes
 	reset_on_civilwar = no
 			
-	position = { x = 50 y = 1300 }
+	position = { x = 50 y = 800 }
 	
 		
 	focus = {
@@ -118,7 +118,7 @@ continuous_focus_palette = {
 		}
 		
 		modifier = {
-			resistance_tick_auto = -2
+			resistance_target = -0.05
 		}
 		
 		ai_will_do = {

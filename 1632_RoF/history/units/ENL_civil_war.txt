@@ -1,0 +1,61 @@
+﻿division_template = {
+	name = "Roundheads"			
+	is_locked = yes
+	#division_names_group = ENG_parliamentarians
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		tercio_infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	#edinburgh
+	division = {
+		name = "1. Roundheads Brigade"
+		location = 9392
+		division_template = "Roundheads"
+	}
+	division = {
+		name = "2. Roundheads Brigade"
+		location = 9392
+		division_template = "Roundheads"
+	}
+	division = {
+		name = "3. Roundheads Brigade"
+		location = 9392
+		division_template = "Roundheads"
+	}
+	division = {
+		name = "4. Roundheads Brigade"
+		location = 9392
+		division_template = "Roundheads"
+	}
+	division = {
+		name = "5. Roundheads Brigade"
+		location = 9392
+		division_template = "Roundheads"
+	}
+	division = {
+		name = "6. Roundheads Brigade"
+		location = 9392
+		division_template = "Roundheads"
+	}
+	#glasgow
+	division = {
+		name = "7. Roundheads Brigade"
+		location = 3273
+		division_template = "Roundheads"
+	}
+	division = {
+		name = "8. Roundheads Brigade"
+		location = 3273
+		division_template = "Roundheads"
+	}
+	#cardiff
+	division = {
+		name = "9. Roundheads Brigade"
+		location = 377
+		division_template = "Roundheads"
+	}
+}

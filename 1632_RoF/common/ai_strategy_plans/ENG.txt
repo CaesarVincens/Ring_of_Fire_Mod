@@ -108,3 +108,28 @@ ostend_war = {
 		value = 10
 	}
 }
+
+ENG_conquer_IRE = {
+	name = "conquer Ireland"
+	desc = ""
+	enable = {
+		original_tag = ENG
+		IRE = {
+			exists = yes
+			NOT = { is_subject_of = ENG }
+		}
+	}
+	abort = {
+		IRE = {
+			OR = {
+				exists = no
+				is_subject_of = ENG
+			}
+		}
+	}
+	ai_strategy = {
+		type = conquer
+		id = IRE
+		value = 500
+	}
+}

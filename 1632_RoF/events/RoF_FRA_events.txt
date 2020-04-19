@@ -238,7 +238,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_FRA.121.a
-		news_event = { id = RoF_news.21 hours = 2 }
+		news_event = { id = RoF_news.21 }
 	}
 }
 
@@ -295,12 +295,14 @@ country_event = {
 				135 = { is_controlled_by_ROOT_or_subject = yes }
 			}
 			WNA = { transfer_state = 135 }
+			remove_state_core = 135
 		}
 		if = {
 			limit = {
 				118 = { is_controlled_by_ROOT_or_subject = yes }
 			}
 			WNA = { transfer_state = 118 }
+			remove_state_core = 118
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -341,7 +343,6 @@ country_event = {
 			FRA = {
 				country_event = {
 					id = RoF_FRA.161
-					hours = 12
 				}
 			}
 		}
@@ -365,7 +366,6 @@ country_event = {
 			FRA = {
 				country_event = {
 					id = RoF_FRA.161
-					hours = 12
 				}
 			}
 		}

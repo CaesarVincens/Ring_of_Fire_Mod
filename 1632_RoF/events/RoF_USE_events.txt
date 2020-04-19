@@ -78,7 +78,7 @@ country_event = {
 				set_country_flag = federal_state
 				NUS = { set_autonomy = { target = PREV autonomy_state = autonomy_rof_federal_state } }
 			}
-			set_cosmetic_tag = USE
+			#set_cosmetic_tag = USE
 			set_country_flag = USE_formed
 			set_global_flag = USE_formed
 			if = {
@@ -99,8 +99,8 @@ country_event = {
 	}
 	option = {
 		name = RoF_USE.100.a
+		set_cosmetic_tag = USE
 		effect_tooltip = {
-			set_cosmetic_tag = USE
 			if = {
 				limit = { owns_state = 247 }
 				set_capital = 247
@@ -778,6 +778,7 @@ country_event = {
 					}
 				}
 			}
+			set_country_flag = USE_paid_SAX
 			declare_war_on = {
 				target = SAX
 				type = annex_everything
@@ -795,6 +796,7 @@ country_event = {
 			hidden_effect = {
 				BRA = { country_event = { id = RoF_German.150 days = 7 } }
 			}
+			set_country_flag = USE_paid_BRA
 			declare_war_on = {
 				target = BRA
 				type = annex_everything

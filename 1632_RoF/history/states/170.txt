@@ -8,6 +8,9 @@ state = {
 		victory_points = {
 			564 20 
 		}
+		victory_points = {
+			3524 10 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
@@ -15,24 +18,6 @@ state = {
 			air_base = 0
 			564 = {
 				bunker = 2
-			}
-			3524 = {
-				bunker = 1
-			}
-			6549 = {
-				bunker = 1
-			}
-			9443 = {
-				bunker = 1
-			}
-			9524 = {
-				bunker = 1
-			}
-			9547 = {
-				bunker = 1
-			}
-			11431 = {
-				bunker = 1
 			}
 		}
 		add_core_of = HES

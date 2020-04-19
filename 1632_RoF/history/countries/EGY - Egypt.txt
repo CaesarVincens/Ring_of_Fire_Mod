@@ -36,7 +36,7 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Kamil al-Wujdi"
+    name = "Halil Pasha"
     desc = "POLITICS_KAMIL_AL-WUJDI_DESC"
     picture = "gfx/leaders/SAU/Portrait_Saudi_arabia_Abdulazis_Ibn_Saud.dds"
     expire = "1660.1.1"

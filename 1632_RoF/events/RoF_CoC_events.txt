@@ -98,7 +98,7 @@ country_event = {
 				clear_CoC_vars_and_flags = yes
 				#transfer_state = PREV
 				set_country_flag = annexed_CoC_state
-				country_event = { id = RoF_CoC.012 hours = 1 }
+				country_event = { id = RoF_CoC.012 }
 			}
 		}
 		add_to_variable = { var = CoC_strength value = -5 }
@@ -127,7 +127,7 @@ country_event = {
 		add_political_power = var:CoC_annex_resist_cost
 		clear_variable = var:CoC_annex_resist_cost
 		FROM = {
-			country_event = { id = RoF_CoC.012 hours = 1 }
+			country_event = { id = RoF_CoC.012 }
 		}
 		ai_chance = {
 			factor = 1

@@ -81,7 +81,8 @@ add_ideas = {
 	TUR_beylerbeys_1
 	limited_exports
 	TUR_husrev_pasha
-	TUR_self_dealing_bureaucrats
+	TUR_self_important_bureaucrats
+	TUR_supreme
 	#emperor_rank
 }
 set_stability = 0.5

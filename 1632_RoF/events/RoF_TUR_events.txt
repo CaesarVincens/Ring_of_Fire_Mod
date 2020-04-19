@@ -10,7 +10,11 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-
+		activate_mission = TUR_coup_threat
+		set_variable = { beylerbey_threat = 0.4 }
+		set_variable = { bureau_threat = 0.4 }
+		set_variable = { janissary_threat = 0.4 }
+		set_TUR_coup_threat = yes
 	}
 	option = {
 		name = RoF_TUR.100.a
@@ -18,6 +22,9 @@ country_event = {
 	}
 }
 
+####################
+### Vizier Chain ###
+####################
 country_event = {
 	id = RoF_TUR.101
 	title = RoF_TUR.101.t
@@ -32,12 +39,37 @@ country_event = {
 	}
 	option = {
 		name = RoF_TUR.101.a
-		add_political_power = -60
+		add_stability = -0.1
 		swap_ideas = {
 			remove_idea = TUR_husrev_pasha
 			add_idea = TUR_hafiz_ahmed_pasha
 		}
 		set_country_flag = TUR_husrev_dismissed
+		hidden_effect = {
+			country_event = {
+				id = RoF_TUR.1011
+				days = 120
+			}
+		}
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			add_to_variable = {
+				bureau_threat = -0.05
+			}
+			custom_effect_tooltip = TUR_janissaries_coup_worse
+			add_to_variable = {
+				janissary_threat = 0.1
+			}
+			set_TUR_coup_threat = yes
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 60
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_TUR.101.b
@@ -45,11 +77,200 @@ country_event = {
 			add_idea = TUR_husrev_pasha_2
 			remove_idea = TUR_husrev_pasha
 		}
+		hidden_effect = {
+			country_event = {
+				id = RoF_TUR.1013
+				days = 240
+			}
+		}
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			add_to_variable = {
+				bureau_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+		}
 		custom_effect_tooltip = TUR_husrev_pasha.TT
 		set_country_flag = TUR_husrev_curtailed
 	}
 }
 
+country_event = {
+	id = RoF_TUR.1011
+	title = RoF_TUR.1011.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.1011.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		swap_ideas = {
+			remove_idea = TUR_hafiz_ahmed_pasha
+			add_idea = TUR_topal_recep_pasha
+		}
+		set_country_flag = TUR_hafiz_killed
+		hidden_effect = {
+			country_event = {
+				id = RoF_TUR.1012
+				days = 120
+			}
+		}
+	}
+	option = {
+		name = RoF_TUR.1011.a
+		add_stability = -0.1
+		set_country_flag = TUR_husrev_killed
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			add_to_variable = {
+				bureau_threat = -0.05
+			}
+			custom_effect_tooltip = TUR_janissaries_coup_better
+			add_to_variable = {
+				janissary_threat = -0.1
+			}
+			set_TUR_coup_threat = yes
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_TUR.1011.b
+		add_stability = -0.05
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_worse
+			add_to_variable = {
+				bureau_threat = 0.05
+			}
+			custom_effect_tooltip = TUR_janissaries_coup_worse
+			add_to_variable = {
+				janissary_threat = 0.05
+			}
+			set_TUR_coup_threat = yes
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.1012
+	title = RoF_TUR.1012.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.1012.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = TUR_recep_discovered
+		swap_ideas = {
+			remove_idea = TUR_topal_recep_pasha
+			add_idea = TUR_tabaniyassi_mehmed_pasha
+		}
+	}
+	option = {
+		name = RoF_TUR.1012.a
+		set_country_flag = TUR_recep_killed
+		add_political_power = -20
+		add_stability = -0.05
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			add_to_variable = {
+				bureau_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_TUR.1012.b
+	}
+}
+
+country_event = {
+	id = RoF_TUR.1013
+	title = RoF_TUR.1013.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.1013.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	option = {
+		name = RoF_TUR.1013.a
+		add_stability = -0.1
+		swap_ideas = {
+			remove_idea = TUR_husrev_pasha
+			add_idea = TUR_tabaniyassi_mehmed_pasha
+		}
+		set_country_flag = TUR_husrev_killed
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			add_to_variable = {
+				bureau_threat = -0.05
+			}
+			custom_effect_tooltip = TUR_janissaries_coup_better
+			add_to_variable = {
+				janissary_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_TUR.1013.b
+		add_stability = -0.05
+		swap_ideas = {
+			remove_idea = TUR_husrev_pasha
+			add_idea = TUR_tabaniyassi_mehmed_pasha
+		}
+		set_country_flag = TUR_husrev_dismissed
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			add_days_mission_timeout = {
+				mission = TUR_coup_threat
+				days = 30
+			}
+		}
+	}
+}
+
+###################
+### Bureaucrats ###
+###################
 country_event = {
 	id = RoF_TUR.102
 	title = RoF_TUR.102.t
@@ -64,17 +285,52 @@ country_event = {
 	}
 	option = {
 		name = RoF_TUR.102.a
-		add_political_power = 30
-		set_country_flag = TUR_bureaucrats_kept
+		add_political_power = -30
+		set_country_flag = TUR_bureaucrats_placated
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			swap_ideas = {
+				remove_idea = TUR_self_important_bureaucrats
+				add_idea = TUR_placated_bureaucrats
+			}
+			add_to_variable = {
+				bureau_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+		}
+		add_popularity = {
+			ideology = absolutist
+			popularity = 0.05
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_TUR.102.b
+		custom_effect_tooltip = TUR_bureaucracy_coup_worse
+		set_country_flag = TUR_bureaucrats_reformed
 		swap_ideas = {
-			remove_idea = TUR_self_dealing_bureaucrats
+			remove_idea = TUR_self_important_bureaucrats
 			add_idea = TUR_new_bureaucrats
 		}
-		custom_effect_tooltip = TUR_new_bureaucrats.TT
-		set_country_flag = TUR_bureaucrats_replaced
+		add_popularity = {
+			ideology = constitutionalist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			add_to_variable = {
+				bureau_threat = 0.05
+			}
+			custom_effect_tooltip = TUR_new_bureaucrats.TT
+			set_TUR_coup_threat = yes
+		}
 		hidden_effect = {
 			country_event = {
 				id = RoF_TUR.103
@@ -98,6 +354,14 @@ country_event = {
 	}
 	option = {
 		name = RoF_TUR.103.a
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_bureaucracy_coup_better
+			add_to_variable = {
+				bureau_threat = -0.1
+			}
+			set_TUR_coup_threat = yes
+		}
 		swap_ideas = {
 			remove_idea = TUR_new_bureaucrats
 			add_idea = TUR_loyal_bureaucrats
@@ -105,6 +369,9 @@ country_event = {
 	}
 }
 
+##################
+### Beylerbeys ###
+##################
 country_event = {
 	id = RoF_TUR.104
 	title = RoF_TUR.104.t
@@ -119,16 +386,76 @@ country_event = {
 	}
 	option = {
 		name = RoF_TUR.104.a
-		set_country_flag = TUR_janissary_concessions
+		set_country_flag = TUR_beys_appeased
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_beylerbeys_coup_better
+			add_to_variable = {
+				beylerbey_threat = -0.1
+			}
+			set_TUR_coup_threat = yes
+		}
+		swap_ideas = {
+			remove_idea = TUR_beylerbeys_1
+			add_idea = TUR_beylerbeys_1b
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_TUR.104.b
-		set_country_flag = TUR_janissary_reforms
+		set_country_flag = TUR_beys_angered
 		swap_ideas = {
-			remove_idea = TUR_janissaries_1
-			add_idea = TUR_janissaries_2
+			remove_idea = TUR_beylerbeys_1
+			add_idea = TUR_beylerbeys_2
+		}
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_beylerbeys_coup_worse
+			add_to_variable = {
+				beylerbey_threat = 0.1
+			}
+			set_TUR_coup_threat = yes
+		}
+		hidden_effect = {
+			country_event = {
+				days = 365
+				id = RoF_TUR.1041
+			}
 		}
 	}
+}
+
+country_event = {
+	id = RoF_TUR.1041
+	title = RoF_TUR.1041.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.1041.d
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_TUR.1041.a
+		set_country_flag = TUR_beys_weakened
+		swap_ideas = {
+			remove_idea = TUR_beylerbeys_2
+			add_idea = TUR_beylerbeys_3
+		}
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_beylerbeys_coup_better
+			add_to_variable = {
+				beylerbey_threat = -0.2
+			}
+			set_TUR_coup_threat = yes
+		}
+	}
+
 }
 
 country_event = {
@@ -146,6 +473,10 @@ country_event = {
 	option = {
 		name = RoF_TUR.105.a
 		set_country_flag = TUR_kosem_sultan_advisor_flag
+		add_ideas = TUR_kosem_sultan_advisor
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_TUR.105.b
@@ -189,6 +520,56 @@ country_event = {
 }
 
 country_event = {
+	id = RoF_TUR.1101
+	title = RoF_TUR.1101.t
+	picture = GFX_report_event_nus_flag
+	desc = RoF_TUR.1101.d
+	fire_only_once = yes
+	
+	trigger = {
+		has_focus_tree = ottoman_focus
+		NOT = { has_completed_focus = TUR_rumors_from_europe }
+		NOT = {
+			focus_progress = {
+				focus = TUR_rumors_from_europe
+				progress > 0
+			}
+		}
+		OR = {
+			date > 1632.5.1
+			has_country_flag = knows_about_grantville
+		}
+	}
+	
+	immediate = {
+		complete_national_focus = TUR_rumors_from_europe
+	}
+	option = {
+		#ignore
+		name = RoF_TUR.1101.a
+		set_country_flag = TUR_deny_grantville_flag
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		#accept
+		name = RoF_TUR.1101.b
+		set_country_flag = TUR_embrace_grantville_flag
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 2
+				is_historical_focus_on = no
+			}
+		}
+	}
+}
+
+#########################
+### Janissary Reforms ###
+#########################
+country_event = {
 	id = RoF_TUR.150
 	title = RoF_TUR.150.t
 	picture = GFX_report_event_murad
@@ -203,6 +584,17 @@ country_event = {
 	option = {
 		name = RoF_TUR.150.a
 		army_experience = 10
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_janissaries_coup_better
+			add_to_variable = {
+				janissary_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_TUR.150.b
@@ -215,18 +607,34 @@ country_event = {
 				remove_idea = TUR_janissaries_1
 				add_idea = TUR_janissaries_2
 			}
+			if = {
+				limit = { has_active_mission = TUR_coup_threat }
+				custom_effect_tooltip = TUR_janissaries_coup_worse
+				add_to_variable = {
+					janissary_threat = 0.1
+				}
+				set_TUR_coup_threat = yes
+			}
 		}
 	}
 	option = {
 		name = RoF_TUR.150.c
 		add_political_power = 50
+		if = {
+			limit = { has_active_mission = TUR_coup_threat }
+			custom_effect_tooltip = TUR_janissaries_coup_better
+			add_to_variable = {
+				janissary_threat = -0.05
+			}
+			set_TUR_coup_threat = yes
+		}
 	}
 }
 
 country_event = {
 	id = RoF_TUR.151
 	title = RoF_TUR.151.t
-	picture = GFX_report_event_pol_flag
+	picture = GFX_report_event_murad
 	desc = RoF_TUR.151.d
 
 	is_triggered_only = yes
@@ -239,31 +647,291 @@ country_event = {
 }
 
 country_event = {
-	id = RoF_TUR.152
-	title = RoF_TUR.152.t
+	id = RoF_TUR.160
+	title = RoF_TUR.160.t
 	picture = GFX_report_event_pol_flag
-	desc = RoF_TUR.152.d
+	desc = RoF_TUR.160.d
 
 	is_triggered_only = yes
 
 	immediate = {
 	}
 	option = {
-		name = RoF_TUR.152.a
+		name = RoF_TUR.160.a
+		declare_war_on = {
+			target = PER
+			type = take_core_state
+			generator = {
+				372
+			}
+		}
+		set_state_controller = 327
 	}
 }
 
 country_event = {
-	id = RoF_TUR.153
-	title = RoF_TUR.153.t
-	picture = GFX_report_event_pol_flag
-	desc = RoF_TUR.153.d
+	id = RoF_TUR.164
+	title = RoF_TUR.164.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.164.d
 
 	is_triggered_only = yes
 
 	immediate = {
 	}
 	option = {
-		name = RoF_TUR.153.a
+		name = RoF_TUR.164.a
+		custom_effect_tooltip = RoF_TUR.164.a.TT
+		effect_tooltip = {
+			white_peace = PER
+			set_state_owner = 372
+			set_state_owner = 527
+			set_state_owner = 528
+			set_state_owner = 529
+			set_state_owner = 327
+			remove_ideas = TUR_safavid_war_2
+		}
+		hidden_effect = {
+			PER = {
+				country_event = {
+					id = RoF_TUR.165
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+	}
+	option = {
+		name = RoF_TUR.164.b
+		remove_ideas = TUR_safavid_war_2
+		add_war_support = -0.2
+		ai_chance = {
+			base = 1
+		}
 	}
 }
+
+country_event = {
+	id = RoF_TUR.165
+	title = RoF_TUR.165.t
+	picture = GFX_report_event_tur_flag
+	desc = RoF_TUR.165.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.165.a
+		effect_tooltip = {
+			TUR = {
+				white_peace = PER
+				set_state_owner = 372
+				set_state_owner = 527
+				set_state_owner = 528
+				set_state_owner = 529
+				set_state_owner = 327
+			}
+		}
+		hidden_effect = {
+			TUR = {
+				country_event = {
+					id = RoF_TUR.166
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 10
+			}
+		}
+	}
+	option = {
+		name = RoF_TUR.165.b
+		hidden_effect = {
+			TUR = {
+				country_event = {
+					id = RoF_TUR.167
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.166
+	title = RoF_TUR.166.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.166.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = PER_rejected_peace
+		hidden_effect = {
+			white_peace = PER
+			transfer_state = 372
+			transfer_state = 527
+			transfer_state = 528
+			transfer_state = 529
+			transfer_state = 327
+		}
+	}
+	option = {
+		name = RoF_TUR.166.a
+		effect_tooltip = {
+			white_peace = PER
+			transfer_state = 372
+			transfer_state = 527
+			transfer_state = 528
+			transfer_state = 529
+			transfer_state = 327
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.167
+	title = RoF_TUR.167.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.167.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = PER_rejected_peace
+	}
+	option = {
+		name = RoF_TUR.167.a
+	}
+}
+
+country_event = {
+	id = RoF_TUR.170
+	title = RoF_TUR.170.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.170.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.170.a
+		declare_war_on = {
+			target = AUS
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.171
+	title = RoF_TUR.171.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.171.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.171.a
+		set_state_controller = 20
+		set_state_controller = 173
+	}
+}
+
+country_event = {
+	id = RoF_TUR.200
+	title = RoF_TUR.200.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.200.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.200.a
+		TUR = {
+			country_event = {
+				id = RoF_TUR.201
+			}
+		}
+		effect_tooltip = {
+			create_production_license = {
+				target = TUR
+				cost_factor = 1
+				equipment = { type = caplock_tech }
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_TUR.200.b
+		TUR = {
+			country_event = {
+				id = RoF_TUR.202
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.201
+	title = RoF_TUR.201.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.201.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.201.a
+		FROM = {
+			create_production_license = {
+				target = TUR
+				cost_factor = 1
+				equipment = { type = caplock_tech }
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = sold_rifles
+		}
+	}
+}
+
+country_event = {
+	id = RoF_TUR.202
+	title = RoF_TUR.202.t
+	picture = GFX_report_event_murad
+	desc = RoF_TUR.202.d
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	option = {
+		name = RoF_TUR.202.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = did_not_sell_rifles
+		}
+	}
+}
+

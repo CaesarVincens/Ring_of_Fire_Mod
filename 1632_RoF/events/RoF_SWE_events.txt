@@ -7,15 +7,14 @@ news_event = {
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.1.d
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = { id = RoF_SWE.1 days = 365 }
+		}
+	}
 	option = {
 		name = RoF_SWE.1.a
 		add_political_power = 5
-		hidden_effect = {
-			SWE = {
-				news_event = { id = RoF_SWE.1 days = 365 }
-			}
-		}
-
 	}
 }
 #FROM asks to join
@@ -38,14 +37,14 @@ country_event = {
 		}
 		FROM = {
 			set_country_flag = SWE_accepted
-			country_event = { id = RoF_ENG.101 hours = 12 }
+			country_event = { id = RoF_ENG.101 }
 		}
 	}
 	option = {
 		name = RoF_SWE.50.b
 		FROM = {
 			set_country_flag = SWE_rejected
-			country_event = { id = RoF_ENG.101 hours = 12 }
+			country_event = { id = RoF_ENG.101 }
 		}
 	}
 }
@@ -335,14 +334,14 @@ country_event = {
 		}
 		FROM = {
 			set_country_flag = SWE_accepted
-			country_event = { id = RoF_German.101 hours = 12 }
+			country_event = { id = RoF_German.101 }
 		}
 	}
 	option = {
 		name = RoF_SWE.132.b
 		FROM = {
 			set_country_flag = SWE_rejected
-			country_event = { id = RoF_German.101 hours = 12 }
+			country_event = { id = RoF_German.101 }
 		}
 	}
 }
@@ -360,7 +359,7 @@ country_event = {
 	option = { # Vassal
 		name =  RoF_SWE.135.a
 		add_political_power = -50
-		MKL = { country_event = { id = RoF_German.120 hours = 12 } }
+		MKL = { country_event = { id = RoF_German.120 } }
 		effect_tooltip = {
 			add_manpower = 5000
 			set_autonomy = {
@@ -373,7 +372,7 @@ country_event = {
 	}
 	option = { # Free
 		name =  RoF_SWE.135.b
-		MKL = { country_event = { id = RoF_German.121 hours = 12 } }
+		MKL = { country_event = { id = RoF_German.121 } }
 		add_manpower = 2000
 		effect_tooltip = {
 			add_to_faction = MKL
@@ -531,25 +530,25 @@ country_event = {
 			limit = {
 				BRS = { is_potential_friend_of_ROOT = yes }
 			}
-			BRS = { country_event = { id = RoF_German.140 hours = 12 } }
+			BRS = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				BRE = { is_potential_friend_of_ROOT = yes }
 			}
-			BRE = { country_event = { id = RoF_German.140 hours = 12 } }
+			BRE = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				LUB = { is_potential_friend_of_ROOT = yes }
 			}
-			LUB = { country_event = { id = RoF_German.140 hours = 12 } }
+			LUB = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				MAG = { is_potential_friend_of_ROOT = yes }
 			}
-			MAG = { country_event = { id = RoF_German.141 hours = 12 } }
+			MAG = { country_event = { id = RoF_German.141 } }
 		}
 	}
 	option = {
@@ -664,37 +663,37 @@ country_event = {
 			limit = {
 				ANS = { is_potential_friend_of_ROOT = yes }
 			}
-			ANS = { country_event = { id = RoF_German.140 hours = 12 } }
+			ANS = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				BAD = { is_potential_friend_of_ROOT = yes }
 			}
-			BAD = { country_event = { id = RoF_German.142 hours = 12 } }
+			BAD = { country_event = { id = RoF_German.142 } }
 		}
 		if = {
 			limit = {
 				FRK = { is_potential_friend_of_ROOT = yes }
 			}
-			FRK = { country_event = { id = RoF_German.140 hours = 12 } }
+			FRK = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				NUR = { is_potential_friend_of_ROOT = yes }
 			}
-			NUR = { country_event = { id = RoF_German.140 hours = 12 } }
+			NUR = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				ULM = { is_potential_friend_of_ROOT = yes }
 			}
-			ULM = { country_event = { id = RoF_German.140 hours = 12 } }
+			ULM = { country_event = { id = RoF_German.140 } }
 		}
 		if = {
 			limit = {
 				WRT = { is_potential_friend_of_ROOT = yes }
 			}
-			WRT = { country_event = { id = RoF_German.140 hours = 12 } }
+			WRT = { country_event = { id = RoF_German.140 } }
 		}
 	}
 }

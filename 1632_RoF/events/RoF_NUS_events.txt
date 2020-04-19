@@ -1,5 +1,26 @@
 ﻿add_namespace = RoF_NUS
 
+news_event = {
+	id = RoF_NUS.1
+	title = RoF_NUS.1.t
+	desc = RoF_NUS.1.d
+	picture = GFX_report_event_nus_flag
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = RoF_NUS.1
+				days = 365
+			}
+		}
+	}
+	option = { # Accept
+		name =  RoF_NUS.1.a
+		add_political_power = 5
+	}
+}
+
 country_event = {
 	id = RoF_NUS.100
 	title = RoF_NUS.100.t
@@ -1564,7 +1585,7 @@ country_event = {
 			set_country_flag = NUR_SWE_tyw_subject
 			SWE = {
 				set_autonomy = { target = NUR autonomy_state = autonomy_rof_nominal_vassal }
-				country_event = { id = RoF_SWE.110 hours = 1 }
+				country_event = { id = RoF_SWE.110 }
 			}
 		}
 	}

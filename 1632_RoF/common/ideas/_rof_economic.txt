@@ -34,9 +34,7 @@ ideas = {
 			level = 4
 			removal_cost = -1
 			available = {
-				NOT = {
-					has_idea = full_military_eco
-				}
+				NOT = { has_idea = full_military_eco }
 			}
 			modifier = {
 				consumer_goods_factor = 0.35
@@ -110,9 +108,8 @@ ideas = {
 			level = 2
 			removal_cost = -1
 			available = {
-				NOT = {
-					has_idea = full_civilian_eco
-				}				
+				NOT = { has_idea = full_civilian_eco }
+				has_war_support > 0.5
 				OR = {
 					threat > 0.15
 					has_government = radical
@@ -150,6 +147,8 @@ ideas = {
 					has_idea = military_focus_eco
 				}
 				threat > 0.3
+				has_war_support > 0.75
+				has_stability > 0.5
 				OR = {
 					has_government = radical
 					has_government = absolutist
@@ -397,7 +396,7 @@ ideas = {
 			picture = generic_agrarian_reform
 			cancel_if_invalid = no
 			ai_will_do = {
-				factor = 10
+				factor = 100
 			}
 		}
 		
@@ -445,7 +444,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-				factor = 10
+				factor = 100
    			}
 		}
 		
@@ -487,7 +486,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-				factor = 10
+				factor = 100
    			}
 		}
 	}

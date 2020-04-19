@@ -96,13 +96,24 @@ AUS_restoring_princes = {
 		original_tag = AUS
 	}
 	visible = {
-		#has_completed_focus = AUS_restore_princes
+		has_completed_focus = AUS_restore_princes
 	}
 }
 
 TUR_major_decisions = {
 	icon = generic_political_actions
 	priority = 100
+	allowed = {
+		original_tag = TUR
+	}
+	visible = {
+		
+	}
+}
+
+TUR_coup_category = {
+	icon = power_struggle
+	priority = 1000
 	allowed = {
 		original_tag = TUR
 	}
@@ -118,6 +129,6 @@ TUR_combating_corruption_cat = {
 		original_tag = TUR
 	}
 	visible = {
-		#has_completed_focus = TUR_combat_corruption
+		has_completed_focus = TUR_combat_corruption
 	}
 }

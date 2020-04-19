@@ -1,8 +1,8 @@
-version="1.8.*"
+version="1.9.*"
 tags={
 	"Alternative History"
 }
-name="1632 - The Ring of Fire - Dev"
+name="1632 - The Ring of Fire"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
 replace_path="common/ai_strategy"
@@ -33,4 +33,5 @@ replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 picture="thumbnail.png"
-remote_file_id="1415171765"
+supported_version="1.9.1"
+remote_file_id="1160009836"

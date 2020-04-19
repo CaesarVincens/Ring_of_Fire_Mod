@@ -79,4 +79,10 @@ units = {
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
+	division = {
+		name = "2. Infantry Brigade"
+		location = 11638
+		division_template = "Tercio Detachment"
+		start_experience_factor = 0.3
+	}
 }

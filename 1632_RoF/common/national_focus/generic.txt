@@ -34,6 +34,7 @@ focus_tree = {
 		x = 23
 		y = 0
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 120
 		}
@@ -62,6 +63,7 @@ focus_tree = {
 				has_government = liberal
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = moderate_ethos_focus
 		}
@@ -82,7 +84,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 2
-				tag = AAC
+				tag = ESS
 				is_historical_focus_on = yes
 			}
 		}
@@ -110,6 +112,7 @@ focus_tree = {
 				absolutist < 0.6
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -128,6 +131,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = constitutionalism_idea
 		}
@@ -153,6 +157,7 @@ focus_tree = {
 				has_government = absolutist
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = liberty_ethos_focus
 		}
@@ -192,6 +197,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = up_time_knowledge_ideas
 		}
@@ -211,6 +217,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = liberty_ethos_focus
@@ -231,6 +238,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_rule = {
 				can_send_volunteers = yes
@@ -256,6 +264,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = liberty_ethos_focus
@@ -276,6 +285,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_rule = {
 				can_send_volunteers = yes
@@ -308,6 +318,7 @@ focus_tree = {
 				has_government = liberal
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = keep_traditions_idea
 		}
@@ -337,6 +348,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 			swap_ideas = {
@@ -357,6 +369,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 			add_popularity = {
@@ -381,6 +394,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_rule = {
 				can_send_volunteers = yes
@@ -408,6 +422,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_rule = {
 				can_send_volunteers = yes
@@ -433,6 +448,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -449,6 +465,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -469,6 +486,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = political_effort
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -497,6 +515,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -524,6 +543,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
 				limit = {
