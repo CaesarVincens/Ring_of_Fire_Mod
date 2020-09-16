@@ -358,6 +358,8 @@ ideas = {
 		TUR_kosem_sultan_advisor = {
 			allowed = {
 				original_tag = TUR
+			}
+			visible = {
 				has_country_flag = TUR_kosem_sultan_advisor_flag
 			}
 			traits = { valide_sultan }
@@ -369,6 +371,8 @@ ideas = {
 		TUR_husrev_pasha = {
 			allowed = {
 				original_tag = TUR
+			}
+			visible = {
 				NOT = {
 					OR = {
 						has_country_flag = TUR_husrev_killed
@@ -395,6 +399,8 @@ ideas = {
 		TUR_husrev_pasha_2 = {
 			allowed = {
 				original_tag = TUR
+			}
+			visible = {
 				NOT = { has_country_flag = TUR_husrev_killed }
 				OR = {
 					has_country_flag = TUR_husrev_curtailed
@@ -410,6 +416,8 @@ ideas = {
 		TUR_hafiz_ahmed_pasha = {
 			allowed = {
 				original_tag = TUR
+			}
+			visible = {
 				NOT = { has_country_flag = TUR_hafiz_killed }
 				OR = {
 					has_country_flag = TUR_husrev_dismissed
@@ -417,7 +425,7 @@ ideas = {
 				}
 			}
 			available = {
-				NOT = { has_country_flag = TUR_hafiz_killed }
+				#NOT = { has_country_flag = TUR_hafiz_killed }
 			}
 			traits = { grand_vizier }
 			picture = turkish_vizier_2
@@ -427,12 +435,14 @@ ideas = {
 		}
 		TUR_topal_recep_pasha = {
 			allowed = {
-				NOT = { has_country_flag = TUR_recep_killed }
 				original_tag = TUR
+			}
+			visible = {
+				NOT = { has_country_flag = TUR_recep_killed }
 				has_country_flag = TUR_hafiz_killed
 			}
 			available = {
-				NOT = { has_country_flag = TUR_recep_killed }
+				#NOT = { has_country_flag = TUR_recep_killed }
 			}
 			traits = { grand_vizier }
 			picture = turkish_vizier_4
@@ -443,6 +453,8 @@ ideas = {
 		TUR_tabaniyassi_mehmed_pasha = {
 			allowed = {
 				original_tag = TUR
+			}
+			visible = {
 				has_country_flag = TUR_recep_discovered
 			}
 			traits = { grand_vizier }

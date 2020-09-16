@@ -14,9 +14,49 @@ country_event = {
 
 	option = {
 		name = occupied_countries.1.a
-
+		trigger = {
+			OR = {
+				has_war_with = FROM
+				FROM = { exists = no }
+			}
+		}
 		ai_chance = {
 			base = 100
+			modifier = {
+				factor = 0
+				original_tag = SPN
+				FROM = {
+					tag = UPS
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = NUS
+				has_cosmetic_tag = USE
+				FROM = {
+					is_german_tag = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = TUR
+				FROM = {
+					OR = {
+						tag = HUN
+						tag = CRO
+						tag = SER
+					}
+					exists = no
+				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = PER
+				FROM = {
+					tag = TUR
+					exists = yes
+				}
+			}
 		}
 		
 		if = {
@@ -41,5 +81,8 @@ country_event = {
 	option = {
 		name = occupied_countries.1.b
 		# do nothing
+		ai_chance = {
+			base = 1
+		}
 	}
 }

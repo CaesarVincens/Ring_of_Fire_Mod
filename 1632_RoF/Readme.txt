@@ -13,6 +13,14 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.7.4 - Jun. 5, 2020
+Updated to HoI4 1.9.3
+A few flag fixes
+
+Alpha 0.7.3 - May 6, 2020
+Updated to HoI 1.9.2
+Fixed up some bugs related to collaboration governments
+
 Alpha 0.7.2 - Mar. 23, 2020
 Cleaned up map errors by adding several new states and adjusting a few strategic regions.
 

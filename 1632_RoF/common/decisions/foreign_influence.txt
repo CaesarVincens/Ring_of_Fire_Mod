@@ -474,6 +474,10 @@ foreign_influence = {
 		cost = 0
 
 		available = {
+			OR = {
+				has_war_with = FROM
+				FROM = { exists = no }
+			}
 			has_core_occupation_modifier = {
 				occupied_country_tag = FROM
 				modifier = compliance_80
