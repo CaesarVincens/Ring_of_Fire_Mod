@@ -13,6 +13,9 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.7.5 - Oct. 15, 2020
+Updated to HoI4 1.10
+
 Alpha 0.7.4 - Jun. 5, 2020
 Updated to HoI4 1.9.3
 A few flag fixes

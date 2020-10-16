@@ -1,4 +1,4 @@
-version="1.9.*"
+version="0.7.5"
 tags={
 	"Alternative History"
 }
@@ -33,5 +33,5 @@ replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 picture="thumbnail.png"
-supported_version="1.9.3"
+supported_version="1.10.*"
 remote_file_id="1160009836"
