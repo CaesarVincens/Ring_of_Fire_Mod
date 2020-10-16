@@ -1,7 +1,7 @@
 state = {
 	id = 342
 	name= "STATE_342"
-	manpower = 1102896
+	manpower = 602896
 
 	resources = {
 		steel = 3
@@ -10,7 +10,7 @@ state = {
 
 	history = {
 		owner = POL
-		victory_points = { 9295 3 }
+		victory_points = { 6229 3 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -18,9 +18,10 @@ state = {
 			air_base = 0
 		}
 		add_core_of = POL
+		add_core_of = LIT
 	}
 
 	provinces = {
-		327 530 3272 3320 3337 3354 6229 6281 6296 6314 6340 6360 6376 6407 9246 9295 9357 9374 9404 9438 9483 9499 9731 11226 11312 11391 11498 
+		530 3337 3354 6229 6314 6360 6376 6407 9483 9499 9731 
 	}
 }

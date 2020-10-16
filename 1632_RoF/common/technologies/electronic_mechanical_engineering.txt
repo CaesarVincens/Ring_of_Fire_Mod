@@ -432,7 +432,10 @@ technologies = {
 		
 		research_cost = 1
 		start_year = 1633
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 6 }
@@ -455,7 +458,10 @@ technologies = {
 		
 		research_cost = 1
 		start_year = 1635
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 10 }
@@ -478,7 +484,10 @@ technologies = {
 		
 		research_cost = 1
 		start_year = 1637
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 14 }
@@ -501,7 +510,10 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1633
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 6 }
@@ -524,7 +536,10 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1635
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 10 }
@@ -547,7 +562,10 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1637
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 14 }

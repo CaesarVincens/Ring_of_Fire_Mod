@@ -33,6 +33,20 @@ ideas = {
 			removal_cost = -1
 			picture = generic_war_preparation	
 		}
+		SWE_truce_of_altmark = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = POL
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees	
+		}
 		SWE_lion_of_the_north = {
 			allowed = {
 				always = no

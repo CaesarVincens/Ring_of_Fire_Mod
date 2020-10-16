@@ -1,4 +1,3 @@
-
 state = {
 	id = 344
 	name = "STATE_344"
@@ -21,9 +20,9 @@ state = {
 	}
 
 	provinces = {
-		17 243 279 388 3381 3460 3532 6401 6558 9532 11232 11515 
+		388 3460 3532 6558 9252 11260 
 	}
-	manpower = 1440360
+	manpower = 840360
 	buildings_max_level_factor = 1.000
-	state_category = large_town
+	state_category = city
 }

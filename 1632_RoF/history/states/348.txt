@@ -9,7 +9,7 @@ state = {
 	history = {
 		owner = POL
 		victory_points = {
-			493 3 
+			9508 3 
 		}
 		buildings = {
 			infrastructure = 2
@@ -23,9 +23,9 @@ state = {
 	}
 
 	provinces = {
-		493 506 562 584 3458 3497 3586 6416 9439 9508 9546 11428 11430 11532 11558 
+		493 584 9508 9546 11428 11558 
 	}
-	manpower = 1825112
+	manpower = 625112
 	buildings_max_level_factor = 1.000
 	state_category = town
 }

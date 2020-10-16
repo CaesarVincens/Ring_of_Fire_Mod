@@ -78,6 +78,10 @@ add_ideas = {
 	SWE_UPS_support
 	SWE_lion_of_the_north
 }
+add_timed_idea = {
+    idea = SWE_truce_of_altmark
+    days = 1560
+}
 set_stability = 0.7
 set_war_support = 0.8
 create_country_leader = {

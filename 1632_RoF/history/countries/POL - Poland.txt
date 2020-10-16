@@ -43,9 +43,29 @@ set_popularities = {
 	neutrality = 2
 }
 
+#Sejm
+set_variable = { var = sejm_support value = 100 }
+set_variable = { var = sejm_total value = 200 }
+set_variable = { var = sejm_low value = 90 }
+set_variable = { var = sejm_medium value = 120 }
+set_variable = { var = sejm_high value = 150 }
+POL_recalc_sejm_icon_frames = yes
+
 set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
+	freedom_of_religion
+	POL_henrician_articles
+	POL_eastern_serfdom_1
+	POL_grain_exports
+}
+add_timed_idea = {
+    idea = POL_treaty_of_stary_targ
+    days = 1560
+}
+add_timed_idea = {
+    idea = POL_truce_of_deulino
+    days = 767
 }
 set_stability = 0.5
 create_country_leader = {
@@ -54,6 +74,24 @@ create_country_leader = {
     picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
     expire = "1632.11.1"
     ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Sigismund III Vasa"
+    desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
+    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
+    expire = "1632.11.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Sigismund III Vasa"
+    desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
+    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
+    expire = "1632.11.1"
+    ideology = absolute_monarchy_neutral
     traits = {
     }
 }

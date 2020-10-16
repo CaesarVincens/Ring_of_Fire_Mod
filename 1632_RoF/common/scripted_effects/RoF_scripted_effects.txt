@@ -686,9 +686,9 @@ reduce_state_category = {
 	}
 }
 
-##########################################
-### Check for CoC vars and apply idea ####
-##########################################
+###########################################
+#### Check for CoC vars and apply idea ####
+###########################################
 
 #From scope of (original country)
 clear_CoC_vars_and_flags = {

@@ -24,6 +24,18 @@ ideas = {
 			}
 			picture = generic_democratic_drift_bonus
 		}
+		RUS_truce_of_deulino = {
+			name = truce_of_deulino
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = POL
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
 		RUS_up_timer_advisor = {
 			allowed = {
 				always = no
@@ -364,6 +376,11 @@ ideas = {
 			allowed = {
 				original_tag = RUS
 			}
+			visible = {
+				NOT = {
+					has_country_flag = filaret_gone
+				}
+			}
 			traits = {
 				filaret_trait
 			}
@@ -477,6 +494,10 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = RUS_establish_dacha
+				NOT = {
+					has_cosmetic_tag = Directorate_Russia
+					has_cosmetic_tag = Siberia
+				}
 			}
 			cost = 100
 			removal_cost = 10
@@ -528,6 +549,12 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = RUS_establish_gun_shop
+				NOT = {
+					has_cosmetic_tag = Free_Russia
+					has_cosmetic_tag = Siberia
+					has_cosmetic_tag = USSR
+					has_cosmetic_tag = United_States_Russia
+				}
 			}
 			cost = 100
 			removal_cost = 10

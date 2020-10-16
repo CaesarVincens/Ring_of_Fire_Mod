@@ -1,0 +1,45 @@
+﻿capital = 693
+
+#oob = "LIT_OOB"
+
+# Starting tech
+set_technology = {
+infrastructure_tech_base = 1
+pike_weapons = 1
+tercio_formation_tech = 1
+arquebus_weapons = 1
+heavy_artillery_1 = 1
+transport = 1
+}
+
+# Research Bonuses
+set_convoys = 0
+
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1631.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_popularities = {
+	absolutist = 19
+	constitutionalist = 19
+	liberal = 0
+	radical = 0
+	neutrality = 62
+}
+
+set_country_flag = religion_reformed
+add_ideas = {
+	balanced_eco
+}
+create_country_leader = {
+    name = "Semyon Vitovsky"
+    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
+    picture = "gfx/interface/ideas/idea_george_v.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}

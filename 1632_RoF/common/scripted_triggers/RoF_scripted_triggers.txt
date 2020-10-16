@@ -217,3 +217,28 @@ fully_ind_focus_block = {
 		always = yes
 	}
 }
+
+###########################################
+### Polish-Lithuanian Commonwealth Sejm ###
+###########################################
+
+sejm_low_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = sejm_low_support_trigger_tt
+		check_variable = { var = sejm_support value = sejm_low compare = greater_than_or_equals }
+	}
+}
+
+sejm_medium_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = sejm_medium_support_trigger_tt
+		check_variable = { var = sejm_support value = sejm_medium compare = greater_than_or_equals }
+	}
+}
+
+sejm_high_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = sejm_high_support_trigger_tt
+		check_variable = { var = sejm_support value = sejm_high compare = greater_than_or_equals }
+	}
+}

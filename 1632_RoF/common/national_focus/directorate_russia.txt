@@ -34,7 +34,7 @@ focus_tree = {
 
 
 	focus = {
-		id = DIRRUS_advance_arms
+		id = oldDIRRUS_advance_arms
 		icon = GFX_goal_generic_small_arms
 		x = 4
 		y = 0
@@ -53,13 +53,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = DIRRUS_build_more_airships
+		id = oldDIRRUS_build_more_airships
 		icon = GFX_goal_generic_air_doctrine
 		x = 0
 		y = 1
 		cost = 10
-		relative_position_id = DIRRUS_advance_arms
-		prerequisite = { focus = DIRRUS_advance_arms }
+		relative_position_id = oldDIRRUS_advance_arms
+		prerequisite = { focus = oldDIRRUS_advance_arms }
 		completion_reward = {
 			air_experience = 20
 			add_ideas = RUS_airship_production
@@ -74,7 +74,7 @@ focus_tree = {
 	####################
 	
 	focus = {
-		id = DIRRUS_secure_bureaus
+		id = oldDIRRUS_secure_bureaus
 		icon = GFX_focus_generic_treaty
 		x = 7
 		y = 0
@@ -92,13 +92,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DIRRUS_recapture_arkhangelsk
+		id = oldDIRRUS_recapture_arkhangelsk
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -1
 		y = 1
 		cost = 10
-		relative_position_id = DIRRUS_secure_bureaus
-		prerequisite = { focus = DIRRUS_secure_bureaus }
+		relative_position_id = oldDIRRUS_secure_bureaus
+		prerequisite = { focus = oldDIRRUS_secure_bureaus }
 		completion_reward = {
 			transfer_state = 381
 			381 = {
@@ -114,13 +114,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DIRRUS_start_civil_war
+		id = oldDIRRUS_start_civil_war
 		icon = GFX_goal_generic_occupy_start_war
 		x = 1
 		y = 1
 		cost = 5
-		relative_position_id = DIRRUS_secure_bureaus
-		prerequisite = { focus = DIRRUS_secure_bureaus }
+		relative_position_id = oldDIRRUS_secure_bureaus
+		prerequisite = { focus = oldDIRRUS_secure_bureaus }
 		completion_reward = {
 			country_event = {
 				id = RoF_RUS.120
@@ -135,13 +135,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DIRRUS_hire_kazakh
+		id = oldDIRRUS_hire_kazakh
 		icon = GFX_goal_tripartite_pact
 		x = 0
 		y = 1
 		cost = 10
-		relative_position_id = DIRRUS_start_civil_war
-		prerequisite = { focus = DIRRUS_start_civil_war }
+		relative_position_id = oldDIRRUS_start_civil_war
+		prerequisite = { focus = oldDIRRUS_start_civil_war }
 		available = {
 			#date > 1637.1.1
 		}

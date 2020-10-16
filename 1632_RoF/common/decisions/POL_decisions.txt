@@ -1,0 +1,111 @@
+POL_major_decisions = {
+	POL_test_1 = {
+		available = {
+			sejm_low_support_trigger = yes
+			sejm_medium_support_trigger = yes
+			sejm_high_support_trigger = yes
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+}
+
+POL_sejm = {
+	POL_test_2 = {
+		complete_effect = {
+			POL_recalc_sejm_icon_frames = yes
+			set_variable = { var = sejm_low value = 90 }
+			set_variable = { var = sejm_medium value = 120 }
+			set_variable = { var = sejm_high value = 150 }
+		}
+	}
+	POL_reduce_sejm10 = {
+		complete_effect = {
+			POL_sejm_small_opposition = yes
+			POL_sejm_medium_opposition = yes
+			POL_sejm_large_opposition = yes
+			POL_recalc_sejm_icon_frames = yes
+		}
+	}
+	POL_increase_sejm10 = {
+		complete_effect = {
+			POL_sejm_small_support = yes
+			POL_sejm_medium_support = yes
+			POL_sejm_large_support = yes
+			POL_recalc_sejm_icon_frames = yes
+		}
+	}
+	POL_small_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			check_variable = { sejm_support < sejm_total }
+			not = {
+				has_decision = POL_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.3
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				sejm_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 30
+		remove_effect = {
+			POL_sejm_small_support = yes
+		}
+	}
+	POL_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			check_variable = { sejm_support < sejm_total }
+			not = {
+				has_decision = POL_small_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				sejm_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+			POL_sejm_medium_support = yes
+		}
+	}
+}

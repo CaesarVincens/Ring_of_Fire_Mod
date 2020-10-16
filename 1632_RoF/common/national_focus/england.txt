@@ -9,23 +9,38 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 50 y = 1300 }
+	initial_show_position = {
+		x = 5
+		y = 0
+	}
+
+	#start
 	focus = {
 		id = ENG_collect_tarriffs
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 15.00
-		x = 13
+		x = 15
 		y = 0
+		offset = {
+			trigger = {
+				OR = {
+					has_completed_focus = ENG_arrest_cromwell
+					has_completed_focus = ENG_hide_cromwell
+				}
+			}
+			x = -1
+			y = 0
+		}
 		ai_will_do = {
 			factor = 10
 		}
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			#idea tariffs
 			add_ideas = ENG_tarrifs
 		}
-
 	}
+
 	####################
 	#  MILITARY  TREE  #
 	####################
@@ -176,6 +191,7 @@ focus_tree = {
 			factor = 1
 		}
 	}
+
 	focus = {
 		id = ENG_navy_reforms
 		icon = GFX_goal_generic_navy_doctrines_tactics
@@ -196,6 +212,7 @@ focus_tree = {
 			factor = 1
 		}
 	}
+
 	focus = {
 		id = ENG_experimental_concepts
 		icon = GFX_goal_continuous_naval_production
@@ -210,12 +227,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = steamship_bonus bonus = 0.5 uses = 1 category = steamship_tech }
-			#tech bonuses?
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+
 	#NAVY SUB-BRANCH
 	focus = {
 		id = ENG_grand_fleet
@@ -231,7 +248,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
-			#navy bonuses?
 		}
 		ai_will_do = {
 			factor = 1
@@ -245,8 +261,8 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
+
 	focus = {
 		id = ENG_frigate_concept
 		icon = GFX_goal_generic_navy_battleship
@@ -261,7 +277,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = frigate_bonus bonus = 0.5 uses = 1 category = frigate_tech }
-			#navy bonuses?
 		}
 		ai_will_do = {
 			factor = 1
@@ -275,8 +290,8 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
+
 	focus = {
 		id = ENG_dreadnoughts
 		icon = GFX_goal_generic_navy_cruiser
@@ -291,7 +306,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
 			add_tech_bonus = { name = ironclad_bonus bonus = 0.5 uses = 1 category = ironclad_tech }
-			#navy bonuses?
 		}
 		ai_will_do = {
 			factor = 1
@@ -305,8 +319,8 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
+
 	focus = {
 		id = ENG_coordinated_production
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -459,8 +473,8 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
+
 	#ARMY SUB-BRANCH
 	focus = {
 		id = ENG_army_for_the_realm
@@ -491,10 +505,9 @@ focus_tree = {
 				uses = 1
 				category = firearms_weapons
 			}
-			#army bonuses?
 		}
-
 	}
+
 	focus = {
 		id = ENG_artillery_regiments
 		icon = GFX_goal_generic_army_artillery
@@ -516,8 +529,8 @@ focus_tree = {
 				category = artillery
 			}
 		}
-
 	}
+	
 	focus = {
 		id = ENG_marines
 		icon = GFX_goal_generic_amphibious_assault
@@ -541,10 +554,9 @@ focus_tree = {
 				uses = 1
 				category = marine_tech
 			}
-			#army bonuses?
 		}
-
 	}
+
 	focus = {
 		id = ENG_new_cavalry
 		icon = GFX_goal_generic_cavalry
@@ -565,10 +577,9 @@ focus_tree = {
 				uses = 1
 				category = apc_tech
 			}
-			#army bonuses?
 		}
-
 	}
+
 	focus = {
 		id = ENG_tank_corps
 		icon = GFX_goal_generic_army_tanks
@@ -593,7 +604,6 @@ focus_tree = {
 				category = armor
 			}
 		}
-
 	}
 
 	#AIR SUB-BRANCH
@@ -713,8 +723,8 @@ focus_tree = {
 				category = air_research
 			}
 		}
-
 	}
+	
 	focus = {
 		id = ENG_raf
 		icon = GFX_goal_generic_air_fighter2
@@ -735,7 +745,6 @@ focus_tree = {
 				uses = 2
 				category = air_equipment
 			}
-			#air bonuses?
 		}
 	}
 
@@ -747,8 +756,18 @@ focus_tree = {
 		id = ENG_refurbishments
 		icon = GFX_goal_generic_production
 		cost = 10.00
-		x = -4
+		x = -6
 		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				OR = {
+					has_completed_focus = ENG_arrest_cromwell
+					has_completed_focus = ENG_hide_cromwell
+				}
+			}
+		}
 		relative_position_id = ENG_collect_tarriffs
 		prerequisite = {
 			focus = ENG_collect_tarriffs
@@ -822,8 +841,8 @@ focus_tree = {
 				set_state_flag = ENG_refurbishments_state
 			}
 		}
-
 	}
+
 	focus = {
 		id = ENG_royal_roads
 		icon = GFX_goal_generic_construct_infrastructure
@@ -831,7 +850,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_refurbishments
 		}
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ENG_refurbishments
 		#available_if_capitulated = yes
@@ -948,17 +967,17 @@ focus_tree = {
 				set_country_flag = infra_tech_1_flag
 			}
 		}
-
 	}
+
 	focus = {
 		id = ENG_royal_docks
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10.00
 		prerequisite = {
-			focus = ENG_royal_roads
+			focus = ENG_refurbishments
 		}
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = ENG_refurbishments
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY }
@@ -1094,21 +1113,717 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
 	}
+
+	focus = {
+		id = ENG_universities
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_refurbishments
+		}
+		x = 3
+		y = 1
+		allow_branch = {
+			always = yes
+		}
+		relative_position_id = ENG_refurbishments
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = ENG_restock_royal_arsenals
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_refurbishments
+		}
+		x = -3
+		y = 1
+		relative_position_id = ENG_refurbishments
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = ENG_restock_royal_arsenals_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ENG_restock_royal_arsenals_state
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ENG_restock_royal_arsenals_state
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_expand_royal_arsenals
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_restock_royal_arsenals
+		}
+		x = 0
+		y = 1
+		relative_position_id = ENG_restock_royal_arsenals
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = ENG_expand_royal_arsenals_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = ENG_expand_royal_arsenals_state
+			}
+			add_tech_bonus = {
+				name = firearm_bonus
+				bonus = 0.5
+				uses = 1
+				category = firearms_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_fortify_thames_medway
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_expand_royal_arsenals
+		}
+		x = 1
+		y = 1
+		relative_position_id = ENG_expand_royal_arsenals
+		#available_if_capitulated = yes
+		available = {
+			controls_state = 128
+			controls_state = 127
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		completion_reward = {
+			country_event = { id = RoF_ENG.111 }
+			custom_effect_tooltip = ENG_fortify_thames_medway.tt
+		}
+	}
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	focus = {
+		id = ENG_a_new_princess
+		icon = GFX_focus_generic_monarchy_2
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_collect_tarriffs
+		}
+		available = {
+			date > 1631.9.1
+		}
+		x = -1
+		y = 1
+		relative_position_id = ENG_collect_tarriffs
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = ENG_lennoxs_holiday
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_collect_tarriffs
+		}
+		x = 1
+		y = 1
+		relative_position_id = ENG_collect_tarriffs
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_CANON }
+		completion_reward = {
+			custom_effect_tooltip = ENG_lennoxs_holiday.tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = ENG_a_new_princess
+						date < 1632.2.1
+					}
+				country_event = { id = RoF_ENG.130 days = 68 }
+				}
+				else_if = {
+					limit = {
+						NOT = { has_completed_focus = ENG_a_new_princess }
+						date < 1632.2.1
+					}
+					country_event = { id = RoF_ENG.130 days = 138 }
+				}
+				else = {
+					country_event = { id = RoF_ENG.130 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_treaty_of_stgermain-en-laye
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_a_new_princess
+		}
+		prerequisite = {
+			focus = ENG_lennoxs_holiday
+		}
+		x = 0
+		y = 2
+		relative_position_id = ENG_collect_tarriffs
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
+		completion_reward = {
+			country_event = { id = RoF_ENG.120 }
+			#event
+		}
+	}
+
+	focus = {
+		id = ENG_cutting_the_cord
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_treaty_of_stgermain-en-laye
+		}
+		x = 0
+		y = 3
+		relative_position_id = ENG_collect_tarriffs
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
+		completion_reward = {
+			country_event = { id = RoF_ENG.131 }
+			add_political_power = 50
+			if = {
+				limit = {
+					amount_taken_ideas = {
+						amount < 3
+						slots = { political_advisor }
+					}
+				}
+				custom_effect_tooltip = ENG_thomas_wentworth.tt
+				hidden_effect = {
+					add_ideas = ENG_thomas_wentworth
+				}
+			}
+		}
+	}
+
+	############
+	# Alt-path #
+	############
+
+	focus = {
+		id = ENG_hide_cromwell
+		icon = GFX_focus_generic_home_defense
+		cost = 5.00
+		prerequisite = {
+			focus = ENG_cutting_the_cord
+		}
+		mutually_exclusive = {
+			focus = ENG_arrest_cromwell
+		}
+		allow_branch = {
+			NOT = { has_completed_focus = ENG_arrest_cromwell }
+		}
+		x = 2
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_hide_cromwell
+			}
+			x = -2
+			y = 0
+		}
+		relative_position_id = ENG_cutting_the_cord
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			if = {
+				limit = {
+					FRA = { NOT = { has_completed_focus = FRA_approach_americans } }
+				}
+				#has_country_flag = ostend_offer
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_ENG.135 }
+			custom_effect_tooltip = ENG_hide_cromwell.tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {
+		id = ENG_elizabeth_2nd_movement
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_hide_cromwell
+		}
+		x = 0
+		y = 1
+		relative_position_id = ENG_hide_cromwell
+		ai_will_do = {
+			factor = 10
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = { id = RoF_ENG.170 }
+		}
+	}
+
+	focus = {
+		id = ENG_constitutional_monarchy
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_elizabeth_2nd_movement
+		}
+		x = 0
+		y = 2
+		relative_position_id = ENG_hide_cromwell
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ENG_constitutional_monarchy.tt
+				ENG_constitutionalist_45 = yes
+			}
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			country_event = { id = RoF_ENG.171 }
+			custom_effect_tooltip = parliamentarians_chosen
+		}
+	}
+
+	focus = {
+		id = ENG_the_regency
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_constitutional_monarchy
+		}
+		mutually_exclusive = { focus = ENG_prince_rupert focus = ENG_princess_elizabeth }
+		x = 2
+		y = 1
+		relative_position_id = ENG_constitutional_monarchy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = ENG_civil_war_done
+			custom_trigger_tooltip = {
+				tooltip = ENG_queen_mary_2
+				has_global_flag = ENG_civil_war_done
+				NOT = { has_country_flag = ENG_queen_elizabeth_2 }
+				NOT = { has_country_flag = ENG_king_rupert }
+			}
+		}
+		bypass = {
+			has_country_flag = ENG_queen_mary_2
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = ENG_mary_regent.tt
+			#event
+		}
+	}
+
+	focus = {
+		id = ENG_princess_elizabeth
+		icon = GFX_focus_princess_elizabeth
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_constitutional_monarchy
+		}
+		mutually_exclusive = { focus = ENG_the_regency focus = ENG_prince_rupert }
+		x = 0
+		y = 1
+		relative_position_id = ENG_constitutional_monarchy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = ENG_civil_war_done
+			custom_trigger_tooltip = {
+				tooltip = ENG_queen_elizabeth_2
+				has_global_flag = ENG_civil_war_done
+				NOT = { has_country_flag = ENG_queen_mary_2 }
+				NOT = { has_country_flag = ENG_king_rupert }
+			}
+		}
+		bypass = {
+			has_country_flag = ENG_queen_elizabeth_2
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_country_leader = {
+				name = "Elizabeth Wittelsbach"
+				picture = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
+				ideology = constitutional_monarchy
+			}			#event
+		}
+	}
+
+	focus = {
+		id = ENG_prince_rupert
+		icon = GFX_focus_prince_rupert
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_constitutional_monarchy
+		}
+		mutually_exclusive = { focus = ENG_the_regency focus = ENG_princess_elizabeth }
+		x = -2
+		y = 1
+		relative_position_id = ENG_constitutional_monarchy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = ENG_civil_war_done
+			custom_trigger_tooltip = {
+				tooltip = ENG_king_rupert
+				has_global_flag = ENG_civil_war_done
+				NOT = { has_country_flag = ENG_queen_mary_2 }
+				NOT = { has_country_flag = ENG_queen_elizabeth_2 }
+			}
+		}
+		bypass = {
+			has_country_flag = ENG_king_rupert
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_country_leader = {
+				name = "Rupert Wittelsbach"
+				picture = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
+				ideology = constitutional_monarchy
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_constitutional_reforms
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_prince_rupert focus = ENG_princess_elizabeth focus = ENG_the_regency
+		}
+		mutually_exclusive = {
+			focus = ENG_value_of_monarchy
+		}
+		x = -1
+		y = 2
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_hide_cromwell
+			}
+			x = -1
+			y = 0
+		}
+		relative_position_id = ENG_constitutional_monarchy
+		available = {
+
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#country_event = { id = RoF_ENG.148 days = 2 }
+			if = {
+				limit = { has_completed_focus = ENG_prince_rupert }
+				add_ideas = ENG_strong_monarchy_R
+			}
+			if = {
+				limit = { has_completed_focus = ENG_the_regency }
+				add_ideas = ENG_strong_monarchy_M
+			}
+			if = {
+				limit = { has_completed_focus = ENG_princess_elizabeth }
+				add_ideas = ENG_strong_monarchy_E
+			}
+			else = {
+				custom_effect_tooltip = ENG_strong_monarchy.tt
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_completed_focus = ENG_prince_rupert
+			}
+		}
+		#available_if_capitulated = yes
+	}
+
+	focus = {
+		id = ENG_value_of_monarchy
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_prince_rupert focus = ENG_princess_elizabeth focus = ENG_the_regency
+		}
+		mutually_exclusive = {
+			focus = ENG_constitutional_reforms
+		}
+		x = 1
+		y = 2
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_hide_cromwell
+			}
+			x = 1
+			y = 0
+		}
+		relative_position_id = ENG_constitutional_monarchy
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = { has_completed_focus = ENG_prince_rupert }
+				add_ideas = ENG_figurehead_monarchy_R
+			}
+			if = {
+				limit = { has_completed_focus = ENG_the_regency }
+				add_ideas = ENG_figurehead_monarchy_M
+			}
+			if = {
+				limit = { has_completed_focus = ENG_princess_elizabeth }
+				add_ideas = ENG_figurehead_monarchy_E
+			}
+			else = {
+				custom_effect_tooltip = ENG_figurehead_monarchy.tt
+			}
+			#country_event = { id = RoF_ENG.173 days = 2 }
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_completed_focus = ENG_the_regency
+			}
+		}
+		#available_if_capitulated = yes
+	}
+
+	focus = {
+		id = ENG_alliance_with_the_swede
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = ENG_constitutional_monarchy
+		}
+		x = 4
+		y = 2
+		relative_position_id = ENG_constitutional_monarchy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_global_flag = ENG_civil_war_done
+		}
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			SWE = {
+				country_event = {
+					id = RoF_SWE.50
+				}
+			}
+		}
+	}
+
+	##############
+	# Canon Path #
+	##############
+	focus = {
+		id = ENG_arrest_cromwell
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5.00
+		prerequisite = {
+			focus = ENG_cutting_the_cord
+		}
+		mutually_exclusive = {
+			focus = ENG_hide_cromwell
+		}
+		allow_branch = {
+			NOT = { has_completed_focus = ENG_hide_cromwell }
+		}
+		x = -2
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_arrest_cromwell
+			}
+			x = 2
+			y = 0
+		}
+		relative_position_id = ENG_cutting_the_cord
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
+		available = {
+			if = {
+				limit = {
+					FRA = { NOT = { has_completed_focus = FRA_approach_americans } }
+				}
+				#has_country_flag = ostend_offer
+			}
+		}
+		completion_reward = {
+			country_event = { id = RoF_ENG.135 }
+			custom_effect_tooltip = ENG_arrest_cromwell.tt
+			#event
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
 	focus = {
 		id = ENG_seize_traitors_lands
 		icon = GFX_focus_rom_parties_end
 		cost = 10.00
 		prerequisite = {
-			focus = ENG_royal_docks
-		}
-		prerequisite = {
 			focus = ENG_arrest_cromwell
 		}
-		x = 0
-		y = 4
-		relative_position_id = ENG_refurbishments
+		x = -2
+		y = 1
+		relative_position_id = ENG_arrest_cromwell
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
@@ -1186,638 +1901,9 @@ focus_tree = {
 				}
 				set_state_flag = ENG_seize_traitors_lands_state
 			}
-			#industry bonuses?
-		}
-
-	}
-	focus = {
-		id = ENG_restock_royal_arsenals
-		icon = GFX_focus_RAJ_lions_of_the_great_war
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_refurbishments
-		}
-		x = -3
-		y = 1
-		relative_position_id = ENG_refurbishments
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = { has_state_flag = ENG_restock_royal_arsenals_state }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_capital = yes
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ENG_restock_royal_arsenals_state
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ENG_restock_royal_arsenals_state
-			}
-		}
-
-	}
-	focus = {
-		id = ENG_expand_royal_arsenals
-		icon = GFX_goal_generic_build_tank
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_restock_royal_arsenals
-		}
-		x = 0
-		y = 1
-		relative_position_id = ENG_restock_royal_arsenals
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = { has_state_flag = ENG_expand_royal_arsenals_state }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ENG_expand_royal_arsenals_state
-			}
-			add_tech_bonus = {
-				name = firearm_bonus
-				bonus = 0.5
-				uses = 1
-				category = firearms_weapons
-			}
-			#industry bonuses?
-		}
-
-	}
-	focus = {
-		id = ENG_fortify_thames_medway
-		icon = GFX_focus_generic_coastal_fort
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_expand_royal_arsenals
-		}
-		x = 1
-		y = 1
-		relative_position_id = ENG_expand_royal_arsenals
-		#available_if_capitulated = yes
-		available = {
-			controls_state = 128
-			controls_state = 127
-		}
-		search_filters = { FOCUS_FILTER_MILITARY }
-		completion_reward = {
-			country_event = { id = RoF_ENG.111 }
-			custom_effect_tooltip = ENG_fortify_thames_medway.tt
-			#industry bonuses?
-		}
-
-	}
-
-	####################
-	#  POLITICAL TREE  #
-	####################
-	focus = {
-		id = ENG_a_new_princess
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_collect_tarriffs
-		}
-		available = {
-			date > 1631.9.1
-		}
-		x = -1
-		y = 1
-		relative_position_id = ENG_collect_tarriffs
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.1
-		}
-
-
-	}
-	focus = {
-		id = ENG_lennoxs_holiday
-		icon = GFX_goal_generic_position_armies
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_collect_tarriffs
-		}
-		x = 1
-		y = 1
-		relative_position_id = ENG_collect_tarriffs
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_CANON }
-		completion_reward = {
-			custom_effect_tooltip = ENG_lennoxs_holiday.tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_completed_focus = ENG_a_new_princess
-						date < 1632.2.1
-					}
-				country_event = { id = RoF_ENG.130 days = 69 }
-				}
-				else_if = {
-					limit = {
-						NOT = { has_completed_focus = ENG_a_new_princess }
-						date < 1632.2.1
-					}
-					country_event = { id = RoF_ENG.130 days = 139 }
-				}
-				else = {
-					country_event = { id = RoF_ENG.130 days = 1 }
-				}
-			}
-			#event later
-		}
-
-	}
-	focus = {
-		id = ENG_treaty_of_stgermain-en-laye
-		icon = GFX_focus_generic_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_a_new_princess
-		}
-		prerequisite = {
-			focus = ENG_lennoxs_holiday
-		}
-		x = 0
-		y = 2
-		relative_position_id = ENG_collect_tarriffs
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
-		completion_reward = {
-			country_event = { id = RoF_ENG.120 }
-			#event
-		}
-
-	}
-	focus = {
-		id = ENG_cutting_the_cord
-		icon = GFX_goal_tfv_sever_ties_with_uk
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_treaty_of_stgermain-en-laye
-		}
-		x = 0
-		y = 3
-		relative_position_id = ENG_collect_tarriffs
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
-		completion_reward = {
-			country_event = { id = RoF_ENG.131 days = 1 }
-			add_political_power = 50
-			if = {
-				limit = {
-					amount_taken_ideas = {
-						amount < 3
-						slots = { political_advisor }
-					}
-				}
-				custom_effect_tooltip = ENG_thomas_wentworth.tt
-				hidden_effect = {
-					add_ideas = ENG_thomas_wentworth
-				}
-			}
-
-
-		}
-
-	}
-	focus = {
-		id = ENG_hide_cromwell
-		icon = GFX_focus_generic_home_defense
-		cost = 5.00
-		prerequisite = {
-			focus = ENG_cutting_the_cord
-		}
-		mutually_exclusive = {
-			focus = ENG_arrest_cromwell
-		}
-		x = 2
-		y = 1
-		relative_position_id = ENG_cutting_the_cord
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			country_event = { id = RoF_ENG.135 days = 1 }
-			custom_effect_tooltip = ENG_hide_cromwell.tt
-			#event
-		}
-
-	}
-	focus = {
-		id = ENG_elizabeth_2nd_movement
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_hide_cromwell
-		}
-		x = 0
-		y = 1
-		relative_position_id = ENG_hide_cromwell
-		ai_will_do = {
-			factor = 10
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			country_event = { id = RoF_ENG.170 days = 1 }
-			#event
-		}
-
-	}
-	focus = {
-		id = ENG_constitutional_monarchy
-		icon = GFX_focus_AST_never_gallipoli
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_elizabeth_2nd_movement
-		}
-		x = 0
-		y = 2
-		relative_position_id = ENG_hide_cromwell
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ENG_constitutional_monarchy.tt
-				ENG_constitutionalist_45 = yes
-			}
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			country_event = { id = RoF_ENG.171 days = 1 }
-			custom_effect_tooltip = parliamentarians_chosen
-			#civil war
-		}
-
-	}
-
-	focus = {
-		id = ENG_the_regency
-		icon = GFX_goal_continuous_restrict_freedom
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_constitutional_monarchy
-		}
-		mutually_exclusive = { focus = ENG_prince_rupert focus = ENG_princess_elizabeth }
-		x = 2
-		y = 1
-		relative_position_id = ENG_constitutional_monarchy
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_global_flag = ENG_civil_war_done
-			custom_trigger_tooltip = {
-				tooltip = ENG_queen_mary_2
-				has_global_flag = ENG_civil_war_done
-				NOT = { has_country_flag = ENG_queen_elizabeth_2 }
-				NOT = { has_country_flag = ENG_king_rupert }
-			}
-		}
-		bypass = {
-			has_country_flag = ENG_queen_mary_2
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			custom_effect_tooltip = ENG_mary_regent.tt
-			#event
-		}
-
-	}
-	focus = {
-		id = ENG_princess_elizabeth
-		icon = GFX_focus_princess_elizabeth
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_constitutional_monarchy
-		}
-		mutually_exclusive = { focus = ENG_the_regency focus = ENG_prince_rupert }
-		x = 0
-		y = 1
-		relative_position_id = ENG_constitutional_monarchy
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_global_flag = ENG_civil_war_done
-			custom_trigger_tooltip = {
-				tooltip = ENG_queen_elizabeth_2
-				has_global_flag = ENG_civil_war_done
-				NOT = { has_country_flag = ENG_queen_mary_2 }
-				NOT = { has_country_flag = ENG_king_rupert }
-			}
-		}
-		bypass = {
-			has_country_flag = ENG_queen_elizabeth_2
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			create_country_leader = {
-				name = "Elizabeth Wittelsbach"
-				picture = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
-				ideology = constitutional_monarchy
-			}			#event
 		}
 	}
-	focus = {
-		id = ENG_prince_rupert
-		icon = GFX_focus_prince_rupert
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_constitutional_monarchy
-		}
-		mutually_exclusive = { focus = ENG_the_regency focus = ENG_princess_elizabeth }
-		x = -2
-		y = 1
-		relative_position_id = ENG_constitutional_monarchy
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_global_flag = ENG_civil_war_done
-			custom_trigger_tooltip = {
-				tooltip = ENG_king_rupert
-				has_global_flag = ENG_civil_war_done
-				NOT = { has_country_flag = ENG_queen_mary_2 }
-				NOT = { has_country_flag = ENG_queen_elizabeth_2 }
-			}
-		}
-		bypass = {
-			has_country_flag = ENG_king_rupert
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			create_country_leader = {
-				name = "Rupert Wittelsbach"
-				picture = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
-				ideology = constitutional_monarchy
-			}
-		}
-	}
-	focus = {
-		id = ENG_constitutional_reforms
-		icon = GFX_focus_rom_handle_king
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_prince_rupert focus = ENG_princess_elizabeth focus = ENG_the_regency
-		}
-		mutually_exclusive = {
-			focus = ENG_value_of_monarchy
-		}
-		x = -1
-		y = 2
-		relative_position_id = ENG_constitutional_monarchy
-		available = {
 
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			#country_event = { id = RoF_ENG.148 days = 2 }
-			if = {
-				limit = { has_completed_focus = ENG_prince_rupert }
-				add_ideas = ENG_strong_monarchy_R
-			}
-			if = {
-				limit = { has_completed_focus = ENG_the_regency }
-				add_ideas = ENG_strong_monarchy_M
-			}
-			if = {
-				limit = { has_completed_focus = ENG_princess_elizabeth }
-				add_ideas = ENG_strong_monarchy_E
-			}
-			else = {
-				custom_effect_tooltip = ENG_strong_monarchy.tt
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_completed_focus = ENG_prince_rupert
-			}
-		}
-		#available_if_capitulated = yes
-
-	}
-	focus = {
-		id = ENG_value_of_monarchy
-		icon = GFX_focus_rom_handle_king
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_prince_rupert focus = ENG_princess_elizabeth focus = ENG_the_regency
-		}
-		mutually_exclusive = {
-			focus = ENG_constitutional_reforms
-		}
-		x = 1
-		y = 2
-		relative_position_id = ENG_constitutional_monarchy
-		available = {
-
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			if = {
-				limit = { has_completed_focus = ENG_prince_rupert }
-				add_ideas = ENG_figurehead_monarchy_R
-			}
-			if = {
-				limit = { has_completed_focus = ENG_the_regency }
-				add_ideas = ENG_figurehead_monarchy_M
-			}
-			if = {
-				limit = { has_completed_focus = ENG_princess_elizabeth }
-				add_ideas = ENG_figurehead_monarchy_E
-			}
-			else = {
-				custom_effect_tooltip = ENG_figurehead_monarchy.tt
-			}
-			#country_event = { id = RoF_ENG.173 days = 2 }
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 2
-				has_completed_focus = ENG_the_regency
-			}
-		}
-		#available_if_capitulated = yes
-
-	}
-	focus = {
-		id = ENG_alliance_with_the_swede
-		icon = GFX_goal_generic_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_constitutional_monarchy
-		}
-		x = 4
-		y = 2
-		relative_position_id = ENG_constitutional_monarchy
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_global_flag = ENG_civil_war_done
-		}
-		#available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			SWE = {
-				country_event = {
-					id = RoF_SWE.50
-				}
-			}
-		}
-
-	}
-	focus = {
-		id = ENG_arrest_cromwell
-		icon = GFX_focus_rom_royal_dictatorship
-		cost = 5.00
-		prerequisite = {
-			focus = ENG_cutting_the_cord
-		}
-		mutually_exclusive = {
-			focus = ENG_hide_cromwell
-		}
-		x = -2
-		y = 1
-		relative_position_id = ENG_cutting_the_cord
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
-		completion_reward = {
-			country_event = { id = RoF_ENG.135 days = 1 }
-			custom_effect_tooltip = ENG_arrest_cromwell.tt
-			#event
-		}
-
-	}
 	focus = {
 		id = ENG_state_of_emergency
 		icon = GFX_goal_generic_political_pressure
@@ -1835,8 +1921,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ENG_emergency_measures
 		}
-
 	}
+
 	focus = {
 		id = ENG_move_to_oxford
 		icon = GFX_goal_generic_air_doctrine
@@ -1852,11 +1938,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_ENG.140 days = 1 }
+			country_event = { id = RoF_ENG.140 }
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_return_orkneys
 		icon = GFX_goal_generic_major_alliance
@@ -1889,11 +1975,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_ENG.110 days = 1 }
+			country_event = { id = RoF_ENG.110 }
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_changing_of_the_guard
 		icon = GFX_goal_generic_more_territorial_claims
@@ -1930,8 +2016,8 @@ focus_tree = {
 			}
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_the_scottish_question
 		icon = GFX_goal_generic_neutrality_focus
@@ -1956,11 +2042,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			country_event = { id = RoF_ENG.145 days = 1 }
+			country_event = { id = RoF_ENG.145 }
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_crush_the_rebels
 		icon = GFX_goal_demand_sudetenland
@@ -1973,6 +2059,13 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_arrest_cromwell
+			}
+			x = -1
+			y = 0
+		}
 		relative_position_id = ENG_the_scottish_question
 		available = {
 			has_country_flag = ENG_disolved_SCO_parliament
@@ -1986,8 +2079,8 @@ focus_tree = {
 			custom_effect_tooltip = royalists_chosen
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_overthrow_the_king
 		icon = GFX_focus_rom_abdicate
@@ -2001,6 +2094,13 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_arrest_cromwell
+			}
+			x = 1
+			y = 0
+		}
 		relative_position_id = ENG_the_scottish_question
 		available = {
 			has_country_flag = ENG_disolved_SCO_parliament
@@ -2021,8 +2121,12 @@ focus_tree = {
 			}
 		}
 		#available_if_capitulated = yes
-
 	}
+
+	##################
+	# POST CIVIL WAR #
+	##################
+
 	focus = {
 		id = ENG_retake_ireland
 		icon = GFX_focus_eng_move_to_secure_the_dominions
@@ -2084,11 +2188,11 @@ focus_tree = {
 				add_state_claim = 122
 			}
 			else = {
-				country_event = { id = RoF_ENG.161 days = 1 }
+				country_event = { id = RoF_ENG.161 }
 			}
 		}
-
 	}
+
 	focus = {
 		id = ENG_reintegrate_ireland
 		icon = GFX_focus_generic_self_management
@@ -2098,6 +2202,13 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_hide_cromwell
+			}
+			x = 0
+			y = -1
+		}
 		relative_position_id = ENG_constitutional_reforms
 		available = {
 			if = {
@@ -2140,19 +2251,39 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			country_event = { id = RoF_ENG.161 days = 1 }
+			country_event = { id = RoF_ENG.161 }
 		}
-
 	}
+
 	focus = {
 		id = ENG_united_kingdom
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		cost = 10.00
 		x = 2
 		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_arrest_cromwell
+			}
+			x = -2
+			y = 0
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_hide_cromwell
+			}
+			x = -1
+			y = -1
+		}
 		relative_position_id = ENG_retake_ireland
 		prerequisite = {
 			focus = ENG_retake_ireland focus = ENG_reintegrate_ireland
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = ENG_overthrow_the_king
+				has_completed_focus = ENG_value_of_monarchy
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -2184,6 +2315,7 @@ focus_tree = {
 			country_event = { id = RoF_ENG.160 days = 2 }
 		}
 	}
+
 	focus = {
 		id = ENG_commonwealth_of_england
 		icon = GFX_focus_eng_the_sun_never_sets
@@ -2194,7 +2326,27 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_hide_cromwell
+			}
+			x = 0
+			y = -1
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = ENG_arrest_cromwell
+			}
+			x = -1
+			y = 0
+		}
 		relative_position_id = ENG_value_of_monarchy
+		allow_branch = {
+			NOT = {
+				has_completed_focus = ENG_crush_the_rebels
+				has_completed_focus = ENG_constitutional_reforms
+			}
+		}
 		available = {
 			has_global_flag = ENG_civil_war_done
 		}
@@ -2224,8 +2376,8 @@ focus_tree = {
 			}
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_house_of_lords
 		icon = GFX_focus_generic_treaty
@@ -2239,6 +2391,13 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
+		offset = {
+			trigger = {
+				OR = { has_completed_focus = ENG_hide_cromwell has_completed_focus = ENG_arrest_cromwell }
+			}
+			x = -1
+			y = 0
+		}
 		relative_position_id = ENG_commonwealth_of_england
 		ai_will_do = {
 			factor = 10
@@ -2249,8 +2408,8 @@ focus_tree = {
 			add_ideas = ENG_house_of_lords_idea
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_liberty_or_death
 		icon = GFX_goal_support_democracy
@@ -2264,6 +2423,13 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		offset = {
+			trigger = {
+				OR = { has_completed_focus = ENG_hide_cromwell has_completed_focus = ENG_arrest_cromwell }
+			}
+			x = -1
+			y = 0
+		}
 		relative_position_id = ENG_commonwealth_of_england
 		ai_will_do = {
 			factor = 10
@@ -2274,8 +2440,8 @@ focus_tree = {
 			add_ideas = ENG_democracy_idea
 		}
 		#available_if_capitulated = yes
-
 	}
+
 	focus = {
 		id = ENG_uptime_knowledge
 		icon = GFX_goal_generic_scientific_exchange
@@ -2286,6 +2452,18 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
+		offset = {
+			trigger = {
+				OR = { has_completed_focus = ENG_hide_cromwell has_completed_focus = ENG_arrest_cromwell }
+			}
+			x = -1
+			y = 0
+		}
+		allow_branch = {
+			NOT = { 
+				has_completed_focus = ENG_crush_the_rebels
+			}
+		}
 		relative_position_id = ENG_commonwealth_of_england
 		ai_will_do = {
 			factor = 10
@@ -2295,8 +2473,8 @@ focus_tree = {
 			add_research_slot = 1
 			add_ideas = NUS_uptime_knowledge_idea
 		}
-
 	}
+
 	focus = {
 		id = ENG_trident
 		icon = GFX_focus_rocketry
@@ -2304,9 +2482,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_uptime_knowledge
 		}
-		x = 5
-		y = 12
-		relative_position_id = ENG_collect_tarriffs
+		x = 0
+		y = 1
+		relative_position_id = ENG_uptime_knowledge
 		ai_will_do = {
 			factor = 10
 		}
@@ -2314,25 +2492,5 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ENG_trident
 		}
-	}
-	focus = {
-		id = ENG_universities
-		icon = GFX_goal_tfv_generic_tech_sharing
-		cost = 10.00
-		prerequisite = {
-			focus = ENG_united_kingdom
-			focus = ENG_uptime_knowledge
-		}
-		x = 3
-		y = 12
-		relative_position_id = ENG_collect_tarriffs
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-
 	}
 }

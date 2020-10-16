@@ -349,13 +349,54 @@ sub_units = {
 		soft_attack = -0.4
 		hard_attack = -0.4
 
-
 		can_be_parachuted = yes
 
 		urban = {
 			attack = 0.1
 			defence = 0.1
 		}
+	}
 
+	gulyay_gorod = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_all_infantry
+		}
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 5
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 200
+
+		#Misc Abilities
+		training_time = 100
+		suppression = 0
+		weight = 0.3
+
+		supply_consumption = 0.03
+
+		need = {
+			gulyay_gorod_equipment = 100
+		}
+
+		# Support nerfs to combat abilities
+		#entrenchment = 5
 	}
 }

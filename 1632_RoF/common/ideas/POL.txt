@@ -1,5 +1,49 @@
 ideas = {
 	country = {
+		POL_grain_exports = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_agrarian_society
+		}
+		POL_henrician_articles = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.25
+			}
+			picture = generic_disjointed_gov
+		}
+		POL_treaty_of_stary_targ = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SWE
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
+		POL_truce_of_deulino = {
+			name = truce_of_deulino
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = RUS
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
 		POL_eastern_serfdom_1 = {
 			allowed = {
 				always = no
@@ -20,7 +64,7 @@ ideas = {
 				global_building_slots_factor = -0.1
 				production_speed_buildings_factor = -0.1
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		POL_eastern_serfdom_2 = {
@@ -43,7 +87,7 @@ ideas = {
 				global_building_slots_factor = -0.05
 				production_speed_buildings_factor = -0.1
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		POL_eastern_serfdom_3 = {
@@ -65,7 +109,7 @@ ideas = {
 				consumer_goods_factor = 0.1
 				production_speed_buildings_factor = -0.05
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		POL_eastern_serfdom_4 = {
@@ -85,7 +129,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.05
 				consumer_goods_factor = 0.05
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 	}

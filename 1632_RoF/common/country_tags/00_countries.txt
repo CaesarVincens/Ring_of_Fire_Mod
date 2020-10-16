@@ -63,6 +63,7 @@ SPR = "countries/Spain.txt"
 BRG = "countries/Burgundy.txt"
 SIB = "countries/Siberia.txt"
 KUR = "countries/Kurland.txt"
+LIT = "countries/Lithuania.txt"
 
 #Balkans
 ALB = "countries/Albania.txt"

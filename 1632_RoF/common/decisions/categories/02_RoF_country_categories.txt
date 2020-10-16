@@ -132,3 +132,24 @@ TUR_combating_corruption_cat = {
 		has_completed_focus = TUR_combat_corruption
 	}
 }
+
+POL_major_decisions = {
+	icon = generic_political_actions
+	priority = 80
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		
+	}
+}
+POL_sejm = {
+	icon = pol_sejm
+	allowed = {
+		original_tag = POL
+	}
+
+	scripted_gui = pol_sejm_decision_ui	
+
+	priority = 85
+}

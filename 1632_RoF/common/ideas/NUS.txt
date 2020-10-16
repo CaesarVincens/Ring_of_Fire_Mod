@@ -273,6 +273,20 @@ ideas = {
 				factor = 0
 			}
 		}
+		NUS_francisco_nasi = {
+			allowed = {
+				original_tag = NUS
+			}
+			traits = { head_of_intelligence }
+			visible = {
+				has_intelligence_agency = yes
+			}
+			available = {
+				has_country_leader = {
+					name = "Michael Stearns"
+				}
+			}
+		}
 	}
 	tank_manufacturer = { 
 		designer = yes

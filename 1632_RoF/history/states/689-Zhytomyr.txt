@@ -1,0 +1,26 @@
+state={
+	id=689
+	name="STATE_689"
+
+	history = {
+		owner = POL
+		add_core_of = POL
+		add_core_of = RUT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		victory_points = {
+			11514 3
+		}
+	}
+
+	provinces = {
+		434 441 458 488 504 550 3452 3468 3470 3494 3507 3543 3570 6451 6478 6497 6556 6593 9451 9465 9466 9493 9533 9568 11424 11438 11453 11454 11464 11477 11490 11514 
+	}
+	manpower = 174000
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

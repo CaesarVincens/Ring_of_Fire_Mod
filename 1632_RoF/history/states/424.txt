@@ -6,7 +6,7 @@ state = {
 	history = {
 		owner = POM
 		victory_points = {
-			11343 3 
+			11372 3 
 		}
 		buildings = {
 			infrastructure = 2

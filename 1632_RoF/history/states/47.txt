@@ -10,7 +10,7 @@ state = {
 	history = {
 		owner = BRA
 		victory_points = {
-			11288 3 
+			537 3 
 		}
 		buildings = {
 			infrastructure = 2
@@ -26,7 +26,7 @@ state = {
 	}
 
 	provinces = {
-		444 537 3473 6236 9252 9277 9306 9387 11260 11288 11478 
+		444 537 3473 6236 9277 9306 9387 11288 11478 
 	}
 	manpower = 128400
 	buildings_max_level_factor = 1.000

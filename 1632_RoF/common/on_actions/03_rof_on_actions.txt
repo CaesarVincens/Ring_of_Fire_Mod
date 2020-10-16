@@ -83,12 +83,28 @@ on_actions = {
 				clr_global_flag = thirty_years_war_ongoing
 				set_global_flag = thirty_years_war_ended
 			}
+			if = {
+				limit = {
+					country_exists = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
 		}
 	}
 	
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	on_annex = {
 		effect = {
+			if = {
+				limit = {
+					has_cosmetic_tag = Poland_alone
+					FROM = {
+						tag = LIT
+					}
+				}
+				drop_cosmetic_tag = yes
+			}
 			if = {
 				limit = {
 					ROOT = {
@@ -207,6 +223,13 @@ on_actions = {
 				set_country_flag = former_colony
 				clr_country_flag = colony_flag
 			}
+			if = {
+				limit = {
+					FROM = { has_cosmetic_tag = Poland_alone }
+					tag = LIT
+				}
+				FROM = { drop_cosmetic_tag = yes }
+			}
 		}
 	}
 	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
@@ -223,6 +246,42 @@ on_actions = {
 						id = RoF_TUR.164
 					}
 				}
+			}
+		}
+	}
+	#ROOT is the nation being liberated, FROM is the leader of the liberators.
+	on_liberate = {
+		effect = {
+			if = {
+				limit = {
+					tag = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
+		}
+	}
+	#ROOT is free nation FROM is releaser.
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = {
+					tag = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
+		}
+	}
+	#ROOT is the nation being released, FROM is the overlord.
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
 			}
 		}
 	}

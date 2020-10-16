@@ -4,24 +4,24 @@ state = {
 	manpower = 164400
 
 	resources = {
-		chromium = 2
+		#chromium = 2
 		oil = 0
 	}
-	state_category = rural
+	state_category = city
 
 	history = {
-		owner = DAR
-		victory_points = { 10739 3 }
+		owner = POL
+		victory_points = { 3295 3 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}
-		add_core_of = DAR
+		add_core_of = POL
 	}
 
 	provinces = {
-		8052 10739 
+		243 548 3230 3295 6347 6401
 	}
 }

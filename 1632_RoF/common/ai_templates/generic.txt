@@ -535,6 +535,9 @@ infantry_generic = {
 	}
 	blocked_for = {
 		TUR
+		RUS
+		USR
+		SIB
 	}
 	upgrade_prio = {
 		factor = 2
@@ -705,6 +708,7 @@ infantry_generic = {
 			#merc_cavalry
 			heavy_artillery_brigade
 			jaeger_brigade
+			gulyay_gorod
 		}
 	}
 	line_infantry_default = {
@@ -791,6 +795,7 @@ infantry_generic = {
 			#merc_cavalry
 			jaeger_brigade
 			rocket_artillery
+			gulyay_gorod
 		}
 	}
 }
@@ -952,6 +957,7 @@ garrison_generic = {
 			#merc_tercio_infantry
 			spear_infantry
 			military_police
+			gulyay_gorod
 		}
 	}
 
@@ -1025,6 +1031,7 @@ garrison_generic = {
 			#merc_tercio_infantry
 			spear_infantry
 			military_police
+			gulyay_gorod
 		}
 	}
 	garrison_cavalry = {

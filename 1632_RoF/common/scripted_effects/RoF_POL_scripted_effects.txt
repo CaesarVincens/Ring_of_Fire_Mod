@@ -1,0 +1,132 @@
+#	Example:
+#
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+lessen_POL_serfdom = {
+	if = {
+		limit = { has_idea = POL_eastern_serfdom_1 }
+		swap_ideas = {
+			remove_idea = POL_eastern_serfdom_1
+			add_idea = POL_eastern_serfdom_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_eastern_serfdom_2 }
+		swap_ideas = {
+			remove_idea = POL_eastern_serfdom_2
+			add_idea = POL_eastern_serfdom_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_eastern_serfdom_3 }
+		swap_ideas = {
+			remove_idea = POL_eastern_serfdom_3
+			add_idea = POL_eastern_serfdom_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_eastern_serfdom_4 }
+		remove_ideas = POL_eastern_serfdom_4
+	}
+}
+
+###########################################
+### Polish-Lithuanian Commonwealth Sejm ###
+###########################################
+POL_sejm_small_opposition = {
+	custom_effect_tooltip = rof_pol_sejm_small_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -8 }
+	add_to_variable = { sejm_support = temp_factor }
+	round_variable = sejm_support
+	clamp_variable = { var = sejm_support max = sejm_total min = 0 }
+	POL_recalc_sejm_icon_frames = yes
+}
+
+POL_sejm_small_support = {
+	custom_effect_tooltip = rof_pol_sejm_small_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 10 }
+	add_to_variable = { sejm_support = temp_factor }
+	round_variable = sejm_support
+	clamp_variable = { var = sejm_support max = sejm_total min = 0 }
+	POL_recalc_sejm_icon_frames = yes
+}
+
+POL_sejm_medium_opposition = {
+	custom_effect_tooltip = rof_pol_sejm_medium_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -16 }
+	clamp_temp_variable = { var = temp_factor max = -6 min = -16 }
+	add_to_variable = { sejm_support = temp_factor }
+	round_variable = sejm_support
+	clamp_variable = { var = sejm_support max = sejm_total min = 0 }
+	POL_recalc_sejm_icon_frames = yes
+}
+
+POL_sejm_medium_support = {
+	custom_effect_tooltip = rof_pol_sejm_medium_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 20 }
+	clamp_temp_variable = { var = temp_factor max = 20 min = 10 }
+	add_to_variable = { sejm_support = temp_factor }
+	round_variable = sejm_support
+	clamp_variable = { var = sejm_support max = sejm_total min = 0 }
+	POL_recalc_sejm_icon_frames = yes
+}
+
+POL_sejm_large_opposition = {
+	custom_effect_tooltip = rof_pol_sejm_large_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -50 }
+	clamp_temp_variable = { var = temp_factor max = -20 min = -50 }
+	add_to_variable = { sejm_support = temp_factor }
+	round_variable = sejm_support
+	clamp_variable = { var = sejm_support max = sejm_total min = 0 }
+	POL_recalc_sejm_icon_frames = yes
+}
+
+POL_sejm_large_support = {
+	custom_effect_tooltip = rof_pol_sejm_large_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 60 }
+	clamp_temp_variable = { var = temp_factor max = 60 min = 30 }
+	add_to_variable = { sejm_support = temp_factor }
+	round_variable = sejm_support
+	clamp_variable = { var = sejm_support max = sejm_total min = 0 }
+	POL_recalc_sejm_icon_frames = yes
+}
+
+POL_recalc_sejm_icon_frames = {
+	
+	set_temp_variable = { sejm_temp = sejm_support }
+	divide_temp_variable = { sejm_temp = sejm_total }
+	multiply_temp_variable = { sejm_temp = 21 }
+	if = {
+		limit = { check_variable = { sejm_temp > 0 } }
+		clamp_temp_variable = {
+			var = sejm_temp
+			min = 1
+			max = 21
+		}
+	}
+	else = {
+		set_temp_variable = { sejm_temp = 1 }
+	}
+	round_temp_variable = sejm_temp
+	set_variable = { current_sejm_icon_frame = sejm_temp }
+}

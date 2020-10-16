@@ -1,0 +1,27 @@
+state={
+	id=690
+	name="STATE_690"
+
+	history = {
+		owner = POL
+		add_core_of = POL
+		add_core_of = RUT
+		add_core_of = RUS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		victory_points = {
+			3568 3
+		}
+	}
+
+	provinces = {
+		238 546 3480 3542 3568 6508 6532 6589 9506 
+	}
+	manpower = 93000
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

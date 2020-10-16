@@ -1,3 +1,62 @@
 RUS_major_decisions = {
-
+	RUS_retake_rezhev = {
+		available = {
+			controls_state = 387
+		}
+		activation = {
+			NOT = { controls_state = 387 }
+		}
+		days_mission_timeout = 180
+		selectable_mission = yes
+		complete_effect = {
+			hidden_effect = {
+				387 = {
+					set_demilitarized_zone = no
+				}
+				add_days_mission_timeout = {
+					mission = RUS_retake_rezhev
+					days = 60
+				}
+			}
+			set_country_flag = RUS_retake_rezhev_flag
+			start_border_war = {
+				change_state_after_war = yes
+				minimum_duration_in_days = 60
+				attacker = {
+					state = 385
+					num_provinces = 3
+					on_win = RoF_RUS.112
+					on_lose = RoF_RUS.113
+					on_cancel = RoF_RUS.114
+				}
+				defender = {
+					state = 387
+					num_provinces = 3
+					on_win = RoF_POL.151
+					on_lose = RoF_POL.152
+					on_cancel = RoF_POL.153
+				}
+			}
+			hidden_effect = {
+				set_border_war_data = {
+					attacker = 385
+					defender = 387
+					combat_width = 100
+					attacker_modifier = 0.1
+					defender_modifier = -0.1
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				divisions_in_border_state = {
+					size > 5
+					state = 385
+					border_state = 387
+				}
+			}
+		}
+	}
 }

@@ -86,6 +86,20 @@ leader_traits = {
 		}
 	}
 	
+	#ESPIONAGE IDEAS#
+
+	head_of_intelligence = {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		agency_upgrade_time = -0.15
+	}
+	
+	mastermind_code_cracker = {
+		random = no
+		sprite = 15
+		decryption_power = 15
+	}
 	
 	#ai_focus_defense_factor
 	#ai_focus_aggressive_factor

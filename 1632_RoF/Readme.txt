@@ -1,6 +1,6 @@
 ﻿1632 - The Ring of Fire brings the world of Eric Flint's 1632 series to Hearts of Iron IV.
 
-Play an alternate history set in the middle of the Thirty Years war where a town from the USA in the year 2000 has been transported to Germany in 1631. Play as the time-stranded Americans and find allies to survive the war raging around you, or play another country and see what advantage technology from the future can bring you in this turbulant time.
+Play an alternate history set in the middle of the Thirty Years war where a town from the USA in the year 2000 has been transported to Germany in 1631. Play as the time-stranded Americans and find allies to survive the war raging around you, or play another country and see what advantage technology from the future can bring you in this turbulent time.
 
 Lead Developer: CaesarVincens
 Focus Tree Contributions: Principality of Lichenstein, King of Nords
@@ -12,6 +12,12 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
+
+Alpha 0.8.0 - 
+Reworked Polish states to match historical regions
+Polish focus tree
+Reworked Russian civil war to use dynamic countries
+Updates to Russian and English focus trees making use of La Resistence updated layout mechanics
 
 Alpha 0.7.5 - Oct. 15, 2020
 Updated to HoI4 1.10

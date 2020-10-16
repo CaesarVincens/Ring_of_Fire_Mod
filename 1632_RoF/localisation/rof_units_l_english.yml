@@ -19,6 +19,8 @@
  jaeger_brigade_desc:0 "Jaeger, Grenzer, Chasseur, the name varies from place to place, but the role is the same. Light troops who excel at skirmishing and irregular battles."
  heavy_weapons_company:0 "Heavy Weapons Company"
  heavy_weapons_company_desc:0 "New technologies have made man-portable heavy weapons feasible. Morters, grendades, and shotguns give this company quite a punch."
+ gulyay_gorod:0 "Gulyay-Gorod"
+ gulyay_gorod_desc:0 "Gulyay-Gorod, walking walls, are a mobile defensive structure, peculiar to the open steppes of Eastern Europe. Ineffective against field guns, they provide good defense against small arms and charges. Especially effective in siege warfare."
  light_artillery_brigade:0 "Light Artillery"
  light_artillery_brigade_desc:0 "Light field cannons offer better integration with new infantry tactics. They are quicker and easier to maneuver and fire allowing for better and more shots against enemy formations. Although they do little against fortifications because of their lighter shot, they have plenty of punch against infantry."
  heavy_artillery_brigade:0 "Heavy Artillery"

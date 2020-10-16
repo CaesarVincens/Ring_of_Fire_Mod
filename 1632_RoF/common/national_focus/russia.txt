@@ -4,8 +4,15 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = RUS
-			NOT = { has_cosmetic_tag = Directorate_Russia }
+			original_tag = RUS
+			#NOT = { has_cosmetic_tag = Directorate_Russia }
+		}
+		modifier = {
+			add = 10
+			OR = {
+				tag = RSA
+				tag = RSC
+			}
 		}
 	}
 	default = no
@@ -38,10 +45,18 @@ focus_tree = {
 	focus = {
 		id = RUS_investigate_grantville
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 7
+		x = 8
 		y = 0
 		cost = 20
 		search_filters = { FOCUS_FILTER_CANON }
+		allow_branch = {
+			NOT = { 
+				has_country_flag = directorate_russia
+				has_country_flag = united_states_of_russia
+				has_country_flag = siberia_russia
+				has_completed_focus = RUS_fate_of_czar
+			}
+		}
 		completion_reward = {
 			add_political_power = 120
 		}
@@ -198,6 +213,9 @@ focus_tree = {
 			POL = { owns_state = 387 }
 			has_completed_focus = RUS_war_gaming
 		}
+		allow_branch = {
+			always = no
+		}
 		continue_if_invalid = yes
 		cancel_if_invalid = no
 		select_effect = {
@@ -239,7 +257,7 @@ focus_tree = {
 		id = RUS_expand_infantry
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = RUS_support_streltzi }
-		prerequisite = { focus = RUS_retake_rezhev }
+		#prerequisite = { focus = RUS_retake_rezhev }
 		x = 0
 		y = 2
 		cost = 10
@@ -262,7 +280,7 @@ focus_tree = {
 		id = RUS_expand_cavalry
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = RUS_support_boyar_cavalry }
-		prerequisite = { focus = RUS_retake_rezhev }
+		#prerequisite = { focus = RUS_retake_rezhev }
 		x = 0
 		y = 2
 		cost = 10
@@ -283,7 +301,7 @@ focus_tree = {
 	focus = {
 		id = RUS_strike_back_poland
 		icon = GFX_goal_generic_attack_allies
-		prerequisite = { focus = RUS_retake_rezhev }
+		#prerequisite = { focus = RUS_retake_rezhev }
 		x = 0
 		y = 2
 		cost = 10
@@ -293,6 +311,9 @@ focus_tree = {
 			POL = {
 				owns_state = 387
 			}
+		}
+		allow_branch = {
+			always = no
 		}
 		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
@@ -1323,14 +1344,326 @@ focus_tree = {
 		y = 1
 		cost = 5
 		relative_position_id = RUS_launch_czarina_evdokia
+		offset = {
+			trigger = {
+				has_completed_focus = RUS_fate_of_czar
+			}
+			x = 0
+			y = -9
+		}
 		available = {
+		}
+		allow_branch = {
+			always = yes
 		}
 		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = {
-				id = RoF_RUS.100
+				id = RoF_RUS.99
 			}
+			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = load_new_focus_tree_TT
 		}
 	}
+
+
+	##########################
+	# Directorate FOCUS TREE #
+	##########################
+
+	focus = {
+		id = DIRRUS_advance_arms
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		cost = 10
+		allow_branch = {
+			has_country_flag = directorate_russia
+		}
+		relative_position_id = RUS_fate_of_czar
+		prerequisite = {
+			focus = RUS_fate_of_czar
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 0.5
+				technology = repeating_rifle_tech
+				name = AK47_bonus
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_build_more_airships
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = DIRRUS_advance_arms
+		prerequisite = { focus = DIRRUS_advance_arms }
+		completion_reward = {
+			air_experience = 20
+			add_ideas = RUS_airship_production
+		}
+		ai_will_do = {
+			factor = 17
+		}
+	}
+
+	##############################
+	# Directorate POLITICAL TREE #
+	##############################
+	
+	focus = {
+		id = DIRRUS_secure_bureaus
+		icon = GFX_focus_generic_treaty
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = RUS_fate_of_czar
+		allow_branch = {
+			has_country_flag = directorate_russia
+		}
+		prerequisite = {
+			focus = RUS_fate_of_czar
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_recapture_arkhangelsk
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = DIRRUS_secure_bureaus
+		prerequisite = { focus = DIRRUS_secure_bureaus }
+		bypass = {
+			owns_state = 381
+		}
+		completion_reward = {
+			transfer_state = 381
+			381 = {
+				hidden_effect = {
+					reduce_state_category = yes
+				}
+				custom_effect_tooltip = reduce_state_category_tt
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_start_civil_war
+		icon = GFX_goal_generic_occupy_start_war
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = DIRRUS_secure_bureaus
+		prerequisite = { focus = DIRRUS_secure_bureaus }
+		completion_reward = {
+			country_event = {
+				id = RoF_RUS.120
+			}
+		}
+		bypass = {
+			has_war_with = USR
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DIRRUS_hire_kazakh
+		icon = GFX_goal_tripartite_pact
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = DIRRUS_start_civil_war
+		prerequisite = { focus = DIRRUS_start_civil_war }
+		available = {
+			#date > 1637.1.1
+		}
+		completion_reward = {
+			KAZ = {
+				country_event = {
+					id = RoF_RUS.128
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	##########################
+	# Free Russia FOCUS TREE #
+	##########################
+
+	focus = {
+		id = USR_defend_kazan
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = RUS_fate_of_czar
+		allow_branch = {
+			has_country_flag = united_states_of_russia
+		}
+		prerequisite = {
+			focus = RUS_fate_of_czar
+		}
+		completion_reward = {
+			country_event = {
+				id = RoF_RUS.119
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = USR_capital_in_east
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USR_defend_kazan }
+		relative_position_id = USR_defend_kazan
+		completion_reward = {
+			215 = {
+				hidden_effect = {
+					increase_state_category = yes
+				}
+				custom_effect_tooltip = increase_state_category_tt
+				set_temp_variable = { civ_factories = 5 }
+				subtract_from_temp_variable = { civ_factories = industrial_complex_level }
+				clamp_temp_variable = {
+					var = civ_factories
+					min = 1
+					max = 5
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = civ_factories
+					instant_build = yes
+				}
+				set_temp_variable = { mil_factories = 5 }
+				subtract_from_temp_variable = { mil_factories = arms_factory_level }
+				clamp_temp_variable = {
+					var = mil_factories
+					min = 1
+					max = 5
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = mil_factories
+					instant_build = yes
+				}
+				add_manpower = 50000
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = USR_good_will_tours
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 2
+		cost = 10
+		relative_position_id = RUS_fate_of_czar
+		allow_branch = {
+			has_country_flag = united_states_of_russia
+		}
+		prerequisite = {
+			focus = RUS_fate_of_czar
+		}
+		completion_reward = {
+			add_ideas = USR_free_russia
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = USR_mission_to_mangazeya
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = USR_good_will_tours }
+		prerequisite = { focus = USR_capital_in_east }
+		relative_position_id = USR_capital_in_east
+		completion_reward = {
+			country_event = {
+				id = RoF_RUS.121
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = USR_constitutional_convention
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USR_mission_to_mangazeya }
+		relative_position_id = USR_mission_to_mangazeya
+		select_effect = {
+			
+		}
+		completion_reward = {
+			country_event = {
+				id = RoF_RUS.130
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = USR_return_to_moscow
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = USR_constitutional_convention }
+		relative_position_id = USR_constitutional_convention
+		available = {
+			owns_state = 389
+		}
+		completion_reward = {
+			set_capital = 389
+			add_political_power = 60
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
 }

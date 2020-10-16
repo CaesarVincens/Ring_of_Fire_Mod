@@ -45,3 +45,32 @@
 #	# ...
 #}
 
+#USR = {
+#	original_tag = RUS
+#	has_country_flag = united_states_of_russia
+#}
+
+#SIB = {
+#	original_tag = RUS
+#	has_country_flag = siberia_russia
+#}
+
+#DRR = {
+#	original_tag = DRR
+#	has_country_flag = directorate_russia
+#}
+
+RSA = {
+	original_tag = RUS
+	has_country_flag = united_states_of_russia
+}
+
+RSB = {
+	original_tag = RUS
+	has_country_flag = siberia_russia
+}
+
+RSC = {
+	original_tag = RUS
+	has_country_flag = directorate_russia
+}

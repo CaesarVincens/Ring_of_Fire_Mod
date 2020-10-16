@@ -1,0 +1,97 @@
+focus_tree = {
+	id = poland_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = POL
+		}
+	}
+
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	shared_focus = naval_research_focus
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	shared_focus = army_drilling
+
+	####################
+	#  INDUSTRY  TREE  #
+	####################
+	shared_focus = industrial_advances
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	focus = {
+		id = POL_support_wladyslaws_election
+		icon = GFX_focus_wladyslaw_iv
+		cost = 10.00
+		x = 23
+		y = 0
+		#available_if_capitulated = yes
+		mutually_exclusive = {
+			focus = POL_support_john_casimirs_election
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 120
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_support_john_casimirs_election
+		icon = GFX_focus_john_casimir
+		cost = 10.00
+		x = 2
+		y = 0
+		relative_position_id = POL_support_wladyslaws_election
+		#available_if_capitulated = yes
+		mutually_exclusive = {
+			focus = POL_support_wladyslaws_election
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			sejm_high_support_trigger = yes
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_election_sejm
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = POL_support_wladyslaws_election
+			focus = POL_support_john_casimirs_election
+		}
+		relative_position_id = POL_support_wladyslaws_election
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 120
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+}
