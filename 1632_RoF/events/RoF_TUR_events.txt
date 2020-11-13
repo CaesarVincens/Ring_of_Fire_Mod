@@ -666,6 +666,15 @@ country_event = {
 			}
 		}
 		set_state_controller = 327
+		if = {
+			limit = {
+				PER = { is_ai = yes}
+			}
+			327 = {
+				teleport_armies = {
+				}
+			}
+		}
 	}
 }
 
@@ -785,6 +794,7 @@ country_event = {
 			transfer_state = 528
 			transfer_state = 529
 			transfer_state = 327
+			remove_ideas = TUR_safavid_war_2
 		}
 	}
 	option = {
@@ -796,6 +806,7 @@ country_event = {
 			transfer_state = 528
 			transfer_state = 529
 			transfer_state = 327
+			remove_ideas = TUR_safavid_war_2
 		}
 	}
 }
@@ -873,7 +884,7 @@ country_event = {
 			create_production_license = {
 				target = TUR
 				cost_factor = 1
-				equipment = { type = caplock_tech }
+				equipment = { type = caplock_rifle }
 			}
 		}
 		ai_chance = {
@@ -906,7 +917,7 @@ country_event = {
 			create_production_license = {
 				target = TUR
 				cost_factor = 1
-				equipment = { type = caplock_tech }
+				equipment = { type = caplock_rifle }
 			}
 		}
 		add_opinion_modifier = {

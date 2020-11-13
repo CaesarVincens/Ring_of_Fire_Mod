@@ -175,6 +175,7 @@ infantry_generic = {
 			cavalry
 			#merc_cavalry
 			heavy_artillery_brigade
+			heavy_artillery
 			jaeger_brigade
 			gulyay_gorod
 		}
@@ -252,6 +253,7 @@ infantry_generic = {
 			#merc_line_infantry
 			heavy_weapons_company
 			light_artillery_brigade
+			light_artillery
 			cavalry
 			#merc_cavalry
 			jaeger_brigade

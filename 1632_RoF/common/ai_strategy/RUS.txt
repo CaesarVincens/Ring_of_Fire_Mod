@@ -1,0 +1,173 @@
+# Written by Henrik "Groogy" Hansson
+# Modified by Daniel "Da9L" Sjöberg
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+RUS_retake_rezhev_strategy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_active_mission = RUS_retake_rezhev
+	}
+	abort = {
+		owns_state = 387
+	}
+	ai_strategy = {
+		type = front_control
+		state = 387
+		ratio = 0.01
+		priority = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 387
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = POL
+		value = 1000
+	}
+	ai_strategy = {
+		type = garrison
+		value = -50
+	}
+}
+
+RUS_asias_okay = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			num_divisions < 50
+			NOT = { tag = USB }
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		area = asia
+		value = -50
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = WAS
+		value = -50
+	}
+	ai_strategy = {
+		type = ignore_claim
+		id = WAS
+		value = 1
+	}
+	ai_strategy = {
+		type = conquer
+		id = WAS
+		value = -100
+	}
+}
+
+RUS_SWE_okay = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		num_divisions < 50
+	}
+	abort = {
+		has_war_with = SWE
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SWE
+		value = -80
+	}
+	ai_strategy = {
+		type = conquer
+		id = SWE
+		value = -100
+	}
+}
+#used for controlling invasion or regular fronts
+#ai_strategy = {
+# 	type = front_control
+#
+#	#you can define a target in following ways. you can define more than one
+#
+#	tag = GER 				# target against a specific country
+#	state = 42 				# target on a state
+#	strategic_region = 65	# target on a strategic region
+#	area = europe			# target on a specific ai area
+#	country_trigger = { always = no } 	# a trigger to check agaisnt a specific country. scope is enemy country from scope is our country
+#	state_trigger = { always = no } 	# a trigger to check agaisnt a state. scope is state. from scope is enemy country from.from scope is our country
+#
+#	ratio = 0.0 # the strategy is enabled only if ratio of the front covered by this strat's targets greater than this ratio
+#
+#	priority = 0 # default 0, higher prio strats will override lower
+#	ordertype = front # front or invasion. if set this strategy will only apply to that specific order type
+#	execution_type = careful # one of careful balanced rush rush_weak. if set will override the execution type of front (only for front orders)
+#	execute_order = yes # yes or no. if set will override execute or not decision of front
+#	manual_attack = yes # default yes. if no ai will not do manual pokes at enemy (only for front orders)
+#}
+
+#used for increasing/decreasing unit requests for invasions or fronts
+#ai_strategy = {
+#	# use one of them
+# 	type = front_unit_request
+# 	type = invasion_unit_request
+#
+#	#invasions will check invasion target, fronts will check provinces at front
+#
+#	tag = GER 				# province of a specific country
+#	state = 42 				# province on a state
+#	strategic_region = 65	# province on a strategic region
+#	area = europe			# province on a specific ai area
+#	country_trigger = { always = no } 	# a trigger to check agaisnt a specific country. scope is enemy country from scope is our country
+#	state_trigger = { always = no } 	# a trigger to check agaisnt a state. scope is state. from scope is enemy country from.from scope is our country
+#
+#	value = 40				# will be added as a factor over regular requests
+#}
+
+# ai_strategy = {
+# 	type = put_unit_buffers
+# 	
+#	# ratio of total armeis in country to be buffered
+# 	ratio = 0.4
+#
+#	# you can specify an order id. ratio of same orders ids will be share same ratio
+# 	order_id = 2
+# 	
+# 	# states to put garrison orders (if no state is friendly, strat is invalid)
+# 	states = { 
+# 		125
+# 		126
+# 		127
+# 		128
+# 		129
+# 		338
+# 		123
+# 		122 
+# 	}
+# 	
+#	# ai areas that the orders will use these buffers in
+# 	area = europe
+# 	area = asia
+# 	
+# 	# by default if you have orders in target areas, the buffer will request less units. 
+#	# you can override this to disable the feature
+# 	subtract_invasions_from_need = yes
+# 	subtract_fronts_from_need = yes
+# }

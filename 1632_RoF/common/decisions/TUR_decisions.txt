@@ -29,6 +29,37 @@ TUR_major_decisions = {
 			base = 1
 		}
 	}
+	TUR_annex_subject = {
+		allowed = {
+			OR = {
+				#is_debug = yes
+				always = yes
+				NOT = {
+					has_dlc = "Together for Victory"
+				}
+			}
+		}
+		visible = {
+			always = yes	
+		}
+		available = {
+			always = yes
+		}
+		target_trigger = {
+			FROM = { has_country_flag = TUR_annex_sub }
+		}
+		target_array = subjects@TUR
+		days_remove = 365
+		modifier = {
+			political_power_gain = -0.5
+		}
+		remove_effect = {
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+		}
+	}
 }
 TUR_coup_category = {
 	TUR_coup_threat = {
@@ -149,6 +180,22 @@ TUR_coup_category = {
 					compare = less_than_or_equals
 				}
 			}
+			modifier = {
+				add = 1
+				check_variable = {
+					var = janissary_threat
+					value = 0.3
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = -1
+				check_variable = {
+					var = janissary_threat
+					value = 0.2
+					compare = less_than
+				}
+			}
 		}
 	}
 	TUR_placate_beylerbeys = {
@@ -202,6 +249,22 @@ TUR_coup_category = {
 					var = days_mission_timeout@TUR_coup_threat
 					value = 120
 					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = {
+					var = beylerbey_threat
+					value = 0.3
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = -1
+				check_variable = {
+					var = beylerbey_threat
+					value = 0.2
+					compare = less_than
 				}
 			}
 		}

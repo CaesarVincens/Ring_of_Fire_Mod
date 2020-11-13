@@ -57,7 +57,7 @@ NUS_major_decisions = {
 		
 		fire_only_once = yes
 		available = {
-			has_country_flag = NUS_start_CoC
+			num_divisions > 2
 		}
 		
 		activation = {
@@ -65,14 +65,16 @@ NUS_major_decisions = {
 		}
 		is_good = no
 		days_mission_timeout = 30
-		
+		selectable_mission = yes
 		timeout_effect = {
 			add_political_power = -40
 			hidden_effect = {
 				news_event = { id = RoF_NUS.113 }
 			}
 		}
+		cost = 20
 		complete_effect = {
+			country_event = { id = RoF_NUS.112 }
 			add_political_power = 20
 		}
 		ai_will_do = {
@@ -82,6 +84,7 @@ NUS_major_decisions = {
 	NUS_protect_Jena_decision = {
 		fire_only_once = yes
 		visible = {
+			always = no
 			has_active_mission = NUS_protect_Jena_mission
 		}
 		available = {
@@ -265,14 +268,18 @@ NUS_major_decisions = {
 		visible = {
 			has_global_flag = congress_of_copenhagen_begins
 		}
-		targets = { UPS SPN }
+		state_target = yes
+		targets = { 657 }
 		target_trigger = {
 			FROM = {
-				owns_state = 657
-				exists = yes
+				OR = {
+					is_owned_by = UPS
+					is_owned_by = SPN
+				}
 			}
 		}
 		highlight_states = { state = 657 }
+		on_map_mode = map_and_decisions_view
 		available = {
 			657 = {
 				OWNER = {
@@ -282,7 +289,9 @@ NUS_major_decisions = {
 		}
 		complete_effect = {
 			FROM = {
-				country_event = { id = RoF_USE.206 }
+				OWNER = {
+					country_event = { id = RoF_USE.206 }
+				}
 			}
 			#transfer_state = 657
 		}
@@ -324,15 +333,45 @@ NUS_major_decisions = {
 NUS_minor_decisions = {
 	NUS_test = {
 		visible = {
-			always = no
+			#always = no
 		}
 		complete_effect = {
-			add_to_faction = AUS
-			add_to_faction = SWE
-			add_to_faction = BOH
+			BRA = {
+				clr_country_flag = NUS_accept_demand@THIS
+			}
+			BRS = {
+				clr_country_flag = NUS_accept_demand@THIS
+			}
+		}
+	}
+	NUS_CoC_Speech_progress = {
+		icon = GFX_decision_generic_nationalism
+		visible = {
+			any_other_country = {
+				has_country_flag = NUS_coc_inspired
+			}
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		complete_effect = {
+			for_each_loop = {
+				array = NUS.patriotic_fervor_array
+				var:v = {
+					add_political_power = i
+				}
+			}
+			random_scope_in_array = {
+				array = patriotic_fervor_array
+				add_political_power = 1
+			}
+			add_political_power = patriotic_fervor_array^num
 		}
 	}
 	NUS_coc_speeches = {
+		fixed_random_seed = no
 		icon = GFX_decision_generic_nationalism
 		visible = {
 			any_other_country = {
@@ -345,7 +384,7 @@ NUS_minor_decisions = {
 		target_root_trigger = {
 			has_completed_focus = NUS_expand_committees
 		}
-		target_array = german_tags
+		target_array = global.german_tags
 		target_trigger = {
 			FROM = {
 				has_country_flag = CoC_present
@@ -364,11 +403,15 @@ NUS_minor_decisions = {
 		}
 		days_re_enable = 60
 		complete_effect = {
-			random_list ={
+			random_list = {
 				67 = {
 					add_to_variable = {
 						var = NUS_patriotic_fervor
 						value = 1
+					}
+					add_to_array = {
+						array = NUS.patriotic_fervor_array
+						value = FROM
 					}
 					FROM = {
 						set_country_flag = NUS_coc_inspired
@@ -387,5 +430,18 @@ NUS_minor_decisions = {
 			}
 		}
 		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_game_rule = {
+						rule = NUS_ai_behavior
+						option = RADICAL
+					}
+					has_country_flag = NUS_AI_RANDOM_RADICAL
+				}
+			}
+		}
 	}
 }

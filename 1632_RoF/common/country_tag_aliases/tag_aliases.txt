@@ -74,3 +74,10 @@ RSC = {
 	original_tag = RUS
 	has_country_flag = directorate_russia
 }
+
+# operative operation target
+# only set for majors who has agency
+# set on on_weekly
+MOT = {
+	variable = generic_operation_target
+}

@@ -1,0 +1,93 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+#Rename NUS-USE focuses based on choices
+defined_text = {
+	name = GetAbsolutistParty
+	text = {
+		trigger = {
+			original_tag = NUS
+			has_cosmetic_tag = USE
+		}
+		localization_key = USE_crown_loyalists_abs
+	}
+	text = {
+		trigger = {
+			original_tag = NUS
+			NOT = { has_cosmetic_tag = USE }
+		}
+		localization_key = NUS_absolutist_party
+	}
+	text = {
+		trigger = {
+			original_tag = NUS
+			has_completed_focus = NUS_martial_law
+		}
+		localization_key = NUS_imperialist_party
+	}
+	text = {
+		localization_key = absolutist
+	}
+}
+
+defined_text = {
+	name = GetConstitutionalistParty
+	text = {
+		trigger = {
+			original_tag = NUS
+			has_cosmetic_tag = USE
+		}
+		localization_key = USE_crown_loyalists
+	}
+	text = {
+		trigger = {
+			original_tag = NUS
+			NOT = { has_cosmetic_tag = USE }
+		}
+		localization_key = NUS_constitutionalist_party
+	}
+	text = {
+		localization_key = constitutionalist
+	}
+}
+
+defined_text = {
+	name = GetLiberalParty
+	text = {
+		trigger = {
+			original_tag = NUS
+		}
+		localization_key = NUS_liberal_party
+	}
+	text = {
+		localization_key = liberal
+	}
+}
+
+defined_text = {
+	name = GetRadicalParty
+	text = {
+		trigger = {
+			original_tag = NUS
+			has_completed_focus = NUS_establish_committees_of_correspondence
+		}
+		localization_key = NUS_coc
+	}
+	text = {
+		trigger = {
+			original_tag = NUS
+			NOT = { has_completed_focus = NUS_establish_committees_of_correspondence }
+		}
+		localization_key = NUS_radical_party
+	}
+	text = {
+		localization_key = radical
+	}
+}

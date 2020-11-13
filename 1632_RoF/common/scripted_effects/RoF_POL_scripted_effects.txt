@@ -44,9 +44,9 @@ lessen_POL_serfdom = {
 	}
 }
 
-###########################################
-### Polish-Lithuanian Commonwealth Sejm ###
-###########################################
+#########################################
+## Polish-Lithuanian Commonwealth Sejm ##
+#########################################
 POL_sejm_small_opposition = {
 	custom_effect_tooltip = rof_pol_sejm_small_opposition_tt
 	set_temp_variable = { temp_factor = random }
@@ -129,4 +129,344 @@ POL_recalc_sejm_icon_frames = {
 	}
 	round_temp_variable = sejm_temp
 	set_variable = { current_sejm_icon_frame = sejm_temp }
+}
+
+####################
+# Balance of Power #
+####################
+#+5 or +10
+#split/swap
+#king +5 > magnate-5/szlachta-5
+#king +10 > magnate-10/szlachta-10/both-5
+
+# king #
+POL_king_up_both_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_king value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.05 compare = greater_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_king_power_add_10 = yes
+		POL_magnates_power_sub_5 = yes
+		POL_szlachta_power_sub_5 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0 compare = less_than_or_equals }
+		}		
+		POL_king_up_magnates_down_5 = yes
+	}
+	else = {
+		POL_king_up_szlachta_down_5 = yes
+	}
+}
+POL_king_down_both_up_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_king value = 0.1 compare = greater_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.95 compare = less_than_or_equals }
+		}
+		POL_king_power_sub_10 = yes
+		POL_magnates_power_add_5 = yes
+		POL_szlachta_power_add_5 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
+		}		
+		POL_magnates_up_king_down_5 = yes
+	}
+	else = {
+		POL_szlachta_up_king_down_5 = yes
+	}
+}
+POL_king_up_magnates_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_king value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_king_power_add_5 = yes
+		POL_magnates_power_sub_5 = yes
+	}
+}
+POL_king_up_magnates_down_10 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_king value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.1 compare = greater_than_or_equals }
+		}
+		POL_king_power_add_10 = yes
+		POL_magnates_power_sub_10 = yes
+	}
+	else = {
+		POL_king_up_magnates_down_5 = yes
+	}
+}
+POL_king_up_szlachta_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_king value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_king_power_add_5 = yes
+		POL_szlachta_power_sub_5 = yes
+	}
+}
+POL_king_up_szlachta_down_10 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_king value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.1 compare = greater_than_or_equals }
+		}
+		POL_king_power_add_10 = yes
+		POL_szlachta_power_sub_10 = yes
+	}
+	else = {
+		POL_king_up_szlachta_down_5 = yes
+	}
+}
+
+# magnates #
+POL_magnates_up_both_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.05 compare = greater_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_magnates_power_add_10 = yes
+		POL_king_power_sub_5 = yes
+		POL_szlachta_power_sub_5 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0 compare = less_than_or_equals }
+		}		
+		POL_magnates_up_king_down_5 = yes
+	}
+	else = {
+		POL_magnates_up_szlachta_down_5 = yes
+	}
+}
+POL_magnates_down_both_up_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.1 compare = greater_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.95 compare = less_than_or_equals }
+		}
+		POL_magnates_power_sub_10 = yes
+		POL_king_power_add_5 = yes
+		POL_szlachta_power_add_5 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.95 compare = less_than_or_equals }
+		}		
+		POL_szlachta_up_magnates_down_5 = yes
+	}
+	else = {
+		POL_king_up_magnates_down_5 = yes
+	}
+}
+POL_magnates_up_king_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_magnates_power_add_5 = yes
+		POL_king_power_sub_5 = yes
+	}
+}
+POL_magnates_up_king_down_10 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.1 compare = greater_than_or_equals }
+		}
+		POL_magnates_power_add_10 = yes
+		POL_king_power_sub_10 = yes
+	}
+	else = {
+		POL_magnates_up_king_down_5 = yes
+	}
+}
+POL_magnates_up_szlachta_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_magnates_power_add_5 = yes
+		POL_szlachta_power_sub_5 = yes
+	}
+}
+POL_magnates_up_szlachta_down_10 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_szlachta value = 0.1 compare = greater_than_or_equals }
+		}
+		POL_magnates_power_add_10 = yes
+		POL_szlachta_power_sub_10 = yes
+	}
+	else = {
+		POL_magnates_up_szlachta_down_5 = yes
+	}
+}
+
+# szlachta #
+POL_szlachta_up_both_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.05 compare = greater_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_szlachta_power_add_10 = yes
+		POL_magnates_power_sub_5 = yes
+		POL_king_power_sub_5 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0 compare = less_than_or_equals }
+		}		
+		POL_szlachta_up_king_down_5 = yes
+	}
+	else = {
+		POL_szlachta_up_magnates_down_5 = yes
+	}
+}
+POL_szlachta_down_both_up_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.1 compare = greater_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.95 compare = less_than_or_equals }
+		}
+		POL_szlachta_power_sub_10 = yes
+		POL_magnates_power_add_5 = yes
+		POL_king_power_add_5 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
+		}
+		POL_magnates_up_szlachta_down_5 = yes
+	}
+	else = {
+		POL_king_up_szlachta_down_5 = yes
+	}
+}
+POL_szlachta_up_magnates_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_szlachta_power_add_5 = yes
+		POL_magnates_power_sub_5 = yes
+	}
+}
+POL_szlachta_up_magnates_down_10 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_magnates value = 0.1 compare = greater_than_or_equals }
+		}
+		POL_szlachta_power_add_10 = yes
+		POL_magnates_power_sub_10 = yes
+	}
+	else = {
+		POL_szlachta_up_magnates_down_5 = yes
+	}
+}
+POL_szlachta_up_king_down_5 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.95 compare = less_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.05 compare = greater_than_or_equals }
+		}
+		POL_szlachta_power_add_5 = yes
+		POL_king_power_sub_5 = yes
+	}
+}
+POL_szlachta_up_king_down_10 = {
+	if = {
+		limit = {
+			check_variable = { var = POL.power_szlachta value = 0.9 compare = less_than_or_equals }
+			check_variable = { var = POL.power_king value = 0.1 compare = greater_than_or_equals }
+		}
+		POL_szlachta_power_add_10 = yes
+		POL_king_power_sub_10 = yes
+	}
+	else = {
+		POL_szlachta_up_king_down_5 = yes
+	}
+}
+
+#individual effects
+POL_king_power_add_5 = {
+	set_temp_variable = { power_add = 0.05 }
+	add_to_variable = { POL.power_king = power_add }
+	custom_effect_tooltip = POL_king_power_add_tt
+}
+POL_king_power_add_10 = {
+	set_temp_variable = { power_add = 0.1 }
+	add_to_variable = { POL.power_king = power_add }
+	custom_effect_tooltip = POL_king_power_add_tt
+}
+POL_king_power_sub_5 = {
+	set_temp_variable = { power_add = 0.05 }
+	subtract_from_variable = { POL.power_king = power_add }
+	custom_effect_tooltip = POL_king_power_sub_tt
+}
+POL_king_power_sub_10 = {
+	set_temp_variable = { power_add = 0.1 }
+	subtract_from_variable = { POL.power_king = power_add }
+	custom_effect_tooltip = POL_king_power_sub_tt
+}
+POL_magnates_power_add_5 = {
+	set_temp_variable = { power_add = 0.05 }
+	add_to_variable = { POL.power_magnates = power_add }
+	custom_effect_tooltip = POL_magnates_power_add_tt
+}
+POL_magnates_power_add_10 = {
+	set_temp_variable = { power_add = 0.1 }
+	add_to_variable = { POL.power_magnates = power_add }
+	custom_effect_tooltip = POL_magnates_power_add_tt
+}
+POL_magnates_power_sub_5 = {
+	set_temp_variable = { power_add = 0.05 }
+	subtract_from_variable = { POL.power_magnates = power_add }
+	custom_effect_tooltip = POL_magnates_power_sub_tt
+}
+POL_magnates_power_sub_10 = {
+	set_temp_variable = { power_add = 0.1 }
+	subtract_from_variable = { POL.power_magnates = power_add }
+	custom_effect_tooltip = POL_magnates_power_sub_tt
+}
+POL_szlachta_power_add_5 = {
+	set_temp_variable = { power_add = 0.05 }
+	add_to_variable = { POL.power_szlachta = power_add }
+	custom_effect_tooltip = POL_szlachta_power_add_tt
+}
+POL_szlachta_power_add_10 = {
+	set_temp_variable = { power_add = 0.1 }
+	add_to_variable = { POL.power_szlachta = power_add }
+	custom_effect_tooltip = POL_szlachta_power_add_tt
+}
+POL_szlachta_power_sub_5 = {
+	set_temp_variable = { power_add = 0.05 }
+	subtract_from_variable = { POL.power_szlachta = power_add }
+	custom_effect_tooltip = POL_szlachta_power_sub_tt
+}
+POL_szlachta_power_sub_10 = {
+	set_temp_variable = { power_add = 0.1 }
+	subtract_from_variable = { POL.power_szlachta = power_add }
+	custom_effect_tooltip = POL_szlachta_power_sub_tt
 }

@@ -10,7 +10,7 @@ NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 10 					-- When supply route reach 
 NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.1	-- accessible recruitable factor base
 
 NDefines.NBuildings.INFRA_TO_SUPPLY = 3
-
+NDefines.NMilitary.INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.1
 
 NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_LOW = 0.85							-- Minimum org % for a unit to actively attack an enemy unit when executing a plan
 NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_LOW = 0.85						-- Minimum strength for a unit to actively attack an enemy unit when executing a plan

@@ -1,11 +1,35 @@
 RoF_temp_ships = {
 	hire_man_o_war = {
-
+		complete_effect = {
+			add_equipment_production = {
+				equipment = {
+					type = man_of_war_1
+				}
+				amount = 1
+				progress = 1
+			}
+		}
 	}
 	hire_heavy_frigate = {
-
+		complete_effect = {
+			add_equipment_production = {
+				equipment = {
+					type = heavy_frigate_1
+				}
+				amount = 1
+				progress = 1
+			}
+		}
 	}
 	hire_light_frigate = {
-
+		complete_effect = {
+			add_equipment_production = {
+				equipment = {
+					type = light_frigate_1
+				}
+				amount = 1
+				progress = 1
+			}
+		}
 	}
 }

@@ -3,7 +3,6 @@ set_research_slots = 2
 
 oob = "KUR_OOB"
 
-set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1

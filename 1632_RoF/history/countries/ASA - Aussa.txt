@@ -34,7 +34,7 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Kadhafo Maryam"
+    name = "Malāq Ādan Ṣadiq"
     desc = "POLITICS_KADHAFO_MARYAM_DESC"
     picture = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
     expire = "1660.1.1"

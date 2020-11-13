@@ -4,17 +4,45 @@
 	enable = {
 		original_tag = POL
 		OR = {
-			is_historical_focus_on = yes
+			AND = {
+				has_game_rule = {
+					rule = POL_ai_behavior
+					option = DEFAULT
+				}
+				is_historical_focus_on = yes
+			}
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = CANON
+			}
+			has_country_flag = POL_AI_RANDOM_CANON
 		}
 	}
 	abort = {
 
 	}
 	ai_national_focuses = {
+		#do first if possible
 
+		#
+		POL_appease_sejm #1631 may 25 70
+		POL_invest_in_szlachta_lands #1631 aug 4 70
+		POL_develop_fiefs #1631 oct 14 70
+		POL_invest_in_crown_lands #1631 dec 24 105
+		POL_grant_further_autonomy #1632 apr 8 70
+		POL_fund_jagiellonian_university #1632 jun 18 70
+		POL_secure_sucession #1632 aug 28 70
+		POL_army_funding #1632 nov 7 70
+		POL_establish_baltic_fleet #1633 jan 17 70
+		POL_royal_roads #1633 mar 29 70
+		POL_standing_army #1633 jun 8 70
+		POL_found_royal_universities #1633 aug 18 70
+		POL_royal_factors #1633 oct 28 70
+		POL_agrarian_advances #1634 jan 7 70
+		POL_mechanical_farming #1634 mar 19 70
 	}
 	research = {
-		cat_mass_assault = 50
+		cat_mobile_warfare = 50
 	}
 }
 

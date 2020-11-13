@@ -8,6 +8,8 @@ infrastructure_tech_base = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
+musket_tech = 1
+light_artillery_1 = 1
 heavy_artillery_1 = 1
 transport = 1
 }

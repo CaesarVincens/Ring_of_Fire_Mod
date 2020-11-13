@@ -489,6 +489,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+
+	}
+	option = {
+		name = RoF_SWE.145.a
+		log = "[GetDateText] - [SWE.GetName] took [WRZ.GetName]"
 		if = {
 			limit = {
 				WRZ = {
@@ -496,6 +501,16 @@ country_event = {
 				}
 			}
 			set_state_controller = 577
+			577 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11445
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took [WRZ.GetName]"
 		}
 		if = {
 			limit = {
@@ -504,13 +519,192 @@ country_event = {
 				}
 			}
 			set_state_controller = 578
+			578 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11417
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Fulda"
+		}
+	}
+}
+
+#Seize Wurzburg
+country_event = {
+	id = RoF_SWE.1451
+	title = RoF_SWE.145.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.1451.d
+#	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_SWE.1451.a
+		trigger = {
+			has_country_flag = WRZ_protected_wurzburg
+			has_country_flag = WRZ_protected_fulda
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 577
+					577 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11445
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Fulda"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Fulda"
+				}
+			}
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 578
+					578 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11417
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took [WRZ.GetName]"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take [WRZ.GetName]"					
+				}
+			}
 		}
 	}
 	option = {
-		name = RoF_SWE.145.a
-		add_manpower = 2000
-		hidden_effect = {
-			load_oob = "SWE_franconia"
+		name = RoF_SWE.1451.b
+		trigger = {
+			has_country_flag = WRZ_protected_wurzburg
+			NOT = { has_country_flag = WRZ_protected_fulda }
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			set_state_controller = 577
+			577 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11445
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Fulda"
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 578
+					578 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11417
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took [WRZ.GetName]"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take [WRZ.GetName]"					
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_SWE.1451.c
+		trigger = {
+			NOT = { has_country_flag = WRZ_protected_wurzburg }
+			has_country_flag = WRZ_protected_fulda
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 577
+					577 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11445
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Fulda"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Fulda"
+				}
+			}
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			set_state_controller = 578
+			578 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11417
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took [WRZ.GetName]"
 		}
 	}
 }
@@ -568,26 +762,64 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = {
-				MNZ = {
-					controls_state = 248
-				}
-			}
-			set_state_controller = 248
-		}
-		if = {
-			limit = {
-				MNZ = {
-					controls_state = 249
-				}
-			}
-			set_state_controller = 249
-		}
 	}
 	option = {
 		name = RoF_SWE.147.a
-		add_manpower = 2000
+		log = "[GetDateText] - [SWE.GetName] attacked take Mainz"
+		if = {
+			limit = {
+				MNZ = { controls_state = 248 }
+				has_country_flag = MNZ_protected_mainz
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 248
+					248 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11560
+						}
+					}
+					add_manpower = 1000
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Mainz"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				MNZ = { controls_state = 248 }
+			}
+			set_state_controller = 248
+			248 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11560
+				}
+			}
+			add_manpower = 1000
+		}
+		if = {
+			limit = {
+				MNZ = { controls_state = 249 }
+			}
+			set_state_controller = 249
+			249 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6594
+				}
+			}
+			add_manpower = 1000
+		}
 	}
 }
 

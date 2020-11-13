@@ -52,6 +52,10 @@ add_ideas = {
 	archduke_rank
 	AUS_kipper_und_wipper
 }
+add_relation_modifier = {
+	target = HUN
+	modifier = AUS_dual_monarchy
+}
 set_stability = 0.5
 create_country_leader = {
     name = "Ferdinand II von Habsburg"

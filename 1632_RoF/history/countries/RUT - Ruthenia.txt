@@ -35,9 +35,27 @@ add_ideas = {
 	balanced_eco
 }
 create_country_leader = {
-    name = "Semyon Vitovsky"
+    name = "Jeremi Wiśniowiecki"
     desc = "POLITICS_SEMYON_VITOVSKY_DESC"
-    picture = "gfx/interface/ideas/idea_george_v.dds"
+    picture = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
+    expire = "1660.1.1"
+    ideology = absolute_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Jeremi Wiśniowiecki"
+    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
+    picture = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
+    expire = "1660.1.1"
+    ideology = constitutional_monarchy
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Jeremi Wiśniowiecki"
+    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
+    picture = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
     expire = "1660.1.1"
     ideology = absolute_monarchy_neutral
     traits = {

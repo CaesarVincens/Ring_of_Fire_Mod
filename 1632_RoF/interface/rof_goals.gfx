@@ -55,4 +55,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_john_casimir.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_royal_civ_factory"
+		texturefile = "gfx/interface/goals/focus_royal_civ_factory.dds"
+	}
+
 }

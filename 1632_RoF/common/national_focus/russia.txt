@@ -1476,13 +1476,16 @@ focus_tree = {
 		cost = 5
 		relative_position_id = DIRRUS_secure_bureaus
 		prerequisite = { focus = DIRRUS_secure_bureaus }
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = D01
+		will_lead_to_war_with = D02
 		completion_reward = {
 			country_event = {
 				id = RoF_RUS.120
 			}
 		}
 		bypass = {
-			has_war_with = USR
+			has_war_with = RSA
 		}
 		ai_will_do = {
 			factor = 10

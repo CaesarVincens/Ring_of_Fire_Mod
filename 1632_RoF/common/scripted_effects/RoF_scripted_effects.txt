@@ -16,6 +16,50 @@
 #	}
 #
 
+calc_merc_hire_size = {
+	set_temp_variable = { merc_size = 1 }
+	if = {
+		limit = {
+			is_major = yes
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+	if = {
+		limit = {
+			num_of_military_factories > 20
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+	if = {
+		limit = {
+			is_faction_leader = yes
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+	if = {
+		limit = {
+			num_of_controlled_states > 10
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+}
+calc_merc_weight = {
+	set_variable = { merc_weight = 0 }
+	add_to_variable = { merc_weight = merc_pool_small }
+	add_to_variable = { merc_weight = merc_pool_medium }
+	add_to_variable = { merc_weight = merc_pool_medium }
+	add_to_variable = { merc_weight = merc_pool_large }
+	add_to_variable = { merc_weight = merc_pool_large }
+	add_to_variable = { merc_weight = merc_pool_large }
+	add_to_variable = { merc_weight = merc_pool_large }
+	set_variable = { merc_weight_cost = merc_weight }
+	set_variable = { merc_weight_man = merc_weight }
+	multiply_variable = { merc_weight_cost = 0.002 }
+	multiply_variable = { merc_weight_man = 50 }
+	clamp_variable = { var = merc_weight_man min = 0 max = 2000 }
+	#round_variable = merc_weight_cost
+	#multiply_variable = { merc_weight_cost = 0.001 }
+}
 transfer_occupied_cores_PREV = {
 	every_state = {
 		limit = {

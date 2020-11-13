@@ -17,10 +17,11 @@ state={
 		}
 		add_core_of = POL
 		add_core_of = LIT
+
 	}
 
 	provinces={
-		323 342 3331 6249 6292 9241 9289 9323 11220 11241 11322 
+		323 342 3331 3378 6249 6292 9241 9289 9323 11220 11241 11322 
 	}
 	manpower=321980
 	buildings_max_level_factor=1.000

@@ -1,12 +1,20 @@
 RoF_test_decisions = {
 	allowed = {
-		always = yes
+		is_debug = yes
 	}
 }
 
 RoF_economy_decisions = {
 	icon = generic_economy
 }
+RoF_mercenary_decisions = {
+	icon = military_operation
+	priority = 5
+	visible = {
+		NOT = { has_global_flag = RoF_no_mercs_for_anyone }
+	}
+}
+
 RoF_ai_decisions = {
 	
 }
@@ -44,7 +52,7 @@ RoF_temp_ships = {
 		any_owned_state = {
 			is_coastal = yes
 		}
-		always = no
+		is_debug = yes
 	}
 }
 absolutist_on_the_rise = {

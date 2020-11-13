@@ -252,7 +252,7 @@ focus_tree = {
 	}
 	focus = {
 		id = smash_the_old
-		icon = GFX_focus_rom_abdicate
+		icon = GFX_goal_tfv_burn_the_royal_portraits
 		cost = 10.00
 		prerequisite = {
 			focus = integrate_up_time_ideas
@@ -276,7 +276,7 @@ focus_tree = {
 	}
 	focus = {
 		id = spread_the_revolution
-		icon = GFX_goal_tfv_burn_the_royal_portraits
+		icon = GFX_focus_focus_fra_revolution_utmost
 		cost = 10.00
 		prerequisite = {
 			focus = smash_the_old

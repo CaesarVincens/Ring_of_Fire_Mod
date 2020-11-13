@@ -18,14 +18,16 @@ state={
 			air_base = 0
 			2089 = {
 				naval_base = 1
+
 			}
+
 		}
 		add_core_of = TUR
 
 	}
 
 	provinces={
-		2089 8001 8085 12726 12879 
+		2089 4562 8001 8085 12726 
 	}
 	manpower=409400
 	buildings_max_level_factor=1.000

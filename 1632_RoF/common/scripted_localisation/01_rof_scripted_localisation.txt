@@ -9,20 +9,38 @@
 # that'll be used if trigger passes
 
 defined_text = {
+	name = POL_election_sejm_candidate
+	text = {
+		trigger = {
+			has_country_flag = POL_election_sejm_stanislaw_koniecpolski
+		}
+		localization_key = POL_stanislaw_koniecpolski
+	}
+	text = {
+		trigger = {
+			has_country_flag = POL_election_sejm_john_casimir
+		}
+		localization_key = POL_john_casimir_vasa
+	}
+	text = {
+		localization_key = POL_wladyslaw_vasa
+	}
+}
+defined_text = {
     name = SWE_restore_bohemia_script
     
-    text = {
+	text = {
 		trigger = {
-			has_country_flag = SWE_wallenstein_gambit
+			NOT = { has_global_flag = winter_king_dead }
 		}
-        localization_key = SWE_install_wallenstein
+		localization_key = SWE_restore_frederick
 	}
 
     text = {
 		trigger = {
-			NOT = { has_global_flag = winter_king_dead }
+			has_global_flag = wallenstein_gambit
 		}
-        localization_key = SWE_restore_frederick
+        localization_key = SWE_install_wallenstein
 	}
 	
     text = {
@@ -31,6 +49,7 @@ defined_text = {
 		}
         localization_key = SWE_restore_karl
     }
+
     text = {
         localization_key = SWE_restore_bohemia_gen
     }
@@ -41,24 +60,25 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			has_country_flag = SWE_wallenstein_gambit
+			NOT = { has_global_flag = winter_king_dead }
+		}
+		localization_key = SWE_restore_frederick_desc
+	}
+
+	text = {
+		trigger = {
+			has_global_flag = wallenstein_gambit
 		}
         localization_key = SWE_install_wallenstein_desc
 	}
 
     text = {
 		trigger = {
-			NOT = { has_global_flag = winter_king_dead }
-		}
-        localization_key = SWE_restore_frederick_desc
-	}
-	
-    text = {
-		trigger = {
 			NOT = { has_global_flag = karl_ludwig_catholic }
 		}
         localization_key = SWE_restore_karl_desc
     }
+
     text = {
         localization_key = SWE_restore_bohemia_gen_desc
     }
@@ -144,6 +164,23 @@ defined_text = {
     }
 }
 
+defined_text = {
+	name = rifled_weapons_improved_materials_script
+
+	text = {
+		trigger = {
+			has_completed_focus = improved_materials
+		}
+		localization_key = rifled_weapons_improved_materials_green
+	}
+
+	text = {
+		localization_key = rifled_weapons_improved_materials_red
+	}
+}
+####################
+# CoC Scripted Loc #
+####################
 defined_text = {
 	name = GetCoCProgress
 	text = {

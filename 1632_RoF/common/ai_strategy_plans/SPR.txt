@@ -62,6 +62,11 @@ SPR_habsburg_cousins = {
 		id = "AUS"
 		value = 200
 	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AUS
+		value = 50
+	}
 }
 
 SPR_anti_dutch = {

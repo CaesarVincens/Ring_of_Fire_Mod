@@ -73,7 +73,7 @@ ideas = {
 				has_government = liberal
 			}
 			modifier = {
-				conscription = 0.015
+				conscription = 0.005
 				subversive_activites_upkeep = -0.1
 				monthly_population = 0.05
 				radical_drift = 0.001
@@ -89,7 +89,7 @@ ideas = {
 				has_government = liberal
 			}
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				subversive_activites_upkeep = -0.15
 				monthly_population = 0.1
 				radical_drift = 0.002
@@ -105,7 +105,7 @@ ideas = {
 				has_government = liberal
 			}
 			modifier = {
-				conscription = 0.025
+				conscription = 0.015
 				subversive_activites_upkeep = -0.2
 				monthly_population = 0.15
 				radical_drift = 0.005
@@ -144,7 +144,7 @@ ideas = {
 			modifier = {
 				absolutist_drift = 0.1
 				production_speed_buildings_factor = 0.1
-				industrial_capacity_factory = 0.05			
+				industrial_capacity_factory = 0.05
 			}
 			removal_cost = -1
 			picture = generic_fascism_drift_bonus
@@ -200,7 +200,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				monthly_population = 0.2
 			}
 			removal_cost = -1
@@ -277,6 +277,7 @@ ideas = {
 			allowed = {
 				original_tag = NUS
 			}
+			cost = 120
 			traits = { head_of_intelligence }
 			visible = {
 				has_intelligence_agency = yes

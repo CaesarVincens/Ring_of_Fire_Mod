@@ -29,6 +29,26 @@ DEN_canon_focuses = {
 	}
 }
 
+ostend_prep_den = {
+	name = "Baltic Prep"
+	desc = "don't die immediately"
+	enable = {
+		original_tag = DEN
+		OR = {
+			is_in_faction_with = FRA
+			has_completed_focus = DEN_ostend_league
+		}
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			108
+			112
+			662
+		}
+		ratio = 0.8
+	}
+}
 ostend_war = {
 	name = "Baltic War"
 	desc = "The Kalmar Union will Rise again"

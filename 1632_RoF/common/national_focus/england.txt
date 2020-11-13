@@ -166,11 +166,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_state = {
+				random_controlled_state = {
 					limit = {
-						controller = {
-							tag = ROOT
-						}
 						free_building_slots = {
 							building = dockyard
 							size > 2
@@ -441,11 +438,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_state = {
+				random_controlled_state = {
 					limit = {
-						controller = {
-							tag = ROOT
-						}
 						free_building_slots = {
 							building = dockyard
 							size > 2
@@ -1089,11 +1083,8 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_state = {
+				random_controlled_state = {
 					limit = {
-						controller = {
-							tag = ROOT
-						}
 						free_building_slots = {
 							building = dockyard
 							size > 2
@@ -2033,7 +2024,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_SCO.tt
+				tooltip = ENG_rules_SCO_tt
 				OR = {
 					AND = { owns_state = 415 owns_state = 416 }
 					SCO = { is_subject_of = ENG }
@@ -2144,7 +2135,7 @@ focus_tree = {
 			}
 			NOT = {
 				custom_trigger_tooltip = {
-					tooltip = ENG_not_rules_IRE.tt
+					tooltip = ENG_rules_IRE_tt
 					OR = {
 						AND = {
 							owns_state = 97
@@ -2163,7 +2154,7 @@ focus_tree = {
 				has_global_flag = ENG_civil_war_done
 			}
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_IRE.tt
+				tooltip = ENG_rules_IRE_tt
 				has_completed_focus = ENG_crush_the_rebels
 				OR = {
 					AND = {
@@ -2217,7 +2208,7 @@ focus_tree = {
 			}
 			NOT = {
 				custom_trigger_tooltip = {
-					tooltip = ENG_not_rules_IRE.tt
+					tooltip = ENG_rules_IRE_tt
 					OR = {
 						AND = {
 							owns_state = 97
@@ -2236,7 +2227,7 @@ focus_tree = {
 				has_global_flag = ENG_civil_war_done
 			}
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_IRE.tt
+				tooltip = ENG_rules_IRE_tt
 				has_completed_focus = ENG_constitutional_reforms
 				OR = {
 					AND = {
@@ -2287,7 +2278,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_IRE.tt
+				tooltip = ENG_rules_IRE_tt
 				OR = {
 					AND = {
 						owns_state = 97
@@ -2299,7 +2290,7 @@ focus_tree = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_SCO.tt
+				tooltip = ENG_rules_SCO_tt
 				OR = {
 					AND = { owns_state = 415 owns_state = 416 }
 					SCO = { is_subject_of = ENG }

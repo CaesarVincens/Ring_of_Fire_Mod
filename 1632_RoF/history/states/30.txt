@@ -11,17 +11,20 @@ state = {
 		victory_points = {
 			692 20 
 		}
+		victory_points = {
+			11653 5 
+		}
+		victory_points = {
+			9681 5 
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
 			arms_factory = 2
 			air_base = 0
-			692 = { bunker = 1 }
-			3705 = { bunker = 1 }
-			6693 = { bunker = 1 }
-			9515 = { bunker = 1 }
+			692 = { bunker = 2 }
 			9681 = { bunker = 1 }
-			11620 = { bunker = 1 }
+			11653 = { bunker = 1 }
 
 		}
 		add_core_of = BAV

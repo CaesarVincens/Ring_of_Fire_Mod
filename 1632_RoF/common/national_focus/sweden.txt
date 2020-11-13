@@ -525,7 +525,15 @@ focus_tree = {
 		select_effect = { country_event = { id = RoF_SWE.144 } }
 		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_SWE.145 hours = 1 }
+			if = {
+				limit = {
+					OR = { has_country_flag = WRZ_protected_fulda has_country_flag = WRZ_protected_wurzburg }
+				}
+				country_event = { id = RoF_SWE.1451 hours = 1 }
+			}
+			else = {
+				country_event = { id = RoF_SWE.145 hours = 1 }
+			}
 		}
 	}
 
@@ -566,6 +574,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = MNZ_protected_mainz
+				}
+			}
 			country_event = { id = RoF_SWE.147 hours = 1 }
 		}
 	}
@@ -592,6 +605,12 @@ focus_tree = {
 		bypass = {
 			OR = {
 				has_global_flag = thirty_years_war_ended
+				AND = {
+					is_in_faction_with = BRS
+					is_in_faction_with = BRE
+					is_in_faction_with = LUB
+					is_in_faction_with = MAG
+				}
 				AND = {
 					BRS = { is_not_potential_friend_of_ROOT = yes }
 					BRE = { is_not_potential_friend_of_ROOT = yes }
@@ -633,6 +652,14 @@ focus_tree = {
 			OR = {
 				has_global_flag = thirty_years_war_ended
 				AND = {
+					is_in_faction_with = ANS
+					is_in_faction_with = BAD
+					is_in_faction_with = FRK
+					is_in_faction_with = NUR
+					is_in_faction_with = ULM
+					is_in_faction_with = WRT
+				}
+				AND = {
 					ANS = { is_not_potential_friend_of_ROOT = yes }
 					BAD = { is_not_potential_friend_of_ROOT = yes }
 					FRK = { is_not_potential_friend_of_ROOT = yes }
@@ -660,7 +687,7 @@ focus_tree = {
 		cost = 5
 		#available_if_capitulated = yes
 		available = {
-			custom_trigger_tooltip ={
+			custom_trigger_tooltip = {
 				tooltip = SWE_cpoe.tt
 				NUS = {
 					has_country_flag = NUS_start_CPoE

@@ -152,6 +152,10 @@
  Poland_alone_DEF:0 "Poland"
  Poland_alone_ADJ:0 "Polish"
 
+ Poland_Commonwealth:0 "Commonwealth"
+ Poland_Commonwealth_DEF:0 "the Commonwealth"
+ Poland_Commonwealth_ADJ:0 "Commonwealth"
+
  EGY_autonomy_rof_auto_province:0 "$OVERLORDADJ$ Egypt"
  ALG_autonomy_rof_auto_province:0 "$OVERLORDADJ$ Algeria"
  TUN_autonomy_rof_auto_province:0 "$OVERLORDADJ$ Tunisia"

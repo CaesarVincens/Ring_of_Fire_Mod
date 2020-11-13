@@ -1,5 +1,102 @@
 ﻿add_namespace = RoF_German
 
+country_event = {
+	id = RoF_German.50
+	title = RoF_German.50.t
+	picture = GFX_report_event_scottish_mercenaries
+	desc = RoF_German.50.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_German.50.a
+		ai_chance = { base = 1 }
+		global_every_army_leader = {
+			limit = {
+				has_id = 2001
+			}
+			set_nationality = ROOT
+		}
+		custom_effect_tooltip = holks_horse_tt
+		hidden_effect = {
+			division_template = {
+				name = "Holk's Horse"
+				is_locked = yes
+				regiments = {
+					merc_cavalry = { x = 0 y = 0 }
+					merc_cavalry = { x = 0 y = 1 }
+					merc_cavalry = { x = 0 y = 2 }
+					merc_cavalry = { x = 1 y = 0 }
+					merc_cavalry = { x = 1 y = 1 }
+					merc_cavalry = { x = 1 y = 2 }
+				}
+				support = {
+					heavy_artillery = { x = 0 y = 0 }
+				}
+			}
+			if = {
+				limit = {
+					tag = POL
+					controls_state = 428
+				}
+				428 = {
+					create_unit = {
+						division = "division_template = \"Holk's Horse\" start_experience_factor = 0.3" 
+						owner = ROOT
+						#allow_spawning_on_enemy_provs = yes
+						count = 6
+					}
+				}
+				else = {
+					capital_scope = {
+						create_unit = {
+							division = "division_template = \"Holk's Horse\" start_experience_factor = 0.3" 
+							owner = ROOT
+							#allow_spawning_on_enemy_provs = yes
+							count = 6
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_German.50.b
+		ai_chance = { base = 0 }
+	}
+}
+
+country_event = {
+	id = RoF_German.51
+	title = RoF_German.51.t
+	picture = GFX_report_event_scottish_mercenaries
+	desc = RoF_German.51.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_template = "Holk's Horse"
+	}
+	immediate = {
+	}
+	option = {
+		name = RoF_German.51.a
+		ai_chance = { base = 1 }
+		delete_unit_template_and_units = {
+			division_template = "Holk's Horse"
+		}
+	}
+	option = {
+		name = RoF_German.51.b
+		ai_chance = { base = 0 }
+		add_political_power = -50
+	}
+}
+
 #Burgundy Arises
 country_event = {
 	id = RoF_German.100
@@ -45,6 +142,22 @@ country_event = {
 			}
 			BRG = {
 				inherit_technology = ROOT
+				if = {
+					limit = {
+						NOT = { has_tech = musket_tech }
+					}
+					set_technology = {
+						musket_tech = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = light_artillery_1 }
+					}
+					set_technology = {
+						light_artillery_1 = 1
+					}
+				}
 				#RoF_transfer_technology = yes 
 				transfer_state = 435
 				transfer_state = 16
@@ -81,6 +194,19 @@ country_event = {
 					elections_allowed = no
 				}
 				set_capital = 434
+				load_oob = "BRG_OOB"
+				delete_unit_template_and_units = {
+					division_template = "Tercio"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Tercio Detachment"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Cavalry Division 2"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Cavalry Brigade 2"
+				}
 			}
 			434 = { set_state_name = "Franche-Comté" }
 		}
@@ -179,7 +305,7 @@ country_event = {
 	title = RoF_German.110.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.110.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 
@@ -226,7 +352,7 @@ country_event = {
 	title = RoF_German.120.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.120.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -268,7 +394,7 @@ country_event = {
 	title = RoF_German.121.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.121.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -292,7 +418,7 @@ country_event = {
 	title = RoF_German.130.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.130.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -346,7 +472,7 @@ country_event = {
 	title = RoF_German.131.t
 	picture = GFX_report_event_aus_flag
 	desc = RoF_German.131.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -484,7 +610,7 @@ country_event = {
 	title = RoF_German.140.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.140.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -530,7 +656,7 @@ country_event = {
 	title = RoF_German.141.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.141.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -572,7 +698,7 @@ country_event = {
 	title = RoF_German.142.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_German.142.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -700,6 +826,86 @@ country_event = {
 			modifier = {
 				factor = 0.1
 				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+}
+
+#TYR joins the USE
+country_event = {
+	id = RoF_German.155
+	title = RoF_German.155.t
+	picture = GFX_report_event_bra_flag
+	desc = RoF_German.155.d
+	fire_only_once = yes
+
+	trigger = {
+		tag = TYR
+		NUS = {
+			has_cosmetic_tag = USE
+			OR = {
+				owns_state = 581
+				owns_state = 259
+			}
+		}
+		date > 1635.1.1
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	immediate = {
+		
+	}
+
+	#Join
+	option = {
+		name = RoF_German.155.a
+		custom_effect_tooltip = GAME_OVER_TT
+		effect_tooltip = {
+			NUS = { annex_country = { target = ROOT } }
+		}
+		hidden_effect = {
+			NUS = {
+				country_event = {
+					id = RoF_USE.150
+				}
+			}
+		}
+		set_country_flag = USE_annex_country
+		ai_chance = {
+			base = 9
+		}
+	}
+	#Don't Join
+	option = {
+		name = RoF_German.155.b
+		#set_country_flag = USE_rejected_country
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0.1
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	#join as state
+	option = {
+		name = RoF_German.155.c
+		trigger = { is_ai = no }
+		set_country_flag = USE_fed_prov
+		effect_tooltip = {
+			NUS = {
+				set_autonomy = { target = ROOT autonomy_state = autonomy_rof_federal_state }
+			}
+		}
+		hidden_effect = {
+			NUS = {
+				country_event = {
+					id = RoF_USE.150
+				}
 			}
 		}
 	}

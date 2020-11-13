@@ -68,7 +68,7 @@ SWE_ignore_russia = {
 	}
 	ai_strategy = {
 		type = ignore
-		id = "USR"
+		id = "RSA"
 		value = 1000
 	}
 	ai_strategy = {

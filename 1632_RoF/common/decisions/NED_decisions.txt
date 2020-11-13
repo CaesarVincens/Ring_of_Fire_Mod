@@ -1,0 +1,45 @@
+SPN_major_decisions = {
+	SPN_protect_maastricht = {
+		fire_only_once = yes
+		available = {
+			458 = {
+				custom_trigger_tooltip = {
+					tooltip = SPN_protect_maastricht_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 3
+						province = { id = 11562 }
+					}
+				}
+			}
+		}
+		activation = {
+			owns_state = 458
+			UPS = { has_completed_focus = UPS_prepare_maastricht_campaign }
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 458 }
+				has_war_with = UPS
+			}
+		}
+		highlight_provinces = {
+			11562
+		}
+		days_mission_timeout = UPS.maastricht_campaign?280
+		is_good = no
+		complete_effect = {
+			UPS = { set_country_flag = SPN_protected_maastricht }
+			custom_effect_tooltip = SPN_protected_maastricht_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				UPS = { transfer_state = 458 }
+			}
+		}
+	}
+}
+
+UPS_major_decisions = {
+
+}

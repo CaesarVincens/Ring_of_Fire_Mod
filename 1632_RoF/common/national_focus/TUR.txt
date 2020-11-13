@@ -160,6 +160,7 @@ focus_tree = {
 				id = RoF_TUR.100
 			}
 			custom_effect_tooltip = TUR_end_regency_coup_TT
+			activate_mission_tooltip = TUR_coup_threat
 		}
 		ai_will_do = {
 			factor = 30
@@ -338,7 +339,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = TUR_combat_corruption.TT
+			#custom_effect_tooltip = TUR_combat_corruption.TT
+			unlock_decision_category_tooltip = TUR_combating_corruption_cat
 		}
 		ai_will_do = {
 			factor = 20
@@ -492,7 +494,7 @@ focus_tree = {
 		id = TUR_centralize_empire
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 10
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = TUR_consolidate_power
 		mutually_exclusive = { focus = TUR_decentralize_empire }
@@ -501,7 +503,148 @@ focus_tree = {
 			has_war = no
 		}
 		allow_branch = {
-			#debug
+			OR = {
+				is_debug = yes
+				NOT = {
+					has_dlc = "Together for Victory"
+				}
+			}
+		}
+		complete_tooltip = {
+			remove_ideas = TUR_beylerbeys_3
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = TUR_beylerbeys_3 }
+				remove_ideas = TUR_beylerbeys_3
+			}
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_decentralize_empire
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 1
+		y = 0
+		relative_position_id = TUR_centralize_empire
+		mutually_exclusive = { focus = TUR_centralize_empire }
+		prerequisite = { focus = TUR_formalize_power focus = TUR_consolidate_power }
+		available = {
+			has_war = no
+		}
+		allow_branch = {
+			is_debug = yes
+			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_effect_WIP_TT
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+
+	focus = {
+		id = TUR_african_eyalets
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = TUR_centralize_empire
+		prerequisite = {
+			#focus = TUR_decentralize_empire
+			focus = TUR_centralize_empire
+		}
+		available = {
+			has_war = no
+			OR = {
+				EGY = { is_subject_of = ROOT }
+				TRP = { is_subject_of = ROOT }
+			}
+		}
+		bypass = {
+			NOT = {
+				EGY = { is_subject_of = ROOT }
+				TRP = { is_subject_of = ROOT }
+			}
+		}
+		completion_reward = {
+			EGY = { set_country_flag = TUR_annex_sub }
+			TRP = { set_country_flag = TUR_annex_sub }
+			custom_effect_tooltip = TUR_annex_sub
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_berber_pashas
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = TUR_decentralize_empire
+		prerequisite = {
+			#focus = TUR_decentralize_empire
+			focus = TUR_centralize_empire
+		}
+		available = {
+			has_war = no
+			OR = {
+				TUN = { is_subject_of = ROOT }
+				ALG = { is_subject_of = ROOT }
+			}
+		}
+		bypass = {
+			NOT = {
+				TUN = { is_subject_of = ROOT }
+				ALG = { is_subject_of = ROOT }
+			}
+		}
+		completion_reward = {
+			TUN = { set_country_flag = TUR_annex_sub }
+			ALG = { set_country_flag = TUR_annex_sub }
+			custom_effect_tooltip = TUR_annex_sub
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_levant_eyalets
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = TUR_african_eyalets
+		prerequisite = { focus = TUR_african_eyalets focus = TUR_berber_pashas }
+		available = {
+			has_war = no
+		}
+		allow_branch = {
 			always = no
 		}
 		completion_reward = {
@@ -517,23 +660,24 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TUR_decentralize_empire
-		icon = GFX_focus_generic_self_management
+		id = TUR_crimean_khan
+		icon = GFX_goal_generic_major_alliance
 		cost = 10
-		x = 2
-		y = 0
-		relative_position_id = TUR_centralize_empire
-		mutually_exclusive = { focus = TUR_centralize_empire }
-		prerequisite = { focus = TUR_formalize_power focus = TUR_consolidate_power }
+		x = -1
+		y = 1
+		relative_position_id = TUR_berber_pashas
+		prerequisite = { focus = TUR_berber_pashas }
+		prerequisite = { focus = TUR_african_eyalets }
 		available = {
 			has_war = no
+			CRI = { is_subject_of = ROOT }
 		}
-		allow_branch = {
-			#debug
-			always = no
+		bypass = {
+			NOT = { CRI = { is_subject_of = ROOT } }
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			CRI = { set_country_flag = TUR_annex_sub }
+			custom_effect_tooltip = TUR_annex_sub
 		}
 		ai_will_do = {
 			factor = 20
@@ -550,10 +694,13 @@ focus_tree = {
 		cost = 10
 		x = 0
 		y = 1
-		relative_position_id = TUR_centralize_empire
-		prerequisite = { focus = TUR_decentralize_empire focus = TUR_centralize_empire }
+		relative_position_id = TUR_levant_eyalets
+		prerequisite = { focus = TUR_levant_eyalets focus = TUR_crimean_khan }
 		available = {
 			has_war = no
+		}
+		allow_branch = {
+			always = no
 		}
 		completion_reward = {
 			custom_effect_tooltip = focus_effect_WIP_TT
@@ -573,8 +720,11 @@ focus_tree = {
 		cost = 10
 		x = 0
 		y = 1
-		relative_position_id = TUR_decentralize_empire
-		prerequisite = { focus = TUR_decentralize_empire focus = TUR_centralize_empire }
+		relative_position_id = TUR_crimean_khan
+		prerequisite = {
+			#focus = TUR_levant_eyalets
+			focus = TUR_crimean_khan
+		}
 		available = {
 			has_war = no
 			OR = {
@@ -583,109 +733,18 @@ focus_tree = {
 				MDA = { is_subject_of = ROOT }
 			}
 		}
-		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
-		}
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				is_historical_focus_on = yes
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_levant_eyalets
-		icon = GFX_goal_generic_position_armies
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = TUR_balkan_eyalets
-		prerequisite = { focus = TUR_balkan_eyalets focus = TUR_carpathian_princes }
-		available = {
-			has_war = no
-		}
-		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
-		}
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				is_historical_focus_on = yes
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_crimean_khan
-		icon = GFX_goal_generic_major_alliance
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = TUR_carpathian_princes
-		prerequisite = { focus = TUR_balkan_eyalets focus = TUR_carpathian_princes }
-		available = {
-			has_war = no
-			CRI = { is_subject_of = ROOT }
-		}
-		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
-		}
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				is_historical_focus_on = yes
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_african_eyalets
-		icon = GFX_goal_generic_position_armies
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = TUR_levant_eyalets
-		prerequisite = { focus = TUR_levant_eyalets focus = TUR_crimean_khan }
-		available = {
-			has_war = no
-			OR = {
-				EGY = { is_subject_of = ROOT }
-				TRP = { is_subject_of = ROOT }
+		bypass = {
+			NOT = {
+				TRA = { is_subject_of = ROOT }
+				WAL = { is_subject_of = ROOT }
+				MDA = { is_subject_of = ROOT }
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
-		}
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				is_historical_focus_on = yes
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_berber_pashas
-		icon = GFX_goal_generic_major_alliance
-		cost = 10
-		x = 0
-		y = 1
-		relative_position_id = TUR_crimean_khan
-		prerequisite = { focus = TUR_levant_eyalets focus = TUR_crimean_khan }
-		available = {
-			has_war = no
-			OR = {
-				TUN = { is_subject_of = ROOT }
-				ALG = { is_subject_of = ROOT }
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			TRA = { set_country_flag = TUR_annex_sub }
+			WAL = { set_country_flag = TUR_annex_sub }
+			MDA = { set_country_flag = TUR_annex_sub }
+			custom_effect_tooltip = TUR_annex_sub
 		}
 		ai_will_do = {
 			factor = 20
@@ -705,7 +764,6 @@ focus_tree = {
 		cost = 10
 		x = 11
 		y = 0
-		available_if_capitulated = no
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = has_heard_of_RoF_TT
@@ -737,7 +795,6 @@ focus_tree = {
 		cost = 10
 		x = 1
 		y = 1
-		available_if_capitulated = no
 		available = {
 			if = {
 				limit = {
@@ -789,7 +846,6 @@ focus_tree = {
 		cost = 10
 		x = 2
 		y = 1
-		available_if_capitulated = no
 		available = {
 			
 		}
@@ -948,7 +1004,6 @@ focus_tree = {
 		cost = 10
 		x = -1
 		y = 1
-		available_if_capitulated = no
 		available = {
 			if = {
 				limit = {
@@ -996,7 +1051,6 @@ focus_tree = {
 		cost = 10
 		x = 1
 		y = 1
-		available_if_capitulated = no
 		available = {
 			
 		}
@@ -1041,7 +1095,6 @@ focus_tree = {
 		cost = 10
 		x = -2
 		y = 1
-		available_if_capitulated = no
 		available = {
 			
 		}

@@ -13,8 +13,8 @@ state={
 			9162 3 
 		}
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
+			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
@@ -28,5 +28,5 @@ state={
 	}
 	manpower=161200
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category = pastoral
 }

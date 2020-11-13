@@ -7,7 +7,7 @@ state = {
 
 	history = {
 		owner = VAT
-		victory_points = { 9904 8 }
+		victory_points = { 9904 40 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

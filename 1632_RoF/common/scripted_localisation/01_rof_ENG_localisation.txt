@@ -40,7 +40,7 @@ defined_text = {
 	text = {
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_IRE.tt
+				tooltip = ENG_rules_IRE_tt
 				OR = {
 					ENG = {
 						owns_state = 97
@@ -52,7 +52,7 @@ defined_text = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_SCO.tt
+				tooltip = ENG_rules_SCO_tt
 				OR = {
 					ENG = { owns_state = 415 owns_state = 416 }
 					SCO = { is_subject_of = ENG }
@@ -64,7 +64,7 @@ defined_text = {
 	text = {
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_IRE.tt
+				tooltip = ENG_rules_IRE_tt
 				OR = {
 					ENG = {
 						owns_state = 97
@@ -81,7 +81,7 @@ defined_text = {
 	text = {
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = ENG_rules_SCO.tt
+				tooltip = ENG_rules_SCO_tt
 				OR = {
 					ENG = { owns_state = 415 owns_state = 416 }
 					SCO = { is_subject_of = ENG }

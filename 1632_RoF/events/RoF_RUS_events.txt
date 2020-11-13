@@ -315,7 +315,7 @@ country_event = {
 	desc = RoF_RUS.100.d
 
 	is_triggered_only = yes
-	#hidden = yes
+	hidden = yes
 
 	immediate = {
 		#########
@@ -395,6 +395,22 @@ country_event = {
 				RSA = { add_ideas = RUS_up_timer_advisor }
 			}
 			WAS = { transfer_state = 381 }
+			392 = {
+				add_province_modifier = {
+					static_modifiers = { lack_of_infrastructure }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+			384 = {
+				add_province_modifier = {
+					static_modifiers = { lack_of_infrastructure }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
 		}
 		##############
 		#Sibera as AI#
@@ -559,9 +575,14 @@ country_event = {
 		#general after#
 		###############
 		RSA = {
+			set_variable = { global.RSA_TAG = THIS.id }
 			if = {
 				limit = { owns_state = 215 }
 				set_capital = 215
+				set_victory_points = {
+					province = 291
+					value = 30
+				}
 				else = {
 					random_owned_state = {
 						RSA = { set_capital = PREV }
@@ -758,8 +779,8 @@ country_event = {
 	option = {
 		name = RoF_RUS.100.a
 		effect_tooltip = {
-			release = USR
-			release = SIB
+			release = RSA
+			release = RSB
 		}
 		#USR = { change_tag_from = RUS }
 		ai_chance = {
@@ -769,8 +790,8 @@ country_event = {
 	option = {
 		name = RoF_RUS.100.b
 		effect_tooltip = {
-			release = USR
-			release = SIB
+			release = RSA
+			release = RSB
 		}
 		ai_chance = {
 			base = 10
@@ -779,8 +800,8 @@ country_event = {
 	option = {
 		name = RoF_RUS.100.c
 		effect_tooltip = {
-			release = USR
-			release = SIB
+			release = RSA
+			release = RSB
 		}
 		#SIB = { change_tag_from = RUS }
 		ai_chance = {
@@ -1253,7 +1274,7 @@ country_event = {
 	desc = RoF_RUS.132.d
 	fire_only_once = yes
 	trigger = {
-		tag = USR
+		tag = RSA
 		has_country_flag = USR_begin_convention
 		RSC = { has_country_flag = RUS_hired_kazakhs }
 	}
@@ -2032,11 +2053,11 @@ country_event = {
 			base = 5
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_reactionary_constitution }
+				RSA = { has_idea = USR_reactionary_constitution }
 			}
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_radical_constitution }
+				RSA = { has_idea = USR_radical_constitution }
 			}
 		}
 	}

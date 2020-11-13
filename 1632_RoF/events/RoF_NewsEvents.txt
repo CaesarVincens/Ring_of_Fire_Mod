@@ -213,7 +213,18 @@ news_event = {
 news_event = {
 	id = RoF_news.05
 	title = RoF_news.05.t
-	desc = RoF_news.05.d
+	desc = {
+		trigger = {
+			NUS = { has_country_flag = NUS_patriotic_fervor_flag }
+		}
+		text = RoF_news.05.d
+	}
+	desc = {
+		trigger = {
+			NUS = { NOT = { has_country_flag = NUS_patriotic_fervor_flag } }
+		}
+		text = RoF_news.05.da
+	}
 	picture = GFX_news_event_landscape_urban_1
 	
 	major = yes
@@ -221,16 +232,36 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = RoF_news.05.a
+		name = RoF_news.05.b
 		trigger = {
-			NOT = { original_tag = NUS }
-			NOT = { tag = SWE }
-			NOT = { tag = UPS }
+			NOT = {
+				original_tag = NUS
+				original_tag = SWE
+				is_in_faction_with = SWE
+			}
 		}
 	}
 	option = {
-		name = RoF_news.05.b
-		trigger = { OR = { original_tag = NUS tag = SWE tag = UPS } }
+		name = RoF_news.05.a
+		trigger = {
+			OR = {
+				original_tag = NUS
+				original_tag = SWE
+				is_in_faction_with = SWE
+			}
+			NUS = { has_country_flag = NUS_patriotic_fervor_flag }
+		}
+	}
+	option = {
+		name = RoF_news.05.c
+		trigger = {
+			OR = {
+				original_tag = NUS
+				original_tag = SWE
+				is_in_faction_with = SWE
+			}
+			NUS = { NOT = { has_country_flag = NUS_patriotic_fervor_flag } }
+		}
 	}
 }
 
@@ -402,6 +433,57 @@ news_event = {
 	option = {
 		name = RoF_news.16.b
 		trigger = { tag = DEN }
+	}
+}
+
+# Frederick V dies
+news_event = {
+	id = RoF_news.17
+	title = RoF_news.17.t
+	desc = RoF_news.17.d
+	picture = GFX_news_event_landscape_urban_1
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		date > 1632.12.1
+		NOT = { has_global_flag = frederick_v_restored }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		set_global_flag = winter_king_dead
+	}
+	option = {
+		name = RoF_news.17.a
+		trigger = {
+			OR = {
+				tag = AUS
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = RoF_news.17.b
+		trigger = {
+			OR = {
+				tag = SWE
+				is_in_faction_with = SWE
+			}
+		}
+	}
+	option = {
+		name = RoF_news.17.c
+		trigger = {
+			NOT = {
+				tag = SWE
+				is_in_faction_with = SWE
+				tag = AUS
+				is_in_faction_with = AUS
+			}
+		}
 	}
 }
 

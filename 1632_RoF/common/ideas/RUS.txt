@@ -169,6 +169,7 @@ ideas = {
 			picture = raj_risk_of_famine
 		}
 		RUS_eastern_serfdom_1 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -180,11 +181,11 @@ ideas = {
 				drift_defence_factor = 0.2
 				stability_factor = -0.2
 				war_support_factor = -0.1
-				conscription_factor = -0.2
-				resistance_damage_to_garrison_on_our_occupied_states = -0.1
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
-				consumer_goods_factor = 0.2
+				conscription_factor = -0.1
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.1
 				global_building_slots_factor = -0.1
 				production_speed_buildings_factor = -0.1
 			}
@@ -192,6 +193,7 @@ ideas = {
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_2 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -203,11 +205,11 @@ ideas = {
 				drift_defence_factor = 0.15
 				stability_factor = -0.2
 				war_support_factor = -0.1
-				conscription_factor = -0.2
-				resistance_damage_to_garrison_on_our_occupied_states = -0.1
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
-				consumer_goods_factor = 0.15
+				conscription_factor = -0.1
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
+				consumer_goods_factor = 0.075
 				global_building_slots_factor = -0.05
 				production_speed_buildings_factor = -0.1
 			}
@@ -215,6 +217,7 @@ ideas = {
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_3 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -226,17 +229,18 @@ ideas = {
 				drift_defence_factor = 0.1
 				stability_factor = -0.15
 				war_support_factor = -0.05
-				conscription_factor = -0.15
-				resistance_damage_to_garrison_on_our_occupied_states = -0.05
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				consumer_goods_factor = 0.1
+				conscription_factor = -0.075
+				resistance_target_on_our_occupied_states = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = -0.05
 			}
 			picture = generic_oppression
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_4 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -248,10 +252,10 @@ ideas = {
 				drift_defence_factor = 0.05
 				stability_factor = -0.1
 				war_support_factor = -0.05
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				consumer_goods_factor = 0.025
 			}
 			picture = generic_oppression
 			removal_cost = -1

@@ -11,7 +11,7 @@ state = {
 
 	history = {
 		owner = VEN
-		victory_points = { 11584 8 }
+		victory_points = { 11584 20 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

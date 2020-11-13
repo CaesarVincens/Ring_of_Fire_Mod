@@ -91,9 +91,14 @@ RoF_CoC_decisions = {
 		complete_effect = {
 			add_to_variable = { var = CoC_strength value = 5 }
 			add_to_variable = { var = CoC_anger value = -5 }
-			add_popularity = {
-				ideology = radical
-				popularity = 0.05
+			if = {
+				limit = {
+					radical < 0.3
+				}
+				add_popularity = {
+					ideology = radical
+					popularity = 0.05
+				}
 			}
 			custom_effect_tooltip = RoF_strengthen_CoC.tt
 			hidden_effect = {
@@ -132,6 +137,16 @@ RoF_CoC_decisions = {
 			hidden_effect = {
 				check_CoC_effects_for_this = yes
 			}
+			if = {
+				limit = {
+					radical > 0.3
+				}
+				add_popularity = {
+					ideology = radical
+					popularity = -0.05
+				}
+			}
+
 		}
 		cost = 50
 		days_re_enable = 30

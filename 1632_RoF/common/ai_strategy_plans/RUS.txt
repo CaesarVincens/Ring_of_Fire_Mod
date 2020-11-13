@@ -21,25 +21,25 @@ Russian_Civil_war_Free_RUS = {
 	desc = "do it"
 	
 	enable = {
-		original_tag = USR
+		tag = RSA
 	}
 	abort = {
-		NOT = { country_exists = RUS }
+		NOT = { country_exists = RSC }
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = RUS
+		id = RSC
 		value = 200
 	}
 	ai_strategy = {
 		type = conquer
-		id = RUS
+		id = RSC
 		value = 200
 	}
 	ai_strategy = {
 		type = declare_war
-		id = RUS
+		id = RSC
 		value = 200
 	}
 }
@@ -49,18 +49,18 @@ Russian_Civil_war_Free_RUS_prep = {
 	desc = "do it"
 	
 	enable = {
-		original_tag = USR
+		tag = RSA
 	}
 	abort = {
 		OR = {
-			has_war_with = RUS
-			NOT = { country_exists = RUS }
+			has_war_with = RSC
+			NOT = { country_exists = RSC }
 		}
 	}
 	
 	ai_strategy = {
 		type = prepare_for_war
-		id = RUS
+		id = RSC
 		value = 100
 	}
 }
@@ -70,19 +70,19 @@ Russian_Civil_war_Direc_RUS_prep = {
 	desc = "do it"
 	
 	enable = {
-		original_tag = RUS
-		country_exists = USR
+		tag = RSC
+		country_exists = RSA
 	}
 	abort = {
 		OR = {
-			has_war_with = USR
-			NOT = { country_exists = USR }
+			has_war_with = RSA
+			NOT = { country_exists = RSA }
 		}
 	}
 	
 	ai_strategy = {
 		type = prepare_for_war
-		id = USR
+		id = RSA
 		value = 100
 	}
 }
@@ -92,26 +92,26 @@ Russian_Civil_war_Direc_RUS = {
 	desc = "do it"
 	
 	enable = {
-		original_tag = RUS
-		country_exists = USR
+		tag = RSC
+		country_exists = RSA
 	}
 	abort = {
-		NOT = { country_exists = USR }
+		NOT = { country_exists = RSA }
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = USR
+		id = RSA
 		value = 200
 	}
 	ai_strategy = {
 		type = conquer
-		id = USR
+		id = RSA
 		value = 200
 	}
 	ai_strategy = {
 		type = declare_war
-		id = USR
+		id = RSA
 		value = 200
 	}
 }

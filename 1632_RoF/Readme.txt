@@ -15,9 +15,12 @@ Currently in Alpha; expect to find bugs and oddities
 
 Alpha 0.8.0 - 
 Reworked Polish states to match historical regions
-Polish focus tree
+Polish focus tree with Sejm (Congress-esque) and Balance of Power mechanics
 Reworked Russian civil war to use dynamic countries
 Updates to Russian and English focus trees making use of La Resistence updated layout mechanics
+Added Mercenary hiring decisions, likely unbalanced
+Updates to Ottoman focus tree, including a mechanic to integrate the starting vassals without Together for Victory
+Added Game Rules for most countries with focus trees
 
 Alpha 0.7.5 - Oct. 15, 2020
 Updated to HoI4 1.10

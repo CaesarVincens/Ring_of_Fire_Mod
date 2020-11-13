@@ -19,7 +19,7 @@ ideas = {
 				training_time_factor = -0.1
 				industrial_capacity_factory = 0.05
 				production_speed_arms_factory_factor = 0.1
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 			removal_cost = -1
 		}

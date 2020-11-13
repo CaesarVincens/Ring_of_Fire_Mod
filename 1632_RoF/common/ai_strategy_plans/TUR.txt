@@ -100,13 +100,13 @@ TUR_baghdad = {
 	abort = {
 		OR = {
 			owns_state = 372
-			has_war_with = PER
+			has_war = yes
 			PER = { exists = no }
 		}
 	}
 	ai_strategy = {
 		type = prepare_for_war
 		id = PER
-		value = 200
+		value = 2000
 	}
 }

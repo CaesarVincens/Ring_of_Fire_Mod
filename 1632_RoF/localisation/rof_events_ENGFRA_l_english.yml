@@ -121,7 +121,7 @@
  RoF_ENG.157.a:0 "Certainly no more monarchs."
  RoF_ENG.157.b:0 "A properly Scottish monarch will be fine."
  RoF_ENG.160.t:0 "Britain United"
- RoF_ENG.160.da:0 "The Royalist party has emerged supreme, King [ROOT.GetLeader] rules Britain unchallenged."
+ RoF_ENG.160.da:0 "The Royalist party has emerged supreme, King [Root.GetLeader] rules Britain unchallenged."
  RoF_ENG.160.db:0 "The times of trouble seem to be avoided for now, Britain and Ireland are united in one realm."
  RoF_ENG.160.a:0 "God save the King!"
  RoF_ENG.160.b:0 "Rule Britannia!"

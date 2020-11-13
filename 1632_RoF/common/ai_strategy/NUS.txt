@@ -359,7 +359,7 @@ USE_annex_germans = {
 		is_german_tag = yes
 	}
 	#abort_when_not_enabled = yes
-	target_array = german_tags
+	target_array = global.german_tags
 	ai_strategy = {
 		type = prepare_for_war
 		id = "NUS"

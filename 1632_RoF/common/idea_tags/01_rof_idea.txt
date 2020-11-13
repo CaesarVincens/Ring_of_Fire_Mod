@@ -5,6 +5,8 @@ idea_categories = {
 	
 		cost = 0
 		removal_cost = -1
+
+		ledger = hidden
 	}
 
 	country = {
@@ -12,6 +14,8 @@ idea_categories = {
 		
 		cost = 0
 		removal_cost = -1
+
+		ledger = hidden
 	}
 	
 	government = {
@@ -25,6 +29,8 @@ idea_categories = {
 		
 		cost = 150
 		removal_cost = 0
+
+		ledger = civilian
 	}
 	government_advisors = {
 		slot = political_advisor
@@ -33,6 +39,8 @@ idea_categories = {
 		
 		cost = 150
 		removal_cost = 0
+
+		ledger = civilian
 	}
 	research_production = {
 		slot = tank_manufacturer
@@ -45,6 +53,7 @@ idea_categories = {
 		cost = 150
 		removal_cost = 0
 
+		ledger = civilian
 	}
 	
 	military_staff = {
@@ -57,5 +66,23 @@ idea_categories = {
 		
 		cost = 150
 		removal_cost = 0
+
+		ledger = invalid
 	}
+}
+
+slot_ledgers = {
+	army_chief = army
+	navy_chief = navy
+	air_chief = air
+	
+	tank_manufacturer = army
+	naval_manufacturer = navy
+	aircraft_manufacturer = air
+	
+	theorist = invalid # must be overridden
+	high_command = invalid # must be overridden
+	
+	placeholder_gov = hidden
+	mobilization_laws = civilian
 }

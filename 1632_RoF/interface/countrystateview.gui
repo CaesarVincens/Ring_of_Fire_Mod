@@ -361,6 +361,13 @@ guiTypes = {
 				}
 
 				iconType = {
+					name = "lack_of_infrastructure_icon"
+					spriteType = "GFX_modifiers_unplanned_offensive_icon"
+					position = { x = 0 y = 0 }
+					Orientation = "UPPER_LEFT"			
+				}
+
+				iconType = {
 					name = "unplanned_offensive_icon"
 					spriteType = "GFX_modifiers_unplanned_offensive_icon"
 					position = { x = 0 y = 0 }
@@ -380,7 +387,7 @@ guiTypes = {
 			buttonType = {
 				name = "nuke_province"
 				quadTextureSprite ="GFX_nuke_button"
-				position = { x= 13 y = -11 }
+				position = { x= -413 y = -11 }
 			}
 			
 			iconType = {

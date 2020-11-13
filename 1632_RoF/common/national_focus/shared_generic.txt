@@ -311,7 +311,6 @@
 				category = air_doctrine
 			}
 		}
-
 	}
 
 	####################
@@ -325,9 +324,8 @@
 		y = 0
 		#available_if_capitulated = yes
 		available = {
-			any_state = {
+			any_controlled_state = {
 				is_coastal = yes
-				is_controlled_by = ROOT
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY }
@@ -441,11 +439,8 @@
 				}
 			}
 			else = {
-				random_state = {
+				random_controlled_state = {
 					limit = {
-						controller = {
-							tag = ROOT
-						}
 						free_building_slots = {
 							building = dockyard
 							size > 2
@@ -474,8 +469,8 @@
 				}
 			}
 		}
-
 	}
+
 	shared_focus = {
 		id = heavy_navy_focus
 		icon = GFX_goal_generic_navy_battleship
@@ -511,8 +506,8 @@
 				}
 			}
 		}
-
 	}
+
 	shared_focus = {
 		id = man_of_war_effort
 		icon = GFX_goal_generic_navy_battleship
@@ -547,8 +542,8 @@
 				}
 			}
 		}
-
 	}
+
 	shared_focus = {
 		id = ironclad_focus
 		icon = GFX_goal_generic_navy_battleship
@@ -736,6 +731,7 @@
 		completion_reward = {
 			set_technology = {
 				tercio_formation_focus_tech = 1
+				popup = no
 			}
 			add_tech_bonus = {
 				name = doctrine_bonus
@@ -801,6 +797,7 @@
 		completion_reward = {
 			set_technology = {
 				swedish_line_tech = 1
+				popup = no
 			}
 			add_tech_bonus = {
 				name = doctrine_bonus
@@ -840,13 +837,21 @@
 		prerequisite = {
 			focus = light_artillery_focus
 		}
-		prerequisite = {
-			focus = improved_materials
-		}
 		x = 2
 		y = 3
 		relative_position_id = army_drilling
 		search_filters = { FOCUS_FILTER_MILITARY }
+		available = {
+			if = {
+				limit = {
+					has_generic_industry_focuses = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = rifled_weapons_improved_materials
+					has_completed_focus = improved_materials
+				}
+			}
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = doctrine_bonus
@@ -976,6 +981,10 @@
 				factor = 2
 				num_of_military_factories < 5
 			}
+			modifier = {
+				factor = 0.25
+				is_german_tag = yes
+			}
 		}
 	}
 	shared_focus = {
@@ -1038,6 +1047,10 @@
 			modifier = {
 				factor = 2
 				num_of_military_factories < 5
+			}
+			modifier = {
+				factor = 0.25
+				is_german_tag = yes
 			}
 		}
 	}
@@ -1102,6 +1115,10 @@
 				factor = 2
 				num_of_military_factories < 5
 			}
+			modifier = {
+				factor = 0.25
+				is_german_tag = yes
+			}
 		}
 	}
 	shared_focus = {
@@ -1164,6 +1181,10 @@
 			modifier = {
 				factor = 2
 				num_of_civilian_factories < 5
+			}
+			modifier = {
+				factor = 0.25
+				is_german_tag = yes
 			}
 		}
 	}
@@ -1228,6 +1249,10 @@
 				factor = 2
 				num_of_civilian_factories < 5
 			}
+			modifier = {
+				factor = 0.25
+				is_german_tag = yes
+			}
 		}
 	}
 	shared_focus = {
@@ -1290,6 +1315,10 @@
 			modifier = {
 				factor = 2
 				num_of_civilian_factories < 5
+			}
+			modifier = {
+				factor = 0.25
+				is_german_tag = yes
 			}
 		}
 	}

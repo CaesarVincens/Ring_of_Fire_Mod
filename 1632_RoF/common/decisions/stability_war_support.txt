@@ -117,7 +117,7 @@ crisis = {
 		}
 
 		days_mission_timeout = 90
-
+		is_good = no
 		activation = {
 			OR = {
 				has_idea = draft_dodging
@@ -221,7 +221,7 @@ crisis = {
 		}
 
 		days_mission_timeout = 90
-
+		is_good = no
 		activation = {
 			OR = {
 				has_idea = strikes_1
@@ -377,7 +377,7 @@ crisis = {
 		}
 
 		days_mission_timeout = 90
-
+		is_good = no
 		activation = {
 			OR = {
 				has_idea = mutiny_1

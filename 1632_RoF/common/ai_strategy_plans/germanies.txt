@@ -157,3 +157,51 @@ BAV_watch_ANS_WRT = {
 		value = 100
 	}
 }
+
+COL_protect_koln = {
+	name = "Protect Koln"
+	desc = ""
+	enable = {
+		tag = COL
+	}
+	abort = {
+		has_global_flag = thirty_years_war_ended
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			212
+		}
+		ratio = 0.3
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BRS
+		value = 100
+	}
+}
+
+minor_germans_stay_home = {
+	name = "stay home"
+	desc = "keep yourself safe"
+	enable = {
+		is_in_faction_with = SWE
+		is_german_tag = yes
+		check_variable = { num_owned_states < 2 }
+		NOT = {
+			tag = HES
+		}
+	}
+	abort = {
+		OR = {
+			has_global_flag = thirty_years_war_ended
+		}
+	}
+	ai_strategy = {
+		type = front_control
+		area = south_germany
+		ratio = 0
+		execute_order = no
+		manual_attack = no
+	}
+}

@@ -118,6 +118,12 @@ TUR_unit_production = {
 		value = 25
 	}
 
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = rocket_artillery_equipment_1
+		value = 20
+	}
+
 }
 
 TUR_industrialize = {
@@ -141,7 +147,7 @@ TUR_pp_spend_amount = {
 	ai_strategy = {
 		type = pp_spend_amount
 		id = idea
-		value = 100
+		value = 50
 	}
 	
 	ai_strategy = {
@@ -161,12 +167,17 @@ coup_pp_spend_amount = {
 	ai_strategy = {
 		type = pp_spend_amount
 		id = decision
-		value = 1000
+		value = 200
 	}
 	ai_strategy = {
 		type = pp_spend_priority
 		id = decision
-		value = 1000
+		value = 100
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = -50
 	}
 }
 
@@ -435,7 +446,7 @@ TUR_ignore_minors = {
 TUR_air_force = {
 	enable = {
 		original_tag = TUR
-		num_of_military_factories > 30
+		num_of_military_factories > 20
 	}
 	ai_strategy = {
 		type = air_factory_balance

@@ -280,7 +280,10 @@ ideas = {
 			}
 			picture = generic_research_bonus
 			research_bonus = {
-				industry = 0.05
+				industry = 0.1
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 		TUR_advances_2 = {
@@ -292,9 +295,13 @@ ideas = {
 			}
 			picture = generic_research_bonus
 			research_bonus = {
-				firearms_weapons = 0.05
-				artillery = 0.05
+				firearms_weapons = 0.1
+				artillery = 0.1
 			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+
 		}
 		TUR_advances_3 = {
 			allowed = {
@@ -305,7 +312,7 @@ ideas = {
 			}
 			picture = generic_research_bonus
 			research_bonus = {
-				electronics = 0.05
+				electronics = 0.1
 			}
 		}
 		TUR_advances_4 = {
@@ -317,10 +324,15 @@ ideas = {
 			}
 			picture = generic_research_bonus
 			research_bonus = {
-				industry = 0.05
-				firearms_weapons = 0.05
-				artillery = 0.05
+				industry = 0.1
+				firearms_weapons = 0.1
+				artillery = 0.1
 			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+
 		}
 		TUR_advances_5 = {
 			allowed = {
@@ -331,8 +343,11 @@ ideas = {
 			}
 			picture = generic_research_bonus
 			research_bonus = {
-				industry = 0.05
-				electronics = 0.05
+				industry = 0.1
+				electronics = 0.1
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 		TUR_infrastructure = {
@@ -344,7 +359,7 @@ ideas = {
 			}
 			picture = generic_build_infrastructure
 			research_bonus = {
-				infra_tech = 0.05
+				infra_tech = 0.1
 			}
 			modifier = {
 				production_speed_infrastructure_factor = 0.1

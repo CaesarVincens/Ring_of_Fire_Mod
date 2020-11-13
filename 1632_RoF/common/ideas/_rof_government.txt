@@ -19,7 +19,7 @@ ideas = {
 			}
 			modifier = {
 				conscription_factor = -0.05
-				resistance_damage_to_garrison = 0.1
+				resistance_target = 0.05
 				political_power_gain = 0.1
 				#stability_weekly = 0.005
 				war_support_factor = 0.1
@@ -72,7 +72,7 @@ ideas = {
 			}
 			modifier = {
 				conscription_factor = 0.05
-				resistance_damage_to_garrison = -0.1
+				resistance_target = -0.05
 			}
 			cancel_if_invalid = no
 			#default = yes
@@ -98,8 +98,22 @@ ideas = {
 			cancel_if_invalid = no
 			modifier = {
 				conscription_factor = 0.1
-				resistance_damage_to_garrison = -0.2
+				resistance_target = -0.1
 				political_power_gain = -0.1
+			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						has_idea = POL_henrician_articles
+					}
+					NOT = { has_idea = POL_henrician_articles }
+				}
+				if = {
+					limit = {
+						has_idea = POL_henrician_articles_2
+					}
+					NOT = { has_idea = POL_henrician_articles_2 }
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -155,7 +169,7 @@ ideas = {
 			cancel_if_invalid = no
 			modifier = {
 				conscription = 0.01
-				resistance_damage_to_garrison = 0.1
+				resistance_target = 0.05
 				training_time_army_factor = -0.2
 			}
 			ai_will_do = {
@@ -180,7 +194,7 @@ ideas = {
 			modifier = {
 				conscription = 0.02
 				training_time_army_factor = -0.1
-				#conscription_factor = 0.2			
+				#conscription_factor = 0.2
 			}
 			ai_will_do = {
 				factor = 1
@@ -234,7 +248,6 @@ ideas = {
 				}
 			}
 		}
-
 	}
 	placeholder_gov = {
 		place_holder_gov = {

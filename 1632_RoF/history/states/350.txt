@@ -1,9 +1,9 @@
 
-state = {
-	id = 350
-	name = "STATE_350"
+state={
+	id=350
+	name="STATE_350"
 
-	history = {
+	history={
 		owner = POL
 		victory_points = {
 			3392 3 
@@ -17,12 +17,13 @@ state = {
 		}
 		add_core_of = POL
 		add_core_of = LIT
+
 	}
 
-	provinces = {
-		535 560 3256 3281 3392 3496 6306 6415 6546 6579 11247 11466 11503 11528 
+	provinces={
+		535 560 3256 3392 3496 3556 6280 6415 6546 6579 9554 11466 11503 11528 
 	}
-	manpower = 739400
-	buildings_max_level_factor = 1.000
-	state_category = rural
+	manpower=739400
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

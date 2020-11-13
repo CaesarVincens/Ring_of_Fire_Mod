@@ -31,7 +31,7 @@ set_popularities = {
 	radical = 0
 	neutrality = 12
 }
-
+set_country_flag = pseudo_subject
 set_country_flag = religion_catholic
 add_ideas = {
 }

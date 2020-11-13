@@ -20,6 +20,7 @@ set_convoys = 10
 BRZ = {
 	set_country_flag = colony_flag
 }
+
 # DIPLOMACY
     set_autonomy = {
         target = KEN
@@ -52,6 +53,7 @@ set_popularities = {
 	neutrality = 62
 }
 
+set_country_flag = pseudo_subject
 set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco

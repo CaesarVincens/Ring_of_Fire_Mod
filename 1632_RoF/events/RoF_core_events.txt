@@ -595,6 +595,46 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = RoF.020
+	title = RoF.020.t
+	desc = RoF.020.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF.020.a
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = RoF.020.b
+		clr_country_flag = hiring_mercenaries
+		delete_unit_template_and_units = {
+			division_template = "Mercenary Detachment"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Mercenary Company"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Mercenary Army"
+		}
+		clear_variable = merc_pool_small
+		clear_variable = merc_pool_medium
+		clear_variable = merc_pool_large
+		clear_variable = merc_weight
+		clear_variable = merc_weight_cost
+		clear_variable = merc_weight_mod
+		clear_variable = merc_weight_man
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
 country_event = {
 	id = RoF.100
 	title = "Test Event 1"

@@ -223,7 +223,7 @@ focus_tree = {
 					idea = UPS_maastricht_campaign
 					days = 210
 				}
-				set_variable = { maastricht_campaign = 6 }
+				set_variable = { maastricht_campaign = 280 }
 			}
 			else_if = {
 				limit = {
@@ -234,7 +234,7 @@ focus_tree = {
 					idea = UPS_maastricht_campaign
 					days = 175
 				}
-				set_variable = { maastricht_campaign = 5 }
+				set_variable = { maastricht_campaign = 245 }
 			}
 			else_if = {
 				limit = {
@@ -245,7 +245,7 @@ focus_tree = {
 					idea = UPS_maastricht_campaign
 					days = 140
 				}
-				set_variable = { maastricht_campaign = 4 }
+				set_variable = { maastricht_campaign = 210 }
 			}
 			else_if = {
 				limit = {
@@ -256,7 +256,7 @@ focus_tree = {
 					idea = UPS_maastricht_campaign
 					days = 105
 				}
-				set_variable = { maastricht_campaign = 3 }
+				set_variable = { maastricht_campaign = 175 }
 			}
 			else_if = {
 				limit = {
@@ -267,14 +267,14 @@ focus_tree = {
 					idea = UPS_maastricht_campaign
 					days = 70
 				}
-				set_variable = { maastricht_campaign = 2 }
+				set_variable = { maastricht_campaign = 140 }
 			}
 			else = {
 				add_timed_idea = {
 					idea = UPS_maastricht_campaign
 					days = 35
 				}
-				set_variable = { maastricht_campaign = 1 }
+				set_variable = { maastricht_campaign = 105 }
 			}
 		}
 		ai_will_do = {
@@ -303,7 +303,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			transfer_state = 458
+			country_event = {
+				id = RoF_NED.50 hours = 26
+			}
 		}
 		ai_will_do = {
 			factor = 20

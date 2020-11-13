@@ -4,7 +4,18 @@ AUS_canon_focuses = {
 	enable = {
 		original_tag = AUS
 		OR = {
-			is_historical_focus_on = yes
+			AND = {
+				has_game_rule = {
+					rule = AUS_ai_behavior
+					option = DEFAULT
+				}
+				is_historical_focus_on = yes
+			}
+			has_game_rule = {
+				rule = AUS_ai_behavior
+				option = CANON
+			}
+			has_country_flag = AUS_AI_RANDOM_CANON
 		}
 	}
 	abort = {
@@ -30,6 +41,46 @@ AUS_canon_focuses = {
 		AUS_ferdinand_3
 		AUS_new_empire
 		AUS_american_industry
+	}
+}
+
+AUS_alternate_focuses = {
+	name = "Austria HRE Plan"
+	desc = ""
+	enable = {
+		original_tag = AUS
+		OR = {
+			has_game_rule = {
+				rule = AUS_ai_behavior
+				option = ALTERNATE
+			}
+			has_country_flag = AUS_AI_RANDOM_ALTERNATE
+		}
+	}
+	abort = {
+
+	}
+	ai_national_focuses = {
+		AUS_sweet_talk_saxony
+		AUS_bolster_bohemia
+		AUS_reinforce_rhine
+		AUS_sell_patents
+		AUS_reinstate_wallenstein
+		AUS_cheat_sheets
+		AUS_improved_weapons
+		AUS_issue_reichsthalers
+		AUS_industrial_investments
+		AUS_military_investments
+		AUS_handle_wallenstein
+		AUS_develop_inner_austria
+		AUS_develop_hungary
+		AUS_bavarian_alliance
+		AUS_illness_ferdinand_2
+		AUS_hire_americans
+		AUS_ferdinand_3
+		AUS_restore_austria
+		AUS_american_industry
+		AUS_reclaim_bohemia
 	}
 }
 
@@ -101,6 +152,12 @@ AUS_Thirty_Years_War = {
 		type = dont_defend_ally_borders
 		id = COL
 		value = 50
+	}
+	ai_strategy = {
+		type = front_control
+		area = north_germany
+		ratio = 0
+		execution_type = careful
 	}
 }
 
@@ -189,7 +246,7 @@ AUS_TYW_prep = {
 	enable = {
 		OR = {
 			original_tag = AUS
-			is_in_faction_with = AUS
+			#is_in_faction_with = AUS
 		}
 		has_war_with = SWE
 	}
@@ -225,7 +282,7 @@ AUS_TYW_prep = {
 	}
 	ai_strategy = {
 		type = garrison
-		value = -100
+		value = -10
 		
 	}
 }

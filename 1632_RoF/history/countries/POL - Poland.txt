@@ -36,19 +36,22 @@ set_politics = {
     elections_allowed = no
 }
 set_popularities = {
-	absolutist = 69
-	constitutionalist = 29
-	liberal = 0
-	radical = 0
-	neutrality = 2
+	absolutist = 52
+	constitutionalist = 35
+	liberal = 4
+	radical = 1
+	neutrality = 8
 }
 
 #Sejm
+set_variable = { power_king = 0.1 }
+set_variable = { power_szlachta = 0.45 }
+set_variable = { power_magnates = 0.45 }
 set_variable = { var = sejm_support value = 100 }
 set_variable = { var = sejm_total value = 200 }
-set_variable = { var = sejm_low value = 90 }
-set_variable = { var = sejm_medium value = 120 }
-set_variable = { var = sejm_high value = 150 }
+set_variable = { var = sejm_low value = 120 } # 60%
+set_variable = { var = sejm_medium value = 150 } # 75%
+set_variable = { var = sejm_high value = 180 } # 90%
 POL_recalc_sejm_icon_frames = yes
 
 set_country_flag = religion_catholic
@@ -57,7 +60,10 @@ add_ideas = {
 	freedom_of_religion
 	POL_henrician_articles
 	POL_eastern_serfdom_1
+	POL_powerful_magnates
 	POL_grain_exports
+	POL_lukasz_opalinski_elder
+	POL_jakub_zadzik
 }
 add_timed_idea = {
     idea = POL_treaty_of_stary_targ
@@ -67,42 +73,98 @@ add_timed_idea = {
     idea = POL_truce_of_deulino
     days = 767
 }
+country_event = { id = RoF_POL.50 days = 2 }
 set_stability = 0.5
 create_country_leader = {
     name = "Sigismund III Vasa"
-    desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
+    desc = "POLITICS_SIGISMUND_DESC"
     picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
     expire = "1632.11.1"
     ideology = absolute_monarchy
     traits = {
+		swedish_claimant
     }
 }
 create_country_leader = {
     name = "Sigismund III Vasa"
-    desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
+    desc = "POLITICS_SIGISMUND_DESC"
     picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
     expire = "1632.11.1"
     ideology = constitutional_monarchy
     traits = {
+		swedish_claimant
     }
 }
 create_country_leader = {
     name = "Sigismund III Vasa"
-    desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
+    desc = "POLITICS_SIGISMUND_DESC"
     picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
     expire = "1632.11.1"
     ideology = absolute_monarchy_neutral
     traits = {
+		swedish_claimant
     }
 }
 
-create_corps_commander = {
+create_field_marshal = {
 	name = "Stanisław Koniecpolski"
     picture = "Portrait_Poland_Stanislas_Koniecpolski.dds"
-	traits = { }
+	traits = {
+		cavalry_officer
+		brilliant_strategist
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Marcin Kazanowski"
+    picture = "Portrait_Poland_Marcin_Kazanowski.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mikołaj Potocki"
+    picture = "Portrait_Poland_Mikolaj_Potocki.dds"
+	traits = {
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Janusz Kiszka"
+    picture = "Portrait_Poland_Janusz_Kiszka.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Krzysztof Radziwiłł"
+    picture = "Portrait_Poland_Krzysztof_Radziwill.dds"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }

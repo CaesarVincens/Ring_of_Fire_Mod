@@ -9,7 +9,7 @@ state={
 			99 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -25,5 +25,4 @@ state={
 	manpower=496044
 	buildings_max_level_factor=1.000
 	state_category=town
-	impassable = yes
 }

@@ -124,7 +124,13 @@ country_event = {
 			complete_national_focus = NUS_welcome_refugees
 			}
 		}
-		ai_chance = { base = 75 }
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0
+				NUS_absolutist_path = yes
+			}
+		}
 	}
 	option = {
 		name = RoF_NUS.110.b
@@ -148,7 +154,11 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 0
-				is_historical_focus_on = yes
+				OR = {
+					NUS_canon_path = yes
+					NUS_radical_path = yes
+					is_historical_focus_on = yes
+				}
 			}
 		}
 	}
@@ -211,7 +221,12 @@ news_event = {
 			create_country_leader = {
 				name = "Gretchen Richterin"
 				ideology = radical_democracy
-				#picture
+				picture = "gfx/leaders/leader_unknown_female.dds"
+			}
+			set_party_name = {
+				ideology = radical
+				long_name = NUS_coc_long
+				name = NUS_coc
 			}
 		}
 	}
@@ -240,8 +255,8 @@ country_event = {
 		}
 		if = {
 			limit = { num_of_controlled_states < 3 }
+			custom_effect_tooltip = GAME_OVER_TT
 		}
-		custom_effect_tooltip = GAME_OVER_TT
 	}
 	option = { # Refuse
 		name =  RoF_NUS.120.d
@@ -346,6 +361,7 @@ country_event = {
 			transfer_state = 579
 			transfer_state = 580
 		}
+		add_threat = 2
 		add_state_core = 579
 		add_state_core = 580
 		hidden_effect = {
@@ -512,6 +528,7 @@ country_event = {
 		else = {
 			transfer_state = 247
 		}
+		add_threat = 2
 		#add_state_core = 247
 		hidden_effect = {
 			NUS = {
@@ -613,7 +630,8 @@ country_event = {
 			FROM = { has_country_flag = SAX_accept_demand }
 		}
 		transfer_state = 412
-		#add_state_core = 412
+		#add_state_core = 
+		add_threat = 1
 		hidden_effect = {
 			NUS = {
 				news_event = { days = 1 id = RoF_news.13 }
@@ -662,7 +680,7 @@ country_event = {
 	desc = {
 		text = RoF_NUS.127.db
 		trigger = {
-			HES = { has_capitulated = no }
+			HES = { exists = yes has_capitulated = no }
 			FROM = { has_country_flag = WRZ_accept_demand }
 		}
 	}
@@ -711,6 +729,8 @@ country_event = {
 			transfer_state = 578
 			transfer_state = 461
 		}
+		set_country_flag = NUS_annex_WRZ
+		add_threat = 2
 		if = {
 			limit = {
 				HES = {
@@ -741,9 +761,9 @@ country_event = {
 	option = { # Accept
 		name =  RoF_NUS.128.a
 		ai_chance = { base = 100 }
-		set_country_flag = NUS_accept_demand@ROOT
+		set_country_flag = NUS_accept_demand
 		NUS = {
-			country_event = { id = RoF_NUS.129 }
+			country_event = { id = RoF_NUS.129 hours = 1 }
 		}
 		if = {
 			limit = {
@@ -756,9 +776,9 @@ country_event = {
 	}
 	option = { # Refuse
 		name =  RoF_NUS.128.b
-		set_country_flag = NUS_refuse_demand@ROOT
+		set_country_flag = NUS_refuse_demand
 		NUS = {
-			country_event = { id = RoF_NUS.129 }
+			country_event = { id = RoF_NUS.129 hours = 1 }
 		}
 	}
 }
@@ -770,13 +790,13 @@ country_event = {
 	desc = {
 		text = RoF_NUS.129.da
 		trigger = {
-			FROM = { has_country_flag = NUS_refuse_demand@FROM }
+			FROM = { has_country_flag = NUS_refuse_demand }
 		}
 	}
 	desc = {
 		text = RoF_NUS.129.db
 		trigger = {
-			FROM = { has_country_flag = NUS_accept_demand@FROM }
+			FROM = { has_country_flag = NUS_accept_demand }
 		}
 	}
 	picture = GFX_report_event_nus_flag
@@ -786,7 +806,7 @@ country_event = {
 	option = {
 		name = RoF_NUS.129.a
 		trigger = {
-			FROM = { has_country_flag = NUS_refuse_demand@FROM }
+			FROM = { has_country_flag = NUS_refuse_demand }
 		}
 		create_wargoal = {
 			target = FROM
@@ -799,7 +819,7 @@ country_event = {
 	option = {
 		name = RoF_NUS.129.b
 		trigger = {
-			FROM = { has_country_flag = NUS_accept_demand@FROM }
+			FROM = { has_country_flag = NUS_accept_demand }
 		}
 		if = {
 			limit = {
@@ -810,6 +830,7 @@ country_event = {
 				}
 			}
 			annex_country = { target = FROM }
+			add_threat = 2
 		}
 		else = {
 			FROM = {
@@ -822,6 +843,7 @@ country_event = {
 					}
 				}
 			}
+			add_threat = 1
 		}
 	}
 }
@@ -1200,11 +1222,23 @@ country_event = {
 				}
 			}
 			add_popularity = { ideology = constitutionalist popularity = 0.6 }
-			ELSE = {
+			else = {
 				set_politics = {
 					ruling_party = absolutist
 					election_frequency = 48
 					elections_allowed = yes
+				}
+				hidden_effect = {
+					create_country_leader = {
+						name = "John Chandler Simpson"
+						desc = "POLITICS_JOHN_SIMPSON_DESC"
+						picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
+						#expire = "1660.1.1"
+						ideology = dictatorship 
+						traits = {
+							grand_fleet_proponent
+						}
+					}
 				}
 			}
 		}
@@ -1224,9 +1258,9 @@ news_event = {
 	title = RoF_NUS.140.t
 	desc = RoF_NUS.140.d
 	
-	picture = GFX_report_event_nus_flag
+	picture = GFX_news_event_town
 	
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 	
 	immediate = {
@@ -1242,9 +1276,9 @@ news_event = {
 	title = RoF_NUS.141.t
 	desc = RoF_NUS.141.d
 	
-	picture = GFX_report_event_nus_flag
+	picture = GFX_news_event_town
 	
-	fire_only_once = yes
+	#fire_only_once = yes
 	is_triggered_only = yes
 	
 	immediate = {

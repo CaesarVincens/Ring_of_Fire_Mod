@@ -117,7 +117,7 @@ lar_local_recruitment = {
 	visibility_type = map_and_decisions_view
 	
 	on_map_area = {
-		state = 8
+		state = 20
 		name = LAR_recruitment_europe
 		zoom = 650
 		
@@ -130,7 +130,7 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 373
+		state = 554
 		name = LAR_recruitment_north_america
 		zoom = 850
 
@@ -143,7 +143,7 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 487
+		state = 613
 		name = LAR_recruitment_south_america
 		zoom = 850
 
@@ -156,7 +156,7 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 295
+		state = 134
 		name = LAR_recruitment_africa
 		zoom = 850
 
@@ -169,7 +169,7 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 597
+		state = 94
 		name = LAR_recruitment_asia
 		zoom = 850
 
@@ -179,8 +179,8 @@ lar_local_recruitment = {
 				capital_scope = { is_on_continent = asia }
 			}
 			NOT = {
-				tag = RAJ
-				tag = PAK
+				tag = MUG
+				tag = LKA
 				tag = BAN
 				tag = NEP
 				tag = BHU
@@ -190,7 +190,7 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 521
+		state = 11
 		name = LAR_recruitment_oceania
 		zoom = 850
 
@@ -203,15 +203,15 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 439
+		state = 281
 		name = LAR_recruitment_india
 		zoom = 850
 
 		target_root_trigger = {
 			OR = {
 				has_country_flag = india_recruitment_unlocked
-				tag = RAJ
-				tag = PAK
+				tag = MUG
+				tag = LKA
 				tag = BAN
 				tag = NEP
 				tag = BHU
@@ -221,7 +221,7 @@ lar_local_recruitment = {
 	}
 
 	on_map_area = {
-		state = 656
+		state = 299
 		name = LAR_recruitment_middle_east
 		zoom = 850
 
