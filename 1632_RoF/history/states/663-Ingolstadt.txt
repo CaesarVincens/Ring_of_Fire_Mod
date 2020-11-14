@@ -4,20 +4,20 @@ state = {
 	history = {
 		owner = BAV
 		victory_points = {
-			13208 10 
+			13239 10 
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
-			13208 = { bunker = 1 }
+			13239 = { bunker = 1 }
 		}
 		add_core_of = BAV
 		set_state_flag = german_state_flag
 	}
 	provinces = {
-		13208
+		13239
 	}
 	manpower = 26208
 	buildings_max_level_factor = 1.000

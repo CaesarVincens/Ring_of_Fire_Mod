@@ -211,4 +211,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 9047;3059;impassable;-1;-1;-1;-1;-1;;scandes mountains
 9170;3059;impassable;-1;-1;-1;-1;-1;;scandes mountains
 6066;9228;sea;990;-1;-1;-1;-1;;Aland strait
+3340;6334;large_river;-1;-1;-1;-1;-1;;Wolgast strait
+849;9887;sea;7678;-1;-1;-1;-1;;Dardanelles
+1434;2332;;-1;3276;1732;3291;1734;NEVA_RIVER;Neva
+2356;2332;;-1;3358;1758;3319;1745;SVIR_RIVER;Svir
+209;13194;;-1;3352;1842;3335;1817;WHITE_SEA_CANAL;White Sea Canal
+3144;127;river;-1;-1;-1;-1;-1;;Povenets
 -1;-1;;-1;-1;-1;-1;-1;-1

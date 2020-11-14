@@ -102,22 +102,13 @@ RUS_major_decisions = {
 	}
 	RUS_test = {
 		complete_effect = {
-			392 = {
-				add_province_modifier = {
-					static_modifiers = { lack_of_infrastructure }
-					province = {
-						all_provinces = yes
-					}
-				}
+			set_global_flag = white_sea_canal_built
+			set_technology = {
+				prerof_man_of_war = 1
+				prerof_heavy_frigate = 1
+				prerof_light_frigate = 1
 			}
-			384 = {
-				add_province_modifier = {
-					static_modifiers = { lack_of_infrastructure }
-					province = {
-						all_provinces = yes
-					}
-				}
-			}
+			transfer_state = 473
 		}
 	}
 }

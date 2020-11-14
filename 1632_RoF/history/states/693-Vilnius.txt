@@ -1,26 +1,29 @@
+
 state={
 	id=693
 	name="STATE_693"
 
-	history = {
+	history={
 		owner = POL
 		add_core_of = POL
 		add_core_of = LIT
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			arms_factory = 0
+			arms_factory = 1
 			air_base = 0
+
 		}
 		victory_points = {
-			3320 10
+			3320 10 
 		}
+
 	}
 
-	provinces = {
+	provinces={
 		3320 3366 6340 6413 9246 9274 9295 9404 11226 11342 11391 11498 
 	}
-	manpower = 410530
-	buildings_max_level_factor = 1.000
-	state_category = city
+	manpower=410530
+	buildings_max_level_factor=1.000
+	state_category=city
 }

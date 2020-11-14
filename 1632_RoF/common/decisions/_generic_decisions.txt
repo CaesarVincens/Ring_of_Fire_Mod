@@ -396,6 +396,66 @@ operations = {
 }
 
 special_projects = {
+	build_white_sea_canal = {
+		visible = {
+			controls_state = 696
+			controls_state = 383
+			NOT = { has_global_flag = white_sea_canal_built }
+		}
+		available = {
+			controls_state = 696
+			controls_state = 383
+			has_tech = infrastructure_tech_3
+			has_tech = construction3
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		days_remove = 1460
+		modifier = {
+			civilian_factory_use = 10
+		}
+		complete_effect = {
+			if = {
+				limit = { has_tech = infrastructure_tech_4 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = construction4 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = construction5 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = excavation4 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = excavation5 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = white_sea_canal_built
+			set_global_flag = white_sea_canal_built
+		}
+	}
 }
 
 war_measures = {
