@@ -13,6 +13,10 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.7.7 - Nov. 22, 2020
+Updated for patch 1.10.2
+Fixes for Paradox Mods version
+
 Alpha 0.7.5 - Oct. 15, 2020
 Updated to HoI4 1.10
 

@@ -9,11 +9,11 @@ technologies = {
 			gas_tank_equipment_0
 		}
 
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = gas_tank }
+			NOT = {	has_template_containing_unit = steam_tank }
+		}
 		on_research_complete = {
-			limit = {
-				NOT = {	has_template_containing_unit = gas_tank }
-				NOT = {	has_template_containing_unit = steam_tank }
-			}
 			hidden_effect = {
 				load_oob = "unlock_gas_tanks"
 			}
@@ -80,11 +80,11 @@ technologies = {
 			gas_tank_equipment_1
 		}
 
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = gas_tank }
+			NOT = {	has_template_containing_unit = steam_tank }
+		}
 		on_research_complete = {
-			limit = {
-				NOT = {	has_template_containing_unit = gas_tank }
-				NOT = {	has_template_containing_unit = steam_tank }
-			}
 			hidden_effect = {
 				load_oob = "unlock_gas_tanks"
 			}
@@ -145,11 +145,11 @@ technologies = {
 			steam_tank_equipment_1 
 		}
 
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = gas_tank }
+			NOT = {	has_template_containing_unit = steam_tank }
+		}
 		on_research_complete = {
-			limit = {
-				NOT = {	has_template_containing_unit = gas_tank }
-				NOT = {	has_template_containing_unit = steam_tank }
-			}
 			hidden_effect = {
 				load_oob = "unlock_steam_tanks"
 			}
@@ -215,11 +215,11 @@ technologies = {
 			steam_tank_equipment_2 
 		}
 
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = gas_tank }
+			NOT = {	has_template_containing_unit = steam_tank }
+		}
 		on_research_complete = {
-			limit = {
-				NOT = {	has_template_containing_unit = gas_tank }
-				NOT = {	has_template_containing_unit = steam_tank }
-			}
 			hidden_effect = {
 				load_oob = "unlock_steam_tanks"
 			}
