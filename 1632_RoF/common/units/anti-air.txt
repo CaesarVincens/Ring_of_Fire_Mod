@@ -5,11 +5,13 @@
 sub_units = {
 
 	anti_air = {
+		abbreviation = "AA"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
 		active = yes
+		affects_speed = no
 
 		type = {
 			infantry

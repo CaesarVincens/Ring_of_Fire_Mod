@@ -1,6 +1,7 @@
 sub_units = {
 
 	amphibious_mechanized = {
+		abbreviation = "AMT"
 		sprite = amphibious_mechanized
 		map_icon_category = infantry
 
@@ -78,6 +79,6 @@ sub_units = {
 			attack = 0.5
 		}
 
-		hardness = 0.2
+		#hardness = 0.2 this is now rolled into normal stats
 	}
 }
