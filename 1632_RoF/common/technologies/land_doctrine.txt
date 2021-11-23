@@ -2220,7 +2220,7 @@ technologies = {
 		xp_unlock_cost = 100
 		supply_consumption_factor = -0.10
 		
-		infantry = {
+		category_all_infantry = {
 			combat_width = -0.4
 		}
 
@@ -2415,7 +2415,7 @@ technologies = {
 	human_infantry_offensive = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		infantry = {
+		category_all_infantry = {
 			default_morale = 0.30
 		}
 		land_reinforce_rate = 0.05		
@@ -2493,7 +2493,7 @@ technologies = {
 		conscription = 0.05
 		xp_research_type = army
 		xp_unlock_cost = 100
-		infantry = {
+		category_all_infantry = {
 			combat_width = -0.4
 		}
 
