@@ -17,6 +17,7 @@ state = {
 		add_core_of = JHK
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1444 1637 10358 10471 12035 12307 12452 
 	}

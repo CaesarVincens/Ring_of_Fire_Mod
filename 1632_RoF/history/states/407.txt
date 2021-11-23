@@ -18,6 +18,7 @@ state = {
 		add_core_of = RYU
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1123 7115 10124 11932 
 	}

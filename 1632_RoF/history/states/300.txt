@@ -22,6 +22,7 @@ state = {
 		add_core_of = NEP
 	}
 
+	local_supplies=0.0
 	provinces = {
 		4386 4435 4987 5310 10910 12892 
 	}

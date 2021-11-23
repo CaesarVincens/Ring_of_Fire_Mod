@@ -18,6 +18,7 @@ state = {
 		add_core_of = BAL
 	}
 
+	local_supplies=0.0
 	provinces = {
 		2070 4891 10782 13082 
 	}

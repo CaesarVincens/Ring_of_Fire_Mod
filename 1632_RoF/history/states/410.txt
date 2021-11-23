@@ -20,6 +20,7 @@ state = {
 		add_core_of = SAV
 	}
 
+	local_supplies=0.0
 	provinces = {
 		3959 9909 
 	}

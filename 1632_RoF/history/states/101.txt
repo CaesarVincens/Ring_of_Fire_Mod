@@ -21,6 +21,7 @@ state = {
 		add_core_of = POL
 	}
 
+	local_supplies=0.0
 	provinces = {
 		243 548 3230 3295 6347 6401
 	}

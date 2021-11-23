@@ -26,6 +26,7 @@ state = {
 		add_core_of = GEN
 	}
 
+	local_supplies=0.0
 	provinces = {
 		3772 6788 11891 
 	}

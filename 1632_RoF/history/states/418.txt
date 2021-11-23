@@ -22,6 +22,7 @@ state = {
 		add_core_of = SHA
 	}
 
+	local_supplies=0.0
 	provinces = {
 		5093 8004 8030 8060 10870 12768 12870 
 	}

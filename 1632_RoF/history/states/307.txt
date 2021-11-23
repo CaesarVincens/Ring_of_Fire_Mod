@@ -24,6 +24,7 @@ state = {
 		add_core_of = OYO
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1992 12900 
 	}

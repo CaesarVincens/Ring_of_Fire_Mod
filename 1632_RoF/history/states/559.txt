@@ -23,6 +23,7 @@ state = {
 		add_core_of = VOC
 	}
 
+	local_supplies=0.0
 	provinces = {
 		7381 12249 
 	}

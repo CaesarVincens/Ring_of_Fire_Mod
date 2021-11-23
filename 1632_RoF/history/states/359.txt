@@ -23,6 +23,7 @@ state = {
 		add_core_of = BIJ
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1273 1349 7013 
 	}

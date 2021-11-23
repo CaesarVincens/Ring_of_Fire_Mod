@@ -22,6 +22,7 @@ state = {
 		add_core_of = ENG
 	}
 
+	local_supplies=0.0
 	provinces = {
 		219 3205 3311 6268 6318 6335 6384 6399 9285 9397 11332 
 	}

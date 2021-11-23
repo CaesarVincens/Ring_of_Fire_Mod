@@ -20,6 +20,7 @@ state = {
 		add_core_of = SPU
 	}
 
+	local_supplies=0.0
 	provinces = {
 		4892 4942 5000 5056 8024 8080 
 	}

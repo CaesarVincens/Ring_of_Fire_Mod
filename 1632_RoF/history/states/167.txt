@@ -22,6 +22,7 @@ state = {
 		add_core_of = GRJ
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1059 1101 1538 1579 4104 4513 9946 10060 10428 11924 
 	}

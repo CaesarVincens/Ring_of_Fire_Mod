@@ -22,6 +22,7 @@ state = {
 		add_core_of = CHA
 	}
 
+	local_supplies=0.0
 	provinces = {
 		4557 4883 7619 
 	}

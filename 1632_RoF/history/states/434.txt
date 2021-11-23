@@ -20,6 +20,7 @@ state = {
 		add_claim_by = FRA
 	}
 
+	local_supplies=0.0
 	provinces = {
 		698 3666 6698 9642 9658 
 	}

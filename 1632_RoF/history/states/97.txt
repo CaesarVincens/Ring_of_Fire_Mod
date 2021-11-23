@@ -19,6 +19,7 @@ state = {
 		add_core_of = IRE
 	}
 
+	local_supplies=0.0
 	provinces = {
 		3396 9255 9303 9321 9369 11238 11287 11371 
 	}

@@ -23,6 +23,7 @@ state = {
 		add_core_of = VIN
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1157 1185 4119 7015 7093 7518 9948 12065 
 	}

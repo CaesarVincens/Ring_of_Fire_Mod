@@ -22,6 +22,7 @@ state = {
 		add_core_of = KAB
 	}
 
+	local_supplies=0.0
 	provinces = {
 		12747 12858 12891 
 	}

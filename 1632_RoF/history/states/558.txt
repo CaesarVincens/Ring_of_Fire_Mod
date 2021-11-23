@@ -23,6 +23,7 @@ state = {
 		add_core_of = KEL
 	}
 
+	local_supplies=0.0
 	provinces = {
 		7447 
 	}

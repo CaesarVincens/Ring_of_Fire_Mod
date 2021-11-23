@@ -24,6 +24,7 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies=0.0
 	provinces = {
 		708 9666 11638 
 	}

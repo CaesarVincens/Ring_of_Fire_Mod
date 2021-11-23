@@ -30,6 +30,7 @@ state = {
 		add_core_of = UPS
 	}
 
+	local_supplies=0.0
 	provinces = {
 		480 516 6446 6560 6598 11419 13068 
 	}

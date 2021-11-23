@@ -17,6 +17,7 @@ state = {
 		add_core_of = MRH
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1905 1966 5068 8094 10833 10891 10921 12759 12814 
 	}

@@ -20,6 +20,7 @@ state = {
 		add_core_of = MAK
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1561 1589 4308 4349 7598 10263 10464 12330 
 	}

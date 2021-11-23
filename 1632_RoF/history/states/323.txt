@@ -20,6 +20,7 @@ state = {
 		add_core_of = VAT
 	}
 
+	local_supplies=0.0
 	provinces = {
 		782 6606 6793 6985 9924 11734 
 	}

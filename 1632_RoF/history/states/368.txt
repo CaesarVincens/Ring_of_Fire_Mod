@@ -21,6 +21,7 @@ state = {
 
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1903 13013 13015 13016
 	}

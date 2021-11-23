@@ -17,6 +17,7 @@ state = {
 		add_core_of = AJU
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1964 2020 2063 4909 5065 8164 10818 10928 11014 12840 12941 12991 
 	}

@@ -20,6 +20,7 @@ state = {
 		add_core_of = MRH
 	}
 
+	local_supplies=0.0
 	provinces = {
 		12757 12812 
 	}

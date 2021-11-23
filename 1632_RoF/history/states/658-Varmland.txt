@@ -16,6 +16,7 @@ state = {
 		add_core_of = SWE
 
 	}
+	local_supplies=0.0
 	provinces = {
 		69 77 147 3070 3128 3141 6028 6195 9054 9138 9218 11070 11114 
 	}

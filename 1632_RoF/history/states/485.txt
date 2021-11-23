@@ -20,6 +20,7 @@ state = {
 		add_core_of = TAN
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1289 1351 1419 7311 7413 10141 10153 10169 10197 
 	}

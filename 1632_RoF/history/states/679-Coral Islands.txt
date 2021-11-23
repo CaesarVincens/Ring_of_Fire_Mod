@@ -6,6 +6,7 @@ state={
 		owner = WAU
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1237 1263 4231 4247 4268 7264 10160 12120 12132
 	}

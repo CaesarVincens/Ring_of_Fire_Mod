@@ -24,6 +24,7 @@ state = {
 		add_core_of = MKL
 		set_state_flag = german_state_flag
 	}
+	local_supplies=0.0
 	provinces = {
 		9294 9320 11305 
 	}

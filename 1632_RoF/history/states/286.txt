@@ -22,6 +22,7 @@ state = {
 		add_core_of = MUG
 	}
 
+	local_supplies=0.0
 	provinces = {
 		10088 10116 12063 
 	}

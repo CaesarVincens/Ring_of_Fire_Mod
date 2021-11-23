@@ -23,6 +23,7 @@ state = {
 		add_core_of = C13
 	}
 
+	local_supplies=0.0
 	provinces = {
 		12149 
 	}

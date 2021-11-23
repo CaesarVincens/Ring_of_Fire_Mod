@@ -22,6 +22,7 @@ state = {
 		add_core_of = MYS
 	}
 
+	local_supplies=0.0
 	provinces = {
 		8011 12734 
 	}

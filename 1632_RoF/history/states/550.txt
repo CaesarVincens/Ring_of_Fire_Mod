@@ -21,6 +21,7 @@ state = {
 		add_core_of = TUR
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1977 2003 12725 
 	}

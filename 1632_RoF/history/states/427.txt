@@ -18,6 +18,7 @@ state = {
 		add_core_of = TRA
 	}
 
+	local_supplies=0.0
 	provinces = {
 		3548 6571 9563 11536 11691 
 	}

@@ -17,6 +17,7 @@ state = {
 		add_core_of = BRU
 	}
 
+	local_supplies=0.0
 	provinces = {
 		4429 7419 10145 
 	}

@@ -17,6 +17,7 @@ state = {
 		add_core_of = LUC
 	}
 
+	local_supplies=0.0
 	provinces = {
 		6946 6973 
 	}

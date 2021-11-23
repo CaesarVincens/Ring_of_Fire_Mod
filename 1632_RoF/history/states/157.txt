@@ -25,6 +25,7 @@ state = {
 		add_core_of = FUL
 	}
 
+	local_supplies=0.0
 	provinces = {
 		2012 10829 10915 
 	}

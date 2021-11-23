@@ -22,6 +22,7 @@ state = {
 		add_core_of = BAS
 	}
 
+	local_supplies=0.0
 	provinces = {
 		1622 7372 7428 7465 7574 10171 10401 10469 12241 12420 12490 
 	}

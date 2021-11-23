@@ -23,6 +23,7 @@ state = {
 		add_core_of = TON
 	}
 
+	local_supplies=0.0
 	provinces = {
 		4397 7280 9988 10016 11909 11936 12297 
 	}

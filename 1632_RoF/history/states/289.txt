@@ -24,6 +24,7 @@ state = {
 
 	}
 
+	local_supplies=0.0
 	provinces = {
 		4072 7177 7430 10019 10030 12781 
 	}

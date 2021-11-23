@@ -22,6 +22,7 @@ state = {
 		add_core_of = DEN
 	}
 
+	local_supplies=0.0
 	provinces = {
 		3260 3305 3325 3374 6287 6361 6393 
 	}

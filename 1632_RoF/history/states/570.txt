@@ -26,6 +26,7 @@ state = {
 		add_core_of = VEN
 	}
 
+	local_supplies=0.0
 	provinces = {
 		3924 3943 3974 9821 11816 
 	}

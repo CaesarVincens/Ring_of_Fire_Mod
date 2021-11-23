@@ -25,6 +25,7 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies=0.0
 	provinces = {
 		532 561 571 586 3299 3541 3571 6540 11497 
 	}
