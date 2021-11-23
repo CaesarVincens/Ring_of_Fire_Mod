@@ -3,7 +3,7 @@ technologies = {
 	infrastructure_tech_base = {
 		enable_building = {
 			building = infrastructure
-			level = 2
+			level = 1
 		}
 		research_cost = 1
 		allow = { always = no }
@@ -12,7 +12,7 @@ technologies = {
 	infrastructure_tech_1 = {
 		enable_building = {
 			building = infrastructure
-			level = 4
+			level = 3
 		}
 		path = {
 			leads_to_tech = infrastructure_tech_2
@@ -70,7 +70,7 @@ technologies = {
 	infrastructure_tech_2 = {
 		enable_building = {
 			building = infrastructure
-			level = 6
+			level = 5
 		}
 		path = {
 			leads_to_tech = infrastructure_tech_3
@@ -128,8 +128,8 @@ technologies = {
 
 	infrastructure_tech_3 = {
 		enable_building = {
-			building = infrastructure
-			level = 8
+			building = rail_way
+			level = 2
 		}
 		path = {
 			leads_to_tech = infrastructure_tech_4
@@ -187,8 +187,8 @@ technologies = {
 
 	infrastructure_tech_4 = {
 		enable_building = {
-			building = infrastructure
-			level = 10
+			building = rail_way
+			level = 5
 		}
 
 		research_cost = 1.5
