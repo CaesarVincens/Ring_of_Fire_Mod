@@ -331,19 +331,6 @@ NUS_major_decisions = {
 }
 
 NUS_minor_decisions = {
-	NUS_test = {
-		visible = {
-			#always = no
-		}
-		complete_effect = {
-			BRA = {
-				clr_country_flag = NUS_accept_demand@THIS
-			}
-			BRS = {
-				clr_country_flag = NUS_accept_demand@THIS
-			}
-		}
-	}
 	NUS_CoC_Speech_progress = {
 		icon = GFX_decision_generic_nationalism
 		visible = {
