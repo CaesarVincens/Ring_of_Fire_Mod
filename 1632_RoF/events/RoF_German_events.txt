@@ -193,7 +193,7 @@ country_event = {
 					ruling_party = constitutionalist
 					elections_allowed = no
 				}
-				set_capital = 434
+				set_capital = { state = 434 }
 				load_oob = "BRG_OOB"
 				delete_unit_template_and_units = {
 					division_template = "Tercio"

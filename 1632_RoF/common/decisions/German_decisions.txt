@@ -25,8 +25,11 @@ german_decisions = {
 				}
 			}
 		}
-		highlight_provinces = {
-			11417
+		highlight_states = {
+			highlight_state_targets = { state = 578 }
+			highlight_provinces = {
+				11417
+			}
 		}
 		cancel_trigger = {
 			NOT = { controls_state = 578 }
@@ -72,8 +75,11 @@ german_decisions = {
 		cancel_trigger = {
 			NOT = { controls_state = 577 }
 		}
-		highlight_provinces = {
-			11445
+		highlight_states = {
+			highlight_state_targets = { state = 577 }
+			highlight_provinces = {
+				11445
+			}
 		}
 		days_mission_timeout = 35
 		is_good = no
@@ -116,8 +122,11 @@ german_decisions = {
 		cancel_trigger = {
 			NOT = { controls_state = 248 }
 		}
-		highlight_provinces = {
-			11560
+		highlight_states = {
+			highlight_state_targets = { state = 248 }
+			highlight_provinces = {
+				11560
+			}
 		}
 		days_mission_timeout = 70
 		is_good = no

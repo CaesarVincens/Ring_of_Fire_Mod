@@ -1661,7 +1661,7 @@ focus_tree = {
 			owns_state = 389
 		}
 		completion_reward = {
-			set_capital = 389
+			set_capital = { state = 389 }
 			add_political_power = 60
 		}
 		ai_will_do = {

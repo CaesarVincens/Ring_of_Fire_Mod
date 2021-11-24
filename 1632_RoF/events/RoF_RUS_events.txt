@@ -578,14 +578,14 @@ country_event = {
 			set_variable = { global.RSA_TAG = THIS.id }
 			if = {
 				limit = { owns_state = 215 }
-				set_capital = 215
+				set_capital = { state = 215 }
 				set_victory_points = {
 					province = 291
 					value = 30
 				}
 				else = {
 					random_owned_state = {
-						RSA = { set_capital = PREV }
+						RSA = { set_capital = { state = PREV } }
 					}
 				}
 			}
@@ -650,10 +650,10 @@ country_event = {
 		RSB = {
 			if = {
 				limit = { owns_state = 400 }
-				set_capital = 400
+				set_capital = { state = 400 }
 				else = {
 					random_owned_state = {
-						RSB = { set_capital = PREV }
+						RSB = { set_capital = { state = PREV } }
 					}
 				}
 			}
@@ -715,10 +715,10 @@ country_event = {
 		RSC = {
 			if = {
 				limit = { owns_state = 389 }
-				set_capital = 389
+				set_capital = { state = 389 }
 				else = {
 					random_owned_state = {
-						RSC = { set_capital = PREV }
+						RSC = { set_capital = { state = PREV } }
 					}
 				}
 			}

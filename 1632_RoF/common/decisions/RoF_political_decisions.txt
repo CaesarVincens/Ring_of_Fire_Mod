@@ -2736,8 +2736,7 @@ RoF_mercenary_decisions = {
 		}
 		custom_cost_text = merc_small_cost_tt
 		custom_cost_trigger = {
-			check_variable = { ROOT.merc_small_cost < political_power }
-			has_political_power > merc_small_cost
+			has_political_power > var:merc_small_cost
 		}
 		days_re_enable = 7
 		complete_effect = {
@@ -2867,8 +2866,7 @@ RoF_mercenary_decisions = {
 		}
 		custom_cost_text = merc_medium_cost_tt
 		custom_cost_trigger = {
-			check_variable = { ROOT.merc_medium_cost < political_power }
-			has_political_power > merc_medium_cost
+			has_political_power > var:merc_medium_cost
 		}
 		days_re_enable = 14
 		complete_effect = {
@@ -3004,8 +3002,7 @@ RoF_mercenary_decisions = {
 		}
 		custom_cost_text = merc_large_cost_tt
 		custom_cost_trigger = {
-			check_variable = { ROOT.merc_large_cost < political_power }
-			has_political_power > merc_large_cost
+			has_political_power > var:merc_large_cost
 		}
 		days_re_enable = 28
 		complete_effect = {

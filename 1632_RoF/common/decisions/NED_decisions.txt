@@ -23,8 +23,11 @@ SPN_major_decisions = {
 				has_war_with = UPS
 			}
 		}
-		highlight_provinces = {
-			11562
+		highlight_states = {
+			highlight_state_targets = { state = 458 }
+			highlight_provinces = {
+				11562
+			}
 		}
 		days_mission_timeout = UPS.maastricht_campaign?280
 		is_good = no

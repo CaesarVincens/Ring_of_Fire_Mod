@@ -498,7 +498,7 @@ country_event = {
 	option = { #Support Parliamentarians
 		name = RoF_ENG.149.a
 		hidden_effect = {
-			set_capital = 416
+			set_capital = { state = 416 }
 			start_civil_war = {
 				#ruling_party = constitutionalist
 				ideology = absolutist
@@ -1169,7 +1169,7 @@ country_event = {
 	option = { #Support Parliamentarians
 		name = RoF_ENG.171.a
 		hidden_effect = {
-			set_capital = 416
+			set_capital = { state = 416 }
 			start_civil_war = {
 				#ruling_party = constitutionalist
 				ideology = absolutist

@@ -90,7 +90,7 @@ country_event = {
 			set_global_flag = USE_formed
 			if = {
 				limit = { owns_state = 247 }
-				set_capital = 247
+				set_capital = { state = 247 }
 			}
 			SWE = {
 				set_faction_name = Vasa_Empire
@@ -110,7 +110,7 @@ country_event = {
 		effect_tooltip = {
 			if = {
 				limit = { owns_state = 247 }
-				set_capital = 247
+				set_capital = { state = 247 }
 			}
 			every_country = {
 				limit = { has_country_flag = USE_annex_country }

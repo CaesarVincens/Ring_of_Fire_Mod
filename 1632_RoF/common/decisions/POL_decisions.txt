@@ -14,7 +14,9 @@ POL_major_decisions = {
 		is_good = yes
 		days_mission_timeout = 30
 		highlight_states = {
-			state = 387
+			highlight_state_targets = {
+				state = 387
+			}
 		}
 		complete_effect = {
 			custom_effect_tooltip = POL_rezhev_expedition_dont_TT
@@ -355,7 +357,9 @@ POL_sejm = {
 			}
 		}
 		highlight_states = {
-			has_state_flag = POL_sejm_build_factory
+			highlight_states_trigger = {
+				has_state_flag = POL_sejm_build_factory
+			}
 		}
 		days_mission_timeout = 360
 		is_good = no
@@ -403,7 +407,9 @@ POL_sejm = {
 			}
 		}
 		highlight_states = {
-			has_state_flag = POL_sejm_build_arms_factory
+			highlight_states_trigger = {
+				has_state_flag = POL_sejm_build_arms_factory
+			}
 		}
 		days_mission_timeout = 360
 		is_good = no
@@ -451,7 +457,9 @@ POL_sejm = {
 			}
 		}
 		highlight_states = {
-			has_state_flag = POL_sejm_build_infrastructure
+			highlight_states_trigger = {
+				has_state_flag = POL_sejm_build_infrastructure
+			}
 		}
 		days_mission_timeout = 360
 		is_good = no
