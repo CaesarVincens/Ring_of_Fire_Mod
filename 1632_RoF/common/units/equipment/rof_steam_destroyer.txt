@@ -56,15 +56,15 @@ equipments = {
 			rear_1_custom_slot = mid_1_custom_slot
 		}
 		
-		module_count_limit = {
-			category = ship_radar
-			count < 2
-		}
+		#module_count_limit = {
+		#	category = ship_radar
+		#	count < 2
+		#}
 		
-		module_count_limit = {
-			category = ship_sonar
-			count < 2
-		}
+		#module_count_limit = {
+		#	category = ship_sonar
+		#	count < 2
+		#}
 		
 		default_modules = {
 			fixed_ship_battery_slot = empty
