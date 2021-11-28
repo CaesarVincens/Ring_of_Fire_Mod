@@ -496,50 +496,53 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			kill_country_leader = yes
-			kill_ideology_leader = constitutionalist
-			kill_ideology_leader = neutrality
-			create_country_leader = {
-				name = "Interrex Jan Wężyk"
-				desc = "POLITICS_INTERREX_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
-				ideology = absolute_monarchy
-				traits = {
-					interrex
-				}
-			}
-			create_country_leader = {
-				name = "Interrex Jan Wężyk"
-				desc = "POLITICS_INTERREX_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
-				ideology = constitutional_monarchy
-				traits = {
-					interrex
-				}
-			}
-			create_country_leader = {
-				name = "Interrex Jan Wężyk"
-				desc = "POLITICS_INTERREX_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
-				ideology = absolute_monarchy_neutral
-				traits = {
-					interrex
-				}
-			}
+			retire_character = POL_sigismund_vasa
+			#kill_country_leader = yes
+			#kill_ideology_leader = constitutionalist
+			#kill_ideology_leader = neutrality
+			promote_character = POL_jan_wezyk
+			#create_country_leader = {
+			#	name = "Interrex Jan Wężyk"
+			#	desc = "POLITICS_INTERREX_DESC"
+			#	picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
+			#	ideology = absolute_monarchy
+			#	traits = {
+			#		interrex
+			#	}
+			#}
+			#create_country_leader = {
+			#	name = "Interrex Jan Wężyk"
+			#	desc = "POLITICS_INTERREX_DESC"
+			#	picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
+			#	ideology = constitutional_monarchy
+			#	traits = {
+			#		interrex
+			#	}
+			#}
+			#create_country_leader = {
+			#	name = "Interrex Jan Wężyk"
+			#	desc = "POLITICS_INTERREX_DESC"
+			#	picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
+			#	ideology = absolute_monarchy_neutral
+			#	traits = {
+			#		interrex
+			#	}
+			#}
 		}
 	}
 	option = {
 		name = RoF_POL.100.a
 		effect_tooltip = {
-			create_country_leader = {
-				name = "Interrex Jan Wężyk"
-				desc = "POLITICS_INTERREX_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
-				ideology = absolute_monarchy
-				traits = {
-					interrex
-				}
-			}
+			promote_character = POL_jan_wezyk
+			#create_country_leader = {
+			#	name = "Interrex Jan Wężyk"
+			#	desc = "POLITICS_INTERREX_DESC"
+			#	picture = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
+			#	ideology = absolute_monarchy
+			#	traits = {
+			#		interrex
+			#	}
+			#}
 		}
 		activate_mission = POL_election_sejm
 		activate_decision = POL_generous_pacta_conventa
@@ -566,99 +569,102 @@ country_event = {
 			}
 		}
 		name = RoF_POL.110.a
-		create_country_leader = {
-			name = "Władysław IV Vasa"
-			desc = "POLITICS_WLADYSLAW_DESC"
-			picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-			ideology = absolute_monarchy
-			traits = {
-				swedish_claimant
-			}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Władysław IV Vasa"
-				desc = "POLITICS_WLADYSLAW_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-				ideology = constitutional_monarchy
-				traits = {
-					swedish_claimant
-				}
-			}
-			create_country_leader = {
-				name = "Władysław IV Vasa"
-				desc = "POLITICS_WLADYSLAW_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-				ideology = absolute_monarchy_neutral
-				traits = {
-					swedish_claimant
-				}
-			}
-		}
+		promote_character = POL_wladyslaw_vasa
+		#create_country_leader = {
+		#	name = "Władysław IV Vasa"
+		#	desc = "POLITICS_WLADYSLAW_DESC"
+		#	picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+		#	ideology = absolute_monarchy
+		#	traits = {
+		#		swedish_claimant
+		#	}
+		#}
+		#hidden_effect = {
+		#	create_country_leader = {
+		#		name = "Władysław IV Vasa"
+		#		desc = "POLITICS_WLADYSLAW_DESC"
+		#		picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+		#		ideology = constitutional_monarchy
+		#		traits = {
+		#			swedish_claimant
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Władysław IV Vasa"
+		#		desc = "POLITICS_WLADYSLAW_DESC"
+		#		picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+		#		ideology = absolute_monarchy_neutral
+		#		traits = {
+		#			swedish_claimant
+		#		}
+		#	}
+		#}
 	}
 	option = {
 		trigger = {
 				has_country_flag = POL_election_sejm_john_casimir
 		}
 		name = RoF_POL.110.a
-		create_country_leader = {
-			name = "John II Casimir Vasa"
-			desc = "POLITICS_JOHN_CASIMIR_DESC"
-			picture = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
-			ideology = absolute_monarchy
-			traits = {
-			}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Stanisław Koniecpolski"
-				desc = "POLITICS_JOHN_CASIMIR_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
-				ideology = constitutional_monarchy
-				traits = {
-				}
-			}
-			create_country_leader = {
-				name = "Stanisław Koniecpolski"
-				desc = "POLITICS_JOHN_CASIMIR_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
-				ideology = absolute_monarchy_neutral
-				traits = {
-				}
-			}
-		}
+		promote_character = POL_john_casimir_vasa
+		#create_country_leader = {
+		#	name = "John II Casimir Vasa"
+		#	desc = "POLITICS_JOHN_CASIMIR_DESC"
+		#	picture = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
+		#	ideology = absolute_monarchy
+		#	traits = {
+		#	}
+		#}
+		#hidden_effect = {
+		#	create_country_leader = {
+		#		name = "Stanisław Koniecpolski"
+		#		desc = "POLITICS_JOHN_CASIMIR_DESC"
+		#		picture = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
+		#		ideology = constitutional_monarchy
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Stanisław Koniecpolski"
+		#		desc = "POLITICS_JOHN_CASIMIR_DESC"
+		#		picture = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
+		#		ideology = absolute_monarchy_neutral
+		#		traits = {
+		#		}
+		#	}
+		#}
 	}
 	option = {
 		trigger = {
 				has_country_flag = POL_election_sejm_stanislaw_koniecpolski
 		}
 		name = RoF_POL.110.a
-		create_country_leader = {
-			name = "Stanisław Koniecpolski"
-			desc = "POLITICS_KONIECPOLSKI_DESC"
-			picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
-			ideology = absolute_monarchy
-			traits = {
-			}
-		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Stanisław Koniecpolski"
-				desc = "POLITICS_KONIECPOLSKI_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
-				ideology = constitutional_monarchy
-				traits = {
-				}
-			}
-			create_country_leader = {
-				name = "Stanisław Koniecpolski"
-				desc = "POLITICS_KONIECPOLSKI_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
-				ideology = absolute_monarchy_neutral
-				traits = {
-				}
-			}
-		}
+		promote_character = POL_stanislaw_koniecpolski
+		#create_country_leader = {
+		#	name = "Stanisław Koniecpolski"
+		#	desc = "POLITICS_KONIECPOLSKI_DESC"
+		#	picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
+		#	ideology = absolute_monarchy
+		#	traits = {
+		#	}
+		#}
+		#hidden_effect = {
+		#	create_country_leader = {
+		#		name = "Stanisław Koniecpolski"
+		#		desc = "POLITICS_KONIECPOLSKI_DESC"
+		#		picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
+		#		ideology = constitutional_monarchy
+		#		traits = {
+		#		}
+		#	}
+		#	create_country_leader = {
+		#		name = "Stanisław Koniecpolski"
+		#		desc = "POLITICS_KONIECPOLSKI_DESC"
+		#		picture = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
+		#		ideology = absolute_monarchy_neutral
+		#		traits = {
+		#		}
+		#	}
+		#}
 	}
 }
 

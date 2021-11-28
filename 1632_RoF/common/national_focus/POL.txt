@@ -1349,32 +1349,34 @@ focus_tree = {
 						name = "Sigismund III Vasa"
 					}
 				}
-				retire_country_leader = yes
-				hidden_effect = {
-					retire_ideology_leader = constitutionalist
-					retire_ideology_leader = neutrality
-				}
+				retire_character = POL_sigismund_vasa
+				#retire_country_leader = yes
+				#hidden_effect = {
+				#	retire_ideology_leader = constitutionalist
+				#	retire_ideology_leader = neutrality
+				#}
 			}
-			create_country_leader = {
-				name = "Władysław IV Vasa"
-				desc = "POLITICS_WLADYSLAW_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-				ideology = absolute_monarchy
-			}
-			hidden_effect = {
-				create_country_leader = {
-					name = "Władysław IV Vasa"
-					desc = "POLITICS_WLADYSLAW_DESC"
-					picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-					ideology = constitutional_monarchy
-				}
-				create_country_leader = {
-					name = "Władysław IV Vasa"
-					desc = "POLITICS_WLADYSLAW_DESC"
-					picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-					ideology = absolute_monarchy_neutral
-				}
-			}
+			promote_character = POL_wladyslaw_vasa
+			#create_country_leader = {
+			#	name = "Władysław IV Vasa"
+			#	desc = "POLITICS_WLADYSLAW_DESC"
+			#	picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+			#	ideology = absolute_monarchy
+			#}
+			#hidden_effect = {
+			#	create_country_leader = {
+			#		name = "Władysław IV Vasa"
+			#		desc = "POLITICS_WLADYSLAW_DESC"
+			#		picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+			#		ideology = constitutional_monarchy
+			#	}
+			#	create_country_leader = {
+			#		name = "Władysław IV Vasa"
+			#		desc = "POLITICS_WLADYSLAW_DESC"
+			#		picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+			#		ideology = absolute_monarchy_neutral
+			#	}
+			#}
 			POL_sejm_large_opposition = yes
 			POL_king_up_both_down_5 = yes
 		}
@@ -1400,7 +1402,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = POL_revoke_incompatibilitas
-		}		cancel_if_invalid = no
+		}
+		cancel_if_invalid = no
 		completion_reward = {
 			POL_magnates_down_both_up_5 = yes
 			if = {

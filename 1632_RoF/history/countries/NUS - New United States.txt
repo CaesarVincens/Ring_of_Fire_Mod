@@ -13,7 +13,7 @@ radio = 1
 mechanical_computing = 1
 basic_machine_tools = 1
 construction1 = 1
-#up_time_weapons_tech = 1
+up_time_weapons_tech = 1
 superior_firepower = 1
 #pike_weapons = 1
 #tercio_formation_tech = 1
@@ -55,57 +55,15 @@ set_country_flag = religion_secular
 add_ideas = {
 	people_out_of_time
 	freedom_of_religion
+	volunteer_army
 	early_industrial
 	free_trade
 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Michael Stearns"
-    desc = "POLITICS_MICHAEL_STEARNS_DESC"
-    picture = "gfx/leaders/NUS/Portrait_NUS_Michael_Stearns.dds"
-    #expire = "1660.1.1"
-    ideology = democracy
-    traits = {
-		union_man
-		experienced_negiotiator 
-    }
-}
-
-create_country_leader = {
-	name = "John Chandler Simpson"
-	desc = "POLITICS_JOHN_SIMPSON_DESC"
-	picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
-	#expire = "1660.1.1"
-	ideology = constitutional_republic 
-	traits = {
-		grand_fleet_proponent
-	}
-}
-
-create_country_leader = {
-	name = "Ken Beasley"
-	ideology = dictatorship
-	picture = "gfx/leaders/USA/Portrait_USA_Generic_3.dds"
-}
-
-create_country_leader = {
-	name = "Bobby Gene \"Red\" Sybolt"
-	ideology = socialism
-}
-
-create_country_leader = {
-	name = "Quentin B. Underwood"
-	ideology = conservatism_neutral
-	picture = "gfx/leaders/USA/portrait_USA_earl_browder.dds"
-}
-
-create_corps_commander = {
-	name = "Frank Jackson"
-	gfx = "GFX_commander_NUS_Frank_Jackson"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+recruit_character = NUS_michael_stearns
+recruit_character = NUS_john_chandler_simpson
+recruit_character = NUS_ken_beasley
+recruit_character = NUS_red_sybolt
+recruit_character = NUS_quentin_underwood
+recruit_character = NUS_frank_jackson
+recruit_character = NUS_francisco_nasi
