@@ -1,0 +1,25 @@
+characters = {
+	BAV_maximilian_von_wittelsbach = {
+		name = "Maximilian von Wittelsbach"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAV/Portrait_Bavaria_Maximlian.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+			ideology = absolute_monarchy
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+			ideology = constitutional_monarchy
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MAXIMILIAN_VON_WITTELSBACH_DESC"
+			ideology = absolute_monarchy_neutral
+			expire = "1660.1.1.1"
+		}
+	}
+}

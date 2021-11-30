@@ -55,26 +55,6 @@ set_variable = { var = sejm_high value = 180 } # 90%
 POL_recalc_sejm_icon_frames = yes
 
 set_country_flag = religion_catholic
-add_ideas = {
-	balanced_eco
-	freedom_of_religion
-	POL_henrician_articles
-	POL_eastern_serfdom_1
-	POL_powerful_magnates
-	POL_grain_exports
-	POL_lukasz_opalinski_elder
-	POL_jakub_zadzik
-}
-add_timed_idea = {
-    idea = POL_treaty_of_stary_targ
-    days = 1560
-}
-add_timed_idea = {
-    idea = POL_truce_of_deulino
-    days = 767
-}
-country_event = { id = RoF_POL.50 days = 2 }
-set_stability = 0.5
 recruit_character = POL_sigismund_vasa
 recruit_character = POL_wladyslaw_vasa
 recruit_character = POL_john_casimir_vasa
@@ -87,3 +67,24 @@ recruit_character = POL_krzysztof_radziwill
 recruit_character = POL_lukasz_opalinski_elder
 recruit_character = POL_jakub_zadzik
 recruit_character = POL_jerzy_ossolinski
+add_ideas = {
+	balanced_eco
+	freedom_of_religion
+	POL_henrician_articles
+	POL_eastern_serfdom_1
+	POL_powerful_magnates
+	POL_grain_exports
+	POL_lukasz_opalinski_elder
+	POL_jakub_zadzik
+}
+
+add_timed_idea = {
+    idea = POL_treaty_of_stary_targ
+    days = 1560
+}
+add_timed_idea = {
+    idea = POL_truce_of_deulino
+    days = 767
+}
+country_event = { id = RoF_POL.50 days = 2 }
+set_stability = 0.5

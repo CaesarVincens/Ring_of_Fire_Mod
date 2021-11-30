@@ -1,0 +1,22 @@
+characters={
+	HES_william_v_von_hessekassel={
+		name="William V von Hesse-Kassel"
+		portraits={
+			civilian={
+				large="gfx/leaders/Germanies/Portrait_Hesse_William_V.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LUKAS_VON SPEE_DESC"
+			ideology=absolute_monarchy
+			expire="1660.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_LUKAS_VON SPEE_DESC"
+			ideology=constitutional_monarchy
+			expire="1660.1.1.1"
+			id=-1
+		}
+	}
+}

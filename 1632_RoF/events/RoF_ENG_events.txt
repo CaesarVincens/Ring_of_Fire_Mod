@@ -1343,6 +1343,7 @@ country_event = {
 		if = {
 			limit = { has_elections = no }
 			set_politics = {
+				ruling_party = current_party_ideology_group
 				elections_allowed = yes
 			}
 		}

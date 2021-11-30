@@ -15,33 +15,28 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 3
-			legacy_id = -1
 		}
 		country_leader = {
 			desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
 			ideology = absolute_monarchy
 			expire = "1.1.1.1"
-			id = -1
 		}
 		country_leader = {
 			desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
 			ideology = constitutional_monarchy
 			traits = { golden_king }
 			expire = "1.1.1.1"
-			id = -1
 		}
 		country_leader = {
 			desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
 			ideology = lib_constitutional_monarchy
 			traits = { golden_king }
 			expire = "1.1.1.1"
-			id = -1
 		}
 		country_leader = {
 			desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
 			ideology = monarchy_neutral
 			expire = "1.1.1.1"
-			id = -1
 		}
 	}
 	SWE_gustav_horn = {
@@ -57,7 +52,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
-			legacy_id = -1
 		}
 	}
 	SWE_johan_baner = {
@@ -73,7 +67,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
-			legacy_id = -1
 		}
 	}
 	SWE_lennart_torstenson = {
@@ -89,7 +82,6 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
 		}
 	}
 	SWE_axel_oxenstierna = {

@@ -500,7 +500,11 @@ country_event = {
 			#kill_country_leader = yes
 			#kill_ideology_leader = constitutionalist
 			#kill_ideology_leader = neutrality
-			promote_character = POL_jan_wezyk
+			POL_jan_wezyk = {
+				promote_character = absolute_monarchy
+				promote_character = constitutional_monarchy
+				promote_character = absolute_monarchy_neutral
+			}
 			#create_country_leader = {
 			#	name = "Interrex Jan Wężyk"
 			#	desc = "POLITICS_INTERREX_DESC"
@@ -533,7 +537,10 @@ country_event = {
 	option = {
 		name = RoF_POL.100.a
 		effect_tooltip = {
-			promote_character = POL_jan_wezyk
+			promote_character = {
+				character = POL_jan_wezyk
+				ideology = absolute_monarchy
+			}
 			#create_country_leader = {
 			#	name = "Interrex Jan Wężyk"
 			#	desc = "POLITICS_INTERREX_DESC"
@@ -569,7 +576,20 @@ country_event = {
 			}
 		}
 		name = RoF_POL.110.a
-		promote_character = POL_wladyslaw_vasa
+		promote_character = {
+			character = POL_wladyslaw_vasa
+			ideology = absolute_monarchy
+		}
+		hidden_effect = {
+			promote_character = {
+				character = POL_wladyslaw_vasa
+				ideology = constitutional_monarchy
+			}
+			promote_character = {
+				character = POL_wladyslaw_vasa
+				ideology = absolute_monarchy_neutral
+			}
+		}
 		#create_country_leader = {
 		#	name = "Władysław IV Vasa"
 		#	desc = "POLITICS_WLADYSLAW_DESC"
@@ -605,7 +625,20 @@ country_event = {
 				has_country_flag = POL_election_sejm_john_casimir
 		}
 		name = RoF_POL.110.a
-		promote_character = POL_john_casimir_vasa
+		promote_character = {
+			character = POL_john_casimir_vasa
+			ideology = absolute_monarchy
+		}
+		hidden_effect = {
+			promote_character = {
+				character = POL_john_casimir_vasa
+				ideology = constitutional_monarchy
+			}
+			promote_character = {
+				character = POL_john_casimir_vasa
+				ideology = absolute_monarchy_neutral
+			}
+		}
 		#create_country_leader = {
 		#	name = "John II Casimir Vasa"
 		#	desc = "POLITICS_JOHN_CASIMIR_DESC"
@@ -638,7 +671,21 @@ country_event = {
 				has_country_flag = POL_election_sejm_stanislaw_koniecpolski
 		}
 		name = RoF_POL.110.a
-		promote_character = POL_stanislaw_koniecpolski
+
+		promote_character = {
+			character = POL_stanislaw_koniecpolski
+			ideology = absolute_monarchy
+		}
+		hidden_effect = {
+			promote_character = {
+				character = POL_stanislaw_koniecpolski
+				ideology = constitutional_monarchy
+			}
+			promote_character = {
+				character = POL_stanislaw_koniecpolski
+				ideology = absolute_monarchy_neutral
+			}
+		}
 		#create_country_leader = {
 		#	name = "Stanisław Koniecpolski"
 		#	desc = "POLITICS_KONIECPOLSKI_DESC"

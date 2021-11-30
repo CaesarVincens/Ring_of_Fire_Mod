@@ -73,10 +73,20 @@ country_event = {
 	}
 	option = {
 		name = RoF_TUR.101.b
-		swap_ideas = {
-			add_idea = TUR_husrev_pasha_2
-			remove_idea = TUR_husrev_pasha
+		TUR_husrev_pasha = {
+			remove_trait = {
+				trait = powerful_vizier
+				slot = political_advisor
+			}
+			add_trait = {
+				trait = grand_vizier
+				slot = political_advisor
+			}
 		}
+		#swap_ideas = {
+		#	add_idea = TUR_husrev_pasha_2
+		#	remove_idea = TUR_husrev_pasha
+		#}
 		hidden_effect = {
 			country_event = {
 				id = RoF_TUR.1013

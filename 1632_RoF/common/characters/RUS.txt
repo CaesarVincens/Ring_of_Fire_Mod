@@ -1,0 +1,134 @@
+characters = {
+	RUS_mikhail_romanov = {
+		name = "Mikhail Romanov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
+			ideology = absolute_monarchy
+			traits = { weak_czar }
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
+			ideology = constitutional_monarchy
+			traits = { weak_czar }
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
+			ideology = absolute_monarchy_neutral
+			traits = { weak_czar }
+			expire = "1660.1.1.1"
+		}
+	}
+	RUS_fedor_sheremetev = {
+		name = "Fedor Ivanovich Sheremetev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_FEDOR_SHEREMETEV_DESC"
+			ideology = dictatorship
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_FEDOR_SHEREMETEV_DESC"
+			ideology = constitutional_republic
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_FEDOR_SHEREMETEV_DESC"
+			ideology = dictatorship_neutral
+			expire = "1660.1.1.1"
+		}
+	}
+	RUS_mikhail_shein = {
+		name = "Mikhail Borisovich Shein"
+		portraits = {
+			army = {
+				small = ""
+			}
+			army = {
+				large = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_SHEIN_DESC"
+			ideology = dictatorship
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_SHEIN_DESC"
+			ideology = constitutional_republic
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_SHEIN_DESC"
+			ideology = dictatorship_neutral
+			expire = "1660.1.1.1"
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 1050
+		}
+	}
+	RUS_artemi_izmailov = {
+		name = "Artemi Vasilievich Izmailov"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 1051
+		}
+	}
+	RUS_filaret = {
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_filaret
+			allowed = {
+				original_tag = RUS
+			}
+			visible = {
+				not = {
+					has_country_flag = filaret_gone 
+				}
+			}
+			traits = {
+				filaret_trait 
+			}
+			removal_cost = -1.000
+			allowed_to_remove = {
+				has_country_flag = filaret_gone 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		name = "RUS_filaret"
+		portraits = {
+			army = {
+				small = "GFX_idea_filaret_pic"
+			}
+		}
+	}
+}

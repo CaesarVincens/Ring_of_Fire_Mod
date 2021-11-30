@@ -11,21 +11,18 @@ characters = {
 			ideology = absolute_monarchy
 			traits = { swedish_claimant }
 			expire = "1632.11.1.1"
-			id = -1
 		}
 		country_leader = {
 			desc = "POLITICS_SIGISMUND_DESC"
 			ideology = constitutional_monarchy
 			traits = { swedish_claimant }
 			expire = "1632.11.1.1"
-			id = -1
 		}
 		country_leader = {
 			desc = "POLITICS_SIGISMUND_DESC"
 			ideology = absolute_monarchy_neutral
 			traits = { swedish_claimant }
 			expire = "1632.11.1.1"
-			id = -1
 		}
 	}
 	POL_wladyslaw_vasa = {
@@ -99,7 +96,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
-			legacy_id = -1
 		}
 		country_leader = {
 			ideology = absolute_monarchy
@@ -124,7 +120,6 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
 		}
 	}
 	POL_mikolaj_potocki = {
@@ -141,7 +136,6 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
 		}
 	}
 	POL_janusz_kiszka = {
@@ -157,7 +151,6 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
 		}
 	}
 	POL_krzysztof_radziwill = {
@@ -173,7 +166,6 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
-			legacy_id = -1
 		}
 	}
 	POL_lukasz_opalinski_elder = {
@@ -187,8 +179,11 @@ characters = {
 				grand_marshal POL_king_supporter 
 			}
 			available = {
-				NOT = {
-					has_idea_with_trait = grand_marshal 
+				if = {
+					limit = {
+						NOT = { has_idea = POL_lukasz_opalinski_elder }
+					}
+					NOT = { has_idea_with_trait = grand_marshal }
 				}
 			}
 		}
@@ -206,22 +201,19 @@ characters = {
 			allowed = {
 				original_tag = POL
 			}
-			allowed_to_remove = {
-				has_country_flag = POL_promote_detractors 
-			}
+			removal_cost = -1
+			#allowed_to_remove = {
+			#	has_country_flag = POL_promote_detractors 
+			#}
 			traits = {
 				grand_chancellor POL_king_opponent 
 			}
 			available = {
 				if = {
 					limit = {
-						NOT = {
-							has_idea = POL_jakub_zadzik 
-						}
+						NOT = { has_idea = POL_jakub_zadzik }
 					}
-					NOT = {
-						has_idea_with_trait = grand_chancellor 
-					}
+					NOT = { has_idea_with_trait = grand_chancellor }
 				}
 			}
 		}

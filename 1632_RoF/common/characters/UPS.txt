@@ -1,0 +1,33 @@
+characters = {
+	UPS_frederik_hendrik_van_oranje = {
+		name = "Frederik Hendrik van Oranje"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UPS/Portrait_United_Provinces_Frederik_Hendrik.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EISE_BOUMEESTER_DESC"
+			ideology = constitutional_republic
+			expire = "1660.1.1.1"
+		}
+	}
+	UPS_maarten_tromp = {
+		name = "Maarten Tromp"
+		portraits = {
+			army = {
+				small = "GFX_admiral_UPS_Maarten_Tromp_small"
+			}
+			army = {
+				large = "GFX_admiral_UPS_Maarten_Tromp"
+			}
+		}
+		navy_leader = {
+			skill = 4
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+}

@@ -1,0 +1,218 @@
+characters = {
+	TUR_murad_osmanoglu = {
+		name = "Murad IV Osmanoglu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MURAD_OSMANOGLU_DESC"
+			ideology = absolute_monarchy
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MURAD_OSMANOGLU_DESC"
+			ideology = constitutional_monarchy
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_MURAD_OSMANOGLU_DESC"
+			ideology = absolute_monarchy_neutral
+			expire = "1660.1.1.1"
+		}
+	}
+	TUR_ibrahim_osmanoglu = {
+		name = "Ibrahim Osmanoglu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/TUR/Portrait_Ottoman_Ibrahim.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IBRAHIM_OSMANOGLU_DESC"
+			ideology = absolute_monarchy
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_IBRAHIM_OSMANOGLU_DESC"
+			ideology = constitutional_monarchy
+			expire = "1660.1.1.1"
+		}
+		country_leader = {
+			desc = "POLITICS_IBRAHIM_OSMANOGLU_DESC"
+			ideology = absolute_monarchy_neutral
+			expire = "1660.1.1.1"
+		}
+	}
+	TUR_husrev_pasha = {
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_husrev_pasha
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				NOT = {
+					#OR = {
+						has_country_flag = TUR_husrev_killed 
+						#has_country_flag = TUR_husrev_dismissed 
+						#has_country_flag = TUR_husrev_curtailed 
+						#has_completed_focus = TUR_dismiss_husrev_pasha 
+					#}
+				}
+			}
+			removal_cost = -1
+			#allowed_to_remove = {
+			#	OR = {
+			#		has_country_flag = TUR_husrev_killed 
+			#		has_country_flag = TUR_husrev_dismissed 
+			#		has_country_flag = TUR_husrev_curtailed 
+			#		has_completed_focus = TUR_dismiss_husrev_pasha 
+			#	}
+			#}
+			traits = {
+				powerful_vizier 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		name = "TUR_husrev_pasha"
+		portraits = {
+			army = {
+				small = "GFX_idea_turkish_vizier_1"
+			}
+		}
+	}
+	TUR_tabaniyassi_mehmed_pasha = {
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_tabaniyassi_mehmed_pasha
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				has_country_flag = TUR_recep_discovered 
+			}
+			traits = {
+				grand_vizier 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		name = "TUR_tabaniyassi_mehmed_pasha"
+		portraits = {
+			army = {
+				small = "GFX_idea_turkish_vizier_2"
+			}
+		}
+	}
+	TUR_hafiz_ahmed_pasha = {
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_hafiz_ahmed_pasha
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				NOT = {
+					has_country_flag = TUR_hafiz_killed 
+				}
+				OR = {
+					has_country_flag = TUR_husrev_dismissed 
+					has_completed_focus = TUR_dismiss_husrev_pasha 
+				}
+			}
+			available = {
+			}
+			traits = {
+				grand_vizier 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		name = "TUR_hafiz_ahmed_pasha"
+		portraits = {
+			army = {
+				small = "GFX_idea_turkish_vizier_2"
+			}
+		}
+	}
+	TUR_topal_recep_pasha = {
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_topal_recep_pasha
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				NOT = {
+					has_country_flag = TUR_recep_killed 
+				}
+				has_country_flag = TUR_hafiz_killed 
+			}
+			available = {
+			}
+			traits = {
+				grand_vizier 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		name = "TUR_topal_recep_pasha"
+		portraits = {
+			army = {
+				small = "GFX_idea_turkish_vizier_4"
+			}
+		}
+	}
+	TUR_kosem_sultan = {
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_kosem_sultan_advisor
+			allowed = {
+				original_tag = TUR
+			}
+			visible = {
+				has_country_flag = TUR_kosem_sultan_advisor_flag 
+			}
+			traits = {
+				valide_sultan 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		name = "TUR_kosem_sultan_advisor"
+		portraits = {
+			army = {
+				small = "GFX_idea_TUR_kosem_sultan"
+			}
+		}
+	}
+	TUR_ozgur_calisir = {
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_ozgur_calisir
+			allowed = {
+				original_tag = TUR
+			}
+			traits = {
+				radical_minister 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+		name = "TUR_ozgur_calisir"
+		portraits = {
+			army = {
+				small = "GFX_idea_turkish_vizier_3"
+			}
+		}
+	}
+}

@@ -13,8 +13,20 @@ characters = {
 			desc = "POLITICS_MICHAEL_STEARNS_DESC"
 			ideology = democracy
 			traits = { union_man experienced_negiotiator }
-			expire = "1.1.1.1"
-			id = -1
+			expire = "1660.1.1"
+		}
+	}
+	NUS_ed_piazza = {
+		name = "Ed Piazza"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ED_PIAZZA_DESC"
+			ideology = democracy
+			expire = "1660.1.1"
 		}
 	}
 	NUS_john_chandler_simpson = {
@@ -31,8 +43,7 @@ characters = {
 			desc = "POLITICS_JOHN_SIMPSON_DESC"
 			ideology = constitutional_republic
 			traits = { grand_fleet_proponent }
-			expire = "1.1.1.1"
-			id = -1
+			expire = "1660.1.1"
 		}
 	}
 	NUS_ken_beasley = {
@@ -44,16 +55,31 @@ characters = {
 		}
 		country_leader = {
 			ideology = dictatorship
-			expire = "1.1.1.1"
-			id = -1
+			expire = "1660.1.1"
+		}
+	}
+	NUS_gretchen_richterin = {
+		name = "Gretchen Richterin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown_female.dds"
+			}
+		}
+		country_leader = {
+			ideology = radical_democracy
+			expire = "1660.1.1"
 		}
 	}
 	NUS_red_sybolt = {
 		name = "Bobby Gene \"Red\" Sybolt"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
 		country_leader = {
 			ideology = socialism
-			expire = "1.1.1.1"
-			id = -1
+			expire = "1660.1.1"
 		}
 	}
 	NUS_quentin_underwood = {
@@ -65,15 +91,37 @@ characters = {
 		}
 		country_leader = {
 			ideology = conservatism_neutral
-			expire = "1.1.1.1"
-			id = -1
+			expire = "1660.1.1"
+		}
+	}
+	USE_wilhelm_wettin = {
+		name = "Wilhelm Wettin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_republic
+			expire = "1660.1.1"
+		}
+	}
+	USE_johann_von_ramsla = {
+		name = "Johann Wilhelm Neumair von Ramsla"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
 		}
 	}
 	NUS_frank_jackson = {
 		name = "Frank Jackson"
 		portraits = {
 			army = {
-				small = "GFX_commander_NUS_Frank_Jackson_small"
 				large = "GFX_commander_NUS_Frank_Jackson"
 			}
 		}
@@ -83,7 +131,6 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = -1
 		}
 	}
 	NUS_francisco_nasi = {
@@ -102,7 +149,8 @@ characters = {
 			}
 			available = {
 				has_country_leader = {
-					name = "Michael Stearns"
+					character = NUS_michael_stearns
+					ruling_only = yes
 				}
 			}
 		}
