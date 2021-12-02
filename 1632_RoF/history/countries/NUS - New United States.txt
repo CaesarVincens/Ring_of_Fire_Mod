@@ -61,9 +61,11 @@ add_ideas = {
 }
 set_stability = 0.5
 recruit_character = NUS_michael_stearns
+recruit_character = NUS_ed_piazza
 recruit_character = NUS_john_chandler_simpson
 recruit_character = NUS_ken_beasley
 recruit_character = NUS_red_sybolt
 recruit_character = NUS_quentin_underwood
 recruit_character = NUS_frank_jackson
 recruit_character = NUS_francisco_nasi
+recruit_character = USE_johann_von_ramsla

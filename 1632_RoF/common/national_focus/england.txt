@@ -1421,7 +1421,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = ENG_thomas_wentworth.tt
 				hidden_effect = {
-					add_ideas = ENG_thomas_wentworth
+					activate_advisor = ENG_thomas_wentworth
 				}
 			}
 		}
@@ -1584,11 +1584,8 @@ focus_tree = {
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			create_country_leader = {
-				name = "Elizabeth Wittelsbach"
-				picture = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
-				ideology = constitutional_monarchy
-			}			#event
+			promote_character = ENG_elizabeth_wittelsbach
+			#event
 		}
 	}
 
@@ -1621,11 +1618,8 @@ focus_tree = {
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			create_country_leader = {
-				name = "Rupert Wittelsbach"
-				picture = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
-				ideology = constitutional_monarchy
-			}
+			promote_character = ENG_rupert_wittelsbach
+			#event
 		}
 	}
 
@@ -1992,18 +1986,18 @@ focus_tree = {
 					limit = {
 						has_idea = ENG_thomas_wentworth
 					}
-					remove_ideas = ENG_thomas_wentworth
-					add_ideas = ENG_richard_boyle
+					deactivate_advisor = ENG_thomas_wentworth
+					activate_advisor = ENG_richard_boyle
 				}
 				else = {
-					add_ideas = ENG_richard_boyle
+					activate_advisor = ENG_richard_boyle
 				}
 			}
 			if = {
 				limit = {
 					has_idea = ENG_william_laud
 				}
-				remove_ideas = ENG_william_laud
+				deactivate_advisor = ENG_william_laud
 			}
 		}
 		#available_if_capitulated = yes

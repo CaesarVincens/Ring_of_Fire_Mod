@@ -23,11 +23,6 @@ characters = {
 				large = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
 			}
 		}
-		country_leader = {
-			desc = "POLITICS_ED_PIAZZA_DESC"
-			ideology = democracy
-			expire = "1660.1.1"
-		}
 	}
 	NUS_john_chandler_simpson = {
 		name = "John Chandler Simpson"
@@ -40,7 +35,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_JOHN_SIMPSON_DESC"
+			#desc = "POLITICS_JOHN_SIMPSON_DESC"
 			ideology = constitutional_republic
 			traits = { grand_fleet_proponent }
 			expire = "1660.1.1"
@@ -64,10 +59,6 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/leader_unknown_female.dds"
 			}
-		}
-		country_leader = {
-			ideology = radical_democracy
-			expire = "1660.1.1"
 		}
 	}
 	NUS_red_sybolt = {
@@ -95,14 +86,22 @@ characters = {
 		}
 	}
 	USE_wilhelm_wettin = {
-		name = "Wilhelm Wettin"
+		name = "Wilhelm von Wettin"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
 			}
 		}
 		country_leader = {
-			ideology = constitutional_republic
+			ideology = absolute_monarchy_neutral
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
 			expire = "1660.1.1"
 		}
 	}
@@ -112,10 +111,6 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/leader_unknown.dds"
 			}
-		}
-		country_leader = {
-			ideology = absolute_monarchy
-			expire = "1660.1.1"
 		}
 	}
 	NUS_frank_jackson = {

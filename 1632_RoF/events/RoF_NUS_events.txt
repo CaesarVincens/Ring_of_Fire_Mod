@@ -184,10 +184,13 @@ country_event = {
 			set_country_flag = NUS_battle_of_jena
 			set_country_flag = NUS_start_CoC
 			set_global_flag = CoC_established
-			create_country_leader = {
-				name = "Gretchen Richterin"
-				ideology = radical_democracy
-				picture = "gfx/leaders/leader_unknown_female.dds"
+			add_country_leader_role = {
+				character = NUS_gretchen_richterin
+				promote_leader = yes
+				country_leader = {
+					ideology = radical_democracy
+					expire = "1660.1.1"
+				}
 			}
 			set_party_name = {
 				ideology = radical
@@ -218,10 +221,13 @@ news_event = {
 			set_country_flag = NUS_battle_of_jena
 			set_country_flag = NUS_start_CoC
 			set_global_flag = CoC_established
-			create_country_leader = {
-				name = "Gretchen Richterin"
-				ideology = radical_democracy
-				picture = "gfx/leaders/leader_unknown_female.dds"
+			add_country_leader_role = {
+				character = NUS_gretchen_richterin
+				promote_leader = yes
+				country_leader = {
+					ideology = radical_democracy
+					expire = "1660.1.1"
+				}
 			}
 			set_party_name = {
 				ideology = radical
@@ -398,6 +404,11 @@ country_event = {
 		add_state_core = 579
 		add_state_core = 580
 		hidden_effect = {
+			FROM = {
+				USE_wilhelm_wettin = {
+					set_nationality = NUS
+				}
+			}
 			NUS = {
 				news_event = { days = 1 id = RoF_news.11 }
 			}
@@ -1229,14 +1240,12 @@ country_event = {
 					elections_allowed = yes
 				}
 				hidden_effect = {
-					create_country_leader = {
-						name = "John Chandler Simpson"
-						desc = "POLITICS_JOHN_SIMPSON_DESC"
-						picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
-						#expire = "1660.1.1"
-						ideology = dictatorship 
-						traits = {
-							grand_fleet_proponent
+					add_country_leader_role = {
+						character = NUS_john_chandler_simpson
+						promote_leader = yes
+						country_leader = {
+							ideology = dictatorship
+							expire = "1660.1.1"
 						}
 					}
 				}

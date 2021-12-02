@@ -132,17 +132,31 @@ country_event = {
 				name = USE_crown_loyalists_abs
 				long_name = USE_crown_loyalists_abs_long
 			}
-			create_country_leader = {
-				name = "Johann Wilhelm Neumair von Ramsla"
-				picture = "gfx/leaders/leader_unknown.dds"
-				ideology = absolute_monarchy
+			add_country_leader_role = {
+				character = USE_johann_von_ramsla
+				promote_leader = yes
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1660.1.1"
+				}
 			}
-			create_country_leader = {
-				name = "Wilhelm Wettin"
-				picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_republic
-				traits = {
+			USE_wilhelm_wettin = {
+				set_character_name = "Wilhelm Wettin"
+				remove_country_leader_role = {
+					ideology = absolute_monarchy_neutral
+				}
+				remove_country_leader_role = {
+					ideology = absolute_monarchy
+				}
+				remove_country_leader_role = {
+					ideology = constitutional_monarchy
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_republic
+						expire = "1660.1.1"
+					}
 				}
 			}
 			news_event = { id = RoF_news.05 days = 1 }
@@ -786,15 +800,16 @@ country_event = {
 			}
 			hidden_effect = {
 				SAX = {
+					set_variable = { holk_destination = POL.id }
 					country_event = {
 						id = RoF_German.51 days = 7
 					}
 				}
-				POL = {
-					country_event = {
-						id = RoF_German.50 days = 14
-					}
-				}
+				#POL = {
+				#	country_event = {
+				#		id = RoF_German.50 days = 14
+				#	}
+				#}
 			}
 		}
 		if = {
@@ -815,9 +830,9 @@ country_event = {
 				type = annex_everything
 			}
 		}
-		for_each_scope_loop = {
-			array = global.german_tags
-		}
+		#for_each_scope_loop = {
+		#	array = global.german_tags
+		#}
 	}
 
 }
@@ -873,18 +888,18 @@ country_event = {
 			autonomy_state = autonomy_rof_protectorate
 		}
 		hidden_effect = {
+			NUS_gretchen_richterin = {
+				set_nationality = SIL
+			}
 			SIL = {
-				create_country_leader = {
-					name = "Gretchen Richterin"
-					picture = "gfx/leaders/leader_unknown_female.dds"
-					ideology = democracy
-					#female = yes
-				}
-				create_country_leader = {
-					name = "Gretchen Richterin"
-					picture = "gfx/leaders/leader_unknown_female.dds"
-					ideology = radical_democracy
-					#female = yes
+				promote_character = NUS_gretchen_richterin
+				add_country_leader_role = {
+					character = NUS_gretchen_richterin
+					promote_leader = yes
+					country_leader = {
+						ideology = democracy
+						expire = "1660.1.1"
+					}
 				}
 				set_popularities = {
 					liberal = 40
@@ -966,20 +981,22 @@ country_event = {
 			ruling_party = constitutionalist
 		}
 		hidden_effect = {
-			create_corps_commander = {
-				name = "Michael Stearns"
-				gfx = "GFX_leader_NUS_Michael_Stearns"
-				traits = { }
+			add_corps_commander_role = {
+				character = NUS_michael_stearns # optional if inside character scope
+				traits = {  }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
 				planning_skill = 1
 				logistics_skill = 1
 			}
-			create_country_leader = {
-				name = "Ed Piazza"
-				ideology = democracy
-				picture = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			add_country_leader_role = {
+				character = NUS_ed_piazza
+				promote_leader = yes
+				country_leader = {
+					ideology = democracy
+					expire = "1660.1.1"
+				}
 			}
 		}
 	}

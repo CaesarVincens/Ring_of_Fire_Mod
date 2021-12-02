@@ -1359,7 +1359,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = {
-				id = RoF_RUS.99
+				id = RoF_RUS.100
 			}
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = load_new_focus_tree_TT

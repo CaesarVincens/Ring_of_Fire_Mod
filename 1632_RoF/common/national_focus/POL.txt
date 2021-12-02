@@ -1350,22 +1350,11 @@ focus_tree = {
 					}
 				}
 				retire_character = POL_sigismund_vasa
-				#retire_country_leader = yes
-				#hidden_effect = {
-				#	retire_ideology_leader = constitutionalist
-				#	retire_ideology_leader = neutrality
-				#}
 			}
 			promote_character = {
 				character = POL_wladyslaw_vasa
 				ideology = absolute_monarchy
 			}
-			#create_country_leader = {
-				#	name = "Władysław IV Vasa"
-				#	desc = "POLITICS_WLADYSLAW_DESC"
-				#	picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-				#	ideology = absolute_monarchy
-				#}
 			hidden_effect = {
 				promote_character = {
 					character = POL_wladyslaw_vasa
@@ -1375,18 +1364,6 @@ focus_tree = {
 					character = POL_wladyslaw_vasa
 					ideology = absolute_monarchy_neutral
 				}
-			#	create_country_leader = {
-			#		name = "Władysław IV Vasa"
-			#		desc = "POLITICS_WLADYSLAW_DESC"
-			#		picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-			#		ideology = constitutional_monarchy
-			#	}
-			#	create_country_leader = {
-			#		name = "Władysław IV Vasa"
-			#		desc = "POLITICS_WLADYSLAW_DESC"
-			#		picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-			#		ideology = absolute_monarchy_neutral
-			#	}
 			}
 			POL_sejm_large_opposition = yes
 			POL_king_up_both_down_5 = yes
@@ -1428,6 +1405,7 @@ focus_tree = {
 				remove_idea = POL_powerful_magnates
 				add_idea = POL_reduced_magnates
 			}
+			POL_end_lifetime_appointments_effect = yes
 		}
 		ai_will_do = {
 			base = 2

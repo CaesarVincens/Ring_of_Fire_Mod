@@ -1,25 +1,23 @@
 characters = {
 	POL_sigismund_vasa = {
 		name = "Sigismund III Vasa"
+		#desc = "POLITICS_SIGISMUND_DESC"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_SIGISMUND_DESC"
 			ideology = absolute_monarchy
 			traits = { swedish_claimant }
 			expire = "1632.11.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_SIGISMUND_DESC"
 			ideology = constitutional_monarchy
 			traits = { swedish_claimant }
 			expire = "1632.11.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_SIGISMUND_DESC"
 			ideology = absolute_monarchy_neutral
 			traits = { swedish_claimant }
 			expire = "1632.11.1.1"
@@ -176,7 +174,7 @@ characters = {
 				original_tag = POL
 			}
 			traits = {
-				grand_marshal POL_king_supporter 
+				grand_marshal POL_king_supporter
 			}
 			available = {
 				if = {
@@ -203,10 +201,10 @@ characters = {
 			}
 			removal_cost = -1
 			#allowed_to_remove = {
-			#	has_country_flag = POL_promote_detractors 
+			#	has_country_flag = POL_promote_detractors
 			#}
 			traits = {
-				grand_chancellor POL_king_opponent 
+				grand_chancellor POL_king_opponent
 			}
 			available = {
 				if = {
@@ -232,17 +230,17 @@ characters = {
 				original_tag = POL
 			}
 			traits = {
-				grand_chancellor POL_king_supporter 
+				grand_chancellor POL_king_supporter
 			}
 			available = {
 				if = {
 					limit = {
 						NOT = {
-							has_idea = POL_jerzy_ossolinski 
+							has_idea = POL_jerzy_ossolinski
 						}
 					}
 					NOT = {
-						has_idea_with_trait = grand_chancellor 
+						has_idea_with_trait = grand_chancellor
 					}
 				}
 			}

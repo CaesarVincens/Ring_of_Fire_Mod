@@ -38,17 +38,13 @@ country_event = {
 				add_state_claim = 429
 				add_state_claim = 428
 				add_opinion_modifier = { target = BOH modifier = hates_BOH }
-				every_army_leader = {
-					limit = {
-						OR = {
-							has_id = 1001
-							has_id = 1002
-						}
-					}
-					set_nationality = BOH
+				set_nationality = {
+					target_country = BOH
+					character = BOH_albrecht_von_wallenstein
 				}
-				delete_unit_template_and_units = {
-					division_template = "Holk's Horse"
+				set_nationality = {
+					target_country = BOH
+					character = BOH_gottfried_zu_pappenheim
 				}
 			}
 			SAX = {
@@ -64,28 +60,27 @@ country_event = {
 				add_named_threat = { threat = 5 name = BOH.1.t }
 				inherit_technology = ROOT
 				#RoF_transfer_technology = yes
-				create_country_leader = {
-					name = "Albrecht von Wallenstein"
-					desc = "POLITICS_WALLENSTEIN_DESC"
-					picture = "GFX_leader_BOH_Wallenstein"
-					ideology = constitutional_monarchy
-					traits = {
+				BOH_albrecht_von_wallenstein = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = absolute_monarchy
+							expire = "1660.1.1.1"
+						}
 					}
-				}
-				create_country_leader = {
-					name = "Albrecht von Wallenstein"
-					desc = "POLITICS_WALLENSTEIN_DESC"
-					picture = "GFX_leader_BOH_Wallenstein"
-					ideology = absolute_monarchy
-					traits = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = constitutional_monarchy
+							expire = "1660.1.1.1"
+						}
 					}
-				}
-				create_country_leader = {
-					name = "Albrecht von Wallenstein"
-					desc = "POLITICS_WALLENSTEIN_DESC"
-					picture = "GFX_leader_BOH_Wallenstein"
-					ideology = absolute_monarchy_neutral
-					traits = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = absolute_monarchy_neutral
+							expire = "1660.1.1.1"
+						}
 					}
 				}
 				set_politics = {
@@ -108,13 +103,9 @@ country_event = {
 			release = BOH
 			BOH = {
 				add_named_threat = { threat = 5 name = BOH.1.t }
-				create_country_leader = {
-					name = "Albrecht von Wallenstein"
-					desc = "POLITICS_WALLENSTEIN_DESC"
-					picture = "GFX_leader_BOH_Wallenstein"
+				promote_character = {
+					character = BOH_albrecht_von_wallenstein
 					ideology = constitutional_monarchy
-					traits = {
-					}
 				}
 				set_politics = {
 					ruling_party = constitutionalist
@@ -134,13 +125,9 @@ country_event = {
 			release = BOH
 			BOH = {
 				add_named_threat = { threat = 5 name = BOH.1.t }
-				create_country_leader = {
-					name = "Albrecht von Wallenstein"
-					desc = "POLITICS_WALLENSTEIN_DESC"
-					picture = "GFX_leader_BOH_Wallenstein"
+				promote_character = {
+					character = BOH_albrecht_von_wallenstein
 					ideology = constitutional_monarchy
-					traits = {
-					}
 				}
 				set_politics = {
 					ruling_party = constitutionalist
@@ -251,8 +238,8 @@ country_event = {
 	
 	option = {
 		name = RoF_AUS.103.a
-		remove_unit_leader = 1001
-		remove_unit_leader = 1002
+		retire_character = BOH_albrecht_von_wallenstein
+		retire_character = BOH_gottfried_zu_pappenheim
 		ai_chance = {
 			factor = 10
 		}
@@ -277,8 +264,7 @@ country_event = {
 	
 	option = {
 		name = RoF_AUS.104.a
-		remove_unit_leader = 1001
-		#remove_unit_leader = 1002
+		retire_character = BOH_albrecht_von_wallenstein
 		ai_chance = {
 			factor = 10
 		}
@@ -336,7 +322,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		remove_unit_leader = 1003
+		retire_character = AUS_johann_tserclaes_von_tilly
 		set_country_flag = tilly_dead
 	}
 	option = {
@@ -365,28 +351,7 @@ country_event = {
 	option = {
 		name = RoF_AUS.1101.a
 		set_country_flag = wallenstein_reinstated
-		create_field_marshal = {
-			name = "Abrecht von Wallenstein"
-			gfx = "GFX_leader_BOH_Wallenstein"
-			traits = { organizer }
-			skill = 5
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 5
-			id = 1001
-		}
-		create_corps_commander = {
-			name = "Heinrich Holk"
-			portrait_path = "gfx/leaders/Germanies/Portrait_Heinrich_Holk.dds"
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			traits = { cavalry_officer }
-			id = 2001
-		}
+		set_country_flag = hired_holk
 		custom_effect_tooltip = holks_horse_tt
 		hidden_effect = {
 			division_template = {
@@ -956,8 +921,8 @@ country_event = {
 		tag = AUS
 		date > 1634.6.1
 		has_country_leader = {
-			ruling_only = yes
-			name = "Ferdinand II von Habsburg"
+			ruling_only = no
+			character = AUS_ferdinand_ii_von_habsburg
 		}
 	}
 	mean_time_to_happen = {
@@ -982,8 +947,8 @@ country_event = {
 		tag = AUS
 		date > 1634.8.1
 		has_country_leader = {
-			ruling_only = yes
-			name = "Ferdinand II von Habsburg"
+			ruling_only = no
+			character = AUS_ferdinand_ii_von_habsburg
 		}
 	}
 	mean_time_to_happen = {
@@ -992,40 +957,12 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			kill_country_leader = yes
-			kill_ideology_leader = constitutionalist
-			kill_ideology_leader = neutrality
-			create_country_leader = {
-				name = "Ferdinand III von Habsburg"
-				desc = "POLITICS_FERDINAND_III_DESC"
-				picture = "GFX_leader_AUS_Ferdinand_III"
-				ideology = absolute_monarchy
-				traits = {
-				}
-			}
-			create_country_leader = {
-				name = "Ferdinand III von Habsburg"
-				desc = "POLITICS_FERDINAND_III_DESC"
-				picture = "GFX_leader_AUS_Ferdinand_III"
-				ideology = constitutional_monarchy
-				traits = {
-				}
-			}
-			create_country_leader = {
-				name = "Ferdinand III von Habsburg"
-				desc = "POLITICS_FERDINAND_III_DESC"
-				picture = "GFX_leader_AUS_Ferdinand_III"
-				ideology = lib_constitutional_monarchy
-				traits = {
-				}
-			}
-			create_country_leader = {
-				name = "Ferdinand III von Habsburg"
-				desc = "POLITICS_FERDINAND_III_DESC"
-				picture = "GFX_leader_AUS_Ferdinand_III"
-				ideology = monarchy_neutral
-				traits = {
-				}
+			retire_character = AUS_ferdinand_ii_von_habsburg
+			AUS_ferdinand_iii_von_habsburg = {
+				promote_character = absolute_monarchy
+				promote_character = constitutional_monarchy
+				promote_character = lib_constitutional_monarchy
+				promote_character = monarchy_neutral
 			}
 		}
 	}
@@ -1046,13 +983,9 @@ country_event = {
 			add_popularity = { ideology = constitutionalist popularity = abs_pop }
 		}
 		effect_tooltip = {
-			create_country_leader = {
-				name = "Ferdinand III von Habsburg"
-				desc = "POLITICS_FERDINAND_III_DESC"
-				picture = "GFX_leader_AUS_Ferdinand_III"
+			promote_character = {
+				character = AUS_ferdinand_iii_von_habsburg
 				ideology = constitutional_monarchy
-				traits = {
-				}
 			}
 		}
 		set_politics = {
@@ -1091,13 +1024,9 @@ country_event = {
 		name = RoF_AUS.150.b
 		set_country_flag = AUS_seek_hre_flag
 		effect_tooltip = {
-			create_country_leader = {
-				name = "Ferdinand III von Habsburg"
-				desc = "POLITICS_FERDINAND_III_DESC"
-				picture = "GFX_leader_AUS_Ferdinand_III"
+			promote_character = {
+				character = AUS_ferdinand_iii_von_habsburg
 				ideology = absolute_monarchy
-				traits = {
-				}
 			}
 		}
 		every_state = {

@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_ISABELLA_VON_HABSBURG_DESC"
+			#desc = "POLITICS_ISABELLA_VON_HABSBURG_DESC"
 			ideology = absolute_monarchy
 			expire = "1660.1.1.1"
 		}
@@ -18,21 +18,6 @@ characters = {
 			civilian = {
 				large = "GFX_leader_SPN_Don_Fernando"
 			}
-		}
-		country_leader = {
-			desc = "POLITICS_DON_FERNANDO_DESC"
-			ideology = absolute_monarchy
-			expire = "1660.1.1.1"
-		}
-		country_leader = {
-			desc = "POLITICS_DON_FERNANDO_DESC"
-			ideology = constitutional_monarchy
-			expire = "1660.1.1.1"
-		}
-		country_leader = {
-			desc = "POLITICS_DON_FERNANDO_DESC"
-			ideology = monarchy_neutral
-			expire = "1660.1.1.1"
 		}
 		corps_commander = {
 			skill = 3

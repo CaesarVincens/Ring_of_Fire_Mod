@@ -1,25 +1,23 @@
 characters = {
 	AUS_ferdinand_ii_von_habsburg = {
 		name = "Ferdinand II von Habsburg"
+		#desc = "POLITICS_FERDINAND_2_DESC"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_2_DESC"
 			ideology = absolute_monarchy
 			traits = { stand_against_ottoman }
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_2_DESC"
 			ideology = constitutional_monarchy
 			traits = { stand_against_ottoman }
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_2_DESC"
 			ideology = absolute_monarchy_neutral
 			traits = { stand_against_ottoman }
 			expire = "1660.1.1.1"
@@ -27,28 +25,25 @@ characters = {
 	}
 	AUS_ferdinand_iii_von_habsburg = {
 		name = "Ferdinand III von Habsburg"
+		#desc = "POLITICS_FERDINAND_III_DESC"
 		portraits = {
 			civilian = {
 				large = "GFX_leader_AUS_Ferdinand_III"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_III_DESC"
 			ideology = absolute_monarchy
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_III_DESC"
 			ideology = lib_constitutional_monarchy
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_III_DESC"
 			ideology = constitutional_monarchy
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_FERDINAND_III_DESC"
 			ideology = monarchy_neutral
 			expire = "1660.1.1.1"
 		}
@@ -63,22 +58,7 @@ characters = {
 				large = "GFX_leader_BOH_Wallenstein"
 			}
 		}
-		country_leader = {
-			desc = "POLITICS_WALLENSTEIN_DESC"
-			ideology = absolute_monarchy
-			expire = "1660.1.1.1"
-		}
-		country_leader = {
-			desc = "POLITICS_WALLENSTEIN_DESC"
-			ideology = constitutional_monarchy
-			expire = "1660.1.1.1"
-		}
-		country_leader = {
-			desc = "POLITICS_WALLENSTEIN_DESC"
-			ideology = absolute_monarchy_neutral
-			expire = "1660.1.1.1"
-		}
-		create_field_marshal = {
+		field_marshal = {
 			traits = { organizer }
 			skill = 5
 			attack_skill = 2
@@ -87,6 +67,7 @@ characters = {
 			logistics_skill = 5
 			legacy_id = 1001
 			visible = {
+				NOT = { has_country_flag = wallenstein_injured }
 				OR = {
 					original_tag = BOH
 					has_country_flag = wallenstein_reinstated

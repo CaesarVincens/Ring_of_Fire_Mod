@@ -1,23 +1,21 @@
 characters = {
 	DEN_christian_von_oldenburg = {
 		name = "Christian IV von Oldenburg"
+		#desc = "POLITICS_CHRISTIAN_VON_OLDENBURG_DESC"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/DEN/Portrait_Denmark_Christian_IV.dds"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_CHRISTIAN_VON_OLDENBURG_DESC"
 			ideology = absolute_monarchy
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_CHRISTIAN_VON_OLDENBURG_DESC"
 			ideology = constitutional_monarchy
 			expire = "1660.1.1.1"
 		}
 		country_leader = {
-			desc = "POLITICS_CHRISTIAN_VON_OLDENBURG_DESC"
 			ideology = monarchy_neutral
 			expire = "1660.1.1.1"
 		}

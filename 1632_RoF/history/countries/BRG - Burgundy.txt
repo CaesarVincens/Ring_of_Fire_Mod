@@ -36,12 +36,3 @@ add_ideas = {
 	military_focus_eco
 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Bernard Wettin"
-    desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-    picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}

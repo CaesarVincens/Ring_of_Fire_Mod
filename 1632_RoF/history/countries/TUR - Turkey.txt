@@ -82,12 +82,13 @@ recruit_character = TUR_topal_recep_pasha
 recruit_character = TUR_husrev_pasha
 recruit_character = TUR_kosem_sultan_advisor
 recruit_character = TUR_ozgur_calisir
+activate_advisor = TUR_husrev_pasha
 add_ideas = {
 	TUR_kosem_sultan
 	TUR_janissaries_1
 	TUR_beylerbeys_1
 	limited_exports
-	TUR_husrev_pasha
+	#TUR_husrev_pasha
 	TUR_self_important_bureaucrats
 	TUR_supreme
 	#emperor_rank

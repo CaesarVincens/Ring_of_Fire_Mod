@@ -44,6 +44,38 @@ lessen_POL_serfdom = {
 	}
 }
 
+POL_end_lifetime_appointments_effect = {
+	hidden_effect = {
+		POL_jakub_zadzik = {
+			if = {
+				limit = {
+					is_character_slot = political_advisor
+				}
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = POL_jakub_zadzik
+						traits = { grand_chancellor POL_king_opponent }
+						allowed = { original_tag = POL }
+					}
+					activate = yes
+				}
+				else = {
+					remove_advisor_role = { slot = political_advisor }
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = POL_jakub_zadzik
+							traits = { grand_chancellor POL_king_opponent }
+							allowed = { original_tag = POL }
+						}
+					}
+				}
+			}
+		}
+	}
+}
 #########################################
 ## Polish-Lithuanian Commonwealth Sejm ##
 #########################################
@@ -112,7 +144,7 @@ POL_sejm_large_support = {
 }
 
 POL_recalc_sejm_icon_frames = {
-	
+
 	set_temp_variable = { sejm_temp = sejm_support }
 	divide_temp_variable = { sejm_temp = sejm_total }
 	multiply_temp_variable = { sejm_temp = 21 }
@@ -154,7 +186,7 @@ POL_king_up_both_down_5 = {
 	else_if = {
 		limit = {
 			check_variable = { var = POL.power_szlachta value = 0 compare = less_than_or_equals }
-		}		
+		}
 		POL_king_up_magnates_down_5 = yes
 	}
 	else = {
@@ -175,7 +207,7 @@ POL_king_down_both_up_5 = {
 	else_if = {
 		limit = {
 			check_variable = { var = POL.power_magnates value = 0.95 compare = less_than_or_equals }
-		}		
+		}
 		POL_magnates_up_king_down_5 = yes
 	}
 	else = {
@@ -244,7 +276,7 @@ POL_magnates_up_both_down_5 = {
 	else_if = {
 		limit = {
 			check_variable = { var = POL.power_szlachta value = 0 compare = less_than_or_equals }
-		}		
+		}
 		POL_magnates_up_king_down_5 = yes
 	}
 	else = {
@@ -265,7 +297,7 @@ POL_magnates_down_both_up_5 = {
 	else_if = {
 		limit = {
 			check_variable = { var = POL.power_szlachta value = 0.95 compare = less_than_or_equals }
-		}		
+		}
 		POL_szlachta_up_magnates_down_5 = yes
 	}
 	else = {
@@ -334,7 +366,7 @@ POL_szlachta_up_both_down_5 = {
 	else_if = {
 		limit = {
 			check_variable = { var = POL.power_magnates value = 0 compare = less_than_or_equals }
-		}		
+		}
 		POL_szlachta_up_king_down_5 = yes
 	}
 	else = {

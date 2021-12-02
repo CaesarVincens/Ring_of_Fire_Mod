@@ -93,9 +93,8 @@ TUR_coup_category = {
 					has_government = absolutist
 				}
 				hidden_effect = {
-					create_country_leader = {
-						name = "Ibrahim Osmanoglu"
-						picture = "gfx/leaders/TUR/Portrait_Ottoman_Ibrahim.dds"
+					promote_character = {
+						character = TUR_ibrahim_osmanoglu
 						ideology = absolute_monarchy_neutral
 					}
 				}
@@ -110,9 +109,8 @@ TUR_coup_category = {
 					NOT = { has_government = absolutist }
 				}
 				hidden_effect = {
-					create_country_leader = {
-						name = "Ibrahim Osmanoglu"
-						picture = "gfx/leaders/TUR/Portrait_Ottoman_Ibrahim.dds"
+					promote_character = {
+						character = TUR_ibrahim_osmanoglu
 						ideology = absolute_monarchy
 					}
 				}

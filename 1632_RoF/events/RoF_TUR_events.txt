@@ -35,16 +35,41 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		
+		hidden_effect = {
+			TUR_husrev_pasha = {
+				remove_advisor_role = {
+					slot = political_advisor
+				}
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = TUR_husrev_pasha
+						traits = {
+							grand_vizier
+						}
+						allowed = { original_tag = TUR }
+						available = {
+							if = {
+								limit = {
+									has_country_flag = TUR_husrev_dismissed
+								}
+								NOT = {
+									has_country_flag = TUR_husrev_dismissed
+								}
+							}
+						}
+					}
+					activate = yes
+				}
+			}
+		}
 	}
 	option = {
 		name = RoF_TUR.101.a
 		add_stability = -0.1
-		swap_ideas = {
-			remove_idea = TUR_husrev_pasha
-			add_idea = TUR_hafiz_ahmed_pasha
-		}
 		set_country_flag = TUR_husrev_dismissed
+		deactivate_advisor = TUR_husrev_pasha
+		activate_advisor = TUR_hafiz_ahmed_pasha
 		hidden_effect = {
 			country_event = {
 				id = RoF_TUR.1011
@@ -73,20 +98,18 @@ country_event = {
 	}
 	option = {
 		name = RoF_TUR.101.b
-		TUR_husrev_pasha = {
-			remove_trait = {
-				trait = powerful_vizier
-				slot = political_advisor
-			}
-			add_trait = {
-				trait = grand_vizier
-				slot = political_advisor
+		effect_tooltip = {
+			TUR_husrev_pasha = {
+				remove_trait = {
+					trait = powerful_vizier
+					slot = political_advisor
+				}
+				add_trait = {
+					trait = grand_vizier
+					slot = political_advisor
+				}
 			}
 		}
-		#swap_ideas = {
-		#	add_idea = TUR_husrev_pasha_2
-		#	remove_idea = TUR_husrev_pasha
-		#}
 		hidden_effect = {
 			country_event = {
 				id = RoF_TUR.1013
@@ -120,11 +143,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		swap_ideas = {
-			remove_idea = TUR_hafiz_ahmed_pasha
-			add_idea = TUR_topal_recep_pasha
-		}
 		set_country_flag = TUR_hafiz_killed
+		retire_character = TUR_hafiz_ahmed_pasha
+		activate_advisor = TUR_topal_recep_pasha
 		hidden_effect = {
 			country_event = {
 				id = RoF_TUR.1012
@@ -136,6 +157,7 @@ country_event = {
 		name = RoF_TUR.1011.a
 		add_stability = -0.1
 		set_country_flag = TUR_husrev_killed
+		retire_character = TUR_husrev_pasha
 		if = {
 			limit = { has_active_mission = TUR_coup_threat }
 			custom_effect_tooltip = TUR_bureaucracy_coup_better
@@ -189,14 +211,13 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = TUR_recep_discovered
-		swap_ideas = {
-			remove_idea = TUR_topal_recep_pasha
-			add_idea = TUR_tabaniyassi_mehmed_pasha
-		}
+		deactivate_advisor = TUR_topal_recep_pasha
+		activate_advisor = TUR_tabaniyassi_mehmed_pasha
 	}
 	option = {
 		name = RoF_TUR.1012.a
 		set_country_flag = TUR_recep_killed
+		retire_character = TUR_topal_recep_pasha
 		add_political_power = -20
 		add_stability = -0.05
 		if = {
@@ -235,10 +256,8 @@ country_event = {
 	option = {
 		name = RoF_TUR.1013.a
 		add_stability = -0.1
-		swap_ideas = {
-			remove_idea = TUR_husrev_pasha
-			add_idea = TUR_tabaniyassi_mehmed_pasha
-		}
+		retire_character = TUR_husrev_pasha
+		activate_advisor = TUR_tabaniyassi_mehmed_pasha
 		set_country_flag = TUR_husrev_killed
 		if = {
 			limit = { has_active_mission = TUR_coup_threat }
@@ -263,10 +282,8 @@ country_event = {
 	option = {
 		name = RoF_TUR.1013.b
 		add_stability = -0.05
-		swap_ideas = {
-			remove_idea = TUR_husrev_pasha
-			add_idea = TUR_tabaniyassi_mehmed_pasha
-		}
+		deactivate_advisor = TUR_husrev_pasha
+		activate_advisor = TUR_tabaniyassi_mehmed_pasha
 		set_country_flag = TUR_husrev_dismissed
 		if = {
 			limit = { has_active_mission = TUR_coup_threat }
@@ -483,7 +500,7 @@ country_event = {
 	option = {
 		name = RoF_TUR.105.a
 		set_country_flag = TUR_kosem_sultan_advisor_flag
-		add_ideas = TUR_kosem_sultan_advisor
+		activate_advisor = TUR_kosem_sultan_advisor
 		ai_chance = {
 			base = 10
 		}

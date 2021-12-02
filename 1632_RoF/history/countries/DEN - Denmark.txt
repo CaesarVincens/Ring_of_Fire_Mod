@@ -36,30 +36,4 @@ add_ideas = {
 	balanced_eco
 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Christian IV von Oldenburg"
-    desc = "POLITICS_HANNIBAL_OXHOLM_DESC"
-    picture = "gfx/leaders/DEN/Portrait_Denmark_Christian_IV.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Christian IV von Oldenburg"
-    desc = "POLITICS_HANNIBAL_OXHOLM_DESC"
-    picture = "gfx/leaders/DEN/Portrait_Denmark_Christian_IV.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Christian IV von Oldenburg"
-    desc = "POLITICS_HANNIBAL_OXHOLM_DESC"
-    picture = "gfx/leaders/DEN/Portrait_Denmark_Christian_IV.dds"
-    expire = "1660.1.1"
-    ideology = monarchy_neutral
-    traits = {
-    }
-}
+recruit_character = DEN_christian_von_oldenburg
