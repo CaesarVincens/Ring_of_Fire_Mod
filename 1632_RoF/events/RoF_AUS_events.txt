@@ -52,7 +52,29 @@ country_event = {
 					id = RoF_German.50
 				}
 			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = AUS
+						is_in_faction_with = SWE
+						tag = AUS
+						tag = SWE
+					}
+				}
+				diplomatic_relation = {
+					country = BOH
+					relation = military_access
+					active = yes
+				}
+				country_event = {
+					id = RoF_AUS.1001
+					days = 7
+				}
+			}
 			BOH = {
+				every_owned_state = {
+					set_state_controller_to = BOH
+				}
 				set_victory_points = {
 					province = 11542
 					value = 40
@@ -65,21 +87,21 @@ country_event = {
 						promote_leader = yes
 						country_leader = {
 							ideology = absolute_monarchy
-							expire = "1660.1.1.1"
+							expire = "1660.1.1"
 						}
 					}
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
 							ideology = constitutional_monarchy
-							expire = "1660.1.1.1"
+							expire = "1660.1.1"
 						}
 					}
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
 							ideology = absolute_monarchy_neutral
-							expire = "1660.1.1.1"
+							expire = "1660.1.1"
 						}
 					}
 				}
@@ -139,6 +161,26 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = RoF_AUS.1001
+	title = "You win if you can see this"
+	picture = GFX_report_event_breitenfeld
+	desc = "Seriously though, tell me if you see this."
+	#fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		diplomatic_relation = {
+			country = BOH
+			relation = military_access
+			active = no
+		}
+	}
+	option = {
+		name = "Go make a bug report"
+	}
+}
 #Wallenstein declares Bohemian independence
 country_event = {
 	id = RoF_AUS.101

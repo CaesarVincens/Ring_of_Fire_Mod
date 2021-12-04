@@ -4,27 +4,18 @@
 # Political advisors
 every_possible_country = {
 	limit = {
-		#NOT = {
-		#	OR = {
-		#		
-		#	}
-		#}
-		# avoid generic advisors in temporary countries
 		is_dynamic_country = no
-		NOT = {
-			has_allowed_idea_with_traits = { idea = radical_minister characters = yes }
-			has_allowed_idea_with_traits = {
-				
-			}
-		}
+		#NOT = {
+			#has_allowed_idea_with_traits = { idea = radical_minister characters = yes }
+		#}
 	}
 	generate_character = {
 		token_base = generic_radical_advisor # token will be TAG_token_base
 		advisor = {
 			slot = political_advisor
 			traits = { radical_minister }
-			available = {
-
+			allowed = {
+				original_tag = PREV
 			}
 			ai_will_do = {
 				factor = 0
@@ -38,11 +29,6 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		#NOT = {
-		#	OR = {
-		#		
-		#	}
-		#}
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = liberal_minister characters = yes }
@@ -53,8 +39,8 @@ every_possible_country = {
 		advisor = {
 			slot = political_advisor
 			traits = { liberal_minister }
-			available = {
-
+			allowed = {
+				original_tag = PREV
 			}
 			ai_will_do = {
 				factor = 0
@@ -68,11 +54,6 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		#NOT = {
-		#	OR = {
-		#		
-		#	}
-		#}
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = neutrality_minister characters = yes }
@@ -83,8 +64,8 @@ every_possible_country = {
 		advisor = {
 			slot = political_advisor
 			traits = { neutrality_minister }
-			available = {
-
+			allowed = {
+				original_tag = PREV
 			}
 			ai_will_do = {
 				factor = 0
@@ -98,11 +79,6 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		#NOT = {
-		#	OR = {
-		#		
-		#	}
-		#}
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = absolutist_minister characters = yes }
@@ -113,8 +89,8 @@ every_possible_country = {
 		advisor = {
 			slot = political_advisor
 			traits = { absolutist_minister }
-			available = {
-			
+			allowed = {
+				original_tag = PREV
 			}
 			ai_will_do = {
 				factor = 0
@@ -128,11 +104,6 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		#NOT = {
-		#	OR = {
-		#		
-		#	}
-		#}
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = constitutionalist_minister characters = yes }
@@ -143,8 +114,8 @@ every_possible_country = {
 		advisor = {
 			slot = political_advisor
 			traits = { constitutionalist_minister }
-			available = {
-			
+			allowed = {
+				original_tag = PREV
 			}
 			ai_will_do = {
 				factor = 0
@@ -172,6 +143,9 @@ every_possible_country = {
 			available = {
 				has_intelligence_agency = yes
 			}
+			allowed = {
+				original_tag = PREV
+			}
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -188,13 +162,6 @@ every_possible_country = {
 
 # Military advisors
 every_possible_country = {
-	limit = {
-		#NOT = {
-		#	OR = {
-		#		
-		#	}
-		#}
-	}
 	# generic political advisors
 	generate_character = {
 		token_base = generic_ambassador # token will be TAG_token_base

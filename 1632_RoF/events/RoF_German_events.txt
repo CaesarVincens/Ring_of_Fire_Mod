@@ -15,15 +15,20 @@ country_event = {
 		name = RoF_German.50.a
 		ai_chance = { base = 1 }
 		set_country_flag = hired_holk
-		random_other_country = {
-			limit = {
-				has_country_flag = hired_holk
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					has_character = GER_heinrich_holk
+				}
+				set_nationality = {
+					target_country = PREV
+					character = GER_heinrich_holk
+				}
+				clr_country_flag = hired_holk
+				delete_unit_template_and_units = {
+					division_template = "Holk's Horse"
+				}
 			}
-			set_nationality = {
-				target_country = PREV
-				character = GER_heinrich_holk
-			}
-			clr_country_flag = hired_holk
 		}
 		custom_effect_tooltip = holks_horse_tt
 		hidden_effect = {

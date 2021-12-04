@@ -1609,7 +1609,7 @@ country_event = {
 			promote_leader = yes
 			country_leader = {
 				ideology = constitutional_republic
-				expire = "1660.1.1.1"
+				expire = "1660.1.1"
 			}
 		}
 		add_country_leader_role = {
@@ -1617,7 +1617,7 @@ country_event = {
 			promote_leader = yes
 			country_leader = {
 				ideology = liberal_republic
-				expire = "1660.1.1.1"
+				expire = "1660.1.1"
 			}
 		}
 		add_country_leader_role = {
@@ -1625,7 +1625,7 @@ country_event = {
 			promote_leader = yes
 			country_leader = {
 				ideology = republican_neutral
-				expire = "1660.1.1.1"
+				expire = "1660.1.1"
 			}
 		}
 	}
@@ -1650,7 +1650,7 @@ country_event = {
 			promote_leader = yes
 			country_leader = {
 				ideology = constitutional_republic
-				expire = "1660.1.1.1"
+				expire = "1660.1.1"
 			}
 		}
 		add_country_leader_role = {
@@ -1658,7 +1658,7 @@ country_event = {
 			promote_leader = yes
 			country_leader = {
 				ideology = liberal_republic
-				expire = "1660.1.1.1"
+				expire = "1660.1.1"
 			}
 		}
 		add_country_leader_role = {
@@ -1666,7 +1666,7 @@ country_event = {
 			promote_leader = yes
 			country_leader = {
 				ideology = republican_neutral
-				expire = "1660.1.1.1"
+				expire = "1660.1.1"
 			}
 		}
 	}

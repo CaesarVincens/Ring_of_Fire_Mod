@@ -9,7 +9,7 @@ characters = {
 		country_leader = {
 			#desc = "POLITICS_EISE_BOUMEESTER_DESC"
 			ideology = constitutional_republic
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 	}
 	UPS_maarten_tromp = {
@@ -26,6 +26,9 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 1
 			coordination_skill = 1
+			visible = {
+				
+			}
 		}
 	}
 }

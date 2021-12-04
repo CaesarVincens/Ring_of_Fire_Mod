@@ -443,7 +443,7 @@ country_event = {
 					country_leader = {
 						#desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
 						ideology = lib_constitutional_monarchy
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 			}
@@ -499,21 +499,21 @@ country_event = {
 					promote_leader = yes
 					country_leader = {
 						ideology = dictatorship
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 				add_country_leader_role = {
 					promote_leader = yes
 					country_leader = {
 						ideology = constitutional_republic
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 				add_country_leader_role = {
 					promote_leader = yes
 					country_leader = {
 						ideology = dictatorship_neutral
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 			}
@@ -567,21 +567,21 @@ country_event = {
 					promote_leader = yes
 					country_leader = {
 						ideology = dictatorship
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 				add_country_leader_role = {
 					promote_leader = yes
 					country_leader = {
 						ideology = constitutional_republic
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 				add_country_leader_role = {
 					promote_leader = yes
 					country_leader = {
 						ideology = dictatorship_neutral
-						expire = "1660.1.1.1"
+						expire = "1660.1.1"
 					}
 				}
 			}

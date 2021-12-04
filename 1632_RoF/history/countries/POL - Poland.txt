@@ -67,6 +67,8 @@ recruit_character = POL_krzysztof_radziwill
 recruit_character = POL_lukasz_opalinski_elder
 recruit_character = POL_jakub_zadzik
 recruit_character = POL_jerzy_ossolinski
+activate_advisor = POL_lukasz_opalinski_elder
+activate_advisor = POL_jakub_zadzik
 add_ideas = {
 	balanced_eco
 	freedom_of_religion
@@ -74,8 +76,8 @@ add_ideas = {
 	POL_eastern_serfdom_1
 	POL_powerful_magnates
 	POL_grain_exports
-	POL_lukasz_opalinski_elder
-	POL_jakub_zadzik
+	#POL_lukasz_opalinski_elder
+	#POL_jakub_zadzik
 }
 
 add_timed_idea = {

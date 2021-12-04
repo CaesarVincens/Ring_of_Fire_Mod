@@ -374,30 +374,7 @@ ideas = {
 			removal_cost = -1
 		}
 	}
-	
-	political_advisor = {
-		RUS_filaret = {
-			allowed = {
-				original_tag = RUS
-			}
-			visible = {
-				NOT = {
-					has_country_flag = filaret_gone
-				}
-			}
-			traits = {
-				filaret_trait
-			}
-			picture = filaret_pic
-			removal_cost = -1
-			allowed_to_remove = {
-				has_country_flag = filaret_gone
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
+
 	tank_manufacturer = { 
 		designer = yes
 		

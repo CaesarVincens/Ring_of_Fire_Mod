@@ -156,7 +156,7 @@ idea_categories = {
 	air_force_spirit = {
 		type = air_spirit
 
-		cost = 75
+		cost = 50
 		removal_cost = -1
 		
 		politics_tab = no

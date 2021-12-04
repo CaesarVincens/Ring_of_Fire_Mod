@@ -144,6 +144,27 @@ POL_sejm = {
 			}
 		}
 	}
+	POL_appease_sejm_mission = {
+		days_mission_timeout = 70
+		is_good = no
+		timeout_effect = {
+			POL_sejm_small_opposition = yes
+		}
+		selectable_mission = yes
+		cost = 30
+		activation = {
+			NOT = { has_country_flag = POL_abolished_sejm }
+			check_variable = { sejm_support > 80 }
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = POL_abolished_sejm
+					check_variable = { sejm_support < 60 }
+				}
+			}
+		}
+	}
 	POL_small_lobby_effort = {
 		icon = generic_political_discourse
 		available = {
