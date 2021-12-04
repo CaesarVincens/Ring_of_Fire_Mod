@@ -1,8 +1,10 @@
 DEN_canon_focuses = {
 	name = "Denmark Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = DEN
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -32,8 +34,10 @@ DEN_canon_focuses = {
 ostend_prep_den = {
 	name = "Baltic Prep"
 	desc = "don't die immediately"
-	enable = {
+	allowed = {	
 		original_tag = DEN
+	}
+	enable = {
 		OR = {
 			is_in_faction_with = FRA
 			has_completed_focus = DEN_ostend_league
@@ -52,8 +56,10 @@ ostend_prep_den = {
 ostend_war = {
 	name = "Baltic War"
 	desc = "The Kalmar Union will Rise again"
-	enable = {
+	allowed = {	
 		original_tag = DEN
+	}
+	enable = {
 		has_war_with = NUS
 		has_war_with = SWE
 	}

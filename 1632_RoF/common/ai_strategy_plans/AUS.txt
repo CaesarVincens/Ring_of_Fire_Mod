@@ -1,8 +1,10 @@
 AUS_canon_focuses = {
 	name = "Austria Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = AUS
+	}
+	enable = {
 		OR = {
 			AND = {
 				has_game_rule = {
@@ -47,8 +49,10 @@ AUS_canon_focuses = {
 AUS_alternate_focuses = {
 	name = "Austria HRE Plan"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = AUS
+	}
+	enable = {
 		OR = {
 			has_game_rule = {
 				rule = AUS_ai_behavior
@@ -87,9 +91,10 @@ AUS_alternate_focuses = {
 AUS_dont_kill_SAX = {
 	name = "Saxony will fight soon enough"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = AUS
-		#has_wargoal_against = SAX
+	}
+	enable = {
 		SAX = {
 			is_in_faction = no
 		}
@@ -121,8 +126,10 @@ AUS_dont_kill_SAX = {
 AUS_Thirty_Years_War = {
 	name = "Focus on Germany"
 	desc = "War with Sweden"
+	allowed = {	
+		original_tag = AUS
+	}
 	enable = {
-		tag = AUS
 		has_global_flag = thirty_years_war_ongoing
 	}
 	abort = {
@@ -164,8 +171,10 @@ AUS_Thirty_Years_War = {
 AUS_TYR_friendship = {
 	name = "Tyrol is part of Austria"
 	desc = "Be friends"
+	allowed = {	
+		original_tag = TYR
+	}
 	enable = {
-		tag = TYR
 		country_exists = AUS
 	}
 	abort = {
@@ -181,8 +190,10 @@ AUS_TYR_friendship = {
 TYR_AUS_friendship = {
 	name = "Tyrol is part of Austria"
 	desc = "Be friends"
+	allowed = {	
+		original_tag = AUS
+	}
 	enable = {
-		tag = AUS
 		country_exists = TYR
 	}
 	abort = {

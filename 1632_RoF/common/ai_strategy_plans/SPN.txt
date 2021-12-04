@@ -1,8 +1,10 @@
 ﻿SPN_canon_focuses = {
 	name = "Spanish Netherlands Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = SPN
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -18,6 +20,9 @@
 SPN_neutrality = {
 	name = "Spanish Netherlands Alone"
 	desc = ""
+	allowed = {
+		original_tag = SPN
+	}
 	enable = {
 		original_tag = SPN
 	}

@@ -1,8 +1,10 @@
 ﻿POL_canon_focuses = {
 	name = "Poland Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = POL
+	}
+	enable = {
 		OR = {
 			AND = {
 				has_game_rule = {
@@ -49,8 +51,10 @@
 POL_ignore_Kurland = {
 	name = "Ignore Kurland"
 	desc = "They aren't in the war"
-	enable = {
+	allowed = {
 		original_tag = POL
+	}
+	enable = {
 		has_war_with = SWE
 	}
 	abort = {
