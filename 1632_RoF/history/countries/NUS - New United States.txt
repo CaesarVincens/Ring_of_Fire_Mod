@@ -30,6 +30,7 @@ set_variable = { var = representatives_total value = 435 }
 set_variable = { var = quorum_low value = 39 }
 set_variable = { var = quorum_medium value = 49 }
 set_variable = { var = quorum_high value = 58 }
+set_variable = { var = NUS_up_time_resources_count value = 50 }
 
 # Research Bonuses
 set_convoys = 0
@@ -58,6 +59,7 @@ add_ideas = {
 	volunteer_army
 	early_industrial
 	free_trade
+	NUS_grantville_national_library_free
 }
 set_stability = 0.5
 recruit_character = NUS_michael_stearns
