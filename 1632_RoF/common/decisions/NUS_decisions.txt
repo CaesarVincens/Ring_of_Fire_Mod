@@ -348,7 +348,7 @@ NUS_major_decisions = {
 
 NUS_advanced_projects_decisions = {
 	NUS_manufacture_up_time_firearms = {
-		icon = GFX_decision_ger_military_buildup # temp, find/make icon of a modern rifle (?)
+		icon = GFX_decision_generic_assassination
 		visible = {
 			always = yes # should always be visible to NUS original tag; already set up by category allowance
 		}
@@ -389,7 +389,7 @@ NUS_advanced_projects_decisions = {
 		}
 	}
 	NUS_retrofit_civilian_automobiles = {
-		icon = GFX_decision_ger_military_buildup # temp, find/make icon of a modern car (?)
+		icon = GFX_decision_generic_tank
 		visible = {
 			always = yes # should always be visible to NUS original tag; already set up by category allowance
 		}
@@ -430,7 +430,7 @@ NUS_advanced_projects_decisions = {
 		}
 	}
 	NUS_donate_up_time_machinery_to_universities = {
-		icon = GFX_decision_ger_military_buildup # temp, find/make icon of a modern engine (?)
+		icon = GFX_decision_generic_wreckers
 		visible = {
 			always = yes # should always be visible to NUS original tag; already set up by category allowance
 		}
@@ -457,7 +457,7 @@ NUS_advanced_projects_decisions = {
 		}
 	}
 	NUS_aqualator_computing = { # one-time only, should NOT re-enable!
-		icon = GFX_decision_ger_military_buildup # temp, find/make icon of water or a computer (?)
+		icon = GFX_decision_aqualator
 		visible = {
 			always = yes # should always be visible to NUS original tag; already set up by category allowance
 		}
@@ -488,12 +488,12 @@ NUS_advanced_projects_decisions = {
 
 NUS_minor_decisions = {
 	NUS_grantville_national_library_access = {	# Policy on public access to the Grantville National Library. Open = research buffs but encryption debuffs. Restricted = research debuffs but encryption buffs. (Work out precise balance after playtesting!)
-		icon = GFX_decision_SOV_place_hq #temp, find/make icon of a book (?)
+		icon = GFX_decision_SOV_place_hq 
 		visible = {
 			always = yes # should always be visible to NUS original tag; already set up by category allowance
 		}
 		available = {
-			always = yes # temp, change to checking if Grantville is actively controlled
+			controls_province = 9497 # check if Grantville is actively controlled
 		}
 		days_re_enable = 30 # can change library access once a month (May need to rebalance to a longer wait time)
 		complete_effect = {
