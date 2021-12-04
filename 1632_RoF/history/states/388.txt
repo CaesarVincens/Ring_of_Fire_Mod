@@ -1,9 +1,8 @@
+state = {
+	id = 388
+	name = "STATE_388"
 
-state={
-	id=388
-	name="STATE_388"
-
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			71 3 
@@ -19,10 +18,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		8 57 60 70 71 95 110 117 152 172 187 194 320 2999 3072 3089 3101 3110 3140 3142 3163 3321 6035 6086 6095 6131 6154 6169 6197 6225 9060 9082 9098 9107 9111 9153 9164 9177 9184 9190 9197 9212 9234 9319 9333 11032 11048 11059 11062 11072 11093 11109 11139 11154 11165 11174 11191 11304 
 	}
-	manpower=824848
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 824848
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

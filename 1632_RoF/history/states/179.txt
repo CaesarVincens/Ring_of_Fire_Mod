@@ -18,7 +18,7 @@ state = {
 		add_core_of = JAP
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1092 1167 1191 4094 4179 4197 7046 7050 7145 7197 7212 9965 9968 10052 10055 11946 11985 11997 12028 
 	}

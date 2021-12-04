@@ -1,13 +1,12 @@
-
-state={
-	id=547
-	name="STATE_547"
-	resources={
-		aluminium=0.000
-		steel=1.000
+state = {
+	id = 547
+	name = "STATE_547"
+	resources = {
+		aluminium = 0.000
+		steel = 1.000
 	}
 
-	history={
+	history = {
 		owner = EGY
 		victory_points = {
 			10097 3 
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		2064 4138 8105 12099 
 	}
-	manpower=84024
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 84024
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
 }

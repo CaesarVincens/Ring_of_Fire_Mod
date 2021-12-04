@@ -1,4 +1,3 @@
-
 state = {
 	id = 306
 	name = "STATE_306"
@@ -21,7 +20,7 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		11544 
 	}

@@ -159,6 +159,8 @@
  rof_pol_sejm_small_support_tt:0 "Up to §Y10 Delegates§! will §Gsupport§! the King."
  rof_pol_sejm_medium_support_tt:0 "Up to §Y20 Delegates§! will §Gsupport§! the King."
  rof_pol_sejm_large_support_tt:0 "Up to §Y60 Delegates§! will §Gsupport§! the King."
+ POL_appease_sejm_mission:0 "Appease the Sejm"
+ POL_appease_sejm_mission_desc:0 "The szlachta delegates of the Sejm are a cantankerous bunch; while a small core will generally support the king, the rest must continually be reassured, flattered, or even bribed to vote for any proposals."
  POL_election_sejm:0 "Election Sejm of [GetYear]"
  POL_election_sejm_desc:0 "The Election Sejm meets upon the event of an interregnum, in this case the death of Sigismund III. The szlachta attendees choose among the candidates for the Polish throne. The chosen candidate must sign the Henrician Articles as well as a Pacta Conventa."
  POL_pacta_conventa:0 "Has signed the Pacta Conventa"

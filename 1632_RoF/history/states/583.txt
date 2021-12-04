@@ -21,7 +21,7 @@ state = {
 		add_core_of = C13
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		905 3906 6732 
 	}

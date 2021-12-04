@@ -60,6 +60,40 @@ characters = {
 			ideology = absolute_monarchy_neutral
 		}
 	}
+	LIT_albrycht_stanislaw_radziwill = {
+		name = "Albrycht Stanisław Radziwiłł"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Lithuania_Albrycht_Stanislaw_Radziwill.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+		}
+	}
+	RUT_jeremi_wisniowiecki = {
+		name = "Jeremi Wiśniowiecki"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+		}
+	}
 	POL_jan_wezyk = {
 		name = "Interrex Jan Wężyk"
 		portraits = {

@@ -2145,6 +2145,7 @@ leader_traits = {
 		type = navy
 		sub_unit_modifiers = {
 
+		}
 		slot = high_command
 		specialist_advisor_trait = air_naval_strike_1
 		expert_advisor_trait = air_naval_strike_2

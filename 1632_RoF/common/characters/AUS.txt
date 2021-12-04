@@ -10,17 +10,17 @@ characters = {
 		country_leader = {
 			ideology = absolute_monarchy
 			traits = { stand_against_ottoman }
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 		country_leader = {
 			ideology = constitutional_monarchy
 			traits = { stand_against_ottoman }
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 		country_leader = {
 			ideology = absolute_monarchy_neutral
 			traits = { stand_against_ottoman }
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 	}
 	AUS_ferdinand_iii_von_habsburg = {
@@ -33,19 +33,19 @@ characters = {
 		}
 		country_leader = {
 			ideology = absolute_monarchy
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 		country_leader = {
 			ideology = lib_constitutional_monarchy
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 		country_leader = {
 			ideology = constitutional_monarchy
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 		country_leader = {
 			ideology = monarchy_neutral
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 	}
 	BOH_albrecht_von_wallenstein = {
@@ -65,7 +65,6 @@ characters = {
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 5
-			legacy_id = 1001
 			visible = {
 				NOT = { has_country_flag = wallenstein_injured }
 				OR = {
@@ -89,7 +88,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
-			legacy_id = 1002
 		}
 	}
 	AUS_johann_tserclaes_von_tilly = {
@@ -106,7 +104,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
-			legacy_id = 1003
 		}
 	}
 	AUS_ottavio_piccolomini = {
@@ -122,7 +119,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 3
-			legacy_id = 1004
 		}
 	}
 	GER_heinrich_holk = {
@@ -139,7 +135,6 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
-			legacy_id = 1002
 			visible = {
 				has_country_flag = hired_holk
 			}

@@ -1,12 +1,11 @@
-
-state={
-	id=396
-	name="STATE_396"
-	resources={
-		chromium=11.000
+state = {
+	id = 396
+	name = "STATE_396"
+	resources = {
+		chromium = 11.000
 	}
 
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			11375 10 
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		256 270 325 368 3245 3261 3282 3303 3347 3349 3361 3383 6135 6215 6231 6295 6299 6307 6327 6358 6362 6370 6392 6403 6410 9033 9159 9257 9259 9267 9280 9291 9298 9325 9358 9360 9368 9389 11134 11239 11252 11275 11340 11375 
 	}
-	manpower=277892
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 277892
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

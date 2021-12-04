@@ -25,7 +25,7 @@ state = {
 		add_core_of = CHI
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1089 4091 7014 10034 10076 11928 12052 12076 
 	}

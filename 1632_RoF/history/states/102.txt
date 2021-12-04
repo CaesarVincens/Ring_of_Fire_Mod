@@ -22,7 +22,7 @@ state = {
 		add_core_of = DAR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1960 5060 8052 8103 10739
 	}

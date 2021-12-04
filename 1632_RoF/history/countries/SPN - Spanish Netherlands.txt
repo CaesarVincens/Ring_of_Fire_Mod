@@ -36,12 +36,5 @@ set_country_flag = religion_catholic
 add_ideas = {
 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Isabella Clara Eugenia von Habsburg"
-    desc = "POLITICS_JUAN_HEREDIA_DESC"
-    picture = "gfx/leaders/SPN/Portrait_Spanish_Netherlands_Isabella_Clara_Eugenia.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
+recruit_character = SPN_isabella_clara_eugenia_von_habsburg
+recruit_character = SPN_fernando_von_habsburg

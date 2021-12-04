@@ -502,6 +502,16 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 		}
 	}
 }
+DIPLOMACY_WAR_ENABLE_TRIGGER = {
+	#POL Sejm
+	if = {
+		limit = {
+			tag = POL
+			NOT = { has_country_flag = POL_abolished_sejm }
+		}
+		sejm_high_support_trigger = yes
+	}
+}
 DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 	if = {
 		limit = {

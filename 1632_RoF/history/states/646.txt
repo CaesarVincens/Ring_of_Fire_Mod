@@ -23,7 +23,7 @@ state = {
 		add_core_of = OIR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1778 2028 2053 2099 5076 5100 7971 12596 12820 
 	}

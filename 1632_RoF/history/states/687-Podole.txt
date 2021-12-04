@@ -1,6 +1,6 @@
-state={
-	id=687
-	name="STATE_687"
+state = {
+	id = 687
+	name = "STATE_687"
 
 	history = {
 		owner = POL
@@ -17,7 +17,7 @@ state={
 		}
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		462 3430 3457 3562 6429 
 	}

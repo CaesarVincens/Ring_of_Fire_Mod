@@ -23,7 +23,7 @@ state = {
 		add_core_of = SIA
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1296 1315 1385 1403 4275 4408 7295 10217 12125 12238 12292 
 	}

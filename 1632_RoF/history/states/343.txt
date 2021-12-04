@@ -1,9 +1,8 @@
+state = {
+	id = 343
+	name = "STATE_343"
 
-state={
-	id=343
-	name="STATE_343"
-
-	history={
+	history = {
 		owner = POL
 		victory_points = {
 			362 10
@@ -25,10 +24,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		334 362 389 3324 3380 6402 9263 11245 
 	}
-	manpower=599000
-	buildings_max_level_factor=1.000
-	state_category=large_city
+	manpower = 599000
+	buildings_max_level_factor = 1.000
+	state_category = large_city
 }

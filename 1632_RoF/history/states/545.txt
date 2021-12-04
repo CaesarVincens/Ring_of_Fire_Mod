@@ -1,4 +1,3 @@
-
 state = {
 	id = 545
 	name = "STATE_545"
@@ -22,7 +21,7 @@ state = {
 
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1112 1155 4073 4161 9947 10002 10099 11922 11979 12049 12073 
 	}

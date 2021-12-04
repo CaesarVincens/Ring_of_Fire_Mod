@@ -21,7 +21,7 @@ state = {
 		add_core_of = AMD
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1405 7060 7119 
 	}

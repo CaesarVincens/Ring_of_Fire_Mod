@@ -24,7 +24,7 @@ state = {
 		add_core_of = PAR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		3773 6790 11726 
 	}

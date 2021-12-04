@@ -23,7 +23,7 @@ state = {
 		add_core_of = BUK
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		7519 12248 12314 12653 
 	}

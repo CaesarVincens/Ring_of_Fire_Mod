@@ -23,7 +23,7 @@ state = {
 		add_core_of = ATJ
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1460 1648 4446 4652 7658 7673 8360 10509 10522 12488 
 	}

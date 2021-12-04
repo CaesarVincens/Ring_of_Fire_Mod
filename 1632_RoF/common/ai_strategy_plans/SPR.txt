@@ -22,6 +22,38 @@ SPR_protect_POR = {
 		id = "POR"
 		value = 100
 	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = POR
+		target = military_access
+		value = 50
+	}
+}
+
+POR_diplo_SPR = {
+	name = "SPR is our Union"
+	desc = "name"
+	
+	enable = {
+		original_tag = POR
+	}
+	abort = {
+		OR = {
+			has_war_with = SPR
+			NOT = { has_idea = POR_iberian_union }
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SPR"
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "SPR"
+		value = 50
+	}
 }
 
 SPR_dont_invade_SWE = {

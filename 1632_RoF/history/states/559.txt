@@ -1,4 +1,3 @@
-
 state = {
 	id = 559
 	name = "STATE_559"
@@ -23,7 +22,7 @@ state = {
 		add_core_of = VOC
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		7381 12249 
 	}

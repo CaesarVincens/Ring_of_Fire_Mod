@@ -1,13 +1,12 @@
-
-state={
-	id=393
-	name="STATE_393"
-	resources={
-		aluminium=43.000
-		chromium=60.000
+state = {
+	id = 393
+	name = "STATE_393"
+	resources = {
+		aluminium = 43.000
+		chromium = 60.000
 	}
 
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			12187 3 
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		31 88 123 146 189 272 278 305 359 370 381 390 1336 1365 1754 3027 3127 3139 3264 3270 3294 3363 4298 4314 4326 4356 4802 4874 6025 6162 6217 6274 6278 6288 6297 7318 7346 7359 7824 7898 9283 9293 10216 10551 10677 11087 11111 11124 11170 11195 11307 11320 11352 11365 12175 12187 12203 12244 12393 12527 12558 12587 12659 
 	}
-	manpower=322520
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 322520
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

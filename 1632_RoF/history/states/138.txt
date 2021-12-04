@@ -1,12 +1,11 @@
-
-state={
-	id=138
-	name="STATE_138"
-	resources={
-		aluminium=2.000
+state = {
+	id = 138
+	name = "STATE_138"
+	resources = {
+		aluminium = 2.000
 	}
 
-	history={
+	history = {
 		owner = FRA
 		victory_points = {
 			3546 3 
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		680 3533 3546 3560 6531 6545 9505 
 	}
-	manpower=576400
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 576400
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

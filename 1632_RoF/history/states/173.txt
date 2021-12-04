@@ -1,12 +1,11 @@
-
-state={
-	id=173
-	name="STATE_173"
-	resources={
-		oil=0.000
+state = {
+	id = 173
+	name = "STATE_173"
+	resources = {
+		oil = 0.000
 	}
 
-	history={
+	history = {
 		owner = AUS
 		victory_points = {
 			686 9 
@@ -23,10 +22,11 @@ state={
 		#add_claim_by = TUR
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		686 701 3670 3683 3716 6672 6720 9692 11627 
 	}
-	manpower=962408
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 962408
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

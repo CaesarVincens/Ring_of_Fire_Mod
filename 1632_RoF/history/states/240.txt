@@ -21,7 +21,7 @@ state = {
 		add_core_of = LOR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		521 1346 11488 11516 11642 
 	}

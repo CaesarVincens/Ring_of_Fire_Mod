@@ -9,7 +9,7 @@ characters = {
 		country_leader = {
 			#desc = "POLITICS_ISABELLA_VON_HABSBURG_DESC"
 			ideology = absolute_monarchy
-			expire = "1660.1.1.1"
+			expire = "1660.1.1"
 		}
 	}
 	SPN_fernando_von_habsburg = {

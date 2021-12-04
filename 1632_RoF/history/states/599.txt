@@ -22,7 +22,7 @@ state = {
 		add_core_of = NSP
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		10842 10886 13085 
 	}

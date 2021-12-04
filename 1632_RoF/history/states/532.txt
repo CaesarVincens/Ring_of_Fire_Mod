@@ -1,12 +1,11 @@
-
-state={
-	id=532
-	name="STATE_532"
-	resources={
-		oil=4.000
+state = {
+	id = 532
+	name = "STATE_532"
+	resources = {
+		oil = 4.000
 	}
 
-	history={
+	history = {
 		owner = CRI
 		victory_points = {
 			11437 3 
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		568 588 721 737 767 3421 3573 3767 6420 6445 6474 6493 6596 6771 6776 9571 9712 9729 11700 
 	}
-	manpower=336000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 336000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

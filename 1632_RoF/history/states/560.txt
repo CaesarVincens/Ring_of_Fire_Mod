@@ -20,7 +20,7 @@ state = {
 		add_core_of = VOC
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1298 1339 1355 4301 4358 7321 10175 10219 12151 
 	}

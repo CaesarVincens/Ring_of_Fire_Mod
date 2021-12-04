@@ -133,8 +133,7 @@ POL_sejm = {
 	allowed = {
 		original_tag = POL
 	}
-
-	scripted_gui = pol_sejm_decision_ui	
+	scripted_gui = pol_sejm_decision_ui
 
 	priority = 85
 }

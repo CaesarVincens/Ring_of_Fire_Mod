@@ -1,9 +1,8 @@
+state = {
+	id = 697
+	name = "STATE_697"
 
-state={
-	id=697
-	name="STATE_697"
-
-	history={
+	history = {
 		owner = POL
 		add_core_of = RUT
 		#force_disable_resistance = POL
@@ -20,10 +19,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		409 429 453 472 486 502 574 3399 3403 3449 3466 3479 6423 6451 6530 6597 9419 9433 9463 9479 9573 11405 11422 11437 11452 11461 11546 11561 
 	}
-	manpower=712564
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 712564
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

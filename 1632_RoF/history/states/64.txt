@@ -17,7 +17,7 @@ state = {
 		add_core_of = CAM
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1324 1353 4330 4359 4639 7319 7376 7404 7432 10289 12191 12260 12475 
 	}

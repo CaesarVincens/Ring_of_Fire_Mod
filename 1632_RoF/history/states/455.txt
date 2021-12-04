@@ -23,7 +23,7 @@ state = {
 		add_core_of = SPR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		12100 
 	}
