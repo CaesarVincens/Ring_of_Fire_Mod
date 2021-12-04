@@ -1,4 +1,3 @@
-
 state = {
 	id = 544
 	name = "STATE_544"
@@ -11,18 +10,23 @@ state = {
 		victory_points = {
 			992 3 
 		}
+		victory_points = {
+			4076 10
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
-
+			4076 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = EGY
 
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		992 1071 3996 4076 4145 7011 7091 7164 10005 10073 11964 
 	}

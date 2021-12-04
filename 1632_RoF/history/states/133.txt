@@ -20,7 +20,7 @@ state = {
 		add_core_of = ETH
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		4995 5010 8036 10775 
 	}

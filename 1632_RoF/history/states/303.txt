@@ -22,7 +22,7 @@ state = {
 		add_core_of = NUB
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1914 2088 4918 7925 10743 10784 10795 10851 12800 12806 12862 12887 
 	}

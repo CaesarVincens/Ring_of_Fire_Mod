@@ -17,7 +17,7 @@ state = {
 		add_core_of = KEN
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		8182 12944 
 	}

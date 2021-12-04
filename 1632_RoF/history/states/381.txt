@@ -1,12 +1,11 @@
-
-state={
-	id=381
-	name="STATE_381"
-	resources={
-		steel=127.000
+state = {
+	id = 381
+	name = "STATE_381"
+	resources = {
+		steel = 127.000
 	}
 
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			312 3 
@@ -26,10 +25,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		312 3064 3065 3075 3081 3166 3168 3338 6088 6100 6193 6199 9101 9124 9213 11042 11061 11089 11171 
 	}
-	manpower=130400
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 130400
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

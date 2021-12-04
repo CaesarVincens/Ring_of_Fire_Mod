@@ -16,11 +16,14 @@ state = {
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			3369 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = ENG
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		540 3369 3422 3463 6351 6378 6526 9484 9562 11406 
 	}

@@ -1,12 +1,11 @@
-
-state={
-	id=51
-	name="STATE_51"
-	resources={
-		oil=18.000
+state = {
+	id = 51
+	name = "STATE_51"
+	resources = {
+		oil = 18.000
 	}
 
-	history={
+	history = {
 		owner = BRU
 		victory_points = {
 			1335 8 
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1208 1230 1304 1306 1335 2117 2222 4216 4279 4282 4338 4396 7358 7371 7387 7443 8091 10143 10199 10212 10240 10269 10285 12129 12171 12186 12228 12283 12905 
 	}
-	manpower=252400
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 252400
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

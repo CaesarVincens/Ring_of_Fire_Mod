@@ -21,7 +21,7 @@ state = {
 		add_core_of = SPU
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		5152 5184 5219 7550 10975 10985 12942 12970 
 	}

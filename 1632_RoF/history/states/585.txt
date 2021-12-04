@@ -22,7 +22,7 @@ state = {
 		add_core_of = BRZ
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		5220 10874 12853 12933 12999 
 	}

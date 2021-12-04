@@ -22,7 +22,7 @@ state = {
 		add_core_of = PRK
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1291 1364 1376 4310 4384 4412 7342 10297 12144 12215 
 	}

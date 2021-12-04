@@ -20,7 +20,7 @@ state = {
 		add_core_of = MAN
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		855 1322 1742 1755 1820 12446 
 	}

@@ -1,12 +1,11 @@
-
-state={
-	id=270
-	name="STATE_270"
-	resources={
-		steel=2.000
+state = {
+	id = 270
+	name = "STATE_270"
+	resources = {
+		steel = 2.000
 	}
 
-	history={
+	history = {
 		owner = MAR
 		victory_points = {
 			4108 8 
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1102 4108 4139 7069 10023 10107 11943 
 	}
-	manpower=413200
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 413200
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

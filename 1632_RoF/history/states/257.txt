@@ -22,7 +22,7 @@ state = {
 		add_core_of = MAD
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1381 1409 4327 4416 7265 7288 7402 10246 12247 
 	}

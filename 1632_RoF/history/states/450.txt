@@ -25,7 +25,7 @@ state = {
 		add_core_of = NAP
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		819 851 923 955 3901 3958 3968 6972 9826 9856 9990 10027 11846 12066 12098 
 	}

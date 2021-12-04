@@ -1,12 +1,11 @@
-
-state={
-	id=573
-	name="STATE_573"
-	resources={
-		oil=2.000
+state = {
+	id = 573
+	name = "STATE_573"
+	resources = {
+		oil = 2.000
 	}
 
-	history={
+	history = {
 		owner = AUS
 		victory_points = {
 			11432 3 
@@ -39,10 +38,11 @@ state={
 		set_state_flag = german_state_flag
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		424 3418 3585 6470 11432 
 	}
-	manpower=216000
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 216000
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

@@ -1,12 +1,11 @@
-
-state={
-	id=108
-	name="STATE_108"
-	resources={
-		steel=2.000
+state = {
+	id = 108
+	name = "STATE_108"
+	resources = {
+		steel = 2.000
 	}
 
-	history={
+	history = {
 		owner = DEN
 		victory_points = {
 			9279 3 
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		3307 3386 6120 6345 6412 9279 9300 9362 11160 11215 11327 11376 
 	}
-	manpower=155064
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 155064
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

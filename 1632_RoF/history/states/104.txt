@@ -1,15 +1,14 @@
-
-state={
-	id=104
-	name="STATE_104"
-	resources={
-		aluminium=6.000
-		chromium=0.000
-		steel=12.000
-		tungsten=20.000
+state = {
+	id = 104
+	name = "STATE_104"
+	resources = {
+		aluminium = 6.000
+		chromium = 0.000
+		steel = 12.000
+		tungsten = 20.000
 	}
 
-	history={
+	history = {
 		owner = DEN
 		victory_points = {
 			3096 1
@@ -25,11 +24,12 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		21 102 107 115 188 3018 3022 3093 3096 3098 3126 3180 3183 6038 6041 6116 6118 6173 6187 6204 9069 9127 9132 9139 9208 9216 11100 11118 11173 
 	}
-	manpower=35260
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 35260
+	buildings_max_level_factor = 1.000
+	state_category = rural
 	impassable = yes
 }

@@ -20,7 +20,7 @@ state = {
 		add_core_of = MAR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		4022 5046 7203 12857 
 	}

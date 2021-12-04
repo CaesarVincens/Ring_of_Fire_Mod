@@ -1,4 +1,3 @@
-
 state = {
 	id = 120
 	name = "STATE_120"
@@ -19,7 +18,7 @@ state = {
 		add_core_of = IRE
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		276 337 385 3217 3242 3329 3379 11257 11303 
 	}

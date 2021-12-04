@@ -21,7 +21,7 @@ state = {
 		add_core_of = YAR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1483 2058 4316 4467 4923 10408 10530 12370 12581 
 	}

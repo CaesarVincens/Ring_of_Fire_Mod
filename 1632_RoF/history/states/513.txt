@@ -23,7 +23,7 @@ state = {
 		add_core_of = TUR
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		7193 11984 
 	}

@@ -1,12 +1,11 @@
-
-state={
-	id=21
-	name="STATE_21"
-	resources={
-		aluminium=22.000
+state = {
+	id = 21
+	name = "STATE_21"
+	resources = {
+		aluminium = 22.000
 	}
 
-	history={
+	history = {
 		owner = TYR
 		victory_points = {
 			6631 3
@@ -26,10 +25,11 @@ state={
 		set_state_flag = german_state_flag
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		656 671 673 6675 6678 9630 9633 9636 11615 11618 11634 
 	}
-	manpower=371200
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 371200
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

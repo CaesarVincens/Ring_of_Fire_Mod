@@ -22,7 +22,7 @@ state = {
 		add_core_of = GOL
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1228 4237 4321 7090 7297 7340 10001 10255 11978 12462 
 	}

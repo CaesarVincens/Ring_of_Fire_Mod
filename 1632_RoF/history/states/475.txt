@@ -1,12 +1,11 @@
-
-state={
-	id=475
-	name="STATE_475"
-	resources={
-		aluminium=21.000
+state = {
+	id = 475
+	name = "STATE_475"
+	resources = {
+		aluminium = 21.000
 	}
 
-	history={
+	history = {
 		owner = SWI
 		victory_points = {
 			9620 8 
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		3612 6666 6683 9587 9618 9620 9622 9638 11590 13124 
 	}
-	manpower=670960
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 670960
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

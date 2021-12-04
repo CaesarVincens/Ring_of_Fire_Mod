@@ -22,7 +22,7 @@ state = {
 		add_core_of = KEL
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1412 5032 7244 7391 7395 8100 10190 10208 
 	}

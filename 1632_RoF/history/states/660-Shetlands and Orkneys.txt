@@ -23,7 +23,7 @@ state = {
 		add_core_of = SCO
 
 	}
-	local_supplies=0.0
+	local_supplies = 0.0
 	provinces = {
 		6196 13237 
 	}

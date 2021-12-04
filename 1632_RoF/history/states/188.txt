@@ -22,7 +22,7 @@ state = {
 		add_core_of = JOH
 	}
 
-	local_supplies=0.0
+	local_supplies = 5.0
 	provinces = {
 		1348 1392 4355 4367 4424 7329 7399 10227 10313 12199 12255 12271 12299 
 	}
