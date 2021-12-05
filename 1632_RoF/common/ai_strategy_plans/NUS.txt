@@ -1,9 +1,10 @@
 NUS_ironclad_research_plan = {
 	name = "Research Iron and Timberclad"
 	desc = "Get those OP ships"
-	
-	enable = {
+	allowed = {
 		original_tag = NUS
+	}
+	enable = {
 		has_completed_focus = NUS_ironclads_focus
 	}
 	abort = {
@@ -20,8 +21,10 @@ NUS_ironclad_research_plan = {
 NUS_canon_focus_list = {
 	name = "New US/USE Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = NUS
+	}
+	enable = {
 		OR = {
 			AND = {
 				has_game_rule = {
@@ -97,8 +100,10 @@ NUS_canon_focus_list = {
 NUS_radical_focus_list = {
 	name = "New US/USE Radical Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = NUS
+	}
+	enable = {
 		OR = {
 			has_game_rule = {
 				rule = NUS_ai_behavior
@@ -170,8 +175,10 @@ NUS_radical_focus_list = {
 NUS_absolutist_focus_list = {
 	name = "New US/USE Absolutist Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = NUS
+	}
+	enable = {
 		OR = {
 			has_game_rule = {
 				rule = NUS_ai_behavior
@@ -241,8 +248,10 @@ NUS_absolutist_focus_list = {
 NUS_ally_swe = {
 	name = "Sweden will protect us"
 	desc = "Be friends with GARS"
-	enable = {
+	allowed = {
 		original_tag = NUS
+	}
+	enable = {
 		country_exists = SWE
 		has_completed_focus = NUS_support_sweden
 	}
@@ -272,8 +281,10 @@ NUS_ally_swe = {
 NUS_baltic_relief_strat = {
 	name = "Relieve Lubeck"
 	desc = "Get Ships in Baltic"
-	enable = {
+	allowed = {
 		original_tag = NUS
+	}
+	enable = {
 		has_completed_focus = NUS_force_hamburg
 	}
 	abort = {
@@ -289,9 +300,10 @@ NUS_baltic_relief_strat = {
 NUS_protect_grantville = {
 	name = "Protect Grantville"
 	desc = "Don't worry about Saxony"
-	enable = {
+	allowed = {
 		original_tag = NUS
-		#is_in_faction_with = SAX
+	}
+	enable = {
 		has_war_together_with = SAX
 	}
 	abort = {
@@ -312,9 +324,10 @@ NUS_protect_grantville = {
 NUS_avoid_NED = {
 	name = "Stay out of Lowlands"
 	desc = "How did this happen?"
-	enable = {
+	allowed = {
 		original_tag = NUS
-		#is_in_faction_with = SAX
+	}
+	enable = {
 		has_war_together_with = UPS
 	}
 	abort = {
@@ -330,12 +343,12 @@ NUS_avoid_NED = {
 NUS_avoid_KUR = {
 	name = "Stay out of Kurland"
 	desc = "They aren't fighting"
-	enable = {
+	allowed = {
 		OR = {
 			original_tag = NUS
 			original_tag = SWE
-		}
-		#is_in_faction_with = SAX
+		}	}
+	enable = {
 		has_war_with = POL
 	}
 	abort = {
@@ -359,9 +372,10 @@ NUS_avoid_KUR = {
 NUS_build_engines = {
 	name = "Build Engines"
 	desc = ""
+	allowed = {
+		original_tag = NUS
+	}
 	enable = {
-		tag = NUS
-		#has_war = no
 		has_tech = engine_factory_tech_0
 	}
 
@@ -377,9 +391,10 @@ NUS_build_engines = {
 NUS_air = { #Magdeburg 247
 	name = "Planes"
 	desc = ""
+	allowed = {
+		original_tag = NUS
+	}
 	enable = {
-		tag = NUS
-		#has_war = no
 		has_tech = single_plane_tech_0
 	}
 
@@ -394,13 +409,15 @@ NUS_air = { #Magdeburg 247
 USE_MEVO = {
 	name = "MEVO"
 	desc = "don't leave"
-	enable = {
-		is_in_faction_with = NUS
+	allowed = {
 		OR = {
 			original_tag = AUS
 			original_tag = SWE
 			original_tag = BOH
 		}
+	}
+	enable = {
+		is_in_faction_with = NUS
 	}
 	abort = {
 		NOT = {

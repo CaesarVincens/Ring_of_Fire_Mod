@@ -16,6 +16,9 @@
 # area_priority
 
 TUR_unit_production = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 	}
@@ -127,6 +130,9 @@ TUR_unit_production = {
 }
 
 TUR_industrialize = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 	}
@@ -140,6 +146,9 @@ TUR_industrialize = {
 }
 
 TUR_pp_spend_amount = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 	}
@@ -158,6 +167,9 @@ TUR_pp_spend_amount = {
 }
 
 coup_pp_spend_amount = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 		has_active_mission = TUR_coup_threat
@@ -182,6 +194,9 @@ coup_pp_spend_amount = {
 }
 
 TUR_area_priority = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 	}
@@ -282,6 +297,9 @@ TUR_area_priority = {
 }
 
 TUR_template_design = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 		date < 1633.1.1
@@ -339,6 +357,9 @@ TUR_template_design = {
 }
 
 TUR_template_design = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 		date > 1635.1.1				
@@ -393,6 +414,9 @@ TUR_template_design = {
 }
 
 TUR_save_admiral_pp_for_later = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 		has_war = no
@@ -444,6 +468,9 @@ TUR_ignore_minors = {
 }
 
 TUR_air_force = {
+	allowed = {
+		original_tag = TUR		
+	}
 	enable = {
 		original_tag = TUR
 		num_of_military_factories > 20

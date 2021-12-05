@@ -54,7 +54,7 @@ RUS_asias_okay = {
 	enable = {
 		OR = {
 			num_divisions < 50
-			NOT = { tag = USB }
+			NOT = { tag = RSB }
 		}
 	}
 	abort_when_not_enabled = yes

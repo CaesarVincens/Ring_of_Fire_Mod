@@ -1,8 +1,10 @@
 ﻿ENG_canon_focuses = {
 	name = "England Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = ENG
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -44,22 +46,20 @@
 ostend_war = {
 	name = "Baltic War"
 	desc = "ENG stays home"
+	allowed = {	
+		original_tag = ENG
+	}
 	enable = {
-		OR = {
-			original_tag = ENG
-			#original_tag = SPR
-		}
 		OR = {
 			is_in_faction_with = FRA
 			has_war_with = NUS
 		}
-		#has_war_with = SWE
 	}
 	abort = {
 		NOT = {
 			is_in_faction_with = FRA
 			has_war_with = NUS
-			has_war_with = SWE
+			#has_war_with = SWE
 		}
 	}
 	ai_strategy = {
@@ -112,8 +112,10 @@ ostend_war = {
 ENG_conquer_IRE = {
 	name = "conquer Ireland"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = ENG
+	}
+	enable = {
 		IRE = {
 			exists = yes
 			NOT = { is_subject_of = ENG }

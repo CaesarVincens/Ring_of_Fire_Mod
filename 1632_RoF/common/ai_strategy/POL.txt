@@ -133,6 +133,9 @@
 # }
 
 default_unit_production = {
+	allowed = {
+		original_tag = POL		
+	}
 	enable = {
 		original_tag = POL
 	}
