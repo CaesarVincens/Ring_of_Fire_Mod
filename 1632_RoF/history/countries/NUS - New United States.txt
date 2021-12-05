@@ -59,7 +59,6 @@ add_ideas = {
 	volunteer_army
 	early_industrial
 	free_trade
-	NUS_grantville_national_library_free
 }
 set_stability = 0.5
 recruit_character = NUS_michael_stearns

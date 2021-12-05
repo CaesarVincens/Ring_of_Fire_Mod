@@ -349,8 +349,13 @@ NUS_major_decisions = {
 NUS_advanced_projects_decisions = {
 	NUS_manufacture_up_time_firearms = {
 		icon = GFX_decision_generic_assassination
-		visible = {
-			always = yes # should always be visible to NUS original tag; already set up by category allowance
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
 		}
 		available = { # check if at least 10 factories & at least 5 up-time resources
 			num_of_civilian_factories > 10
@@ -390,8 +395,13 @@ NUS_advanced_projects_decisions = {
 	}
 	NUS_retrofit_civilian_automobiles = {
 		icon = GFX_decision_generic_tank
-		visible = {
-			always = yes # should always be visible to NUS original tag; already set up by category allowance
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
 		}
 		available = { # check if at least 50 factories & at least 5 up-time resources
 			num_of_civilian_factories > 50
@@ -431,8 +441,13 @@ NUS_advanced_projects_decisions = {
 	}
 	NUS_donate_up_time_machinery_to_universities = {
 		icon = GFX_decision_generic_wreckers
-		visible = {
-			always = yes # should always be visible to NUS original tag; already set up by category allowance
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
 		}
 		available = { # check if at least 1 up-time resources
 			check_variable = {
@@ -458,8 +473,13 @@ NUS_advanced_projects_decisions = {
 	}
 	NUS_aqualator_computing = { # one-time only, should NOT re-enable!
 		icon = GFX_decision_aqualator
-		visible = {
-			always = yes # should always be visible to NUS original tag; already set up by category allowance
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
 		}
 		available = { # check if at least 10 factories & at least 5 up-time resources
 			num_of_civilian_factories > 10
@@ -490,7 +510,7 @@ NUS_minor_decisions = {
 	NUS_grantville_national_library_access = {	# Policy on public access to the Grantville National Library. Open = research buffs but encryption debuffs. Restricted = research debuffs but encryption buffs. (Work out precise balance after playtesting!)
 		icon = GFX_decision_SOV_place_hq 
 		visible = {
-			always = yes # should always be visible to NUS original tag; already set up by category allowance
+			has_completed_focus = NUS_grantville_national_library # check if Grantville National Library focus taken
 		}
 		available = {
 			controls_province = 9497 # check if Grantville is actively controlled
