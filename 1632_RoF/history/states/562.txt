@@ -13,6 +13,9 @@ state = {
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			12068 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = VOC
 	}

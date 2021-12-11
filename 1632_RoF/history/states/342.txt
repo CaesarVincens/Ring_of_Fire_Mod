@@ -10,7 +10,7 @@ state = {
 
 	history = {
 		owner = POL
-		victory_points = { 6229 3 }
+		victory_points = { 6296 3 }
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
@@ -23,6 +23,6 @@ state = {
 
 	local_supplies = 5.0
 	provinces = {
-		530 3337 3354 6229 6314 6360 6376 6407 9483 9499 9731 
+		3337 3354 6229 6314 6360 6376 6407 9483 9499 9731 
 	}
 }
