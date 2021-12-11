@@ -4,10 +4,10 @@
 # Political advisors
 every_possible_country = {
 	limit = {
-		is_dynamic_country = no
-		#NOT = {
-			#has_allowed_idea_with_traits = { idea = radical_minister characters = yes }
-		#}
+		#is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = radical_minister characters = yes }
+		}
 	}
 	generate_character = {
 		token_base = generic_radical_advisor # token will be TAG_token_base
@@ -29,7 +29,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		is_dynamic_country = no
+		#is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = liberal_minister characters = yes }
 		}
@@ -54,7 +54,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		is_dynamic_country = no
+		#is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = neutrality_minister characters = yes }
 		}
@@ -79,7 +79,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		is_dynamic_country = no
+		#is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = absolutist_minister characters = yes }
 		}
@@ -104,7 +104,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		is_dynamic_country = no
+		#is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = constitutionalist_minister characters = yes }
 		}

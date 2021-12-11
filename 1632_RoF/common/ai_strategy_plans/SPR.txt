@@ -6,6 +6,7 @@ SPR_protect_POR = {
 		original_tag = SPR
 	}
 	enable = {
+		original_tag = SPR
 		POR = { has_idea = POR_iberian_union }
 	}
 	abort = {
@@ -27,9 +28,9 @@ SPR_protect_POR = {
 	}
 	ai_strategy = {
 		type = diplo_action_desire
-		id = POR
+		id = "POR"
 		target = military_access
-		value = 50
+		value = 100
 	}
 }
 
@@ -41,6 +42,7 @@ POR_diplo_SPR = {
 		original_tag = POR
 	}
 	enable = {
+		original_tag = POR
 		has_idea = POR_iberian_union
 	}
 	abort = {
@@ -53,7 +55,7 @@ POR_diplo_SPR = {
 	ai_strategy = {
 		type = befriend
 		id = "SPR"
-		value = 50
+		value = 100
 	}
 	ai_strategy = {
 		type = support

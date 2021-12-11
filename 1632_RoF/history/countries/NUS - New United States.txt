@@ -69,3 +69,4 @@ recruit_character = NUS_quentin_underwood
 recruit_character = NUS_frank_jackson
 recruit_character = NUS_francisco_nasi
 recruit_character = USE_johann_von_ramsla
+recruit_character = NUS_gretchen_richterin

@@ -1126,9 +1126,7 @@ technologies = {
 
 	force_rotation = {
 		doctrine_name = "TITLE_OPERATIONAL_INTEGRITY"
-		
-		xp_research_type = air
-		
+				
 		xor = { formation_flying air_superiority }	
 
 		# EFFECT ########

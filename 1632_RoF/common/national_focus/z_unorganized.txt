@@ -1,5 +1,5 @@
 focus_tree = {
-	id = wasteland_focus
+	id = unorganized_territory_focus
 	country = {
 		factor = 0
 		modifier = {
@@ -15,5 +15,5 @@ focus_tree = {
 	}
 	default = no
 
-	#no focuses for wasteland "countries"
+	#no focuses for unorganized territory "countries"
 }

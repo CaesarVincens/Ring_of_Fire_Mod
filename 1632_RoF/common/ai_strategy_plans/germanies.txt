@@ -64,9 +64,9 @@ SAX_BRA_stay_out_ostend = {
 			tag = SAX
 			tag = BRA
 		}
-		is_historical_focus_on = yes
 	}
 	enable = {
+		is_historical_focus_on = yes
 		is_in_faction_with = NUS
 	}
 	abort = {

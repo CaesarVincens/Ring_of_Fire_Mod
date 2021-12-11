@@ -13,7 +13,7 @@
  united_provinces_focus:0 "Dutch Focus Tree"
  united_states_russia_focus_tree:0 "Free Russian Focus Tree"
  poland_focus_tree:0 "Polish Focus Tree"
- wasteland_focus:0 "Wasteland Focus Tree"
+ unorganized_territory_focus:0 "Unorganized Territory Focus Tree"
  focus_effect_WIP_TT:0 "Effect WIP"
  become_constitutional_monarchy_TT:0 "§Y[ROOT.GetName]§! will become a constitutional monarchy"
  has_heard_of_RoF_TT:0 "News of §YGrantville§! has reached §Y[Root.GetNameDef]§!"

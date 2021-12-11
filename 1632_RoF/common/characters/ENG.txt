@@ -7,6 +7,9 @@ characters = {
 				large = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
 			}
 		}
+		allowed_civil_war = {
+			has_government = absolutist
+		}
 		country_leader = {
 			ideology = absolute_monarchy
 			traits = { would_be_tyrrant }

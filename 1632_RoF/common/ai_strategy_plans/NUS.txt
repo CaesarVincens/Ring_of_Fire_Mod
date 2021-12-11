@@ -378,8 +378,9 @@ NUS_build_engines = {
 	enable = {
 		has_tech = engine_factory_tech_0
 	}
-
-	abort_when_not_enabled = yes
+	abort = {
+		always = no
+	}
 
 	ai_strategy = {
 		type = building_target
@@ -398,7 +399,9 @@ NUS_air = { #Magdeburg 247
 		has_tech = single_plane_tech_0
 	}
 
-	abort_when_not_enabled = yes
+	abort = {
+		always = no
+	}
 
 	ai_strategy = {
 		type = air_factory_balance

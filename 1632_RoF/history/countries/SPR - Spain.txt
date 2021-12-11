@@ -50,7 +50,10 @@ SPU = {
         autonomous_state = autonomy_rof_auto_province
         freedom_level = 0.5
     }
-
+diplomatic_relation = {
+    country = POR
+    relation = military_access
+}
 set_politics = {
     ruling_party = absolutist
     last_election = "1631.1.1"

@@ -730,7 +730,7 @@ save_admiral_pp_for_later = {
 	}
 }
 
-dont_mess_with_wastelands = { # Reverse strategy
+dont_mess_with_territories = { # Reverse strategy
 	#reversed = yes
 
 	enable = {
@@ -742,7 +742,7 @@ dont_mess_with_wastelands = { # Reverse strategy
 	}
 
 	abort = {
-		has_idea = wasteland
+		has_idea = unorganized_territory_idea
 	}
 
 	ai_strategy = {

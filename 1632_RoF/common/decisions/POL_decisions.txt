@@ -145,7 +145,8 @@ POL_sejm = {
 		}
 	}
 	POL_appease_sejm_mission = {
-		days_mission_timeout = 70
+		icon = generic_political_discourse
+		days_mission_timeout = 105
 		is_good = no
 		timeout_effect = {
 			POL_sejm_small_opposition = yes
@@ -156,11 +157,32 @@ POL_sejm = {
 			NOT = { has_country_flag = POL_abolished_sejm }
 			check_variable = { sejm_support > 80 }
 		}
+		days_re_enable = 35
+		available = {
+			hidden_trigger = {
+				always = yes
+			}
+		}
 		cancel_trigger = {
 			hidden_trigger = {
 				OR = {
 					has_country_flag = POL_abolished_sejm
 					check_variable = { sejm_support < 60 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				check_variable = {
+					days_mission_timeout@POL_appease_sejm_mission > 20
+				}
+			}
+			modifier = {
+				factor = 100
+				check_variable = {
+					days_mission_timeout@POL_appease_sejm_mission < 10
 				}
 			}
 		}
@@ -191,6 +213,10 @@ POL_sejm = {
 			modifier = {
 				sejm_high_support_trigger = yes
 				factor = 0
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0.25
 			}
 		}
 		modifier = {
@@ -227,6 +253,10 @@ POL_sejm = {
 			modifier = {
 				sejm_high_support_trigger = yes
 				factor = 0
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0.25
 			}
 		}
 		days_remove = 45
@@ -413,7 +443,6 @@ POL_sejm = {
 				POL_sejm_medium_support = yes 
 				clr_country_flag = POL_sejm_investment
 			}
-			
 		}
 	}
 	POL_invest_in_state_arms_factory = {
@@ -463,7 +492,6 @@ POL_sejm = {
 				POL_sejm_medium_support = yes 
 				clr_country_flag = POL_sejm_investment
 			}
-			
 		}
 	}
 	POL_invest_in_state_infrastructure = {

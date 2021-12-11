@@ -227,7 +227,7 @@ RoF_CoC_decisions = {
 						has_government = radical
 						has_government = liberal
 						has_country_flag = CoC_present
-						has_idea = wasteland
+						has_idea = unorganized_territory_idea
 					}
 				}
 			}
@@ -259,7 +259,7 @@ RoF_CoC_decisions = {
 							has_government = radical
 							has_government = liberal
 							has_country_flag = CoC_present
-							has_idea = wasteland
+							has_idea = unorganized_territory_idea
 						}
 					}
 					capital_scope = {

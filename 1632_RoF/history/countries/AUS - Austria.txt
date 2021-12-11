@@ -56,6 +56,10 @@ add_relation_modifier = {
 	target = HUN
 	modifier = AUS_dual_monarchy
 }
+diplomatic_relation = {
+	country = TYR
+	relation = military_access
+}
 set_stability = 0.5
 recruit_character = AUS_ferdinand_ii_von_habsburg
 recruit_character = AUS_ferdinand_iii_von_habsburg

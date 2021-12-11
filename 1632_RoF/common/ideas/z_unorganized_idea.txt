@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 	
-		wasteland = {
+		unorganized_territory_idea = {
 			
 			allowed = {
 				always = no

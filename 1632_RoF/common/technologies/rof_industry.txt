@@ -5,6 +5,10 @@ technologies = {
 			building = infrastructure
 			level = 1
 		}
+		enable_building = {
+			building = rail_way
+			level = 1
+		}
 		research_cost = 1
 		allow = { always = no }
 	}
@@ -129,7 +133,7 @@ technologies = {
 	infrastructure_tech_3 = {
 		enable_building = {
 			building = rail_way
-			level = 2
+			level = 3
 		}
 		enable_building = {
 			building = infrastructure
@@ -192,7 +196,7 @@ technologies = {
 	infrastructure_tech_4 = {
 		enable_building = {
 			building = rail_way
-			level = 5
+			level = 6
 		}
 		enable_building = {
 			building = infrastructure
