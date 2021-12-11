@@ -3,9 +3,15 @@ autonomy_state = {
 	
 	is_puppet = yes
 	
+	use_overlord_color = yes
+
 	min_freedom_level = 0.75
 	
+	manpower_influence = 0.7
+	
 	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+
 		can_not_declare_war = yes
 		can_decline_call_to_war = no
 		units_deployed_to_overlord = yes

@@ -234,6 +234,9 @@ equipments = {
 		archetype = firearm_equipment
 		is_buildable = no
 		parent = arquebus_equipment
+		can_be_produced = {
+			always = no
+		}
 		
 		active = no
 		priority = 20

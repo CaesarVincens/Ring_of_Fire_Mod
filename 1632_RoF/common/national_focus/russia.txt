@@ -1359,7 +1359,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_CANON }
 		completion_reward = {
 			country_event = {
-				id = RoF_RUS.99
+				id = RoF_RUS.100
 			}
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = load_new_focus_tree_TT
@@ -1661,7 +1661,7 @@ focus_tree = {
 			owns_state = 389
 		}
 		completion_reward = {
-			set_capital = 389
+			set_capital = { state = 389 }
 			add_political_power = 60
 		}
 		ai_will_do = {

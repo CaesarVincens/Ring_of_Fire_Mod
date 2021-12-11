@@ -1,22 +1,20 @@
+state = {
+	id = 520
+	name = "STATE_520"
 
-state={
-	id=520
-	name="STATE_520"
-
-	history={
+	history = {
 		owner = TUR
-		victory_points = {
-			12376 3 
-		}
 		victory_points = {
 			3653 3
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
-
+			3653 = {
+				naval_base = 1
+			}
 		}
 		#add_core_of = ARM
 		add_core_of = GEO
@@ -25,10 +23,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		772 789 3653 6991 7454 10403 10472 11599 
 	}
-	manpower=933596
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 933596
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

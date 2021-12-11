@@ -1,19 +1,18 @@
-
-state={
-	id=379
-	name="STATE_379"
-	resources={
-		chromium=12.000
-		steel=76.000
+state = {
+	id = 379
+	name = "STATE_379"
+	resources = {
+		chromium = 12.000
+		steel = 76.000
 	}
 
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			3580 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		212 261 288 302 328 356 384 418 457 534 558 580 3225 3291 3306 3318 3346 3376 3409 3492 3520 3554 3580 6254 6304 6330 6355 6386 6411 6477 6481 6517 6543 6565 6577 6603 9260 9328 9355 9384 9411 9449 9489 9518 9542 9552 9556 9566 9579 11214 11242 11244 11283 11310 11337 11368 11396 11439 11500 11526 11553 
 	}
-	manpower=919004
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 919004
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

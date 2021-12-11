@@ -34,30 +34,4 @@ set_country_flag = religion_orthodox
 add_ideas = {
 	balanced_eco
 }
-create_country_leader = {
-    name = "Jeremi Wiśniowiecki"
-    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
-    picture = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Jeremi Wiśniowiecki"
-    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
-    picture = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Jeremi Wiśniowiecki"
-    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
-    picture = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-    }
-}
+recruit_character = RUT_jeremi_wisniowiecki

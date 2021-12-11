@@ -55,6 +55,20 @@ set_variable = { var = sejm_high value = 180 } # 90%
 POL_recalc_sejm_icon_frames = yes
 
 set_country_flag = religion_catholic
+recruit_character = POL_sigismund_vasa
+recruit_character = POL_wladyslaw_vasa
+recruit_character = POL_john_casimir_vasa
+recruit_character = POL_jan_wezyk
+recruit_character = POL_stanislaw_koniecpolski
+recruit_character = POL_marcin_kazanowski
+recruit_character = POL_mikolaj_potocki
+recruit_character = POL_janusz_kiszka
+recruit_character = POL_krzysztof_radziwill
+recruit_character = POL_lukasz_opalinski_elder
+recruit_character = POL_jakub_zadzik
+recruit_character = POL_jerzy_ossolinski
+activate_advisor = POL_lukasz_opalinski_elder
+activate_advisor = POL_jakub_zadzik
 add_ideas = {
 	balanced_eco
 	freedom_of_religion
@@ -62,9 +76,10 @@ add_ideas = {
 	POL_eastern_serfdom_1
 	POL_powerful_magnates
 	POL_grain_exports
-	POL_lukasz_opalinski_elder
-	POL_jakub_zadzik
+	#POL_lukasz_opalinski_elder
+	#POL_jakub_zadzik
 }
+
 add_timed_idea = {
     idea = POL_treaty_of_stary_targ
     days = 1560
@@ -75,96 +90,3 @@ add_timed_idea = {
 }
 country_event = { id = RoF_POL.50 days = 2 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Sigismund III Vasa"
-    desc = "POLITICS_SIGISMUND_DESC"
-    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
-    expire = "1632.11.1"
-    ideology = absolute_monarchy
-    traits = {
-		swedish_claimant
-    }
-}
-create_country_leader = {
-    name = "Sigismund III Vasa"
-    desc = "POLITICS_SIGISMUND_DESC"
-    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
-    expire = "1632.11.1"
-    ideology = constitutional_monarchy
-    traits = {
-		swedish_claimant
-    }
-}
-create_country_leader = {
-    name = "Sigismund III Vasa"
-    desc = "POLITICS_SIGISMUND_DESC"
-    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
-    expire = "1632.11.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-		swedish_claimant
-    }
-}
-
-create_field_marshal = {
-	name = "Stanisław Koniecpolski"
-    picture = "Portrait_Poland_Stanislas_Koniecpolski.dds"
-	traits = {
-		cavalry_officer
-		brilliant_strategist
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Marcin Kazanowski"
-    picture = "Portrait_Poland_Marcin_Kazanowski.dds"
-	traits = {
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Mikołaj Potocki"
-    picture = "Portrait_Poland_Mikolaj_Potocki.dds"
-	traits = {
-		harsh_leader
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Janusz Kiszka"
-    picture = "Portrait_Poland_Janusz_Kiszka.dds"
-	traits = {
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Krzysztof Radziwiłł"
-    picture = "Portrait_Poland_Krzysztof_Radziwill.dds"
-	traits = {
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}

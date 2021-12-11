@@ -14,7 +14,7 @@ state = {
 		owner = TIB
 		victory_points = { 9966 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = TIB
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		531 1257 1918 1999 2045 2067 4313 4375 4403 4407 4999 5193 7294 7397 7988 8104 9966 10726 10787 10841 10856 10903 12724 12837 
 	}

@@ -1,0 +1,289 @@
+characters = {
+	POL_sigismund_vasa = {
+		name = "Sigismund III Vasa"
+		#desc = "POLITICS_SIGISMUND_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			traits = { swedish_claimant }
+			expire = "1632.11.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			traits = { swedish_claimant }
+			expire = "1632.11.1.1"
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+			traits = { swedish_claimant }
+			expire = "1632.11.1.1"
+		}
+	}
+	POL_wladyslaw_vasa = {
+		name = "Władysław IV Vasa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			traits = { swedish_claimant }
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			traits = { swedish_claimant }
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+			traits = { swedish_claimant }
+		}
+	}
+	POL_john_casimir_vasa = {
+		name = "John II Casimir Vasa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_John_Casimir.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+		}
+	}
+	LIT_albrycht_stanislaw_radziwill = {
+		name = "Albrycht Stanisław Radziwiłł"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Lithuania_Albrycht_Stanislaw_Radziwill.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+		}
+	}
+	RUT_jeremi_wisniowiecki = {
+		name = "Jeremi Wiśniowiecki"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Ruthenia_Jeremi_Wisniowiecki.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+		}
+	}
+	POL_jan_wezyk = {
+		name = "Interrex Jan Wężyk"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POL/Portrait_Poland_Interrex_Jan_Wezyk.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			traits = { interrex }
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			traits = { interrex }
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+			traits = { interrex }
+		}
+	}
+	POL_stanislaw_koniecpolski = {
+		name = "Stanisław Koniecpolski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/Portrait_Poland_Stanislas_Koniecpolski.dds"
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist cavalry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+		}
+	}
+	POL_marcin_kazanowski = {
+		name = "Marcin Kazanowski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/Portrait_Poland_Marcin_Kazanowski.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	POL_mikolaj_potocki = {
+		name = "Mikołaj Potocki"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/Portrait_Poland_Mikolaj_Potocki.dds"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	POL_janusz_kiszka = {
+		name = "Janusz Kiszka"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/Portrait_Poland_Janusz_Kiszka.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	POL_krzysztof_radziwill = {
+		name = "Krzysztof Radziwiłł"
+		portraits = {
+			army = {
+				large = "gfx/leaders/POL/Portrait_Poland_Krzysztof_Radziwill.dds"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	POL_lukasz_opalinski_elder = {
+		advisor = {
+			slot = political_advisor
+			idea_token = POL_lukasz_opalinski_elder
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				grand_marshal POL_king_supporter
+			}
+			available = {
+				if = {
+					limit = {
+						NOT = { has_idea = POL_lukasz_opalinski_elder }
+					}
+					NOT = { has_idea_with_trait = grand_marshal }
+				}
+			}
+		}
+		name = "POL_lukasz_opalinski_elder"
+		portraits = {
+			army = {
+				small = "GFX_idea_POL_lukasz_opalinski_elder"
+			}
+		}
+	}
+	POL_jakub_zadzik = {
+		advisor = {
+			slot = political_advisor
+			idea_token = POL_jakub_zadzik
+			allowed = {
+				original_tag = POL
+			}
+			removal_cost = -1
+			#allowed_to_remove = {
+			#	has_country_flag = POL_promote_detractors
+			#}
+			traits = {
+				grand_chancellor POL_king_opponent
+			}
+			available = {
+				if = {
+					limit = {
+						NOT = { has_idea = POL_jakub_zadzik }
+					}
+					NOT = { has_idea_with_trait = grand_chancellor }
+				}
+			}
+		}
+		name = "POL_jakub_zadzik"
+		portraits = {
+			army = {
+				small = "GFX_idea_POL_jakub_zadzik"
+			}
+		}
+	}
+	POL_jerzy_ossolinski = {
+		advisor = {
+			slot = political_advisor
+			idea_token = POL_jerzy_ossolinski
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				grand_chancellor POL_king_supporter
+			}
+			available = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = POL_jerzy_ossolinski
+						}
+					}
+					NOT = {
+						has_idea_with_trait = grand_chancellor
+					}
+				}
+			}
+		}
+		name = "POL_jerzy_ossolinski"
+		portraits = {
+			army = {
+				small = "GFX_idea_POL_jerzy_ossolinski"
+			}
+		}
+	}
+}

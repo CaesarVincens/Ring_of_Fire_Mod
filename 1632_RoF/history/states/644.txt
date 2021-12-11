@@ -9,7 +9,7 @@ state = {
 		owner = YAR
 		victory_points = { 5062 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -17,6 +17,7 @@ state = {
 		add_core_of = YAR
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1675 4391 4768 5062 12511 
 	}

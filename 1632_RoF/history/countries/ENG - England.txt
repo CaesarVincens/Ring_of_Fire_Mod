@@ -59,33 +59,12 @@ add_ideas = {
 
 set_stability = 0.4
 set_war_support = 0.4
-create_country_leader = {
-    name = "Charles Stuart"
-    desc = "POLITICS_GRAHAM_BROWN_DESC"
-    picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-		would_be_tyrrant
-    }
-}
-
-create_country_leader = {
-    name = "Charles Stuart"
-    desc = "POLITICS_GRAHAM_BROWN_DESC"
-    picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
-
-create_country_leader = {
-    name = "Charles Stuart"
-    desc = "POLITICS_GRAHAM_BROWN_DESC"
-    picture = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
-    expire = "1660.1.1"
-    ideology = monarchy_neutral
-    traits = {
-    }
-}
+recruit_character = ENG_charles_stuart
+recruit_character = ENG_elizabeth_wittelsbach
+recruit_character = ENG_rupert_wittelsbach
+recruit_character = ENG_oliver_cromwell
+recruit_character = SCO_archibald_campbell
+recruit_character = ENG_thomas_wentworth
+recruit_character = ENG_john_hampden
+recruit_character = ENG_richard_boyle
+recruit_character = ENG_william_laud

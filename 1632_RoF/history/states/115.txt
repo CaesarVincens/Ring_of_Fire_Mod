@@ -9,13 +9,14 @@ state = {
 		owner = WAS
 		victory_points = { 4967 8 }
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 		}
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		4967 
 	}

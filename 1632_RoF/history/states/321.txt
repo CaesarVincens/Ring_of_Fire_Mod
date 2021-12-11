@@ -1,18 +1,17 @@
-
-state={
-	id=321
-	name="STATE_321"
-	resources={
-		steel=18.000
+state = {
+	id = 321
+	name = "STATE_321"
+	resources = {
+		steel = 18.000
 	}
 
-	history={
+	history = {
 		owner = PAL
 		victory_points = {
 			6469 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,10 +21,11 @@ state={
 		set_state_flag = german_state_flag
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		3547 9522 
 	}
-	manpower=472400
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 472400
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

@@ -16,7 +16,7 @@ state = {
 		victory_points = { 9392 20 }
 		victory_points = { 3273 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			dockyard = 1
@@ -28,6 +28,7 @@ state = {
 		add_core_of = SCO
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		159 284 3273 3373 6300 6320 6350 6385 6395 9237 9314 9350 9383 9392 11218 11378 
 	}

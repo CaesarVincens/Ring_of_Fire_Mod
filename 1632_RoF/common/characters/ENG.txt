@@ -1,0 +1,200 @@
+characters = {
+	ENG_charles_stuart = {
+		name = "Charles Stuart"
+		#desc = "POLITICS_CHARLES_STUART_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_England_Charles_Stuart.dds"
+			}
+		}
+		allowed_civil_war = {
+			has_government = absolutist
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			traits = { would_be_tyrrant }
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = monarchy_neutral
+			expire = "1660.1.1"
+		}
+	}
+	ENG_elizabeth_wittelsbach = {
+		name = "Elizabeth Wittelsbach"
+		#desc = "POLITICS_ELIZABETH_WITTELSBACH_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+	}
+	ENG_rupert_wittelsbach = {
+		name = "Rupert Wittelsbach"
+		#desc = "POLITICS_RUPERT_WITTELSBACH_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+	}
+	ENG_oliver_cromwell = {
+		name = "Oliver Cromwell"
+		#desc = "POLITICS_OLIVER_CROMWELL_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_republic
+			expire = "1660.1.1"
+		}
+	}
+	SCO_archibald_campbell = {
+		name = "Archibald Campbell"
+		#desc = "POLITICS_ARCHIBALD_CAMPBELL_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+	}
+	SCO_james_stuart = {
+		name = "James Stewart"
+		#desc = "POLITICS_JAMES_STUART_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Scotland_James_Stewart.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
+		}
+	}
+	IRE_owen_roe_oneil = {
+		name = "Owen Roe O'Neil"
+		#desc = "POLITICS_OWEN_ROE_ONEIL_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutional_republic
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = democracy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = republican_neutral
+			expire = "1660.1.1"
+		}
+	}
+	ENG_thomas_wentworth = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ENG_thomas_wentworth
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				has_completed_focus = ENG_cutting_the_cord 
+				NOT = {
+					has_completed_focus = ENG_changing_of_the_guard 
+				}
+			}
+			traits = {
+				silent_workhorse 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		name = "ENG_thomas_wentworth"
+		portraits = {
+			army = {
+				small = "GFX_idea_wentworth_pic"
+			}
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_England_Thomas_Wentworth.dds"
+			}
+		}
+	}
+	ENG_john_hampden = {
+		name = "John Hampden"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_England_John_Hampden.dds"
+			}
+		}
+	}
+	ENG_richard_boyle = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ENG_richard_boyle
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				has_completed_focus = ENG_cutting_the_cord 
+				has_completed_focus = ENG_changing_of_the_guard 
+			}
+			traits = {
+				backroom_backstabber 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		name = "ENG_richard_boyle"
+		portraits = {
+			army = {
+				small = "GFX_idea_boyle_pic"
+			}
+		}
+	}
+	ENG_william_laud = {
+		advisor = {
+			slot = political_advisor
+			idea_token = ENG_william_laud
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ENG_changing_of_the_guard 
+				}
+			}
+			traits = {
+				ideological_crusader 
+			}
+				
+		}
+		name = "ENG_william_laud"
+		portraits = {
+			army = {
+				small = "GFX_idea_laud_pic"
+			}
+		}
+	}
+}

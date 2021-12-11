@@ -1,13 +1,13 @@
-state={
-	id=688
-	name="STATE_688"
+state = {
+	id = 688
+	name = "STATE_688"
 
 	history = {
 		owner = POL
 		add_core_of = POL
 		add_core_of = RUT
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
@@ -17,6 +17,7 @@ state={
 		}
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		476 754 3757 6455 6480 9423 9435 9481 9576 11409 
 	}

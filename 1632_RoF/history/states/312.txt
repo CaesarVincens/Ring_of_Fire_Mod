@@ -13,7 +13,7 @@ state = {
 		owner = OIR
 		victory_points = { 7693 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = OIR
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		4714 4751 4788 4823 4849 7693 7737 7773 7843 10539 10669 12520 12695 
 	}

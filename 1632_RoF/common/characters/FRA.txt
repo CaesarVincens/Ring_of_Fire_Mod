@@ -1,0 +1,59 @@
+characters = {
+	FRA_louis_de_bourbon = {
+		name = "Louis XIII de Bourbon"
+		#desc = "POLITICS_LOUIS_13_BOURBON_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = monarchy_neutral
+			expire = "1660.1.1"
+		}
+	}
+	FRA_vicomte_de_turenne = {
+		name = "Vicomte de Turenne"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_France_Turenne.dds"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	FRA_cardinal_richelieu = {
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_cardinal_richelieu
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				richelieu_trait 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		name = "FRA_cardinal_richelieu"
+		portraits = {
+			army = {
+				small = "GFX_idea_richelieu_pic"
+			}
+		}
+	}
+}

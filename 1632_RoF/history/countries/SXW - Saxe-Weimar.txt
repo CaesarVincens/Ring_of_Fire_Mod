@@ -42,30 +42,5 @@ add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
 reverse_add_opinion_modifier = { target = SWE modifier = SWE_tyw_support }
 
 set_stability = 0.5
-create_country_leader = {
-    name = "Wilhelm Wettin"
-    desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-    picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Wilhelm Wettin"
-    desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-    picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Wilhelm Wettin"
-    desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-    picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
+recruit_character = USE_wilhelm_wettin
+recruit_character = BRG_bernard_wettin

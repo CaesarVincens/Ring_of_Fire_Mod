@@ -52,16 +52,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 			set_country_flag = SPN_don_fernando_arrives
-			create_corps_commander = {
-				name = "Fernando von Habsburg"
-				gfx = "GFX_leader_SPN_Don_Fernando"
-				#traits = {}
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 3
-			}
 			custom_effect_tooltip = SPN_don_fernando.tt
 			hidden_effect = {
 				load_oob = SPN_Don_Fernando_OOB

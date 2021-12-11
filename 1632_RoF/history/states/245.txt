@@ -14,7 +14,7 @@ state = {
 		owner = LXA
 		victory_points = { 12402 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = LXA
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1535 1548 4511 7516 7601 10384 12360 12402 12417 12431 
 	}

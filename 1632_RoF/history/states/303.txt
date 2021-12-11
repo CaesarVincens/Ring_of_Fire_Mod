@@ -14,7 +14,7 @@ state = {
 		owner = NUB
 		victory_points = { 10743 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = NUB
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1914 2088 4918 7925 10743 10784 10795 10851 12800 12806 12862 12887 
 	}

@@ -1,18 +1,17 @@
-
-state={
-	id=610
-	name="STATE_610"
-	resources={
-		oil=15.000
+state = {
+	id = 610
+	name = "STATE_610"
+	resources = {
+		oil = 15.000
 	}
 
-	history={
+	history = {
 		owner = NSP
 		victory_points = {
 			10912 3 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -26,10 +25,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1981 7968 10767 10823 10912 
 	}
-	manpower=145540
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 145540
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

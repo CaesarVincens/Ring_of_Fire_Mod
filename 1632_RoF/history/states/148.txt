@@ -13,7 +13,7 @@ state = {
 		owner = FRA
 		victory_points = { 6613 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -21,6 +21,7 @@ state = {
 		add_core_of = FRA
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		762 764 780 3589 3762 3764 3768 3770 3961 6613 6639 6786 6975 9590 9728 9732 9736 11713 11716 
 	}

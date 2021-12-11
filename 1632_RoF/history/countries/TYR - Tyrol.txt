@@ -39,10 +39,6 @@ diplomatic_relation = {
 	country = AUS
 	relation = non_aggression_pact
 }
-diplomatic_relation = {
-	country = AUS
-	relation = military_access
-}
 set_stability = 0.5
 create_country_leader = {
     name = "Claudia de' Medici"

@@ -13,7 +13,7 @@ state = {
 		owner = CHI
 		victory_points = { 10034 6 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			dockyard = 1
@@ -25,6 +25,7 @@ state = {
 		add_core_of = CHI
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1089 4091 7014 10034 10076 11928 12052 12076 
 	}

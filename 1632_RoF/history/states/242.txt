@@ -9,7 +9,7 @@ state = {
 		owner = LUB
 		victory_points = { 11331 20 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			dockyard = 1
@@ -24,6 +24,7 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		11331 
 	}

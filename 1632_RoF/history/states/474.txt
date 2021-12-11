@@ -12,7 +12,7 @@ state = {
 		owner = SWI
 		victory_points = { 663 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -20,6 +20,7 @@ state = {
 		add_core_of = SWI
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		636 658 661 663 3641 3660 3662 9600 11601 11604 11623 
 	}

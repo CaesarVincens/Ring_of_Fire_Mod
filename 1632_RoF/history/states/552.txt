@@ -9,7 +9,7 @@ state = {
 		owner = TUS
 		victory_points = { 9907 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -17,6 +17,7 @@ state = {
 		add_core_of = TUS
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		910 1616 6875 9750 9879 9907 11833 11889 
 	}

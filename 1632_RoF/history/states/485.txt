@@ -12,7 +12,7 @@ state = {
 		owner = TAN
 		victory_points = { 1419 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -20,6 +20,7 @@ state = {
 		add_core_of = TAN
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1289 1351 1419 7311 7413 10141 10153 10169 10197 
 	}

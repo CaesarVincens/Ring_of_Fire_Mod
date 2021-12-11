@@ -1,0 +1,31 @@
+state = {
+	id = 698
+	name = "STATE_698"
+
+	history = {
+		owner = SWE
+		add_core_of = POL
+		#force_disable_resistance = POL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+			13240 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13240 5 
+		}
+
+	}
+
+	local_supplies = 0.0
+	provinces = {
+		13240
+	}
+	manpower = 12564
+	buildings_max_level_factor = 1.000
+	state_category = enclave
+}

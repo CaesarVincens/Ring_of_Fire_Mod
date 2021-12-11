@@ -1,15 +1,14 @@
+state = {
+	id = 266
+	name = "STATE_266"
 
-state={
-	id=266
-	name="STATE_266"
-
-	history={
+	history = {
 		owner = MDA
 		victory_points = {
 			11686 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -19,10 +18,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		414 565 577 3407 3577 3704 3707 3724 6600 9683 11686 11705 
 	}
-	manpower=656000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 656000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

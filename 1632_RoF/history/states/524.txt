@@ -1,12 +1,11 @@
+state = {
+	id = 524
+	name = "STATE_524"
 
-state={
-	id=524
-	name="STATE_524"
-
-	history={
+	history = {
 		owner = WAS
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
@@ -15,11 +14,12 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 0.0
+	provinces = {
 		1631 2057 4951 4974 5058 8101 10744 10815 10901 12879 
 	}
-	manpower=6016
-	buildings_max_level_factor=1.000
+	manpower = 6016
+	buildings_max_level_factor = 1.000
 	state_category = wasteland
 	impassable = yes
 }

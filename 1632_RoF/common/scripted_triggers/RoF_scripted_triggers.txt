@@ -4,7 +4,7 @@ is_german_state = {
 
 is_german_tag = {
 	OR = {
-		has_country_flag = german_tag_flag
+		#has_country_flag = german_tag_flag
 		tag = ALS
 		tag = ANS
 		tag = BAD

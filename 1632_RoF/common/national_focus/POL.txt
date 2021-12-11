@@ -1349,29 +1349,19 @@ focus_tree = {
 						name = "Sigismund III Vasa"
 					}
 				}
-				retire_country_leader = yes
-				hidden_effect = {
-					retire_ideology_leader = constitutionalist
-					retire_ideology_leader = neutrality
-				}
+				retire_character = POL_sigismund_vasa
 			}
-			create_country_leader = {
-				name = "Władysław IV Vasa"
-				desc = "POLITICS_WLADYSLAW_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+			promote_character = {
+				character = POL_wladyslaw_vasa
 				ideology = absolute_monarchy
 			}
 			hidden_effect = {
-				create_country_leader = {
-					name = "Władysław IV Vasa"
-					desc = "POLITICS_WLADYSLAW_DESC"
-					picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+				promote_character = {
+					character = POL_wladyslaw_vasa
 					ideology = constitutional_monarchy
 				}
-				create_country_leader = {
-					name = "Władysław IV Vasa"
-					desc = "POLITICS_WLADYSLAW_DESC"
-					picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+				promote_character = {
+					character = POL_wladyslaw_vasa
 					ideology = absolute_monarchy_neutral
 				}
 			}
@@ -1400,7 +1390,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = POL_revoke_incompatibilitas
-		}		cancel_if_invalid = no
+		}
+		cancel_if_invalid = no
 		completion_reward = {
 			POL_magnates_down_both_up_5 = yes
 			if = {
@@ -1414,6 +1405,7 @@ focus_tree = {
 				remove_idea = POL_powerful_magnates
 				add_idea = POL_reduced_magnates
 			}
+			POL_end_lifetime_appointments_effect = yes
 		}
 		ai_will_do = {
 			base = 2

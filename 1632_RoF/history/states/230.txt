@@ -1,15 +1,14 @@
+state = {
+	id = 230
+	name = "STATE_230"
 
-state={
-	id=230
-	name="STATE_230"
-
-	history={
+	history = {
 		owner = LAD
 		victory_points = {
 			10821 8 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -19,10 +18,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		2041 2084 4558 5042 7273 8005 10821 12763 
 	}
-	manpower=460000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 460000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

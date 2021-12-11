@@ -1,12 +1,11 @@
-
-state={
-	id=48
-	name="STATE_48"
-	resources={
-		oil=1.000
+state = {
+	id = 48
+	name = "STATE_48"
+	resources = {
+		oil = 1.000
 	}
 
-	history={
+	history = {
 		owner = BRE
 		victory_points = {
 			3326 10
@@ -15,7 +14,7 @@ state={
 			374 3
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -29,10 +28,11 @@ state={
 		set_state_flag = german_state_flag
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		374 3271 3326 6349 
 	}
-	manpower=64416
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 64416
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

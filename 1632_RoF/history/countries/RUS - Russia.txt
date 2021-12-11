@@ -59,7 +59,7 @@ set_popularities = {
 set_country_flag = religion_orthodox
 add_ideas = {
 	#military_focus_eco
-	RUS_filaret
+	#RUS_filaret
 	state_religion_law
 	RUS_eastern_serfdom_1
 	RUS_boyar_cavalry_1
@@ -75,59 +75,9 @@ add_timed_idea = {
 }
 country_event = { id = RoF_RUS.10 days = 325 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Mikhail Romanov"
-    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-		weak_czar
-    }
-}
-
-create_country_leader = {
-    name = "Mikhail Romanov"
-    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-		weak_czar
-    }
-}
-
-create_country_leader = {
-    name = "Mikhail Romanov"
-    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-		weak_czar
-    }
-}
-
-create_corps_commander = {
-	name = "Mikhail Borisovich Shein"
-	picture = "Portrait_Russia_Mikhail_Shein.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	logistics_skill = 2
-	planning_skill = 2
-	id = 1050
-}
-
-create_corps_commander = {
-	name = "Artemi Vasilievich Izmailov"
-	#picture = "Portrait_Russia_Mikhail_Shein.dds"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	logistics_skill = 1
-	planning_skill = 1
-	id = 1051
-}
+recruit_character = RUS_mikhail_romanov
+recruit_character = RUS_fedor_sheremetev
+recruit_character = RUS_mikhail_shein
+recruit_character = RUS_artemi_izmailov
+recruit_character = RUS_filaret
+activate_advisor = RUS_filaret

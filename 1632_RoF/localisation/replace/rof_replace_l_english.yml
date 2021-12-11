@@ -1,2 +1,4 @@
 ﻿l_english:
-  experimental_rockets_desc:0 "Rockets have been used in warfare for centuries, but before the knowledge brought from up-time, they were unwieldy, unreliable weapons. Experimenting with new techniques and materials will improve their usefulness on the battlefield."
+ experimental_rockets_desc:0 "Rockets have been used in warfare for centuries, but before the knowledge brought from up-time, they were unwieldy, unreliable weapons. Experimenting with new techniques and materials will improve their usefulness on the battlefield."
+ FE_HISTORICAL:0 "Canonical AI Focuses"
+ FE_HISTORICAL_TOOLTIP:0 "AI countries will, where applicable, pick §HNational Focuses§! in a canonical order. Select this if you want other countries to follow their canonical paths more closely."

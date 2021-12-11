@@ -1,4 +1,3 @@
-
 state = {
 	id = 259
 	name = "STATE_259"
@@ -12,7 +11,7 @@ state = {
 			708 10 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -24,6 +23,7 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		708 9666 11638 
 	}

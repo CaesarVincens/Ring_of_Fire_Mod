@@ -14,7 +14,7 @@ state = {
 		owner = SIA
 		victory_points = { 12345 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = SIA
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		4566 7312 7338 7353 7544 7559 7572 10398 10411 12173 12345 
 	}

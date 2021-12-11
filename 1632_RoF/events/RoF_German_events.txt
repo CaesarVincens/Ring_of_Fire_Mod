@@ -14,11 +14,21 @@ country_event = {
 	option = {
 		name = RoF_German.50.a
 		ai_chance = { base = 1 }
-		global_every_army_leader = {
-			limit = {
-				has_id = 2001
+		set_country_flag = hired_holk
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					has_character = GER_heinrich_holk
+				}
+				set_nationality = {
+					target_country = PREV
+					character = GER_heinrich_holk
+				}
+				clr_country_flag = hired_holk
+				delete_unit_template_and_units = {
+					division_template = "Holk's Horse"
+				}
 			}
-			set_nationality = ROOT
 		}
 		custom_effect_tooltip = holks_horse_tt
 		hidden_effect = {
@@ -89,6 +99,13 @@ country_event = {
 		delete_unit_template_and_units = {
 			division_template = "Holk's Horse"
 		}
+		hidden_effect = {
+			var:holk_destination = {
+				country_event = {
+					id = RoF_German.50 days = 7
+				}
+			}
+		}
 	}
 	option = {
 		name = RoF_German.51.b
@@ -106,8 +123,9 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		controls_state = 434
 		date > 1633.10.1
+		SXW = { exists = no }
+		controls_state = 434
 	}
 	
 	mean_time_to_happen = {
@@ -134,11 +152,10 @@ country_event = {
 				add_state_claim = 16
 				add_state_claim = 17
 			}
-			random_country = {
-				limit = {
-					owns_state = 434
+			434 = {
+				OWNER = {
+					release = BRG
 				}
-				release = BRG
 			}
 			BRG = {
 				inherit_technology = ROOT
@@ -162,38 +179,22 @@ country_event = {
 				transfer_state = 435
 				transfer_state = 16
 				transfer_state = 17
-				create_country_leader = {
-					name = "Bernard Wettin"
-					desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
-					expire = "1660.1.1"
-					ideology = constitutional_monarchy
-					traits = {
+				SXW = {
+					set_nationality = {
+						target_country = BRG
+						character = BRG_bernard_wettin
 					}
 				}
-				create_country_leader = {
-					name = "Bernard Wettin"
-					desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
-					expire = "1660.1.1"
-					ideology = absolute_monarchy
-					traits = {
-					}
-				}
-				create_country_leader = {
-					name = "Bernard Wettin"
-					desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-					picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
-					expire = "1660.1.1"
-					ideology = monarchy_neutral
-					traits = {
-					}
+				BRG_bernard_wettin = {
+					promote_character = constitutional_monarchy
+					promote_character = absolute_monarchy
+					promote_character = monarchy_neutral
 				}
 				set_politics = {
 					ruling_party = constitutionalist
 					elections_allowed = no
 				}
-				set_capital = 434
+				set_capital = { state = 434 }
 				load_oob = "BRG_OOB"
 				delete_unit_template_and_units = {
 					division_template = "Tercio"

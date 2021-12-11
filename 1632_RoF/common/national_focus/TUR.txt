@@ -180,7 +180,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-
+			has_idea = TUR_husrev_pasha
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		bypass = {
@@ -1623,8 +1623,8 @@ focus_tree = {
 				remove_idea = TUR_safavid_war_1
 				add_idea = TUR_safavid_war_2
 			}
-			create_field_marshal = {
-				name = "Murad IV Osmanoglu"
+			add_field_marshal_role = {
+				character = TUR_murad_osmanoglu
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1

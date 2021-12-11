@@ -12,7 +12,7 @@ state = {
 		owner = JAP
 		victory_points = { 4164 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -20,6 +20,7 @@ state = {
 		add_core_of = JAP
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1020 1025 1158 1183 4027 4102 4164 4198 7110 7178 9950 10011 10020 10092 11925 11949 12006 12032 
 	}

@@ -7,7 +7,7 @@ state = {
 			11114 5
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -16,6 +16,7 @@ state = {
 		add_core_of = SWE
 
 	}
+	local_supplies = 5.0
 	provinces = {
 		69 77 147 3070 3128 3141 6028 6195 9054 9138 9218 11070 11114 
 	}

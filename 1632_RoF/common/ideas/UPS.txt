@@ -24,60 +24,6 @@ ideas = {
 			removal_cost = -1
 		}
 	}
-	political_advisor = {
-		UPS_absolutist_advisor = {
-			allowed = {
-				original_tag = UPS
-			}
-			traits = { absolutist_minister }
-			on_add = {
-				#country_event = conv.political.01
-			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		UPS_democratic_advisor = {
-			allowed = {
-				always = no
-				original_tag = UPS
-			}
-			traits = { liberal_minister }
-			on_add = {
-				#country_event = conv.political.25
-			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		UPS_neutrality_advisor = {
-			allowed = {
-				always = no
-				original_tag = UPS
-			}
-			traits = { neutrality_minister }
-			picture = neutrality_idea
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-	}
 	tank_manufacturer = { 
 		designer = yes
 		

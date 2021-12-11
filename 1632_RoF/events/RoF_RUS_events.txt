@@ -59,10 +59,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_RUS.50.a
-		if = { 
-			limit = { has_idea = RUS_filaret }
-			remove_ideas = RUS_filaret
-		}
+		retire_character = RUS_filaret
 		if = { 
 			limit = { has_idea = RUS_patriarch_filaret }
 			remove_ideas = RUS_patriarch_filaret
@@ -73,191 +70,6 @@ country_event = {
 
 country_event = {
 	id = RoF_RUS.100
-	title = RoF_RUS.100.t
-	picture = GFX_report_event_rus_coa
-	desc = RoF_RUS.100.d
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			USR = {
-				add_state_core = 215
-				add_state_core = 391
-				add_state_core = 393
-				add_state_core = 394
-				add_state_core = 395
-			}
-			SIB = {
-				add_state_core = 398
-				add_state_core = 399
-				add_state_core = 400
-				add_state_core = 401
-				add_state_core = 402
-			}
-			release = USR
-			release = SIB
-			every_owned_state = { add_core_of = USR }
-			set_country_flag = directorate_russia_focus_tree_flag
-			set_country_flag = directorate_russia
-			load_focus_tree = directorate_russia_focus_tree
-			transfer_units_fraction = {
-				target = SIB
-				size = 0.2 # Fallback in case one of the ratios below are not stipulated
-				stockpile_ratio = 0.2
-				army_ratio = 0.2
-				navy_ratio = 0.1
-				air_ratio = 0.0
-				keep_unit_leaders = {
-					
-				}
-				keep_unit_leaders_trigger = {
-					
-				}
-			}
-			transfer_units_fraction = {
-				target = USR
-				size = 0.5 # Fallback in case one of the ratios below are not stipulated
-				stockpile_ratio = 0.5
-				army_ratio = 0.4
-				navy_ratio = 0.0
-				air_ratio = 0.8
-				keep_unit_leaders = {
-					
-				}
-				keep_unit_leaders_trigger = {
-					
-				}
-			}
-			USR = {
-				set_cosmetic_tag = Free_Russia
-				inherit_technology = RUS
-				#load_oob = USR_OOB
-				every_owned_state = { add_core_of = RUS }
-				RUS = { split_equipment_half = yes }
-				set_country_flag = united_states_russia_focus_tree_flag
-				load_focus_tree = united_states_russia_focus_tree
-			}
-			SIB = {
-				inherit_technology = RUS
-				every_owned_state = {
-					add_core_of = RUS
-					add_core_of = USR
-				}
-			}
-			if = {
-				limit = { has_idea = RUS_up_timer_advisor }
-				USR = { add_ideas = RUS_up_timer_advisor }
-				remove_ideas = RUS_up_timer_advisor
-			}
-			if = {
-				limit = { has_idea = RUS_infrastructure }
-				USR = { add_ideas = RUS_infrastructure }
-			}
-			if = {
-				limit = { has_idea = RUS_streltzi_3 }
-				USR = { add_ideas = RUS_streltzi_3 }
-				SIB = { add_ideas = RUS_streltzi_3 }
-			}
-			else_if = {
-				limit = { has_idea = RUS_streltzi_2 }
-				USR = { add_ideas = RUS_streltzi_2 }
-				SIB = { add_ideas = RUS_streltzi_2 }
-			}
-			else_if = {
-				limit = { has_idea = RUS_streltzi_1 }
-				USR = { add_ideas = RUS_streltzi_1 }
-				SIB = { add_ideas = RUS_streltzi_1 }
-			}
-			if = {
-				limit = { has_idea = RUS_boyar_cavalry_3 }
-				USR = { add_ideas = RUS_boyar_cavalry_3 }
-				SIB = { add_ideas = RUS_boyar_cavalry_3 }
-			}
-			else_if = {
-				limit = { has_idea = RUS_boyar_cavalry_2 }
-				USR = { add_ideas = RUS_boyar_cavalry_2 }
-				SIB = { add_ideas = RUS_boyar_cavalry_2 }
-			}
-			else_if = {
-				limit = { has_idea = RUS_boyar_cavalry_1 }
-				USR = { add_ideas = RUS_boyar_cavalry_1 }
-				SIB = { add_ideas = RUS_boyar_cavalry_1 }
-			}
-			#set_cosmetic_tag = Directorate_Russia
-			if = {
-				limit = {
-					NOT = { has_government = absolutist }
-				}
-				add_popularity = {
-					ideology = absolutist
-					popularity = 30
-				}
-				set_politics = {
-					ruling_party = absolutist
-				}
-			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = dictatorship
-			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = dictatorship_neutral
-			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = constitutional_republic
-			}
-			random_unit_leader = {
-				limit = {
-					has_id = 1050
-				}
-				set_nationality = SIB
-			}
-			WAS = {
-				transfer_state = 381
-			}
-			set_cosmetic_tag = Directorate_Russia
-		}
-	}
-	option = {
-		name = RoF_RUS.100.a
-		effect_tooltip = {
-			release = USR
-			release = SIB
-		}
-		USR = { change_tag_from = RUS }
-		ai_chance = {
-			base = 0
-		}
-	}
-	option = {
-		name = RoF_RUS.100.b
-		effect_tooltip = {
-			release = USR
-			release = SIB
-		}
-		ai_chance = {
-			base = 10
-		}
-	}
-	option = {
-		name = RoF_RUS.100.c
-		effect_tooltip = {
-			release = USR
-			release = SIB
-		}
-		SIB = { change_tag_from = RUS }
-		ai_chance = {
-			base = 0
-		}
-	}
-}
-#Flight of the Czar
-
-country_event = {
-	id = RoF_RUS.99
 	title = RoF_RUS.100.t
 	picture = GFX_report_event_rus_coa
 	desc = RoF_RUS.100.d
@@ -307,6 +119,7 @@ country_event = {
 	}
 
 }
+#Flight of the Czar
 
 country_event = {
 	id = RoF_RUS.101
@@ -450,13 +263,10 @@ country_event = {
 				keep_unit_leaders_trigger = {
 				}
 			}
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_id = 1050
-						has_id = 1051
-					}
-				}
+			RUS_mikhail_shein = {
+				set_nationality = RSB
+			}
+			RUS_artemi_izmailov = {
 				set_nationality = RSB
 			}
 		}
@@ -525,6 +335,9 @@ country_event = {
 					RSC = { transfer_state = PREV }
 				}
 				every_owned_state = { add_core_of = RSC }
+				RUS_fedor_sheremetev = {
+					set_nationality = RSC
+				}
 				transfer_units_fraction = {
 					target = RSC
 					size = 0.5 # Fallback in case one of the ratios below are not stipulated
@@ -557,6 +370,9 @@ country_event = {
 				add_core_of = RSA
 				RSA = { transfer_state = PREV }
 			}
+			RUS_mikhail_romanov = {
+				set_nationality = RSA
+			}
 			every_owned_state = { add_core_of = RSA }
 			transfer_units_fraction = {
 				target = RSA
@@ -578,22 +394,18 @@ country_event = {
 			set_variable = { global.RSA_TAG = THIS.id }
 			if = {
 				limit = { owns_state = 215 }
-				set_capital = 215
+				set_capital = { state = 215 }
 				set_victory_points = {
 					province = 291
 					value = 30
 				}
 				else = {
 					random_owned_state = {
-						RSA = { set_capital = PREV }
+						RSA = { set_capital = { state = PREV } }
 					}
 				}
 			}
 			add_ideas = secularism
-			retire_ideology_leader = absolutist
-			retire_ideology_leader = constitutionalist
-			retire_ideology_leader = liberal
-			retire_ideology_leader = neutrality
 			load_focus_tree = {
 				tree = russia_focus_tree
 				keep_completed = no
@@ -622,38 +434,27 @@ country_event = {
 				}
 				set_politics = { ruling_party = constitutionalist }
 			}
-			create_country_leader = {
-				name = "Mikhail Romanov"
-				desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-				ideology = absolute_monarchy
-			}
-			create_country_leader = {
-				name = "Mikhail Romanov"
-				desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-				ideology = constitutional_monarchy
-			}
-			create_country_leader = {
-				name = "Mikhail Romanov"
-				desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-				ideology = lib_constitutional_monarchy
-			}
-			create_country_leader = {
-				name = "Mikhail Romanov"
-				desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-				ideology = monarchy_neutral
+			RUS_mikhail_romanov = {
+				promote_character = absolute_monarchy
+				promote_character = constitutional_monarchy
+				promote_character = absolute_monarchy_neutral
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						#desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
+						ideology = lib_constitutional_monarchy
+						expire = "1660.1.1"
+					}
+				}
 			}
 		}
 		RSB = {
 			if = {
 				limit = { owns_state = 400 }
-				set_capital = 400
+				set_capital = { state = 400 }
 				else = {
 					random_owned_state = {
-						RSB = { set_capital = PREV }
+						RSB = { set_capital = { state = PREV } }
 					}
 				}
 			}
@@ -693,32 +494,37 @@ country_event = {
 				long_name = neutrality_party
 				name = neutrality_party
 			}
-			create_country_leader = {
-				name = "Mikhail Borisovich Shein"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
-				expire = "1660.1.1"
-				ideology = dictatorship
-			}
-			create_country_leader = {
-				name = "Mikhail Borisovich Shein"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_republic
-			}
-			create_country_leader = {
-				name = "Mikhail Borisovich Shein"
-				picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Shein.dds"
-				expire = "1660.1.1"
-				ideology = dictatorship_neutral
+			RUS_mikhail_shein = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_republic
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship_neutral
+						expire = "1660.1.1"
+					}
+				}
 			}
 		}
 		RSC = {
 			if = {
 				limit = { owns_state = 389 }
-				set_capital = 389
+				set_capital = { state = 389 }
 				else = {
 					random_owned_state = {
-						RSC = { set_capital = PREV }
+						RSC = { set_capital = { state = PREV } }
 					}
 				}
 			}
@@ -740,9 +546,6 @@ country_event = {
 			}
 			unlock_national_focus = RUS_fate_of_czar
 			set_country_flag = religion_orthodox
-			retire_ideology_leader = absolutist
-			retire_ideology_leader = constitutionalist
-			retire_ideology_leader = neutrality
 			set_party_name = {
 				ideology = absolutist
 				long_name = absolutist_party
@@ -759,20 +562,28 @@ country_event = {
 				name = neutrality_party
 			}
 			add_state_core = 381
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = dictatorship
-				picture = "gfx/leaders/leader_unknown.dds"
-			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = dictatorship_neutral
-				picture = "gfx/leaders/leader_unknown.dds"
-			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = constitutional_republic
-				picture = "gfx/leaders/leader_unknown.dds"
+			RUS_fedor_sheremetev = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_republic
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship_neutral
+						expire = "1660.1.1"
+					}
+				}
 			}
 		}
 	}
@@ -2111,6 +1922,17 @@ country_event = {
 		}
 		FROM = {
 			every_owned_state = { add_core_of = ROOT }
+			if = {
+				limit = {
+					tag = RSB
+				}
+				RUS_mikhail_shein = {
+					set_nationality = RSA
+				}
+				RUS_artemi_izmailov = {
+					set_nationality = RSA
+				}
+			}
 		}
 		annex_country = {
 			target = FROM

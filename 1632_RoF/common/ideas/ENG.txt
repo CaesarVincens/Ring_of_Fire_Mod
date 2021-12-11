@@ -330,46 +330,6 @@ ideas = {
 			picture = generic_goods_red_bonus			
 		}
 	}
-	political_advisor = {
-		ENG_thomas_wentworth = {
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				has_completed_focus = ENG_cutting_the_cord
-				NOT = { has_completed_focus = ENG_changing_of_the_guard }
-			}
-			traits = { silent_workhorse }
-			picture = wentworth_pic
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		ENG_richard_boyle = {
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				has_completed_focus = ENG_cutting_the_cord
-				has_completed_focus = ENG_changing_of_the_guard
-			}
-			traits = { backroom_backstabber }
-			picture = boyle_pic
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		ENG_william_laud = {
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				NOT = { has_completed_focus = ENG_changing_of_the_guard }				
-			}
-			traits = { ideological_crusader }
-			picture = laud_pic
-		}
-	}
 	tank_manufacturer = { 
 		designer = yes
 		

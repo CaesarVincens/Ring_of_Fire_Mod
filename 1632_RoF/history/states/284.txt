@@ -1,19 +1,18 @@
-
-state={
-	id=284
-	name="STATE_284"
-	resources={
-		steel=7.000
-		tungsten=6.000
+state = {
+	id = 284
+	name = "STATE_284"
+	resources = {
+		steel = 7.000
+		tungsten = 6.000
 	}
 
-	history={
+	history = {
 		owner = MUG
 		victory_points = {
 			10389 5 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		4616 7565 7662 9993 10389 10416 10443 12338 12423 
 	}
-	manpower=15297208
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 15297208
+	buildings_max_level_factor = 1.000
+	state_category = city
 }

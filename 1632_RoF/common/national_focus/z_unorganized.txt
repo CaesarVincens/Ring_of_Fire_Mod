@@ -1,0 +1,19 @@
+focus_tree = {
+	id = unorganized_territory_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = WNA
+				tag = WSA
+				tag = WAF
+				tag = WAS
+				tag = WAU
+			}
+		}
+	}
+	default = no
+
+	#no focuses for unorganized territory "countries"
+}

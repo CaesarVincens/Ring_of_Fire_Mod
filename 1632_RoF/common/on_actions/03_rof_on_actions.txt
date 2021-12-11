@@ -2,18 +2,19 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
-			WNA = {
-				add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
-				send_equipment = {
-					equipment = up_time_weapons
-					amount = 1000
-					target = NUS
-				}
-			}
+			#WNA = {
+			#	add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
+			#	send_equipment = {
+			#		equipment = up_time_weapons
+			#		amount = 1000
+			#		target = NUS
+			#	}
+			#}
 			every_state = { remove_core_of = WSA remove_core_of = WNA remove_core_of = WAS remove_core_of = WAF remove_core_of = WAU }
 			every_country = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
+				country_event = { id = RoF.030 }
 			}
 			random_country = {
 				limit = { is_ai = yes }

@@ -1,4 +1,3 @@
-
 state = {
 	id = 332
 	name = "STATE_332"
@@ -12,7 +11,7 @@ state = {
 			10837 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -22,6 +21,7 @@ state = {
 
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		4553 7969 8093 8125 10523 10837 10922 12704 12818 
 	}

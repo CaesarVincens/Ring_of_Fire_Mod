@@ -10,7 +10,7 @@ state = {
 			11305 3
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -24,6 +24,7 @@ state = {
 		add_core_of = MKL
 		set_state_flag = german_state_flag
 	}
+	local_supplies = 5.0
 	provinces = {
 		9294 9320 11305 
 	}

@@ -29,9 +29,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -120,9 +122,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -152,9 +156,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -182,7 +188,9 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			state = 128
+			highlight_state_targets = {
+				state = 128
+			}
 		}
 		complete_effect = {
 			set_country_flag = NUS_embassy_break_out
@@ -210,9 +218,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -245,9 +255,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -278,7 +290,11 @@ NUS_major_decisions = {
 				}
 			}
 		}
-		highlight_states = { state = 657 }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 657
+			}
+		}
 		on_map_mode = map_and_decisions_view
 		available = {
 			657 = {
@@ -314,7 +330,7 @@ NUS_major_decisions = {
 			owns_state = 247
 		}
 		complete_effect = {
-			set_capital = 247
+			set_capital = { state = 247 }
 			if = {
 				limit = {
 					NOT = { 247 = { is_core_of = NUS } }
@@ -331,19 +347,6 @@ NUS_major_decisions = {
 }
 
 NUS_minor_decisions = {
-	NUS_test = {
-		visible = {
-			#always = no
-		}
-		complete_effect = {
-			BRA = {
-				clr_country_flag = NUS_accept_demand@THIS
-			}
-			BRS = {
-				clr_country_flag = NUS_accept_demand@THIS
-			}
-		}
-	}
 	NUS_CoC_Speech_progress = {
 		icon = GFX_decision_generic_nationalism
 		visible = {
@@ -393,13 +396,15 @@ NUS_minor_decisions = {
 			}
 		}
 		highlight_states = {
-			owner = {
-				is_german_tag = yes
-				#has_variable = CoC_strength
-				has_country_flag = CoC_present
+			highlight_states_trigger = {
+				owner = {
+					is_german_tag = yes
+					#has_variable = CoC_strength
+					has_country_flag = CoC_present
+				}
+				is_capital = yes
+				is_controlled_by = FROM
 			}
-			is_capital = yes
-			is_controlled_by = FROM
 		}
 		days_re_enable = 60
 		complete_effect = {

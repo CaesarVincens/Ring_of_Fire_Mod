@@ -13,7 +13,7 @@ state = {
 		owner = KEL
 		victory_points = { 1412 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = KEL
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1412 5032 7244 7391 7395 8100 10190 10208 
 	}

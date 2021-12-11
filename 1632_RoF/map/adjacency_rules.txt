@@ -9,7 +9,7 @@
 #Name is how you refer to the rule in adjecencies.csv
 
 #Øresund - (Østersøen <-> Kattegat/Skagerak/Nordsøen)
-adjacency_rule
+adjacency_rule =
 {
 	name = "DANISH_BELTS_STRAIT"
 
@@ -49,7 +49,7 @@ adjacency_rule
 }
 
 #Turkish Straits
-adjacency_rule
+adjacency_rule =
 {
 	name = "BOSPHORUS_STRAIT"
 
@@ -88,7 +88,7 @@ adjacency_rule
 	offset = { -2 0 -9 }
 }
 
-adjacency_rule
+adjacency_rule =
 {
 	name = "NEVA_RIVER"
 
@@ -128,7 +128,7 @@ adjacency_rule
 }
 
 #Svir
-adjacency_rule
+adjacency_rule =
 {
 	name = "SVIR_RIVER"
 
@@ -168,7 +168,7 @@ adjacency_rule
 }
 
 #White Sea Canal
-adjacency_rule
+adjacency_rule =
 {
 	name = "WHITE_SEA_CANAL"
 

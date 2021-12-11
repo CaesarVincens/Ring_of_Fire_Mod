@@ -217,4 +217,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 2356;2332;;-1;3358;1758;3319;1745;SVIR_RIVER;Svir
 209;13194;;-1;3352;1842;3335;1817;WHITE_SEA_CANAL;White Sea Canal
 3144;127;river;-1;-1;-1;-1;-1;;Povenets
+13240;11265;river;-1;-1;-1;-1;-1;;Ebling-Pillau
 -1;-1;;-1;-1;-1;-1;-1;-1

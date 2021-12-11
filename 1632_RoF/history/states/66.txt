@@ -14,7 +14,7 @@ state = {
 		owner = CHA
 		victory_points = { 4557 9 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -22,6 +22,7 @@ state = {
 		add_core_of = CHA
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		4557 4883 7619 
 	}

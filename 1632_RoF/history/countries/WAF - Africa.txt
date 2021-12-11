@@ -24,7 +24,7 @@ set_popularities = {
 }
 
 add_ideas = {
-	wasteland
+	unorganized_territory_idea
 }
 set_stability = 0.0
 create_country_leader = {

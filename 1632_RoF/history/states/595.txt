@@ -1,15 +1,14 @@
+state = {
+	id = 595
+	name = "STATE_595"
 
-state={
-	id=595
-	name="STATE_595"
-
-	history={
+	history = {
 		owner = NSP
 		victory_points = {
 			1965 3 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1965 7913 8079 8089 10732 10773 10889 12810 
 	}
-	manpower=1781800
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 1781800
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

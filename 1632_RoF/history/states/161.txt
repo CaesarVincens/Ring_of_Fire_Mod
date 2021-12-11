@@ -9,7 +9,7 @@ state = {
 		owner = GRW
 		victory_points = { 1898 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -17,6 +17,7 @@ state = {
 		add_core_of = GRW
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1898 3989 5157 12708 
 	}

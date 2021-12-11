@@ -75,42 +75,24 @@ set_popularities = {
 }
 
 set_country_flag = religion_islam
+recruit_character = TUR_murad_osmanoglu
+recruit_character = TUR_ibrahim_osmanoglu
+recruit_character = TUR_tabaniyassi_mehmed_pasha
+recruit_character = TUR_hafiz_ahmed_pasha
+recruit_character = TUR_topal_recep_pasha
+recruit_character = TUR_husrev_pasha
+recruit_character = TUR_kosem_sultan
+recruit_character = TUR_ozgur_calisir
+activate_advisor = TUR_husrev_pasha
 add_ideas = {
 	TUR_kosem_sultan
 	TUR_janissaries_1
 	TUR_beylerbeys_1
 	limited_exports
-	TUR_husrev_pasha
+	#TUR_husrev_pasha
 	TUR_self_important_bureaucrats
 	TUR_supreme
 	#emperor_rank
 }
 set_stability = 0.6
 set_war_support = 0.6
-create_country_leader = {
-    name = "Murad IV Osmanoglu"
-    desc = "POLITICS_MURAD_OSMANOGLU_DESC"
-    picture = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Murad IV Osmanoglu"
-    desc = "POLITICS_MURAD_OSMANOGLU_DESC"
-    picture = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Murad IV Osmanoglu"
-    desc = "POLITICS_MURAD_OSMANOGLU_DESC"
-    picture = "gfx/leaders/TUR/Portrait_Ottoman_Murad_IV.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-    }
-}

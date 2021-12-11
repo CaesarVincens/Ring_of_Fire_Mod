@@ -1,15 +1,14 @@
+state = {
+	id = 18
+	name = "STATE_18"
 
-state={
-	id=18
-	name="STATE_18"
-
-	history={
+	history = {
 		owner = TYR
 		victory_points = {
 			673 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -20,10 +19,11 @@ state={
 		set_state_flag = german_state_flag
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		3679 6680 6934 9655 13126 
 	}
-	manpower=421600
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 421600
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

@@ -57,10 +57,10 @@ equipments = {
 			}
 		}
 		
-		module_count_limit = {
-			category = ship_radar
-			count < 2
-		}
+		#module_count_limit = {
+		#	category = ship_radar
+		#	count < 2
+		#}
 		
 		default_modules = {
 			fixed_ship_deck_slot_1 = empty
@@ -86,8 +86,8 @@ equipments = {
 		armor_value = 0
 
 		
-		surface_detection = 20
-		sub_detection = 1
+		surface_detection = 26
+		sub_detection = 5
 		surface_visibility = 30
 		naval_speed = 26
 		reliability = 0.70
@@ -112,6 +112,7 @@ equipments = {
 	}
 
 	ship_hull_carrier_1 = {
+		abbreviation = "haa"
 		year = 1936
 		visual_level = 1
 		visual_tech_level_addition = 2
@@ -119,9 +120,14 @@ equipments = {
 		priority = 1000
 		
 		module_slots = inherit
+
+		default_modules = {
+			fixed_ship_engine_slot = carrier_ship_engine_2
+		}
 	}
 
 	ship_hull_carrier_2 = {
+		abbreviation = "hab"
 		year = 1940
 		visual_level = 1
 		archetype = ship_hull_carrier
@@ -155,6 +161,7 @@ equipments = {
 		default_modules = {
 			front_1_custom_slot = empty
 			mid_1_custom_slot = empty
+			fixed_ship_engine_slot = carrier_ship_engine_3
 		}
 		naval_range = 4000
 		reliability = 0.75
@@ -171,6 +178,7 @@ equipments = {
 	}
 
 	ship_hull_carrier_3 = {
+		abbreviation = "hac"
 		year = 1944
 		visual_level = 1
 		archetype = ship_hull_carrier
@@ -229,6 +237,7 @@ equipments = {
 	}
 
 	ship_hull_carrier_conversion_bb = {
+		abbreviation = "had"
 		year = 1922
 		visual_level = 0
 		archetype = ship_hull_carrier
@@ -259,7 +268,7 @@ equipments = {
 			mid_1_custom_slot = empty
 		}
 		naval_range = 4000
-		
+		reliability = 0.65
 		max_strength = 325
 		naval_speed = 23
 
@@ -273,6 +282,7 @@ equipments = {
 	}
 
 	ship_hull_carrier_conversion_ca = {
+		abbreviation = "hae"
 		year = 1922
 		visual_level = 0
 		archetype = ship_hull_carrier
@@ -302,7 +312,7 @@ equipments = {
 		
 		max_strength = 125
 		
-
+		reliability = 0.65
 		naval_speed = 20
 		build_cost_ic = 2700
 		resources = {

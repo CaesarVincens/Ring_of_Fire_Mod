@@ -1,12 +1,11 @@
+state = {
+	id = 380
+	name = "STATE_380"
 
-state={
-	id=380
-	name="STATE_380"
-
-	history={
+	history = {
 		owner = WAS
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -15,10 +14,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		426 481 683 700 712 728 731 742 745 748 759 775 3413 3417 3443 3464 3587 3726 3746 3748 3774 3777 3779 6417 6468 6490 6503 6527 6701 6702 6730 6748 6750 6753 6765 6794 6796 9415 9426 9442 9459 9474 9581 9688 9705 9707 9720 9722 9726 9739 9742 11400 11403 11416 11447 11566 11632 11661 11678 11690 11693 11694 11696 11724 11727 
 	}
-	manpower=360508
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 360508
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

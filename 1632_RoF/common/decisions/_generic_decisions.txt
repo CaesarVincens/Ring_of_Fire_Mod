@@ -829,7 +829,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 8
+						infrastructure > 4
 					}
 				}
 				random_owned_state = {
@@ -841,7 +841,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 8
+						infrastructure > 4
 					}
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = war_building_slot_flag
@@ -857,7 +857,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 5
+						infrastructure > 3
 					}
 				}
 				random_owned_state = {
@@ -869,7 +869,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 5
+						infrastructure > 3
 					}
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = war_building_slot_flag
@@ -885,7 +885,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 8
+						infrastructure > 4
 					}
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = war_building_slot_flag
@@ -900,7 +900,7 @@ economy_decisions = {
 			}
 			modifier = {
 				any_owned_state = {
-					infrastructure > 5
+					infrastructure > 3
 					free_building_slots = { building = industrial_complex size > 0 include_locked = no }
 				}
 				factor = 0

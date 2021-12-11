@@ -35,6 +35,7 @@ set_country_flag = crown_union_flag
 add_ideas = {
 }
 set_stability = 0.5
+
 create_country_leader = {
     name = "Charles Stuart"
     desc = "POLITICS_DEORSA_MACKENZIE_DESC"

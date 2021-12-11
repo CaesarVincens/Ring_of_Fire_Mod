@@ -1499,14 +1499,15 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				create_country_leader = {
-					name = "John Chandler Simpson"
-					desc = "POLITICS_JOHN_SIMPSON_DESC"
-					picture = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
-					#expire = "1660.1.1"
-					ideology = dictatorship 
-					traits = {
-						grand_fleet_proponent
+				add_country_leader_role = {
+					character = NUS_john_chandler_simpson
+					promote_leader = yes
+					country_leader = {
+						#expire = "1660.1.1"
+						ideology = dictatorship 
+						traits = {
+							grand_fleet_proponent
+						}
 					}
 				}
 			}

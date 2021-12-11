@@ -16,6 +16,9 @@
 # area_priority
 
 SWE_unit_production = {
+	allowed = {
+		original_tag = SWE		
+	}
 	enable = {
 		original_tag = SWE
 	}
@@ -117,6 +120,9 @@ SWE_unit_production = {
 }
 
 SWE_area_priority = {
+	allowed = {
+		original_tag = SWE		
+	}
 	enable = {
 		original_tag = SWE
 	}
@@ -182,6 +188,9 @@ SWE_area_priority = {
 }
 
 SWE_template_design = {
+	allowed = {
+		original_tag = SWE		
+	}
 	enable = {
 		original_tag = SWE
 		date < 1633.1.1
@@ -240,6 +249,9 @@ SWE_template_design = {
 }
 
 SWE_template_design = {
+	allowed = {
+		original_tag = SWE		
+	}
 	enable = {
 		original_tag = SWE
 		date > 1635.1.1

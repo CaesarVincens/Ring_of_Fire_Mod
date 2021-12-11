@@ -1,13 +1,12 @@
+state = {
+	id = 685
+	name = "STATE_685"
 
-state={
-	id=685
-	name="STATE_685"
-
-	history={
+	history = {
 		owner = POL
 		add_core_of = POL
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -19,10 +18,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		290 402 9544 11247 11301 11357 
 	}
-	manpower=251000
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 251000
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

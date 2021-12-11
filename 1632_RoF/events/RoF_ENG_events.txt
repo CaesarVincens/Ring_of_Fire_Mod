@@ -260,18 +260,15 @@ country_event = {
 				long_name = ENG_royalists_long
 				name = ENG_royalists
 			}
-			create_country_leader = {
-				name = "Oliver Cromwell"
-				picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_republic
-			}
+			promote_character = ENG_oliver_cromwell
 		}
-		create_country_leader = {
-			name = "Oliver Cromwell"
-			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-			expire = "1660.1.1"
-			ideology = liberal_republic
+		add_country_leader_role = {
+			character = ENG_oliver_cromwell
+			promote_leader = yes
+			country_leader = {
+				ideology = liberal_republic
+				expire = "1660.1.1"
+			}
 		}
 		ai_chance = {
 			factor = 10
@@ -301,17 +298,17 @@ country_event = {
 				long_name = ENG_royalists
 				name = ENG_royalists
 			}
-			create_country_leader = {
-				name = "Oliver Cromwell"
-				picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-				expire = "1660.1.1"
-				ideology = liberal_republic
+			add_country_leader_role = {
+				character = ENG_oliver_cromwell
+				promote_leader = yes
+				country_leader = {
+					ideology = liberal_republic
+					expire = "1660.1.1"
+				}
 			}
 		}
-		create_country_leader = {
-			name = "Oliver Cromwell"
-			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-			expire = "1660.1.1"
+		promote_character = {
+			character = ENG_oliver_cromwell
 			ideology = constitutional_republic
 		}
 		ai_chance = {
@@ -417,14 +414,7 @@ country_event = {
 					ideology = radical
 					popularity = 0.10
 				}
-				create_country_leader = {
-					name = "Archibald Campbell"
-					picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
-					expire = "1660.1.1"
-					ideology = constitutional_monarchy
-					traits = {
-					}
-				}
+				promote_character = SCO_archibald_campbell
 				set_cosmetic_tag = ENL_civil_war
 			}
 			load_oob = "ENG_Civil_War"
@@ -498,7 +488,7 @@ country_event = {
 	option = { #Support Parliamentarians
 		name = RoF_ENG.149.a
 		hidden_effect = {
-			set_capital = 416
+			set_capital = { state = 416 }
 			start_civil_war = {
 				#ruling_party = constitutionalist
 				ideology = absolutist
@@ -526,14 +516,7 @@ country_event = {
 			set_equipment_fraction = 0.5
 			set_stability = 0.9
 			set_war_support = 0.8
-			create_country_leader = {
-				name = "Archibald Campbell"
-				picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_monarchy
-				traits = {
-				}
-			}
+			promote_character = SCO_archibald_campbell
 			set_politics = {
 				ruling_party = constitutionalist
 			}
@@ -621,14 +604,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		create_country_leader = {
-			name = "Owen Roe O'Neil"
-			picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
-			expire = "1660.1.1"
-			ideology = constitutional_republic
-			traits = {
-			}
-		}
+		promote_character = IRE_owen_roe_oneil
 		set_politics = {
 			ruling_party = constitutionalist
 			election_frequency = 48
@@ -746,7 +722,8 @@ country_event = {
 		if = {
 			limit = {
 				has_country_leader = {
-					name = "Charles Stuart"
+					ruling_only = yes
+					character = ENG_charles_stuart
 				}
 			}
 			SCO = {
@@ -785,14 +762,7 @@ country_event = {
 		set_global_flag = ENG_civil_war_done
 		set_country_flag = ENG_parliamentarians_won
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Oliver Cromwell"
-			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-			expire = "1660.1.1"
-			ideology = constitutional_republic
-			traits = {
-			}
-		}
+		promote_character = ENG_oliver_cromwell
 	}
 
 	option = { #united realm
@@ -825,23 +795,8 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		create_country_leader = {
-			name = "Archibald Campbell"
-			picture = "gfx/leaders/ENG/Portrait_Scotland_Archibald_Campbell.dds"
-			expire = "1660.1.1"
-			ideology = constitutional_republic
-			traits = {
-			}
-		}
-		create_country_leader = {
-			name = "James Stewart"
-			picture = "gfx/leaders/ENG/Portrait_Scotland_James_Stewart.dds"
-			expire = "1660.1.1"
-			ideology = absolute_monarchy
-			traits = {
-			}
-		}
-
+		promote_character = SCO_archibald_campbell
+		promote_character = SCO_james_stuart
 	}
 
 	option = {
@@ -1169,7 +1124,7 @@ country_event = {
 	option = { #Support Parliamentarians
 		name = RoF_ENG.171.a
 		hidden_effect = {
-			set_capital = 416
+			set_capital = { state = 416 }
 			start_civil_war = {
 				#ruling_party = constitutionalist
 				ideology = absolutist
@@ -1254,23 +1209,15 @@ country_event = {
 	option = { #rupert
 		name = RoF_ENG.172.b
 		set_country_flag = ENG_king_rupert
-		create_country_leader = {
-			name = "Rupert Wittelsbach"
-			picture = "gfx/leaders/ENG/Portrait_England_Rupert_Wittelsbach.dds"
-			ideology = constitutional_monarchy
-		}
+		promote_character = ENG_rupert_wittelsbach
 		ai_chance = {
 			factor = 10
 		}
 	}
 	option = { #elizabeth
-		name = RoF_ENG.172.c
+	name = RoF_ENG.172.c
 		set_country_flag = ENG_queen_elizabeth_2
-		create_country_leader = {
-			name = "Elizabeth Wittelsbach"
-			picture = "gfx/leaders/ENG/Portrait_England_Elizabeth_Wittelsbach.dds"
-			ideology = constitutional_monarchy
-		}
+		promote_character = ENG_elizabeth_wittelsbach
 		ai_chance = {
 			factor = 5
 		}
@@ -1325,14 +1272,14 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NOT = { has_country_leader = { name = "Oliver Cromwell" } }
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = ENG_oliver_cromwell
+					}
+				}
 			}
-			create_country_leader = {
-				name = "Oliver Cromwell"
-				picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_republic
-			}
+			promote_character = ENG_oliver_cromwell
 			if = {
 				limit = {
 					has_completed_focus = ENG_value_of_monarchy
@@ -1343,6 +1290,7 @@ country_event = {
 		if = {
 			limit = { has_elections = no }
 			set_politics = {
+				ruling_party = var:current_party_ideology_group
 				elections_allowed = yes
 			}
 		}
@@ -1656,20 +1604,29 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		create_country_leader = {
-			name = "Thomas Wentworth"
-			picture = "gfx/leaders/ENG/Portrait_England_Thomas_Wentworth.dds"
-			ideology = constitutional_republic
+		add_country_leader_role = {
+			character = ENG_thomas_wentworth
+			promote_leader = yes
+			country_leader = {
+				ideology = constitutional_republic
+				expire = "1660.1.1"
+			}
 		}
-		create_country_leader = {
-			name = "Oliver Cromwell"
-			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-			ideology = liberal_republic
+		add_country_leader_role = {
+			character = ENG_oliver_cromwell
+			promote_leader = yes
+			country_leader = {
+				ideology = liberal_republic
+				expire = "1660.1.1"
+			}
 		}
-		create_country_leader = {
-			name = "John Hampden"
-			picture = "gfx/leaders/ENG/Portrait_England_John_Hampden.dds"
-			ideology = republican_neutral
+		add_country_leader_role = {
+			character = ENG_john_hampden
+			promote_leader = yes
+			country_leader = {
+				ideology = republican_neutral
+				expire = "1660.1.1"
+			}
 		}
 	}
 
@@ -1688,20 +1645,29 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		create_country_leader = {
-			name = "Thomas Wentworth"
-			picture = "gfx/leaders/ENG/Portrait_England_Thomas_Wentworth.dds"
-			ideology = constitutional_republic
+		add_country_leader_role = {
+			character = ENG_thomas_wentworth
+			promote_leader = yes
+			country_leader = {
+				ideology = constitutional_republic
+				expire = "1660.1.1"
+			}
 		}
-		create_country_leader = {
-			name = "Oliver Cromwell"
-			picture = "gfx/leaders/ENG/Portrait_England_Oliver_Cromwell.dds"
-			ideology = liberal_republic
+		add_country_leader_role = {
+			character = ENG_oliver_cromwell
+			promote_leader = yes
+			country_leader = {
+				ideology = liberal_republic
+				expire = "1660.1.1"
+			}
 		}
-		create_country_leader = {
-			name = "John Hampden"
-			picture = "gfx/leaders/ENG/Portrait_England_John_Hampden.dds"
-			ideology = republican_neutral
+		add_country_leader_role = {
+			character = ENG_john_hampden
+			promote_leader = yes
+			country_leader = {
+				ideology = republican_neutral
+				expire = "1660.1.1"
+			}
 		}
 	}
 

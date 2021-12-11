@@ -2,6 +2,47 @@
 # Generic are used for countries that are not scripted in.
 generic = {
 	# Ships
+	light_frigate = {
+		prefix = ""
+		generic = { "Light Frigate" }
+		unique = {}
+	}
+	heavy_frigate = {
+		prefix = ""
+		generic = { "Heavy Frigate" }
+		unique = {}
+	}
+	man_of_war = {
+		prefix = ""
+		generic = { "Man o' War" }
+		unique = {}
+	}
+	steam_destroyer = {
+		prefix = ""
+		generic = { "Steam Destroyer" }
+		unique = {}
+	}
+	steam_cruiser = {
+		prefix = ""
+		generic = { "Steam Cruiser" }
+		unique = {}
+	}
+	steam_battleship = {
+		prefix = ""
+		generic = { "Steam Battleship" }
+		unique = {}
+	}
+	timberclad = {
+		prefix = ""
+		generic = { "Timberclad" }
+		unique = {}
+	}
+	ironclad = {
+		prefix = ""
+		generic = { "Ironclad" }
+		unique = {}
+	}
+	#vanilla
 	submarine = {
 		prefix = ""
 		generic = { "Submarine" }
@@ -44,6 +85,25 @@ generic = {
 	}
 	
 	# Land units
+	apc = {
+		prefix = ""
+		generic = { "APC Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	gas_tank = {
+		prefix = ""
+		generic = { "Tank Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	steam_tank = {
+		prefix = ""
+		generic = { "Steam Tank Brigade" }
+		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
+		unique = {}
+	}
+	#vanilla
 	infantry = {
 		prefix = ""
 		generic = { "Infantry Division" }
@@ -175,5 +235,13 @@ generic = {
 		generic = { "Super Heavy Tank Brigade" }
 		generic_pattern = "UNIT_GENERIC_NAME_GENERIC_INFANTRY"
 		unique = {}
+	}
+
+	# Operative code names
+	codename = {
+		prefix = ""
+		generic = { "Agent" }
+		generic_pattern = "OPERATIVE_GENERIC_CODENAME_PATTERN"
+		unique = { "Agent 007" }
 	}
 }
