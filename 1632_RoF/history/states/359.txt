@@ -18,13 +18,12 @@ state = {
 			arms_factory = 1
 			air_base = 0
 		}
-		add_core_of = VIJ
 		add_core_of = AMD
 		add_core_of = BIJ
 	}
 
 	local_supplies = 5.0
 	provinces = {
-		1273 1349 7013 
+		1349 7013 
 	}
 }

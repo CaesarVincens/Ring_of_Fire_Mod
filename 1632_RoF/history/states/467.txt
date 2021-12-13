@@ -8,7 +8,7 @@ state = {
 	history = {
 		owner = SWE
 		victory_points = {
-			3375 3 
+			299 3 
 		}
 		buildings = {
 			infrastructure = 1
@@ -16,7 +16,9 @@ state = {
 			arms_factory = 1
 			dockyard = 1
 			air_base = 0
-
+			299 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SWE
 
@@ -24,7 +26,7 @@ state = {
 
 	local_supplies = 5.0
 	provinces = {
-		211 242 299 329 363 3229 6148 9251 9329 9406 9410 11231 11280 11311 11390 13095 
+		211 242 299 329 363 3229 6148 9251 9329 9406 9410 11231 11280 11311 11390 
 	}
 	manpower = 179200
 	buildings_max_level_factor = 1.000

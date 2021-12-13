@@ -3,22 +3,22 @@ state = {
 	name= "STATE_644"
 	manpower = 56400
 
-	state_category = rural
+	state_category = town
 
 	history = {
-		owner = YAR
-		victory_points = { 5062 3 }
+		owner = SWE
+		victory_points = { 9206 3 }
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
 		}
-		add_core_of = YAR
+		add_core_of = SWE
 	}
 
 	local_supplies = 5.0
 	provinces = {
-		1675 4391 4768 5062 12511 
+		3050 3060 3133 3187 6052 6150 9100 9105 9150 9206 11046 11162 
 	}
 }

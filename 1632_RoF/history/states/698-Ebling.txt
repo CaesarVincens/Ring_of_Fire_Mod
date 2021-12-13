@@ -5,6 +5,7 @@ state = {
 	history = {
 		owner = SWE
 		add_core_of = POL
+		add_core_of = PRU
 		#force_disable_resistance = POL
 		buildings = {
 			infrastructure = 1
@@ -16,9 +17,13 @@ state = {
 			}
 		}
 		victory_points = {
-			13240 5 
+			13240 5
 		}
-
+		set_state_name = "Ebling"
+		set_province_name = {
+			id = 13240
+			name = "Ebling"
+		}
 	}
 
 	local_supplies = 0.0

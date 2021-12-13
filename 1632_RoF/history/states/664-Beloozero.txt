@@ -10,7 +10,9 @@ state = {
 
 		}
 		add_core_of = RUS
-
+		victory_points = {
+			3175 3
+		}
 	}
 
 	local_supplies = 5.0

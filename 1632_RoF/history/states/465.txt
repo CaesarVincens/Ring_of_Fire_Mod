@@ -11,14 +11,22 @@ state = {
 	history = {
 		owner = SWE
 		victory_points = {
-			9088 3 
+			205 3 
 		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
-
+			205 = {
+				naval_base = 1
+			}
+			9108 = {
+				naval_base = 1
+			}
+			11091 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SWE
 
