@@ -346,7 +346,197 @@ NUS_major_decisions = {
 	
 }
 
+NUS_advanced_projects_decisions = {
+	NUS_manufacture_up_time_firearms = {
+		icon = GFX_decision_generic_assassination
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 10 factories & at least 5 up-time resources
+			num_of_civilian_factories > 10
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		days_re_enable = 30 # can manufacture again a month after completion
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_5_up_time_resources_tt # lose 5 up-time resources
+			hidden_effect = {
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 5
+				}
+			}
+			add_timed_idea = { # add timed idea: 5% consumer goods use for 90 days
+				idea = NUS_firearms_project_consumer_goods
+				days = 90
+			}
+		}
+		days_remove = 90 # takes 90 days for the project to finish
+		remove_effect = { 
+			add_equipment_to_stockpile = { # add 500 up-time rifles
+				type = up_time_weapons
+				amount = 500
+				producer = NUS
+			}
+			add_tech_bonus = { # one-time 50% research bonus to infantry weapons
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	NUS_retrofit_civilian_automobiles = {
+		icon = GFX_decision_generic_tank
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 50 factories & at least 5 up-time resources
+			num_of_civilian_factories > 50
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		days_re_enable = 30 # can retrofit again a month after completion
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_5_up_time_resources_tt # lose 5 up-time resources
+			hidden_effect = {
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 5
+				}
+			}
+			add_timed_idea = { # add timed idea: 5% consumer goods use for 360 days
+				idea = NUS_automobiles_project_consumer_goods
+				days = 360
+			}
+		}
+		days_remove = 360 # takes a year for the project to finish
+		remove_effect = {
+			add_equipment_to_stockpile = { # add 100 APCs
+				type = motorized_equipment
+				amount = 100
+				producer = NUS
+			}
+			add_tech_bonus = { # one-time 50% research bonus to APC tech, may want to switch to a different category like steam tank (?)
+				bonus = 0.5
+				uses = 1
+				category = apc_tech
+			}
+		}
+	}
+	NUS_donate_up_time_machinery_to_universities = {
+		icon = GFX_decision_generic_wreckers
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 1 up-time resources
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		days_re_enable = 30 # can retrofit again a month after completion
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_1_up_time_resources_tt # lose 1 up time resources
+			hidden_effect = {
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 1
+				}
+			}
+			add_timed_idea = { # add timed idea: 5% research bonus for 180 days
+				idea = NUS_donate_machinery_research_bonus
+				days = 180
+			}
+		}
+	}
+	NUS_aqualator_computing = { # one-time only, should NOT re-enable!
+		icon = GFX_decision_aqualator
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 10 factories & at least 5 up-time resources
+			num_of_civilian_factories > 10
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_5_up_time_resources_tt # lose 5 up time resources
+			hidden_effect = { 
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 5
+				}
+			}
+		}
+		days_remove = 360
+		remove_effect = {
+			# add permanent idea: 5% research bonus
+			add_ideas = { NUS_aqualator_computing_research_bonus }
+		}
+	}
+}
+
 NUS_minor_decisions = {
+	NUS_grantville_national_library_access = {	# Policy on public access to the Grantville National Library. Open = research buffs but encryption debuffs. Restricted = research debuffs but encryption buffs. (Work out precise balance after playtesting!)
+		icon = GFX_decision_SOV_place_hq 
+		visible = {
+			has_completed_focus = NUS_grantville_national_library # check if Grantville National Library focus taken
+		}
+		available = {
+			controls_province = 9497 # check if Grantville is actively controlled
+		}
+		days_re_enable = 30 # can change library access once a month (May need to rebalance to a longer wait time)
+		complete_effect = {
+			if = {	# swap free --> restricted
+				limit = {
+					has_idea = NUS_grantville_national_library_free
+				}
+				swap_ideas = {
+					remove_idea = NUS_grantville_national_library_free
+					add_idea = NUS_grantville_national_library_restricted
+				}
+			}
+			else_if = { # swap restricted --> free
+				limit = {
+					has_idea = NUS_grantville_national_library_restricted
+				}
+				swap_ideas = {
+					remove_idea = NUS_grantville_national_library_restricted
+					add_idea = NUS_grantville_national_library_free
+				}
+			}
+		}
+	}
 	NUS_CoC_Speech_progress = {
 		icon = GFX_decision_generic_nationalism
 		visible = {

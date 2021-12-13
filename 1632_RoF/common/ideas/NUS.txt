@@ -184,15 +184,36 @@ ideas = {
 			removal_cost = -1
 			picture = generic_production_bonus
 		}
-		Grantville_National_Library = {
+		#Grantville_National_Library = {
+		#	allowed = {
+		#		always = no
+		#	}
+		#	modifier = {
+		#		research_speed_factor = 0.05
+		#	}
+		#	removal_cost = -1
+		#	picture = generic_research_bonus
+		#}
+		NUS_grantville_national_library_free = {
 			allowed = {
 				always = no
 			}
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.075
+				encryption_factor = -0.05
 			}
 			removal_cost = -1
-			picture = generic_research_bonus
+			picture = generic_research_bonus #temp
+		}
+		NUS_grantville_national_library_restricted = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.025
+			}
+			removal_cost = -1
+			picture = generic_research_bonus #temp
 		}
 		#army ideas
 		NUS_down_timer_army = {
@@ -216,6 +237,46 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = generic_infantry_bonus
+		}
+		NUS_firearms_project_consumer_goods = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			removal_cost = -1
+			picture = generic_infantry_equipment_manufacturer_3
+		}
+		NUS_automobiles_project_consumer_goods = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			removal_cost = -1
+			picture = generic_industrial_concern_1
+		}
+		NUS_donate_machinery_research_bonus = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			removal_cost = -1
+			picture = generic_research_bonus #temp
+		}
+		NUS_aqualator_computing_research_bonus = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			removal_cost = -1
+			picture = generic_research_bonus #temp
 		}
 	}
 	

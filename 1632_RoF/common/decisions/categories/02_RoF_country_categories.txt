@@ -16,6 +16,15 @@ NUS_major_decisions = {
 	}
 }
 
+NUS_advanced_projects_decisions = {
+	icon = generic_political_actions 
+	priority = 90
+
+	allowed = {
+		original_tag = NUS
+	}
+}
+
 NUS_minor_decisions = {
 	icon = generic_political_actions
 	priority = 10

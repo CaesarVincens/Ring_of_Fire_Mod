@@ -414,7 +414,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = Grantville_National_Library
+			#add_ideas = Grantville_National_Library
+			add_ideas = NUS_grantville_national_library_free
+			custom_effect_tooltip = NUS_national_library_public_access_policy_available_tt
 		}
 
 	}
@@ -683,6 +685,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = NUS_advanced_projects_available_tt
 		}
 		completion_reward = {
 			add_ideas = NUS_gearing_down_1
@@ -723,6 +726,7 @@ focus_tree = {
 				}
 				set_state_flag = NUS_gearing_down_state
 			}
+			custom_effect_tooltip = NUS_advanced_projects_available_tt
 		}
 		ai_will_do = {
 			factor = 18

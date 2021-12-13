@@ -15,5 +15,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_category_pol_sejm_ui.dds"
 		noOfFrames = 21
 	}
-	
+
+	spriteType = {
+		name = "GFX_decision_aqualator"
+		texturefile = "gfx/interface/decisions/decision_aqualator.dds"
+	}	
 }
