@@ -212,7 +212,7 @@ NUS_absolutist_focus_list = {
 		NUS_encourage_reinvention #1632 july 18 35
 		#NUS_establish_CPoE #1632 august 22 35
 		#NUS_alte_veste #1632 september 26 35
-		NUS_seize_Franconia
+		NUS_seize_franconia
 		NUS_secure_elbe
 		NUS_promote_radio #1632 october 31 35
 		NUS_brownwater_navy #1632 december 5 35
@@ -289,6 +289,11 @@ NUS_baltic_relief_strat = {
 	}
 	abort = {
 		has_completed_focus = NUS_relieve_lubeck
+	}
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = "MISSION_PATROL"
+		value = -9000
 	}
 	ai_strategy = {
 		type = area_priority

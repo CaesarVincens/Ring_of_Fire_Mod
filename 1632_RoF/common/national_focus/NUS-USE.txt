@@ -290,9 +290,9 @@ focus_tree = {
 				}
 				has_completed_focus = NUS_secure_elbe
 				else = {
-					custom_trigger_tooltip = {
-						tooltip = NUS_baltic_war.tt
-						OR = { has_war_with = DEN has_war_with = FRA }
+					OR = {
+						has_war_with = DEN
+						has_war_with = FRA
 					}
 				}
 			}
@@ -373,6 +373,7 @@ focus_tree = {
 				}
 				ships_in_area = { area = 9 size > 4 }
 			}
+			242 = { is_owned_by_ROOT_or_ally = yes }
 			has_war_with = DEN
 		}
 		search_filters = { FOCUS_FILTER_CANON FOCUS_FILTER_BALTIC_WAR }
@@ -552,9 +553,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = NUS_first_flight
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = NUS_baltic_war.tt
-				OR = { has_war_with = DEN has_war_with = FRA }
+			OR = {
+				has_war_with = DEN
+				has_war_with = FRA
 			}
 		}
 		bypass = {
@@ -894,10 +895,6 @@ focus_tree = {
 		y = 1
 		cost = 5
 		relative_position_id = NUS_uptime_techniques
-		available_if_capitulated = yes
-		available = {
-
-		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
 			if = {
@@ -1442,7 +1439,7 @@ focus_tree = {
 				has_country_flag = NUS_conscript_refugees_flag
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 		bypass = {
 			has_country_flag = NUS_conscript_refugees_flag
 		}
@@ -1539,9 +1536,20 @@ focus_tree = {
 				has_completed_focus = NUS_martial_law
 				has_idea = NUS_absolutist_constitution
 			}
-			strength_ratio = {
-				tag = SXW
-				ratio > 1
+			if = {
+				limit = {
+					SXW = {
+						owns_state = 579
+						owns_state = 580
+					}
+				}
+				strength_ratio = {
+					tag = SXW
+					ratio > 1
+				}
+				else = {
+					has_army_manpower = { size > 10000 }
+				}
 			}
 		}
 		completion_reward = {
@@ -1552,13 +1560,29 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					country_exists = SXW
+					any_country = {
+						owns_state = 580
+						owns_state = 579
+					}
 				}
-				SXW = { country_event = { id = RoF_NUS.1201 } }
-			}
-			else = {
-				580 = {
-					owner = {
+				random_country = {
+					limit = {
+						owns_state = 580
+						owns_state = 579
+					}
+					country_event = { id = RoF_NUS.1201 }
+				}
+				else = {
+					random_country = {
+						limit = {
+							owns_state = 580
+						}
+						country_event = { id = RoF_NUS.1201 }
+					}
+					random_country = {
+						limit = {
+							owns_state = 579
+						}
 						country_event = { id = RoF_NUS.1201 }
 					}
 				}
@@ -1595,27 +1619,28 @@ focus_tree = {
 		available = {
 			579 = { is_owned_by = NUS }
 			580 = { is_owned_by = NUS }
-			strength_ratio = {
-				tag = MAG
-				ratio > 1
+			if = {
+				limit = {
+					MAG = { owns_state = 247 }
+				}
+				strength_ratio = {
+					tag = MAG
+					ratio > 1
+				}
+				else = {
+					has_army_manpower = { size > 15000 }
+				}
 			}
 		}
 		completion_reward = {
 			hidden_effect = {
 				247 = { set_state_flag = NUS_magd_inv }
 			}
-			if = {
+			random_country = {
 				limit = {
-					country_exists = MAG
+					owns_state = 247
 				}
-				MAG = { country_event = { id = RoF_NUS.1221 } }
-			}
-			else = {
-				247 = {
-					owner = {
-						country_event = { id = RoF_NUS.1221 }
-					}
-				}
+				country_event = { id = RoF_NUS.1221 }
 			}
 		}
 
@@ -1636,9 +1661,17 @@ focus_tree = {
 		available = {
 			579 = { is_owned_by = NUS }
 			580 = { is_owned_by = NUS }
-			strength_ratio = {
-				tag = SXW
-				ratio > 1
+			if = {
+				limit = {
+					SAX = { owns_state = 412 }
+				}
+				strength_ratio = {
+					tag = SAX
+					ratio > 1
+				}
+				else = {
+					has_army_manpower = { size > 20000 }
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1647,23 +1680,14 @@ focus_tree = {
 				412 = { set_state_flag = NUS_sax_inv }
 			}
 			add_state_claim = 412
-			if = {
-				limit = {
-					country_exists = SAX
-				}
-				SAX = { country_event = { id = RoF_NUS.124 } }
-			}
-			else = {
-				412 = {
-					owner = {
-						country_event = { id = RoF_NUS.124 }
-					}
-				}
+			random_country = {
+				limit = { owns_state = 412 }
+				country_event = { id = RoF_NUS.124 }
 			}
 		}
 	}
 	focus = {
-		id = NUS_seize_Franconia
+		id = NUS_seize_franconia
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 10.00
 		prerequisite = {
@@ -1672,7 +1696,7 @@ focus_tree = {
 		prerequisite = {
 			focus = NUS_demand_leipzig
 		}
-		x = 1
+		x = 0
 		y = 2
 		relative_position_id = NUS_annex_thuringia
 		bypass = {
@@ -1683,9 +1707,21 @@ focus_tree = {
 		available = {
 			247 = { is_owned_by = NUS }
 			412 = { is_owned_by = NUS }
-			strength_ratio = {
-				tag = WRZ
-				ratio > 1
+			if = {
+				limit = {
+					WRZ = {
+						owns_state = 461
+						owns_state = 578
+						owns_state = 577
+					}
+				}
+				strength_ratio = {
+					tag = WRZ
+					ratio > 1
+				}
+				else = {
+					has_army_manpower = { size > 25000 }
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1697,13 +1733,100 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					country_exists = WRZ
+					any_country = {
+						owns_state = 461
+						owns_state = 578
+						owns_state = 577
+					}
 				}
-				WRZ = { country_event = { id = RoF_NUS.126 } }
-			}
-			else = {
-				578 = {
-					owner = {
+				random_country = {
+					limit = {
+						owns_state = 461
+						owns_state = 578
+						owns_state = 577
+					}
+					country_event = { id = RoF_NUS.126 }
+				}
+				else_if = {
+					limit = {
+						any_country = {
+							owns_state = 461
+							owns_state = 578
+						}
+					}
+					random_country = {
+						limit = {
+							owns_state = 461
+							owns_state = 578
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+					random_country = {
+						limit = {
+							owns_state = 577
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+				}
+				else_if = {
+					limit = {
+						any_country = {
+							owns_state = 461
+							owns_state = 577
+						}
+					}
+					random_country = {
+						limit = {
+							owns_state = 461
+							owns_state = 577
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+					random_country = {
+						limit = {
+							owns_state = 578
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+				}
+				else_if = {
+					limit = {
+						any_country = {
+							owns_state = 578
+							owns_state = 577
+						}
+					}
+					random_country = {
+						limit = {
+							owns_state = 578
+							owns_state = 577
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+					random_country = {
+						limit = {
+							owns_state = 461
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+				}
+				else = {
+					random_country = {
+						limit = {
+							owns_state = 578
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+					random_country = {
+						limit = {
+							owns_state = 577
+						}
+						country_event = { id = RoF_NUS.126 }
+					}
+					random_country = {
+						limit = {
+							owns_state = 461
+						}
 						country_event = { id = RoF_NUS.126 }
 					}
 				}
@@ -1721,7 +1844,7 @@ focus_tree = {
 			focus = NUS_take_magdeburg
 		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = NUS_demand_leipzig
 		bypass = {
 			406 = { is_owned_by = NUS }
@@ -2181,7 +2304,7 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		cost = 10.00
 		prerequisite = {
-			focus = NUS_establish_CPoE focus = NUS_seize_Franconia
+			focus = NUS_establish_CPoE focus = NUS_seize_franconia
 		}
 		x = 2
 		y = 1

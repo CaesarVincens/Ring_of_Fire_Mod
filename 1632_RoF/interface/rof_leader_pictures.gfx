@@ -42,7 +42,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_leader_NUS_Michael_Stearns"
-		texturefile = "gfx/leaders/USA/Portrait_NUS_Michael_Stearns.dds"
+		texturefile = "gfx/leaders/NUS/Portrait_NUS_Michael_Stearns.dds"
 	}
 	
 	spriteType = {
@@ -52,7 +52,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_commander_NUS_Frank_Jackson"
-		texturefile = "gfx/leaders/USA/Portrait_NUS_Frank_Jackson.dds"
+		texturefile = "gfx/leaders/NUS/Portrait_NUS_Frank_Jackson.dds"
 	}
 	spriteType = {
 		name = "GFX_leader_SPN_Don_Fernando"

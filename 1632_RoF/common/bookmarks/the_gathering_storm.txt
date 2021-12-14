@@ -95,6 +95,12 @@ bookmarks = {
 			ideology = absolutist
 			ideas = {
 				POL_henrician_articles
+				POL_powerful_magnates
+			}
+			focuses = {
+				POL_maintain_status_quo
+				POL_strengthen_the_sejm
+				POL_strengthen_king
 			}
 		}
 		"RUS"={

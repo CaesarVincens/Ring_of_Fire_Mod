@@ -23,6 +23,10 @@ NUS_advanced_projects_decisions = {
 	allowed = {
 		original_tag = NUS
 	}
+	visible = {
+		has_completed_focus = NUS_gearing_down
+		NOT = { has_global_flag = RoF_no_uptime_resources }
+	}
 }
 
 NUS_minor_decisions = {

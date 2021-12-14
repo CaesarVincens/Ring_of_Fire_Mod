@@ -10,17 +10,17 @@ characters = {
 		country_leader = {
 			ideology = absolute_monarchy
 			traits = { swedish_claimant }
-			expire = "1632.11.1.1"
+			expire = "1632.11.1"
 		}
 		country_leader = {
 			ideology = constitutional_monarchy
 			traits = { swedish_claimant }
-			expire = "1632.11.1.1"
+			expire = "1632.11.1"
 		}
 		country_leader = {
 			ideology = absolute_monarchy_neutral
 			traits = { swedish_claimant }
-			expire = "1632.11.1.1"
+			expire = "1632.11.1"
 		}
 	}
 	POL_wladyslaw_vasa = {

@@ -26,6 +26,26 @@ defined_text = {
 		localization_key = POL_wladyslaw_vasa
 	}
 }
+
+defined_text = {
+	name = POL_sejm_support_ruler
+	text = {
+		trigger = {
+			has_country_flag = POL_chancellor_rules
+		}
+		localization_key = POL_sejm_support_chancellor
+	}
+	text = {
+		trigger = {
+			has_country_flag = POL_king_deposed
+		}
+		localization_key = POL_sejm_support_government
+	}
+	text = {
+		localization_key = POL_sejm_support_king
+	}
+}
+
 defined_text = {
     name = SWE_restore_bohemia_script
     

@@ -35,7 +35,7 @@ POL_major_decisions = {
 	}
 	POL_test = {
 		complete_effect = {
-			POL_king_up_both_down_5 = yes
+			complete_national_focus = POL_strengthen_king
 		}
 	}
 }

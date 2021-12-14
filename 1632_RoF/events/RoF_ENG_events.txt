@@ -401,6 +401,10 @@ country_event = {
 					original_tag = ENG
 					has_government = constitutionalist
 				}
+				uncomplete_national_focus = {
+					focus = ENG_crush_the_rebels
+				}
+				unlock_national_focus = ENG_overthrow_the_king
 				load_oob = "ENL_Civil_War"
 				set_equipment_fraction = 0.5
 				set_stability = 0.9
@@ -501,6 +505,10 @@ country_event = {
 					original_tag = ENG
 					has_government = absolutist
 				}
+				uncomplete_national_focus = {
+					focus = ENG_overthrow_the_king
+				}
+				unlock_national_focus = ENG_crush_the_rebels
 				set_country_flag = ENG_IRE_revolt_coming
 				load_oob = "ENG_Civil_War"
 				set_equipment_fraction = 0.5

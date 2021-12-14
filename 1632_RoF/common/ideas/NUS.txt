@@ -199,7 +199,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				research_speed_factor = 0.075
+				research_speed_factor = 0.05
 				encryption_factor = -0.05
 			}
 			removal_cost = -1

@@ -31,6 +31,7 @@ set_variable = { var = quorum_low value = 39 }
 set_variable = { var = quorum_medium value = 49 }
 set_variable = { var = quorum_high value = 58 }
 set_variable = { var = NUS_up_time_resources_count value = 50 }
+set_cosmetic_tag = NUS_one_star
 
 # Research Bonuses
 set_convoys = 0

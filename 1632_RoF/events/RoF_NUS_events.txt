@@ -16,7 +16,7 @@ news_event = {
 		}
 	}
 	option = { # Accept
-		name =  RoF_NUS.1.a
+		name = RoF_NUS.1.a
 		add_political_power = 5
 	}
 }
@@ -115,14 +115,13 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_completed_focus = NUS_conscript_refugees
-							has_completed_focus = NUS_welcome_refugees
-						}
+						has_completed_focus = NUS_conscript_refugees
+						has_completed_focus = NUS_welcome_refugees
 					}
 				}
-			complete_national_focus = NUS_welcome_refugees
+				unlock_national_focus = NUS_welcome_refugees
 			}
+			NUS_flag_stars = yes
 		}
 		ai_chance = {
 			base = 75
@@ -141,13 +140,11 @@ country_event = {
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_completed_focus = NUS_conscript_refugees
-							has_completed_focus = NUS_welcome_refugees
-						}
+						has_completed_focus = NUS_conscript_refugees
+						has_completed_focus = NUS_welcome_refugees
 					}
 				}
-			complete_national_focus = NUS_conscript_refugees
+				unlock_national_focus = NUS_conscript_refugees
 			}
 		}
 		ai_chance = {
@@ -197,6 +194,7 @@ country_event = {
 				long_name = NUS_coc_long
 				name = NUS_coc
 			}
+			NUS_flag_stars = yes
 		}
 	}
 
@@ -253,7 +251,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.120.c
+		name = RoF_NUS.120.c
 		ai_chance = { base = 100 }
 		set_country_flag = SXW_accept_invite
 		NUS = {
@@ -265,7 +263,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NUS.120.d
+		name = RoF_NUS.120.d
 		set_country_flag = SXW_refuse_invite
 		NUS = {
 			country_event = { id = RoF_NUS.121 }
@@ -283,7 +281,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.120.a
+		name = RoF_NUS.120.a
 		ai_chance = { base = 100 }
 		set_country_flag = SXW_accept_demand
 		NUS = {
@@ -295,7 +293,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NUS.120.b
+		name = RoF_NUS.120.b
 		set_country_flag = SXW_refuse_demand
 		NUS = {
 			country_event = { id = RoF_NUS.121 }
@@ -364,8 +362,14 @@ country_event = {
 			annex_country = { target = FROM }
 		}
 		else = {
-			transfer_state = 579
-			transfer_state = 580
+			FROM = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = NUS_thur_inv
+					}
+					transfer_state_to = NUS
+				}
+			}
 		}
 		add_threat = 2
 		add_state_core = 579
@@ -404,9 +408,16 @@ country_event = {
 		add_state_core = 579
 		add_state_core = 580
 		hidden_effect = {
-			FROM = {
-				USE_wilhelm_wettin = {
-					set_nationality = NUS
+			if = {
+				limit = {
+					FROM = {
+						has_character = USE_wilhelm_wettin
+					}
+				}
+				FROM = {
+					USE_wilhelm_wettin = {
+						set_nationality = NUS
+					}
 				}
 			}
 			NUS = {
@@ -427,7 +438,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.122.c
+		name = RoF_NUS.122.c
 		ai_chance = { base = 100 }
 		set_country_flag = MAG_accept_offer
 		NUS = {
@@ -439,7 +450,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NUS.122.d
+		name = RoF_NUS.122.d
 		set_country_flag = MAG_refuse_offer
 		NUS = {
 			country_event = { id = RoF_NUS.123 }
@@ -458,7 +469,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.122.a
+		name = RoF_NUS.122.a
 		ai_chance = { base = 100 }
 		set_country_flag = MAG_accept_demand
 		NUS = {
@@ -470,7 +481,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NUS.122.b
+		name = RoF_NUS.122.b
 		set_country_flag = MAG_refuse_demand
 		NUS = {
 			country_event = { id = RoF_NUS.123 }
@@ -588,7 +599,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.124.a
+		name = RoF_NUS.124.a
 		ai_chance = { base = 100 }
 		set_country_flag = SAX_accept_demand
 		NUS = {
@@ -596,7 +607,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NUS.124.b
+		name = RoF_NUS.124.b
 		set_country_flag = SAX_refuse_demand
 		NUS = {
 			country_event = { id = RoF_NUS.125 }
@@ -661,7 +672,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.126.a
+		name = RoF_NUS.126.a
 		ai_chance = { base = 100 }
 		set_country_flag = WRZ_accept_demand
 		NUS = {
@@ -670,7 +681,7 @@ country_event = {
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 	option = { # Refuse
-		name =  RoF_NUS.126.b
+		name = RoF_NUS.126.b
 		set_country_flag = WRZ_refuse_demand
 		NUS = {
 			country_event = { id = RoF_NUS.127 }
@@ -727,18 +738,16 @@ country_event = {
 
 		if = {
 			limit = {
-				FROM = {
-					all_owned_state = {
-						has_state_flag = NUS_franc_inv
-					}
-				}
 			}
 			annex_country = { target = FROM }
 		}
 		else = {
-			transfer_state = 577
-			transfer_state = 578
-			transfer_state = 461
+			FROM = {
+				every_owned_state = {
+					limit = { has_state_flag = NUS_franc_inv }
+					transfer_state_to = NUS
+				}
+			}
 		}
 		set_country_flag = NUS_annex_WRZ
 		add_threat = 2
@@ -747,11 +756,11 @@ country_event = {
 				HES = {
 					exists = yes
 					has_capitulated = no
+					NUS = { owns_state = 577 }
 				}
 			}
 			HES = { transfer_state = 577 }
 		}
-		#add_state_core = 247
 		hidden_effect = {
 			NUS = {
 				news_event = { days = 1 id = RoF_news.14 }
@@ -770,7 +779,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.128.a
+		name = RoF_NUS.128.a
 		ai_chance = { base = 100 }
 		set_country_flag = NUS_accept_demand
 		NUS = {
@@ -786,7 +795,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name =  RoF_NUS.128.b
+		name = RoF_NUS.128.b
 		set_country_flag = NUS_refuse_demand
 		NUS = {
 			country_event = { id = RoF_NUS.129 hours = 1 }
@@ -849,12 +858,10 @@ country_event = {
 					limit = {
 						has_state_flag = NUS_elbe_inv
 					}
-					NUS = {
-						transfer_state = PREV
-					}
+					transfer_state_to = NUS
+					NUS = { add_threat = 1 }
 				}
 			}
-			add_threat = 1
 		}
 	}
 }
@@ -869,7 +876,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.130.a
+		name = RoF_NUS.130.a
 		#ai_chance = { factor = 100 }
 		hidden_effect = {
 			country_event = { id = RoF_NUS.131 days = 12 }
@@ -931,7 +938,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Liberal
-		name =  RoF_NUS.131.a
+		name = RoF_NUS.131.a
 		ai_chance = {
 			base = 10
 		}
@@ -957,7 +964,7 @@ country_event = {
 		}
 	}
 	option = { # Absolutist
-		name =  RoF_NUS.131.b
+		name = RoF_NUS.131.b
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -987,7 +994,7 @@ country_event = {
 		}
 	}
 	option = { # Constitutionalist
-		name =  RoF_NUS.131.c
+		name = RoF_NUS.131.c
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1012,7 +1019,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Free
-		name =  RoF_NUS.132.a
+		name = RoF_NUS.132.a
 		ai_chance = {
 			base = 10
 		}
@@ -1026,7 +1033,7 @@ country_event = {
 		}
 	}
 	option = { # Control
-		name =  RoF_NUS.132.b
+		name = RoF_NUS.132.b
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1044,7 +1051,7 @@ country_event = {
 		}
 	}
 	option = { # Control
-		name =  RoF_NUS.132.c
+		name = RoF_NUS.132.c
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1069,7 +1076,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name =  RoF_NUS.133.a
+		name = RoF_NUS.133.a
 		ai_chance = {
 			base = 10
 		}
@@ -1083,7 +1090,7 @@ country_event = {
 		}
 	}
 	option = { # Accept
-		name =  RoF_NUS.133.b
+		name = RoF_NUS.133.b
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1101,7 +1108,7 @@ country_event = {
 		}
 	}
 	option = { # Accept
-		name =  RoF_NUS.133.c
+		name = RoF_NUS.133.c
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1126,7 +1133,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { # Elected
-		name =  RoF_NUS.134.a
+		name = RoF_NUS.134.a
 		ai_chance = {
 			base = 10
 		}
@@ -1146,7 +1153,7 @@ country_event = {
 		}
 	}
 	option = { # Appointed
-		name =  RoF_NUS.134.b
+		name = RoF_NUS.134.b
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1170,7 +1177,7 @@ country_event = {
 		}
 	}
 	option = { # Appointed
-		name =  RoF_NUS.134.c
+		name = RoF_NUS.134.c
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1198,7 +1205,7 @@ country_event = {
 		set_country_flag = NUS_first_election
 	}
 	option = { # Accept
-		name =  RoF_NUS.135.a
+		name = RoF_NUS.135.a
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -1216,7 +1223,7 @@ country_event = {
 		}
 	}
 	option = { # Accept
-		name =  RoF_NUS.135.b
+		name = RoF_NUS.135.b
 		ai_chance = {
 			base = 10
 			modifier = {

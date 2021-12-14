@@ -4,6 +4,7 @@ Play an alternate history set in the middle of the Thirty Years war where a town
 
 Lead Developer: CaesarVincens
 Focus Tree Contributions: Principality of Lichenstein, King of Nords
+Other Contributions: Hampter
 Testers and Feedback: DPBR8, TheCapitan157, Dylan Hultman
 
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
@@ -18,9 +19,10 @@ Reworked Polish states to match historical regions
 Polish focus tree with Sejm (Congress-esque) and Balance of Power mechanics
 Reworked Russian civil war to use dynamic countries
 Updates to Russian and English focus trees making use of La Resistence updated layout mechanics
-Added Mercenary hiring decisions, likely unbalanced
+Added Mercenary hiring decisions, likely unbalanced, toggleable at game start
 Updates to Ottoman focus tree, including a mechanic to integrate the starting vassals without Together for Victory
 Added Game Rules for most countries with focus trees
+Added special projects for NUS, toggleable at game start, created by Hampter
 
 Alpha 0.7.5 - Oct. 15, 2020
 Updated to HoI4 1.10

@@ -372,7 +372,7 @@ jaegers_generic = {
 	
 	match_to_count = 0.45
 
-	mountaineers_default = {
+	jaegers_default = {
 	
 		upgrade_prio = {
 			factor = 2
