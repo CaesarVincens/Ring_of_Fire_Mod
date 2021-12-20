@@ -1805,9 +1805,9 @@ focus_tree = {
 		completion_reward = {
 			POL_sejm_small_opposition = yes
 			army_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1827,9 +1827,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1855,9 +1855,9 @@ focus_tree = {
 			POL_king_up_magnates_down_5 = yes
 			POL_sejm_small_opposition = yes
 			army_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}

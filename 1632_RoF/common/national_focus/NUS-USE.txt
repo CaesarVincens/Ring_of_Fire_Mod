@@ -45,9 +45,9 @@ focus_tree = {
 		continue_if_invalid = yes
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -108,9 +108,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -202,17 +202,26 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
-			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = { name = naval_doctrine_bonus cost_reduction = 0.5 uses = 2 category = naval_doctrine }
 			#add_tech_bonus = { bonus = 0.5 uses = 1 category = ironclad_tech }
-			create_navy_leader = {
-				name = "John Chandler Simpson"
-				gfx = GFX_leader_NUS_John_Simpson
-				#traits = {}
-				coordination_skill = 2
-				attack_skill = 2
-				maneuvering_skill = 2
-				defense_skill = 2
+			add_naval_commander_role = {
+				character = NUS_john_chandler_simpson
 				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 2
+				traits = { }
+			}
+			add_advisor_role = {
+				character = NUS_john_chandler_simpson
+				advisor = {
+					idea_token = NUS_john_chandler_simpson_advisor
+					slot = theorist
+					traits = {
+						grand_fleet_proponent
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -1504,7 +1513,7 @@ focus_tree = {
 					character = NUS_john_chandler_simpson
 					promote_leader = yes
 					country_leader = {
-						#expire = "1660.1.1"
+						expire = "1660.1.1"
 						ideology = dictatorship 
 						traits = {
 							grand_fleet_proponent

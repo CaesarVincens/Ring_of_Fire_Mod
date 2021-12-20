@@ -81,7 +81,6 @@ country_event = {
 				}
 				add_named_threat = { threat = 5 name = BOH.1.t }
 				inherit_technology = ROOT
-				#RoF_transfer_technology = yes
 				BOH_albrecht_von_wallenstein = {
 					add_country_leader_role = {
 						promote_leader = yes

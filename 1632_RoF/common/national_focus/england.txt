@@ -52,7 +52,7 @@ focus_tree = {
 		y = 1
 		##available_if_capitulated = yes
 		complete_tooltip = {
-			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { name = naval_doctrine_bonus cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 			navy_experience = 25
 			random_state = {
 				limit = {
@@ -68,7 +68,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
-			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { name = naval_doctrine_bonus cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 			navy_experience = 25
 			if = {
 				limit = {
@@ -202,7 +202,7 @@ focus_tree = {
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
-			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { name = naval_doctrine_bonus cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 			navy_experience = 25
 		}
 		ai_will_do = {
@@ -244,7 +244,7 @@ focus_tree = {
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
-			add_tech_bonus = { name = naval_doctrine_bonus bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = { name = naval_doctrine_bonus cost_reduction = 0.5 uses = 1 category = naval_doctrine }
 		}
 		ai_will_do = {
 			factor = 1
@@ -487,9 +487,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -637,9 +637,9 @@ focus_tree = {
 					}
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -704,9 +704,9 @@ focus_tree = {
 					set_state_flag = ENG_air_experiments_state
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

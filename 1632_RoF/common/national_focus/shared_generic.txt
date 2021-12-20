@@ -33,9 +33,9 @@
 					}
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -94,9 +94,9 @@
 					set_state_flag = air_research_state_@ROOT
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -237,9 +237,9 @@
 					}
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -304,9 +304,9 @@
 					set_state_flag = air_experiments_focus_state_@ROOT
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -487,9 +487,9 @@
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = fleet_in_being_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = fleet_in_being_tree
 			}
@@ -597,9 +597,9 @@
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = sub_op_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -706,9 +706,9 @@
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -733,9 +733,9 @@
 				tercio_formation_focus_tech = 1
 				popup = no
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -799,9 +799,9 @@
 				swedish_line_tech = 1
 				popup = no
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -853,9 +853,9 @@
 			}
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}

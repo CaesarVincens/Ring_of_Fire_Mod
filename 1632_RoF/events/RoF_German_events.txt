@@ -175,7 +175,6 @@ country_event = {
 						light_artillery_1 = 1
 					}
 				}
-				#RoF_transfer_technology = yes 
 				transfer_state = 435
 				transfer_state = 16
 				transfer_state = 17

@@ -15,6 +15,7 @@ Discord Link: https://discord.gg/VBqgExW
 Currently in Alpha; expect to find bugs and oddities
 
 Alpha 0.8.0 - 
+Updated to HoI4 1.11
 Reworked Polish states to match historical regions
 Polish focus tree with Sejm (Congress-esque) and Balance of Power mechanics
 Reworked Russian civil war to use dynamic countries

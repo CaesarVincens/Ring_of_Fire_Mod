@@ -576,7 +576,7 @@ country_event = {
 	option = {
 		name = RoF_ENG.150.a
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } inherit_technology = ROOT } #RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } inherit_technology = ROOT }
 		set_country_flag = ENG_IRE_revolted
 		ai_chance = {
 			factor = 10
@@ -597,7 +597,7 @@ country_event = {
 			is_ai = no
 		}
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG inherit_technology = ROOT } # RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG inherit_technology = ROOT }
 		set_country_flag = ENG_IRE_revolted
 	}
 }
@@ -657,7 +657,7 @@ country_event = {
 	option = {
 		name = RoF_ENG.150.a
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } inherit_technology = ROOT }# RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } inherit_technology = ROOT }
 		set_country_flag = ENG_IRE_revolted
 		ai_chance = {
 			factor = 10
@@ -678,7 +678,7 @@ country_event = {
 			is_ai = no
 		}
 		release = IRE
-		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG inherit_technology = ROOT } #RoF_transfer_technology = yes }
+		IRE = { country_event = { id = RoF_ENG.151 days = 1 } change_tag_from = ENG inherit_technology = ROOT }
 		set_country_flag = ENG_IRE_revolted
 	}
 }
@@ -743,7 +743,6 @@ country_event = {
 					traits = {
 					}
 				}
-				#RoF_transfer_technology = yes
 			}
 		}
 		ai_chance = {
@@ -786,7 +785,6 @@ country_event = {
 		SCO = {
 			inherit_technology = ROOT
 			country_event = { id = RoF_ENG.157 days = 2 }
-			#RoF_transfer_technology = yes
 		}
 		ai_chance = {
 			factor = 1

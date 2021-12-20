@@ -139,9 +139,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY }
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -165,9 +165,9 @@ focus_tree = {
 				add_idea = RUS_streltzi_2
 			}
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -191,9 +191,9 @@ focus_tree = {
 				add_idea = RUS_boyar_cavalry_2
 			}
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
