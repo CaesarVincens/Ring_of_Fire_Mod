@@ -105,9 +105,8 @@ is_friend_or_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_friend_or_potential_friend_of_ROOT_tt
 		OR = {
-			is_subject_of = ROOT
+			is_ally_with = ROOT
 			is_subject = no
-			is_in_faction_with = ROOT
 		}
 		OR = {
 			is_in_faction_with = ROOT
@@ -122,8 +121,7 @@ is_friend_or_potential_friend_of_ROOT = {
 is_not_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_not_potential_friend_of_ROOT_tt
-		NOT = { is_in_faction_with = ROOT }
-		NOT = { is_subject_of = ROOT }
+		NOT = { is_ally_with = ROOT }
 		OR = {
 			is_subject = yes
 			is_in_faction = yes
@@ -152,11 +150,7 @@ is_owned_by_ROOT_or_ally = {
 	custom_trigger_tooltip = {
 		tooltip = is_owned_by_ROOT_or_ally
 		OWNER = {
-			OR = {
-				tag = ROOT
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}
+			is_ally_with = ROOT
 		}
 	}
 }

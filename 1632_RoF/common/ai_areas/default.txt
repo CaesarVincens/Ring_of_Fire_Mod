@@ -7,7 +7,6 @@ areas = {
 			11
 			191
 			192
-			12
 			13
 		}
 	}
@@ -53,16 +52,20 @@ areas = {
 		strategic_regions = {
 			19
 			20
+			161
 		}
 	}
 
 	iberian_region = {
 		strategic_regions = {
 			41
+			208
+			209
 		}
 	}
 	polish_region = {
 		strategic_regions = {
+			12
 			37
 			38
 			39
@@ -75,12 +78,14 @@ areas = {
 		strategic_regions = {
 			132
 			133
+			135
 			137
 			150
 			40
 			14
 			147
 			151
+			210
 		}
 	}
 

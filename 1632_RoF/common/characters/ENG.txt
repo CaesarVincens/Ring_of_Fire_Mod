@@ -36,6 +36,7 @@ characters = {
 			ideology = constitutional_monarchy
 			expire = "1660.1.1"
 		}
+		gender = female
 	}
 	ENG_rupert_wittelsbach = {
 		name = "Rupert Wittelsbach"
@@ -130,7 +131,7 @@ characters = {
 				factor = 1.000
 			}
 		}
-		name = "ENG_thomas_wentworth"
+		name = ENG_thomas_wentworth
 		portraits = {
 			army = {
 				small = "GFX_idea_wentworth_pic"
@@ -166,7 +167,10 @@ characters = {
 				factor = 1.000
 			}
 		}
-		name = "ENG_richard_boyle"
+		allowed_civil_war = {
+			has_government = absolutist
+		}
+		name = ENG_richard_boyle
 		portraits = {
 			army = {
 				small = "GFX_idea_boyle_pic"
@@ -190,7 +194,7 @@ characters = {
 			}
 				
 		}
-		name = "ENG_william_laud"
+		name = ENG_william_laud
 		portraits = {
 			army = {
 				small = "GFX_idea_laud_pic"

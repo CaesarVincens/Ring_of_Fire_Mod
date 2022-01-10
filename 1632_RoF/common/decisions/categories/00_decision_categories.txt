@@ -183,8 +183,6 @@ lar_local_recruitment = {
 				tag = LKA
 				tag = BAN
 				tag = NEP
-				tag = BHU
-				tag = SRL
 			}
 		}
 	}
@@ -214,8 +212,6 @@ lar_local_recruitment = {
 				tag = LKA
 				tag = BAN
 				tag = NEP
-				tag = BHU
-				tag = SRL
 			}
 		}
 	}

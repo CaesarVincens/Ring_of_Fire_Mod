@@ -2728,10 +2728,18 @@ RoF_mercenary_decisions = {
 			has_country_flag = hiring_mercenaries
 		}
 		available = {
-			OR = {
-				has_idea = mercenary_army
-				has_government = absolutist
-				surrender_progress > 0.4
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = RoF_Mercenary_Hiring
+						option = ROF_DEFAULT_MERCS
+					}
+				}
+				OR = {
+					has_idea = mercenary_army
+					has_government = absolutist
+					surrender_progress > 0.4
+				}
 			}
 		}
 		custom_cost_text = merc_small_cost_tt
@@ -2858,10 +2866,18 @@ RoF_mercenary_decisions = {
 			has_country_flag = hiring_mercenaries
 		}
 		available = {
-			OR = {
-				has_idea = mercenary_army
-				has_government = absolutist
-				surrender_progress > 0.4
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = RoF_Mercenary_Hiring
+						option = ROF_DEFAULT_MERCS
+					}
+				}
+				OR = {
+					has_idea = mercenary_army
+					has_government = absolutist
+					surrender_progress > 0.4
+				}
 			}
 		}
 		custom_cost_text = merc_medium_cost_tt
@@ -2994,10 +3010,18 @@ RoF_mercenary_decisions = {
 			has_country_flag = hiring_mercenaries
 		}
 		available = {
-			OR = {
-				has_idea = mercenary_army
-				has_government = absolutist
-				surrender_progress > 0.4
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = RoF_Mercenary_Hiring
+						option = ROF_DEFAULT_MERCS
+					}
+				}
+				OR = {
+					has_idea = mercenary_army
+					has_government = absolutist
+					surrender_progress > 0.4
+				}
 			}
 		}
 		custom_cost_text = merc_large_cost_tt

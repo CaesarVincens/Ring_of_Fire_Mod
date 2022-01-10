@@ -28,6 +28,23 @@
  ##   ##   ##  #  #  #  #  #   #       ##  #    ###  ##  ### #   ###  ##      #  #  ##  ### ### ##  
 
 
+ RoF_NUS_Special_Projects = {
+	name = ROF_NUS_SPECIAL_PROJECTS
+	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+	#icon = "GFX_merc"
+	default = {
+		name = ROF_ALLOW_PROJECTS
+		text = "RULE_ROF_NUS_ALLOW_PROJECTS"
+		desc = "RULE_ROF_NUS_ALLOW_PROJECTS_DESC"
+	}
+	option = {
+		name = ROF_NO_PROJECTS
+		text = "RULE_ROF_NUS_NO_PROJECTS"
+		desc = "RULE_ROF_NUS_NO_PROJECTS_DESC"
+		allow_achievements = yes
+	}
+}
+
 
 #GER_faction_soviets = {
 #	name = "RULE_GER_FACTION_SOVIETS"
@@ -123,11 +140,11 @@ SWE_ai_behavior = {
 		desc = "RULE_CANON_SWE_AI_DESC"
 		allow_achievements = yes
 	}
-#	option = {
-#		name = ALTERNATE
-#		text = "RULE_OPTION_ALTERNATE"
-#		desc = "RULE_ALTERNATE_SWE_AI_DESC"
-#	}
+	option = {
+		name = ALTERNATE
+		text = "RULE_OPTION_ALTERNATE"
+		desc = "RULE_ALTERNATE_SWE_AI_DESC"
+	}
 	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
@@ -308,6 +325,28 @@ POL_ai_behavior = {
 # ## #### # # # ##       #  ##   #  #  # ###  
 #  # #  # #   # #         # #    #  #  # #    
  ##  #  # #   # ###     ##  ###  #   ##  #
+
+RoF_Mercenary_Hiring = {
+	name = ROF_MERCENARY_HIRING
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_volunteers"
+	default = {
+		name = ROF_DEFAULT_MERCS
+		text = "RULE_ROF_DEFAULT_MERCS"
+		desc = "RULE_ROF_DEFAULT_MERCS_DESC"
+	}
+	option = {
+		name = ROF_NO_MERCS
+		text = "RULE_ROF_NO_MERCS"
+		desc = "RULE_ROF_NO_MERCS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROF_ANY_MERCS
+		text = "RULE_ROF_ANY_MERCS"
+		desc = "RULE_ROF_ANY_MERCS_DESC"
+	}
+}
 
 #Thirty_Year_War_style = {
 #	name = "RULE_TYW_STYLE"

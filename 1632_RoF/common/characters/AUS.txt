@@ -48,48 +48,6 @@ characters = {
 			expire = "1660.1.1"
 		}
 	}
-	BOH_albrecht_von_wallenstein = {
-		name = "Albrecht von Wallenstein"
-		portraits = {
-			civilian = {
-				large = "GFX_leader_BOH_Wallenstein"
-			}
-			army = {
-				large = "GFX_leader_BOH_Wallenstein"
-			}
-		}
-		field_marshal = {
-			traits = { organizer }
-			skill = 5
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 5
-			visible = {
-				NOT = { has_country_flag = wallenstein_injured }
-				OR = {
-					original_tag = BOH
-					has_country_flag = wallenstein_reinstated
-				}
-			}
-		}
-	}
-	BOH_gottfried_zu_pappenheim = {
-		name = "Gottfried zu Pappenheim"
-		portraits = {
-			army = {
-				large = "GFX_commander_BOH_Pappenheim"
-			}
-		}
-		corps_commander = {
-			traits = { cavalry_officer }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
-		}
-	}
 	AUS_johann_tserclaes_von_tilly = {
 		name = "Johann Tserclaes von Tilly"
 		portraits = {

@@ -58,6 +58,7 @@ defined_text = {
 
     text = {
 		trigger = {
+			has_global_flag = winter_king_dead
 			has_global_flag = wallenstein_gambit
 		}
         localization_key = SWE_install_wallenstein
@@ -65,7 +66,11 @@ defined_text = {
 	
     text = {
 		trigger = {
-			NOT = { has_global_flag = karl_ludwig_catholic }
+			has_global_flag = winter_king_dead
+			NOT = {
+				has_global_flag = wallenstein_gambit
+				has_global_flag = karl_ludwig_catholic
+			}
 		}
         localization_key = SWE_restore_karl
     }
@@ -87,6 +92,7 @@ defined_text = {
 
 	text = {
 		trigger = {
+			has_global_flag = winter_king_dead
 			has_global_flag = wallenstein_gambit
 		}
         localization_key = SWE_install_wallenstein_desc
@@ -94,7 +100,11 @@ defined_text = {
 
     text = {
 		trigger = {
-			NOT = { has_global_flag = karl_ludwig_catholic }
+			has_global_flag = winter_king_dead
+			NOT = {
+				has_global_flag = wallenstein_gambit
+				has_global_flag = karl_ludwig_catholic
+			}
 		}
         localization_key = SWE_restore_karl_desc
     }

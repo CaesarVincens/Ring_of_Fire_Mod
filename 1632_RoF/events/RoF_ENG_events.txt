@@ -281,7 +281,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = constitutionalist
-				popularity = 0.3
+				popularity = 0.1
 			}
 			set_party_name = {
 				ideology = constitutionalist
@@ -328,9 +328,6 @@ country_event = {
 
 	option = {
 		name = RoF_ENG.140.a
-		ai_chance = {
-			factor = 10
-		}
 		add_country_leader_trait = crippled
 	}
 }
@@ -406,29 +403,29 @@ country_event = {
 				}
 				unlock_national_focus = ENG_overthrow_the_king
 				load_oob = "ENL_Civil_War"
-				set_equipment_fraction = 0.5
-				set_stability = 0.9
+				set_stability = 0.7
 				set_war_support = 0.8
 				#country_event = { id = spain.3 days = 1 }
-				add_popularity = {
-					ideology = liberal
-					popularity = 0.25
-				}
-				add_popularity = {
-					ideology = radical
-					popularity = 0.10
+				set_popularities = {
+					constitutionalist = 65
+					liberal = 25
+					radical = 10
+					absolutist = 0
+					neutrality = 0
 				}
 				promote_character = SCO_archibald_campbell
 				set_cosmetic_tag = ENL_civil_war
 			}
 			load_oob = "ENG_Civil_War"
-			set_equipment_fraction = 0.5
-			set_stability = 0.9
+			set_stability = 0.7
 			set_war_support = 0.8
 
-			add_popularity = {
-				ideology = absolutist
-				popularity = 0.8
+			set_popularities = {
+				absolutist = 75
+				neutrality = 25
+				constitutionalist = 0
+				liberal = 0
+				radical = 0
 			}
 			set_cosmetic_tag = ENG_civil_war
 		}
@@ -505,44 +502,47 @@ country_event = {
 					original_tag = ENG
 					has_government = absolutist
 				}
+				PREV = {
+					set_nationality = {
+						character = ENG_charles_stuart
+						target_country = PREV
+					}
+				}
+				ENG_charles_stuart = {
+					promote_character = absolute_monarchy
+					promote_character = constitutional_monarchy
+					promote_character = absolute_monarchy_neutral
+				}
 				uncomplete_national_focus = {
 					focus = ENG_overthrow_the_king
 				}
 				unlock_national_focus = ENG_crush_the_rebels
 				set_country_flag = ENG_IRE_revolt_coming
 				load_oob = "ENG_Civil_War"
-				set_equipment_fraction = 0.5
-				set_stability = 0.9
+				set_stability = 0.7
 				set_war_support = 0.8
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.25
+				set_popularities = {
+					absolutist = 75
+					neutrality = 25
+					constitutionalist = 0
+					liberal = 0
+					radical = 0
 				}
 				set_cosmetic_tag = ENG_civil_war
 			}
 			load_oob = "ENL_Civil_War"
-			set_equipment_fraction = 0.5
-			set_stability = 0.9
+			set_stability = 0.7
 			set_war_support = 0.8
 			promote_character = SCO_archibald_campbell
 			set_politics = {
 				ruling_party = constitutionalist
 			}
-			add_popularity = {
-				ideology = constitutionalist
-				popularity = 0.8
-			}
-			add_popularity = {
-				ideology = liberal
-				popularity = 0.277
-			}
-			add_popularity = {
-				ideology = radical
-				popularity = 0.10
-			}
-			add_popularity = {
-				ideology = absolutist
-				popularity = -1
+			set_popularities = {
+				constitutionalist = 65
+				liberal = 25
+				radical = 10
+				absolutist = 0
+				neutrality = 0
 			}
 			set_cosmetic_tag = ENL_civil_war
 		}
@@ -988,7 +988,7 @@ country_event = {
 	}
 }
 
-#England gets resonse
+#England gets response
 country_event = {
 	id = RoF_ENG.163
 	title = RoF_ENG.163.t
@@ -1115,7 +1115,6 @@ country_event = {
 
 	immediate = {
 		set_global_flag = ENG_civil_war_flag
-		news_event = { hours = 6 id = RoF_news.04 }
 		SCO = {
 			every_owned_state = {
 				add_core_of = ENG
@@ -1125,6 +1124,7 @@ country_event = {
 			target = SCO
 			transfer_troops = yes
 		}
+		news_event = { hours = 6 id = RoF_news.04 }
 	}
 
 	option = { #Support Parliamentarians
@@ -1143,40 +1143,53 @@ country_event = {
 					original_tag = ENG
 					has_government = absolutist
 				}
+				PREV = {
+					set_nationality = {
+						character = ENG_charles_stuart
+						target_country = PREV
+					}
+					set_nationality = {
+						character = ENG_richard_boyle
+						target_country = PREV
+					}
+				}
 				set_country_flag = ENG_IRE_revolt_coming
 				load_oob = "ENG_Civil_War"
-				set_equipment_fraction = 0.5
-				set_stability = 0.9
+				set_stability = 0.7
 				set_war_support = 0.8
-				#country_event = { id = spain.3 days = 1 }
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.25
+				set_popularities = {
+					absolutist = 75
+					neutrality = 25
+					constitutionalist = 0
+					liberal = 0
+					radical = 0
 				}
 				set_cosmetic_tag = ENG_civil_war
+				uncomplete_national_focus = {
+					focus = ENG_hide_cromwell
+					uncomplete_children = yes
+				}
+				unlock_national_focus = ENG_arrest_cromwell
+				unlock_national_focus = ENG_state_of_emergency
+				complete_national_focus = ENG_seize_traitors_lands
+				complete_national_focus = ENG_state_of_emergency
+				complete_national_focus = ENG_move_to_oxford
+				complete_national_focus = ENG_changing_of_the_guard
+				unlock_national_focus = ENG_the_scottish_question
+				unlock_national_focus = ENG_crush_the_rebels
 			}
 			load_oob = "ENL_Civil_War"
-			set_equipment_fraction = 0.5
-			set_stability = 0.9
+			set_stability = 0.7
 			set_war_support = 0.8
 			set_politics = {
 				ruling_party = constitutionalist
 			}
-			add_popularity = {
-				ideology = constitutionalist
-				popularity = 0.8
-			}
-			add_popularity = {
-				ideology = liberal
-				popularity = 0.277
-			}
-			add_popularity = {
-				ideology = radical
-				popularity = 0.10
-			}
-			add_popularity = {
-				ideology = absolutist
-				popularity = -1
+			set_popularities = {
+				constitutionalist = 65
+				liberal = 25
+				radical = 10
+				absolutist = 0
+				neutrality = 0
 			}
 			set_cosmetic_tag = ENL_civil_war
 		}

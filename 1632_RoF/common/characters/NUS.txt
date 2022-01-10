@@ -60,6 +60,7 @@ characters = {
 				large = "gfx/leaders/leader_unknown_female.dds"
 			}
 		}
+		gender = female
 	}
 	NUS_red_sybolt = {
 		name = "Bobby Gene \"Red\" Sybolt"

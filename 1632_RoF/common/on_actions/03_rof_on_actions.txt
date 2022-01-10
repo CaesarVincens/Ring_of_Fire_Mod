@@ -14,11 +14,28 @@ on_actions = {
 			every_country = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
-				country_event = { id = RoF.030 }
 			}
 			random_country = {
 				limit = { is_ai = yes }
 				country_event = { id = RoF.006 }
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ROF_NUS_SPECIAL_PROJECTS
+							option = ROF_NO_PROJECTS
+						}
+					}
+					set_global_flag = RoF_no_uptime_resources
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ROF_MERCENARY_HIRING
+							option = ROF_NO_MERCS
+						}
+					}
+					set_global_flag = RoF_no_mercs_for_anyone
+				}
 			}
 			set_global_flag = thirty_years_war_ongoing
 			every_country = {
@@ -430,26 +447,24 @@ on_actions = {
 				check_CoC_strength_anger = yes
 				check_CoC_effects_for_this = yes
 			}
-		}
-	}
-	on_monthly_WAU = {
-		effect = {
-			if = {
-				limit = {
-					has_global_flag = CoC_established
-				}
-				random_country = {
+			random_country = {
+				if = {
 					limit = {
-						NOT = { has_country_flag = CoC_present }
-						any_neighbor_country = {
-							has_variable = CoC_strength
-						}
-						capital_scope = {
-							is_on_continent = europe
-						}
+						has_global_flag = CoC_established
 					}
-					country_event = { id = RoF.010 }
-					log = "[This.GetName] has CoC at [GetDateText]"
+					random_country = {
+						limit = {
+							NOT = { has_country_flag = CoC_present }
+							any_neighbor_country = {
+								has_variable = CoC_strength
+							}
+							capital_scope = {
+								is_on_continent = europe
+							}
+						}
+						country_event = { id = RoF.010 }
+						log = "[This.GetName] has CoC at [GetDateText]"
+					}
 				}
 			}
 		}

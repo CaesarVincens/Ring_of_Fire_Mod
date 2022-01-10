@@ -23,7 +23,21 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			NUS = { transfer_state = 472 transfer_state = 406 }
+			472 = {
+				if = {
+					limit = { is_owned_by = SWE }
+					transfer_state_to = NUS
+				}
+			}
+			406 = {
+				if = {
+					limit = {
+						is_owned_by = BRA
+						BRA = { has_country_flag = USE_rejected_country }
+					}
+					transfer_state_to = NUS 
+				}
+			}
 			SWE = {
 				every_controlled_state = {
 					limit = {
@@ -31,7 +45,7 @@ country_event = {
 						has_state_flag = USE_control_state
 					}
 					clr_state_flag = USE_control_state
-					NUS = { set_state_controller = PREV }
+					set_state_controller_to = NUS
 				}
 			}
 			every_country = {
@@ -44,7 +58,7 @@ country_event = {
 						has_state_flag = USE_control_state
 					}
 					clr_state_flag = USE_control_state
-					NUS = { set_state_controller = PREV }
+					set_state_controller_to = NUS
 				}
 				clr_country_flag = USE_annex_country
 				if = {
@@ -217,6 +231,10 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 			modifier = {
+				factor = 2
+				has_completed_focus = welcome_americans
+			}
+			modifier = {
 				factor = 0.1
 				num_of_controlled_states > 4
 			}
@@ -261,9 +279,19 @@ country_event = {
 		reverse_add_opinion_modifier = { target = NUS modifier = rejected_USE }
 		if = {
 			limit = { is_in_faction_with = NUS }
-			faction_leader = {
-				remove_from_faction = ROOT
+			every_controlled_state = {
+				limit = {
+					NOT = { is_owned_by = PREV }
+					is_german_state = yes
+				}
+				set_state_province_controller = {
+					controller = NUS
+					limit = {
+						is_in_faction_with = NUS
+					}
+				}
 			}
+			leave_faction = yes
 		}
 		if = {
 			limit = { has_war_together_with = NUS }
@@ -284,6 +312,10 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 			modifier = {
+				add = 50
+				has_completed_focus = shun_americans
+			}
+			modifier = {
 				add = 10
 				num_of_controlled_states > 4
 			}
@@ -291,7 +323,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_USE.101.c
-		trigger = { is_ai = no }
+		trigger = { is_ai = no NOT = { tag = SWE } }
 
 		set_country_flag = USE_fed_prov
 		effect_tooltip = {

@@ -124,7 +124,7 @@ FRA_watch_SPR = {
 	ai_strategy = {
 		type = prepare_for_war
 		id = SPN
-		value = 200
+		value = 100
 	}
 }
 
@@ -213,7 +213,7 @@ ostend_war_prep = {
 		OR = {
 			focus_progress = {
 				focus = FRA_strike_dutch
-				progress > 0.7
+				progress > 0.5
 			}
 			has_completed_focus = FRA_strike_dutch
 		}
@@ -221,7 +221,7 @@ ostend_war_prep = {
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = "DEN"
-		value = 10
+		value = 1
 	}
 }
 
@@ -238,6 +238,16 @@ ostend_war = {
 		NOT = {
 			has_war_with = NUS
 		}
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		area = scandinavian_region
+		value = -200
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 662
+		value = 400
 	}
 	ai_strategy = {
 		type = area_priority
@@ -266,7 +276,7 @@ ostend_war = {
 	}
 	ai_strategy = {
 		type = garrison
-		value = 1000
+		value = 100
 	}
 }
 
@@ -306,6 +316,6 @@ ostend_war = {
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = "DEN"
-		value = 100
+		value = -1
 	}
 }

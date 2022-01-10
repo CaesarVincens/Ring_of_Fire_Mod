@@ -929,7 +929,7 @@ focus_tree = {
 			has_global_flag = max_wife_dead
 			BAV = {
 				has_country_leader = {
-					name = "Maximilian von Wittelsbach"
+					character = BAV_maximilian_von_wittelsbach
 				}
 			}
 			#country_exists = BAV
@@ -940,7 +940,7 @@ focus_tree = {
 				OR = {
 					NOT = {
 						has_country_leader = {
-							name = "Maximilian von Wittelsbach"
+							character = BAV_maximilian_von_wittelsbach
 						}
 					}
 					exists = no
@@ -998,12 +998,12 @@ focus_tree = {
 		prerequisite = { focus = AUS_illness_ferdinand_2 }
 		available = {
 			has_country_leader = {
-				name = "Ferdinand III von Habsburg"
+				character = AUS_ferdinand_iii_von_habsburg
 			}
 		}
 		bypass = {
 			has_country_leader = {
-				name = "Ferdinand III von Habsburg"
+				character = AUS_ferdinand_iii_von_habsburg
 			}
 		}
 		cost = 5

@@ -11,6 +11,12 @@ RoF_mercenary_decisions = {
 	icon = military_operation
 	priority = 5
 	visible = {
+		NOT = {
+			has_game_rule = {
+				rule = ROF_MERCENARY_HIRING
+				option = ROF_NO_MERCS
+			}
+		}
 		NOT = { has_global_flag = RoF_no_mercs_for_anyone }
 	}
 }

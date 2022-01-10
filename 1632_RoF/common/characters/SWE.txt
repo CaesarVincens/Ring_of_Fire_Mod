@@ -19,21 +19,17 @@ characters = {
 		}
 		country_leader = {
 			ideology = absolute_monarchy
-			expire = "1.1.1.1"
 		}
 		country_leader = {
 			ideology = constitutional_monarchy
 			traits = { golden_king }
-			expire = "1.1.1.1"
 		}
 		country_leader = {
 			ideology = lib_constitutional_monarchy
 			traits = { golden_king }
-			expire = "1.1.1.1"
 		}
 		country_leader = {
 			ideology = monarchy_neutral
-			expire = "1.1.1.1"
 		}
 	}
 	SWE_gustav_horn = {

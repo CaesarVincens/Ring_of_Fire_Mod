@@ -86,21 +86,18 @@ country_event = {
 						promote_leader = yes
 						country_leader = {
 							ideology = absolute_monarchy
-							expire = "1660.1.1"
 						}
 					}
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
 							ideology = constitutional_monarchy
-							expire = "1660.1.1"
 						}
 					}
 					add_country_leader_role = {
 						promote_leader = yes
 						country_leader = {
 							ideology = absolute_monarchy_neutral
-							expire = "1660.1.1"
 						}
 					}
 				}
