@@ -37,3 +37,4 @@ add_ideas = {
 	balanced_eco
 }
 set_stability = 0.5
+recruit_character = BOH_frederick_v

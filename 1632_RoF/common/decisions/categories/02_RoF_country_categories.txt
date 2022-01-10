@@ -168,3 +168,8 @@ german_decisions = {
 		is_german_tag = yes
 	}
 }
+
+thirty_years_war_decisions = {
+	icon = border_conflicts
+	priority = 100
+}

@@ -68,3 +68,4 @@ recruit_character = ENG_thomas_wentworth
 recruit_character = ENG_john_hampden
 recruit_character = ENG_richard_boyle
 recruit_character = ENG_william_laud
+recruit_character = SCO_james_stuart

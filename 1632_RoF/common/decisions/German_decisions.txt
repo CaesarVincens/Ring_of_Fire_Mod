@@ -1,4 +1,7 @@
 german_decisions = {
+}
+
+thirty_years_war_decisions = {
 	WRZ_protect_wurzburg = {
 		allowed = {
 			original_tag = WRZ
@@ -138,6 +141,167 @@ german_decisions = {
 			effect_tooltip = {
 				SWE = { set_state_controller = 248 }
 			}
+		}
+	}
+	AUS_protect_prague = {
+		fire_only_once = yes
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = BOH
+			}
+		}
+		available = {
+			37 = {
+				custom_trigger_tooltip = {
+					tooltip = AUS_protect_prague_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 3
+						province = { id = 11542 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 37
+			SWE = {
+				focus_progress = {
+					focus = SWE_proceed_on_prague
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 37 }
+			highlight_provinces = {
+				11542
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 37 }
+		}
+		days_mission_timeout = 135
+		is_good = no
+		complete_effect = {
+			37 = { set_state_flag = prague_fortified }
+			custom_effect_tooltip = AUS_protected_prague_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_province_controller = 11542 }
+			}
+		}
+	}
+
+	AUS_bolster_breslau = {
+		fire_only_once = yes
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = BOH
+				original_tag = SIL
+			}
+		}
+		available = {
+			428 = {
+				custom_trigger_tooltip = {
+					tooltip = AUS_bolster_breslau_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 1
+						province = { id = 9570 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 428
+			SWE = {
+				focus_progress = {
+					focus = SWE_secure_silesia
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 428 }
+			highlight_provinces = {
+				9570
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 428 }
+		}
+		days_mission_timeout = 70
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = breslau_fortified }
+			custom_effect_tooltip = AUS_bolstered_breslau_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 428 }
+			}
+		}
+	}
+	AUS_reinforce_ratibor = {
+		fire_only_once = yes
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = BOH
+				original_tag = SIL
+			}
+		}
+		available = {
+			429 = {
+				custom_trigger_tooltip = {
+					tooltip = AUS_reinforce_ratibor_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 1
+						province = { id = 6464 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 429
+			SWE = {
+				focus_progress = {
+					focus = SWE_secure_silesia
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 429 }
+			highlight_provinces = {
+				6464
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 429 }
+		}
+		days_mission_timeout = 70
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = ratibor_fortified }
+			custom_effect_tooltip = AUS_reinforced_ratibor_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 429 }
+			}
+		}
+	}
+	test_tyw = {
+		visible = {
+			tag = SWE
+		}
+		complete_effect = {
+			add_political_power = 1
 		}
 	}
 }

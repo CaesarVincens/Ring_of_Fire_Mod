@@ -16,13 +16,13 @@ state = {
 			arms_factory = 1
 			air_base = 0
 			9471 = {
-				bunker = 1
+				#bunker = 1
 			}
 			9441 = {
-				bunker = 1
+				#bunker = 1
 			}
 			6559 = {
-				bunker = 1
+				#bunker = 1
 			}
 			3535 = {
 				bunker = 1

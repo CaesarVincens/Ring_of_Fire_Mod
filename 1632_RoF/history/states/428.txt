@@ -18,16 +18,16 @@ state = {
 			arms_factory = 1
 			air_base = 0
 			11517 = {
-				bunker = 1
+				#bunker = 1
 			}
 			6595 = {
-				bunker = 1
+				#bunker = 1
 			}
 			3438 = {
-				bunker = 1
+				#bunker = 1
 			}
 			9470 = {
-				bunker = 1
+				#bunker = 1
 			}
 		}
 		add_core_of = POL

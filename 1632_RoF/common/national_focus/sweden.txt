@@ -205,7 +205,7 @@ focus_tree = {
 			OR = {
 				has_global_flag = thirty_years_war_ended
 				BRA = { is_in_faction_with = SWE }
-				BRA = { is_not_potential_friend_of_ROOT = yes }
+				BRA = { is_potential_friend_of_ROOT = no }
 			}
 		}
 		cost = 5
@@ -235,7 +235,7 @@ focus_tree = {
 			OR = {
 				has_global_flag = thirty_years_war_ended
 				MKL = { is_in_faction_with = SWE }
-				MKL = { is_not_potential_friend_of_ROOT = yes }
+				MKL = { is_potential_friend_of_ROOT = no }
 			}
 		}
 		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
@@ -259,7 +259,7 @@ focus_tree = {
 			OR = {
 				has_global_flag = thirty_years_war_ended
 				SAX = { is_in_faction_with = SWE }
-				SAX = { is_not_potential_friend_of_ROOT = yes }
+				SAX = { is_potential_friend_of_ROOT = no }
 			}
 		}
 		prerequisite = { focus = SWE_bully_brandenburg }
@@ -286,6 +286,9 @@ focus_tree = {
 		}
 	}
 	
+	######################
+	### Bohemia Branch ###
+	######################
 	focus = {
 		id = SWE_proceed_on_prague
 		icon = GFX_focus_generic_little_entente
@@ -298,11 +301,15 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
+		mutually_exclusive = { focus = SWE_force_franconia }
+		prerequisite = { focus = SWE_strong_arm_saxony }
+		relative_position_id = SWE_strong_arm_saxony
+		cost = 15
 		#cancel_if_invalid = no
 		continue_if_invalid = yes
 		available = {
 			has_global_flag = thirty_years_war_ongoing
-			#alliance_strength_ratio > 1
+			alliance_strength_ratio > 1
 			#enemies_strength_ratio < 0.75
 			#strength_ratio = {
 			#	tag = AUS
@@ -311,14 +318,8 @@ focus_tree = {
 			414 = { is_controlled_by_ROOT_or_ally = yes }
 			37 = {
 				custom_trigger_tooltip = {
-					tooltip = is_owned_by_AUS_or_ally
-					OWNER = {
-						OR = {
-							tag = AUS
-							is_subject_of = AUS
-							is_in_faction_with = AUS
-						}
-					}
+					tooltip = is_controlled_by_AUS_or_ally
+					CONTROLLER = { is_ally_with = AUS }
 				}
 			}
 		}
@@ -327,21 +328,18 @@ focus_tree = {
 				has_global_flag = thirty_years_war_ended
 				37 = { is_controlled_by_ROOT_or_ally = yes }
 				37 = {
-					NOT = { is_owned_by = AUS }
-					NOT = {
-						owner = { is_in_faction_with = AUS }
+					CONTROLLER = {
+						NOT = { is_ally_with = AUS }
 					}
 				}
 			}
 		}
-		mutually_exclusive = { focus = SWE_force_franconia }
-		prerequisite = { focus = SWE_strong_arm_saxony }
-		relative_position_id = SWE_strong_arm_saxony
-		cost = 15
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			country_event = {
+				id = Rof_SWE.170
+			}
 		}
 	}
 
@@ -357,30 +355,22 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
+		prerequisite = { focus = SWE_proceed_on_prague }
+		relative_position_id = SWE_proceed_on_prague
+		cost = 10
 		available = {
 			has_global_flag = thirty_years_war_ongoing
 			37 = { is_controlled_by_ROOT_or_ally = yes }
 			428 = {
 				custom_trigger_tooltip = {
-					tooltip = is_owned_by_AUS_or_ally
-					OWNER = {
-						OR = {
-							tag = AUS
-							is_subject_of = AUS
-							is_in_faction_with = AUS
-						}
-					}
+					tooltip = is_controlled_by_AUS_or_ally
+					CONTROLLER = { is_ally_with = AUS }
 				}
 			}
 			429 = {
 				custom_trigger_tooltip = {
-					tooltip = is_owned_by_AUS_or_ally
-					OWNER = {
-						OR = {
-							tag = AUS
-							is_in_faction_with = AUS
-						}
-					}
+					tooltip = is_controlled_by_AUS_or_ally
+					CONTROLLER = { is_ally_with = AUS }
 				}
 			}
 		}
@@ -393,27 +383,22 @@ focus_tree = {
 				}
 				AND = {
 					428 = {
-						NOT = { is_owned_by = AUS }
-						NOT = {
-							owner = { is_in_faction_with = AUS }
+						CONTROLLER = {
+							NOT = { is_ally_with = AUS }
 						}
 					}
 					429 = {
-						NOT = { is_owned_by = AUS }
-						NOT = {
-							owner = { is_in_faction_with = AUS }
+						CONTROLLER = {
+							NOT = { is_ally_with = AUS }
 						}
 					}
 				}
 			}
 		}
-		prerequisite = { focus = SWE_proceed_on_prague }
-		relative_position_id = SWE_proceed_on_prague
-		cost = 10
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			country_event = { id = Rof_SWE.171 }
 		}
 	}
 
@@ -430,24 +415,41 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		prerequisite = { focus = SWE_proceed_on_prague }
+		relative_position_id = SWE_proceed_on_prague
+		cost = 10
+		cancel_if_invalid = no
 		available = {
 			has_global_flag = thirty_years_war_ongoing
 			37 = { is_controlled_by_ROOT_or_ally = yes }
-			NOT = { country_exists = BOH }
+			if = {
+				limit = {
+					country_exists = BOH
+				}
+				BOH = { is_ally_with = AUS }
+				else = {
+					BOH = { exists = no }
+				}
+			}
 		}
 		bypass = {
 			OR = {
 				has_global_flag = thirty_years_war_ended
-				country_exists = BOH
+				if = {
+					limit = {
+						country_exists = BOH
+					}
+					BOH = { NOT = { is_ally_with = AUS } }
+					else = {
+						BOH = { exists = yes }
+					}
+				}
 			}
 		}
-		prerequisite = { focus = SWE_proceed_on_prague }
-		relative_position_id = SWE_proceed_on_prague
-		cost = 10
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
-			custom_effect_tooltip = focus_effect_WIP_TT
+			country_event = { id = Rof_SWE.175 }
 		}
 	}
 
@@ -485,6 +487,9 @@ focus_tree = {
 		}
 	}
 	
+	###########################
+	### South German Branch ###
+	###########################
 	focus = {
 		id = SWE_force_franconia
 		icon = GFX_goal_generic_occupy_states_ongoing_war
@@ -574,11 +579,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
-			if = {
-				limit = {
-					has_country_flag = MNZ_protected_mainz
-				}
-			}
 			country_event = { id = RoF_SWE.147 hours = 1 }
 		}
 	}
@@ -750,7 +750,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_TYW FOCUS_FILTER_CANON }
 		completion_reward = {
-			country_event = { id = RoF_SWE.161 hours = 1 }
+			country_event = { id = RoF_SWE.151 hours = 1 }
 		}
 	}
 

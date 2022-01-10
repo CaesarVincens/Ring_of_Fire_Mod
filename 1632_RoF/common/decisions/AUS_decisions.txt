@@ -1,5 +1,8 @@
 AUS_major_decisions = {
 	AUS_test = {
+		visible = {
+			is_debug = yes
+		}
 		available = {
 			any_of_scopes = {
 				array = german_tags
