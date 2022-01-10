@@ -8,6 +8,11 @@ focus_tree = {
 		}
 	}
 
+	initial_show_position = {
+		x = 19
+		y = 0
+	}
+
 	####################
 	#     AIR TREE     #
 	####################
@@ -719,7 +724,7 @@ focus_tree = {
 		id = POL_invest_in_szlachta_lands
 		icon = GFX_goal_generic_political_pressure
 		cost = 10
-		x = 26
+		x = 28
 		y = 0
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
@@ -901,12 +906,20 @@ focus_tree = {
 		id = POL_maintain_status_quo
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 5.00
-		x = 13
+		x = 14
 		y = 0
 		allow_branch = {
-			NOT = {
-				has_completed_focus = POL_strengthen_king
-				has_completed_focus = POL_strengthen_the_sejm
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_strengthen_king
+					has_completed_focus = POL_strengthen_the_sejm
+				}
 			}
 		}
 		mutually_exclusive = {
@@ -926,12 +939,20 @@ focus_tree = {
 		id = POL_strengthen_the_sejm
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
-		x = 17
+		x = 19
 		y = 0
 		allow_branch = {
-			NOT = {
-				has_completed_focus = POL_maintain_status_quo
-				has_completed_focus = POL_strengthen_king
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+					has_completed_focus = POL_strengthen_king
+				}
 			}
 		}
 		mutually_exclusive = {
@@ -956,18 +977,30 @@ focus_tree = {
 		id = POL_strengthen_king
 		icon = GFX_focus_rom_royal_dictatorship
 		cost = 10.00
-		x = 23
+		x = 25
 		y = 0
 		offset = {
 			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = POL_strengthen_king
 			}
 			x = -3
 		}
 		allow_branch = {
-			NOT = {
-				has_completed_focus = POL_maintain_status_quo
-				has_completed_focus = POL_strengthen_the_sejm
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+					has_completed_focus = POL_strengthen_the_sejm
+				}
 			}
 		}
 		available = {
@@ -999,10 +1032,14 @@ focus_tree = {
 		id = POL_secure_sucession
 		icon = GFX_focus_hun_elect_a_king
 		cost = 10.00
-		x = 2
+		x = 3
 		y = 1
 		offset = {
 			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = POL_strengthen_king
 			}
 			x = 2
@@ -1032,7 +1069,6 @@ focus_tree = {
 			base = 2
 		}
 	}
-
 
 	focus = {
 		id = POL_vivente_rege
@@ -1086,6 +1122,71 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = POL_control_unrest
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10.00
+		x = 1
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_king
+			}
+			x = 2
+		}
+		relative_position_id = POL_maintain_status_quo
+		prerequisite = { focus = POL_strengthen_the_sejm focus = POL_strengthen_king focus = POL_maintain_status_quo }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_heard_of_RoF_TT
+				OR = {
+					date > 1632.1.1
+					has_country_flag = knows_about_grantville
+				}
+			}
+			sejm_low_support_trigger = yes
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
+
+	focus = {
+		id = POL_manage_cossacks
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = POL_control_unrest
+		prerequisite = { focus = POL_control_unrest }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			owns_state = 697
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			697 = {
+				add_compliance = 15
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
 	####################
 	##  SEJM  REFORM  ##
 	####################
@@ -1098,14 +1199,26 @@ focus_tree = {
 		y = 1
 		offset = {
 			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = POL_strengthen_the_sejm
 			}
 			x = 1
 		}
 		relative_position_id = POL_strengthen_the_sejm
 		allow_branch = {
-			NOT = {
-				has_completed_focus = POL_maintain_status_quo
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+				}
 			}
 		}
 		prerequisite = {
@@ -1154,6 +1267,10 @@ focus_tree = {
 		y = 1
 		offset = {
 			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = POL_strengthen_the_sejm
 			}
 			x = -1
@@ -1328,9 +1445,17 @@ focus_tree = {
 		#available_if_capitulated = yes
 		relative_position_id = POL_strengthen_the_sejm
 		allow_branch = {
-			NOT = {
-				has_completed_focus = POL_maintain_status_quo
-				has_completed_focus = POL_strengthen_king
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+					has_completed_focus = POL_strengthen_king
+				}
 			}
 		}
 		prerequisite = {
@@ -1402,9 +1527,20 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = POL_henrician_articles_2
-				add_idea = POL_constitution
+			if = {
+				limit = {
+					has_idea = POL_henrician_articles_2
+				}
+				swap_ideas = {
+					remove_idea = POL_henrician_articles_2
+					add_idea = POL_constitution
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = POL_henrician_articles
+						add_idea = POL_constitution
+					}
+				}
 			}
 			POL_magnates_down_both_up_5 = yes
 			hidden_effect = {
@@ -1453,29 +1589,69 @@ focus_tree = {
 	####################
 
 	focus = {
-		id = POL_appease_sejm
+		id = POL_flatter_szlachta
 		icon = GFX_focus_generic_concessions
 		cost = 10.00
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = POL_maintain_status_quo
-		prerequisite = { focus = POL_maintain_status_quo focus = POL_strengthen_the_sejm }
+		prerequisite = { focus = POL_maintain_status_quo }
 		allow_branch = {
-			NOT = {
-				has_completed_focus = POL_strengthen_the_sejm
-				has_completed_focus = POL_strengthen_king
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_strengthen_the_sejm
+					has_completed_focus = POL_strengthen_king
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
 		completion_reward = {
-			add_political_power = 60
-			POL_sejm_medium_support = yes
+			add_political_power = 30
+			POL_sejm_small_support = yes
 		}
 		ai_will_do = {
 			base = 2
 		}
 	}
 
+	focus = {
+		id = POL_cajole_magnates
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = POL_flatter_szlachta
+		prerequisite = { focus = POL_flatter_szlachta }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_strengthen_the_sejm
+					has_completed_focus = POL_strengthen_king
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			add_political_power = 30
+			POL_sejm_small_support = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
 	####################
 	# ABSOLUTE  POWER! #
 	####################
@@ -1488,6 +1664,10 @@ focus_tree = {
 		y = 1
 		offset = {
 			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = POL_strengthen_king
 			}
 			x = 3
@@ -1518,6 +1698,10 @@ focus_tree = {
 		y = 1
 		offset = {
 			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
 				has_completed_focus = POL_strengthen_king
 			}
 			x = 3
@@ -1748,6 +1932,14 @@ focus_tree = {
 					transfer_state = 688
 					transfer_state = 689
 					transfer_state = 690
+					if = {
+						limit = {
+							697 = {
+								is_owned_by = ROOT
+							}
+						}
+						transfer_state = 697
+					}
 					set_cosmetic_tag = Magnate_Ruthenia
 				}
 				set_autonomy = {
@@ -1796,7 +1988,7 @@ focus_tree = {
 		id = POL_army_funding
 		icon = GFX_goal_generic_army_doctrines
 		cost = 10
-		x = 30
+		x = 32
 		y = 0
 		available = {
 			sejm_low_support_trigger = yes

@@ -16,7 +16,7 @@ state = {
 		victory_points = {
 			11437 5 
 		}
-
+		set_compliance = 50
 	}
 
 	local_supplies = 5.0
