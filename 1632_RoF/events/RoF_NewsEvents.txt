@@ -15,29 +15,25 @@ news_event = {
 		name = RoF_news.01.a
 		trigger = {
 			OR = {
-				tag = SWE
 				tag = NUS
-				is_in_faction_with = SWE
+				is_ally_with = SWE
 			}
 		}
 	}
 	option = {
 		name = RoF_news.01.b
 		trigger = {
-			OR = {
-				tag = AUS
-				is_in_faction_with = AUS
-			}
+			is_ally_with = AUS
 		}
 	}
 	option = {
 		name = RoF_news.01.c
 		trigger = { 
-			NOT = { tag = SWE }
-			NOT = { tag = NUS }
-			NOT = { tag = AUS }
-			NOT = { is_in_faction_with = AUS }
-			NOT = { is_in_faction_with = SWE }
+			NOT = {
+				tag = NUS
+				is_ally_with = AUS
+				is_ally_with = SWE
+			}
 		}
 	}
 }
@@ -57,31 +53,27 @@ news_event = {
 		name = RoF_news.02.a
 		trigger = {
 			OR = {
-				tag = SWE
 				tag = NUS
 				tag = BOH
-				is_in_faction_with = SWE
+				is_ally_with = SWE
 			}
 		}
 	}
 	option = {
 		name = RoF_news.02.b
 		trigger = {
-			OR = {
-				tag = AUS
-				is_in_faction_with = AUS
-			}
+			is_ally_with = AUS
 		}
 	}
 	option = {
 		name = RoF_news.02.c
 		trigger = { 
-			NOT = { tag = SWE }
-			NOT = { tag = NUS }
-			NOT = { tag = AUS }
-			NOT = { tag = BOH }
-			NOT = { is_in_faction_with = AUS }
-			NOT = { is_in_faction_with = SWE }
+			NOT = {
+				tag = NUS
+				tag = BOH
+				is_ally_with = AUS
+				is_ally_with = SWE
+			}
 		}
 	}
 }
@@ -101,31 +93,27 @@ news_event = {
 		name = RoF_news.0201.a
 		trigger = {
 			OR = {
-				tag = SWE
 				tag = NUS
 				tag = BOH
-				is_in_faction_with = SWE
+				is_ally_with = SWE
 			}
 		}
 	}
 	option = {
 		name = RoF_news.0201.b
 		trigger = {
-			OR = {
-				tag = AUS
-				is_in_faction_with = AUS
-			}
+			is_ally_with = AUS
 		}
 	}
 	option = {
 		name = RoF_news.0201.c
 		trigger = { 
-			NOT = { tag = SWE }
-			NOT = { tag = NUS }
-			NOT = { tag = AUS }
-			NOT = { tag = BOH }
-			NOT = { is_in_faction_with = AUS }
-			NOT = { is_in_faction_with = SWE }
+			NOT = {
+				tag = NUS
+				tag = BOH
+				is_ally_with = AUS
+				is_ally_with = SWE
+			}
 		}
 	}
 }
@@ -145,29 +133,25 @@ news_event = {
 		name = RoF_news.03.a
 		trigger = {
 			OR = {
-				tag = SWE
+				is_ally_with = SWE
 				tag = NUS
-				is_in_faction_with = SWE
 			}
 		}
 	}
 	option = {
 		name = RoF_news.03.b
 		trigger = {
-			OR = {
-				tag = AUS
-				is_in_faction_with = AUS
-			}
+			is_ally_with = AUS
 		}
 	}
 	option = {
 		name = RoF_news.03.c
 		trigger = { 
-			NOT = { tag = SWE }
-			NOT = { tag = NUS }
-			NOT = { tag = AUS }
-			NOT = { is_in_faction_with = AUS }
-			NOT = { is_in_faction_with = SWE }
+			NOT = {
+				tag = NUS
+				is_ally_with = AUS
+				is_ally_with = SWE
+			}
 		}
 	}
 }
@@ -213,7 +197,18 @@ news_event = {
 news_event = {
 	id = RoF_news.05
 	title = RoF_news.05.t
-	desc = RoF_news.05.d
+	desc = {
+		trigger = {
+			NUS = { has_country_flag = NUS_patriotic_fervor_flag }
+		}
+		text = RoF_news.05.d
+	}
+	desc = {
+		trigger = {
+			NUS = { NOT = { has_country_flag = NUS_patriotic_fervor_flag } }
+		}
+		text = RoF_news.05.da
+	}
 	picture = GFX_news_event_landscape_urban_1
 	
 	major = yes
@@ -221,16 +216,33 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = RoF_news.05.a
+		name = RoF_news.05.b
 		trigger = {
-			NOT = { original_tag = NUS }
-			NOT = { tag = SWE }
-			NOT = { tag = UPS }
+			NOT = {
+				original_tag = NUS
+				is_ally_with = SWE
+			}
 		}
 	}
 	option = {
-		name = RoF_news.05.b
-		trigger = { OR = { original_tag = NUS tag = SWE tag = UPS } }
+		name = RoF_news.05.a
+		trigger = {
+			OR = {
+				original_tag = NUS
+				is_ally_with = SWE
+			}
+			NUS = { has_country_flag = NUS_patriotic_fervor_flag }
+		}
+	}
+	option = {
+		name = RoF_news.05.c
+		trigger = {
+			OR = {
+				original_tag = NUS
+				is_ally_with = SWE
+			}
+			NUS = { NOT = { has_country_flag = NUS_patriotic_fervor_flag } }
+		}
 	}
 }
 
@@ -271,9 +283,7 @@ news_event = {
 	option = {
 		name = RoF_news.11.a
 		trigger = {
-			NOT = {
-				tag = NUS
-			}
+			NOT = { tag = NUS }
 		}
 	}
 	option = {
@@ -296,9 +306,7 @@ news_event = {
 	option = {
 		name = RoF_news.12.a
 		trigger = {
-			NOT = {
-				tag = NUS
-			}
+			NOT = { tag = NUS }
 		}
 	}
 	option = {
@@ -321,9 +329,7 @@ news_event = {
 	option = {
 		name = RoF_news.13.a
 		trigger = {
-			NOT = {
-				tag = NUS
-			}
+			NOT = { tag = NUS }
 		}
 	}
 	option = {
@@ -346,9 +352,7 @@ news_event = {
 	option = {
 		name = RoF_news.14.a
 		trigger = {
-			NOT = {
-				tag = NUS
-			}
+			NOT = { tag = NUS }
 		}
 	}
 	option = {
@@ -370,9 +374,7 @@ news_event = {
 	option = {
 		name = RoF_news.15.a
 		trigger = {
-			NOT = {
-				tag = BRG
-			}
+			NOT = { tag = BRG }
 		}
 	}
 	option = {
@@ -394,14 +396,91 @@ news_event = {
 	option = {
 		name = RoF_news.16.a
 		trigger = {
-			NOT = {
-				tag = DEN
-			}
+			NOT = { tag = DEN }
 		}
 	}
 	option = {
 		name = RoF_news.16.b
 		trigger = { tag = DEN }
+	}
+}
+
+# Frederick V dies
+news_event = {
+	id = RoF_news.17
+	title = RoF_news.17.t
+	desc = RoF_news.17.d
+	picture = GFX_news_event_landscape_urban_1
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		date > 1632.12.1
+		NOT = { has_global_flag = frederick_v_restored }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		set_global_flag = winter_king_dead
+	}
+	option = {
+		name = RoF_news.17.a
+		trigger = {
+			is_ally_with = AUS
+		}
+	}
+	option = {
+		name = RoF_news.17.b
+		trigger = {
+			is_ally_with = SWE
+		}
+	}
+	option = {
+		name = RoF_news.17.c
+		trigger = {
+			NOT = {
+				is_ally_with = SWE
+				is_ally_with = AUS
+			}
+		}
+	}
+}
+
+# Frederick V dies
+news_event = {
+	id = RoF_news.18
+	title = RoF_news.18.t
+	desc = RoF_news.18.d
+	picture = GFX_news_event_landscape_urban_1
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		date > 1635.10.1
+		NOT = { has_global_flag = karl_ludwig_installed }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		set_global_flag = karl_ludwig_catholic
+	}
+	option = {
+		name = RoF_news.18.a
+		trigger = {
+			original_tag = ENG
+		}
+	}
+	option = {
+		name = RoF_news.18.b
+		trigger = {
+			NOT = {
+				original_tag = ENG
+			}
+		}
 	}
 }
 
@@ -448,19 +527,17 @@ news_event = {
 	
 	option = {
 		name = RoF_news.21.a
-		trigger = { OR = { tag = NUS is_in_faction_with = NUS } }
+		trigger = { is_ally_with = NUS }
 	}
 	option = {
 		name = RoF_news.21.b
-		trigger = { OR = { tag = FRA is_in_faction_with = FRA } }
+		trigger = { is_ally_with = FRA }
 	}
 	option = {
 		name = RoF_news.21.c
 		trigger = {
-			NOT = { tag = FRA }
-			NOT = { is_in_faction_with = FRA }
-			NOT = { tag = NUS }
-			NOT = { is_in_faction_with = NUS }
+			NOT = { is_ally_with = FRA }
+			NOT = { is_ally_with = NUS }
 		}
 	}
 	

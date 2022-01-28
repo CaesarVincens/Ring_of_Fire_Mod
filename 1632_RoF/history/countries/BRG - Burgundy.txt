@@ -5,9 +5,12 @@ oob = "BRG_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
+musket_tech = 1
+light_artillery_1 = 1
 heavy_artillery_1 = 1
 transport = 1
 }
@@ -34,12 +37,3 @@ add_ideas = {
 	military_focus_eco
 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Bernard Wettin"
-    desc = "POLITICS_MAXIMILIAN_CORDEMANN_DESC"
-    picture = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}

@@ -1,4 +1,3 @@
-
 state = {
 	id = 47
 	name = "STATE_47"
@@ -10,23 +9,24 @@ state = {
 	history = {
 		owner = BRA
 		victory_points = {
-			11288 3 
+			537 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
 			444 = {
-				bunker = 1
+				#bunker = 1
 			}
 		}
 		add_core_of = BRA
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies = 5.0
 	provinces = {
-		444 537 3473 6236 9252 9277 9306 9387 11260 11288 11478 
+		444 537 3473 6236 9277 9306 9387 11288 11478 
 	}
 	manpower = 128400
 	buildings_max_level_factor = 1.000

@@ -73,7 +73,6 @@ form_united_netherlands_category = {
 			has_dlc = "Waking the Tiger"
 			AND = {
 				has_dlc = "Man the Guns"
-				tag = HOL
 			}
 		}
 	}

@@ -1,12 +1,11 @@
-
-state={
-	id=389
-	name="STATE_389"
-	resources={
-		steel=20.000
+state = {
+	id = 389
+	name = "STATE_389"
+	resources = {
+		steel = 20.000
 	}
 
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			6380 50 
@@ -15,7 +14,7 @@ state={
 			11248 10 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -25,10 +24,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		214 280 283 301 350 357 378 3202 3259 3268 3290 3339 3358 3370 3391 6269 6283 6290 6316 6348 6356 6380 6414 9235 9278 9282 9311 9348 9356 9378 11217 11282 11295 11330 11338 11362 
 	}
-	manpower=2055476
-	buildings_max_level_factor=1.000
-	state_category=large_city
+	manpower = 2055476
+	buildings_max_level_factor = 1.000
+	state_category = large_city
 }

@@ -7,9 +7,11 @@ set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
+gulyay_gorod_tech = 1
 heavy_artillery_1 = 1
 transport = 1
 }
@@ -17,27 +19,30 @@ transport = 1
 # Research Bonuses
 set_convoys = 10
 
-#create_dynamic_country = {
-#	original_tag = RUS
-#	set_country_flag = united_states_of_russia
-#	set_politics = {
-#		ruling_party = constitutionalist
-#	}
-#	set_cosmetic_tag = Free_Russia
-#	set_research_slots = 3
-#	reserve_dynamic_country = yes
-#}
-#create_dynamic_country = {
-#	original_tag = RUS
-#	set_country_flag = siberia_russia
-#	set_politics = {
-#		ruling_party = neutrality
-#	}
-#	set_cosmetic_tag = Siberia
-#	set_research_slots = 2
-#	reserve_dynamic_country = yes
-#}
-
+create_dynamic_country = {
+	original_tag = RUS
+	set_country_flag = directorate_russia
+	set_politics = {
+		ruling_party = absolutist
+	}
+	set_cosmetic_tag = Directorate_Russia
+	set_research_slots = 3
+	reserve_dynamic_country = yes
+}
+create_dynamic_country = {
+	original_tag = RUS
+	set_country_flag = siberia_russia
+	set_politics = {
+		ruling_party = neutrality
+	}
+	set_cosmetic_tag = Siberia
+	set_research_slots = 2
+	reserve_dynamic_country = yes
+}
+every_state = {
+	remove_core_of = RSB
+	remove_core_of = RSC
+}
 set_politics = {
     ruling_party = absolutist
     last_election = "1631.1.1"
@@ -55,7 +60,7 @@ set_popularities = {
 set_country_flag = religion_orthodox
 add_ideas = {
 	#military_focus_eco
-	RUS_filaret
+	#RUS_filaret
 	state_religion_law
 	RUS_eastern_serfdom_1
 	RUS_boyar_cavalry_1
@@ -65,49 +70,15 @@ add_timed_idea = {
 	idea = RUS_slow_fever
 	days = 35
 }
+add_timed_idea = {
+    idea = RUS_truce_of_deulino
+    days = 767
+}
 country_event = { id = RoF_RUS.10 days = 325 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Mikhail Romanov"
-    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-		weak_czar
-    }
-}
-
-create_country_leader = {
-    name = "Mikhail Romanov"
-    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-		weak_czar
-    }
-}
-
-create_country_leader = {
-    name = "Mikhail Romanov"
-    desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
-    picture = "gfx/leaders/RUS/Portrait_Russia_Mikhail_Romanov.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-		weak_czar
-    }
-}
-
-create_corps_commander = {
-	name = "Mikhail Borisovich Shein"
-	picture = "Portrait_Russia_Mikhail_Shein.dds"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	logistics_skill = 1
-	planning_skill = 1
-	id = 1050
-}
+recruit_character = RUS_mikhail_romanov
+recruit_character = RUS_fedor_sheremetev
+recruit_character = RUS_mikhail_shein
+recruit_character = RUS_artemi_izmailov
+recruit_character = RUS_filaret
+activate_advisor = RUS_filaret

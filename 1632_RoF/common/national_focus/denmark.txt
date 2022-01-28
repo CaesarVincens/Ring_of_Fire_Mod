@@ -464,7 +464,7 @@ focus_tree = {
 					FRA = {
 						focus_progress = {
 							focus = FRA_ostend_league_focus
-							progress > 0.01
+							progress > 0
 						}
 					}
 					has_country_flag = ostend_member
@@ -668,7 +668,7 @@ focus_tree = {
 				FRA = {
 					focus_progress = {
 						focus = FRA_ostend_league_focus
-						progress > 0.01
+						progress > 0
 					}
 				}
 				NOT = { has_country_flag = ostend_member }
@@ -745,9 +745,7 @@ focus_tree = {
 		available = {
 		}
 		bypass = {
-			NUS = {
-				NOT = { has_war_with = AUS }
-			}
+			NUS = { NOT = { has_war_with = AUS } }
 		}
 		search_filters = { FOCUS_FILTER_TYW }
 		completion_reward = {
@@ -773,12 +771,10 @@ focus_tree = {
 				limit = {
 					NUS = { is_in_faction = yes is_faction_leader = no }
 				}
-				random_country = {
-					limit = {
-						is_in_faction_with = NUS
-						is_faction_leader = yes
+				NUS = {
+					faction_leader  = {
+						add_to_faction = DEN
 					}
-					add_to_faction = DEN
 				}
 			}
 			else = {
@@ -807,12 +803,12 @@ focus_tree = {
 			transfer_state = 446
 			add_resource = {
 				type = aluminium
-				amount = 2
+				amount = 4
 				state = 446
 			}
 			add_resource = {
 				type = chromium
-				amount = 2
+				amount = 4
 				state = 446
 			}
 		}

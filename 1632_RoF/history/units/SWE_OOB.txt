@@ -57,7 +57,6 @@ division_template = {
 	}
 }
 
-### No BHU air forces ###
 instant_effect = {
 	add_equipment_production = {
 		equipment = {

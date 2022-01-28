@@ -1,4 +1,10 @@
 spriteTypes = {
+	#### other texticons
+	spriteType = {
+		name = "GFX_pol_balance_king"
+		texturefile = "gfx/texticons/pol_balance_king.dds"
+		legacy_lazy_load = no
+	}
 
 	#### unit texticons
 	spriteType = {
@@ -14,6 +20,13 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}	
+
+	spriteType = {
+		name = "GFX_unit_gulyay_gorod_icon_small"
+		texturefile = "gfx/texticons/unit_golyay_gorod_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 
 	spriteType = {
 		name = "GFX_unit_line_infantry_icon_small"
@@ -62,6 +75,26 @@ spriteTypes = {
 		texturefile = "gfx/texticons/unit_heavy_artillery_icon_small.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_light_artillery_icon_small"
+		texturefile = "gfx/texticons/unit_light_artillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = {
+		name = "GFX_unit_heavy_artillery_icon_small"
+		texturefile = "gfx/texticons/unit_heavy_artillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_unit_steam_tank_icon_small"
+		texturefile = "gfx/texticons/nato_unit_heavy_armor_icon_small.dds"
+		legacy_lazy_load = no
 	}	
 
 	#### nato icons
@@ -96,6 +129,18 @@ spriteTypes = {
 	}	
 
 	spriteType = {
+		name = "GFX_nato_unit_light_artillery_brigade_icon_small"
+		texturefile = "gfx/texticons/nato_unit_artillery_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+
+	spriteType = {
+		name = "GFX_nato_unit_heavy_artillery_brigade_icon_small"
+		texturefile = "gfx/texticons/nato_unit_artillery_icon_small.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_nato_unit_light_artillery_icon_small"
 		texturefile = "gfx/texticons/nato_unit_artillery_icon_small.dds"
 		legacy_lazy_load = no
@@ -105,5 +150,10 @@ spriteTypes = {
 		name = "GFX_nato_unit_heavy_artillery_icon_small"
 		texturefile = "gfx/texticons/nato_unit_artillery_icon_small.dds"
 		legacy_lazy_load = no
-	}	
+	}
+	spriteType = {
+		name = "GFX_nato_unit_steam_tank_icon_small"
+		texturefile = "gfx/texticons/nato_unit_heavy_armor_icon_small.dds"
+		legacy_lazy_load = no
+	}
 }

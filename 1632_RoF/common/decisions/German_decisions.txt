@@ -1,0 +1,307 @@
+german_decisions = {
+}
+
+thirty_years_war_decisions = {
+	WRZ_protect_wurzburg = {
+		allowed = {
+			original_tag = WRZ
+		}
+		fire_only_once = yes
+		available = {
+			578 = {
+				custom_trigger_tooltip = {
+					tooltip = WRZ_protect_wurzburg_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 1
+						province = { id = 11417 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 578
+			SWE = {
+				focus_progress = {
+					focus = SWE_force_franconia
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 578 }
+			highlight_provinces = {
+				11417
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 578 }
+		}
+		days_mission_timeout = 35
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = WRZ_protected_wurzburg }
+			custom_effect_tooltip = WRZ_protected_wurzburg_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 578 }
+			}
+		}
+	}
+	WRZ_protect_fulda = {
+		allowed = {
+			original_tag = WRZ
+		}
+		fire_only_once = yes
+		available = {
+			577 = {
+				custom_trigger_tooltip = {
+					tooltip = WRZ_protect_fulda_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 1
+						province = { id = 11445 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 577
+			SWE = {
+				focus_progress = {
+					focus = SWE_force_franconia
+					progress > 0
+				}
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 577 }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 577 }
+			highlight_provinces = {
+				11445
+			}
+		}
+		days_mission_timeout = 35
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = WRZ_protected_fulda }
+			custom_effect_tooltip = WRZ_protected_fulda_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 577 }
+			}
+		}
+	}
+	MNZ_protect_mainz = {
+		allowed = {
+			original_tag = MNZ
+		}
+		fire_only_once = yes
+		available = {
+			248 = {
+				custom_trigger_tooltip = {
+					tooltip = MNZ_protect_mainz_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 2
+						province = { id = 11560 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 248
+			SWE = {
+				focus_progress = {
+					focus = SWE_move_on_the_main
+					progress > 0
+				}
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 248 }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 248 }
+			highlight_provinces = {
+				11560
+			}
+		}
+		days_mission_timeout = 70
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = MNZ_protected_mainz }
+			custom_effect_tooltip = MNZ_protected_mainz_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 248 }
+			}
+		}
+	}
+	AUS_protect_prague = {
+		fire_only_once = yes
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = BOH
+			}
+		}
+		available = {
+			37 = {
+				custom_trigger_tooltip = {
+					tooltip = AUS_protect_prague_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 3
+						province = { id = 11542 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 37
+			SWE = {
+				focus_progress = {
+					focus = SWE_proceed_on_prague
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 37 }
+			highlight_provinces = {
+				11542
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 37 }
+		}
+		days_mission_timeout = 135
+		is_good = no
+		complete_effect = {
+			37 = { set_state_flag = prague_fortified }
+			custom_effect_tooltip = AUS_protected_prague_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_province_controller = 11542 }
+			}
+		}
+	}
+
+	AUS_bolster_breslau = {
+		fire_only_once = yes
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = BOH
+				original_tag = SIL
+			}
+		}
+		available = {
+			428 = {
+				custom_trigger_tooltip = {
+					tooltip = AUS_bolster_breslau_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 1
+						province = { id = 9570 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 428
+			SWE = {
+				focus_progress = {
+					focus = SWE_secure_silesia
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 428 }
+			highlight_provinces = {
+				9570
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 428 }
+		}
+		days_mission_timeout = 70
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = breslau_fortified }
+			custom_effect_tooltip = AUS_bolstered_breslau_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 428 }
+			}
+		}
+	}
+	AUS_reinforce_ratibor = {
+		fire_only_once = yes
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = BOH
+				original_tag = SIL
+			}
+		}
+		available = {
+			429 = {
+				custom_trigger_tooltip = {
+					tooltip = AUS_reinforce_ratibor_tooltip
+					any_province_building_level = {
+						building = bunker
+						level > 1
+						province = { id = 6464 }
+					}
+				}
+			}
+		}
+		activation = {
+			controls_state = 429
+			SWE = {
+				focus_progress = {
+					focus = SWE_secure_silesia
+					progress > 0
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 429 }
+			highlight_provinces = {
+				6464
+			}
+		}
+		cancel_trigger = {
+			NOT = { controls_state = 429 }
+		}
+		days_mission_timeout = 70
+		is_good = no
+		complete_effect = {
+			SWE = { set_country_flag = ratibor_fortified }
+			custom_effect_tooltip = AUS_reinforced_ratibor_tooltip
+		}
+		timeout_effect = {
+			effect_tooltip = {
+				SWE = { set_state_controller = 429 }
+			}
+		}
+	}
+	test_tyw = {
+		visible = {
+			tag = SWE
+		}
+		complete_effect = {
+			add_political_power = 1
+		}
+	}
+}

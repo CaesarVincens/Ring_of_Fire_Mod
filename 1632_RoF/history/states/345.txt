@@ -1,28 +1,32 @@
 state = {
 	id = 345
-	name= "STATE_345"
-	manpower = 2577224
-
+	name = "STATE_345"
 	resources = {
-		aluminium = 16
-		oil = 34
+		aluminium = 16.000
+		oil = 34.000
 	}
-	state_category = large_town
 
 	history = {
 		owner = POL
-		victory_points = { 9468 8 }
+		victory_points = {
+			11479 8 
+		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+
 		}
 		add_core_of = POL
-		add_core_of = RUT
+
 	}
 
+	local_supplies = 5.0
 	provinces = {
-		438 491 536 3434 3483 3562 3743 6431 6460 6483 9425 9454 9468 9558 11411 11427 11479 11550 
+		438 466 491 3434 3483 3743 6431 6460 6483 6522 9425 9454 9468 9494 11411 11427 11479 11550 
 	}
+	manpower = 677224
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

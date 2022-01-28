@@ -1,20 +1,19 @@
-
-state={
-	id=174
-	name="STATE_174"
-	resources={
-		aluminium=4.000
-		steel=20.000
-		tungsten=2.000
+state = {
+	id = 174
+	name = "STATE_174"
+	resources = {
+		aluminium = 4.000
+		steel = 20.000
+		tungsten = 2.000
 	}
 
-	history={
+	history = {
 		owner = AUS
 		victory_points = {
 			9539 8 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -25,10 +24,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		541 555 581 3484 3537 3550 3565 3581 6573 6586 6604 9539 11522 11539 11554 
 	}
-	manpower=846732
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 846732
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

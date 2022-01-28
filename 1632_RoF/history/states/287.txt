@@ -12,7 +12,7 @@ state = {
 		owner = MUG
 		victory_points = { 4971 4 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -20,6 +20,7 @@ state = {
 		add_core_of = MUG
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1199 1908 2054 4149 4915 4971 4984 7905 7998 10847 10866 12041 12718 12743 12829 12844 12876 12886 
 	}

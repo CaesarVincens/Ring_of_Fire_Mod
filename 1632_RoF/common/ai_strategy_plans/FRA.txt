@@ -1,8 +1,10 @@
 FRA_canon_focuses = {
 	name = "France Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {	
 		original_tag = FRA
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -35,8 +37,10 @@ FRA_contain_habsburgs_AUS = {
 	name = "Contain Habsburgs"
 	desc = "Support enemies of AUS"
 	
-	enable = {
+	allowed = {	
 		original_tag = FRA
+	}
+	enable = {
 		country_exists = AUS
 		has_idea = anti_habsburg_diplomacy
 	}
@@ -63,8 +67,10 @@ FRA_contain_habsburgs_SPR = {
 	name = "Contain Habsburgs"
 	desc = "Support enemies of SPR"
 	
-	enable = {
+	allowed = {	
 		original_tag = FRA
+	}
+	enable = {
 		country_exists = SPR
 		has_idea = anti_habsburg_diplomacy
 	}
@@ -96,8 +102,10 @@ FRA_watch_SPR = {
 	name = "Watch your back"
 	desc = "No One suspects"
 	
-	enable = {
+	allowed = {	
 		original_tag = FRA
+	}
+	enable = {
 		country_exists = SPR
 		NOT = { has_idea = anti_habsburg_diplomacy }
 	}
@@ -116,7 +124,7 @@ FRA_watch_SPR = {
 	ai_strategy = {
 		type = prepare_for_war
 		id = SPN
-		value = 200
+		value = 100
 	}
 }
 
@@ -124,8 +132,10 @@ FRA_support_SWE_plan = {
 	name = "Support Sweden"
 	desc = "Kill the Habsburgs"
 	
-	enable = {
+	allowed = {	
 		original_tag = FRA
+	}
+	enable = {
 		country_exists = SWE
 	}
 	abort = {
@@ -151,8 +161,10 @@ FRA_anti_grantville_plan = {
 	name = "Defeat Grantville"
 	desc = "Americans are worse than Habsburgs"
 	
-	enable = {
+	allowed = {	
 		original_tag = FRA
+	}
+	enable = {
 		country_exists = NUS
 		has_completed_focus = FRA_counter_american_influence
 	}
@@ -191,40 +203,51 @@ FRA_anti_grantville_plan = {
 ostend_war_prep = {
 	name = "Baltic War"
 	desc = "Don't tip your hand"
+	allowed = {	
+		original_tag = FRA
+	}
 	enable = {
-		OR = {
-			original_tag = FRA
-			#original_tag = SPR
-		}
 		has_completed_focus = FRA_ostend_league_focus
-		#has_war_with = SWE
 	}
 	abort = {
-		has_completed_focus = FRA_strike_dutch
+		OR = {
+			focus_progress = {
+				focus = FRA_strike_dutch
+				progress > 0.5
+			}
+			has_completed_focus = FRA_strike_dutch
+		}
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = "DEN"
-		value = 10
+		value = 1
 	}
 }
 
 ostend_war = {
 	name = "Baltic War"
 	desc = "FRA Fight against NUS/USE, not SWE"
+	allowed = {	
+		original_tag = FRA
+	}
 	enable = {
-		OR = {
-			original_tag = FRA
-			#original_tag = SPR
-		}
 		has_war_with = NUS
-		#has_war_with = SWE
 	}
 	abort = {
 		NOT = {
 			has_war_with = NUS
-			has_war_with = SWE
 		}
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		area = scandinavian_region
+		value = -200
+	}
+	ai_strategy = {
+	 	type = front_unit_request
+		state = 662
+		value = 400
 	}
 	ai_strategy = {
 		type = area_priority
@@ -253,29 +276,26 @@ ostend_war = {
 	}
 	ai_strategy = {
 		type = garrison
-		value = 1000
+		value = 100
 	}
 }
 
 ostend_war = {
 	name = "Baltic War"
 	desc = "SPR Fight against NUS/USE, not SWE"
+	allowed = {	
+		original_tag = SPR
+	}
 	enable = {
-		OR = {
-			#original_tag = FRA
-			original_tag = SPR
-		}
 		OR = {
 			is_in_faction_with = FRA
 			has_war_with = NUS
 		}
-		#has_war_with = SWE
 	}
 	abort = {
 		NOT = {
 			is_in_faction_with = FRA
 			has_war_with = NUS
-			has_war_with = SWE
 		}
 	}
 	ai_strategy = {
@@ -296,6 +316,6 @@ ostend_war = {
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = "DEN"
-		value = 100
+		value = -1
 	}
 }

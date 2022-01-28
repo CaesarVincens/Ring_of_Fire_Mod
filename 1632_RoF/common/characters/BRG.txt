@@ -1,0 +1,30 @@
+characters = {
+	BRG_bernard_wettin = {
+		name = "Bernard von Wettin"
+		#desc = "POLITICS_BERNARD_WETTIN_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BRG/Portrait_Burgundy_Bernard_Wettin.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = monarchy_neutral
+			expire = "1660.1.1"
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

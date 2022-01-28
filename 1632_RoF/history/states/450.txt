@@ -13,7 +13,7 @@ state = {
 		owner = NAP
 		victory_points = { 819 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			dockyard = 1
@@ -25,6 +25,7 @@ state = {
 		add_core_of = NAP
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		819 851 923 955 3901 3958 3968 6972 9826 9856 9990 10027 11846 12066 12098 
 	}

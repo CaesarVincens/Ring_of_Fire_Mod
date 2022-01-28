@@ -1,3 +1,114 @@
 RUS_major_decisions = {
-
+	RUS_retake_rezhev = {
+		available = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				divisions_in_border_state = {
+					size > 5
+					state = 385
+					border_state = 387
+				}
+			}
+		}
+		activation = {
+			POL = { controls_state = 387 }
+			NOT = { has_war_with = POL }
+			NOT = { has_border_war_with = POL }
+			NOT = { has_country_flag = RUS_retake_rezhev_flag }
+		}
+		war_with_on_remove = POL
+		days_mission_timeout = 180
+		days_remove = 10
+		selectable_mission = yes
+		remove_effect = {
+			hidden_effect = {
+				add_days_mission_timeout = {
+					mission = RUS_retake_rezhev
+					days = 60
+				}
+			}
+			set_country_flag = RUS_retake_rezhev_flag
+			start_border_war = {
+				change_state_after_war = yes
+				combat_width = 120
+				minimum_duration_in_days = 60
+				attacker = {
+					state = 385
+					num_provinces = 3
+					on_win = RoF_RUS.112
+					on_lose = RoF_RUS.113
+					on_cancel = RoF_RUS.114
+					modifier = 0.1
+				}
+				defender = {
+					state = 387
+					num_provinces = 3
+					on_win = RoF_POL.151
+					on_lose = RoF_POL.152
+					on_cancel = RoF_POL.153
+					modifier = -0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 10
+				divisions_in_border_state = {
+					size > 5
+					state = 385
+					border_state = 387
+				}
+			}
+		}
+	}
+	RUS_rezhev_help = {
+		visible = {
+			is_ai = yes
+		}
+		available = {
+			controls_state = 385
+			is_ai = yes
+			has_active_mission = RUS_retake_rezhev
+		}
+		days_remove = 20
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 379
+						state = 386
+						state = 388
+						state = 390
+						state = 397
+					}
+				}
+				set_demilitarized_zone = yes
+			}
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					is_demilitarized_zone = yes
+				}
+				set_demilitarized_zone = no
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	RUS_test = {
+		complete_effect = {
+			set_global_flag = white_sea_canal_built
+			set_technology = {
+				prerof_man_of_war = 1
+				prerof_heavy_frigate = 1
+				prerof_light_frigate = 1
+			}
+			transfer_state = 473
+		}
+	}
 }

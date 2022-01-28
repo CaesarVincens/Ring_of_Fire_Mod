@@ -5,9 +5,6 @@ DEN_HBC_decisions = {
 	allowed = {
 		original_tag = DEN
 	}
-	visible = {
-		#has_country_flag = NUS_major_decision_available
-	}
 }
 
 NUS_major_decisions = {
@@ -17,8 +14,18 @@ NUS_major_decisions = {
 	allowed = {
 		original_tag = NUS
 	}
+}
+
+NUS_advanced_projects_decisions = {
+	icon = generic_political_actions 
+	priority = 90
+
+	allowed = {
+		original_tag = NUS
+	}
 	visible = {
-		#has_country_flag = NUS_major_decision_available
+		has_completed_focus = NUS_gearing_down
+		NOT = { has_global_flag = RoF_no_uptime_resources }
 	}
 }
 
@@ -51,9 +58,6 @@ FRA_major_decisions = {
 	allowed = {
 		original_tag = FRA
 	}
-	visible = {
-		
-	}
 }
 
 FRA_minor_decisions = {
@@ -72,9 +76,6 @@ RUS_major_decisions = {
 	allowed = {
 		original_tag = RUS
 	}
-	visible = {
-		
-	}
 }
 
 AUS_major_decisions = {
@@ -82,9 +83,6 @@ AUS_major_decisions = {
 	priority = 100
 	allowed = {
 		original_tag = AUS
-	}
-	visible = {
-		
 	}
 }
 
@@ -106,9 +104,6 @@ TUR_major_decisions = {
 	allowed = {
 		original_tag = TUR
 	}
-	visible = {
-		
-	}
 }
 
 TUR_coup_category = {
@@ -116,9 +111,6 @@ TUR_coup_category = {
 	priority = 1000
 	allowed = {
 		original_tag = TUR
-	}
-	visible = {
-		
 	}
 }
 
@@ -131,4 +123,53 @@ TUR_combating_corruption_cat = {
 	visible = {
 		has_completed_focus = TUR_combat_corruption
 	}
+}
+
+POL_major_decisions = {
+	icon = generic_political_actions
+	priority = 80
+	allowed = {
+		original_tag = POL
+	}
+}
+POL_sejm = {
+	icon = pol_sejm
+	allowed = {
+		original_tag = POL
+	}
+	scripted_gui = pol_sejm_decision_ui
+
+	priority = 85
+}
+
+SPN_major_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		original_tag = SPN
+	}
+}
+
+UPS_major_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		original_tag = UPS
+	}
+}
+
+german_decisions = {
+	icon = generic_political_actions
+	priority = 100
+	
+	allowed = {
+		is_german_tag = yes
+	}
+}
+
+thirty_years_war_decisions = {
+	icon = border_conflicts
+	priority = 100
 }

@@ -2,14 +2,15 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
-			WNA = {
-				add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
-				send_equipment = {
-					equipment = up_time_weapons
-					amount = 1000
-					target = NUS
-				}
-			}
+			#WNA = {
+			#	add_equipment_to_stockpile = { type = up_time_weapons amount = 1000 producer = WNA }
+			#	send_equipment = {
+			#		equipment = up_time_weapons
+			#		amount = 1000
+			#		target = NUS
+			#	}
+			#}
+			every_state = { remove_core_of = WSA remove_core_of = WNA remove_core_of = WAS remove_core_of = WAF remove_core_of = WAU }
 			every_country = {
 				limit = { is_ai = no }
 				country_event = { id = RoF.000 }
@@ -17,6 +18,24 @@ on_actions = {
 			random_country = {
 				limit = { is_ai = yes }
 				country_event = { id = RoF.006 }
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ROF_NUS_SPECIAL_PROJECTS
+							option = ROF_NO_PROJECTS
+						}
+					}
+					set_global_flag = RoF_no_uptime_resources
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ROF_MERCENARY_HIRING
+							option = ROF_NO_MERCS
+						}
+					}
+					set_global_flag = RoF_no_mercs_for_anyone
+				}
 			}
 			set_global_flag = thirty_years_war_ongoing
 			every_country = {
@@ -24,12 +43,102 @@ on_actions = {
 					is_in_faction_with = AUS
 				}
 				TYR = {
-					give_military_access = PREV
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+					}
 				}
 			}
 			every_country = {
 				limit = { is_german_tag = yes }
-				add_to_array = { german_tags = THIS }
+				add_to_array = { global.german_tags = THIS }
+			}
+			# RANDOM GAME RULE FLAGS
+			NUS = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = NUS_ai_behavior
+							option = RANDOM
+						}
+					}
+					random_list = {
+						50 = { set_country_flag = NUS_AI_RANDOM_CANON }
+						35 = { set_country_flag = NUS_AI_RANDOM_RADICAL }
+						15 = { set_country_flag = NUS_AI_RANDOM_ABSOLUTIST }
+					}
+				}
+			}
+			AUS = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = AUS_ai_behavior
+							option = RANDOM
+						}
+					}
+					random_list = {
+						50 = { set_country_flag = AUS_AI_RANDOM_CANON }
+						50 = { set_country_flag = AUS_AI_RANDOM_ALTERNATE }
+					}
+				}
+			}
+			FRA = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = FRA_ai_behavior
+							option = RANDOM
+						}
+					}
+					random_list = {
+						50 = { set_country_flag = FRA_AI_RANDOM_CANON }
+						50 = { set_country_flag = FRA_AI_RANDOM_CONSTITUTIONALIST }
+					}
+				}
+			}
+			ENG = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ENG_ai_behavior
+							option = RANDOM
+						}
+					}
+					random_list = {
+						50 = { set_country_flag = ENG_AI_RANDOM_CANON }
+						50 = { set_country_flag = ENG_AI_RANDOM_CONSTITUTIONALIST }
+					}
+				}
+			}
+			POL = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = POL_ai_behavior
+							option = RANDOM
+						}
+					}
+					random_list = {
+						50 = { set_country_flag = POL_AI_RANDOM_CANON }
+						30 = { set_country_flag = POL_AI_RANDOM_ABSOLUTIST_ALTERNATE }
+						20 = { set_country_flag = POL_AI_RANDOM_CONSTITUTIONALIST }
+					}
+				}
+			}
+			SWE = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = SWE_ai_behavior
+							option = RANDOM
+						}
+					}
+					random_list = {
+						50 = { set_country_flag = SWE_AI_RANDOM_CANON }
+						#30 = { set_country_flag = SWE_AI_RANDOM_ALTERNATE }
+					}
+				}
 			}
 		}
 	}
@@ -48,15 +157,44 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					tag = DEN
-					is_in_faction_with = FRA
-					FROM = { OR = { tag = NUS tag = SWE } }
+					has_country_flag = NUS_coc_inspired
 				}
-				#country_event = { id = RoF_DEN.150 }
+				clr_country_flag = NUS_coc_inspired
+				set_country_flag = NUS_coc_inspired_capitulated
+				add_to_variable = { NUS.NUS_patriotic_fervor = -1 }
+				remove_from_array = {
+					array = NUS.patriotic_fervor_array
+					value = ROOT
+				}
 			}
+			#if = {
+			#	limit = {
+			#		tag = DEN
+			#		is_in_faction_with = FRA
+			#		FROM = { OR = { tag = NUS tag = SWE } }
+			#	}
+				#country_event = { id = RoF_DEN.150 }
+			#}
 		}
 	}
-	
+	# ROOT is capitulated country
+	on_uncapitulation = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = NUS_coc_inspired_capitulated
+				}
+				clr_country_flag = NUS_coc_inspired_capitulated
+				set_country_flag = NUS_coc_inspired
+				add_to_variable = { NUS.NUS_patriotic_fervor = 1 }
+				add_to_array = {
+					array = NUS.patriotic_fervor_array
+					value = ROOT
+				}
+			}
+		}
+
+	}
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
@@ -83,12 +221,28 @@ on_actions = {
 				clr_global_flag = thirty_years_war_ongoing
 				set_global_flag = thirty_years_war_ended
 			}
+			if = {
+				limit = {
+					country_exists = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
 		}
 	}
 	
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	on_annex = {
 		effect = {
+			if = {
+				limit = {
+					has_cosmetic_tag = Poland_alone
+					FROM = {
+						tag = LIT
+					}
+				}
+				drop_cosmetic_tag = yes
+			}
 			if = {
 				limit = {
 					ROOT = {
@@ -122,6 +276,20 @@ on_actions = {
 				}
 				clr_global_flag = thirty_years_war_ongoing
 				set_global_flag = thirty_years_war_ended
+			}
+			if = {
+				limit = {
+					FROM = { has_country_flag = NUS_coc_inspired }
+				}
+				FROM = { 
+					clr_country_flag = NUS_coc_inspired
+					set_country_flag = NUS_coc_inspired_annexed
+					add_to_variable = { NUS.NUS_patriotic_fervor = -1 }
+					remove_from_array = {
+						array = NUS.patriotic_fervor_array
+						value = THIS
+					}
+				}
 			}
 		}
 	}
@@ -207,6 +375,13 @@ on_actions = {
 				set_country_flag = former_colony
 				clr_country_flag = colony_flag
 			}
+			if = {
+				limit = {
+					FROM = { has_cosmetic_tag = Poland_alone }
+					tag = LIT
+				}
+				FROM = { drop_cosmetic_tag = yes }
+			}
 		}
 	}
 	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
@@ -221,6 +396,74 @@ on_actions = {
 				ROOT = {
 					country_event = {
 						id = RoF_TUR.164
+					}
+				}
+			}
+		}
+	}
+	#ROOT is the nation being liberated, FROM is the leader of the liberators.
+	on_liberate = {
+		effect = {
+			if = {
+				limit = {
+					tag = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
+		}
+	}
+	#ROOT is free nation FROM is releaser.
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = {
+					tag = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
+		}
+	}
+	#ROOT is the nation being released, FROM is the overlord.
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					tag = LIT
+					country_exists = POL
+				}
+				POL = { set_cosmetic_tag = Poland_alone }
+			}
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_variable = CoC_strength
+				}
+				check_CoC_strength_anger = yes
+				check_CoC_effects_for_this = yes
+			}
+			random_country = {
+				if = {
+					limit = {
+						has_global_flag = CoC_established
+					}
+					random_country = {
+						limit = {
+							NOT = { has_country_flag = CoC_present }
+							any_neighbor_country = {
+								has_variable = CoC_strength
+							}
+							capital_scope = {
+								is_on_continent = europe
+							}
+						}
+						country_event = { id = RoF.010 }
+						log = "[This.GetName] has CoC at [GetDateText]"
 					}
 				}
 			}

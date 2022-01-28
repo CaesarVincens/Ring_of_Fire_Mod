@@ -23,28 +23,42 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			NUS = { transfer_state = 472 transfer_state = 406 }
-			every_state = {
-				limit = {
-					is_controlled_by = SWE
-					NOT = { is_owned_by = SWE }
-					has_state_flag = USE_control_state
+			472 = {
+				if = {
+					limit = { is_owned_by = SWE }
+					transfer_state_to = NUS
 				}
-				clr_state_flag = USE_control_state
-				NUS = { set_state_controller = PREV }
+			}
+			406 = {
+				if = {
+					limit = {
+						is_owned_by = BRA
+						BRA = { has_country_flag = USE_rejected_country }
+					}
+					transfer_state_to = NUS 
+				}
+			}
+			SWE = {
+				every_controlled_state = {
+					limit = {
+						NOT = { is_owned_by = SWE }
+						has_state_flag = USE_control_state
+					}
+					clr_state_flag = USE_control_state
+					set_state_controller_to = NUS
+				}
 			}
 			every_country = {
 				limit = {
 					has_country_flag = USE_annex_country
 				}
-				every_state = {
+				every_controlled_state = {
 					limit = {
-						is_controlled_by = PREV
 						NOT = { is_owned_by = PREV }
 						has_state_flag = USE_control_state
 					}
 					clr_state_flag = USE_control_state
-					NUS = { set_state_controller = PREV }
+					set_state_controller_to = NUS
 				}
 				clr_country_flag = USE_annex_country
 				if = {
@@ -60,12 +74,19 @@ country_event = {
 						annex_country = { target = PREV transfer_troops = no }
 					}
 				}
+				NUS = {
+					add_relation_modifier = {
+						target = PREV
+						modifier = USE_constitutent
+					}
+				}
 			}
 			every_owned_state = {
 				limit = {
 					has_state_flag = USE_annex_state
 					NOT = { is_core_of = NUS }
 				}
+				add_compliance = 40
 				#add_core_of = NUS
 				clr_state_flag = USE_annex_state
 				if = {
@@ -83,7 +104,7 @@ country_event = {
 			set_global_flag = USE_formed
 			if = {
 				limit = { owns_state = 247 }
-				set_capital = 247
+				set_capital = { state = 247 }
 			}
 			SWE = {
 				set_faction_name = Vasa_Empire
@@ -103,11 +124,11 @@ country_event = {
 		effect_tooltip = {
 			if = {
 				limit = { owns_state = 247 }
-				set_capital = 247
+				set_capital = { state = 247 }
 			}
 			every_country = {
 				limit = { has_country_flag = USE_annex_country }
-				NUS = { annex_country = { target = PREV transfer_troops = yes } }
+				NUS = { annex_country = { target = PREV } }
 			}
 			every_country = {
 				limit = { has_country_flag = USE_fed_prov }
@@ -125,16 +146,31 @@ country_event = {
 				name = USE_crown_loyalists_abs
 				long_name = USE_crown_loyalists_abs_long
 			}
-			create_country_leader = {
-				name = "Johann Wilhelm Neumair von Ramsla"
-				ideology = absolute_monarchy
+			add_country_leader_role = {
+				character = USE_johann_von_ramsla
+				promote_leader = yes
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1660.1.1"
+				}
 			}
-			create_country_leader = {
-				name = "Wilhelm Wettin"
-				picture = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
-				expire = "1660.1.1"
-				ideology = constitutional_republic
-				traits = {
+			USE_wilhelm_wettin = {
+				set_character_name = "Wilhelm Wettin"
+				remove_country_leader_role = {
+					ideology = absolute_monarchy_neutral
+				}
+				remove_country_leader_role = {
+					ideology = absolute_monarchy
+				}
+				remove_country_leader_role = {
+					ideology = constitutional_monarchy
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_republic
+						expire = "1660.1.1"
+					}
 				}
 			}
 			news_event = { id = RoF_news.05 days = 1 }
@@ -157,21 +193,16 @@ country_event = {
 
 	option = {
 		name = RoF_USE.101.a
+		trigger = { NOT = { tag = SWE } }
+
 		custom_effect_tooltip = GAME_OVER_TT
-		every_owned_state = {
-			set_state_flag = USE_annex_state
-		}
-		every_state = {
-			limit = {
-				is_controlled_by = ROOT
-				NOT = { is_owned_by = ROOT }
-			}
+		effect_tooltip = { NUS = { annex_country = { target = ROOT } } }
+		every_owned_state = { set_state_flag = USE_annex_state }
+		every_controlled_state = {
+			limit = { NOT = { is_owned_by = ROOT } }
 			set_state_flag = USE_control_state
 		}
 		set_country_flag = USE_annex_country
-		trigger = {
-			NOT = { tag = SWE }
-		}
 		add_to_variable = { NUS.USE_abs = party_popularity@absolutist }
 		add_to_variable = { NUS.USE_cons = party_popularity@constitutionalist }
 		add_to_variable = { NUS.USE_lib = party_popularity@liberal }
@@ -200,6 +231,10 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 			modifier = {
+				factor = 2
+				has_completed_focus = welcome_americans
+			}
+			modifier = {
 				factor = 0.1
 				num_of_controlled_states > 4
 			}
@@ -207,16 +242,16 @@ country_event = {
 	}
 
 	option = {
-		name = RoF_USE.101.b
+		name = RoF_USE.101.swe
 		trigger = { tag = SWE }
-		472 = {
-			set_state_flag = USE_annex_state
-		}
-		every_state = {
+
+		472 = { set_state_flag = USE_annex_state }
+		every_controlled_state = {
 			limit = {
-				is_controlled_by = ROOT
-				NOT = { is_owned_by = ROOT }
-				NOT = { is_core_of = DEN }
+				NOT = {
+					is_owned_by = ROOT
+					is_owned_by = DEN
+				}
 			}
 			set_state_flag = USE_control_state
 		}
@@ -225,11 +260,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = RoF_USE.101.c
-		trigger = {
-			NOT = { tag = SWE }
-		}
+		name = RoF_USE.101.b
+		trigger = { NOT = { tag = SWE } }
+
 		set_country_flag = USE_rejected_country
+		if = {
+			limit = { NUS = { has_country_flag = NUS_patriotic_fervor_flag } }
+			add_to_array = { array = NUS.USE_traitors }
+		}
 		clr_country_flag = SAX_joins_SWE
 		clr_country_flag = BRA_joins_SWE
 		if = {
@@ -241,10 +279,19 @@ country_event = {
 		reverse_add_opinion_modifier = { target = NUS modifier = rejected_USE }
 		if = {
 			limit = { is_in_faction_with = NUS }
-			random_country = {
-				limit = { is_faction_leader = yes is_in_faction_with = NUS }
-				remove_from_faction = ROOT
+			every_controlled_state = {
+				limit = {
+					NOT = { is_owned_by = PREV }
+					is_german_state = yes
+				}
+				set_state_province_controller = {
+					controller = NUS
+					limit = {
+						is_in_faction_with = NUS
+					}
+				}
 			}
+			leave_faction = yes
 		}
 		if = {
 			limit = { has_war_together_with = NUS }
@@ -253,9 +300,7 @@ country_event = {
 				white_peace = ROOT
 			}
 		}
-		every_owned_state = {
-			add_claim_by = NUS
-		}
+		every_owned_state = { add_claim_by = NUS }
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -267,14 +312,19 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 			modifier = {
+				add = 50
+				has_completed_focus = shun_americans
+			}
+			modifier = {
 				add = 10
 				num_of_controlled_states > 4
 			}
 		}
 	}
 	option = {
-		name = RoF_USE.101.do
-		trigger = { is_ai = no }
+		name = RoF_USE.101.c
+		trigger = { is_ai = no NOT = { tag = SWE } }
+
 		set_country_flag = USE_fed_prov
 		effect_tooltip = {
 			NUS = {
@@ -297,14 +347,9 @@ country_event = {
 	option = {
 		name = RoF_USE.102.a
 		custom_effect_tooltip = GAME_OVER_TT
-		every_owned_state = {
-			set_state_flag = USE_annex_state
-		}
-		every_state = {
-			limit = {
-				is_controlled_by = ROOT
-				NOT = { is_owned_by = ROOT }
-			}
+		every_owned_state = { set_state_flag = USE_annex_state }
+		every_controlled_state = {
+			limit = { NOT = { is_owned_by = ROOT } }
 			set_state_flag = USE_control_state
 		}
 		set_country_flag = USE_annex_country
@@ -317,6 +362,7 @@ country_event = {
 					tag = OLD
 					tag = BRA
 					tag = SAX
+					has_civil_war = yes
 				}
 			}
 		}
@@ -333,6 +379,7 @@ country_event = {
 					tag = OLD
 					tag = BRA
 					tag = SAX
+					has_civil_war = yes
 				}
 			}
 		}
@@ -352,14 +399,9 @@ country_event = {
 	option = {
 		name = RoF_USE.103.a
 		custom_effect_tooltip = GAME_OVER_TT
-		every_owned_state = {
-			set_state_flag = USE_annex_state
-		}
-		every_state = {
-			limit = {
-				is_controlled_by = ROOT
-				NOT = { is_owned_by = ROOT }
-			}
+		every_owned_state = { set_state_flag = USE_annex_state }
+		every_controlled_state = {
+			limit = { NOT = { is_owned_by = ROOT } }
 			set_state_flag = USE_control_state
 		}
 		set_country_flag = USE_annex_country
@@ -372,6 +414,7 @@ country_event = {
 					tag = OLD
 					tag = BRA
 					tag = SAX
+					has_civil_war = yes
 				}
 			}
 		}
@@ -388,6 +431,7 @@ country_event = {
 					tag = OLD
 					tag = BRA
 					tag = SAX
+					has_civil_war = yes
 				}
 			}
 		}
@@ -407,12 +451,9 @@ country_event = {
 	option = {
 		name = RoF_USE.104.a
 		every_country = {
-			limit = {
-				has_country_flag = USE_annex_country
-			}
-			every_state = {
+			limit = { has_country_flag = USE_annex_country }
+			every_controlled_state = {
 				limit = {
-					is_controlled_by = PREV
 					NOT = { is_owned_by = PREV }
 					has_state_flag = USE_control_state
 				}
@@ -421,6 +462,10 @@ country_event = {
 			}
 			clr_country_flag = USE_annex_country
 			NUS = {
+				add_relation_modifier = {
+					target = PREV
+					modifier = USE_annex
+				}
 				annex_country = { target = PREV }
 			}
 		}
@@ -429,6 +474,7 @@ country_event = {
 				has_state_flag = USE_annex_state
 				NOT = { is_core_of = NUS }
 			}
+			add_compliance = 40
 			#add_core_of = NUS
 			clr_state_flag = USE_annex_state
 		}
@@ -588,6 +634,7 @@ news_event = {
 					division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
 					owner = NUS
 					prioritize_location = 6287
+					allow_spawning_on_enemy_provs = yes
 				}
 			}
 			DEN = { add_war_support = -0.6 }
@@ -603,8 +650,8 @@ country_event = {
 	picture = GFX_report_event_use_flag
 
 	is_triggered_only = yes
-	immediate ={
-		hidden_effect ={
+	immediate = {
+		hidden_effect = {
 			SWE = { country_event = { id = RoF_SWE.120 days = 1 } }
 			SPN = { country_event = { id = RoF_NED.121 days = 1 } }
 			UPS = { country_event = { id = RoF_NED.120 days = 1 } }
@@ -783,6 +830,19 @@ country_event = {
 				target = SAX
 				type = annex_everything
 			}
+			hidden_effect = {
+				SAX = {
+					set_variable = { holk_destination = POL.id }
+					country_event = {
+						id = RoF_German.51 days = 7
+					}
+				}
+				#POL = {
+				#	country_event = {
+				#		id = RoF_German.50 days = 14
+				#	}
+				#}
+			}
 		}
 		if = {
 			limit = {
@@ -794,7 +854,7 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				BRA = { country_event = { id = RoF_German.150 days = 7 } }
+				BRA = { country_event = { id = RoF_German.150 days = 3 } }
 			}
 			set_country_flag = USE_paid_BRA
 			declare_war_on = {
@@ -802,6 +862,9 @@ country_event = {
 				type = annex_everything
 			}
 		}
+		#for_each_scope_loop = {
+		#	array = global.german_tags
+		#}
 	}
 
 }
@@ -857,18 +920,18 @@ country_event = {
 			autonomy_state = autonomy_rof_protectorate
 		}
 		hidden_effect = {
+			NUS_gretchen_richterin = {
+				set_nationality = SIL
+			}
 			SIL = {
-				create_country_leader = {
-					name = "Gretchen Richterin"
-					picture = "gfx/leaders/leader_unknown_female.dds"
-					ideology = democracy
-					#female = yes
-				}
-				create_country_leader = {
-					name = "Gretchen Richterin"
-					picture = "gfx/leaders/leader_unknown_female.dds"
-					ideology = radical_democracy
-					#female = yes
+				promote_character = NUS_gretchen_richterin
+				add_country_leader_role = {
+					character = NUS_gretchen_richterin
+					promote_leader = yes
+					country_leader = {
+						ideology = democracy
+						expire = "1660.1.1"
+					}
 				}
 				set_popularities = {
 					liberal = 40
@@ -908,6 +971,9 @@ country_event = {
 			}
 		}
 		set_country_flag = crown_loyalists_win
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = RoF_USE.135.b
@@ -922,6 +988,13 @@ country_event = {
 			}
 		}
 		set_country_flag = fojp_win
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = no
+				add = 9
+			}
+		}
 	}
 }
 
@@ -940,20 +1013,22 @@ country_event = {
 			ruling_party = constitutionalist
 		}
 		hidden_effect = {
-			create_corps_commander = {
-				name = "Michael Stearns"
-				gfx = "GFX_leader_NUS_Michael_Stearns"
-				traits = { }
+			add_corps_commander_role = {
+				character = NUS_michael_stearns # optional if inside character scope
+				traits = {  }
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
 				planning_skill = 1
 				logistics_skill = 1
 			}
-			create_country_leader = {
-				name = "Ed Piazza"
-				ideology = democracy
-				picture = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			add_country_leader_role = {
+				character = NUS_ed_piazza
+				promote_leader = yes
+				country_leader = {
+					ideology = democracy
+					expire = "1660.1.1"
+				}
 			}
 		}
 	}
@@ -1000,27 +1075,21 @@ country_event = {
 	desc = RoF_USE.150.d
 	picture = GFX_report_event_use_flag
 	fire_only_once = yes
-	trigger = {
-		tag = NUS
-		has_cosmetic_tag = USE
-		OR = {
-			owns_state = 581
-			owns_state = 259
-		}
-		date > 1635.1.1
-	}
-
-	mean_time_to_happen = {
-		days = 60
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = RoF_USE.150.a
-		transfer_state = 21
-		add_state_core = 21
-		transfer_state = 18
-		add_state_core = 18
-
+		trigger = { TYR = { has_country_flag = USE_annex_country } }
+		for_each_scope_loop = {
+			array = TYR.core_states
+			add_core_of = NUS
+		}
+		annex_country = { target = TYR }
+	}
+	option = {
+		name = RoF_USE.150.a
+		trigger = { TYR = { has_country_flag = USE_fed_prov } }
+		set_autonomy = { target = FROM autonomy_state = autonomy_rof_federal_state }
 	}
 	option = {
 		name = RoF_USE.150.b
@@ -1145,8 +1214,8 @@ country_event = {
 		has_country_flag = NUS_embassy_FRA
 		has_country_flag = embassy_to_UPS
 		OR = {
-			SPN = { focus_progress = { focus = SPN_come_to_terms progress > 0.1 } }
-			focus_progress = { focus = NUS_congress_of_copenhagen progress > 0.1 }
+			SPN = { focus_progress = { focus = SPN_come_to_terms progress > 0 } }
+			focus_progress = { focus = NUS_congress_of_copenhagen progress > 0 }
 		}
 	}
 
@@ -1277,6 +1346,29 @@ country_event = {
 		}
 		name = RoF_USE.207.a
 		transfer_state = 657
+		hidden_effect = {
+			657 = {
+				remove_core_of = UPS
+				remove_core_of = SPN
+				if = {
+					limit = {
+						any_province_building_level = {
+							province = {
+								id = 13236
+							}
+							building = naval_base
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						instant_build = yes
+						province = 13236
+					}
+				}
+			}
+		}
 		add_opinion_modifier = {
 			target = FROM
 			modifier = sold_harlingen

@@ -33,6 +33,20 @@ ideas = {
 			removal_cost = -1
 			picture = generic_war_preparation	
 		}
+		SWE_truce_of_altmark = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = POL
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees	
+		}
 		SWE_lion_of_the_north = {
 			allowed = {
 				always = no
@@ -50,71 +64,6 @@ ideas = {
 			picture = lion_of_the_north	
 			rule = {
 				can_create_factions = yes
-			}
-		}
-	}
-	political_advisor = {
-		SWE_axel_oxenstierna = {
-			allowed = {
-				original_tag = SWE
-			}
-			traits = { silent_workhorse }
-			picture = oxenstierna_pic
-			ai_will_do = {
-				factor = 1
-			}			
-		}
-		SWE_absolutist_advisor = {
-			allowed = {
-				always = no
-				original_tag = SWE
-			}
-			traits = { absolutist_minister }
-			on_add = {
-				#country_event = conv.political.01
-			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		SWE_democratic_advisor = {
-			allowed = {
-				always = no
-				original_tag = SWE
-			}
-			traits = { liberal_minister }
-			on_add = {
-				#country_event = conv.political.25
-			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		SWE_neutrality_advisor = {
-			allowed = {
-				always = no
-				original_tag = SWE
-			}
-			traits = { neutrality_minister }
-			picture = neutrality_idea
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
 			}
 		}
 	}

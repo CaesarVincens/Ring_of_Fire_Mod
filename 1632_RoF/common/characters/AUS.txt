@@ -1,0 +1,101 @@
+characters = {
+	AUS_ferdinand_ii_von_habsburg = {
+		name = "Ferdinand II von Habsburg"
+		#desc = "POLITICS_FERDINAND_2_DESC"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			traits = { stand_against_ottoman }
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			traits = { stand_against_ottoman }
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+			traits = { stand_against_ottoman }
+			expire = "1660.1.1"
+		}
+	}
+	AUS_ferdinand_iii_von_habsburg = {
+		name = "Ferdinand III von Habsburg"
+		#desc = "POLITICS_FERDINAND_III_DESC"
+		portraits = {
+			civilian = {
+				large = "GFX_leader_AUS_Ferdinand_III"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = lib_constitutional_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = monarchy_neutral
+			expire = "1660.1.1"
+		}
+	}
+	AUS_johann_tserclaes_von_tilly = {
+		name = "Johann Tserclaes von Tilly"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/Portrait_Austria_Tilly.dds"
+			}
+		}
+		field_marshal = {
+			traits = { inflexible_strategist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	AUS_ottavio_piccolomini = {
+		name = "Ottavio Piccolomini"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AUS/Portrait_Austria_Piccolomini.dds"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	GER_heinrich_holk = {
+		name = "Heinrich Holk"
+		portraits = {
+			army = {
+				large = "gfx/leaders/Germanies/Portrait_Heinrich_Holk.dds"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_country_flag = hired_holk
+			}
+		}
+	}
+}

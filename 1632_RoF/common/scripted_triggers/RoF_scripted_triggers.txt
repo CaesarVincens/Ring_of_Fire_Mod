@@ -4,7 +4,7 @@ is_german_state = {
 
 is_german_tag = {
 	OR = {
-		has_country_flag = german_tag_flag
+		#has_country_flag = german_tag_flag
 		tag = ALS
 		tag = ANS
 		tag = BAD
@@ -86,17 +86,7 @@ is_independent_country = {
 		exists = yes
 		is_subject = no
 		has_capitulated = no
-	}
-}
-
-is_subjected_country = {
-	custom_trigger_tooltip = {
-		tooltip = is_subjected_country_tt
-		OR = {
-			exists = no
-			is_subject = yes
-			has_capitulated = yes
-		}
+		NOT = { has_country_flag = pseudo_subject }
 	}
 }
 
@@ -115,9 +105,8 @@ is_friend_or_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_friend_or_potential_friend_of_ROOT_tt
 		OR = {
-			is_subject_of = ROOT
+			is_ally_with = ROOT
 			is_subject = no
-			is_in_faction_with = ROOT
 		}
 		OR = {
 			is_in_faction_with = ROOT
@@ -132,8 +121,7 @@ is_friend_or_potential_friend_of_ROOT = {
 is_not_potential_friend_of_ROOT = {
 	custom_trigger_tooltip = {
 		tooltip = is_not_potential_friend_of_ROOT_tt
-		NOT = { is_in_faction_with = ROOT }
-		NOT = { is_subject_of = ROOT }
+		NOT = { is_ally_with = ROOT }
 		OR = {
 			is_subject = yes
 			is_in_faction = yes
@@ -153,6 +141,16 @@ is_owned_by_ROOT_or_subject = {
 				tag = ROOT
 				is_subject_of = ROOT
 			}
+		}
+	}
+}
+
+#State scope
+is_owned_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = is_owned_by_ROOT_or_ally
+		OWNER = {
+			is_ally_with = ROOT
 		}
 	}
 }
@@ -180,6 +178,19 @@ is_ally_or_subject_of_ROOT = {
 	}
 }
 
+has_generic_industry_focuses = {
+	OR = {
+		has_focus_tree = generic_focus
+		has_focus_tree = generic_german_focus
+		has_focus_tree = france_focus_tree
+		has_focus_tree = spanish_lowlands_focus
+		has_focus_tree = united_provinces_focus
+	}
+}
+
+############################
+# Industrialization blocks #
+############################
 mod_agr_focus_block = {
 	custom_trigger_tooltip = {
 		tooltip = industrialization_focus_block_TT
@@ -215,5 +226,231 @@ fully_ind_focus_block = {
 	}
 	OR = {
 		always = yes
+	}
+}
+
+###########################
+### Game Rule Shortcuts ###
+###########################
+
+NUS_canon_path = {
+	OR = {
+		AND = {
+			has_game_rule = {
+				rule = NUS_ai_behavior
+				option = DEFAULT
+			}
+			is_historical_focus_on = yes
+		}
+		has_game_rule = {
+			rule = NUS_ai_behavior
+			option = CANON
+		}
+		has_country_flag = NUS_AI_RANDOM_CANON
+	}
+}
+
+NUS_radical_path = {
+	OR = {
+		has_game_rule = {
+			rule = NUS_ai_behavior
+			option = RADICAL
+		}
+		has_country_flag = NUS_AI_RANDOM_RADICAL
+	}
+}
+
+NUS_absolutist_path = {
+	OR = {
+		has_game_rule = {
+			rule = NUS_ai_behavior
+			option = ABSOLUTIST
+		}
+		has_country_flag = NUS_AI_RANDOM_ABSOLUTIST
+	}
+}
+
+SWE_canon_path = {
+	OR = {
+		AND = {
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = DEFAULT
+			}
+			is_historical_focus_on = yes
+		}
+		has_game_rule = {
+			rule = SWE_ai_behavior
+			option = CANON
+		}
+		has_country_flag = SWE_AI_RANDOM_CANON
+	}
+}
+
+SWE_alternate_path = {
+	OR = {
+		has_game_rule = {
+			rule = SWE_ai_behavior
+			option = ALTERNATE
+		}
+		has_country_flag = SWE_AI_RANDOM_ALTERNATE
+	}
+}
+
+AUS_canon_path = {
+	OR = {
+		AND = {
+			has_game_rule = {
+				rule = AUS_ai_behavior
+				option = DEFAULT
+			}
+			is_historical_focus_on = yes
+		}
+		has_game_rule = {
+			rule = AUS_ai_behavior
+			option = CANON
+		}
+		has_country_flag = AUS_AI_RANDOM_CANON
+	}
+}
+
+AUS_alternate_path = {
+	OR = {
+		has_game_rule = {
+			rule = AUS_ai_behavior
+			option = ALTERNATE
+		}
+		has_country_flag = AUS_AI_RANDOM_ALTERNATE
+	}
+}
+
+FRA_canon_path = {
+	OR = {
+		AND = {
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEFAULT
+			}
+			is_historical_focus_on = yes
+		}
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = CANON
+		}
+		has_country_flag = FRA_AI_RANDOM_CANON
+	}
+}
+
+FRA_constitutionalist_path = {
+	OR = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = CONSTITUTIONALIST
+		}
+		has_country_flag = FRA_AI_RANDOM_CONSTITUTIONALIST
+	}
+}
+
+ENG_canon_path = {
+	OR = {
+		AND = {
+			has_game_rule = {
+				rule = ENG_ai_behavior
+				option = DEFAULT
+			}
+			is_historical_focus_on = yes
+		}
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = CANON
+		}
+		has_country_flag = ENG_AI_RANDOM_CANON
+	}
+}
+
+ENG_constitutionalist_path = {
+	OR = {
+		has_game_rule = {
+			rule = ENG_ai_behavior
+			option = CONSTITUTIONALIST
+		}
+		has_country_flag = ENG_AI_RANDOM_CONSTITUTIONALIST
+	}
+}
+
+POL_canon_path = {
+	OR = {
+		AND = {
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = DEFAULT
+			}
+			is_historical_focus_on = yes
+		}
+		has_game_rule = {
+			rule = POL_ai_behavior
+			option = CANON
+		}
+		has_country_flag = POL_AI_RANDOM_CANON
+	}
+}
+
+POL_absolutist_alternate_path = {
+	OR = {
+		has_game_rule = {
+			rule = POL_ai_behavior
+			option = ABSOLUTIST_ALTERNATE
+		}
+		has_country_flag = POL_AI_RANDOM_ABSOLUTIST_ALTERNATE
+	}
+}
+
+POL_constitutionalist_path = {
+	OR = {
+		has_game_rule = {
+			rule = POL_ai_behavior
+			option = CONSTITUTIONALIST
+		}
+		has_country_flag = POL_AI_RANDOM_CONSTITUTIONALIST
+	}
+}
+
+###########################################
+### Polish-Lithuanian Commonwealth Sejm ###
+###########################################
+
+sejm_low_support_trigger = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = POL_abolished_sejm }
+		}
+		custom_trigger_tooltip = {
+			tooltip = sejm_low_support_trigger_tt
+			check_variable = { var = sejm_support value = sejm_low compare = greater_than_or_equals }
+		}
+	}
+}
+
+sejm_medium_support_trigger = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = POL_abolished_sejm }
+		}
+		custom_trigger_tooltip = {
+			tooltip = sejm_medium_support_trigger_tt
+			check_variable = { var = sejm_support value = sejm_medium compare = greater_than_or_equals }
+		}
+	}
+}
+
+sejm_high_support_trigger = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = POL_abolished_sejm }
+		}
+		custom_trigger_tooltip = {
+			tooltip = sejm_high_support_trigger_tt
+			check_variable = { var = sejm_support value = sejm_high compare = greater_than_or_equals }
+		}
 	}
 }

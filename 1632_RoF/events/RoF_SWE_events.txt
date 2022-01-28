@@ -23,7 +23,7 @@ country_event = {
 	title = RoF_SWE.50.t
 	picture = GFX_report_event_eng_flag
 	desc = RoF_SWE.50.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -259,7 +259,7 @@ country_event = {
 	title = RoF_SWE.130.t
 	picture = GFX_report_event_bra_flag
 	desc = RoF_SWE.130.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -291,7 +291,7 @@ country_event = {
 	title = RoF_SWE.131.t
 	picture = GFX_report_event_bra_flag
 	desc = RoF_SWE.131.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -313,7 +313,7 @@ country_event = {
 	title = RoF_SWE.132.t
 	picture = GFX_report_event_scottish_mercenaries
 	desc = RoF_SWE.132.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -406,7 +406,7 @@ country_event = {
 	title = RoF_SWE.140.t
 	picture = GFX_report_event_sax_flag
 	desc = RoF_SWE.140.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -438,7 +438,7 @@ country_event = {
 	title = RoF_SWE.141.t
 	picture = GFX_report_event_sax_flag
 	desc = RoF_SWE.141.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -460,7 +460,7 @@ country_event = {
 	title = RoF_SWE.144.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.144.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -478,17 +478,22 @@ country_event = {
 	}
 }
 
-#Seize Wurzburg
+#Seize Würzburg
 country_event = {
 	id = RoF_SWE.145
 	title = RoF_SWE.145.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.145.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
 	immediate = {
+
+	}
+	option = {
+		name = RoF_SWE.145.a
+		log = "[GetDateText] - [SWE.GetName] attacked [WRZ.GetName]"
 		if = {
 			limit = {
 				WRZ = {
@@ -496,6 +501,16 @@ country_event = {
 				}
 			}
 			set_state_controller = 577
+			577 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11445
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Würzburg"
 		}
 		if = {
 			limit = {
@@ -504,13 +519,195 @@ country_event = {
 				}
 			}
 			set_state_controller = 578
+			578 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11417
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Fulda"
+		}
+	}
+}
+
+#Seize Wurzburg
+country_event = {
+	id = RoF_SWE.1451
+	title = RoF_SWE.145.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.1451.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_SWE.1451.a
+		trigger = {
+			has_country_flag = WRZ_protected_wurzburg
+			has_country_flag = WRZ_protected_fulda
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked [WRZ.GetName]"
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 577
+					577 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11445
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Fulda"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Fulda"
+				}
+			}
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 578
+					578 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11417
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took [WRZ.GetName]"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take [WRZ.GetName]"					
+				}
+			}
 		}
 	}
 	option = {
-		name = RoF_SWE.145.a
-		add_manpower = 2000
-		hidden_effect = {
-			load_oob = "SWE_franconia"
+		name = RoF_SWE.1451.b
+		trigger = {
+			has_country_flag = WRZ_protected_wurzburg
+			NOT = { has_country_flag = WRZ_protected_fulda }
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked [WRZ.GetName]"
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			set_state_controller = 577
+			577 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11445
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Fulda"
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 578
+					578 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11417
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Würzburg"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Würzburg"					
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_SWE.1451.c
+		trigger = {
+			NOT = { has_country_flag = WRZ_protected_wurzburg }
+			has_country_flag = WRZ_protected_fulda
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked [WRZ.GetName]"
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 577
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 577
+					577 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11445
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Fulda"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Fulda"
+				}
+			}
+		}
+		if = {
+			limit = {
+				WRZ = {
+					controls_state = 578
+				}
+			}
+			set_state_controller = 578
+			578 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11417
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Würzburg"
 		}
 	}
 }
@@ -521,7 +718,7 @@ country_event = {
 	title = RoF_SWE.146.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.146.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -553,7 +750,6 @@ country_event = {
 	}
 	option = {
 		name = RoF_SWE.146.a
-		#set_state_controller = 461
 	}
 }
 
@@ -563,31 +759,72 @@ country_event = {
 	title = RoF_SWE.147.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.147.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = {
-				MNZ = {
-					controls_state = 248
-				}
-			}
-			set_state_controller = 248
-		}
-		if = {
-			limit = {
-				MNZ = {
-					controls_state = 249
-				}
-			}
-			set_state_controller = 249
-		}
 	}
 	option = {
 		name = RoF_SWE.147.a
-		add_manpower = 2000
+		log = "[GetDateText] - [SWE.GetName] attacked [MNZ.GetName]"
+		if = {
+			limit = {
+				MNZ = { controls_state = 248 }
+				has_country_flag = MNZ_protected_mainz
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 248
+					248 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 11560
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Mainz"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Mainz"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				MNZ = { controls_state = 248 }
+			}
+			set_state_controller = 248
+			248 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11560
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Mainz"
+		}
+		if = {
+			limit = {
+				MNZ = { controls_state = 249 }
+			}
+			set_state_controller = 249
+			249 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6594
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Lower Main"
+		}
 	}
 }
 
@@ -597,7 +834,7 @@ country_event = {
 	title = RoF_SWE.148.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.148.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -628,7 +865,7 @@ country_event = {
 	title = RoF_SWE.149.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.149.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -650,7 +887,7 @@ country_event = {
 	title = RoF_SWE.150.t
 	picture = GFX_report_event_swe_flag
 	desc = RoF_SWE.150.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -704,7 +941,7 @@ country_event = {
 	title = RoF_SWE.160.t
 	picture = GFX_report_event_den_flag
 	desc = RoF_SWE.160.d
-#	fire_only_once = yes
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -745,13 +982,13 @@ country_event = {
 	}
 }
 
-#Seize Mainz
+#Seize Oberpfalz
 country_event = {
-	id = RoF_SWE.161
-	title = RoF_SWE.161.t
+	id = RoF_SWE.151
+	title = RoF_SWE.151.t
 	picture = GFX_report_event_swe_flag
-	desc = RoF_SWE.161.d
-#	fire_only_once = yes
+	desc = RoF_SWE.151.d
+	#fire_only_once = yes
 
 	is_triggered_only = yes
 	
@@ -762,11 +999,604 @@ country_event = {
 					controls_state = 655
 				}
 			}
+			log = "[GetDateText] - [SWE.GetName] took Oberpfalz"
 			set_state_controller = 655
 		}
 	}
 	option = {
-		name = RoF_SWE.161.a
+		name = RoF_SWE.151.a
 		add_manpower = 1000
+	}
+}
+
+#Proceed on Prague
+country_event = {
+	id = RoF_SWE.170
+	title = RoF_SWE.170.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.170.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_SWE.170.a
+		log = "[GetDateText] - [SWE.GetName] attacked Prague"
+		if = {
+			limit = {
+				37 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+					has_state_flag = prague_fortified
+				}
+			}
+			random_list = {
+				50 = {
+					set_province_controller = 11542
+					37 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							count = 2
+							prioritize_location = 11542
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Prague"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Prague"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				37 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			set_province_controller = 11542
+			37 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					count = 2
+					prioritize_location = 11542
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Prague"
+		}
+	}
+}
+
+#Secure Silesia
+country_event = {
+	id = RoF_SWE.171
+	title = RoF_SWE.171.t
+	picture = GFX_report_event_swe_flag
+	desc = RoF_SWE.171.d
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	option = {
+		name = RoF_SWE.171.a
+		trigger = {
+			NOT = {
+				has_country_flag = breslau_fortified
+				has_country_flag = ratibor_fortified
+			}
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked Silesia"
+		if = {
+			limit = {
+				428 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			set_state_controller = 428
+			428 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 9570
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Breslau"
+		}
+		if = {
+			limit = {
+				429 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			set_state_controller = 429
+			429 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6464
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Ratibor"
+		}
+	}
+	option = {
+		name = RoF_SWE.171.b
+		trigger = {
+			has_country_flag = breslau_fortified
+			has_country_flag = ratibor_fortified
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked Silesia"
+		if = {
+			limit = {
+				428 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 428
+					428 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 9570
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Breslau"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Breslau"
+				}
+			}
+		}
+		if = {
+			limit = {
+				429 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 429
+					429 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 6464
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Ratibor"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Ratibor"					
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_SWE.171.c
+		trigger = {
+			has_country_flag = breslau_fortified
+			NOT = { has_country_flag = ratibor_fortified }
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked Silesia"
+		if = {
+			limit = {
+				428 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			set_state_controller = 428
+			429 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 9570
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Breslau"
+		}
+		if = {
+			limit = {
+				429 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 429
+					429 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 6464
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Ratibor"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Ratibor"					
+				}
+			}
+		}
+	}
+	option = {
+		name = RoF_SWE.171.dd
+		trigger = {
+			NOT = { has_country_flag = breslau_fortified }
+			has_country_flag = ratibor_fortified
+		}
+		log = "[GetDateText] - [SWE.GetName] attacked Silesia"
+		if = {
+			limit = {
+				428 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					set_state_controller = 428
+					428 = {
+						create_unit = {
+							division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+							owner = SWE
+							allow_spawning_on_enemy_provs = yes
+							prioritize_location = 9570
+						}
+					}
+					add_manpower = 1000
+					log = "[GetDateText] - [SWE.GetName] took Breslau"
+				}
+				50 = {
+					add_war_support = -0.05
+					log = "[GetDateText] - [SWE.GetName] didn't take Breslau"
+				}
+			}
+		}
+		if = {
+			limit = {
+				429 = {
+					CONTROLLER = {
+						OR = {
+							tag = AUS
+							is_subject_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			set_state_controller = 429
+			429 = {
+				create_unit = {
+					division = "division_template = \"Infantry Detachment\" start_experience_factor = 0.3" 
+					owner = SWE
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6464
+				}
+			}
+			add_manpower = 1000
+			log = "[GetDateText] - [SWE.GetName] took Ratibor"
+		}
+	}
+}
+
+#Restore BOH
+country_event = {
+	id = RoF_SWE.175
+	title = RoF_SWE.175.t
+	picture = GFX_report_event_swe_flag
+	desc = {
+		trigger = { NOT = { has_global_flag = winter_king_dead } }
+		text = RoF_SWE.175.da
+	}
+	desc = {
+		trigger = {
+			has_global_flag = winter_king_dead
+			has_global_flag = wallenstein_gambit
+		}
+		text = RoF_SWE.175.db
+	}
+	desc = {
+		trigger = {
+			has_global_flag = winter_king_dead
+			NOT = {
+				has_global_flag = wallenstein_gambit
+				has_global_flag = karl_ludwig_catholic
+			}
+		}
+		text = RoF_SWE.175.dc
+	}
+	desc = {
+		trigger = {
+			has_global_flag = winter_king_dead
+			has_global_flag = karl_ludwig_catholic
+			NOT = { has_global_flag = wallenstein_gambit }
+		}
+		text = RoF_SWE.175.dd
+	}
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		BOH = {
+			if = {
+				limit = {
+					is_subject = yes
+					NOT = { is_ally_with = SWE }
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = BOH
+						autonomy_state = autonomy_free
+					}
+				}
+				leave_faction = yes
+				SWE = { white_peace = BOH }
+				else_if = {
+					limit = {
+						is_in_faction_with = AUS
+					}
+					leave_faction = yes
+					SWE = { white_peace = BOH }
+				}
+			}
+			if = {
+				limit = {
+					has_government = absolutist
+				}
+				add_popularity = {
+					ideology = constitutionalist
+					popularity = 0.3
+				}
+				set_politics = {
+					ruling_party = constitutionalist
+					elections_allowed = no
+				}
+			}
+		}
+		hidden_effect = {
+			BOH = {
+				set_state_owner = 37
+				set_state_owner = 38
+				set_state_owner = 573
+			}
+			37 = {
+				set_state_province_controller = {
+					controller = BOH
+					limit = {
+						is_in_faction_with = SWE
+					}
+				}
+			}
+			38 = {
+				if = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					set_state_province_controller = {
+						controller = BOH
+						limit = {
+							is_in_faction_with = SWE
+						}
+					}
+				}
+			}
+			573 = {
+				if = {
+					limit = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					set_state_province_controller = {
+						controller = BOH
+						limit = {
+							is_in_faction_with = SWE
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { has_global_flag = winter_king_dead }
+		}
+		hidden_effect = {
+			BOH = {
+				BOH_frederick_v = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = absolute_monarchy
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = constitutional_monarchy
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = lib_constitutional_monarchy
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = monarchy_neutral
+						}
+					}
+				}
+			}
+		}
+		name = RoF_SWE.175.a
+		effect_tooltip = {
+			release_on_controlled = BOH
+		}
+		add_to_faction = BOH
+		set_global_flag = frederick_v_restored
+	}
+	option = {
+		trigger = {
+			has_global_flag = winter_king_dead
+			has_global_flag = wallenstein_gambit
+		}
+		name = RoF_SWE.175.b
+		hidden_effect = {
+			AUS = {
+				set_nationality = {
+					target_country = BOH
+					character = BOH_albrecht_von_wallenstein
+				}
+				set_nationality = {
+					target_country = BOH
+					character = BOH_gottfried_zu_pappenheim
+				}
+			}
+			BOH = {
+				BOH_albrecht_von_wallenstein = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = absolute_monarchy
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = constitutional_monarchy
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = lib_constitutional_monarchy
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = absolute_monarchy_neutral
+						}
+					}
+				}
+			}
+		}
+		effect_tooltip = {
+			release_on_controlled = BOH
+		}
+		add_to_faction = BOH
+	}
+	option = {
+		trigger = {
+			has_global_flag = winter_king_dead
+			NOT = {
+				has_global_flag = wallenstein_gambit
+				has_global_flag = karl_ludwig_catholic
+			}
+		}
+		name = RoF_SWE.175.c
+		effect_tooltip = {
+			release_on_controlled = BOH
+		}
+		set_global_flag = karl_ludwig_installed
+		add_to_faction = BOH
+	}
+	option = {
+		trigger = {
+			has_global_flag = winter_king_dead
+			has_global_flag = karl_ludwig_catholic
+			NOT = { has_global_flag = wallenstein_gambit }
+		}
+		name = RoF_SWE.175.do
+		effect_tooltip = {
+			release_on_controlled = BOH
+		}
+		set_autonomy = {
+			target = BOH
+			autonomy_state = autonomy_rof_protectorate
+		}
 	}
 }

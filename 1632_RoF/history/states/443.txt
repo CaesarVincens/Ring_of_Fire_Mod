@@ -1,15 +1,14 @@
+state = {
+	id = 443
+	name = "STATE_443"
 
-state={
-	id=443
-	name="STATE_443"
-
-	history={
+	history = {
 		owner = SPR
 		victory_points = {
 			6906 20 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			dockyard = 1
@@ -17,16 +16,21 @@ state={
 			6906 = {
 				naval_base = 2
 			}
+			6966 = {
+				naval_base = 1
+			}
+
 		}
 		add_core_of = SPR
 		add_core_of = CAT
 
 	}
 
-	provinces={
-		798 832 871 888 962 1093 3799 3835 3873 3891 3909 3945 4098 4195 6817 6856 6906 6959 7111 9812 9889 9896 9903 10024 10109 11807 11884 
+	local_supplies = 5.0
+	provinces = {
+		798 832 871 888 962 1093 3799 3835 3873 3891 3909 3945 3954 4098 4195 6817 6856 6906 6959 6966 7111 7213 9812 9889 9896 9903 10024 10109 11807 11884 13222 13223 
 	}
-	manpower=1520000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1520000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

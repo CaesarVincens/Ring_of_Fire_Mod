@@ -11,6 +11,7 @@ technology_categories = {
 	cat_heavy_armor
 	artillery
 	cat_anti_tank
+	cat_anti_air
 	naval_air
 	infantry_weapons
 	motorized_equipment
@@ -35,6 +36,7 @@ technology_categories = {
 	cat_strategic_bomber
 	naval_bomber
 	cas_bomber
+	ship_modules_tech
 	dd_tech
 	cl_tech
 	ca_tech
@@ -85,14 +87,42 @@ technology_categories = {
 	asw_tech
 	naval_minesweeping
 	naval_minelaying
+	cat_scout_plane
+	train_tech
+	cat_production
+	cat_synth_rubber
+	cat_synth_oil
 }
 
 technology_folders = {
-	infantry_folder
-	support_folder
-	armour_folder
-	artillery_folder
-	air_techs_folder
+	infantry_folder = {
+		ledger = army
+	}
+	support_folder = {
+		ledger = army
+	}
+	armour_folder = {
+		ledger = army
+		available = {
+			OR = {
+				NOT = { has_dlc = "No Step Back" }
+				always = yes
+			}
+		}
+	}
+	nsb_armour_folder = {
+		ledger = army
+		available = {
+			has_dlc = "No Step Back"
+			always = no
+		}
+	}
+	artillery_folder = {
+		ledger = army
+	}
+	air_techs_folder = {
+		ledger = air
+	}
 	naval_folder = {
 		available = {
 			OR = {
@@ -100,18 +130,33 @@ technology_folders = {
 				always = yes
 			}
 		}
+		ledger = navy
 	}
 	mtgnavalfolder = {
 		available = {
 			has_dlc = "Man the Guns"
 			always = no
 		}
+		ledger = navy
 	}
-	industry_folder
-	land_doctrine_folder
-	naval_doctrine_folder
-	air_doctrine_folder
-	electronics_folder
+	industry_folder = {
+		ledger = civilian
+	}
+	land_doctrine_folder = {
+		ledger = army
+		doctrine = yes
+	}
+	naval_doctrine_folder = {
+		ledger = navy
+		doctrine = yes
+	}
+	air_doctrine_folder = {
+		ledger = air
+		doctrine = yes
+	}
+	electronics_folder = {
+		ledger = civilian
+	}
 	#secret_weapons_folder
 }
 

@@ -1,15 +1,14 @@
+state = {
+	id = 376
+	name = "STATE_376"
 
-state={
-	id=376
-	name="STATE_376"
-
-	history={
+	history = {
 		owner = PRU
 		victory_points = {
 			9346 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -19,10 +18,11 @@ state={
 
 	}
 
-	provinces={
-		3351 6375 9346 9372 9398 11245 
+	local_supplies = 5.0
+	provinces = {
+		3351 6375 9346 9372 9398 
 	}
-	manpower=396440
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 396440
+	buildings_max_level_factor = 1.000
+	state_category = town
 }

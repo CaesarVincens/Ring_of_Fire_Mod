@@ -1,4 +1,3 @@
-
 state = {
 	id = 414
 	name = "STATE_414"
@@ -12,15 +11,15 @@ state = {
 			514 20 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
 			573 = {
-				bunker = 1
+				#bunker = 1
 			}
 			3514 = {
-				bunker = 1
+				#bunker = 1
 			}
 			514 = {
 				bunker = 2
@@ -31,6 +30,7 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		478 514 573 3514 3572 6441 9535 11415 
 	}

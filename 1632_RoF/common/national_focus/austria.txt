@@ -387,7 +387,7 @@ focus_tree = {
 					}
 					set_state_flag = AUS_investment_inner_austria_state_infra
 					else = {
-						custom_effect_tooltip = need_infra_tech.tt
+						custom_effect_tooltip = increase_infra_tech.tt
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -431,7 +431,7 @@ focus_tree = {
 					}
 					set_state_flag = AUS_investment_inner_austria_state_infra
 					else = {
-						custom_effect_tooltip = need_infra_tech.tt
+						custom_effect_tooltip = increase_infra_tech.tt
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -510,7 +510,7 @@ focus_tree = {
 					}
 					set_state_flag = AUS_develop_hungary_state_infra
 					else = {
-						custom_effect_tooltip = need_infra_tech.tt
+						custom_effect_tooltip = increase_infra_tech.tt
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -547,7 +547,7 @@ focus_tree = {
 					}
 					set_state_flag = AUS_develop_hungary_state_infra
 					else = {
-						custom_effect_tooltip = need_infra_tech.tt
+						custom_effect_tooltip = increase_infra_tech.tt
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -927,11 +927,25 @@ focus_tree = {
 		available = {
 			#has_global_flag = thirty_years_war_ongoing
 			has_global_flag = max_wife_dead
-			country_exists = BAV
+			BAV = {
+				has_country_leader = {
+					character = BAV_maximilian_von_wittelsbach
+				}
+			}
+			#country_exists = BAV
 		}
 		bypass = {
 			#has_global_flag = thirty_years_war_ended
-			NOT = { country_exists = BAV }
+			BAV = {
+				OR = {
+					NOT = {
+						has_country_leader = {
+							character = BAV_maximilian_von_wittelsbach
+						}
+					}
+					exists = no
+				}
+			}
 		}
 		cost = 10
 		#available_if_capitulated = yes
@@ -984,12 +998,12 @@ focus_tree = {
 		prerequisite = { focus = AUS_illness_ferdinand_2 }
 		available = {
 			has_country_leader = {
-				name = "Ferdinand III von Habsburg"
+				character = AUS_ferdinand_iii_von_habsburg
 			}
 		}
 		bypass = {
 			has_country_leader = {
-				name = "Ferdinand III von Habsburg"
+				character = AUS_ferdinand_iii_von_habsburg
 			}
 		}
 		cost = 5
@@ -1064,9 +1078,7 @@ focus_tree = {
 			OR = {
 				has_war_with = BOH
 				NOT = { country_exists = BOH }
-				BOH = {
-					is_ally_or_subject_of_ROOT = yes
-				}
+				BOH = { is_ally_or_subject_of_ROOT = yes }
 			}
 		}
 		will_lead_to_war_with = BOH
@@ -1206,10 +1218,8 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				BOH = { is_subjected_country = yes }
-				BOH = {
-					is_ally_or_subject_of_ROOT = yes
-				}
+				BOH = { is_independent_country = no }
+				BOH = { is_ally_or_subject_of_ROOT = yes }
 			}
 		}
 		cost = 10

@@ -13,7 +13,7 @@ state = {
 		owner = WAL
 		victory_points = { 3663 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -21,6 +21,7 @@ state = {
 		add_core_of = WAL
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		637 660 674 818 3076 3630 3636 3639 3645 3663 6652 6658 6667 6677 6695 9617 9651 11588 11603 11605 11619 11636 11657 
 	}

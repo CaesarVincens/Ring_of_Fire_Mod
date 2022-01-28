@@ -9,7 +9,7 @@
 #Name is how you refer to the rule in adjecencies.csv
 
 #Øresund - (Østersøen <-> Kattegat/Skagerak/Nordsøen)
-adjacency_rule
+adjacency_rule =
 {
 	name = "DANISH_BELTS_STRAIT"
 
@@ -49,7 +49,7 @@ adjacency_rule
 }
 
 #Turkish Straits
-adjacency_rule
+adjacency_rule =
 {
 	name = "BOSPHORUS_STRAIT"
 
@@ -86,4 +86,127 @@ adjacency_rule
 	
 	icon = 9833
 	offset = { -2 0 -9 }
+}
+
+adjacency_rule =
+{
+	name = "NEVA_RIVER"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 3151 149 6174 79 11068 }
+	
+	icon = 149
+	offset = { 0 0 -5 }
+}
+
+#Svir
+adjacency_rule =
+{
+	name = "SVIR_RIVER"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 11153 6057 3084 6106 11059 9190 9082 }
+	
+	icon = 6057
+	offset = { 0 0 -2 }
+}
+
+#White Sea Canal
+adjacency_rule =
+{
+	name = "WHITE_SEA_CANAL"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 11212 3078 9045 94 6021 11175 }
+	
+	icon = 6021
+	offset = { 5 0 -5 }
+	is_disabled = {
+		tooltip = canal_not_built
+		NOT = { has_global_flag = white_sea_canal_built }
+	}
 }

@@ -1,8 +1,10 @@
 RUS_canon_focuses = {
 	name = "Russia Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = RUS
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -20,26 +22,29 @@ Russian_Civil_war_Free_RUS = {
 	name = "Fight Sheremetev"
 	desc = "do it"
 	
+	allowed = {
+		original_tag = RUS
+	}
 	enable = {
-		original_tag = USR
+		tag = RSA
 	}
 	abort = {
-		NOT = { country_exists = RUS }
+		NOT = { country_exists = RSC }
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = RUS
+		id = RSC
 		value = 200
 	}
 	ai_strategy = {
 		type = conquer
-		id = RUS
+		id = RSC
 		value = 200
 	}
 	ai_strategy = {
 		type = declare_war
-		id = RUS
+		id = RSC
 		value = 200
 	}
 }
@@ -48,19 +53,22 @@ Russian_Civil_war_Free_RUS_prep = {
 	name = "Fight Sheremetev"
 	desc = "do it"
 	
+	allowed = {
+		original_tag = RUS
+	}
 	enable = {
-		original_tag = USR
+		tag = RSA
 	}
 	abort = {
 		OR = {
-			has_war_with = RUS
-			NOT = { country_exists = RUS }
+			has_war_with = RSC
+			NOT = { country_exists = RSC }
 		}
 	}
 	
 	ai_strategy = {
 		type = prepare_for_war
-		id = RUS
+		id = RSC
 		value = 100
 	}
 }
@@ -69,20 +77,23 @@ Russian_Civil_war_Direc_RUS_prep = {
 	name = "Control Russia"
 	desc = "do it"
 	
-	enable = {
+	allowed = {
 		original_tag = RUS
-		country_exists = USR
+	}
+	enable = {
+		tag = RSC
+		country_exists = RSA
 	}
 	abort = {
 		OR = {
-			has_war_with = USR
-			NOT = { country_exists = USR }
+			has_war_with = RSA
+			NOT = { country_exists = RSA }
 		}
 	}
 	
 	ai_strategy = {
 		type = prepare_for_war
-		id = USR
+		id = RSA
 		value = 100
 	}
 }
@@ -91,27 +102,30 @@ Russian_Civil_war_Direc_RUS = {
 	name = "Control Russia"
 	desc = "do it"
 	
-	enable = {
+	allowed = {
 		original_tag = RUS
-		country_exists = USR
+	}
+	enable = {
+		tag = RSC
+		country_exists = RSA
 	}
 	abort = {
-		NOT = { country_exists = USR }
+		NOT = { country_exists = RSA }
 	}
 	
 	ai_strategy = {
 		type = antagonize
-		id = USR
+		id = RSA
 		value = 200
 	}
 	ai_strategy = {
 		type = conquer
-		id = USR
+		id = RSA
 		value = 200
 	}
 	ai_strategy = {
 		type = declare_war
-		id = USR
+		id = RSA
 		value = 200
 	}
 }
@@ -120,8 +134,10 @@ RUS_air_research_plan = {
 	name = "Research airships"
 	desc = "Get those OP ships"
 	
-	enable = {
+	allowed = {
 		original_tag = RUS
+	}
+	enable = {
 		has_completed_focus = RUS_russian_flight
 	}
 	abort = {
@@ -137,8 +153,10 @@ RUS_airship_research_plan = {
 	name = "Research airships"
 	desc = "Get those OP ships"
 	
-	enable = {
+	allowed = {
 		original_tag = RUS
+	}
+	enable = {
 		has_completed_focus = RUS_dirrigible_designs
 	}
 	abort = {

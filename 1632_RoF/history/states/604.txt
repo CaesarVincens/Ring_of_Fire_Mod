@@ -12,14 +12,18 @@ state = {
 		owner = NSP
 		victory_points = { 7660 3 }
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			7660 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = NSP
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		4598 7632 7660 10484 
 	}

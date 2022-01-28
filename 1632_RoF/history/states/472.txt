@@ -1,4 +1,3 @@
-
 state = {
 	id = 472
 	name = "STATE_472"
@@ -9,7 +8,7 @@ state = {
 			6282 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -24,10 +23,11 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		6282 
 	}
 	manpower = 538800
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = rural
 }

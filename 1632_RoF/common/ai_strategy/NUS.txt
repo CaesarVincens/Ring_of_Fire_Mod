@@ -16,6 +16,9 @@
 # area_priority
 
 NUS_unit_production = {
+	allowed = {
+		original_tag = NUS		
+	}
 	enable = {
 		original_tag = NUS
 	}
@@ -117,6 +120,9 @@ NUS_unit_production = {
 }
 
 NUS_pp_spend_amount = {
+	allowed = {
+		original_tag = NUS		
+	}
 	enable = {
 		original_tag = NUS
 	}
@@ -135,6 +141,9 @@ NUS_pp_spend_amount = {
 }
 
 NUS_area_priority = {
+	allowed = {
+		original_tag = NUS		
+	}
 	enable = {
 		original_tag = NUS
 	}
@@ -236,6 +245,9 @@ NUS_area_priority = {
 
 
 NUS_template_design = {
+	allowed = {
+		original_tag = NUS		
+	}
 	enable = {
 		original_tag = NUS
 		date < 1633.1.1
@@ -294,6 +306,9 @@ NUS_template_design = {
 }
 
 NUS_template_design = {
+	allowed = {
+		original_tag = NUS		
+	}
 	enable = {
 		original_tag = NUS
 		date > 1635.1.1				
@@ -359,7 +374,7 @@ USE_annex_germans = {
 		is_german_tag = yes
 	}
 	#abort_when_not_enabled = yes
-	target_array = german_tags
+	target_array = global.german_tags
 	ai_strategy = {
 		type = prepare_for_war
 		id = "NUS"

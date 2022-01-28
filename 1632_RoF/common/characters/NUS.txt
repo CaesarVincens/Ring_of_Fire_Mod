@@ -1,0 +1,160 @@
+characters = {
+	NUS_michael_stearns = {
+		name = "Michael Stearns"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NUS/Portrait_NUS_Michael_Stearns.dds"
+			}
+			army = {
+				large = "gfx/leaders/NUS/Portrait_NUS_Michael_Stearns.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MICHAEL_STEARNS_DESC"
+			ideology = democracy
+			traits = { union_man experienced_negiotiator }
+			expire = "1660.1.1"
+		}
+	}
+	NUS_ed_piazza = {
+		name = "Ed Piazza"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+	}
+	NUS_john_chandler_simpson = {
+		name = "John Chandler Simpson"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
+			}
+			army = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_Navy_1.dds"
+			}
+		}
+		country_leader = {
+			#desc = "POLITICS_JOHN_SIMPSON_DESC"
+			ideology = constitutional_republic
+			traits = { grand_fleet_proponent }
+			expire = "1660.1.1"
+		}
+	}
+	NUS_ken_beasley = {
+		name = "Ken Beasley"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = dictatorship
+			expire = "1660.1.1"
+		}
+	}
+	NUS_gretchen_richterin = {
+		name = "Gretchen Richterin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown_female.dds"
+			}
+		}
+		gender = female
+	}
+	NUS_red_sybolt = {
+		name = "Bobby Gene \"Red\" Sybolt"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1660.1.1"
+		}
+	}
+	NUS_quentin_underwood = {
+		name = "Quentin B. Underwood"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/portrait_USA_earl_browder.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism_neutral
+			expire = "1660.1.1"
+		}
+	}
+	USE_wilhelm_wettin = {
+		name = "Wilhelm von Wettin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Germanies/Portrait_Saxe_Weimar_Wilhelm_Wettin.dds"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy_neutral
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "1660.1.1"
+		}
+		country_leader = {
+			ideology = constitutional_monarchy
+			expire = "1660.1.1"
+		}
+	}
+	USE_johann_von_ramsla = {
+		name = "Johann Wilhelm Neumair von Ramsla"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/leader_unknown.dds"
+			}
+		}
+	}
+	NUS_frank_jackson = {
+		name = "Frank Jackson"
+		portraits = {
+			army = {
+				large = "GFX_commander_NUS_Frank_Jackson"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	NUS_francisco_nasi = {
+		advisor = {
+			slot = political_advisor
+			idea_token = NUS_francisco_nasi
+			allowed = {
+				original_tag = NUS
+			}
+			cost = 120.000
+			traits = {
+				head_of_intelligence 
+			}
+			visible = {
+				has_intelligence_agency = yes 
+			}
+			available = {
+				has_country_leader = {
+					character = NUS_michael_stearns
+					ruling_only = yes
+				}
+			}
+		}
+		name = "NUS_francisco_nasi"
+		portraits = {
+			army = {
+				small = "GFX_idea_NUS_francisco_nasi"
+			}
+		}
+	}
+}

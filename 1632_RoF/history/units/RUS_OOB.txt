@@ -1,7 +1,7 @@
 ﻿start_equipment_factor = 0
 
 division_template = {
-	name = "Tercio"
+	name = "Streltzi"
 
 	regiments = {
 		tercio_infantry = { x = 0 y = 0 }
@@ -15,11 +15,12 @@ division_template = {
 		tercio_infantry = { x = 2 y = 2 }
 	}
 	support = {
+		gulyay_gorod = { x = 0 y = 0 }
 	}
 }
 
 division_template = {
-	name = "Tercio Detachment"
+	name = "Streltzi Detachment"
 
 	regiments = {
 		tercio_infantry = { x = 0 y = 0 }
@@ -27,6 +28,7 @@ division_template = {
 		tercio_infantry = { x = 0 y = 2 }
 	}
 	support = {
+		gulyay_gorod = { x = 0 y = 0 }
 	}
 }
 
@@ -60,7 +62,6 @@ division_template = {
 	}
 }
 
-### No BHU air forces ###
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
@@ -74,63 +75,63 @@ instant_effect = {
 }
 units = {
 	division = {
-		name = "1. Tercio"
+		name = "1. Streltzi"
 		location = 6380
-		division_template = "Tercio"
+		division_template = "Streltzi"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "2. Tercio"
+		name = "2. Streltzi"
 		location = 6380
-		division_template = "Tercio"
+		division_template = "Streltzi"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "3. Tercio"
+		name = "3. Streltzi"
 		location = 6380
-		division_template = "Tercio"
+		division_template = "Streltzi"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "1. Tercio Detachment"
+		name = "1. Streltzi Detachment"
 		location = 6380
-		division_template = "Tercio Detachment"
+		division_template = "Streltzi Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "2. Tercio Detachment"
+		name = "2. Streltzi Detachment"
 		location = 6380
-		division_template = "Tercio Detachment"
+		division_template = "Streltzi Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "4. Tercio"
+		name = "4. Streltzi"
 		location = 6380
-		division_template = "Tercio"
+		division_template = "Streltzi"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "5. Tercio"
+		name = "5. Streltzi"
 		location = 6380
-		division_template = "Tercio"
+		division_template = "Streltzi"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "6. Tercio"
+		name = "6. Streltzi"
 		location = 6380
-		division_template = "Tercio"
+		division_template = "Streltzi"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "3. Tercio Detachment"
+		name = "3. Streltzi Detachment"
 		location = 6380
-		division_template = "Tercio Detachment"
+		division_template = "Streltzi Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "4. Tercio Detachment"
+		name = "4. Streltzi Detachment"
 		location = 6380
-		division_template = "Tercio Detachment"
+		division_template = "Streltzi Detachment"
 		start_experience_factor = 0.3
 	}
 }

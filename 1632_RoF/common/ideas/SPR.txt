@@ -7,65 +7,11 @@ ideas = {
 			removal_cost = -1
 			picture = generic_infantry_bonus
 			modifier = {
-				send_volunteer_divisions_required = -0.75
+				send_volunteer_divisions_required = -0.8
+				send_volunteer_size = 6
 			}
 			rule = {
 				can_send_volunteers = yes
-			}
-		}
-	}
-	political_advisor = {
-		SPR_absolutist_advisor = {
-			allowed = {
-				always = no
-				original_tag = SPR
-			}
-			traits = { absolutist_minister }
-			on_add = {
-				#country_event = conv.political.01
-			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		SPR_democratic_advisor = {
-			allowed = {
-				always = no
-				original_tag = SPR
-			}
-			traits = { liberal_minister }
-			on_add = {
-				#country_event = conv.political.25
-			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		SPR_neutrality_advisor = {
-			allowed = {
-				always = no
-				original_tag = SPR
-			}
-			traits = { neutrality_minister }
-			picture = neutrality_idea
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
 			}
 		}
 	}

@@ -1,8 +1,10 @@
 ﻿UPS_canon_focuses = {
 	name = "United Provinces Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = UPS
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -18,6 +20,9 @@
 UPS_neutrality = {
 	name = "United Provinces Alone"
 	desc = ""
+	allowed = {
+		original_tag = UPS
+	}
 	enable = {
 		original_tag = UPS
 	}

@@ -386,52 +386,9 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = abs_cons_under_half.tt
-				OR = {
-					AND = {
-						absolutist < 0.50
-						constitutionalist < 0.01
-					}
-					AND = {
-						absolutist < 0.45
-						constitutionalist < 0.05
-					}
-					AND = {
-						absolutist < 0.40
-						constitutionalist < 0.10
-					}
-					AND = {
-						absolutist < 0.35
-						constitutionalist < 0.15
-					}
-					AND = {
-						absolutist < 0.30
-						constitutionalist < 0.20
-					}
-					AND = {
-						absolutist < 0.25
-						constitutionalist < 0.25
-					}
-					AND = {
-						absolutist < 0.20
-						constitutionalist < 0.30
-					}
-					AND = {
-						absolutist < 0.15
-						constitutionalist < 0.35
-					}
-					AND = {
-						absolutist < 0.10
-						constitutionalist < 0.40
-					}
-					AND = {
-						absolutist < 0.05
-						constitutionalist < 0.45
-					}
-					AND = {
-						absolutist < 0.01
-						constitutionalist < 0.50
-					}
-				}
+				set_temp_variable = { abs_con = party_popularity@absolutist }
+				add_to_temp_variable = { abs_con = party_popularity@constitutionalist }
+				check_variable = { abs_con < 0.5 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -439,8 +396,8 @@ focus_tree = {
 			if = {
 				limit = {
 					OR = {
-						absolutist > 0.001
-						constitutionalist > 0.001
+						absolutist > 0
+						constitutionalist > 0
 					}
 				}
 				hidden_effect = {
@@ -487,9 +444,9 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						absolutist < 0.001
-						constitutionalist < 0.001
+					NOT = {
+						absolutist > 0
+						constitutionalist > 0
 					}
 				}
 				add_political_power = 100
@@ -649,60 +606,17 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = rad_lib_under_half.tt
-				OR = {
-					AND = {
-						radical < 0.50
-						liberal < 0.01
-					}
-					AND = {
-						radical < 0.45
-						liberal < 0.05
-					}
-					AND = {
-						radical < 0.40
-						liberal < 0.10
-					}
-					AND = {
-						radical < 0.35
-						liberal < 0.15
-					}
-					AND = {
-						radical < 0.30
-						liberal < 0.20
-					}
-					AND = {
-						radical < 0.25
-						liberal < 0.25
-					}
-					AND = {
-						radical < 0.20
-						liberal < 0.30
-					}
-					AND = {
-						radical < 0.15
-						liberal < 0.35
-					}
-					AND = {
-						radical < 0.10
-						liberal < 0.40
-					}
-					AND = {
-						radical < 0.05
-						liberal < 0.45
-					}
-					AND = {
-						radical < 0.01
-						liberal < 0.50
-					}
-				}
+				set_temp_variable = { lib_rad = party_popularity@liberal }
+				add_to_temp_variable = { lib_rad = party_popularity@radical }
+				check_variable = { lib_rad < 0.5 }
 			}
 		}
 		completion_reward = {
 			if = {
 				limit = {
 					OR = {
-						radical > 0.001
-						liberal > 0.001
+						radical > 0
+						liberal > 0
 					}
 				}
 				hidden_effect = {
@@ -749,9 +663,9 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						radical < 0.001
-						liberal < 0.001
+					NOT = {	
+						radical > 0
+						liberal > 0
 					}
 				}
 				add_political_power = 100

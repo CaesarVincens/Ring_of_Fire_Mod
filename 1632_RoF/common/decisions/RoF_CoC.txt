@@ -91,9 +91,14 @@ RoF_CoC_decisions = {
 		complete_effect = {
 			add_to_variable = { var = CoC_strength value = 5 }
 			add_to_variable = { var = CoC_anger value = -5 }
-			add_popularity = {
-				ideology = radical
-				popularity = 0.05
+			if = {
+				limit = {
+					radical < 0.3
+				}
+				add_popularity = {
+					ideology = radical
+					popularity = 0.05
+				}
 			}
 			custom_effect_tooltip = RoF_strengthen_CoC.tt
 			hidden_effect = {
@@ -132,6 +137,16 @@ RoF_CoC_decisions = {
 			hidden_effect = {
 				check_CoC_effects_for_this = yes
 			}
+			if = {
+				limit = {
+					radical > 0.3
+				}
+				add_popularity = {
+					ideology = radical
+					popularity = -0.05
+				}
+			}
+
 		}
 		cost = 50
 		days_re_enable = 30
@@ -212,7 +227,7 @@ RoF_CoC_decisions = {
 						has_government = radical
 						has_government = liberal
 						has_country_flag = CoC_present
-						has_idea = wasteland
+						has_idea = unorganized_territory_idea
 					}
 				}
 			}
@@ -244,7 +259,7 @@ RoF_CoC_decisions = {
 							has_government = radical
 							has_government = liberal
 							has_country_flag = CoC_present
-							has_idea = wasteland
+							has_idea = unorganized_territory_idea
 						}
 					}
 					capital_scope = {
@@ -464,21 +479,23 @@ RoF_CoC_covert_decisions = {
 			}
 		}
 		highlight_states = {
-			OR = {
-				has_state_flag = CoC_agitating_by_@ROOT
-				state = FROM.defender_state_vs_@ROOT
-				AND = {
-					OR = {
-						NOT = { is_capital = yes }
-						FROM = { num_of_controlled_states < 2 }
-					}
-					is_on_continent = europe
-					is_owned_and_controlled_by = FROM
-					#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-					any_neighbor_state = {
+			highlight_states_trigger = {
+				OR = {
+					has_state_flag = CoC_agitating_by_@ROOT
+					state = FROM.defender_state_vs_@ROOT
+					AND = {
+						OR = {
+							NOT = { is_capital = yes }
+							FROM = { num_of_controlled_states < 2 }
+						}
+						is_on_continent = europe
+						is_owned_and_controlled_by = FROM
 						#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
-						#has_ROOT_at_least_1_div_in_current_state_scope = yes
-						is_owned_and_controlled_by = ROOT
+						any_neighbor_state = {
+							#hidden_trigger = { NOT = { has_state_flag = border_incident_active } }
+							#has_ROOT_at_least_1_div_in_current_state_scope = yes
+							is_owned_and_controlled_by = ROOT
+						}
 					}
 				}
 			}
@@ -529,7 +546,7 @@ RoF_CoC_covert_decisions = {
 		available = {
 			hidden_trigger = { always = no }
 		}
-		highlight_states = { state = var:FROM.CoC_agitated_state_var }
+		highlight_states = { highlight_states_trigger = { state = var:FROM.CoC_agitated_state_var } }
 		days_mission_timeout = 30
 		fire_only_once = yes
 		is_good = no
@@ -544,7 +561,7 @@ RoF_CoC_covert_decisions = {
 		available = {
 			hidden_trigger = { always = no }
 		}
-		highlight_states = { state = var:FROM.CoC_agitated_state_var }
+		highlight_states = { highlight_states_trigger = { state = var:FROM.CoC_agitated_state_var } }
 		days_mission_timeout = 180
 		fire_only_once = yes
 		is_good = no
@@ -557,7 +574,7 @@ RoF_CoC_covert_decisions = {
 		available = {
 			#hidden_trigger = { always = no }
 		}
-		highlight_states = { state = var:FROM.CoC_agitated_state_var }
+		highlight_states = { highlight_states_trigger = { state = var:FROM.CoC_agitated_state_var } }
 		days_mission_timeout = 60
 		cost = 150
 		#fire_only_once = yes
@@ -599,7 +616,7 @@ RoF_CoC_covert_decisions = {
 		available = {
 			hidden_trigger = { always = no }
 		}
-		highlight_states = { state = var:ROOT.CoC_agitated_state_var }
+		highlight_states = { highlight_states_trigger = { state = var:ROOT.CoC_agitated_state_var } }
 		days_mission_timeout = 180
 		fire_only_once = yes
 		is_good = no
@@ -625,7 +642,7 @@ RoF_CoC_covert_decisions = {
 		#		has_state_flag = CoC_agitating_by_@ROOT
 		#	}
 		#}
-		highlight_states = { state = ROOT.CoC_agitated_state_var }
+		highlight_states = { highlight_states_trigger = { state = ROOT.CoC_agitated_state_var } }
 		cancel_trigger = {
 
 		}
@@ -697,9 +714,9 @@ RoF_CoC_covert_decisions = {
 		visible = {
 			has_variable = ROOT.CoC_agitating_progress
 		}
-		highlight_states = { state = ROOT.CoC_agitated_state_var }
+		highlight_states = { highlight_states_trigger = { state = ROOT.CoC_agitated_state_var } }
 		custom_cost_trigger = {
-			check_variable = { ROOT.CoC_annex_cost < political_power }
+			has_political_power > var:CoC_annex_cost
 		}
 		available = {
 			check_variable = { ROOT.CoC_annex_cost < political_power }
@@ -897,10 +914,12 @@ RoF_CoC_Border_Clashes = {
 			}
 		}
 		highlight_states = {
-			OR = {
-				state = FROM.defender_state_vs_@ROOT
-				AND = {
-					has_state_flag = CoC_agitating_by_@ROOT
+			highlight_states_trigger = {
+				OR = {
+					state = FROM.defender_state_vs_@ROOT
+					AND = {
+						has_state_flag = CoC_agitating_by_@ROOT
+					}
 				}
 			}
 		}
@@ -996,9 +1015,11 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			OR = {
-				state = var:defender_state_temp
-				state = var:ROOT.defender_state_vs_@FROM
+			highlight_states_trigger = {
+				OR = {
+					state = var:defender_state_temp
+					state = var:ROOT.defender_state_vs_@FROM
+				}
 			}
 		}
 
@@ -1038,9 +1059,11 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			OR = {
-				state = var:defender_state_temp
-				state = var:ROOT.defender_state_vs_@FROM
+			highlight_states_trigger = {
+				OR = {
+					state = var:defender_state_temp
+					state = var:ROOT.defender_state_vs_@FROM
+				}
 			}
 		}
 
@@ -1082,7 +1105,9 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			state = var:FROM.attacker_state_vs_@ROOT
+			highlight_states_trigger = {
+				state = var:FROM.attacker_state_vs_@ROOT
+			}
 		}
 
 		ai_will_do = {
@@ -1155,7 +1180,7 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			OR = {
+			highlight_state_targets = {
 				state = var:defender_state_temp
 				state = var:FROM.defender_state_vs_@ROOT
 			}
@@ -1204,7 +1229,7 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			OR = {
+			highlight_state_targets = {
 				state = var:FROM.attacker_state_vs_@ROOT
 				state = var:ROOT.defender_state_vs_@FROM
 			}
@@ -1265,7 +1290,7 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			OR = {
+			highlight_state_targets = {
 				state = var:FROM.defender_state_vs_@ROOT
 				state = var:ROOT.attacker_state_vs_@FROM
 			}
@@ -1342,7 +1367,7 @@ RoF_CoC_Border_Clashes = {
 		}
 
 		highlight_states = {
-			OR = {
+			highlight_state_targets = {
 				state = var:FROM.attacker_state_vs_@ROOT
 				state = var:ROOT.defender_state_vs_@FROM
 			}

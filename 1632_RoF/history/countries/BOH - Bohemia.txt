@@ -5,6 +5,7 @@ oob = "BOH_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -37,22 +38,4 @@ add_ideas = {
 	balanced_eco
 }
 set_stability = 0.5
-
-create_country_leader = {
-	name = "Albrecht von Wallenstein"
-	desc = "POLITICS_WALLENSTEIN_DESC"
-	picture = "GFX_leader_BOH_Wallenstein"
-	ideology = constitutional_monarchy
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Ferdinand II von Habsburg"
-	desc = "POLITICS_JAKOB_VON KIRBACH_DESC"
-	picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
-	expire = "1660.1.1"
-	ideology = absolute_monarchy
-	traits = {
-		stand_against_ottoman
-   }
-}
+recruit_character = BOH_frederick_v

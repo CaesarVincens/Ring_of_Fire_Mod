@@ -5,6 +5,7 @@ oob = "RUT_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -34,12 +35,4 @@ set_country_flag = religion_orthodox
 add_ideas = {
 	balanced_eco
 }
-create_country_leader = {
-    name = "Semyon Vitovsky"
-    desc = "POLITICS_SEMYON_VITOVSKY_DESC"
-    picture = "gfx/interface/ideas/idea_george_v.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-    }
-}
+recruit_character = RUT_jeremi_wisniowiecki

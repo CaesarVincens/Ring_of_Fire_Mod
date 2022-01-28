@@ -1,4 +1,3 @@
-
 state = {
 	id = 276
 	name = "STATE_276"
@@ -9,7 +8,7 @@ state = {
 	history = {
 		owner = WAU
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
@@ -18,6 +17,7 @@ state = {
 
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1428 4211 7384 7396 12126
 	}

@@ -1,9 +1,11 @@
 germans_ally_swe = {
 	name = "Sweden will protect us"
 	desc = "Be friends with GARS"
+	allowed = {
+		is_german_tag = yes
+	}
 	enable = {
 		country_exists = SWE
-		is_german_tag = yes
 		is_in_faction_with = SWE
 	}
 	abort = {
@@ -57,16 +59,18 @@ SAX_BRA_ally_SWE = {
 SAX_BRA_stay_out_ostend = {
 	name = "Stay Out of Ostend"
 	desc = "Leave the Faction"
-	enable = {
+	allowed = {
 		OR = {
 			tag = SAX
 			tag = BRA
 		}
+	}
+	enable = {
 		is_historical_focus_on = yes
 		is_in_faction_with = NUS
 	}
 	abort = {
-
+		NOT = { is_in_faction_with = NUS }
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
@@ -80,6 +84,12 @@ SAX_BRA_stay_out_ostend = {
 SAX_BRA_watch_AUS = {
 	name = "Watch AUS"
 	desc = ""
+	allowed = {
+		OR = {
+			tag = SAX
+			tag = BRA
+		}
+	}
 	enable = {
 		OR = {
 			tag = SAX
@@ -109,6 +119,9 @@ SAX_BRA_watch_AUS = {
 SXW_befriend_SWE = {
 	name = "support SWE"
 	desc = "support Sweden"
+	allowed = {
+		original_tag = SXW
+	}
 	enable = {
 		original_tag = SXW
 	}
@@ -136,6 +149,9 @@ SXW_befriend_SWE = {
 BAV_watch_ANS_WRT = {
 	name = "Watch for ANS and WRT"
 	desc = ""
+	allowed = {
+		original_tag = BAV
+	}
 	enable = {
 		tag = BAV
 	}
@@ -155,5 +171,56 @@ BAV_watch_ANS_WRT = {
 		type = prepare_for_war
 		id = WRT
 		value = 100
+	}
+}
+
+COL_protect_koln = {
+	name = "Protect Koln"
+	desc = ""
+	allowed = {
+		original_tag = COL
+	}
+	enable = {
+		tag = COL
+	}
+	abort = {
+		has_global_flag = thirty_years_war_ended
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		states = {
+			212
+		}
+		ratio = 0.3
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BRS
+		value = 100
+	}
+}
+
+minor_germans_stay_home = {
+	name = "stay home"
+	desc = "keep yourself safe"
+	allowed = {
+		NOT = { tag = HES }
+		is_german_tag = yes
+	}
+	enable = {
+		is_in_faction_with = SWE
+		check_variable = { num_owned_states < 2 }
+	}
+	abort = {
+		OR = {
+			has_global_flag = thirty_years_war_ended
+		}
+	}
+	ai_strategy = {
+		type = front_control
+		area = south_germany
+		ratio = 0
+		execute_order = no
+		manual_attack = no
 	}
 }

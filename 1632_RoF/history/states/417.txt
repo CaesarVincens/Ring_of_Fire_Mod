@@ -1,4 +1,3 @@
-
 state = {
 	id = 417
 	name = "STATE_417"
@@ -14,7 +13,7 @@ state = {
 			5027 8 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -24,8 +23,9 @@ state = {
 
 	}
 
+	local_supplies = 5.0
 	provinces = {
-		2057 4968 4974 5027 5058 10850 10892 10923 12749 12813 
+		4968 5027 10850 10892 10923 12749 12813 
 	}
 	manpower = 32600
 	buildings_max_level_factor = 1.000

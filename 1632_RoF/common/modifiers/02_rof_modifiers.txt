@@ -1,0 +1,32 @@
+AUS_dual_monarchy = {
+	valid_relation_trigger = {
+		NOT = { country_exists = HUN }
+	}
+	resistance_target = -0.25
+}
+
+USE_constitutent = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	resistance_target = -0.25
+	compliance_gain = 0.05
+}
+
+USE_annex = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	resistance_target = -0.1
+	compliance_gain = 0.05
+}
+
+lack_of_infrastructure = {
+	army_speed_factor = -0.5
+	army_attack_factor = -0.5
+	local_org_regain = -0.25
+}

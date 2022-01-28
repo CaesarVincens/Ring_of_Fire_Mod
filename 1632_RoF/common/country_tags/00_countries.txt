@@ -63,6 +63,7 @@ SPR = "countries/Spain.txt"
 BRG = "countries/Burgundy.txt"
 SIB = "countries/Siberia.txt"
 KUR = "countries/Kurland.txt"
+LIT = "countries/Lithuania.txt"
 
 #Balkans
 ALB = "countries/Albania.txt"
@@ -194,7 +195,7 @@ NSP = "countries/New Spain.txt"
 SPU = "countries/Spanish Peru.txt"
 WIC = "countries/West India Company.txt"
 
-#"Wastelands"
+#Unorganized
 WNA = "countries/North America.txt"
 WSA = "countries/South America.txt"
 WAF = "countries/Africa.txt"

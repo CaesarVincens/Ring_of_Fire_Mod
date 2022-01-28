@@ -113,6 +113,22 @@ spriteTypes = {
 		name = "GFX_idea_filaret_pic"
 		texturefile = "gfx/interface/ideas/idea_filaret_pic.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_POL_lukasz_opalinski_elder"
+		texturefile = "gfx/interface/ideas/idea_lukasz_opalinski_elder.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_jakub_zadzik"
+		texturefile = "gfx/interface/ideas/idea_jakub_zadzik.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_jerzy_ossolinski"
+		texturefile = "gfx/interface/ideas/idea_jerzy_ossolinski.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NUS_francisco_nasi"
+		texturefile = "gfx/interface/ideas/idea_tur_rauf_orbay.dds"
+	}
 	### NATIONAL IDEAS
 	spriteType = {
 		name = "GFX_idea_lion_of_the_north"

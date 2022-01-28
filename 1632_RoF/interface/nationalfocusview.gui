@@ -626,7 +626,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "national_focus_detail_view"
 		position = { x=500 y=100 }
-		size = { width = 550 height = 550 }
+		size = { width = 550 height = 600 }
 		Orientation = UPPER_LEFT
 		moveable = yes
 		clipping = no
@@ -669,7 +669,8 @@ guiTypes = {
 			text = ""
 			maxWidth = 450
 			maxHeight = 30
-			format = center		
+			format = center
+			fixedsize = yes		
 		}
 		iconType = {
 			name = "symbol"
@@ -713,12 +714,12 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "desc"
-			position = { x = 34 y = 250 }
+			position = { x = 24 y = 250 }
 			textureFile = ""
 			font = "hoi_18mbs"
-			borderSize = {x = 5 y = 0}
+			borderSize = {x = 0 y = 0}
 			text = "Description"
-			maxWidth = 485
+			maxWidth = 490
 			maxHeight = 110
 			scrollbarType = standardtext_slider
 			format = center
@@ -750,7 +751,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 455
-			maxHeight = 138
+			maxHeight = 150
 			scrollbarType = standardtext_slider
 #			format = center
 		}

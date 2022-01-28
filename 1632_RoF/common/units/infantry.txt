@@ -5,6 +5,7 @@
 sub_units = {
 
 	marine = {
+		abbreviation = "MRN"
 		sprite = infantry
 		map_icon_category = infantry
 		special_forces = yes
@@ -40,7 +41,7 @@ sub_units = {
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.06
+		supply_consumption = 0.05
 		breakthrough = 0.3
 	
 		need = {
@@ -51,7 +52,7 @@ sub_units = {
 			attack = 0.3
 		}
 		river = {
-			attack = 0.4
+			attack = 0.3
 		}
 		amphibious = {
 			attack = 0.5
@@ -59,6 +60,7 @@ sub_units = {
 	}
 	
 	mountaineers = {
+		abbreviation = "MTN"
 		sprite = infantry
 		map_icon_category = infantry
 		special_forces = yes
@@ -95,7 +97,7 @@ sub_units = {
 		suppression = 1
 		weight = 0.5
 		
-		supply_consumption = 0.07
+		supply_consumption = 0.05
 		breakthrough = 0.3
 	
 		need = {
@@ -115,6 +117,7 @@ sub_units = {
 	}
 
 	paratrooper = {
+		abbreviation = "PAR"
 		sprite = infantry
 		map_icon_category = infantry
 		special_forces = yes
@@ -149,7 +152,7 @@ sub_units = {
 		training_time = 150
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.06
+		supply_consumption = 0.05
 
 		can_be_parachuted = yes
 	

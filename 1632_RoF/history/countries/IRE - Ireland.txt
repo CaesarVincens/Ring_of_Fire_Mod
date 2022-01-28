@@ -5,6 +5,7 @@ oob = "IRE_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -32,32 +33,4 @@ set_popularities = {
 set_country_flag = religion_catholic
 add_ideas = {
 }
-create_country_leader = {
-	name = "Owen Roe O'Neil"
-	desc = "POLITICS_GRAHAM_BROWN_DESC"
-	picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
-	expire = "1660.1.1"
-	ideology = constitutional_republic
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Owen Roe O'Neil"
-	desc = "POLITICS_GRAHAM_BROWN_DESC"
-	picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
-	expire = "1660.1.1"
-	ideology = democracy
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Owen Roe O'Neil"
-	desc = "POLITICS_GRAHAM_BROWN_DESC"
-	picture = "gfx/leaders/ENG/Portrait_Ireland_Owen_Roe_Oneil.dds"
-	expire = "1660.1.1"
-	ideology = republican_neutral
-	traits = {
-	}
-}
+recruit_character = IRE_owen_roe_oneil

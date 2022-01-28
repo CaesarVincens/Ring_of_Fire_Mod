@@ -9,14 +9,18 @@ state = {
 		owner = VOC
 		victory_points = { 12068 1 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			12068 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = VOC
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1091 1175 4096 7186 7214 9955 11914 11959 12027 12068 
 	}

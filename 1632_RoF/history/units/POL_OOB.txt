@@ -31,7 +31,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Cavalry Division"
+	name = "Hussar Division"
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -49,7 +49,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Cavalry Brigade"
+	name = "Hussar Detachment"
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -60,7 +60,6 @@ division_template = {
 	}
 }
 
-### No BHU air forces ###
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
@@ -107,18 +106,6 @@ units = {
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "1. Tercio Detachment"
-		location = 3544
-		division_template = "Tercio Detachment"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "2. Tercio Detachment"
-		location = 3544
-		division_template = "Tercio Detachment"
-		start_experience_factor = 0.3
-	}
-	division = {
 		name = "5. Tercio"
 		location = 3544
 		division_template = "Tercio"
@@ -131,63 +118,75 @@ units = {
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "7. Tercio"
+		name = "1. Hussar Division"
 		location = 3544
-		division_template = "Tercio"
+		division_template = "Hussar Division"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "8. Tercio"
+		name = "2. Hussar Division"
 		location = 3544
-		division_template = "Tercio"
+		division_template = "Hussar Division"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "3. Tercio Detachment"
+		name = "3. Hussar Division"
+		location = 3544
+		division_template = "Hussar Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Hussar Division"
+		location = 3544
+		division_template = "Hussar Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Hussar Division"
+		location = 3544
+		division_template = "Hussar Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Hussar Division"
+		location = 3544
+		division_template = "Hussar Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Tercio Detachment"
 		location = 3544
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "4. Tercio Detachment"
+		name = "2. Tercio Detachment"
 		location = 3544
 		division_template = "Tercio Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "9. Tercio"
+		name = "1. Hussar Detachment"
 		location = 3544
-		division_template = "Tercio"
+		division_template = "Hussar Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "10. Tercio"
+		name = "2. Hussar Detachment"
 		location = 3544
-		division_template = "Tercio"
+		division_template = "Hussar Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "11. Tercio"
+		name = "3. Hussar Detachment"
 		location = 3544
-		division_template = "Tercio"
+		division_template = "Hussar Detachment"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "12. Tercio"
+		name = "4. Hussar Detachment"
 		location = 3544
-		division_template = "Tercio"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "5. Tercio Detachment"
-		location = 3544
-		division_template = "Tercio Detachment"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "6. Tercio Detachment"
-		location = 3544
-		division_template = "Tercio Detachment"
+		division_template = "Hussar Detachment"
 		start_experience_factor = 0.3
 	}
 }

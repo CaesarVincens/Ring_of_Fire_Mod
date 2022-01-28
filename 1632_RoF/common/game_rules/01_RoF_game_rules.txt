@@ -1,0 +1,371 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+ ##   ##  #  # #  # ### ###  #   #      ## ###  ###  ##  ### ### ###  ##      ###  #  # #   ###  ## 
+#  # #  # #  # ## #  #  #  #  # #      #   #  # #   #  #  #  #    #  #  #     #  # #  # #   #   #   
+#    #  # #  # # ##  #  ###    #        #  ###  ##  #     #  ##   #  #        ###  #  # #   ##   #  
+#  # #  # #  # #  #  #  #  #   #         # #    #   #  #  #  #    #  #  #     #  # #  # #   #     # 
+ ##   ##   ##  #  #  #  #  #   #       ##  #    ###  ##  ### #   ###  ##      #  #  ##  ### ### ##  
+
+
+ RoF_NUS_Special_Projects = {
+	name = ROF_NUS_SPECIAL_PROJECTS
+	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+	#icon = "GFX_merc"
+	default = {
+		name = ROF_ALLOW_PROJECTS
+		text = "RULE_ROF_NUS_ALLOW_PROJECTS"
+		desc = "RULE_ROF_NUS_ALLOW_PROJECTS_DESC"
+	}
+	option = {
+		name = ROF_NO_PROJECTS
+		text = "RULE_ROF_NUS_NO_PROJECTS"
+		desc = "RULE_ROF_NUS_NO_PROJECTS_DESC"
+		allow_achievements = yes
+	}
+}
+
+
+#GER_faction_soviets = {
+#	name = "RULE_GER_FACTION_SOVIETS"
+#	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+#	default = {
+#		name = yes
+#		text = "RULE_OPTION_ALLOWED"
+#		desc = "RULE_GER_FACTION_SOVIETS_YES_DESC"
+#	}
+#	option = {
+#		name = no
+#		text = "RULE_OPTION_BLOCKED"
+#		desc = "RULE_GER_FACTION_SOVIETS_NO_DESC"
+#	}
+#}
+#
+#allow_ideology_change_USA = {
+#	name = "RULE_ALLOW_IDEOLOGY_CHANGE_USA"
+#	required_dlc = "Man the Guns"
+#	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+#	default = {
+#		name = FREE
+#		text = "RULE_OPTION_FREE"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_FREE_DESC"
+#	}
+#	option = {
+#		name = COMMUNIST_ONLY
+#		text = "RULE_OPTION_COMMUNIST_ONLY"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_COMMUNIST_ONLY_DESC"
+#	}
+#	option = {
+#		name = FASCIST_ONLY
+#		text = "RULE_OPTION_FASCIST_ONLY"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_FASCIST_ONLY_DESC"
+#	}
+#	option = {
+#		name = BLOCKED
+#		text = "RULE_OPTION_BLOCKED"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_BLOCKED_DESC"
+#	}
+#}
+
+
+
+ ##  ###     ###  ### #  #  ##  #   # ###  ##  ###  
+#  #  #      #  # #   #  # #  # #   #  #  #  # #  # 
+####  #      ###  ##  #### ####  # #   #  #  # ###  
+#  #  #      #  # #   #  # #  #  # #   #  #  # #  # 
+#  # ###     ###  ### #  # #  #   #   ###  ##  #  # 
+
+NUS_ai_behavior = {
+	name = "NUS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = CANON
+		text = "RULE_OPTION_CANON"
+		desc = "RULE_CANON_NUS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RADICAL
+		text = "RULE_OPTION_RADICAL"
+		desc = "RULE_RADICAL_NUS_AI_DESC"
+	}
+	option = {
+		name = ABSOLUTIST
+		text = "RULE_OPTION_ABSOLUTIST"
+		desc = "RULE_ABSOLUTIST_NUS_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+SWE_ai_behavior = {
+	name = "SWE_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = CANON
+		text = "RULE_OPTION_CANON"
+		desc = "RULE_CANON_SWE_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALTERNATE
+		text = "RULE_OPTION_ALTERNATE"
+		desc = "RULE_ALTERNATE_SWE_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+AUS_ai_behavior = {
+	name = "AUS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = CANON
+		text = "RULE_OPTION_CANON"
+		desc = "RULE_CANON_AUS_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALTERNATE
+		text = "RULE_OPTION_ALTERNATE"
+		desc = "RULE_ALTERNATE_AUS_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+FRA_ai_behavior = {
+	name = "FRA_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = CANON
+		text = "RULE_OPTION_CANON"
+		desc = "RULE_CANON_FRA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CONSTITUTIONALIST
+		text = "RULE_OPTION_CONSTITUTIONALIST"
+		desc = "RULE_CONSTITUTIONALIST_FRA_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+ENG_ai_behavior = {
+	name = "ENG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = CANON
+		text = "RULE_OPTION_CANON"
+		desc = "RULE_CANON_ENG_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CONSTITUTIONALIST
+		text = "RULE_OPTION_CONSTITUTIONALIST"
+		desc = "RULE_CONSTITUTIONALIST_ENG_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+POL_ai_behavior = {
+	name = "POL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = CANON
+		text = "RULE_OPTION_CANON"
+		desc = "RULE_CANON_POL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ABSOLUTIST_ALTERNATE
+		text = "RULE_OPTION_ABSOLUTIST_ALTERNATE"
+		desc = "RULE_ABSOLUTIST_ALTERNATE_POL_AI_DESC"
+	}
+	option = {
+		name = CONSTITUTIONALIST
+		text = "RULE_OPTION_CONSTITUTIONALIST"
+		desc = "RULE_CONSTITUTIONALIST_POL_AI_DESC"
+	}
+#	option = {
+#		name = LIBERAL
+#		text = "RULE_OPTION_LIBERAL"
+#		desc = "RULE_LIBERAL_POL_AI_DESC"
+#	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+#SPN_ai_behavior = {
+#	name = "SPN_AI_BEHAVIOR"
+#	group = "RULE_GROUP_AI_BEHAVIOR"
+#	default = {
+#		name = DEFAULT
+#		text = "RULE_OPTION_DEFAULT"
+#		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+#	}
+#	option = {
+#		name = CANON
+#		text = "RULE_OPTION_CANON"
+#		desc = "RULE_CANON_SPN_AI_DESC"
+#		allow_achievements = yes
+#	}
+#	option = {
+#		name = ALTERNATE
+#		text = "RULE_OPTION_ALTERNATE"
+#		desc = "RULE_ALTERNATE_SPN_AI_DESC"
+#	}
+#	option = {
+#		name = RANDOM
+#		text = "RULE_OPTION_RANDOM"
+#		desc = "RULE_OPTION_RANDOM_AI_DESC"
+#	}
+#}
+
+#UPS_ai_behavior = {
+#	name = "UPS_AI_BEHAVIOR"
+#	group = "RULE_GROUP_AI_BEHAVIOR"
+#	default = {
+#		name = DEFAULT
+#		text = "RULE_OPTION_DEFAULT"
+#		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+#	}
+#	option = {
+#		name = CANON
+#		text = "RULE_OPTION_CANON"
+#		desc = "RULE_CANON_UPS_AI_DESC"
+#		allow_achievements = yes
+#	}
+#	option = {
+#		name = ALTERNATE
+#		text = "RULE_OPTION_ALTERNATE"
+#		desc = "RULE_ALTERNATE_UPS_AI_DESC"
+#	}
+#	option = {
+#		name = RANDOM
+#		text = "RULE_OPTION_RANDOM"
+#		desc = "RULE_OPTION_RANDOM_AI_DESC"
+#	}
+#}
+
+
+
+ ##   ##  #   # ###      ## ### ### #  # ###  
+#    #  # ## ## #       #   #    #  #  # #  # 
+# ## #### # # # ##       #  ##   #  #  # ###  
+#  # #  # #   # #         # #    #  #  # #    
+ ##  #  # #   # ###     ##  ###  #   ##  #
+
+RoF_Mercenary_Hiring = {
+	name = ROF_MERCENARY_HIRING
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_volunteers"
+	default = {
+		name = ROF_DEFAULT_MERCS
+		text = "RULE_ROF_DEFAULT_MERCS"
+		desc = "RULE_ROF_DEFAULT_MERCS_DESC"
+	}
+	option = {
+		name = ROF_NO_MERCS
+		text = "RULE_ROF_NO_MERCS"
+		desc = "RULE_ROF_NO_MERCS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROF_ANY_MERCS
+		text = "RULE_ROF_ANY_MERCS"
+		desc = "RULE_ROF_ANY_MERCS_DESC"
+	}
+}
+
+#Thirty_Year_War_style = {
+#	name = "RULE_TYW_STYLE"
+	#group = "RULE_GROUP_GAMEPLAY"
+#	group = "RULE_GROUP_ROF_RULES"
+#	icon = "GFX_wargoals"
+#	default = {
+#		name = "TYW_EVENT_ONLY"
+#		text = "RULE_TYW_EVENT_ONLY"
+#		desc = "RULE_TYW_EVENT_ONLY_DESC"
+#	}
+#	option = {
+#		name = "TYW_EVENT_WAR"
+#		text = "RULE_TYW_EVENT_WAR"
+#		desc = "RULE_TYW_EVENT_WAR_DESC"
+#	}
+#	option = {
+#		name = "TYW_REGULAR_WAR"
+#		text = "RULE_TYW_REGULAR_WAR"
+#		desc = "RULE_TYW_REGULAR_WAR_DESC"
+#	}
+#}

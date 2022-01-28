@@ -1,18 +1,17 @@
-
-state={
-	id=397
-	name="STATE_397"
-	resources={
-		oil=10.000
+state = {
+	id = 397
+	name = "STATE_397"
+	resources = {
+		oil = 10.000
 	}
 
-	history={
+	history = {
 		owner = RUS
 		victory_points = {
 			712 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
-		207 248 354 387 3344 6293 9242 9254 9287 9331 9353 9386 11234 11259 
+	local_supplies = 5.0
+	provinces = {
+		207 248 387 3344 6293 9242 9254 9287 9331 9353 9386 11234 11259 
 	}
-	manpower=68000
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 68000
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -9,7 +9,7 @@ state = {
 		owner = CAM
 		victory_points = { 7432 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -17,6 +17,7 @@ state = {
 		add_core_of = CAM
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1324 1353 4330 4359 4639 7319 7376 7404 7432 10289 12191 12260 12475 
 	}

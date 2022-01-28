@@ -9,7 +9,7 @@ state = {
 		owner = VEN
 		victory_points = { 11587 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -17,6 +17,7 @@ state = {
 		add_core_of = VEN
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		773 969 3776 6661 9584 11568 11587 
 	}

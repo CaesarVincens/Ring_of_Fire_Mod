@@ -1,4 +1,473 @@
 ﻿add_namespace = RoF_POL
+############################
+# SEJM EVENTS RoF_POL.0-99 #
+############################
+#small support event - sejm
+country_event = {
+	id = RoF_POL.40
+	title = RoF_POL.40.t
+	desc = RoF_POL.40.desc
+	picture = GFX_report_event_polish_sejm
+
+	is_triggered_only = yes
+	trigger = {
+		tag = POL
+		NOT = { has_country_flag = POL_abolished_sejm }
+	}
+
+	option = {
+		name = RoF_POL.40.a
+		POL_sejm_small_support = yes
+		hidden_effect = {
+			country_event = { id = RoF_POL.50 days = 70 random_days = 10 }
+		}
+	}
+
+}
+#small opposition event - sejm
+country_event = {
+	id = RoF_POL.42
+	title = RoF_POL.42.t
+	desc = RoF_POL.42.desc
+	picture = GFX_report_event_polish_sejm
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = POL
+		NOT = { has_country_flag = POL_abolished_sejm }
+	}
+
+	option = {
+		name = RoF_POL.42.a
+		POL_sejm_small_opposition = yes
+		hidden_effect = {
+			country_event = { id = RoF_POL.50 days = 70 random_days = 10 }
+		}
+	}
+
+}
+#medium support event - sejm
+country_event = {
+	id = RoF_POL.44
+	title = RoF_POL.44.t
+	desc = RoF_POL.44.desc
+	picture = GFX_report_event_polish_sejm
+
+	is_triggered_only = yes
+	trigger = {
+		tag = POL
+		NOT = { has_country_flag = POL_abolished_sejm }
+	}
+
+	option = {
+		name = RoF_POL.44.a
+		POL_sejm_medium_support = yes
+		hidden_effect = {
+			country_event = { id = RoF_POL.50 days = 70 random_days = 20 }
+		}
+	}
+
+}
+#medium opposition event - sejm
+country_event = {
+	id = RoF_POL.46
+	title = RoF_POL.46.t
+	desc = RoF_POL.46.desc
+	picture = GFX_report_event_polish_sejm
+
+	is_triggered_only = yes
+	trigger = {
+		tag = POL
+		NOT = { has_country_flag = POL_abolished_sejm }
+	}
+
+	option = {
+		name = RoF_POL.46.a
+		POL_sejm_medium_opposition = yes
+		hidden_effect = {
+			country_event = { id = RoF_POL.50 days = 70 random_days = 20 }
+		}
+	}
+
+}
+# dispatcher event - sejm
+country_event = {
+	id = RoF_POL.50
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = POL
+		NOT = { has_country_flag = POL_abolished_sejm }
+	}
+
+	immediate = {
+		random_list = {
+			20 = { 
+				modifier = {
+					NOT = { sejm_medium_support_trigger = yes }
+					factor = 1.25
+				}
+				modifier = {
+					NOT = { sejm_low_support_trigger = yes }
+					factor = 2
+				}
+				country_event = { id = RoF_POL.40 days = 20 random_days = 6 } #small support
+				log = "[GetDateText] - Polish Sejm event - Small Support"
+			} 
+			20 = { 
+				modifier = {
+					check_variable = { var = sejm_support value = sejm_high compare = greater_than_or_equals }
+					factor = 3
+				}
+				modifier = {
+					has_completed_focus = POL_revoke_incompatibilitas
+					factor = 2
+				}
+				country_event = { id = RoF_POL.42 days = 20 random_days = 6 } #small opposition 
+				log = "[GetDateText] - Polish Sejm event - Small Opposition"
+			} 
+			15 = { 
+				modifier = {
+					NOT = { sejm_medium_support_trigger = yes }
+					factor = 1.25
+				}
+				modifier = {
+					NOT = { sejm_low_support_trigger = yes }
+					factor = 2
+				}
+				country_event = { id = RoF_POL.44 days = 20 random_days = 10 } #medium support
+				log = "[GetDateText] - Polish Sejm event - Medium Support"
+			} 
+			15 = { 
+				modifier = {
+					check_variable = { var = sejm_support value = sejm_high compare = greater_than_or_equals }
+					factor = 3
+				}
+				modifier = {
+					has_completed_focus = POL_revoke_incompatibilitas
+					factor = 2
+				}
+				country_event = { id = RoF_POL.46 days = 20 random_days = 10 }  #medium opposition
+				log = "[GetDateText] - Polish Sejm event - Medium Opposition"
+			}
+			30 = { #investment opportunity
+				modifier = {
+					has_country_flag = POL_sejm_investment
+					factor = 0
+				}
+				modifier = {
+					has_completed_focus = POL_invest_in_szlachta_lands
+					factor = 1.5
+				}
+				country_event = { id = RoF_POL.60 days = 10 random_days = 15 } 
+				log = "[GetDateText] - Polish Sejm event - State investment"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_POL.60
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = POL
+		NOT = { has_country_flag = POL_abolished_sejm }
+	}
+
+	immediate = {
+		set_country_flag = POL_sejm_investment
+		if = {
+			limit = { has_event_target = POL_sejm_investment_state }
+			clear_global_event_target = POL_sejm_investment_state
+		}
+		random_list = {
+			25 = {
+				modifier = {
+					NOT = {
+						any_owned_state = {
+							is_core_of = ROOT
+							is_controlled_by = ROOT
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = no
+							}
+						}
+					}
+					factor = 0
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = no
+						}
+					}
+					
+					save_global_event_target_as = POL_sejm_investment_state
+					state_event = { id = RoF_POL.61 trigger_for = controller }
+				}
+			}
+			25 = {
+				modifier = {
+					NOT = {
+						any_owned_state = {
+							is_core_of = ROOT
+							is_controlled_by = ROOT
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = no
+							}
+						}
+					}
+					factor = 0
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = no
+						}
+					}
+					save_global_event_target_as = POL_sejm_investment_state
+					state_event = { id = RoF_POL.62 trigger_for = controller }
+				}
+			}
+			25 = {
+				modifier = {
+					NOT = {
+						any_owned_state = {
+							is_core_of = ROOT
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+								include_locked = no
+							}
+						}
+					}
+					factor = 0
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+					}
+					save_global_event_target_as = POL_sejm_investment_state
+					state_event = { id = RoF_POL.63 trigger_for = controller }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = RoF_POL.50 days = 70 random_days = 10 }
+		}
+	}
+}
+
+# senator wants investment in civilian factory
+state_event = {
+	id = RoF_POL.61
+	title = RoF_POL.61.t
+	desc = RoF_POL.61.desc
+	picture = GFX_report_event_polish_sejm
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = RoF_POL.61.a #accept
+		ai_chance = {
+			factor = 0
+		}
+		owner = { unlock_decision_tooltip = { decision = POL_invest_in_state_factory show_effect_tooltip = yes } }
+		event_target:POL_sejm_investment_state = {
+			set_state_flag = POL_sejm_build_factory
+			set_variable = { factory_goal = industrial_complex_level }
+			add_to_variable = { factory_goal = 1 }
+		}
+	}
+	option = {
+		name = RoF_POL.61.b #refuse
+		ai_chance = {
+			factor = 100
+		}
+		owner = { clr_country_flag = POL_sejm_investment }
+		clear_global_event_target = POL_sejm_investment_state
+	}
+}
+
+# senator wants investment in military factory
+state_event = {
+	id = RoF_POL.62
+	title = RoF_POL.61.t
+	desc = RoF_POL.62.desc
+	picture = GFX_report_event_polish_sejm
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = RoF_POL.62.a #accept
+		ai_chance = {
+			factor = 0
+		}
+		owner = { unlock_decision_tooltip = { decision = POL_invest_in_state_arms_factory show_effect_tooltip = yes } }
+		event_target:POL_sejm_investment_state = {
+			set_state_flag = POL_sejm_build_arms_factory
+			set_variable = { arms_factory_goal = arms_factory_level }
+			add_to_variable = { arms_factory_goal = 1 }
+		}
+	}
+	option = {
+		name = RoF_POL.62.b #refuse
+		ai_chance = {
+			factor = 100
+		}
+		owner = { clr_country_flag = POL_sejm_investment }
+		clear_global_event_target = POL_sejm_investment_state
+	}
+}
+
+# senator wants investment in infrastructure
+state_event = {
+	id = RoF_POL.63
+	title = RoF_POL.63.t
+	desc = RoF_POL.63.desc
+	picture = GFX_report_event_polish_sejm
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = RoF_POL.63.a #accept
+		ai_chance = {
+			factor = 0
+		}
+		owner = { unlock_decision_tooltip = { decision = POL_invest_in_state_infrastructure show_effect_tooltip = yes } }
+		event_target:POL_sejm_investment_state = {
+			set_state_flag = POL_sejm_build_infrastructure
+			set_variable = { infrastructure_goal = infrastructure_level }
+			add_to_variable = { infrastructure_goal = 1 }
+		}
+	}
+	option = {
+		name = RoF_POL.63.b #refuse
+		ai_chance = {
+			factor = 100
+		}
+		owner = { clr_country_flag = POL_sejm_investment }
+		clear_global_event_target = POL_sejm_investment_state
+	}
+}
+
+country_event = {
+	id = RoF_POL.65
+	title = RoF_POL.65.t
+	picture = GFX_report_event_pol_flag
+	desc = {
+		trigger = { sejm_medium_support_trigger = yes }
+		text = RoF_POL.65.da
+	}
+	desc = {
+		trigger = { sejm_medium_support_trigger = no }
+		text = RoF_POL.65.db
+	}
+	is_triggered_only = yes
+		
+	immediate = {
+
+	}
+
+	option = {
+		trigger = { sejm_medium_support_trigger = yes }
+		name = RoF_POL.65.a
+		set_country_flag = POL_fund_jagiellonian_university_sejm
+		add_ideas = POL_jagiellonian_university_1
+		POL_sejm_small_opposition = yes
+	}
+	option = {
+		name = RoF_POL.65.b
+		add_ideas = POL_jagiellonian_university_2
+		add_political_power = -100
+		POL_king_up_szlachta_down_5 = yes
+	}
+}
+
+country_event = {
+	id = RoF_POL.66
+	title = RoF_POL.66.t
+	picture = GFX_report_event_pol_flag
+	desc = {
+		trigger = { sejm_medium_support_trigger = yes }
+		text = RoF_POL.66.da
+	}
+	desc = {
+		trigger = { sejm_medium_support_trigger = no }
+		text = RoF_POL.66.db
+	}
+	is_triggered_only = yes
+		
+	immediate = {
+
+	}
+
+	option = {
+		trigger = {
+			sejm_medium_support_trigger = yes
+		}
+		name = RoF_POL.66.a
+		if = {
+			limit = {
+				has_idea = POL_jagiellonian_university_1
+			}
+			swap_ideas = {
+				remove_idea = POL_jagiellonian_university_1
+				add_idea = POL_royal_universities_0
+			}
+			set_country_flag = POL_found_royal_universities_0
+			else = {
+				swap_ideas = {
+					remove_idea = POL_jagiellonian_university_2
+					add_idea = POL_royal_universities_1
+				}
+				set_country_flag = POL_found_royal_universities_1a
+			}
+		}
+		POL_sejm_small_opposition = yes
+	}
+	option = {
+		name = RoF_POL.66.b
+		if = {
+			limit = {
+				has_idea = POL_jagiellonian_university_1
+			}
+			swap_ideas = {
+				remove_idea = POL_jagiellonian_university_1
+				add_idea = POL_royal_universities_1
+			}
+			set_country_flag = POL_found_royal_universities_1b
+			else = {
+				swap_ideas = {
+					remove_idea = POL_jagiellonian_university_2
+					add_idea = POL_royal_universities_2
+				}
+				set_country_flag = POL_found_royal_universities_2
+			}
+		}
+		add_political_power = -100
+		POL_king_up_szlachta_down_5 = yes
+	}
+}
 
 country_event = {
 	id = RoF_POL.100
@@ -10,6 +479,15 @@ country_event = {
 	trigger = {
 		tag = POL
 		date > 1632.11.1
+		has_country_leader = {
+			name = "Sigismund III Vasa"
+		}
+		NOT = {
+			focus_progress = {
+				focus = POL_vivente_rege
+				progress > 0
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -18,27 +496,181 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Władysław IV Vasa"
-				desc = "POLITICS_WALLENSTEIN_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
-				ideology = absolute_monarchy
-				traits = {
-				}
+			retire_character = POL_sigismund_vasa
+			POL_jan_wezyk = {
+				promote_character = absolute_monarchy
+				promote_character = constitutional_monarchy
+				promote_character = absolute_monarchy_neutral
 			}
 		}
 	}
 	option = {
 		name = RoF_POL.100.a
 		effect_tooltip = {
-			create_country_leader = {
-				name = "Władysław IV Vasa"
-				desc = "POLITICS_WALLENSTEIN_DESC"
-				picture = "gfx/leaders/POL/Portrait_Poland_Ladislaus_IV.dds"
+			promote_character = {
+				character = POL_jan_wezyk
 				ideology = absolute_monarchy
-				traits = {
-				}
+			}
+		}
+		activate_mission = POL_election_sejm
+		activate_decision = POL_generous_pacta_conventa
+		activate_decision = POL_standard_pacta_conventa
+	}
+}
+
+country_event = {
+	id = RoF_POL.110
+	title = RoF_POL.110.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.110.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = POL_election_sejm_stanislaw_koniecpolski
+				has_country_flag = POL_election_sejm_john_casimir
+			}
+		}
+		name = RoF_POL.110.a
+		promote_character = {
+			character = POL_wladyslaw_vasa
+			ideology = absolute_monarchy
+		}
+		hidden_effect = {
+			promote_character = {
+				character = POL_wladyslaw_vasa
+				ideology = constitutional_monarchy
+			}
+			promote_character = {
+				character = POL_wladyslaw_vasa
+				ideology = absolute_monarchy_neutral
+			}
+		}
+	}
+	option = {
+		trigger = {
+				has_country_flag = POL_election_sejm_john_casimir
+		}
+		name = RoF_POL.110.a
+		promote_character = {
+			character = POL_john_casimir_vasa
+			ideology = absolute_monarchy
+		}
+		hidden_effect = {
+			promote_character = {
+				character = POL_john_casimir_vasa
+				ideology = constitutional_monarchy
+			}
+			promote_character = {
+				character = POL_john_casimir_vasa
+				ideology = absolute_monarchy_neutral
+			}
+		}
+	}
+	option = {
+		trigger = {
+				has_country_flag = POL_election_sejm_stanislaw_koniecpolski
+		}
+		name = RoF_POL.110.a
+
+		promote_character = {
+			character = POL_stanislaw_koniecpolski
+			ideology = absolute_monarchy
+		}
+		hidden_effect = {
+			promote_character = {
+				character = POL_stanislaw_koniecpolski
+				ideology = constitutional_monarchy
+			}
+			promote_character = {
+				character = POL_stanislaw_koniecpolski
+				ideology = absolute_monarchy_neutral
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RoF_POL.111
+	title = RoF_POL.111.t
+	picture = GFX_report_event_pol_flag
+	desc = RoF_POL.111.d
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	#stay with current
+	option = {
+		name = RoF_POL.111.a
+		activate_decision = POL_generous_pacta_conventa
+		activate_decision = POL_standard_pacta_conventa
+		activate_decision = POL_narrow_pacta_conventa
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				POL_absolutist_alternate_path = yes
+			}
+		}
+	}
+	#John Casimir
+	option = {
+		trigger = { NOT = { has_country_flag = POL_election_sejm_john_casimir } }
+		name = RoF_POL.111.b
+		clr_country_flag = POL_election_sejm_stanislaw_koniecpolski
+		set_country_flag = POL_election_sejm_john_casimir
+		activate_decision = POL_generous_pacta_conventa
+		activate_decision = POL_standard_pacta_conventa
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 9
+				POL_absolutist_alternate_path = yes
+			}
+		}
+	}
+	#Stanisław Koniecpolski
+	option = {
+		name = RoF_POL.111.c
+		trigger = { NOT = { has_country_flag = POL_election_sejm_stanislaw_koniecpolski } }
+		clr_country_flag = POL_election_sejm_john_casimir
+		set_country_flag = POL_election_sejm_stanislaw_koniecpolski
+		activate_decision = POL_generous_pacta_conventa
+		activate_decision = POL_standard_pacta_conventa
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				POL_constitutionalist_path = yes
+			}
+		}
+	}
+	#Władysław again
+	option = {
+		name = RoF_POL.111.do
+		trigger = {
+			OR = {
+				has_country_flag = POL_election_sejm_stanislaw_koniecpolski
+				has_country_flag = POL_election_sejm_john_casimir
+			}
+		}
+		clr_country_flag = POL_election_sejm_john_casimir
+		clr_country_flag = POL_election_sejm_stanislaw_koniecpolski
+		activate_decision = POL_generous_pacta_conventa
+		activate_decision = POL_standard_pacta_conventa
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				POL_canon_path = yes
 			}
 		}
 	}
@@ -59,6 +691,7 @@ country_event = {
 		owns_state = 351
 		NOT = { is_in_faction_with = RUS }
 		is_subject = no
+		always = no #mission now
 	}
 	
 	mean_time_to_happen = {
@@ -72,7 +705,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			transfer_state = 387
-			387 = { set_demilitarized_zone = yes }
+			#387 = { set_demilitarized_zone = yes }
 			set_global_flag = rezhev_expedition
 			RUS = { news_event = { id = RoF_RUS.110 hours = 12 } }
 		}

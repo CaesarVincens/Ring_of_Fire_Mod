@@ -5,6 +5,7 @@ oob = "HES_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -48,22 +49,4 @@ add_timed_idea = {
 add_manpower = 5000
 set_stability = 0.6
 set_war_support = 0.6
-create_country_leader = {
-    name = "William V von Hesse-Kassel"
-    desc = "POLITICS_LUKAS_VON SPEE_DESC"
-    picture = "gfx/leaders/Germanies/Portrait_Hesse_William_V.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
-
-create_country_leader = {
-    name = "William V von Hesse-Kassel"
-    desc = "POLITICS_LUKAS_VON SPEE_DESC"
-    picture = "gfx/leaders/Germanies/Portrait_Hesse_William_V.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
+recruit_character = HES_william_v_von_hessekassel

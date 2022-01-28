@@ -35,7 +35,31 @@ Free_Russia = {
 	color = rgb { 47 21 108 }
 	color_ui = rgb { 47 21 108 }
 }
+United_States_Russia = {
+	color = rgb { 47 21 108 }
+	color_ui = rgb { 47 21 108 }
+}
 USSR = {
 	color = rgb { 47 121 208 }
 	color_ui = rgb { 47 121 208 }
+}
+Siberia = {
+	color = rgb { 47 91 18 }
+	color_ui = rgb { 47 91 18 }
+}
+Poland_alone = {
+	color = rgb { 226 4 127 }
+	color_ui = rgb { 226 4 127 }
+}
+Poland_Commonwealth = {
+	color = rgb { 226 4 127 }
+	color_ui = rgb { 226 4 127 }
+}
+Radziwill_Lithuania = {
+	color = rgb { 219 219 119 }
+	color_ui = rgb { 219 219 119 }
+}
+Magnate_Ruthenia = {
+	color = rgb { 139 107 255 }
+	color_ui = rgb { 139 107 255 }
 }

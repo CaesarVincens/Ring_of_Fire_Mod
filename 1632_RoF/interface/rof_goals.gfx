@@ -44,5 +44,20 @@ spriteTypes = {
 		name = "GFX_focus_murad"
 		texturefile = "gfx/interface/goals/focus_murad.dds"
 	}
-	
+
+	SpriteType = {
+		name = "GFX_focus_wladyslaw_iv"
+		texturefile = "gfx/interface/goals/focus_wladyslaw_iv.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_john_casimir"
+		texturefile = "gfx/interface/goals/focus_john_casimir.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_royal_civ_factory"
+		texturefile = "gfx/interface/goals/focus_royal_civ_factory.dds"
+	}
+
 }

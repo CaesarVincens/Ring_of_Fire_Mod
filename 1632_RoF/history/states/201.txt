@@ -9,7 +9,7 @@ state = {
 		owner = KHI
 		victory_points = { 1479 8 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -17,7 +17,8 @@ state = {
 		add_core_of = KHI
 	}
 
+	local_supplies = 5.0
 	provinces = {
-		1479 1576 1614 4618 7541 7641 10348 10395 10435 12163 12233 12324 12383 12454 12465 12474 
+		1479 1576 1614 4618 7541 7641 10348 10395 10435 10485 12163 12233 12324 12383 12454 12465 12474 13207 
 	}
 }

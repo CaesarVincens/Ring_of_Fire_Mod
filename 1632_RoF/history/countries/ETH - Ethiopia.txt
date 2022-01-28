@@ -5,6 +5,7 @@ oob = "ETH_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -36,10 +37,19 @@ add_ideas = {
 }
 set_stability = 0.5
 create_country_leader = {
-    name = "Kelile Mariam"
+    name = "Fasilides Solomon"
     desc = "POLITICS_KELILE_MARIAM_DESC"
     picture = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
-    expire = "1660.1.1"
+    expire = "1632.9.17"
+    ideology = absolute_monarchy_neutral
+    traits = {
+    }
+}
+create_country_leader = {
+    name = "Susenyos I Solomon"
+    desc = "POLITICS_KELILE_MARIAM_DESC"
+    picture = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+    expire = "1632.9.17"
     ideology = absolute_monarchy_neutral
     traits = {
     }

@@ -6,14 +6,15 @@ buildings = {
 
 
 	infrastructure = {
-		base_cost = 3000
+		base_cost = 6000
 		icon_frame = 3
 		infrastructure = yes
-		max_level = 10
+		max_level = 5
 		value = 1
 
 		show_modifier = yes
 		max_fuel_building = 0.75 #k
+		allied_build = yes
 	}
 
 	arms_factory = {
@@ -49,8 +50,32 @@ buildings = {
 		value = 1
 		damage_factor = 0.5
 		max_fuel_building = 1 #k
+		allied_build = yes
 	}
 
+	supply_node = {
+		show_on_map = 1
+		base_cost = 20000
+		provincial = yes
+		disabled_in_dmz = yes
+		icon_frame = 15
+		max_level = 1
+		centered = yes
+		supply_node = yes
+		damage_factor = 0.1
+		allied_build = yes
+		always_shown = yes
+	}	
+	
+	rail_way = {
+		base_cost = 170
+		per_level_extra_cost = 130
+		provincial = yes
+		disabled_in_dmz = yes
+		icon_frame = 16
+		max_level = 1
+	}
+	
 	naval_base = {
 		show_on_map = 1
 		show_on_map_meshes = 3
@@ -63,6 +88,7 @@ buildings = {
 		max_level = 10
 		value = 1
 		max_fuel_building = 0.05 #k
+		allied_build = yes
 	}
 
 	bunker = {
@@ -120,7 +146,7 @@ buildings = {
 
 	synthetic_refinery = {
 		show_on_map = 1
-		base_cost = 13000
+		base_cost = 14500
 		icon_frame = 10
 		#local_resources_oil = 2 # May use local_resources_ + any resource name
 		#local_resources_rubber = 2 # May use local_resources_ + any resource name
@@ -143,6 +169,8 @@ buildings = {
 		max_level = 6 # This is the max unlock level
 		damage_factor = 0.5
 		value = 4
+		centered = yes
+		allied_build = yes
 	}
 
 	#new buildings
@@ -150,7 +178,7 @@ buildings = {
 	steel_mill = {
 		#show_on_map = 1
 		base_cost = 10000
-		icon_frame = 14
+		icon_frame = 17
 		local_resources_steel = 2 # May use local_resources_ + any resource name
 		refinery = yes
 		max_level = 3 # This is the max unlock level
@@ -163,7 +191,7 @@ buildings = {
 	engine_factory = {
 		#show_on_map = 1
 		base_cost = 15000
-		icon_frame = 15
+		icon_frame = 18
 		local_resources_combustion_engine = 2 # May use local_resources_ + any resource name
 		refinery = yes
 		max_level = 1 # This is the max unlock level

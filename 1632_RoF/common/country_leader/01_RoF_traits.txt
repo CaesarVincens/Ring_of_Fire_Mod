@@ -86,8 +86,23 @@ leader_traits = {
 		random = no
 		political_power_gain = -0.25
 	}
+
+	interrex = {
+		random = no
+		stability_factor = -0.2
+		war_support_factor = -0.2
+	}
+
+	swedish_claimant = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = SWE
+			value = 50
+		}
+	}
 	
-	#generic ministers
+	#political advisors
 	valide_sultan = {
 		random = no
 		stability_factor = 0.1
@@ -105,7 +120,26 @@ leader_traits = {
 		political_power_gain = -0.05
 		stability_factor = -0.05
 	}
-	
+
+	grand_marshal = {
+		random = no
+		sprite = 13
+	}
+
+	grand_chancellor = {
+		random = no
+		sprite = 13
+	}
+	POL_king_supporter = {
+		random = no
+		political_power_gain = 0.05
+	}
+	POL_king_opponent = {
+		random = no
+		political_power_gain = -0.05
+	}
+
+	#generic ministers
  	absolutist_minister = {
 	random = no
 		sprite = 13

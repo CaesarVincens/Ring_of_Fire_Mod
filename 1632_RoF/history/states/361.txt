@@ -14,13 +14,17 @@ state = {
 		owner = POR
 		victory_points = { 7427 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
+			7427 = {
+				naval_base = 1
+			}
 		}
 	}
 
+	local_supplies = 0.0
 	provinces = {
 		7427 
 	}

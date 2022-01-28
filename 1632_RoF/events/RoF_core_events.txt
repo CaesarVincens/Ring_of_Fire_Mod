@@ -252,7 +252,7 @@ country_event = {
 	desc = RoF.006.d
 	picture = GFX_report_event_scottish_mercenaries
 	trigger = {
-		has_idea = wasteland
+		has_idea = unorganized_territory_idea
 		date > 1633.1.1
 	}
 	fire_only_once = yes
@@ -282,7 +282,7 @@ country_event = {
 	desc = RoF.006.d
 	picture = GFX_report_event_scottish_mercenaries
 	trigger = {
-		has_idea = wasteland
+		has_idea = unorganized_territory_idea
 		date > 1635.1.1
 	}
 	fire_only_once = yes
@@ -315,7 +315,7 @@ country_event = {
 	desc = RoF.006.d
 	picture = GFX_report_event_scottish_mercenaries
 	trigger = {
-		has_idea = wasteland
+		has_idea = unorganized_territory_idea
 		date > 1637.1.1
 	}
 	fire_only_once = yes
@@ -590,6 +590,114 @@ country_event = {
 			modifier = {
 				add = 5
 				check_variable = { var = CoC_strength value = 10 compare = less_than }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = RoF.020
+	title = RoF.020.t
+	desc = RoF.020.d
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF.020.a
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = RoF.020.b
+		clr_country_flag = hiring_mercenaries
+		delete_unit_template_and_units = {
+			division_template = "Mercenary Detachment"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Mercenary Company"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Mercenary Army"
+		}
+		clear_variable = merc_pool_small
+		clear_variable = merc_pool_medium
+		clear_variable = merc_pool_large
+		clear_variable = merc_weight
+		clear_variable = merc_weight_cost
+		clear_variable = merc_weight_mod
+		clear_variable = merc_weight_man
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = RoF.030
+	title = RoF.030.t
+	desc = RoF.030.desc
+	picture = GFX_report_event_scottish_mercenaries
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RoF.030.a
+	}
+	option = {
+		name = RoF.030.b
+		set_global_flag = RoF_no_mercs_for_anyone
+		hidden_effect = {
+			every_country = {
+				clr_country_flag = hiring_mercenaries
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Detachment"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Company"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Army"
+				}
+				clear_variable = merc_pool_small
+				clear_variable = merc_pool_medium
+				clear_variable = merc_pool_large
+				clear_variable = merc_weight
+				clear_variable = merc_weight_cost
+				clear_variable = merc_weight_mod
+				clear_variable = merc_weight_man
+			}
+		}
+	}
+	option = {
+		name = RoF.030.c
+		set_global_flag = RoF_no_uptime_resources
+	}
+	option = {
+		name = RoF.030.d
+		set_global_flag = RoF_no_uptime_resources
+		set_global_flag = RoF_no_mercs_for_anyone
+		hidden_effect = {
+			every_country = {
+				clr_country_flag = hiring_mercenaries
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Detachment"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Company"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Army"
+				}
+				clear_variable = merc_pool_small
+				clear_variable = merc_pool_medium
+				clear_variable = merc_pool_large
+				clear_variable = merc_weight
+				clear_variable = merc_weight_cost
+				clear_variable = merc_weight_mod
+				clear_variable = merc_weight_man
 			}
 		}
 	}

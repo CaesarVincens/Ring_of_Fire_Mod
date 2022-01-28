@@ -6,6 +6,7 @@ set_research_slots = 3
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -49,19 +50,5 @@ add_ideas = {
 	military_focus_eco
 }
 set_stability = 0.5
-create_country_leader = {
-    name = "Frederik Hendrik van Oranje"
-    desc = "POLITICS_EISE_BOUMEESTER_DESC"
-    picture = "gfx/leaders/UPS/Portrait_United_Provinces_Frederik_Hendrik.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_republic
-    traits = {
-    }
-}
-
-create_navy_leader = {
-	name = "Maarten Tromp"
-	gfx = "GFX_admiral_UPS_Maarten_Tromp"
-	traits = { }
-	skill = 4
-}
+recruit_character = UPS_frederik_hendrik_van_oranje
+recruit_character = UPS_maarten_tromp

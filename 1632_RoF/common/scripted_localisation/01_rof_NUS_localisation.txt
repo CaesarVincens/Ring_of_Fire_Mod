@@ -13,16 +13,22 @@ defined_text = {
 	name = NUS_retake_saxony_script
 	text = {
 		trigger = {
-			BRA = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_BRA
+				BRA = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
-			SAX = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_SAX
+				SAX = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
 		}
@@ -40,10 +46,13 @@ defined_text = {
 					}
 				}
 			}
-			SAX = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_SAX
+				SAX = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
 		}
@@ -61,10 +70,13 @@ defined_text = {
 					}
 				}
 			}
-			BRA = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_BRA
+				BRA = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
 		}
@@ -79,16 +91,22 @@ defined_text = {
 	name = NUS_retake_saxony_script_desc
 	text = {
 		trigger = {
-			BRA = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_BRA
+				BRA = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
-			SAX = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_SAX
+				SAX = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
 		}
@@ -106,10 +124,13 @@ defined_text = {
 					}
 				}
 			}
-			SAX = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_SAX
+				SAX = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
 		}
@@ -127,10 +148,13 @@ defined_text = {
 					}
 				}
 			}
-			BRA = {
-				exists = yes
-				any_owned_state = {
-					is_claimed_by = NUS
+			OR = {
+				has_country_flag = USE_paid_BRA
+				BRA = {
+					exists = yes
+					any_owned_state = {
+						is_claimed_by = NUS
+					}
 				}
 			}
 		}
@@ -158,5 +182,52 @@ defined_text = {
 			has_country_flag = NUS_patriotic_fervor_flag
 		}
 		localization_key = RoF_USE.100.d
+	}
+}
+
+defined_text = {
+	name = patriotic_fervor_array_list_tooptip
+	
+	text = {
+		trigger = {
+			check_variable = { patriotic_fervor_array^num = 0 }
+		}
+		localization_key = "Empty"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { NUS.i = -1 }
+			check_variable = { patriotic_fervor_array^num > 0 }
+		}
+		localization_key = "[?i]: [NUS.patriotic_fervor_array_list_item_0]"
+	}
+}
+
+defined_text = {
+	name = patriotic_fervor_array_list_item_0
+	
+	text = {
+		trigger = {
+			add_to_temp_variable = { NUS.i = 1 }
+			check_variable = { patriotic_fervor_array^num > i }
+		}
+		localization_key = "[?i]: [?NUS.patriotic_fervor_array^i.GetNameWithFlag][patriotic_fervor_array_list_item_n]"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = patriotic_fervor_array_list_item_n
+	
+	text = {
+		trigger = {
+			add_to_temp_variable = { NUS.i = 1 }
+			check_variable = { patriotic_fervor_array^num > i }
+		}
+		localization_key = ", [?i]: [?NUS.patriotic_fervor_array^i.GetNameWithFlag][patriotic_fervor_array_list_item_n]"
+	}
+	text = {
+		localization_key = ""
 	}
 }

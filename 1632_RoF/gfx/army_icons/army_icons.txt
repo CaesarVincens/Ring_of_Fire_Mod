@@ -156,6 +156,20 @@
 	}
 	icon = {
 	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
 }
 
 army_group = {
@@ -371,5 +385,30 @@ naval_equipment_role = {
 	icon = {
 		color_override = no
 		name = "Crab"
+	}
+}
+
+equipment_niche_insignias = {
+	gfx = GFX_niche_icon_strip
+	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
 	}
 }

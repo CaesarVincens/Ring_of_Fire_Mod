@@ -1,0 +1,26 @@
+state = {
+	id = 684
+	name = "STATE_684"
+
+	history = {
+		owner = POL
+		add_core_of = POL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+		}
+		victory_points = {
+			9439 3
+		}
+	}
+
+	local_supplies = 5.0
+	provinces = {
+		17 279 3381 9439 9532 11232 11515 
+	}
+	manpower = 346000
+	buildings_max_level_factor = 1.000
+	state_category = city
+}

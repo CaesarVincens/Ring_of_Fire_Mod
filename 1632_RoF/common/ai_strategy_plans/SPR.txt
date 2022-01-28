@@ -2,8 +2,12 @@ SPR_protect_POR = {
 	name = "POR is our Union"
 	desc = "name"
 	
+	allowed = {
+		original_tag = SPR
+	}
 	enable = {
 		original_tag = SPR
+		POR = { has_idea = POR_iberian_union }
 	}
 	abort = {
 		OR = {
@@ -22,14 +26,52 @@ SPR_protect_POR = {
 		id = "POR"
 		value = 100
 	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "POR"
+		target = military_access
+		value = 100
+	}
+}
+
+POR_diplo_SPR = {
+	name = "SPR is our Union"
+	desc = "name"
+	
+	allowed = {
+		original_tag = POR
+	}
+	enable = {
+		original_tag = POR
+		has_idea = POR_iberian_union
+	}
+	abort = {
+		OR = {
+			has_war_with = SPR
+			NOT = { has_idea = POR_iberian_union }
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SPR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "SPR"
+		value = 50
+	}
 }
 
 SPR_dont_invade_SWE = {
 	name = "Sea landings are hard"
 	desc = "don't do it"
 	
-	enable = {
+	allowed = {
 		original_tag = SPR
+	}
+	enable = {
 		has_war_with = SWE
 	}
 	abort = {
@@ -45,8 +87,10 @@ SPR_dont_invade_SWE = {
 SPR_habsburg_cousins = {
 	name = "Habsburg Cousins"
 	desc = "support = AUS"
-	enable = {
+	allowed = {
 		original_tag = SPR
+	}
+	enable = {
 		country_exists = AUS
 	}
 	abort = {
@@ -62,13 +106,20 @@ SPR_habsburg_cousins = {
 		id = "AUS"
 		value = 200
 	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AUS
+		value = 50
+	}
 }
 
 SPR_anti_dutch = {
 	name = "Dutch Revolt"
 	desc = "80 years war"
-	enable = {
+	allowed = {
 		original_tag = SPR
+	}
+	enable = {
 		country_exists = UPS
 	}
 	abort = {
@@ -84,8 +135,10 @@ SPR_anti_dutch = {
 SPR_support_SPN = {
 	name = "Spanish Netherlands"
 	desc = "Spanish Netherlands"
-	enable = {
+	allowed = {
 		original_tag = SPR
+	}
+	enable = {
 		country_exists = SPN
 	}
 	abort = {

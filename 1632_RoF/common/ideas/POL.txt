@@ -1,6 +1,233 @@
 ideas = {
 	country = {
+		POL_jagiellonian_university_1 = {
+			name = POL_jagiellonian_university
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+		POL_jagiellonian_university_2 = {
+			name = POL_jagiellonian_university
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+			picture = generic_research_bonus
+		}
+		POL_royal_universities_0 = {
+			name = POL_royal_universities
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+		POL_royal_universities_1 = {
+			name = POL_royal_universities
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.02
+			}
+			picture = generic_research_bonus
+		}
+		POL_royal_universities_2 = {
+			name = POL_royal_universities
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+		POL_grain_exports = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_agrarian_society
+		}
+		POL_pospolite_ruszenie = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+				has_war = no
+			}
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.1
+			}
+			picture = generic_manpower_bonus
+		}
+		POL_henrician_articles = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.1
+			}
+			picture = generic_pp_unity_bonus
+		}
+		POL_henrician_articles_2 = {
+			name = POL_henrician_articles
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.1
+				constitutionalist_drift = 0.05
+			}
+			picture = generic_pp_unity_bonus
+		}
+		POL_constitution = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
+				constitutionalist_drift = 0.1
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
+		POL_constitution_2 = {
+			name = POL_constitution
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
+				constitutionalist_drift = 0.1
+				liberal_drift = 0.1
+				radical_drift = 0.05
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
+		POL_treaty_of_stary_targ = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SWE
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
+		POL_truce_of_deulino = {
+			name = truce_of_deulino
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = RUS
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
+		POL_powerful_magnates = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				political_power_gain = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.1
+			}
+		}
+		POL_pleased_magnates = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				#political_power_gain = -0.1
+				#war_support_factor = 0.1
+				consumer_goods_factor = 0.05
+				#conscription_factor = 0.1
+			}
+		}
+		POL_integrated_magnates = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.1
+			}
+		}
+		POL_reduced_magnates = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				political_power_gain = -0.05
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+			}
+		}
+		POL_weakened_magnates = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
+			}
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.05
+			}
+		}
 		POL_eastern_serfdom_1 = {
+			name = POL_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -11,19 +238,17 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.2
 				stability_factor = -0.2
-				war_support_factor = -0.1
-				conscription_factor = -0.2
-				resistance_damage_to_garrison_on_our_occupied_states = -0.1
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
-				consumer_goods_factor = 0.2
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
 				global_building_slots_factor = -0.1
 				production_speed_buildings_factor = -0.1
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		POL_eastern_serfdom_2 = {
+			name = POL_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -34,19 +259,17 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.15
 				stability_factor = -0.2
-				war_support_factor = -0.1
-				conscription_factor = -0.2
-				resistance_damage_to_garrison_on_our_occupied_states = -0.1
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
-				consumer_goods_factor = 0.15
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
 				global_building_slots_factor = -0.05
 				production_speed_buildings_factor = -0.1
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		POL_eastern_serfdom_3 = {
+			name = POL_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -57,18 +280,16 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.1
 				stability_factor = -0.15
-				war_support_factor = -0.05
-				conscription_factor = -0.15
-				resistance_damage_to_garrison_on_our_occupied_states = -0.05
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				consumer_goods_factor = 0.1
+				resistance_target_on_our_occupied_states = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
 				production_speed_buildings_factor = -0.05
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
 		POL_eastern_serfdom_4 = {
+			name = POL_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -79,69 +300,49 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.05
 				stability_factor = -0.1
-				war_support_factor = -0.05
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
 			}
-			picture = generic_manpower_bonus
+			picture = generic_oppression
 			removal_cost = -1
 		}
-	}
-	political_advisor = {
-		POL_absolutist_advisor = {
+		POL_eastern_serfdom_industry_1 = {
+			name = POL_eastern_serfdom
 			allowed = {
 				always = no
-				original_tag = POL
 			}
-			traits = { absolutist_minister }
-			on_add = {
-				#country_event = conv.political.01
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
 			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
+			modifier = {
+				drift_defence_factor = 0.1
+				stability_factor = -0.2
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				global_building_slots_factor = -0.05
+				production_speed_buildings_factor = -0.05
 			}
-			ai_will_do = {
-				factor = 0
-			}
+			picture = generic_oppression
+			removal_cost = -1
 		}
-		POL_democratic_advisor = {
+		POL_eastern_serfdom_industry_2 = {
+			name = POL_eastern_serfdom
 			allowed = {
 				always = no
-				original_tag = POL
 			}
-			traits = { liberal_minister }
-			on_add = {
-				#country_event = conv.political.25
+			allowed_civil_war = {
+				NOT = { has_government = liberal }
+				NOT = { has_government = radical }
 			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
+			modifier = {
+				drift_defence_factor = 0.05
+				stability_factor = -0.1
+				resistance_target_on_our_occupied_states = -0.05
 			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		POL_neutrality_advisor = {
-			allowed = {
-				always = no
-				original_tag = POL
-			}
-			traits = { neutrality_minister }
-			picture = neutrality_idea
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
+			picture = generic_oppression
+			removal_cost = -1
 		}
 	}
 	tank_manufacturer = { 

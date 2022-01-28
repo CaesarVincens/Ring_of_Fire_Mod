@@ -26,6 +26,7 @@ ideologies = {
 			can_puppet = yes
 			can_send_volunteers = no
 		}
+		can_host_government_in_exile = yes
 		
 		war_impact_on_world_tension = 0.25
 		faction_impact_on_world_tension = 0.25
@@ -36,6 +37,10 @@ ideologies = {
 			justify_war_goal_when_in_major_war_time = -0.25
 			puppet_cost_factor = -0.5
 			#radical_acceptance = -25
+			civilian_intel_to_others = 15.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 5
 			ai_get_ally_desire_factor = -50
 			ai_call_ally_desire_factor = -10
 			ai_join_ally_desire_factor = -10
@@ -69,6 +74,7 @@ ideologies = {
 			can_puppet = yes
 			can_send_volunteers = no
 		}
+		can_host_government_in_exile = yes
 		
 		war_impact_on_world_tension = 0.5
 		faction_impact_on_world_tension = 0.5
@@ -78,6 +84,10 @@ ideologies = {
 			generate_wargoal_tension = 0.2
 			justify_war_goal_when_in_major_war_time = -0.5
 			#liberal_acceptance = 25
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 5
 		}
 		faction_modifiers = {
 		}
@@ -115,6 +125,7 @@ ideologies = {
 			can_puppet = yes
 			can_send_volunteers = no
 		}
+		can_host_government_in_exile = yes
 		
 		war_impact_on_world_tension = 0.75
 		faction_impact_on_world_tension = 0.75
@@ -123,6 +134,10 @@ ideologies = {
 			join_faction_tension = 0.1
 			constitutionalist_acceptance = 25
 			#radical_acceptance = 10
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 5
 		}
 		
 		faction_modifiers = {
@@ -157,6 +172,7 @@ ideologies = {
 			can_puppet = yes
 			can_send_volunteers = no
 		}
+		can_host_government_in_exile = yes
 		
 		war_impact_on_world_tension = 1
 		faction_impact_on_world_tension = 1
@@ -165,6 +181,10 @@ ideologies = {
 			#liberal_acceptance = 10
 			#absolutist_acceptance = -50
 			justify_war_goal_when_in_major_war_time = -0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 5.0
+			airforce_intel_to_others = 5
 		}
 		
 		faction_modifiers = {
@@ -191,6 +211,7 @@ ideologies = {
 			bishopric_neutral = {}
 		
 		}
+		can_host_government_in_exile = yes
 		
 		dynamic_faction_names = {
 			"FACTION_NAME_NONALIGNED_1"
@@ -216,6 +237,10 @@ ideologies = {
 			drift_defence_factor = -0.3
 			generate_wargoal_tension = 0.6
 			join_faction_tension = 0.6
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 5
 		}
 		
 		faction_modifiers = {

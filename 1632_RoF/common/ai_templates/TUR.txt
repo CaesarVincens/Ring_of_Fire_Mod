@@ -189,6 +189,7 @@ infantry_TUR = {
 			#merc_cavalry
 			rocket_artillery
 			heavy_artillery_brigade
+			heavy_artillery
 			heavy_weapons_company
 			jaeger_brigade
 		}
@@ -262,6 +263,7 @@ infantry_TUR = {
 			#merc_line_infantry
 			heavy_weapons_company
 			light_artillery_brigade
+			light_artillery
 			cavalry
 			#merc_cavalry
 			rocket_artillery

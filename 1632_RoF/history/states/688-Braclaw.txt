@@ -1,0 +1,27 @@
+state = {
+	id = 688
+	name = "STATE_688"
+
+	history = {
+		owner = POL
+		add_core_of = POL
+		add_core_of = RUT
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+		}
+		victory_points = {
+			9435 3
+		}
+	}
+
+	local_supplies = 5.0
+	provinces = {
+		476 754 3757 6455 6480 9423 9435 9481 9576 11409 
+	}
+	manpower = 92000
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

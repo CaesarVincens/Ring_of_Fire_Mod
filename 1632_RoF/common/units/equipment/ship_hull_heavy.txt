@@ -126,6 +126,7 @@ equipments = {
 	###Special snowflake hull
 
 	ship_hull_pre_dreadnought = {
+		abbreviation = "hcb"
 		year = 1905
 		visual_tech_level_addition = 0
 		archetype = ship_hull_heavy
@@ -183,6 +184,7 @@ equipments = {
 		manpower = 3200
 	}
 	ship_hull_heavy_1 = {
+		abbreviation = "hcc"
 		year = 1922
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -273,6 +275,7 @@ equipments = {
 	}
 
 	ship_hull_heavy_2 = {
+		abbreviation = "hcd"
 		year = 1936
 
 		archetype = ship_hull_heavy
@@ -317,6 +320,7 @@ equipments = {
 
 		default_modules = {
 			rear_1_custom_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
 		}
 		naval_range = 3500
 		
@@ -335,6 +339,7 @@ equipments = {
 	}
 
 	ship_hull_heavy_3 = {
+		abbreviation = "hce"
 		year = 1940
 
 		archetype = ship_hull_heavy
@@ -399,6 +404,7 @@ equipments = {
 	}
 
 	ship_hull_heavy_4 = {
+		abbreviation = "hcf"
 		year = 1944
 
 		archetype = ship_hull_heavy
@@ -463,9 +469,11 @@ equipments = {
 	}
 
 	ship_hull_super_heavy_1 = {
+		abbreviation = "hcg"
 		year = 1940
 
 		archetype = ship_hull_heavy
+		model = super_heavy_battleship
 		visual_level = 1
 		priority = 1400
 		module_slots = {
@@ -542,7 +550,7 @@ equipments = {
 			rear_1_custom_slot = empty
 		}
 		naval_range = 4500
-		
+		naval_speed = 22
 		max_strength = 700
 		fuel_consumption = 75
 		reliability = 0.80
@@ -654,7 +662,7 @@ equipments = {
 		build_cost_ic = 5600
 		resources = {
 			#oil = 1
-			steel = 1
+			steel = 3
 			chromium = 1
 		}
 
@@ -673,7 +681,7 @@ equipments = {
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_bb_2
 			front_1_custom_slot = ship_anti_air_4
@@ -697,7 +705,7 @@ equipments = {
 		surface_detection = 15
 		sub_detection = 5
 		surface_visibility = 30
-		naval_speed = 20
+		naval_speed = 25
 		reliability = 0.85
 
 		naval_range = 4000
@@ -708,7 +716,7 @@ equipments = {
 		build_cost_ic = 5400
 		resources = {
 			#oil = 2
-			steel = 1
+			steel = 4
 			chromium = 1
 		}
 		manpower = 6600
@@ -727,7 +735,7 @@ equipments = {
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_engine_slot = heavy_ship_engine_3
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_bb_3
 			front_1_custom_slot = ship_anti_air_4
@@ -751,7 +759,7 @@ equipments = {
 		surface_detection = 25
 		sub_detection = 5
 		surface_visibility = 30
-		naval_speed = 21
+		naval_speed = 28
 		reliability = 0.90
 
 		naval_range = 5000
@@ -763,8 +771,8 @@ equipments = {
 		build_cost_ic = 5200
 		resources = {
 			#oil = 2
-			steel = 1
-			chromium = 1
+			steel = 4
+			chromium = 2
 		}
 		manpower = 7000
 
@@ -782,7 +790,7 @@ equipments = {
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_4
 			fixed_ship_secondaries_slot = dp_ship_secondaries
 			fixed_ship_armor_slot = ship_armor_bb_3
 			front_1_custom_slot = ship_anti_air_4
@@ -818,8 +826,8 @@ equipments = {
 		build_cost_ic = 6000
 		resources = {
 			#oil = 2
-			steel = 1
-			chromium = 1
+			steel = 5
+			chromium = 3
 		}
 		manpower = 7400
 		
@@ -830,6 +838,7 @@ equipments = {
 		year = 1936
 		visual_level = 0
 		archetype = ship_hull_heavy
+		model = super_heavy_battleship
 		priority = 1400
 		module_slots = {
 			fixed_ship_battery_slot = {
@@ -901,7 +910,7 @@ equipments = {
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_4
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_shbb
 			front_1_custom_slot = ship_anti_air_4
@@ -924,7 +933,7 @@ equipments = {
 		surface_detection = 15
 		sub_detection = 5
 		surface_visibility = 30
-		naval_speed = 26
+		naval_speed = 20
 		reliability = 0.85
 		
 		naval_range = 4000
@@ -941,13 +950,13 @@ equipments = {
 			chromium = 1
 		}
 		manpower = 9000
-		
 	}
 	
 	SH_battleship_2 = {
 		year = 1944
 		visual_level = 0
 		archetype = ship_hull_heavy
+		model = super_heavy_battleship
 		priority = 1400
 		parent = SH_battleship_1
 		module_slots = {
@@ -1020,7 +1029,7 @@ equipments = {
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_4
 			fixed_ship_secondaries_slot = dp_ship_secondaries
 			fixed_ship_armor_slot = ship_armor_shbb
 			front_1_custom_slot = ship_anti_air_4
@@ -1044,7 +1053,7 @@ equipments = {
 		surface_detection = 25
 		sub_detection = 5
 		surface_visibility = 30
-		naval_speed = 28
+		naval_speed = 23
 		reliability = 0.90
 		
 		naval_range = 4500
@@ -1057,8 +1066,8 @@ equipments = {
 		build_cost_ic = 13000
 		resources = {
 			#oil = 2
-			steel = 1
-			chromium = 1
+			steel = 5
+			chromium = 3
 		}
 		manpower = 10000
 		
@@ -1111,7 +1120,7 @@ equipments = {
 		build_cost_ic = 2500
 		resources = {
 			#oil = 1
-			steel = 1
+			steel = 3
 			chromium = 1
 		}
 		
@@ -1166,7 +1175,7 @@ equipments = {
 		build_cost_ic = 4000
 		resources = {
 			#oil = 1
-			steel = 1
+			steel = 4
 			chromium = 1
 		}
 		manpower = 4000

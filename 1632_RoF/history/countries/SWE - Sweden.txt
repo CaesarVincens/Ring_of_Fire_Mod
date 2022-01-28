@@ -7,6 +7,7 @@ set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -78,87 +79,14 @@ add_ideas = {
 	SWE_UPS_support
 	SWE_lion_of_the_north
 }
+add_timed_idea = {
+    idea = SWE_truce_of_altmark
+    days = 1560
+}
 set_stability = 0.7
 set_war_support = 0.8
-create_country_leader = {
-    name = "Gustavus II Adolphus Vasa"
-    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
-    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
-    #expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-		golden_king
-    }
-}
-create_country_leader = {
-    name = "Gustavus II Adolphus Vasa"
-    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
-    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
-    #expire = "1660.1.1"
-    ideology = lib_constitutional_monarchy
-    traits = {
-		golden_king
-    }
-}
-create_country_leader = {
-    name = "Gustavus II Adolphus Vasa"
-    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
-    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
-    #expire = "1660.1.1"
-    ideology = absolute_monarchy
-}
-create_country_leader = {
-    name = "Gustavus II Adolphus Vasa"
-    desc = "POLITICS_GUSTAVUS_ADOLPHUS_DESC"
-    picture = "gfx/leaders/SWE/Portrait_Sweden_Gustavus_Adolphus.dds"
-    #expire = "1660.1.1"
-    ideology = monarchy_neutral
-}
-
-create_field_marshal = {
-	name = "Gustav Horn"
-	picture = "Portrait_Sweden_Gustav_Horn.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-
-}
-
-create_corps_commander = {
-	name = "Gustavus II Adolphus Vasa"
-	picture = "Portrait_Sweden_Gustavus_Adolphus.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-
-}
-
-create_corps_commander = {
-	name = "Johan Baner"
-	picture = "Portrait_Sweden_Johan_Baner.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-
-}
-
-create_corps_commander = {
-	name = "Lennart Torstenson"
-	picture = "Portrait_Sweden_Lennart_Torstenson.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-
-}
+recruit_character = SWE_gustavus_adolphus_vasa
+recruit_character = SWE_gustav_horn
+recruit_character = SWE_johan_baner
+recruit_character = SWE_lennart_torstenson
+recruit_character = SWE_axel_oxenstierna

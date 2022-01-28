@@ -1,18 +1,17 @@
-
-state={
-	id=527
-	name="STATE_527"
-	resources={
-		oil=2.000
+state = {
+	id = 527
+	name = "STATE_527"
+	resources = {
+		oil = 2.000
 	}
 
-	history={
+	history = {
 		owner = PER
 		victory_points = {
 			10106 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
@@ -22,10 +21,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1600 1938 3795 10106 10804 12372 
 	}
-	manpower=578100
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 578100
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

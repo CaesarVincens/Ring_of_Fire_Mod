@@ -25,52 +25,9 @@ political_actions = {
 			}
 		}
 	}
-	test_gui = {
-		visible = {
-			always = no
-		}
-		complete_effect = {
-			SWE = {
-				clear_array = ROOT.protestant_union
-				for_each_loop = {
-					array = faction_members
-					if = {
-						limit = {
-							NOT = {
-								is_in_array = {
-									ROOT.protestant_union = v
-								}
-							}
-						}
-						add_to_array = {
-							ROOT.protestant_union = v
-						}
-					}
-				}
-			}
-			AUS = {
-				clear_array = ROOT.catholic_league
-				for_each_loop = {
-					array = faction_members
-					if = {
-						limit = {
-							NOT = {
-								is_in_array = {
-									ROOT.catholic_league = v
-								}
-							}
-						}
-						add_to_array = {
-							ROOT.catholic_league = v
-						}
-					}
-				}
-			}
-		}
-	}
 	test_limit = {
 		visible = {
-			always = no
+			is_debug = yes
 		}
 		complete_effect = {
 			set_temp_variable = {
@@ -186,93 +143,6 @@ political_actions = {
 				add = 1
 				has_stability < 0.4
 			}
-		}
-	}
-}
-
-RoF_economy_decisions = {
-	advance_industrial_mod_agr_TEMP = {
-		available = {
-			has_idea = primitive_agrarian
-			if = {
-				limit = { mod_agr_focus_block = no }
-				mod_agr_focus_block = yes
-				else = {
-					num_of_factories > 20
-					has_tech = infrastructure_tech_1
-					has_tech = electronic_mechanical_engineering
-					has_tech = construction1
-				}
-			}
-		}
-		visible = {
-			is_ai = yes
-		}
-		cost = 75
-		complete_effect = {
-			swap_ideas = {
-				remove_idea = primitive_agrarian
-				add_idea = modern_agrarian
-			}
-		}
-		ai_will_do = {
-			base = 20
-		}
-	}
-	advance_industrial_early_ind_TEMP = {
-		available = {
-			has_idea = modern_agrarian
-			if = {
-				limit = { early_ind_focus_block = no }
-				early_ind_focus_block = yes
-				else = {
-					num_of_factories > 40
-					has_tech = infrastructure_tech_2
-					has_tech = mechanical_computing
-					has_tech = construction2
-				}
-			}
-		}
-		visible = {
-			is_ai = yes
-		}
-		cost = 75
-		complete_effect = {
-			swap_ideas = {
-				remove_idea = modern_agrarian
-				add_idea = early_industrial
-			}
-		}
-		ai_will_do = {
-			base = 20
-		}
-	}
-	advance_industrial_fully_ind_TEMP = {
-		available = {
-			has_idea = early_industrial
-			if = {
-				limit = { fully_ind_focus_block = no }
-				fully_ind_focus_block = yes
-				else = {
-					num_of_factories > 60
-					has_tech = infrastructure_tech_3
-					has_tech = computing_machine
-					has_tech = construction3
-				}
-			}
-		}
-		visible = {
-			is_ai = yes
-		}
-		cost = 75
-		complete_effect = {
-			swap_ideas = {
-				remove_idea = early_industrial
-				add_idea = fully_industrial
-			}
-		}
-		ai_will_do = {
-			base = 20
 		}
 	}
 }
@@ -431,11 +301,11 @@ propaganda_efforts = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision war_propaganda_against_warmonger"
+			#log = "[GetDateText]: [Root.GetName]: Decision war_propaganda_against_warmonger"
 			set_country_flag = war_propaganda_campaign_running
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove war_propaganda_against_warmonger"
+			#log = "[GetDateText]: [Root.GetName]: Decision remove war_propaganda_against_warmonger"
 			clr_country_flag = war_propaganda_campaign_running
 		}
 
@@ -526,7 +396,66 @@ operations = {
 }
 
 special_projects = {
-
+	build_white_sea_canal = {
+		visible = {
+			controls_state = 696
+			controls_state = 383
+			NOT = { has_global_flag = white_sea_canal_built }
+		}
+		available = {
+			controls_state = 696
+			controls_state = 383
+			has_tech = infrastructure_tech_3
+			has_tech = construction3
+			has_tech = excavation3
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		days_remove = 1460
+		modifier = {
+			civilian_factory_use = 10
+		}
+		complete_effect = {
+			if = {
+				limit = { has_tech = infrastructure_tech_4 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = construction4 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = construction5 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = excavation4 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+			if = {
+				limit = { has_tech = excavation5 }
+				add_days_remove = {
+					decision = build_white_sea_canal
+					days = -180
+				}
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = white_sea_canal_built
+			set_global_flag = white_sea_canal_built
+		}
+	}
 }
 
 war_measures = {
@@ -900,7 +829,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 8
+						infrastructure > 4
 					}
 				}
 				random_owned_state = {
@@ -912,7 +841,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 8
+						infrastructure > 4
 					}
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = war_building_slot_flag
@@ -928,7 +857,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 5
+						infrastructure > 3
 					}
 				}
 				random_owned_state = {
@@ -940,7 +869,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 5
+						infrastructure > 3
 					}
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = war_building_slot_flag
@@ -956,7 +885,7 @@ economy_decisions = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 8
+						infrastructure > 4
 					}
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = war_building_slot_flag
@@ -971,7 +900,7 @@ economy_decisions = {
 			}
 			modifier = {
 				any_owned_state = {
-					infrastructure > 5
+					infrastructure > 3
 					free_building_slots = { building = industrial_complex size > 0 include_locked = no }
 				}
 				factor = 0

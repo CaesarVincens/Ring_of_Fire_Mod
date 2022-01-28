@@ -6,7 +6,11 @@
 			pike_equipment > 50000
 		}
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		has_equipment = {
+			pike_equipment < 50001
+		}
+	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = pike_equipment
@@ -22,7 +26,11 @@ RoF_enough_inf = {
 			firearm_equipment > 100000
 		}
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		has_equipment = {
+			firearm_equipment < 100001
+		}
+	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = firearm_equipment
@@ -40,7 +48,11 @@ RoF_enough_cannon = {
 			heavy_artillery_equipment > 10000
 		}
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		has_equipment = {
+			heavy_artillery_equipment < 10001
+		}
+	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = heavy_artillery_equipment
@@ -58,7 +70,11 @@ RoF_enough_field_guns = {
 			light_artillery_equipment > 10000
 		}
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		has_equipment = {
+			light_artillery_equipment < 10001
+		}
+	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = light_artillery_equipment

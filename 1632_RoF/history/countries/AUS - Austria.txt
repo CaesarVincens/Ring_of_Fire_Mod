@@ -6,6 +6,7 @@ oob = "AUS_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -52,72 +53,19 @@ add_ideas = {
 	archduke_rank
 	AUS_kipper_und_wipper
 }
+add_relation_modifier = {
+	target = HUN
+	modifier = AUS_dual_monarchy
+}
+diplomatic_relation = {
+	country = TYR
+	relation = military_access
+}
 set_stability = 0.5
-create_country_leader = {
-    name = "Ferdinand II von Habsburg"
-    desc = "POLITICS_FERDINAND_2_DESC"
-    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-		stand_against_ottoman
-    }
-}
-
-create_country_leader = {
-    name = "Ferdinand II von Habsburg"
-    desc = "POLITICS_FERDINAND_2_DESC"
-    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-		stand_against_ottoman
-    }
-}
-
-create_country_leader = {
-    name = "Ferdinand II von Habsburg"
-    desc = "POLITICS_FERDINAND_2_DESC"
-    picture = "gfx/leaders/AUS/Portrait_Austria_Ferdinand_2.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy_neutral
-    traits = {
-		stand_against_ottoman
-    }
-}
-
-create_corps_commander = {
-	name = "Gottfried zu Pappenheim"
-	gfx = "GFX_commander_BOH_Pappenheim"
-	traits = { cavalry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 1002
-}
-
-create_field_marshal = {
-	name = "Johann Tserclaes von Tilly"
-	picture = "Portrait_Austria_Tilly.dds"
-	traits = { inflexible_strategist }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-	id = 1003
-}
-
-create_corps_commander = {
-	name = "Ottavio Piccolomini"
-	picture = "Portrait_Austria_Piccolomini.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-	id = 1004
-}
+recruit_character = AUS_ferdinand_ii_von_habsburg
+recruit_character = AUS_ferdinand_iii_von_habsburg
+recruit_character = BOH_albrecht_von_wallenstein
+recruit_character = BOH_gottfried_zu_pappenheim
+recruit_character = AUS_johann_tserclaes_von_tilly
+recruit_character = AUS_ottavio_piccolomini
+recruit_character = GER_heinrich_holk

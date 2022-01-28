@@ -1,6 +1,6 @@
-state={
-	id=669
-	name="STATE_669"
+state = {
+	id = 669
+	name = "STATE_669"
 	resources = {
 		aluminium = 16.000
 		oil = 1.000
@@ -13,7 +13,7 @@ state={
 			10904 3 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
@@ -22,6 +22,7 @@ state={
 
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		2200 5128 5185 5222 8180 8188 8246 10993 11015 12956 13072 
 	}

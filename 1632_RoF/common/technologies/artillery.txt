@@ -65,6 +65,9 @@ technologies = {
 		light_artillery_brigade = {
 			reliability = 0.1
 		}
+		light_artillery = {
+			reliability = 0.1
+		}
 		ai_will_do = {
 			factor = 2
 			
@@ -144,6 +147,11 @@ technologies = {
 		}
 		
 		light_artillery_brigade = {
+			soft_attack = 0.1
+			breakthrough = 0.1
+			ap_attack = 0.1
+		}
+		light_artillery = {
 			soft_attack = 0.1
 			breakthrough = 0.1
 			ap_attack = 0.1
@@ -280,6 +288,9 @@ technologies = {
 		heavy_artillery_brigade = {
 			reliability = 0.1
 		}
+		heavy_artillery = {
+			reliability = 0.1
+		}
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -378,6 +389,14 @@ technologies = {
 		}
 		
 		heavy_artillery_brigade = {
+			fort = {
+				attack = 0.05
+			}
+			hard_attack = 0.1
+			breakthrough = 0.1
+			ap_attack = 0.1
+		}
+		heavy_artillery = {
 			fort = {
 				attack = 0.05
 			}
@@ -504,6 +523,7 @@ technologies = {
 		}
 		enable_subunits = {
 			rocket_artillery_brigade
+			rocket_artillery
 		}
 		
 		path = {

@@ -1,0 +1,23 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_decision_category_pol_sejm"
+		texturefile = "gfx/interface/decisions/decision_category_pol_sejm.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sejm_background"
+		texturefile = "gfx/interface/decisions/sejm_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_pol_sejm_ui"
+		texturefile = "gfx/interface/decisions/decision_category_pol_sejm_ui.dds"
+		noOfFrames = 21
+	}
+
+	spriteType = {
+		name = "GFX_decision_aqualator"
+		texturefile = "gfx/interface/decisions/decision_aqualator.dds"
+	}	
+}

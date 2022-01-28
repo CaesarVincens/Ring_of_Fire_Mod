@@ -7,6 +7,7 @@ set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -36,35 +37,57 @@ set_politics = {
     elections_allowed = no
 }
 set_popularities = {
-	absolutist = 69
-	constitutionalist = 29
-	liberal = 0
-	radical = 0
-	neutrality = 2
+	absolutist = 52
+	constitutionalist = 35
+	liberal = 4
+	radical = 1
+	neutrality = 8
 }
+
+#Sejm
+set_variable = { power_king = 0.1 }
+set_variable = { power_szlachta = 0.45 }
+set_variable = { power_magnates = 0.45 }
+set_variable = { var = sejm_support value = 100 }
+set_variable = { var = sejm_total value = 200 }
+set_variable = { var = sejm_low value = 120 } # 60%
+set_variable = { var = sejm_medium value = 150 } # 75%
+set_variable = { var = sejm_high value = 180 } # 90%
+POL_recalc_sejm_icon_frames = yes
 
 set_country_flag = religion_catholic
+recruit_character = POL_sigismund_vasa
+recruit_character = POL_wladyslaw_vasa
+recruit_character = POL_john_casimir_vasa
+recruit_character = POL_jan_wezyk
+recruit_character = POL_stanislaw_koniecpolski
+recruit_character = POL_marcin_kazanowski
+recruit_character = POL_mikolaj_potocki
+recruit_character = POL_janusz_kiszka
+recruit_character = POL_krzysztof_radziwill
+recruit_character = POL_lukasz_opalinski_elder
+recruit_character = POL_jakub_zadzik
+recruit_character = POL_jerzy_ossolinski
+activate_advisor = POL_lukasz_opalinski_elder
+activate_advisor = POL_jakub_zadzik
 add_ideas = {
 	balanced_eco
-}
-set_stability = 0.5
-create_country_leader = {
-    name = "Sigismund III Vasa"
-    desc = "POLITICS_DEZYDERY_RóZICKY_DESC"
-    picture = "gfx/leaders/POL/Portrait_Poland_Sigismund_III.dds"
-    expire = "1632.11.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
+	freedom_of_religion
+	POL_henrician_articles
+	POL_eastern_serfdom_1
+	POL_powerful_magnates
+	POL_grain_exports
+	#POL_lukasz_opalinski_elder
+	#POL_jakub_zadzik
 }
 
-create_corps_commander = {
-	name = "Stanisław Koniecpolski"
-    picture = "Portrait_Poland_Stanislas_Koniecpolski.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
+add_timed_idea = {
+    idea = POL_treaty_of_stary_targ
+    days = 1560
 }
+add_timed_idea = {
+    idea = POL_truce_of_deulino
+    days = 767
+}
+country_event = { id = RoF_POL.50 days = 2 }
+set_stability = 0.5

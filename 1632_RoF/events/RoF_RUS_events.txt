@@ -59,10 +59,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_RUS.50.a
-		if = { 
-			limit = { has_idea = RUS_filaret }
-			remove_ideas = RUS_filaret
-		}
+		retire_character = RUS_filaret
 		if = { 
 			limit = { has_idea = RUS_patriarch_filaret }
 			remove_ideas = RUS_patriarch_filaret
@@ -76,115 +73,461 @@ country_event = {
 	title = RoF_RUS.100.t
 	picture = GFX_report_event_rus_coa
 	desc = RoF_RUS.100.d
+	is_triggered_only = yes
+	option = {
+		name = RoF_RUS.100.a #RSA
+		set_country_flag = united_states_of_russia
+		set_cosmetic_tag = Free_Russia
+		hidden_effect = { country_event = { id = RoF_RUS.101 } }
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = RoF_RUS.100.b #RSC
+		hidden_effect = {
+			RSC = {
+				clr_country_flag = directorate_russia
+				drop_cosmetic_tag = yes
+				set_country_flag = united_states_of_russia
+				set_cosmetic_tag = Free_Russia
+			}
+			set_country_flag = directorate_russia
+			country_event = { id = RoF_RUS.101 }
+		}
+		set_cosmetic_tag = Directorate_Russia
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = RoF_RUS.100.c #RSB
+		hidden_effect = {
+			RSB = {
+				clr_country_flag = siberia_russia
+				drop_cosmetic_tag = yes
+					set_country_flag = united_states_of_russia
+					set_cosmetic_tag = Free_Russia
+			}
+			set_country_flag = siberia_russia
+			country_event = { id = RoF_RUS.101 }
+		}
+		set_cosmetic_tag = Siberia
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
+#Flight of the Czar
+
+country_event = {
+	id = RoF_RUS.101
+	title = RoF_RUS.100.t
+	picture = GFX_report_event_rus_coa
+	desc = RoF_RUS.100.d
 
 	is_triggered_only = yes
+	hidden = yes
 
 	immediate = {
+		#########
+		#general#
+		#########
 		hidden_effect = {
-			USR = {
-				add_state_core = 215
-				add_state_core = 391
-				add_state_core = 393
-				add_state_core = 394
-				add_state_core = 395
+			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = { has_idea = early_industrial }
+				RSA = { add_ideas = early_industrial }
+				RSB = { add_ideas = early_industrial }
+				RSC = { add_ideas = early_industrial }
 			}
-			SIB = {
-				add_state_core = 398
-				add_state_core = 399
-				add_state_core = 400
-				add_state_core = 401
-				add_state_core = 402
+			if = {
+				limit = { has_idea = fully_industrial }
+				RSA = { add_ideas = fully_industrial }
+				RSB = { add_ideas = fully_industrial }
+				RSC = { add_ideas = fully_industrial }
 			}
-			release = USR
-			release = SIB
-			every_owned_state = { add_core_of = USR }
-			set_country_flag = directorate_russia_focus_tree_flag
-			set_country_flag = directorate_russia
-			load_focus_tree = directorate_russia_focus_tree
+			if = {
+				limit = { has_idea = RUS_streltzi_3 }
+				ROOT = { remove_ideas = RUS_streltzi_3 }
+				RSA = { add_ideas = RUS_streltzi_3 }
+				RSB = { add_ideas = RUS_streltzi_3 }
+				RSC = { add_ideas = RUS_streltzi_3 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_streltzi_2 }
+				ROOT = { remove_ideas = RUS_streltzi_2 }
+				RSA = { add_ideas = RUS_streltzi_2 }
+				RSB = { add_ideas = RUS_streltzi_2 }
+				RSC = { add_ideas = RUS_streltzi_2 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_streltzi_1 }
+				ROOT = { remove_ideas = RUS_streltzi_1 }
+				RSA = { add_ideas = RUS_streltzi_1 }
+				RSB = { add_ideas = RUS_streltzi_1 }
+				RSC = { add_ideas = RUS_streltzi_1 }
+			}
+			if = {
+				limit = { has_idea = RUS_boyar_cavalry_3 }
+				ROOT = { remove_ideas = RUS_boyar_cavalry_3 }
+				RSA = { add_ideas = RUS_boyar_cavalry_3 }
+				RSB = { add_ideas = RUS_boyar_cavalry_3 }
+				RSC = { add_ideas = RUS_boyar_cavalry_3 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_boyar_cavalry_2 }
+				ROOT = { remove_ideas = RUS_boyar_cavalry_2 }
+				RSA = { add_ideas = RUS_boyar_cavalry_2 }
+				RSB = { add_ideas = RUS_boyar_cavalry_2 }
+				RSC = { add_ideas = RUS_boyar_cavalry_2 }
+			}
+			else_if = {
+				limit = { has_idea = RUS_boyar_cavalry_1 }
+				ROOT = { remove_ideas = RUS_boyar_cavalry_1 }
+				RSA = { add_ideas = RUS_boyar_cavalry_1 }
+				RSB = { add_ideas = RUS_boyar_cavalry_1 }
+				RSC = { add_ideas = RUS_boyar_cavalry_1 }
+			}
+			if = {
+				limit = { has_idea = RUS_infrastructure }
+				ROOT = { remove_ideas = RUS_infrastructure }
+				RSA = { add_ideas = RUS_infrastructure }
+				RSB = { add_ideas = RUS_infrastructure }
+				RSC = { add_ideas = RUS_infrastructure }
+			}
+			if = {
+				limit = { has_idea = RUS_new_serfdom }
+				ROOT = { remove_ideas = RUS_new_serfdom }
+				RSC = { add_ideas = RUS_new_serfdom }
+			}
+			if = {
+				limit = { has_idea = RUS_up_timer_advisor }
+				ROOT = { remove_ideas = RUS_up_timer_advisor }
+				RSA = { add_ideas = RUS_up_timer_advisor }
+			}
+			WAS = { transfer_state = 381 }
+			392 = {
+				add_province_modifier = {
+					static_modifiers = { lack_of_infrastructure }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+			384 = {
+				add_province_modifier = {
+					static_modifiers = { lack_of_infrastructure }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+		}
+		##############
+		#Sibera as AI#
+		##############
+		if = {
+			limit = {
+				NOT = { has_country_flag = siberia_russia }
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 398
+						state = 399
+						state = 400
+						state = 401
+						state = 402
+						state = 403
+						state = 404
+						state = 227
+						state = 297
+					}
+				}
+				add_core_of = RSA
+				add_core_of = RSB
+				add_core_of = RSC
+				RSB = { transfer_state = PREV }
+			}
 			transfer_units_fraction = {
-				target = SIB
+				target = RSB
 				size = 0.2 # Fallback in case one of the ratios below are not stipulated
 				stockpile_ratio = 0.2
 				army_ratio = 0.2
 				navy_ratio = 0.1
 				air_ratio = 0.0
 				keep_unit_leaders = {
-					
 				}
 				keep_unit_leaders_trigger = {
-					
+				}
+			}
+			RUS_mikhail_shein = {
+				set_nationality = RSB
+			}
+			RUS_artemi_izmailov = {
+				set_nationality = RSB
+			}
+		}
+		###############
+		#Sibera Player#
+		###############
+		if = {
+			limit = { has_country_flag = siberia_russia }
+			every_owned_state = {
+				add_core_of = RSA
+				add_core_of = RSC
+			}
+			every_owned_state = {
+				limit = {
+					NOT = {
+						state = 398
+						state = 399
+						state = 400
+						state = 401
+						state = 402
+						state = 403
+						state = 404
+						state = 227
+						state = 297
+					}
+				}
+				RSA = {
+					transfer_state = PREV
+					add_state_core = 381
 				}
 			}
 			transfer_units_fraction = {
-				target = USR
+				target = RSA
+				size = 0.8 # Fallback in case one of the ratios below are not stipulated
+				stockpile_ratio = 0.8
+				army_ratio = 0.8
+				navy_ratio = 1.0
+				air_ratio = 1.0
+				keep_unit_leaders = {
+					1050
+					1051
+				}
+				keep_unit_leaders_trigger = {
+				}
+			}
+		}
+		#############
+		#Free Russia#
+		#############
+		if = {
+			limit = {
+				NOT = { has_country_flag = directorate_russia }
+			}
+			RSA = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							state = 215
+							state = 391
+							state = 393
+							state = 394
+							state = 395
+						}
+					}
+					add_core_of = RSC
+					RSC = { transfer_state = PREV }
+				}
+				every_owned_state = { add_core_of = RSC }
+				RUS_fedor_sheremetev = {
+					set_nationality = RSC
+				}
+				transfer_units_fraction = {
+					target = RSC
+					size = 0.5 # Fallback in case one of the ratios below are not stipulated
+					stockpile_ratio = 0.5
+					army_ratio = 0.4
+					navy_ratio = 0.0
+					air_ratio = 0.8
+					keep_unit_leaders = {
+					}
+					keep_unit_leaders_trigger = {
+					}
+				}
+			}
+		}
+		#############
+		#Directorate#
+		#############
+		if = {
+			limit = { has_country_flag = directorate_russia }
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 215
+						state = 391
+						state = 393
+						state = 394
+						state = 395
+					}
+				}
+				add_core_of = RSA
+				RSA = { transfer_state = PREV }
+			}
+			RUS_mikhail_romanov = {
+				set_nationality = RSA
+			}
+			every_owned_state = { add_core_of = RSA }
+			transfer_units_fraction = {
+				target = RSA
 				size = 0.5 # Fallback in case one of the ratios below are not stipulated
 				stockpile_ratio = 0.5
 				army_ratio = 0.4
 				navy_ratio = 0.0
 				air_ratio = 0.8
 				keep_unit_leaders = {
-					
 				}
-				keep_unit_leaders_trigger = {
-					
+				keep_unit_leaders_trigger = {	
 				}
 			}
-			USR = {
-				set_cosmetic_tag = Free_Russia 
-				inherit_technology = RUS
-				#load_oob = USR_OOB
-				every_owned_state = { add_core_of = RUS }
-				RUS = { split_equipment_half = yes }
-				set_country_flag = united_states_russia_focus_tree_flag
-				load_focus_tree = united_states_russia_focus_tree
-			}
-			SIB = {
-				inherit_technology = RUS
-				every_owned_state = {
-					add_core_of = RUS
-					add_core_of = USR
+		}
+		###############
+		#general after#
+		###############
+		RSA = {
+			set_variable = { global.RSA_TAG = THIS.id }
+			if = {
+				limit = { owns_state = 215 }
+				set_capital = { state = 215 }
+				set_victory_points = {
+					province = 291
+					value = 30
+				}
+				else = {
+					random_owned_state = {
+						RSA = { set_capital = { state = PREV } }
+					}
 				}
 			}
-			if = {
-				limit = { has_idea = RUS_up_timer_advisor }
-				USR = { add_ideas = RUS_up_timer_advisor }
-				remove_ideas = RUS_up_timer_advisor
+			add_ideas = secularism
+			load_focus_tree = {
+				tree = russia_focus_tree
+				keep_completed = no
+			}
+			unlock_national_focus = RUS_fate_of_czar
+			set_party_name = {
+				ideology = liberal
+				long_name = RSA_liberal_party
+				name = RSA_liberal_party
+			}
+			add_popularity = {
+				ideology = radical
+				popularity = 10
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 10
+			}
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 25
 			}
 			if = {
-				limit = { has_idea = RUS_infrastructure }
-				USR = { add_ideas = RUS_infrastructure }
+				limit = {
+					NOT = { has_government = constitutionalist }
+				}
+				set_politics = { ruling_party = constitutionalist }
 			}
+			RUS_mikhail_romanov = {
+				promote_character = absolute_monarchy
+				promote_character = constitutional_monarchy
+				promote_character = absolute_monarchy_neutral
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						#desc = "POLITICS_MIKHAIL_ROMANOV_DESC"
+						ideology = lib_constitutional_monarchy
+						expire = "1660.1.1"
+					}
+				}
+			}
+		}
+		RSB = {
 			if = {
-				limit = { has_idea = RUS_streltzi_3 }
-				USR = { add_ideas = RUS_streltzi_3 }
-				SIB = { add_ideas = RUS_streltzi_3 }
+				limit = { owns_state = 400 }
+				set_capital = { state = 400 }
+				else = {
+					random_owned_state = {
+						RSB = { set_capital = { state = PREV } }
+					}
+				}
 			}
-			else_if = {
-				limit = { has_idea = RUS_streltzi_2 }
-				USR = { add_ideas = RUS_streltzi_2 }
-				SIB = { add_ideas = RUS_streltzi_2 }
+			set_country_flag = religion_orthodox
+			add_ideas = {
+				military_focus_eco
+				secularism
 			}
-			else_if = {
-				limit = { has_idea = RUS_streltzi_1 }
-				USR = { add_ideas = RUS_streltzi_1 }
-				SIB = { add_ideas = RUS_streltzi_1 }
+			load_focus_tree = generic_focus
+			unlock_national_focus = political_effort
+			unlock_national_focus = moderate_path
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "1631.1.1"
+				election_frequency = 48
+				elections_allowed = no
 			}
+			set_popularities = {
+				absolutist = 25
+				constitutionalist = 23
+				liberal = 0
+				radical = 0
+				neutrality = 52
+			}
+			set_party_name = {
+				ideology = absolutist
+				long_name = absolutist_party
+				name = absolutist_party
+			}
+			set_party_name = {
+				ideology = constitutionalist
+				long_name = constitutionalist_party
+				name = constitutionalist_party
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = neutrality_party
+				name = neutrality_party
+			}
+			RUS_mikhail_shein = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_republic
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship_neutral
+						expire = "1660.1.1"
+					}
+				}
+			}
+		}
+		RSC = {
 			if = {
-				limit = { has_idea = RUS_boyar_cavalry_3 }
-				USR = { add_ideas = RUS_boyar_cavalry_3 }
-				SIB = { add_ideas = RUS_boyar_cavalry_3 }
+				limit = { owns_state = 389 }
+				set_capital = { state = 389 }
+				else = {
+					random_owned_state = {
+						RSC = { set_capital = { state = PREV } }
+					}
+				}
 			}
-			else_if = {
-				limit = { has_idea = RUS_boyar_cavalry_2 }
-				USR = { add_ideas = RUS_boyar_cavalry_2 }
-				SIB = { add_ideas = RUS_boyar_cavalry_2 }
-			}
-			else_if = {
-				limit = { has_idea = RUS_boyar_cavalry_1 }
-				USR = { add_ideas = RUS_boyar_cavalry_1 }
-				SIB = { add_ideas = RUS_boyar_cavalry_1 }
-			}
-			#set_cosmetic_tag = Directorate_Russia
 			if = {
 				limit = {
 					NOT = { has_government = absolutist }
@@ -197,37 +540,60 @@ country_event = {
 					ruling_party = absolutist
 				}
 			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = dictatorship
+			load_focus_tree = {
+				tree = russia_focus_tree
+				keep_completed = no
 			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = dictatorship_neutral
+			unlock_national_focus = RUS_fate_of_czar
+			set_country_flag = religion_orthodox
+			set_party_name = {
+				ideology = absolutist
+				long_name = absolutist_party
+				name = absolutist_party
 			}
-			create_country_leader = {
-				name = "Fedor Ivanovich Sheremetev"
-				ideology = constitutional_republic
+			set_party_name = {
+				ideology = constitutionalist
+				long_name = constitutionalist_party
+				name = constitutionalist_party
 			}
-			random_unit_leader = {
-				limit = {
-					has_id = 1050
+			set_party_name = {
+				ideology = neutrality
+				long_name = neutrality_party
+				name = neutrality_party
+			}
+			add_state_core = 381
+			RUS_fedor_sheremetev = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship
+						expire = "1660.1.1"
+					}
 				}
-				set_nationality = SIB
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_republic
+						expire = "1660.1.1"
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = dictatorship_neutral
+						expire = "1660.1.1"
+					}
+				}
 			}
-			WAS = {
-				transfer_state = 381
-			}
-			set_cosmetic_tag = Directorate_Russia
 		}
 	}
 	option = {
 		name = RoF_RUS.100.a
 		effect_tooltip = {
-			release = USR
-			release = SIB
+			release = RSA
+			release = RSB
 		}
-		USR = { change_tag_from = RUS }
+		#USR = { change_tag_from = RUS }
 		ai_chance = {
 			base = 0
 		}
@@ -235,8 +601,8 @@ country_event = {
 	option = {
 		name = RoF_RUS.100.b
 		effect_tooltip = {
-			release = USR
-			release = SIB
+			release = RSA
+			release = RSB
 		}
 		ai_chance = {
 			base = 10
@@ -245,10 +611,10 @@ country_event = {
 	option = {
 		name = RoF_RUS.100.c
 		effect_tooltip = {
-			release = USR
-			release = SIB
+			release = RSA
+			release = RSB
 		}
-		SIB = { change_tag_from = RUS }
+		#SIB = { change_tag_from = RUS }
 		ai_chance = {
 			base = 0
 		}
@@ -406,10 +772,10 @@ country_event = {
 	option = {
 		name = RoF_RUS.120.a
 		declare_war_on = {
-			target = USR
+			target = RSA
 			type = civil_war
 		}
-		add_civil_war_target = USR
+		add_civil_war_target = RSA
 	}
 }
 #Russian Civil War
@@ -424,7 +790,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			SIB = {
+			RSB = {
 				country_event = {
 					id = RoF_RUS.122
 					hours = 12
@@ -452,11 +818,11 @@ country_event = {
 	option = {
 		name = RoF_RUS.122.a
 		add_opinion_modifier = {
-			target = USR
+			target = RSA
 			modifier = friendly_relations
 		}
 		hidden_effect = {
-			USR = {
+			RSA = {
 				country_event = { 
 					id = RoF_RUS.123
 					hours = 12
@@ -470,7 +836,7 @@ country_event = {
 	option = {
 		name = RoF_RUS.122.b
 		hidden_effect = {
-			USR = {
+			RSA = {
 				country_event = { 
 					id = RoF_RUS.124
 					hours = 12
@@ -502,7 +868,7 @@ country_event = {
 		name = RoF_RUS.123.a
 		set_country_flag = SIB_joins_convention
 		add_opinion_modifier = {
-			target = SIB
+			target = RSB
 			modifier = friendly_relations
 		}
 	}
@@ -537,7 +903,7 @@ country_event = {
 	}
 	option = {
 		name = RoF_RUS.128.a
-		RUS = {
+		RSC = {
 			set_country_flag = RUS_hired_kazakhs
 			country_event = {
 				id = RoF_RUS.129
@@ -612,7 +978,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					RUS = { has_country_flag = RUS_hired_kazakhs }
+					RSC = { has_country_flag = RUS_hired_kazakhs }
 				}
 				country_event = {
 					id = RoF_RUS.132
@@ -719,9 +1085,9 @@ country_event = {
 	desc = RoF_RUS.132.d
 	fire_only_once = yes
 	trigger = {
-		tag = USR
+		tag = RSA
 		has_country_flag = USR_begin_convention
-		RUS = { has_country_flag = RUS_hired_kazakhs }
+		RSC = { has_country_flag = RUS_hired_kazakhs }
 	}
 
 	mean_time_to_happen = {
@@ -855,7 +1221,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = RoF_RUS.133.d
+		name = RoF_RUS.133.do
 		add_popularity = {
 			ideology = constitutionalist
 			popularity = 0.1
@@ -888,7 +1254,7 @@ country_event = {
 				limit = {
 					OR = {
 						NOT = {
-							RUS = { has_country_flag = RUS_hired_kazakhs }
+							RSC = { has_country_flag = RUS_hired_kazakhs }
 						}
 						has_country_flag = USR_continue_convention
 					}
@@ -976,25 +1342,20 @@ country_event = {
 		hidden_effect = {
 			random_list = {
 				25 = {
-					set_country_flag = USR_KAZ_attack_succeeds
 					modifier = {
 						factor = 0.2
 						is_ai = yes
 						is_historical_focus_on = yes
 					}
-					country_event = {
-						id = RoF_RUS.136
-						hours = 24
-						random = 24
-					}
+					set_country_flag = USR_KAZ_attack_succeeds
 				}
 				75 = {
-					country_event = {
-						id = RoF_RUS.136
-						hours = 24
-						random = 24
-					}
 				}
+			}
+			country_event = {
+				id = RoF_RUS.136
+				hours = 24
+				random = 24
 			}
 		}
 		ai_chance = {
@@ -1044,25 +1405,20 @@ country_event = {
 		hidden_effect = {
 			random_list = {
 				25 = {
-					set_country_flag = USR_KAZ_attack_succeeds
 					modifier = {
 						factor = 0.2
 						is_ai = yes
 						is_historical_focus_on = yes
 					}
-					country_event = {
-						id = RoF_RUS.136
-						hours = 24
-						random = 24
-					}
+					set_country_flag = USR_KAZ_attack_succeeds
 				}
 				75 = {
-					country_event = {
-						id = RoF_RUS.136
-						hours = 24
-						random = 24
-					}
 				}
+			}
+			country_event = {
+				id = RoF_RUS.136
+				hours = 24
+				random = 24
 			}
 		}
 	}
@@ -1131,7 +1487,7 @@ country_event = {
 	option = {
 		name = RoF_RUS.137.a
 		hidden_effect = {
-			RUS = {
+			RSA = {
 				country_event = {
 					id = RoF_RUS.139
 					hours = 12
@@ -1147,7 +1503,7 @@ country_event = {
 	option = {
 		name = RoF_RUS.137.b
 		hidden_effect = {
-			RUS = {
+			RSA = {
 				country_event = {
 					id = RoF_RUS.1351
 					hours = 24
@@ -1181,7 +1537,7 @@ country_event = {
 	option = {
 		name = RoF_RUS.138.a
 		hidden_effect = {
-			RUS = {
+			RSA = {
 				country_event = {
 					id = RoF_RUS.139
 					hours = 12
@@ -1198,7 +1554,7 @@ country_event = {
 	option = {
 		name = RoF_RUS.138.b
 		hidden_effect = {
-			RUS = {
+			RSA = {
 				country_event = {
 					id = RoF_RUS.140
 					hours = 12
@@ -1286,11 +1642,11 @@ country_event = {
 	desc = RoF_RUS.141.d
 	fire_only_once = yes
 	trigger = {
-		tag = USR
+		tag = RSA
 		has_country_flag = USR_next_issue
 		if = {
 			limit = {
-				RUS = { has_country_flag = RUS_hired_kazakhs }
+				RSC = { has_country_flag = RUS_hired_kazakhs }
 			}
 			has_country_flag = USR_continue_convention
 		}
@@ -1381,13 +1737,13 @@ country_event = {
 
 	immediate = {
 		set_USR_constition = yes
-		drop_cosmetic_tag = yes
+		set_cosmetic_tag = United_States_Russia
 	}
 	option = {
 		name = RoF_RUS.142.a
 		if = {
 			limit = { has_country_flag = SIB_joins_convention }
-			SIB = {
+			RSB = {
 				country_event = {
 					id = RoF_RUS.143
 					hours = 12
@@ -1462,7 +1818,7 @@ country_event = {
 	option = {
 		name = RoF_RUS.143.a
 		custom_effect_tooltip = GAME_OVER_TT
-		USR = {
+		RSA = {
 			effect_tooltip = {
 				annex_country = {
 					target = ROOT
@@ -1481,15 +1837,15 @@ country_event = {
 			base = 5
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_noble_constitution }
+				RSA = { has_idea = USR_noble_constitution }
 			}
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_moderate_constitution }
+				RSA = { has_idea = USR_moderate_constitution }
 			}
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_liberal_constitution }
+				RSA = { has_idea = USR_liberal_constitution }
 			}
 		}
 	}
@@ -1497,7 +1853,7 @@ country_event = {
 		name = RoF_RUS.143.b
 		hidden_effect = {
 			set_country_flag = USR_rejected
-			USR = {
+			RSA = {
 				country_event = {
 					id = RoF_RUS.145
 					hours = 12
@@ -1508,11 +1864,11 @@ country_event = {
 			base = 5
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_reactionary_constitution }
+				RSA = { has_idea = USR_reactionary_constitution }
 			}
 			modifier = {
 				add = 5
-				USR = { has_idea = USR_radical_constitution }
+				RSA = { has_idea = USR_radical_constitution }
 			}
 		}
 	}
@@ -1521,7 +1877,7 @@ country_event = {
 			is_ai = no
 		}
 		name = RoF_RUS.143.c
-		USR = {
+		RSA = {
 			effect_tooltip = {
 				set_autonomy = {
 					target = ROOT
@@ -1566,6 +1922,17 @@ country_event = {
 		}
 		FROM = {
 			every_owned_state = { add_core_of = ROOT }
+			if = {
+				limit = {
+					tag = RSB
+				}
+				RUS_mikhail_shein = {
+					set_nationality = RSA
+				}
+				RUS_artemi_izmailov = {
+					set_nationality = RSA
+				}
+			}
 		}
 		annex_country = {
 			target = FROM

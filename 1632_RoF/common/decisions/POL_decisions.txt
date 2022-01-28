@@ -1,0 +1,543 @@
+POL_major_decisions = {
+	POL_rezhev_expedition_timer = {
+		fire_only_once = yes
+		activation = {
+			tag = POL
+			OR = { date > 1634.4.1 has_country_flag = RUS_test }
+			has_war = no
+			RUS = { owns_state = 387 is_subject = no }
+			owns_state = 351
+			NOT = { is_in_faction_with = RUS }
+			is_subject = no
+		}
+		selectable_mission = yes
+		is_good = yes
+		days_mission_timeout = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 387
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = POL_rezhev_expedition_dont_TT
+		}
+		timeout_effect = {
+			custom_effect_tooltip = POL_rezhev_expedition_do_TT
+			effect_tooltip = {
+				set_state_controller = 387
+			}
+			hidden_effect = {
+				transfer_state = 387
+				set_global_flag = rezhev_expedition
+				RUS = { news_event = { id = RoF_RUS.110 hours = 12 } }
+			}
+		}
+	}
+}
+
+POL_sejm = {
+	POL_election_sejm = {
+		priority = 50
+		activation = {
+			always = no #by event
+		}
+		days_mission_timeout = 35
+		is_good = no
+		timeout_effect = {
+			add_stability = -0.1
+			custom_effect_tooltip = POL_election_sejm_timeout
+			hidden_effect = {
+				activate_mission = POL_election_sejm
+			}
+			country_event = {
+				id = RoF_POL.111
+			}
+		}
+		complete_effect = {
+			country_event = {
+				id = RoF_POL.110
+			}
+			clr_country_flag = POL_pacta_conventa
+			hidden_effect = {
+				remove_decision = POL_generous_pacta_conventa
+				remove_decision = POL_standard_pacta_conventa
+				remove_decision = POL_narrow_pacta_conventa
+			}
+		}
+		available = {
+			has_country_flag = POL_pacta_conventa
+		}
+	}
+	POL_generous_pacta_conventa = {
+		priority = 40
+		allowed = {
+			always = no #by event
+		}
+		available = {
+			has_active_mission = POL_election_sejm
+		}
+		complete_effect = {
+			POL_king_down_both_up_5 = yes
+			POL_sejm_medium_support = yes
+			set_country_flag = POL_pacta_conventa
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 9
+				POL_constitutionalist_path = yes
+			}
+			modifier = {
+				factor = 0
+				POL_absolutist_alternate_path = yes
+			}
+		}
+	}
+	POL_standard_pacta_conventa = {
+		priority = 41
+		allowed = {
+			always = no #by event
+		}
+		available = {
+			has_active_mission = POL_election_sejm
+		}
+		complete_effect = {
+			POL_szlachta_up_king_down_5 = yes
+			set_country_flag = POL_pacta_conventa
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 9
+				POL_canon_path = yes
+			}
+			modifier = {
+				factor = 0
+				POL_absolutist_alternate_path = yes
+			}
+		}
+	}
+	POL_narrow_pacta_conventa = {
+		priority = 42
+		allowed = {
+			always = no #by event
+		}
+		available = {
+			has_active_mission = POL_election_sejm
+		}
+		cost = 50
+		complete_effect = {
+			POL_king_up_szlachta_down_5 = yes
+			POL_sejm_medium_opposition = yes
+			set_country_flag = POL_pacta_conventa
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 9
+				POL_absolutist_alternate_path = yes
+			}
+		}
+	}
+	POL_appease_sejm_mission = {
+		icon = generic_political_discourse
+		days_mission_timeout = 105
+		is_good = no
+		timeout_effect = {
+			POL_sejm_small_opposition = yes
+		}
+		selectable_mission = yes
+		cost = 30
+		activation = {
+			NOT = { has_country_flag = POL_abolished_sejm }
+			check_variable = { sejm_support > 80 }
+		}
+		days_re_enable = 35
+		available = {
+			hidden_trigger = {
+				always = yes
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					has_country_flag = POL_abolished_sejm
+					check_variable = { sejm_support < 60 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				check_variable = {
+					days_mission_timeout@POL_appease_sejm_mission > 20
+				}
+			}
+			modifier = {
+				factor = 100
+				check_variable = {
+					days_mission_timeout@POL_appease_sejm_mission < 10
+				}
+			}
+		}
+	}
+	POL_small_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			check_variable = { sejm_support < sejm_total }
+			not = {
+				has_decision = POL_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.3
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				sejm_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_high_support_trigger = yes
+				factor = 0
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0.25
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 30
+		remove_effect = {
+			POL_sejm_small_support = yes
+		}
+	}
+	POL_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			check_variable = { sejm_support < sejm_total }
+			not = {
+				has_decision = POL_small_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				sejm_low_support_trigger = yes
+				factor = 0.75
+			}
+			modifier = {
+				sejm_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				sejm_high_support_trigger = yes
+				factor = 0
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0.25
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+			POL_sejm_medium_support = yes
+		}
+	}
+	POL_impeach_magnate = {
+		icon = generic_political_discourse
+		visible = {
+			check_variable = { power_magnates > 0.05 }
+		}
+		available = {
+			OR = {
+				political_power_daily > 1
+				has_political_power > 60
+			}
+			OR = {
+				AND = {
+					set_temp_variable = { power_check = 0.3 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_magnates_under_TT
+						check_variable = { power_magnates < power_check }
+					}
+					sejm_low_support_trigger = yes
+				}
+				AND = {
+					set_temp_variable = { power_check = 0.35 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_magnates_under_TT
+						check_variable = { power_magnates < power_check }
+					}
+					sejm_medium_support_trigger = yes
+				}
+				AND = {
+					set_temp_variable = { power_check = 0.4 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_magnates_under_TT
+						check_variable = { power_magnates < power_check }
+					}
+					sejm_high_support_trigger = yes
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				AND = {
+					set_temp_variable = { power_check = 0.3 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_magnates_over_TT
+						check_variable = { power_magnates > power_check }
+					}
+					sejm_low_support_trigger = no
+				}
+				AND = {
+					set_temp_variable = { power_check = 0.35 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_magnates_over_TT
+						check_variable = { power_magnates > power_check }
+					}
+					sejm_medium_support_trigger = no
+				}
+				AND = {
+					set_temp_variable = { power_check = 0.4 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_magnates_over_TT
+						check_variable = { power_magnates > power_check }
+					}
+					sejm_high_support_trigger = no
+				}
+			}
+		}
+		days_remove = 60
+		remove_effect = {
+			POL_king_up_magnates_down_5 = yes
+		}
+		modifier = {
+			political_power_gain = -1
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				POL_absolutist_alternate_path = yes
+			}
+			modifier = {
+				add = 1
+				POL_constitutionalist_path = yes
+			}
+		}
+	}
+	POL_pospolite_ruszenie = {
+		visible = {
+			has_war = yes
+		}
+		available = {
+			enemies_strength_ratio > 1
+			custom_trigger_tooltip = {
+				tooltip = POL_pospolite_ruszenie_tt
+				OR = {
+					AND = {
+						enemies_strength_ratio > 1
+						sejm_high_support_trigger = yes
+					}
+					AND = {
+						enemies_strength_ratio > 1.5
+						sejm_medium_support_trigger = yes
+					}
+					AND = {
+						enemies_strength_ratio > 2
+						sejm_low_support_trigger = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					enemies_strength_ratio > 2
+				}
+				sejm_low_support_trigger = yes
+			}
+			else_if = {
+				limit = {
+					enemies_strength_ratio > 1.5
+				}
+				sejm_medium_support_trigger = yes
+			}
+			else = {
+				sejm_high_support_trigger = yes
+			}
+		}
+		cost = 150
+		days_remove = 60
+		remove_effect = {
+			add_ideas = POL_pospolite_ruszenie
+		}
+	}
+	POL_invest_in_state_factory = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_sejm_invest_in_state_factory_tt
+				any_owned_state = {
+					has_state_flag = POL_sejm_build_factory
+					check_variable = { factory_goal = industrial_complex_level }
+				}
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				has_state_flag = POL_sejm_build_factory
+			}
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = POL_sejm_build_factory
+			}
+		}
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = POL_sejm_build_factory
+				}
+				clr_state_flag = POL_sejm_build_factory
+				clear_variable = factory_goal
+			}
+			
+			POL_sejm_small_opposition = yes 
+			clr_country_flag = POL_sejm_investment
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = POL_sejm_build_factory
+				}
+				clr_state_flag = POL_sejm_build_factory
+				clear_variable = factory_goal
+			}
+			ROOT = {
+				POL_sejm_medium_support = yes 
+				clr_country_flag = POL_sejm_investment
+			}
+		}
+	}
+	POL_invest_in_state_arms_factory = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_sejm_invest_in_state_arms_factory_tt
+				any_owned_state = {
+					has_state_flag = POL_sejm_build_arms_factory
+					check_variable = { arms_factory_goal = arms_factory_level }
+				}
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				has_state_flag = POL_sejm_build_arms_factory
+			}
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = POL_sejm_build_arms_factory
+			}
+		}
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = POL_sejm_build_arms_factory
+				}
+				clr_state_flag = POL_sejm_build_arms_factory
+				clear_variable = arms_factory_goal
+			}
+			
+			POL_sejm_small_opposition = yes 
+			clr_country_flag = POL_sejm_investment
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = POL_sejm_build_arms_factory
+				}
+				clr_state_flag = POL_sejm_build_arms_factory
+				clear_variable = arms_factory_goal
+			}
+			ROOT = {
+				POL_sejm_medium_support = yes 
+				clr_country_flag = POL_sejm_investment
+			}
+		}
+	}
+	POL_invest_in_state_infrastructure = {
+		icon = generic_construction
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_sejm_invest_in_state_infrastructure_tt
+				any_owned_state = {
+					has_state_flag = POL_sejm_build_infrastructure
+					check_variable = { infrastructure_goal = infrastructure_level }
+				}
+			}
+		}
+		highlight_states = {
+			highlight_states_trigger = {
+				has_state_flag = POL_sejm_build_infrastructure
+			}
+		}
+		days_mission_timeout = 360
+		is_good = no
+		activation = {
+			any_owned_state = {
+				has_state_flag = POL_sejm_build_infrastructure
+			}
+		}
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = POL_sejm_build_infrastructure
+				}
+				clr_state_flag = POL_sejm_build_infrastructure
+				clear_variable = infrastructure_goal
+			}
+			
+			POL_sejm_small_opposition = yes 
+			clr_country_flag = POL_sejm_investment
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = POL_sejm_build_infrastructure
+				}
+				clr_state_flag = POL_sejm_build_infrastructure
+				clear_variable = infrastructure_goal
+			}
+			ROOT = {
+				POL_sejm_medium_support = yes 
+				clr_country_flag = POL_sejm_investment
+			}
+			
+		}
+	}
+
+}

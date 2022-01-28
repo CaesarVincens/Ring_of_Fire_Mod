@@ -10,16 +10,20 @@ state = {
 
 	history = {
 		owner = SPR
-		victory_points = { 12236 3 }
+		victory_points = { 10265 3 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
+			10265 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SPR
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		1221 1288 1372 1388 1415 4101 4214 4228 4233 4288 4350 4368 4377 4423 7275 7323 7325 7351 7439 10165 10167 10236 10241 10252 10265 10272 10280 10298 10306 12213 12236 12253 12279 
 	}

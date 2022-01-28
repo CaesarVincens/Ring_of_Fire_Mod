@@ -7,8 +7,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_usa
 	names = { "Office of Strategic Services" }
 	
-	default = { tag = USA }
-	available = { original_tag = USA }
+	default = { tag = NUS }
+	available = { original_tag = NUS }
 }
 
 intelligence_agency = {
@@ -105,9 +105,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_rom
 	names = { "Serviciul Special de Informatii" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = ROM }
 	available = { original_tag = ROM }
 }
@@ -116,9 +114,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_prc
 	names = { "Intelligence Department Central Military Commission" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = PRC }
 	available = { original_tag = PRC }
 }
@@ -127,9 +123,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_chi
 	names = { "NBIS" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = CHI }
 	available = { original_tag = CHI }
 }
@@ -138,9 +132,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_yug
 	names = { "OZNA" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = YUG }
 	available = { original_tag = YUG }
 }
@@ -150,8 +142,6 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_spr
 	names = { "SIM" }
 	
-	available = { always = yes }
-	
 	default = { tag = SPR }
 	available = { original_tag = SPR }
 }
@@ -160,9 +150,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_spa
 	names = { "SIPM" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = SPA }
 	available = { original_tag = SPA }
 }
@@ -171,9 +159,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_pol
 	names = { "Dwojka" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = POL }
 	available = { original_tag = POL }
 }
@@ -182,9 +168,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_man
 	names = { "Hoankyoku" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = MAN }
 	available = { original_tag = MAN }
 }
@@ -193,9 +177,7 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_por
 	names = { "PIDE" }
-	
-	available = { always = yes }
-	
+		
 	default = { tag = POR }
 	available = { original_tag = POR }
 }

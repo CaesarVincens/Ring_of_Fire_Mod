@@ -1,28 +1,25 @@
+state = {
+	id = 524
+	name = "STATE_524"
 
-state={
-	id=524
-	name="STATE_524"
-
-	history={
-		owner = TUR
-		victory_points = {
-			4440 3 
-		}
+	history = {
+		owner = WAS
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
 
 		}
-		add_core_of = TUR
 
 	}
 
-	provinces={
-		4562 4603 8101 10815 10901 
+	local_supplies = 0.0
+	provinces = {
+		1631 2057 4951 4974 5058 8101 10744 10815 10901 12879 
 	}
-	manpower=96016
-	buildings_max_level_factor=1.000
-	state_category = pastoral
+	manpower = 6016
+	buildings_max_level_factor = 1.000
+	state_category = wasteland
+	impassable = yes
 }

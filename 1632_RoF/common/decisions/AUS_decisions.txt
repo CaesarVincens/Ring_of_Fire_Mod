@@ -1,5 +1,21 @@
 AUS_major_decisions = {
-
+	AUS_test = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			any_of_scopes = {
+				array = german_tags
+				tag = HES
+			}
+		}
+		complete_effect = {
+			for_each_scope_loop = {
+				array = german_tags
+				add_political_power = 10
+			}
+		}
+	}
 	reissue_reichsthalers = {
 		visible = {
 			has_country_flag = reichsthalers_crash

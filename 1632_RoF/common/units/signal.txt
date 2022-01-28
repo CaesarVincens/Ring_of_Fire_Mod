@@ -1,10 +1,12 @@
 sub_units = {
 	signal_company = {
+		abbreviation = "SIG"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
 		active = no
+		affects_speed = no
 
 		type = {
 			infantry
@@ -35,6 +37,8 @@ sub_units = {
 		
 		# Important Ability
 		initiative = 0.20
+		
+		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 		
 		essential = {
 			support_equipment

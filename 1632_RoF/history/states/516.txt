@@ -1,20 +1,19 @@
-
-state={
-	id=516
-	name="STATE_516"
-	resources={
-		aluminium=11.000
-		chromium=29.000
-		steel=4.000
+state = {
+	id = 516
+	name = "STATE_516"
+	resources = {
+		aluminium = 11.000
+		chromium = 29.000
+		steel = 4.000
 	}
 
-	history={
+	history = {
 		owner = TUR
 		victory_points = {
 			3788 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -24,10 +23,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		869 940 961 3788 3870 6807 6894 7143 9755 9763 9811 9830 9861 11792 11860 13122 
 	}
-	manpower=717900
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 717900
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

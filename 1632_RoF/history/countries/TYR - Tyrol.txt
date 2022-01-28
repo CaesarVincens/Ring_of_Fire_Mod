@@ -6,6 +6,7 @@ oob = "TYR_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -35,7 +36,6 @@ set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco
 }
-give_military_access = AUS
 diplomatic_relation = {
 	country = AUS
 	relation = non_aggression_pact

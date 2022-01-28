@@ -8,6 +8,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_archetype_gulyay_gorod_equipment_medium"
+		texturefile = "gfx/interface/archetype_gorod.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_archetype_firearm_equipment_medium"
 		texturefile = "gfx/interface/archetype_firearm.dds"
 	}
@@ -30,6 +35,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_cartridges_tech_medium"
 		texturefile = "gfx/interface/technologies/cartridges.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_gulyay_gorod_tech_medium"
+		texturefile = "gfx/interface/technologies/gulyay_gorod.dds"
 	}
 	
 	#generic flintlock

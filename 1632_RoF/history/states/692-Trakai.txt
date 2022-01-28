@@ -1,0 +1,26 @@
+state = {
+	id = 692
+	name = "STATE_692"
+
+	history = {
+		owner = POL
+		add_core_of = POL
+		add_core_of = LIT
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		victory_points = { 6296 3 }
+	}
+
+	local_supplies = 5.0
+	provinces = {
+		327 347 400 530 3254 3272 3393 6281 6296 9357 9374 9438 11312 13206 
+	}
+	manpower = 183000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+}

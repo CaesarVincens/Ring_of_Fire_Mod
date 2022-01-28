@@ -1,4 +1,3 @@
 ﻿start_equipment_factor = 0
 
-### No BHU air forces ###
 

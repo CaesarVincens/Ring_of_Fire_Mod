@@ -5,6 +5,7 @@ oob = "IRO_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -37,7 +38,7 @@ set_stability = 0.5
 create_country_leader = {
     name = "Wanahedana Hostayuntwa"
     desc = "POLITICS_WANAHEDANA_HOSTAYUNTWA_DESC"
-    picture = "gfx/leaders/SPR/Portrait_Spain_Francisco_Franco.dds"
+    picture = "gfx/leaders/SPR/Portrait_Spain_Francisco_Franco_old.dds"
     expire = "1660.1.1"
     ideology = republican_neutral
     traits = {

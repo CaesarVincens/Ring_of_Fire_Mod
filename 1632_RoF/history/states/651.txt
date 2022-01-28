@@ -1,18 +1,17 @@
-
-state={
-	id=651
-	name="STATE_651"
-	resources={
-		aluminium=2.000
+state = {
+	id = 651
+	name = "STATE_651"
+	resources = {
+		aluminium = 2.000
 	}
 
-	history={
+	history = {
 		owner = MUT
 		victory_points = {
 			12935 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		2120 5155 12935 
 	}
-	manpower=277800
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 277800
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

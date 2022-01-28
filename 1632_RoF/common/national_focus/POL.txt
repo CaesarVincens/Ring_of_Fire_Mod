@@ -1,0 +1,2247 @@
+focus_tree = {
+	id = poland_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = POL
+		}
+	}
+
+	initial_show_position = {
+		x = 19
+		y = 0
+	}
+
+	####################
+	#     AIR TREE     #
+	####################
+	shared_focus = air_research
+
+	####################
+	#    NAVAL TREE    #
+	####################
+	focus = {
+		id = POL_establish_baltic_fleet
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		x = 5
+		y = 0
+		#available_if_capitulated = yes
+		available = {
+			OR = {
+				controls_state = 341
+				controls_state = 342
+				controls_state = 343
+				controls_state = 375
+			}
+			sejm_medium_support_trigger = yes
+		}
+		cancel_if_invalid = no
+		search_filters = { FOCUS_FILTER_NAVY }
+		complete_tooltip = {
+			random_state = {
+				limit = {
+					has_state_flag = POL_establish_baltic_fleet_state
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			navy_experience = 15
+			if = {
+				limit = {
+					343 = { is_owned_and_controlled_by = POL }
+				}
+				343 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+					set_state_flag = POL_establish_baltic_fleet_state
+				}
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							is_coastal = yes
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+						set_state_flag = POL_establish_baltic_fleet_state
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_warship_fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = POL_establish_baltic_fleet
+		prerequisite = { focus = POL_establish_baltic_fleet }
+		mutually_exclusive = {
+			focus = POL_frigate_fleet
+		}
+		available = {
+			sejm_low_support_trigger = yes
+		}
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = man_of_war_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = man_of_war_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = POL_frigate_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = POL_establish_baltic_fleet
+		prerequisite = { focus = POL_establish_baltic_fleet }
+		mutually_exclusive = {
+			focus = POL_warship_fleet
+		}
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			navy_experience = 15
+			add_tech_bonus = {
+				name = frigate_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = frigate_tech
+			}
+		}
+	}
+
+	focus = {
+		id = POL_colonize_tobago
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = POL_warship_fleet
+		prerequisite = { focus = POL_frigate_fleet focus = POL_warship_fleet }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			564 = {
+				is_owned_by = WSA
+			}
+		}
+		completion_reward = {
+			transfer_state = 564
+		}
+	}
+
+	####################
+	#  RESEARCH  TREE  #
+	####################
+	focus = {
+		id = POL_fund_jagiellonian_university
+		icon = GFX_focus_research
+		cost = 10
+		x = 8
+		y = 0
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available = {
+			OR = {
+				sejm_medium_support_trigger = yes
+				has_political_power > 100
+			}
+		}
+		continue_if_invalid = yes
+		complete_tooltip = {
+			if = {
+				limit = { has_country_flag = POL_fund_jagiellonian_university_sejm }
+				add_ideas = POL_jagiellonian_university_1
+				else = {
+					add_ideas = POL_jagiellonian_university_2
+				}
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = RoF_POL.65
+			}
+			custom_effect_tooltip = POL_fund_jagiellonian_university_TT
+			effect_tooltip = {
+				POL_king_up_szlachta_down_5 = yes
+			}
+		}
+	}
+
+	focus = {
+		id = POL_found_royal_universities
+		icon = GFX_focus_POL_nationalist_education
+		cost = 10
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = POL_fund_jagiellonian_university }
+		relative_position_id = POL_fund_jagiellonian_university
+		available = {
+			OR = {
+				sejm_medium_support_trigger = yes
+				has_political_power > 100
+			}
+		}
+		continue_if_invalid = yes
+		complete_tooltip = {
+			if = {
+				limit = {
+					has_country_flag = POL_found_royal_universities_0
+				}
+				swap_ideas = {
+					remove_idea = POL_jagiellonian_university_1
+					add_idea = POL_royal_universities_0
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = POL_found_royal_universities_1a
+				}
+				swap_ideas = {
+					remove_idea = POL_jagiellonian_university_1
+					add_idea = POL_royal_universities_1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = POL_found_royal_universities_1b
+				}
+				swap_ideas = {
+					remove_idea = POL_jagiellonian_university_2
+					add_idea = POL_royal_universities_1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = POL_found_royal_universities_2
+				}
+				swap_ideas = {
+					remove_idea = POL_jagiellonian_university_2
+					add_idea = POL_royal_universities_2
+				}
+			}
+		}
+		completion_reward = {
+			add_research_slot = 1
+			country_event = {
+				id = RoF_POL.66
+			}
+			custom_effect_tooltip = POL_fund_jagiellonian_university_TT
+			effect_tooltip = {
+				POL_king_up_szlachta_down_5 = yes
+			}
+		}
+	}
+
+	focus = {
+		id = POL_industrialization
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SERFDOM }
+		mutually_exclusive = {
+			focus = POL_agrarian_advances
+		}
+		prerequisite = { focus = POL_found_royal_universities }
+		relative_position_id = POL_found_royal_universities
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					set_temp_variable = { power_check = 0.4 }
+					tooltip = POL_power_szlachta_under_TT
+					check_variable = { power_szlachta < power_check }
+				}
+				custom_trigger_tooltip = {
+					set_temp_variable = { power_check = 0.4 }
+					tooltip = POL_power_king_over_TT
+					check_variable = { power_king > power_check }
+				}
+			}
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			swap_ideas = {
+				add_idea = POL_eastern_serfdom_industry_1
+				remove_idea = POL_eastern_serfdom_1
+			}
+			if = {
+				limit = {
+					check_variable = { power_magnates > power_szlachta }
+				}
+				POL_king_up_magnates_down_5 = yes
+			}
+			else = {
+				POL_king_up_szlachta_down_5 = yes
+			}
+		}
+	}
+
+	focus = {
+		id = POL_encourage_investment
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SERFDOM }
+		prerequisite = { focus = POL_industrialization }
+		relative_position_id = POL_industrialization
+		available = {
+			OR = {
+				hidden_trigger = { 
+					AND = {
+						always = no
+						set_temp_variable = { power_check = 0.4 }
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = POL_power_magnates_under_TT
+					check_variable = { power_magnates < 0.4 }
+				}
+				hidden_trigger = { 
+					AND = {
+						always = no
+						set_temp_variable = { power_check = 0.5 }
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = POL_power_king_over_TT
+					check_variable = { power_king > 0.5 }
+				}
+			}
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			swap_ideas = {
+				add_idea = POL_eastern_serfdom_industry_2
+				remove_idea = POL_eastern_serfdom_industry_1
+			}
+		}
+	}
+
+	focus = {
+		id = POL_agrarian_advances
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SERFDOM }
+		mutually_exclusive = {
+			focus = POL_industrialization
+		}
+		prerequisite = { focus = POL_found_royal_universities }
+		relative_position_id = POL_found_royal_universities
+		completion_reward = {
+			swap_ideas = {
+				add_idea = POL_eastern_serfdom_2
+				remove_idea = POL_eastern_serfdom_1
+			}
+			if = {
+				limit = {
+					check_variable = { power_king > power_szlachta }
+				}
+				POL_magnates_up_king_down_5 = yes
+			}
+			else = {
+				POL_magnates_up_szlachta_down_5 = yes
+			}
+		}
+	}
+
+	focus = {
+		id = POL_mechanical_farming
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_SERFDOM }
+		prerequisite = { focus = POL_agrarian_advances }
+		relative_position_id = POL_agrarian_advances
+		completion_reward = {
+			swap_ideas = {
+				add_idea = POL_eastern_serfdom_3
+				remove_idea = POL_eastern_serfdom_2
+			}
+		}
+	}
+
+	####################
+	## INDUSTRY  TREE ##
+	####################
+
+	##################
+	## ROYAL BRANCH ##
+	##################
+	focus = {
+		id = POL_invest_in_crown_lands
+		icon = GFX_focus_royal_civ_factory
+		cost = 15
+		x = 11
+		y = 0
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			POL_king_up_szlachta_down_5 = yes
+			random_state = {
+				limit = { has_state_flag = POL_invest_in_crown_lands_state }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			POL_king_up_szlachta_down_5 = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_invest_in_crown_lands_state
+			}
+		}
+	}
+
+	focus = {
+		id = POL_royal_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_invest_in_crown_lands
+		prerequisite = { focus = POL_invest_in_crown_lands }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			has_tech = infrastructure_tech_1
+		}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_royal_roads_state }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_tech = infrastructure_tech_1 } }
+				custom_effect_tooltip = increase_infra_tech.tt
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_capital = yes
+								NOT = {
+									owner = {
+										capital_scope = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+												include_locked = yes
+											}
+										}
+									}
+								}
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						set_state_flag = POL_royal_roads_state
+					}
+					random_owned_controlled_state = {
+						limit = {
+							NOT = { has_state_flag = POL_royal_roads_state }
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						set_state_flag = POL_royal_roads_state
+					}
+					random_owned_controlled_state = {
+						limit = {
+							NOT = { has_state_flag = POL_royal_roads_state }
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						set_state_flag = POL_royal_roads_state
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_royal_factors
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_royal_roads
+		prerequisite = { focus = POL_royal_roads }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			
+		}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_royal_factors_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = { power_szlachta > power_magnates }
+				}
+				POL_king_up_szlachta_down_5 = yes
+			}
+			else = {
+				POL_king_up_magnates_down_5 = yes
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_capital = yes
+						NOT = {
+							owner = {
+								capital_scope = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_royal_factors_state
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { has_state_flag = POL_royal_factors_state }
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_royal_factors_state
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { has_state_flag = POL_royal_factors_state }
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_royal_factors_state
+			}
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	###################
+	# SZLACHTA BRANCH #
+	###################
+	focus = {
+		id = POL_invest_in_szlachta_lands
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 28
+		y = 0
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			POL_sejm_small_support = yes
+			custom_effect_tooltip = POL_invest_in_szlachta_lands_tt
+			random_state = {
+				limit = { has_state_flag = POL_invest_in_szlachta_lands_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			POL_sejm_small_support = yes
+			custom_effect_tooltip = POL_invest_in_szlachta_lands_tt
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_invest_in_szlachta_lands_state
+			}
+		}
+	}
+
+	focus = {
+		id = POL_grant_further_autonomy
+		icon = GFX_focus_generic_industry_2
+		cost = 10.00
+		x = -1
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_invest_in_szlachta_lands
+		prerequisite = { focus = POL_invest_in_szlachta_lands }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			#sejm_high_support_trigger = yes
+		}
+		complete_tooltip = {
+			POL_sejm_small_support = yes
+			random_state = {
+				limit = { has_state_flag = POL_grant_further_autonomy_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			POL_sejm_small_support = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_grant_further_autonomy_state
+			}
+			POL_szlachta_up_king_down_5 = yes
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_develop_fiefs
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		x = 1
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_invest_in_szlachta_lands
+		prerequisite = { focus = POL_invest_in_szlachta_lands }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			OR = {
+				PRU = { is_subject_of = POL owns_state = 375 owns_state = 376 }
+				KUR = { is_subject_of = POL owns_state = 341 }
+			}
+		}
+		completion_reward = {
+			POL_sejm_small_support = yes
+			if = {
+				limit = { PRU = { is_subject_of = POL owns_state = 375 owns_state = 376 } }
+				375 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				376 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { KUR = { is_subject_of = POL owns_state = 341 } }
+				341 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	####################
+	#  POLITICAL TREE  #
+	####################
+	
+	focus = {
+		id = POL_maintain_status_quo
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		x = 14
+		y = 0
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_strengthen_king
+					has_completed_focus = POL_strengthen_the_sejm
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = POL_strengthen_the_sejm focus = POL_strengthen_king
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			add_political_power = 30
+			mark_focus_tree_layout_dirty = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
+	focus = {
+		id = POL_strengthen_the_sejm
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		x = 19
+		y = 0
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+					has_completed_focus = POL_strengthen_king
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = POL_maintain_status_quo focus = POL_strengthen_king
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			POL_sejm_small_support = yes
+			mark_focus_tree_layout_dirty = yes
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0.1
+			}
+		}
+	}
+
+
+	focus = {
+		id = POL_strengthen_king
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		x = 25
+		y = 0
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_king
+			}
+			x = -3
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+					has_completed_focus = POL_strengthen_the_sejm
+				}
+			}
+		}
+		available = {
+			set_temp_variable = { power_check = 0.2 }
+			custom_trigger_tooltip = {
+				tooltip = POL_power_king_over_TT
+				check_variable = { power_king > power_check }
+			}
+		}
+		mutually_exclusive = {
+			focus = POL_maintain_status_quo focus = POL_strengthen_the_sejm
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			add_political_power = 60
+			POL_sejm_small_opposition = yes
+			mark_focus_tree_layout_dirty = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	####################
+	## COMMON FOCUSES ##
+	####################
+
+	focus = {
+		id = POL_secure_sucession
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10.00
+		x = 3
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_king
+			}
+			x = 2
+		}
+		relative_position_id = POL_maintain_status_quo
+		prerequisite = { focus = POL_strengthen_the_sejm focus = POL_strengthen_king focus = POL_maintain_status_quo }
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			has_country_leader = {
+				character = POL_sigismund_vasa
+			}
+		}
+		#cancel_if_invalid = no
+		bypass = {
+			NOT = {
+				has_country_leader = {
+					character = POL_sigismund_vasa
+				}
+			}
+		}
+		completion_reward = {
+			POL_sejm_small_support = yes
+			add_political_power = 60
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_vivente_rege
+		icon = GFX_focus_generic_monarchy_2
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = POL_secure_sucession
+		prerequisite = { focus = POL_secure_sucession }
+		#available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			has_country_leader = {
+				character = POL_sigismund_vasa
+			}
+			sejm_high_support_trigger = yes
+		}
+		bypass = {
+			has_country_leader = {
+				character = POL_wladyslaw_vasa
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = POL_sigismund_vasa
+					}
+				}
+				retire_character = POL_sigismund_vasa
+			}
+			promote_character = {
+				character = POL_wladyslaw_vasa
+				ideology = absolute_monarchy
+			}
+			hidden_effect = {
+				promote_character = {
+					character = POL_wladyslaw_vasa
+					ideology = constitutional_monarchy
+				}
+				promote_character = {
+					character = POL_wladyslaw_vasa
+					ideology = absolute_monarchy_neutral
+				}
+			}
+			POL_sejm_large_opposition = yes
+			POL_king_up_both_down_5 = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_control_unrest
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10.00
+		x = 1
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_king
+			}
+			x = 2
+		}
+		relative_position_id = POL_maintain_status_quo
+		prerequisite = { focus = POL_strengthen_the_sejm focus = POL_strengthen_king focus = POL_maintain_status_quo }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_heard_of_RoF_TT
+				OR = {
+					date > 1632.1.1
+					has_country_flag = knows_about_grantville
+				}
+			}
+			sejm_low_support_trigger = yes
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
+
+	focus = {
+		id = POL_manage_cossacks
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = POL_control_unrest
+		prerequisite = { focus = POL_control_unrest }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			owns_state = 697
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			697 = {
+				add_compliance = 15
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
+	####################
+	##  SEJM  REFORM  ##
+	####################
+
+	focus = {
+		id = POL_revive_executionist_faction
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 20.00
+		x = 2
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_the_sejm
+			}
+			x = 1
+		}
+		relative_position_id = POL_strengthen_the_sejm
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+				}
+			}
+		}
+		prerequisite = {
+			focus = POL_strengthen_the_sejm focus = POL_strengthen_king
+		}
+		available = {
+			sejm_medium_support_trigger = yes
+		}
+		continue_if_invalid = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			custom_effect_tooltip = POL_revive_executionists_tt
+			#add_to_variable = { var = sejm_low value = -5 } # 60%
+			add_to_variable = { var = sejm_medium value = -10 } # 70%
+			add_to_variable = { var = sejm_high value = -20 } # 80%
+			POL_sejm_large_opposition = yes
+			set_party_name = {
+				ideology = constitutionalist
+				long_name = POL_executionist_party_long
+				name = POL_executionist_party
+			}
+			set_party_name = {
+				ideology = liberal
+				long_name = POL_executionist_lib_party_long
+				name = POL_executionist_party
+			}
+			add_popularity = {
+				ideology = constitutionalist
+				popularity = 0.1
+			}
+		}
+		ai_will_do = {
+			base = 2
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = POL_regain_crown_lands
+		icon = GFX_goal_generic_position_armies
+		cost = 15.00
+		x = 0
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_the_sejm
+			}
+			x = -1
+		}
+		#available_if_capitulated = yes
+		relative_position_id = POL_revive_executionist_faction
+		prerequisite = { focus = POL_revive_executionist_faction }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			if = {
+				limit = {
+					OR = {
+						has_government = absolutist
+						absolutist > 0.5
+					}
+				}
+				sejm_high_support_trigger = yes
+				else = {
+					sejm_medium_support_trigger = yes
+				}
+			}
+		}
+		cancel_if_invalid = no
+		complete_tooltip = {
+			if = {
+				limit = {
+					has_country_flag = POL_regain_crown_lands_medium_opposition_flag
+				}
+				POL_sejm_medium_opposition = yes
+			}
+			if = {
+				limit = {
+					has_country_flag = POL_regain_crown_lands_small_opposition_flag
+				}
+				POL_sejm_small_opposition = yes
+			}
+			POL_king_up_magnates_down_10 = yes
+			every_state = {
+				limit = { has_state_flag = POL_regain_crown_lands_state }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_government = absolutist
+						absolutist > 0.5
+					}
+				}
+				POL_sejm_medium_opposition = yes
+				set_country_flag = POL_regain_crown_lands_medium_opposition_flag
+				else = {
+					POL_sejm_small_opposition = yes
+					set_country_flag = POL_regain_crown_lands_small_opposition_flag
+				}
+			}
+			POL_king_up_magnates_down_10 = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_regain_crown_lands_state
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { has_state_flag = POL_regain_crown_lands_state }
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_regain_crown_lands_state
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { has_state_flag = POL_regain_crown_lands_state }
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = POL_regain_crown_lands_state
+			}
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_begin_reforming_sejm
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_strengthen_the_sejm
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_maintain_status_quo
+					has_completed_focus = POL_strengthen_king
+				}
+			}
+		}
+		prerequisite = {
+			focus = POL_strengthen_the_sejm
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		available = {
+			sejm_medium_support_trigger = yes
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			POL_sejm_small_opposition = yes
+			swap_ideas = {
+				remove_idea = POL_henrician_articles
+				add_idea = POL_henrician_articles_2
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_repeal_liberum_veto
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_begin_reforming_sejm
+		prerequisite = { focus = POL_begin_reforming_sejm }
+		#prerequisite = { focus = POL_end_lifetime_appointments }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		available = {
+			sejm_medium_support_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = POL_executionists_45
+				set_temp_variable = { POL_executionist = party_popularity@constitutionalist }
+				add_to_temp_variable = { POL_executionist = party_popularity@liberal }
+				check_variable = { POL_executionist > 0.5 }
+			}
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			custom_effect_tooltip = POL_revive_executionists_tt
+			add_to_variable = { var = sejm_low value = -20 } #50%
+			add_to_variable = { var = sejm_medium value = -20 } #60%
+			add_to_variable = { var = sejm_high value = -20 } # 70%
+			POL_sejm_medium_opposition = yes
+			POL_king_up_magnates_down_5 = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_write_formal_constitution
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_repeal_liberum_veto
+		prerequisite = { focus = POL_repeal_liberum_veto }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			sejm_medium_support_trigger = yes
+			NOT = { has_completed_focus = POL_abolish_sejm }
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = POL_henrician_articles_2
+				}
+				swap_ideas = {
+					remove_idea = POL_henrician_articles_2
+					add_idea = POL_constitution
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = POL_henrician_articles
+						add_idea = POL_constitution
+					}
+				}
+			}
+			POL_magnates_down_both_up_5 = yes
+			hidden_effect = {
+				set_politics = {
+					ruling_party = constitutionalist
+				}
+			}
+			custom_effect_tooltip = become_constitutional_monarchy_TT
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_expand_the_franchise
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_write_formal_constitution
+		prerequisite = { focus = POL_write_formal_constitution }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			sejm_high_support_trigger = yes
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POL_constitution
+				add_idea = POL_constitution_2
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.1
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	####################
+	# SEJM APPEASEMENT #
+	####################
+
+	focus = {
+		id = POL_flatter_szlachta
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		x = -1
+		y = 1
+		relative_position_id = POL_maintain_status_quo
+		prerequisite = { focus = POL_maintain_status_quo }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_strengthen_the_sejm
+					has_completed_focus = POL_strengthen_king
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			add_political_power = 30
+			POL_sejm_small_support = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_cajole_magnates
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = POL_flatter_szlachta
+		prerequisite = { focus = POL_flatter_szlachta }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = POL_strengthen_the_sejm
+					has_completed_focus = POL_strengthen_king
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		completion_reward = {
+			add_political_power = 30
+			POL_sejm_small_support = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
+	####################
+	# ABSOLUTE  POWER! #
+	####################
+
+	focus = {
+		id = POL_woo_the_magnates
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		x = 0
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_king
+			}
+			x = 3
+		}
+		#available_if_capitulated = yes
+		relative_position_id = POL_strengthen_king
+		prerequisite = {
+			focus = POL_strengthen_king
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		mutually_exclusive = {
+			focus = POL_woo_the_szlachta
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_szlachta_down_both_up_5 = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_woo_the_szlachta
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		x = -2
+		y = 1
+		offset = {
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = POL_strengthen_king
+			}
+			x = 3
+		}
+		#available_if_capitulated = yes
+		relative_position_id = POL_strengthen_king
+		prerequisite = {
+			focus = POL_strengthen_king
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		mutually_exclusive = {
+			focus = POL_woo_the_magnates
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_magnates_down_both_up_5 = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_end_lifetime_appointments
+		icon = GFX_focus_rom_parties_end
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_woo_the_szlachta
+		prerequisite = {
+			focus = POL_woo_the_szlachta focus = POL_revive_executionist_faction
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		available = {
+			sejm_medium_support_trigger = yes
+		}
+		mutually_exclusive = {
+			focus = POL_revoke_incompatibilitas
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_magnates_down_both_up_5 = yes
+			if = {
+				limit = { has_completed_focus = POL_strengthen_king }
+				custom_effect_tooltip = POL_revive_executionists_tt
+				#add_to_variable = { var = sejm_low value = -5 } # 60%
+				add_to_variable = { var = sejm_medium value = -10 } # 70%
+				add_to_variable = { var = sejm_high value = -20 } # 80%
+			}
+			swap_ideas = {
+				remove_idea = POL_powerful_magnates
+				add_idea = POL_reduced_magnates
+			}
+			POL_end_lifetime_appointments_effect = yes
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_reduce_magnates_power
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_end_lifetime_appointments
+		prerequisite = {
+			focus = POL_end_lifetime_appointments
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		available = {
+			sejm_medium_support_trigger = yes
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_magnates_down_both_up_5 = yes
+			swap_ideas = {
+				add_idea = POL_weakened_magnates
+				remove_idea = POL_reduced_magnates
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_revoke_incompatibilitas
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_woo_the_magnates
+		prerequisite = {
+			focus = POL_woo_the_magnates
+		}
+		mutually_exclusive = {
+			focus = POL_end_lifetime_appointments
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			OR = {
+				sejm_high_support_trigger = yes
+				AND = {
+					set_temp_variable = { power_check = 0.4 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_szlachta_under_TT
+						check_variable = { power_szlachta < power_check }
+					}
+					sejm_medium_support_trigger = yes
+				}
+				AND = {
+					set_temp_variable = { power_check = 0.3 }
+					custom_trigger_tooltip = {
+						tooltip = POL_power_szlachta_under_TT
+						check_variable = { power_szlachta < power_check }
+					}
+					sejm_low_support_trigger = yes
+				}
+			}
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_sejm_small_support = yes
+			POL_magnates_up_szlachta_down_5 = yes
+			swap_ideas = {
+				remove_idea = POL_powerful_magnates
+				add_idea = POL_pleased_magnates
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_integrate_magnates
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		x = 0
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_revoke_incompatibilitas
+		prerequisite = {
+			focus = POL_revoke_incompatibilitas
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			sejm_high_support_trigger = yes
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_sejm_small_support = yes
+			POL_szlachta_down_both_up_5 = yes
+			swap_ideas = {
+				remove_idea = POL_pleased_magnates
+				add_idea = POL_integrated_magnates
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+	
+	focus = {
+		id = POL_autonomy_for_support
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		x = 2
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_revoke_incompatibilitas
+		prerequisite = { focus = POL_revoke_incompatibilitas }
+		prerequisite = { focus = POL_grant_further_autonomy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			sejm_high_support_trigger = yes
+			has_war = no
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = POL_autonomy_for_support_LIT
+				owns_state = 342
+				owns_state = 692
+				owns_state = 693
+			}
+			custom_trigger_tooltip = {
+				tooltip = POL_autonomy_for_support_RUT
+				owns_state = 353
+				owns_state = 688
+				owns_state = 689
+				owns_state = 690
+			}
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			POL_szlachta_down_both_up_5 = yes
+			effect_tooltip = {
+				release_autonomy = {
+					target = LIT
+					autonomy_state = autonomy_rof_vassal
+				}
+			}
+			hidden_effect = {
+				LIT = {
+					transfer_state = 342
+					transfer_state = 692
+					transfer_state = 693
+					set_cosmetic_tag = Radziwill_Lithuania
+				}
+				set_autonomy = {
+					target = LIT
+					autonomy_state = autonomy_rof_vassal
+				}
+			}
+			effect_tooltip = {
+				release_autonomy = {
+					target = RUT
+					autonomy_state = autonomy_rof_vassal
+				}
+			}
+			hidden_effect = {
+				RUT = {
+					transfer_state = 353
+					transfer_state = 688
+					transfer_state = 689
+					transfer_state = 690
+					if = {
+						limit = {
+							697 = {
+								is_owned_by = ROOT
+							}
+						}
+						transfer_state = 697
+					}
+					set_cosmetic_tag = Magnate_Ruthenia
+				}
+				set_autonomy = {
+					target = RUT
+					autonomy_state = autonomy_rof_vassal
+				}
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	focus = {
+		id = POL_abolish_sejm
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10.00
+		x = -1
+		y = 1
+		#available_if_capitulated = yes
+		relative_position_id = POL_integrate_magnates
+		prerequisite = { focus = POL_integrate_magnates focus = POL_reduce_magnates_power }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POL_SEJM }
+		available = {
+			set_temp_variable = { power_check = 0.2 }
+			NOT = { has_completed_focus = POL_write_formal_constitution }
+			if = {
+				limit = {
+					has_completed_focus = POL_end_lifetime_appointments
+				}
+				custom_trigger_tooltip = {
+					tooltip = POL_power_magnates_under_TT
+					check_variable = { power_magnates < power_check }
+				}
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = POL_power_szlachta_under_TT
+						check_variable = { power_szlachta < power_check }
+					}
+				}
+			}
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			custom_effect_tooltip = POL_abolish_sejm_tt
+			set_country_flag = POL_abolished_sejm
+			#temp
+			if = {
+				limit = {
+					has_completed_focus = POL_integrate_magnates
+				}
+				set_temp_variable = { szlachta_revolt_size = power_szlachta }
+				multiply_temp_variable = { szlachta_revolt_size = 1.5 }
+				start_civil_war = {
+					ideology = neutrality
+					size = szlachta_revolt_size
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_reduce_magnates_power
+				}
+				set_temp_variable = { magnates_revolt_size = power_magnates }
+				multiply_temp_variable = { magnates_revolt_size = 2 }
+				start_civil_war = {
+					ideology = neutrality
+					size = magnates_revolt_size
+				}
+			}
+		}
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	####################
+	#    ARMY  TREE    #
+	####################
+	#shared_focus = army_drilling
+	focus = {
+		id = POL_army_funding
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 32
+		y = 0
+		available = {
+			sejm_low_support_trigger = yes
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			POL_sejm_small_opposition = yes
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				name = doctrine_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POL_noble_regiments
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		relative_position_id = POL_army_funding
+		x = -1
+		y = 1
+		prerequisite = { focus = POL_army_funding }
+		mutually_exclusive = {
+			focus = POL_standing_army
+		}
+		completion_reward = {
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				name = doctrine_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POL_standing_army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		relative_position_id = POL_army_funding
+		x = 1
+		y = 1
+		prerequisite = { focus = POL_army_funding }
+		mutually_exclusive = {
+			focus = POL_noble_regiments
+		}
+		available = {
+			sejm_medium_support_trigger = yes
+		}
+		continue_if_invalid = yes
+		completion_reward = {
+			POL_king_up_magnates_down_5 = yes
+			POL_sejm_small_opposition = yes
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				name = doctrine_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	######################
+	# DYNASTIC STRUGGLES #
+	######################
+
+	focus = {
+		id = POL_dynastic_struggles
+		icon = GFX_focus_hun_elect_a_king
+		cost = 5
+		x = 29
+		y = 3
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = POL_vasa_king
+				OR = {
+					has_country_leader = { character = POL_sigismund_vasa }
+					has_country_leader = { character = POL_wladyslaw_vasa }
+					has_country_leader = { character = POL_john_casimir_vasa }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = POL_abolished_sejm }
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						set_temp_variable = { power_check = 0.5 }
+						tooltip = POL_power_king_over_TT
+						check_variable = { power_king > power_check }
+					}
+					sejm_high_support_trigger = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	focus = {
+		id = POL_reclaim_swedish_throne
+		icon = GFX_focus_generic_attack_sweden
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = POL_dynastic_struggles
+		prerequisite = {
+			focus = POL_dynastic_struggles
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = POL_vasa_king
+				OR = {
+					has_country_leader = { character = POL_sigismund_vasa }
+					has_country_leader = { character = POL_wladyslaw_vasa }
+					has_country_leader = { character = POL_john_casimir_vasa }
+				}	
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = POL_abolished_sejm }
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						set_temp_variable = { power_check = 0.5 }
+						tooltip = POL_power_king_over_TT
+						check_variable = { power_king > power_check }
+					}
+					sejm_high_support_trigger = yes
+				}
+				OR = {
+					NOT = { has_idea = POL_treaty_of_stary_targ }
+					custom_trigger_tooltip = {
+						set_temp_variable = { power_check = 0.7 }
+						tooltip = POL_power_king_over_TT
+						check_variable = { power_king > power_check }
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = SWE
+		completion_reward = {
+			create_wargoal = {
+				target = SWE
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	focus = {
+		id = POL_claim_russian_throne
+		icon = GFX_focus_ger_strike_at_the_source
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = POL_dynastic_struggles
+		prerequisite = {
+			focus = POL_dynastic_struggles
+		}
+		available = {
+			is_subject = no
+			has_country_leader = { character = POL_wladyslaw_vasa }
+			if = {
+				limit = {
+					NOT = { has_country_flag = POL_abolished_sejm }
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						set_temp_variable = { power_check = 0.5 }
+						tooltip = POL_power_king_over_TT
+						check_variable = { power_king > power_check }
+					}
+					sejm_high_support_trigger = yes
+				}
+				OR = {
+					NOT = { has_idea = POL_truce_of_deulino }
+					custom_trigger_tooltip = {
+						set_temp_variable = { power_check = 0.7 }
+						tooltip = POL_power_king_over_TT
+						check_variable = { power_king > power_check }
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = RUS
+		completion_reward = {
+			create_wargoal = {
+				target = RUS
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

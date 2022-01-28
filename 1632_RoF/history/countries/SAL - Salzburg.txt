@@ -5,6 +5,7 @@ oob = "SAL_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -38,7 +39,7 @@ set_stability = 0.5
 create_country_leader = {
     name = "Paris von Lodron"
     desc = "POLITICS_LEONHARD_HAUS_DESC"
-    picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+    picture = "gfx/leaders/Germanies/Portrait_Salzburg_Paris_von_Lodren.dds"
     expire = "1660.1.1"
     ideology = bishopric_neutral
     traits = {

@@ -4,15 +4,15 @@ state = {
 	history = {
 		owner = SCO
 		victory_points = {
-			13206 1 
+			13237 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			dockyard = 0
 			industrial_complex = 0
 			arms_factory = 0
 			air_base = 0
-			13206 = {
+			13237 = {
 				naval_base = 1
 			}
 			6196 = {
@@ -23,8 +23,9 @@ state = {
 		add_core_of = SCO
 
 	}
+	local_supplies = 0.0
 	provinces = {
-		6196 13206 
+		6196 13237 
 	}
 	manpower = 5000
 	buildings_max_level_factor = 1.000

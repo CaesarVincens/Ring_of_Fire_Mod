@@ -24,6 +24,18 @@ ideas = {
 			}
 			picture = generic_democratic_drift_bonus
 		}
+		RUS_truce_of_deulino = {
+			name = truce_of_deulino
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = POL
+				generate_wargoal_tension_against = 0.3
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+		}
 		RUS_up_timer_advisor = {
 			allowed = {
 				always = no
@@ -157,6 +169,7 @@ ideas = {
 			picture = raj_risk_of_famine
 		}
 		RUS_eastern_serfdom_1 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -168,11 +181,11 @@ ideas = {
 				drift_defence_factor = 0.2
 				stability_factor = -0.2
 				war_support_factor = -0.1
-				conscription_factor = -0.2
-				resistance_damage_to_garrison_on_our_occupied_states = -0.1
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
-				consumer_goods_factor = 0.2
+				conscription_factor = -0.1
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				consumer_goods_factor = 0.1
 				global_building_slots_factor = -0.1
 				production_speed_buildings_factor = -0.1
 			}
@@ -180,6 +193,7 @@ ideas = {
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_2 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -191,11 +205,11 @@ ideas = {
 				drift_defence_factor = 0.15
 				stability_factor = -0.2
 				war_support_factor = -0.1
-				conscription_factor = -0.2
-				resistance_damage_to_garrison_on_our_occupied_states = -0.1
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
-				consumer_goods_factor = 0.15
+				conscription_factor = -0.1
+				resistance_target_on_our_occupied_states = -0.1
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
+				consumer_goods_factor = 0.075
 				global_building_slots_factor = -0.05
 				production_speed_buildings_factor = -0.1
 			}
@@ -203,6 +217,7 @@ ideas = {
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_3 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -214,17 +229,18 @@ ideas = {
 				drift_defence_factor = 0.1
 				stability_factor = -0.15
 				war_support_factor = -0.05
-				conscription_factor = -0.15
-				resistance_damage_to_garrison_on_our_occupied_states = -0.05
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-				consumer_goods_factor = 0.1
+				conscription_factor = -0.075
+				resistance_target_on_our_occupied_states = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = -0.05
 			}
 			picture = generic_oppression
 			removal_cost = -1
 		}
 		RUS_eastern_serfdom_4 = {
+			name = RUS_eastern_serfdom
 			allowed = {
 				always = no
 			}
@@ -236,10 +252,10 @@ ideas = {
 				drift_defence_factor = 0.05
 				stability_factor = -0.1
 				war_support_factor = -0.05
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				industrial_capacity_factory = -0.025
+				industrial_capacity_dockyard = -0.025
+				consumer_goods_factor = 0.025
 			}
 			picture = generic_oppression
 			removal_cost = -1
@@ -358,78 +374,7 @@ ideas = {
 			removal_cost = -1
 		}
 	}
-	
-	political_advisor = {
-		RUS_filaret = {
-			allowed = {
-				original_tag = RUS
-			}
-			traits = {
-				filaret_trait
-			}
-			picture = filaret_pic
-			removal_cost = -1
-			allowed_to_remove = {
-				has_country_flag = filaret_gone
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		RUS_absolutist_advisor = {
-			allowed = {
-				always = no
-				original_tag = RUS
-			}
-			traits = { absolutist_minister }
-			on_add = {
-				#country_event = conv.political.01
-			}
-			picture = triumphant_will
-			do_effect = {
-				NOT = {
-					has_government = absolutist
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		RUS_democratic_advisor = {
-			allowed = {
-				always = no
-				original_tag = RUS
-			}
-			traits = { liberal_minister }
-			on_add = {
-				#country_event = conv.political.25
-			}
-			do_effect = {
-				NOT = {
-					has_government = liberal
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		RUS_neutrality_advisor = {
-			allowed = {
-				always = no
-				original_tag = RUS
-			}
-			traits = { neutrality_minister }
-			picture = neutrality_idea
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-	}
+
 	tank_manufacturer = { 
 		designer = yes
 		
@@ -477,6 +422,10 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = RUS_establish_dacha
+				NOT = {
+					has_cosmetic_tag = Directorate_Russia
+					has_cosmetic_tag = Siberia
+				}
 			}
 			cost = 100
 			removal_cost = 10
@@ -528,6 +477,12 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = RUS_establish_gun_shop
+				NOT = {
+					has_cosmetic_tag = Free_Russia
+					has_cosmetic_tag = Siberia
+					has_cosmetic_tag = USSR
+					has_cosmetic_tag = United_States_Russia
+				}
 			}
 			cost = 100
 			removal_cost = 10

@@ -1,5 +1,140 @@
 ﻿add_namespace = RoF_NED
 
+#Maastricht SPN
+country_event = {
+	id = RoF_NED.50
+	title = RoF_NED.50.t
+	picture = GFX_report_event_ups_flag
+	desc = {
+		trigger = { NOT = { has_country_flag = SPN_protected_maastricht } }
+		text = RoF_NED.50.da
+	}
+	desc = {
+		trigger = { has_country_flag = SPN_protected_maastricht }
+		text = RoF_NED.50.db
+	}
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	option = {
+		name = RoF_NED.50.a
+		trigger = {
+			NOT = { has_country_flag = SPN_protected_maastricht }
+		}
+		transfer_state = 458
+	}
+	option = {
+		name = RoF_NED.50.b
+		trigger = {
+			has_country_flag = SPN_protected_maastricht
+		}
+		add_political_power = -30
+		add_war_support = -0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = RoF_NED.50.c
+		trigger = {
+			has_country_flag = SPN_protected_maastricht
+		}
+		random_list = {
+			50 = {
+				transfer_state = 458
+				modifier = {
+					add = -5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 4
+							province = { id = 11562 }
+						}
+					}
+				}
+				modifier = {
+					add = -5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 5
+							province = { id = 11562 }
+						}
+					}
+				}
+				modifier = {
+					add = -5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 6
+							province = { id = 11562 }
+						}
+					}
+				}
+				modifier = {
+					add = -5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 7
+							province = { id = 11562 }
+						}
+					}
+				}
+			}
+			50 = {
+				add_political_power = -60
+				add_war_support = -0.1
+				add_stability = -0.1
+				modifier = {
+					add = 5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 4
+							province = { id = 11562 }
+						}
+					}
+				}
+				modifier = {
+					add = 5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 5
+							province = { id = 11562 }
+						}
+					}
+				}
+				modifier = {
+					add = 5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 6
+							province = { id = 11562 }
+						}
+					}
+				}
+				modifier = {
+					add = 5
+					458 = {
+						any_province_building_level = {
+							building = bunker
+							level > 7
+							province = { id = 11562 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 #Dunkirk SPN
 country_event = {
 	id = RoF_NED.100
@@ -54,28 +189,27 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			create_country_leader = {
-				name = "Fernando von Habsburg"
-				desc = "POLITICS_DON_FERNANDO_DESC"
-				picture = "GFX_leader_SPN_Don_Fernando"
-				ideology = absolute_monarchy
-				traits = {
+			SPN_fernando_von_habsburg = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = absolute_monarchy
+						expire = "1660.1.1"
+					}
 				}
-			}
-			create_country_leader = {
-				name = "Fernando von Habsburg"
-				desc = "POLITICS_DON_FERNANDO_DESC"
-				picture = "GFX_leader_SPN_Don_Fernando"
-				ideology = constitutional_monarchy
-				traits = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = constitutional_monarchy
+						expire = "1660.1.1"
+					}
 				}
-			}
-			create_country_leader = {
-				name = "Fernando von Habsburg"
-				desc = "POLITICS_DON_FERNANDO_DESC"
-				picture = "GFX_leader_SPN_Don_Fernando"
-				ideology = monarchy_neutral
-				traits = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = monarchy_neutral
+						expire = "1660.1.1"
+					}
 				}
 			}
 		}
@@ -89,14 +223,14 @@ country_event = {
 			set_politics = { ruling_party = constitutionalist }
 		}
 		effect_tooltip = {
-			create_country_leader = {
-				name = "Fernando von Habsburg"
-				desc = "POLITICS_DON_FERNANDO_DESC"
-				picture = "GFX_leader_SPN_Don_Fernando"
-				ideology = constitutional_monarchy
-				traits = {
+			add_country_leader_role = {
+				character = SPN_fernando_von_habsburg
+				promote_leader = yes
+				country_leader = {
+					ideology = constitutional_monarchy
+					expire = "1660.1.1"
 				}
-			}		
+			}	
 		}
 		ai_chance = {
 			factor = 10
@@ -114,14 +248,14 @@ country_event = {
 			set_politics = { ruling_party = absolutist }
 		}
 		effect_tooltip = {
-			create_country_leader = {
-				name = "Fernando von Habsburg"
-				desc = "POLITICS_DON_FERNANDO_DESC"
-				picture = "GFX_leader_SPN_Don_Fernando"
-				ideology = absolute_monarchy
-				traits = {
+			add_country_leader_role = {
+				character = SPN_fernando_von_habsburg
+				promote_leader = yes
+				country_leader = {
+					ideology = absolute_monarchy
+					expire = "1660.1.1"
 				}
-			}		
+			}	
 		}
 		ai_chance = {
 			factor = 5
@@ -573,6 +707,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
+		trigger = { NOT = { has_country_flag = BRG_assisting_with_gaston } }
 		name = RoF_NED.152.a
 		if = {
 			limit = {
@@ -671,4 +806,3 @@ country_event = {
 		}
 	}
 }
-

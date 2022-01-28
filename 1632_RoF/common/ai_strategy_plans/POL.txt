@@ -1,28 +1,63 @@
 ﻿POL_canon_focuses = {
 	name = "Poland Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = POL
+	}
+	enable = {
 		OR = {
-			is_historical_focus_on = yes
+			AND = {
+				has_game_rule = {
+					rule = POL_ai_behavior
+					option = DEFAULT
+				}
+				is_historical_focus_on = yes
+			}
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = CANON
+			}
+			has_country_flag = POL_AI_RANDOM_CANON
 		}
 	}
 	abort = {
 
 	}
 	ai_national_focuses = {
+		#do first if possible
 
+		#
+		POL_maintain_status_quo #1631 may 25 35
+		POL_flatter_szlachta #1631 jun 29 70
+		POL_invest_in_szlachta_lands #1631.Sep.7 70
+		POL_develop_fiefs #1631.Nov.16 70
+		POL_invest_in_crown_lands #1632.Jan.25 105
+		POL_grant_further_autonomy #1632.May.9 70
+		POL_fund_jagiellonian_university #1632.Jul.18 70
+		POL_secure_sucession #1632.Sep.26 70
+		POL_control_unrest #1632.Dec.5 70
+		POL_army_funding #1633.Feb.13 70
+		POL_establish_baltic_fleet #1633.Apr.24 70
+		POL_royal_roads #1633.Jul.3 70
+		POL_manage_cossacks #1633.Sep.11 70
+		POL_standing_army #1633.Nov.20 70
+		POL_found_royal_universities #1634.Jan.29 70
+		POL_royal_factors #1634.Apr.9 70
+		POL_agrarian_advances #1634.Jun.18 70
+		POL_mechanical_farming #1634.Aug.27 70
 	}
 	research = {
-		cat_mass_assault = 50
+		cat_mobile_warfare = 50
 	}
 }
 
 POL_ignore_Kurland = {
 	name = "Ignore Kurland"
 	desc = "They aren't in the war"
-	enable = {
+	allowed = {
 		original_tag = POL
+	}
+	enable = {
 		has_war_with = SWE
 	}
 	abort = {

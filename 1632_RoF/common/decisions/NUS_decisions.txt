@@ -29,9 +29,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -57,7 +59,7 @@ NUS_major_decisions = {
 		
 		fire_only_once = yes
 		available = {
-			has_country_flag = NUS_start_CoC
+			num_divisions > 2
 		}
 		
 		activation = {
@@ -65,14 +67,16 @@ NUS_major_decisions = {
 		}
 		is_good = no
 		days_mission_timeout = 30
-		
+		selectable_mission = yes
 		timeout_effect = {
 			add_political_power = -40
 			hidden_effect = {
 				news_event = { id = RoF_NUS.113 }
 			}
 		}
+		cost = 20
 		complete_effect = {
+			country_event = { id = RoF_NUS.112 }
 			add_political_power = 20
 		}
 		ai_will_do = {
@@ -82,6 +86,7 @@ NUS_major_decisions = {
 	NUS_protect_Jena_decision = {
 		fire_only_once = yes
 		visible = {
+			always = no
 			has_active_mission = NUS_protect_Jena_mission
 		}
 		available = {
@@ -117,9 +122,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -149,9 +156,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -179,7 +188,9 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			state = 128
+			highlight_state_targets = {
+				state = 128
+			}
 		}
 		complete_effect = {
 			set_country_flag = NUS_embassy_break_out
@@ -207,9 +218,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -242,9 +255,11 @@ NUS_major_decisions = {
 			}
 		}
 		highlight_states = {
-			FROM = {
-				capital_scope = {
-					is_capital = yes
+			highlight_states_trigger = {
+				FROM = {
+					capital_scope = {
+						is_capital = yes
+					}
 				}
 			}
 		}
@@ -265,14 +280,22 @@ NUS_major_decisions = {
 		visible = {
 			has_global_flag = congress_of_copenhagen_begins
 		}
-		targets = { UPS SPN }
+		state_target = yes
+		targets = { 657 }
 		target_trigger = {
 			FROM = {
-				owns_state = 657
-				exists = yes
+				OR = {
+					is_owned_by = UPS
+					is_owned_by = SPN
+				}
 			}
 		}
-		highlight_states = { state = 657 }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 657
+			}
+		}
+		on_map_mode = map_and_decisions_view
 		available = {
 			657 = {
 				OWNER = {
@@ -282,7 +305,9 @@ NUS_major_decisions = {
 		}
 		complete_effect = {
 			FROM = {
-				country_event = { id = RoF_USE.206 }
+				OWNER = {
+					country_event = { id = RoF_USE.206 }
+				}
 			}
 			#transfer_state = 657
 		}
@@ -305,7 +330,7 @@ NUS_major_decisions = {
 			owns_state = 247
 		}
 		complete_effect = {
-			set_capital = 247
+			set_capital = { state = 247 }
 			if = {
 				limit = {
 					NOT = { 247 = { is_core_of = NUS } }
@@ -321,18 +346,262 @@ NUS_major_decisions = {
 	
 }
 
-NUS_minor_decisions = {
-	NUS_test = {
-		visible = {
-			always = no
+NUS_advanced_projects_decisions = {
+	NUS_manufacture_up_time_firearms = {
+		icon = GFX_decision_generic_assassination
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 10 factories & at least 5 up-time resources
+			num_of_civilian_factories > 9
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		days_re_enable = 30 # can manufacture again a month after completion
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_5_up_time_resources_tt # lose 5 up-time resources
+			hidden_effect = {
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 5
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Waking the Tiger" }
+				}
+				add_timed_idea = { # add timed idea: 5% consumer goods use for 90 days
+					idea = NUS_firearms_project_consumer_goods
+					days = 90
+				}
+			}
+		}
+		days_remove = 90 # takes 90 days for the project to finish
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = { 
+			add_equipment_to_stockpile = { # add 500 up-time rifles
+				type = up_time_weapons
+				amount = 500
+				producer = NUS
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = NUS_gun_tech_project
+					}
+				}
+				set_country_flag = NUS_gun_tech_project
+				add_tech_bonus = { # one-time 50% research bonus to infantry weapons
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+	}
+	NUS_retrofit_civilian_automobiles = {
+		icon = GFX_decision_generic_tank
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 50 factories & at least 5 up-time resources
+			num_of_civilian_factories > 49
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		days_re_enable = 30 # can retrofit again a month after completion
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_5_up_time_resources_tt # lose 5 up-time resources
+			hidden_effect = {
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 5
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Waking the Tiger" }
+				}
+				add_timed_idea = { # add timed idea: 5% consumer goods use for 360 days
+					idea = NUS_automobiles_project_consumer_goods
+					days = 360
+				}
+			}
+		}
+		days_remove = 360 # takes a year for the project to finish
+		modifier = {
+			civilian_factory_use = 50
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = { # add 100 APCs
+				type = motorized_equipment
+				amount = 100
+				producer = NUS
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = NUS_apc_tech_project
+					}
+				}
+				set_country_flag = NUS_apc_tech_project
+				add_tech_bonus = { # one-time 50% research bonus to APC tech, may want to switch to a different category like steam tank (?)
+					bonus = 0.5
+					uses = 1
+					category = apc_tech
+				}
+			}
+		}
+	}
+	NUS_donate_up_time_machinery_to_universities = {
+		icon = GFX_decision_generic_wreckers
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 1 up-time resources
+			has_completed_focus = NUS_encourage_reinvention
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		days_re_enable = 30 # can retrofit again a month after completion
+		complete_effect = {
+			custom_effect_tooltip = NUS_minus_1_up_time_resources_tt # lose 1 up time resources
+			hidden_effect = {
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 1
+				}
+			}
+			add_timed_idea = { # add timed idea: 5% research bonus for 180 days
+				idea = NUS_donate_machinery_research_bonus
+				days = 180
+			}
+		}
+	}
+	NUS_aqualator_computing = { # one-time only, should NOT re-enable!
+		icon = GFX_decision_aqualator
+		visible = { # check if at least 1 remaining up-time resources, has completed Gearing Down focus
+			has_completed_focus = NUS_gearing_down
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 1
+				compare = greater_than_or_equals
+			}
+		}
+		available = { # check if at least 10 factories & at least 5 up-time resources
+			num_of_civilian_factories > 9
+			has_tech = computing_machine
+			check_variable = {
+				var = NUS_up_time_resources_count
+				value = 5
+				compare = greater_than_or_equals
+			}
 		}
 		complete_effect = {
-			add_to_faction = AUS
-			add_to_faction = SWE
-			add_to_faction = BOH
+			custom_effect_tooltip = NUS_minus_5_up_time_resources_tt # lose 5 up time resources
+			hidden_effect = { 
+				subtract_from_variable = {
+					var = NUS_up_time_resources_count
+					value = 5
+				}
+			}
+		}
+		days_remove = 360
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			# add permanent idea: 5% research bonus
+			add_ideas = { NUS_aqualator_computing_research_bonus }
+		}
+	}
+}
+
+NUS_minor_decisions = {
+	NUS_grantville_national_library_access = {	# Policy on public access to the Grantville National Library. Open = research buffs but encryption debuffs. Restricted = research debuffs but encryption buffs. (Work out precise balance after playtesting!)
+		icon = GFX_decision_SOV_place_hq 
+		visible = {
+			has_completed_focus = NUS_grantville_national_library # check if Grantville National Library focus taken
+		}
+		available = {
+			controls_province = 9497 # check if Grantville is actively controlled
+		}
+		days_re_enable = 30 # can change library access once a month (May need to rebalance to a longer wait time)
+		complete_effect = {
+			if = {	# swap free --> restricted
+				limit = {
+					has_idea = NUS_grantville_national_library_free
+				}
+				swap_ideas = {
+					remove_idea = NUS_grantville_national_library_free
+					add_idea = NUS_grantville_national_library_restricted
+				}
+			}
+			else_if = { # swap restricted --> free
+				limit = {
+					has_idea = NUS_grantville_national_library_restricted
+				}
+				swap_ideas = {
+					remove_idea = NUS_grantville_national_library_restricted
+					add_idea = NUS_grantville_national_library_free
+				}
+			}
+		}
+	}
+	NUS_CoC_Speech_progress = {
+		icon = GFX_decision_generic_nationalism
+		visible = {
+			any_other_country = {
+				has_country_flag = NUS_coc_inspired
+			}
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		complete_effect = {
+			for_each_loop = {
+				array = NUS.patriotic_fervor_array
+				var:v = {
+					add_political_power = i
+				}
+			}
+			random_scope_in_array = {
+				array = patriotic_fervor_array
+				add_political_power = 1
+			}
+			add_political_power = patriotic_fervor_array^num
 		}
 	}
 	NUS_coc_speeches = {
+		fixed_random_seed = no
 		icon = GFX_decision_generic_nationalism
 		visible = {
 			any_other_country = {
@@ -345,7 +614,7 @@ NUS_minor_decisions = {
 		target_root_trigger = {
 			has_completed_focus = NUS_expand_committees
 		}
-		target_array = german_tags
+		target_array = global.german_tags
 		target_trigger = {
 			FROM = {
 				has_country_flag = CoC_present
@@ -354,21 +623,27 @@ NUS_minor_decisions = {
 			}
 		}
 		highlight_states = {
-			owner = {
-				is_german_tag = yes
-				#has_variable = CoC_strength
-				has_country_flag = CoC_present
+			highlight_states_trigger = {
+				owner = {
+					is_german_tag = yes
+					#has_variable = CoC_strength
+					has_country_flag = CoC_present
+				}
+				is_capital = yes
+				is_controlled_by = FROM
 			}
-			is_capital = yes
-			is_controlled_by = FROM
 		}
 		days_re_enable = 60
 		complete_effect = {
-			random_list ={
+			random_list = {
 				67 = {
 					add_to_variable = {
 						var = NUS_patriotic_fervor
 						value = 1
+					}
+					add_to_array = {
+						array = NUS.patriotic_fervor_array
+						value = FROM
 					}
 					FROM = {
 						set_country_flag = NUS_coc_inspired
@@ -387,5 +662,18 @@ NUS_minor_decisions = {
 			}
 		}
 		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_game_rule = {
+						rule = NUS_ai_behavior
+						option = RADICAL
+					}
+					has_country_flag = NUS_AI_RANDOM_RADICAL
+				}
+			}
+		}
 	}
 }

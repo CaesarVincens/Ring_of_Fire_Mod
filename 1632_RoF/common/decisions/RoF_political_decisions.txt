@@ -2590,9 +2590,659 @@ neutrality_on_the_rise = {
 	}
 }
 
+RoF_mercenary_decisions = {
+	disable_mercenaries = {
+		visible = {
+			OR = {
+				all_other_country = {
+					is_ai = yes
+				}
+				date < 1631.8.1
+			}
+		}
+		available = {
+			OR = {
+				all_other_country = {
+					is_ai = yes
+				}
+				date < 1631.6.1
+			}
+		}
+		complete_effect = {
+			set_global_flag = RoF_no_mercs_for_anyone
+			hidden_effect = {
+				every_country = {
+					clr_country_flag = hiring_mercenaries
+					delete_unit_template_and_units = {
+						division_template = "Mercenary Detachment"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Mercenary Company"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Mercenary Army"
+					}
+					clear_variable = merc_pool_small
+					clear_variable = merc_pool_medium
+					clear_variable = merc_pool_large
+					clear_variable = merc_weight
+					clear_variable = merc_weight_cost
+					clear_variable = merc_weight_mod
+					clear_variable = merc_weight_man
+				}
+			}
+		}
+	}
+	hire_mercenary_start = {
+		available = {
+			NOT = { has_country_flag = hiring_mercenaries }
+		}
+		complete_effect = {
+			set_country_flag = hiring_mercenaries
+			set_variable = { merc_detach_id = 0 }
+			set_variable = { merc_comp_id = 0 }
+			set_variable = { merc_army_id = 0 }
+			set_variable = { merc_small_cost = 5 }
+			set_variable = { merc_medium_cost = 10 }
+			set_variable = { merc_large_cost = 20 }
+			set_variable = { merc_weight_mod = 1 }
+			calc_merc_hire_size = yes
+			multiply_variable = { merc_small_cost = merc_size }
+			multiply_variable = { merc_medium_cost = merc_size }
+			multiply_variable = { merc_large_cost = merc_size }
+			add_dynamic_modifier = {
+				modifier = mercenary_upkeep
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = -1
+				ai_wants_divisions < 50
+			}
+			modifier = {
+				add = 1
+				has_war = yes
+			}
+			modifier = {
+				add = -1
+				check_variable = {
+					manpower_k > 100 
+				}
+			}
+		}
+	}
+	hire_mercenary_stop = {
+		available = {
+			has_country_flag = hiring_mercenaries
+		}
+		complete_effect = {
+			effect_tooltip = {
+				clr_country_flag = hiring_mercenaries
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Detachment"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Company"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mercenary Army"
+				}
+				set_variable = { merc_pool_small = 0 }
+				set_variable = { merc_pool_medium = 0 }
+				set_variable = { merc_pool_large = 0 }
+				set_variable = { merc_weight = 0 }
+				set_variable = { merc_weight_cost = 0 }
+				set_variable = { merc_weight_mod = 0 }
+				set_variable = { merc_weight_man = 0 }
+			}
+			hidden_effect = {
+				country_event = {
+					id = RoF.020
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_war = no
+				NOT = {
+					any_country = {
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 1
+				check_variable = {
+					manpower_k > 300
+				}
+			}
+		}
+	}
+	hire_mercenary_detachment = {
+		visible = {
+			has_country_flag = hiring_mercenaries
+		}
+		available = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = RoF_Mercenary_Hiring
+						option = ROF_DEFAULT_MERCS
+					}
+				}
+				OR = {
+					has_idea = mercenary_army
+					has_government = absolutist
+					surrender_progress > 0.4
+				}
+			}
+		}
+		custom_cost_text = merc_small_cost_tt
+		custom_cost_trigger = {
+			has_political_power > var:merc_small_cost
+		}
+		days_re_enable = 7
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { merc_small_cost = 5 }
+				calc_merc_hire_size = yes
+				multiply_variable = { merc_small_cost = merc_size }
+				multiply_variable = { ROOT.merc_small_cost = -1 }
+				add_political_power = ROOT.merc_small_cost
+				multiply_variable = { ROOT.merc_small_cost = -1 }
+				add_to_variable = { merc_pool_small = merc_size }
+				calc_merc_weight = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_template = "Mercenary Detachment" }
+				}
+				division_template = {
+					name = "Mercenary Detachment"
+					is_locked = yes
+					regiments = {
+						merc_tercio_infantry = { x = 0 y = 0 }
+						merc_tercio_infantry = { x = 0 y = 1 }
+						merc_tercio_infantry = { x = 0 y = 2 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Mercenary Detachment\" start_experience_factor = 0.1 start_equipment_factor = 0.75"
+						owner = ROOT
+						count = merc_size
+						id = merc_detach_id
+					}
+				}
+				else = {
+					random_controlled_state = {
+						create_unit = {
+							division = "division_template = \"Mercenary Detachment\" start_experience_factor = 0.1 start_equipment_factor = 0.75"
+							owner = ROOT
+							count = merc_size
+							id = merc_detach_id
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				set_temp_variable = { equip_deficit = num_equipment_in_armies_k@firearm_equipment }
+				subtract_from_temp_variable = { equip_deficit = num_target_equipment_in_armies_k@firearm_equipment }
+				check_variable = {
+					equip_deficit < 0
+				}
+				add = equip_deficit
+			}
+			modifier = {
+				set_temp_variable = { merc_weight_mod = merc_weight }
+				multiply_temp_variable = { merc_weight_mod = -1 }
+				round_temp_variable = merc_weight_mod
+				add = merc_weight_mod
+				always = yes
+			}
+			modifier = {
+				add = 1
+				has_war = yes
+			}
+			modifier = {
+				add = 1
+				has_war = yes
+				has_political_power > 50
+			}
+			modifier = {
+				add = 1
+				alliance_strength_ratio < 0.5
+			}
+			modifier = {
+				add = 2
+				ai_wants_divisions > 50
+			}
+			modifier = {
+				add = 5
+				ai_wants_divisions > 100
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 6
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories > 10
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories > 20
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+				NOT = {
+					any_country = {
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	hire_mercenary_company = {
+		visible = {
+			has_country_flag = hiring_mercenaries
+		}
+		available = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = RoF_Mercenary_Hiring
+						option = ROF_DEFAULT_MERCS
+					}
+				}
+				OR = {
+					has_idea = mercenary_army
+					has_government = absolutist
+					surrender_progress > 0.4
+				}
+			}
+		}
+		custom_cost_text = merc_medium_cost_tt
+		custom_cost_trigger = {
+			has_political_power > var:merc_medium_cost
+		}
+		days_re_enable = 14
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { merc_medium_cost = 10 }
+				calc_merc_hire_size = yes
+				multiply_variable = { merc_medium_cost = merc_size }
+				multiply_variable = { ROOT.merc_medium_cost = -1 }
+				add_political_power = ROOT.merc_medium_cost
+				multiply_variable = { ROOT.merc_medium_cost = -1 }
+				add_to_variable = { merc_pool_medium = merc_size }
+				calc_merc_weight = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_template = "Mercenary Company" }
+				}
+				division_template = {
+					name = "Mercenary Company"
+					is_locked = yes
+					regiments = {
+						merc_tercio_infantry = { x = 0 y = 0 }
+						merc_tercio_infantry = { x = 0 y = 1 }
+						merc_tercio_infantry = { x = 0 y = 2 }
+						merc_tercio_infantry = { x = 1 y = 0 }
+						merc_tercio_infantry = { x = 1 y = 1 }
+						merc_tercio_infantry = { x = 1 y = 2 }
+					}
+					support = {
+						heavy_artillery = { x = 0 y = 0 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Mercenary Company\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+						owner = ROOT
+						count = merc_size
+						id = merc_comp_id
+					}
+				}
+				else = {
+					random_controlled_state = {
+						create_unit = {
+							division = "division_template = \"Mercenary Company\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+							owner = ROOT
+							count = merc_size
+							id = merc_comp_id
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				set_temp_variable = { equip_deficit = num_equipment_in_armies_k@firearm_equipment }
+				subtract_from_temp_variable = { equip_deficit = num_target_equipment_in_armies_k@firearm_equipment }
+				add = equip_deficit
+				check_variable = {
+					equip_deficit < 0
+				}
+			}
+			modifier = {
+				set_temp_variable = { merc_weight_mod = merc_weight }
+				multiply_temp_variable = { merc_weight_mod = -1 }
+				round_temp_variable = merc_weight_mod
+				add = merc_weight_mod
+				always = yes
+			}
+			modifier = {
+				add = 1
+				has_war = yes
+			}
+			modifier = {
+				add = 1
+				num_of_military_factories > 10
+			}
+			modifier = {
+				add = 1
+				alliance_strength_ratio < 0.5
+			}
+			modifier = {
+				add = 2
+				ai_wants_divisions > 50
+			}
+			modifier = {
+				add = 5
+				ai_wants_divisions > 100
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 6
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 11
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories > 20
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+				NOT = {
+					any_country = {
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+			}
+		}
+
+	}
+	hire_mercenary_army = {
+		visible = {
+			has_country_flag = hiring_mercenaries
+		}
+		available = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = RoF_Mercenary_Hiring
+						option = ROF_DEFAULT_MERCS
+					}
+				}
+				OR = {
+					has_idea = mercenary_army
+					has_government = absolutist
+					surrender_progress > 0.4
+				}
+			}
+		}
+		custom_cost_text = merc_large_cost_tt
+		custom_cost_trigger = {
+			has_political_power > var:merc_large_cost
+		}
+		days_re_enable = 28
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { merc_large_cost = 20 }
+				calc_merc_hire_size = yes
+				multiply_variable = { merc_large_cost = merc_size }
+				multiply_variable = { ROOT.merc_large_cost = -1 }
+				add_political_power = ROOT.merc_large_cost
+				multiply_variable = { ROOT.merc_large_cost = -1 }
+				add_to_variable = { merc_pool_large = merc_size }
+				calc_merc_weight = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_template = "Mercenary Army" }
+				}
+				division_template = {
+					name = "Mercenary Army"
+					is_locked = yes
+					regiments = {
+						merc_tercio_infantry = { x = 0 y = 0 }
+						merc_tercio_infantry = { x = 0 y = 1 }
+						merc_tercio_infantry = { x = 0 y = 2 }
+						merc_tercio_infantry = { x = 0 y = 3 }
+						heavy_artillery_brigade = { x = 0 y = 4 }
+						merc_tercio_infantry = { x = 1 y = 0 }
+						merc_tercio_infantry = { x = 1 y = 1 }
+						merc_tercio_infantry = { x = 1 y = 2 }
+						merc_tercio_infantry = { x = 1 y = 3 }
+						heavy_artillery_brigade = { x = 1 y = 4 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Mercenary Army\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+						owner = ROOT
+						count = merc_size
+						id = merc_army_id
+					}
+				}
+				else = {
+					random_controlled_state = {
+						create_unit = {
+							division = "division_template = \"Mercenary Army\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+							owner = ROOT
+							count = merc_size
+							id = merc_army_id
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				set_temp_variable = { equip_deficit = num_equipment_in_armies_k@firearm_equipment }
+				subtract_from_temp_variable = { equip_deficit = num_target_equipment_in_armies_k@firearm_equipment }
+				add = equip_deficit
+				check_variable = {
+					equip_deficit < 0
+				}
+			}
+			modifier = {
+				set_temp_variable = { merc_weight_mod = merc_weight }
+				multiply_temp_variable = { merc_weight_mod = -1 }
+				round_temp_variable = merc_weight_mod
+				add = merc_weight_mod
+				always = yes
+			}
+			modifier = {
+				add = 1
+				has_war = yes
+			}
+			modifier = {
+				add = 1
+				num_of_military_factories > 20
+			}
+			modifier = {
+				add = 1
+				alliance_strength_ratio < 0.5
+			}
+			modifier = {
+				add = 2
+				ai_wants_divisions > 50
+			}
+			modifier = {
+				add = 5
+				ai_wants_divisions > 100
+			}
+			modifier = {
+				add = 10
+				ai_wants_divisions > 200
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 6
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 11
+			}
+			modifier = {
+				factor = 0.5
+				num_of_military_factories < 21
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+				NOT = {
+					any_country = {
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+RoF_economy_decisions = {
+	advance_industrial_mod_agr_TEMP = {
+		available = {
+			has_idea = primitive_agrarian
+			if = {
+				limit = { mod_agr_focus_block = no }
+				mod_agr_focus_block = yes
+				else = {
+					num_of_factories > 20
+					has_tech = infrastructure_tech_1
+					has_tech = electronic_mechanical_engineering
+					has_tech = construction1
+				}
+			}
+		}
+		visible = {
+			is_ai = yes
+		}
+		cost = 75
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = primitive_agrarian
+				add_idea = modern_agrarian
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	advance_industrial_early_ind_TEMP = {
+		available = {
+			has_idea = modern_agrarian
+			if = {
+				limit = { early_ind_focus_block = no }
+				early_ind_focus_block = yes
+				else = {
+					num_of_factories > 40
+					has_tech = infrastructure_tech_2
+					has_tech = mechanical_computing
+					has_tech = construction2
+				}
+			}
+		}
+		visible = {
+			is_ai = yes
+		}
+		cost = 75
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = modern_agrarian
+				add_idea = early_industrial
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	advance_industrial_fully_ind_TEMP = {
+		available = {
+			has_idea = early_industrial
+			if = {
+				limit = { fully_ind_focus_block = no }
+				fully_ind_focus_block = yes
+				else = {
+					num_of_factories > 60
+					has_tech = infrastructure_tech_3
+					has_tech = computing_machine
+					has_tech = construction3
+				}
+			}
+		}
+		visible = {
+			is_ai = yes
+		}
+		cost = 75
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = early_industrial
+				add_idea = fully_industrial
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+}
 
 political_actions = {
-
     anti_absolutist_raids = {
 
     	icon = generic_civil_support

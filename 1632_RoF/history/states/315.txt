@@ -1,4 +1,3 @@
-
 state = {
 	id = 315
 	name = "STATE_315"
@@ -6,6 +5,7 @@ state = {
 		owner = WAF
 	}
 
+	local_supplies = 5.0
 	provinces = {
 		2165
 	}

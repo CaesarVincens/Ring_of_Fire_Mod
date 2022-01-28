@@ -30,6 +30,10 @@ technologies = {
 			tercio_formation_tech
 		}
 
+		path = {
+			research_cost_coeff = 1
+			leads_to_tech = gulyay_gorod_tech
+		}
 		research_cost = 1
 		start_year = 1500
 		folder = {
@@ -72,6 +76,34 @@ technologies = {
 			modifier = {
 				factor = 0
 				has_tech = musket_tech
+			}
+		}
+	}
+	gulyay_gorod_tech = {
+		enable_subunits = {
+			gulyay_gorod
+		}
+		enable_equipments = {
+			gulyay_gorod_equipment_0
+		}
+		allow_branch = {
+			OR = {
+				original_tag = RUS
+			}
+		}
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 2 }
+		}
+		research_cost = 1
+		start_year = 1550
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					original_tag = RUS
+				}
 			}
 		}
 	}

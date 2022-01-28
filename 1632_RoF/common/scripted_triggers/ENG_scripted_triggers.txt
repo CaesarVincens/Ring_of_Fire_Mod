@@ -1,36 +1,46 @@
 ENG_constitutionalist_45 = {
+	set_temp_variable = { ENG_con = party_popularity@constitutionalist }
+	set_temp_variable = { ENG_lib_rad = party_popularity@liberal }
+	add_to_temp_variable = { ENG_lib_rad = party_popularity@radical }
 	OR = {
-		constitutionalist > 0.45
+		check_variable = { ENG_con > 0.45 }
+		#constitutionalist > 0.45
 		AND = {
-			constitutionalist > 0.40
-			OR = {
-				liberal > 0.1
-				radical > 0.1
-				AND = { liberal > 0.05 radical > 0.05 }
-			}
+			check_variable = { ENG_con > 0.4 }
+			check_variable = { ENG_lib_rad > 0.1 }
+			#constitutionalist > 0.40
+			#OR = {
+			#	liberal > 0.1
+			#	radical > 0.1
+			#	AND = { liberal > 0.05 radical > 0.05 }
+			#}
 		}
 		AND = {
-			constitutionalist > 0.35
-			OR = {
-				liberal > 0.2
-				radical > 0.2
-				AND = { liberal > 0.1 radical > 0.1 }
-				AND = { liberal > 0.15 radical > 0.05 }
-				AND = { liberal > 0.05 radical > 0.15 }
-			}
+			check_variable = { ENG_con > 0.35 }
+			check_variable = { ENG_lib_rad > 0.2 }
+			#constitutionalist > 0.35
+			#OR = {
+			#	liberal > 0.2
+			#	radical > 0.2
+			#	AND = { liberal > 0.1 radical > 0.1 }
+			#	AND = { liberal > 0.15 radical > 0.05 }
+			#	AND = { liberal > 0.05 radical > 0.15 }
+			#}
 		}
 		AND = {
-			constitutionalist > 0.30
-			OR = {
-				liberal > 0.3
-				radical > 0.3
-				AND = { liberal > 0.15 radical > 0.15 }
-				AND = { liberal > 0.25 radical > 0.05 }
-				AND = { liberal > 0.2 radical > 0.1 }
-				AND = { liberal > 0.15 radical > 0.15 }
-				AND = { liberal > 0.1 radical > 0.2 }
-				AND = { liberal > 0.05 radical > 0.25 }
-			}
+			check_variable = { ENG_con > 0.3 }
+			check_variable = { ENG_lib_rad > 0.3 }
+			#constitutionalist > 0.30
+			#OR = {
+			#	liberal > 0.3
+			#	radical > 0.3
+			#	AND = { liberal > 0.15 radical > 0.15 }
+			#	AND = { liberal > 0.25 radical > 0.05 }
+			#	AND = { liberal > 0.2 radical > 0.1 }
+			#	AND = { liberal > 0.15 radical > 0.15 }
+			#	AND = { liberal > 0.1 radical > 0.2 }
+			#	AND = { liberal > 0.05 radical > 0.25 }
+			#}
 		}
 	}
 }

@@ -5,6 +5,7 @@ oob = "POR_OOB"
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -20,6 +21,7 @@ set_convoys = 10
 BRZ = {
 	set_country_flag = colony_flag
 }
+
 # DIPLOMACY
     set_autonomy = {
         target = KEN
@@ -52,6 +54,7 @@ set_popularities = {
 	neutrality = 62
 }
 
+set_country_flag = pseudo_subject
 set_country_flag = religion_catholic
 add_ideas = {
 	balanced_eco

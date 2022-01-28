@@ -607,12 +607,10 @@ lar_local_recruitment = {
 			FROM = {
 				is_on_continent = asia
 				NOT = {
-					is_core_of = RAJ
-					is_core_of = PAK
+					is_core_of = MUG
+					is_core_of = LKA
 					is_core_of = BAN
 					is_core_of = NEP
-					is_core_of = BHU
-					is_core_of = SRL
 				}
 				CONTROLLER = {
 					NOT = {
@@ -630,12 +628,10 @@ lar_local_recruitment = {
 				}
 			}
 			NOT = {
-				tag = RAJ
-				tag = PAK
+				tag = MUG
+				tag = LKA
 				tag = BAN
 				tag = NEP
-				tag = BHU
-				tag = SRL
 			}
 			NOT = { has_country_flag = asia_recruitment_in_process }
 		}
@@ -790,39 +786,32 @@ lar_local_recruitment = {
 
 		visible = {
 			NOT = {
-				tag = RAJ
-				tag = PAK
+				tag = MUG
+				tag = LKA
 				tag = BAN
 				tag = NEP
-				tag = BHU
 			}
 			OR = {
 				any_owned_state = {
 					OR = {
-						is_core_of = RAJ
-						is_core_of = PAK
+						is_core_of = MUG
+						is_core_of = LKA
 						is_core_of = BAN
 						is_core_of = NEP
-						is_core_of = BHU
-						is_core_of = SRL
 					}
 				}
-				is_in_faction_with = RAJ
-				is_in_faction_with = PAK
+				is_in_faction_with = MUG
+				is_in_faction_with = LKA
 				is_in_faction_with = BAN
 				is_in_faction_with = NEP
-				is_in_faction_with = BHU
-				is_in_faction_with = SRL
 				any_other_country = {
 					is_subject_of = ROOT
 					any_owned_state = {
 						OR = {
-							is_core_of = RAJ
-							is_core_of = PAK
+							is_core_of = MUG
+							is_core_of = LKA
 							is_core_of = BAN
 							is_core_of = NEP
-							is_core_of = BHU
-							is_core_of = SRL
 						}
 					}
 				}
@@ -859,12 +848,10 @@ lar_local_recruitment = {
 		target_trigger = {
 			FROM = {
 				OR = {
-					is_core_of = RAJ
-					is_core_of = PAK
+					is_core_of = MUG
+					is_core_of = LKA
 					is_core_of = BAN
 					is_core_of = NEP
-					is_core_of = BHU
-					is_core_of = SRL
 				}
 				CONTROLLER = {
 					NOT = {
@@ -877,12 +864,10 @@ lar_local_recruitment = {
 		visible = {
 			OR = {
 				has_country_flag = india_recruitment_unlocked
-				tag = RAJ
-				tag = PAK
+				tag = MUG
+				tag = LKA
 				tag = BAN
 				tag = NEP
-				tag = BHU
-				tag = SRL
 			}
 			NOT = { has_country_flag = india_recruitment_in_process }
 		}

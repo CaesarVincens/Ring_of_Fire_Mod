@@ -1,28 +1,55 @@
-#	Example:
-#
-#	example_effect = {
-#		add_political_power = 66
-#		add_popularity = {
-#			ideology = fascism
-#			popularity = 0.33
-#		}
-#	}
-#
-#
-#	In a script file:
-#
-#	effect = {
-#		example_effect = yes
-#	}
-#
 
+calc_merc_hire_size = {
+	set_temp_variable = { merc_size = 1 }
+	if = {
+		limit = {
+			is_major = yes
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+	if = {
+		limit = {
+			num_of_military_factories > 20
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+	if = {
+		limit = {
+			is_faction_leader = yes
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+	if = {
+		limit = {
+			num_of_controlled_states > 10
+		}
+		add_to_temp_variable = { merc_size = 1 }
+	}
+}
+calc_merc_weight = {
+	set_variable = { merc_weight = 0 }
+	add_to_variable = { merc_weight = merc_pool_small }
+	add_to_variable = { merc_weight = merc_pool_medium }
+	add_to_variable = { merc_weight = merc_pool_medium }
+	add_to_variable = { merc_weight = merc_pool_large }
+	add_to_variable = { merc_weight = merc_pool_large }
+	add_to_variable = { merc_weight = merc_pool_large }
+	add_to_variable = { merc_weight = merc_pool_large }
+	set_variable = { merc_weight_cost = merc_weight }
+	set_variable = { merc_weight_man = merc_weight }
+	multiply_variable = { merc_weight_cost = 0.002 }
+	multiply_variable = { merc_weight_man = 50 }
+	clamp_variable = { var = merc_weight_man min = 0 max = 2000 }
+	#round_variable = merc_weight_cost
+	#multiply_variable = { merc_weight_cost = 0.001 }
+}
 transfer_occupied_cores_PREV = {
 	every_state = {
 		limit = {
 			is_controlled_by = ROOT
 			is_core_of = PREV
 		}
-		PREV = { transfer_state = PREV }
+		transfer_state_to = PREV
 	}
 }
 
@@ -79,7 +106,20 @@ lessen_AUS_kipper = {
 	}
 }
 
-
+NUS_flag_stars = {
+	if = {
+		limit = {
+			has_cosmetic_tag = NUS_one_star
+		}
+		set_cosmetic_tag = NUS_two_star
+		else_if = {
+			limit = {
+				has_cosmetic_tag = NUS_two_star
+			}
+			drop_cosmetic_tag = yes
+		}
+	}
+}
 ##########################################
 ###     Show/Hide Religion Ideas      ####
 ##########################################
@@ -204,304 +244,6 @@ set_USE_parties = {
 				radical = USE_rad
 				neutrality = USE_iso_rest
 			}
-		}
-	}
-
-	#set_variable = { USE_abs2 = USE_abs }
-	#set_variable = { USE_cons2 = USE_cons }
-	#set_variable = { USE_lib2 = USE_lib }
-	#set_variable = { USE_rad2 = USE_rad }
-	#set_variable = { USE_iso2 = USE_iso }
-
-	#set_variable = { other_parties = 0 }
-	#add_to_variable = { other_parties = USE_cons }
-	#add_to_variable = { other_parties = USE_lib }
-	#add_to_variable = { other_parties = USE_rad }
-	#add_to_variable = { other_parties = USE_iso }
-	#multiply_variable = { other_parties = 1.1 }
-	#add_to_variable = { other_parties = 1 }
-	#add_popularity = {
-	#	ideology = neutrality
-	#	popularity = 1
-	#}
-	#multiply_variable = { USE_abs = other_parties }
-	#add_popularity = {
-	#	ideology = absolutist
-	#	popularity = USE_abs
-	#}
-	#subtract_from_variable = { other_parties = USE_cons }
-	#multiply_variable = { USE_cons = other_parties }
-	#add_popularity = {
-	#	ideology = constitutionalist
-	#	popularity = USE_cons
-	#}
-	#subtract_from_variable = { other_parties = USE_rad }
-	#multiply_variable = { USE_rad = other_parties }
-	#add_popularity = {
-	#	ideology = radical
-	#	popularity = USE_rad
-	#}
-	#add_popularity = {
-	#	ideology = liberal
-	#	popularity = USE_lib
-	#}
-
-	#set_variable = { USE_abs = USE_abs2 }
-	#set_variable = { USE_cons = USE_cons2 }
-	#set_variable = { USE_lib = USE_lib2 }
-	#set_variable = { USE_rad = USE_rad2 }
-	#set_variable = { USE_iso = USE_iso2 }
-
-	#subtract_from_variable = { USE_iso2 = party_popularity@neutrality }
-	#add_popularity = {
-	#	ideology = neutrality
-	#	popularity = USE_iso2
-	#}
-	#subtract_from_variable = { USE_abs2 = party_popularity@absolutist }
-	#add_popularity = {
-	#	ideology = absolutist
-	#	popularity = USE_abs2
-	#}
-	#subtract_from_variable = { USE_cons2 = party_popularity@constitutionalist }
-	#add_popularity = {
-	#	ideology = constitutionalist
-	#	popularity = USE_cons2
-	#}
-	#subtract_from_variable = { USE_rad2 = party_popularity@radical }
-	#add_popularity = {
-	#	ideology = radical
-	#	popularity = USE_rad2
-	#}
-	#subtract_from_variable = { USE_lib2 = party_popularity@liberal }
-	#add_popularity = {
-	#	ideology = liberal
-	#	popularity = USE_lib2
-	#}
-	#ubtract_from_variable = { USE_iso = party_popularity@neutrality }
-	#add_popularity = {
-	#	ideology = neutrality
-	#	popularity = USE_iso
-	#}
-	#subtract_from_variable = { USE_abs = party_popularity@absolutist }
-	#add_popularity = {
-	#	ideology = absolutist
-	#	popularity = USE_abs
-	#}
-	#subtract_from_variable = { USE_cons = party_popularity@constitutionalist }
-	#add_popularity = {
-	#	ideology = constitutionalist
-	#	popularity = USE_cons
-	#}
-	#subtract_from_variable = { USE_rad = party_popularity@radical }
-	#add_popularity = {
-	#	ideology = radical
-	#	popularity = USE_rad
-	#}
-	#subtract_from_variable = { USE_lib = party_popularity@liberal }
-	#add_popularity = {
-	#	ideology = liberal
-	#	popularity = USE_lib
-	#}
-}
-
-##########################################
-###      Split Equipment Effect       ####
-##########################################
-
-#PREV gains equipment from THIS
-#TARGET = {
-#	ROOT = {
-#		split_equipment_half = yes
-#	}	
-#}
-split_equipment_half = {
-	set_variable = {
-		var = convoy_var
-		value = num_equipment@convoy
-	}
-	multiply_variable = {
-		var = convoy_var
-		value = 0.5
-	}
-	send_equipment = {
-		type = convoy
-		amount = convoy_var
-		target = PREV
-	}
-	if = {
-		limit = { has_tech = arquebus_weapons }
-		set_variable = {
-			var = firearms_var
-			value = num_equipment@firearm_equipment
-		}
-		multiply_variable = {
-			var = firearms_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = firearm_equipment
-			amount = firearms_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = pike_weapons }
-		set_variable = {
-			var = pikes_var
-			value = num_equipment@pike_equipment
-		}
-		multiply_variable = {
-			var = pikes_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = pike_equipment
-			amount = pikes_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = light_artillery_1 }
-		set_variable = {
-			var = lcannon_var
-			value = num_equipment@light_artillery_equipment
-		}
-		multiply_variable = {
-			var = lcannon_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = light_artillery_equipment
-			amount = lcannon_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = heavy_artillery_1 }
-		set_variable = {
-			var = hcannon_var
-			value = num_equipment@heavy_artillery_equipment
-		}
-		multiply_variable = {
-			var = hcannon_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = heavy_artillery_equipment
-			amount = hcannon_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = apc_tech_0 }
-		set_variable = {
-			var = apc_var
-			value = num_equipment@apc_equipment
-		}
-		multiply_variable = {
-			var = apc_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = apc_equipment
-			amount = apc_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = early_gas_tank }
-		set_variable = {
-			var = gas_tank_var
-			value = num_equipment@gas_tank_equipment
-		}
-		multiply_variable = {
-			var = gas_tank_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = gas_tank_equipment
-			amount = gas_tank_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = early_steam_tank }
-		set_variable = {
-			var = steam_tank_var
-			value = num_equipment@steam_tank_equipment
-		}
-		multiply_variable = {
-			var = steam_tank_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = steam_tank_equipment
-			amount = steam_tank_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = motorised_infantry }
-		set_variable = {
-			var = motorized_var
-			value = num_equipment@motorized_equipment
-		}
-		multiply_variable = {
-			var = motorized_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = motorized_equipment
-			amount = motorized_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = tech_support }
-		set_variable = {
-			var = support_var
-			value = num_equipment@support_equipment
-		}
-		multiply_variable = {
-			var = support_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = support_equipment
-			amount = support_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = antiair1 }
-		set_variable = {
-			var = aa_var
-			value = num_equipment@anti_air_equipment
-		}
-		multiply_variable = {
-			var = aa_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = anti_air_equipment
-			amount = aa_var
-			target = PREV
-		}
-	}
-	if = {
-		limit = { has_tech = antitank1 }
-		set_variable = {
-			var = at_var
-			value = num_equipment@anti_tank_equipment
-		}
-		multiply_variable = {
-			var = at_var
-			value = 0.5
-		}
-		send_equipment = {
-			type = anti_tank_equipment
-			amount = at_var
-			target = PREV
 		}
 	}
 }
@@ -686,9 +428,9 @@ reduce_state_category = {
 	}
 }
 
-##########################################
-### Check for CoC vars and apply idea ####
-##########################################
+###########################################
+#### Check for CoC vars and apply idea ####
+###########################################
 
 #From scope of (original country)
 clear_CoC_vars_and_flags = {

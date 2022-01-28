@@ -1,19 +1,18 @@
-
-state={
-	id=548
-	name="STATE_548"
-	resources={
-		aluminium=0.000
-		steel=8.000
+state = {
+	id = 548
+	name = "STATE_548"
+	resources = {
+		aluminium = 0.000
+		steel = 8.000
 	}
 
-	history={
+	history = {
 		owner = EGY
 		victory_points = {
 			7144 3 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -23,10 +22,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1068 1080 4055 4143 7030 7144 7188 9957 10031 10126 12004 
 	}
-	manpower=677000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 677000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

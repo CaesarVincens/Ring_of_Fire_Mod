@@ -93,6 +93,15 @@ bookmarks = {
 			minor = yes
 			history = "POL_RING_OF_FIRE_DESC"
 			ideology = absolutist
+			ideas = {
+				POL_henrician_articles
+				POL_powerful_magnates
+			}
+			focuses = {
+				POL_maintain_status_quo
+				POL_strengthen_the_sejm
+				POL_strengthen_king
+			}
 		}
 		"RUS"={
 			minor = yes

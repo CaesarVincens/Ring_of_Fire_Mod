@@ -1,8 +1,10 @@
 SWE_canon_focuses = {
 	name = "Sweden Canon Plan"
 	desc = ""
-	enable = {
+	allowed = {
 		original_tag = SWE
+	}
+	enable = {
 		OR = {
 			is_historical_focus_on = yes
 		}
@@ -27,8 +29,10 @@ SWE_focus_on_germany_plan = {
 	name = "Focus on Germany"
 	desc = "War with Austria1"
 	
-	enable = {
+	allowed = {
 		original_tag = SWE
+	}
+	enable = {
 		has_global_flag = thirty_years_war_ongoing
 	}
 	abort = {
@@ -55,6 +59,9 @@ SWE_ignore_russia = {
 	name = "Ignore Russia"
 	desc = "Ignore Russia"
 	
+	allowed = {
+		original_tag = SWE
+	}
 	enable = {
 		original_tag = SWE
 	}
@@ -68,7 +75,7 @@ SWE_ignore_russia = {
 	}
 	ai_strategy = {
 		type = ignore
-		id = "USR"
+		id = "RSA"
 		value = 1000
 	}
 	ai_strategy = {
@@ -127,8 +134,10 @@ SWE_Thirty_Years_War = {
 SWE_Ostend_War = {
 	name = "Watch for Denmark"
 	desc = "Ostend Prep"
-	enable = {
+	allowed = {
 		original_tag = SWE
+	}
+	enable = {
 		OR = {
 			DEN = { has_completed_focus = DEN_ostend_league }
 			FRA = { has_completed_focus = FRA_ostend_league_focus }
@@ -163,8 +172,10 @@ SWE_Ostend_War = {
 SWE_Ostend_War2 = {
 	name = "Watch for Denmark"
 	desc = "Ostend Prep"
-	enable = {
+	allowed = {
 		original_tag = SWE
+	}
+	enable = {
 		OR = {
 			DEN = { has_completed_focus = DEN_ostend_league }
 			FRA = { has_completed_focus = FRA_ostend_league_focus }

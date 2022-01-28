@@ -1,4 +1,3 @@
-
 state = {
 	id = 429
 	name = "STATE_429"
@@ -8,8 +7,11 @@ state = {
 		victory_points = {
 			6464 3 
 		}
+		victory_points = {
+			11467 3 
+		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
 			air_base = 0
@@ -20,8 +22,9 @@ state = {
 		set_state_flag = german_state_flag
 	}
 
+	local_supplies = 5.0
 	provinces = {
-		3414 3583 6464 6485 9412 9457 9551 9567 11467 
+		3414 3583 6464 9412 9457 9551 9567 11467 13205
 	}
 	manpower = 220400
 	buildings_max_level_factor = 1.000

@@ -1,0 +1,15 @@
+scripted_gui = {
+
+	pol_sejm_decision_ui = {
+		context_type = decision_category
+		window_name = "pol_sejm_decision_ui_window"
+
+		properties = {
+			sejm_icon = {
+				frame = current_sejm_icon_frame
+			}
+		}
+	}
+	
+}
+

@@ -2,9 +2,11 @@
 
 oob = "FRA_OOB"
 
+set_major = yes
 # Starting tech
 set_technology = {
 infrastructure_tech_base = 1
+basic_train = 1
 pike_weapons = 1
 tercio_formation_tech = 1
 arquebus_weapons = 1
@@ -33,48 +35,14 @@ set_popularities = {
 
 set_country_flag = religion_catholic
 add_ideas = {
-	FRA_cardinal_richelieu
+    #FRA_cardinal_richelieu
 	anti_habsburg_diplomacy
 	FRA_gaston
 	state_religion_law
 	FRA_edict_of_nantes
 }
+recruit_character = FRA_louis_de_bourbon
+recruit_character = FRA_vicomte_de_turenne
+recruit_character = FRA_cardinal_richelieu
+activate_advisor = FRA_cardinal_richelieu
 set_stability = 0.4
-create_country_leader = {
-    name = "Louis XIII de Bourbon"
-    desc = "POLITICS_LOUIS_13_BOURBON_DESC"
-    picture = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
-    expire = "1660.1.1"
-    ideology = absolute_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Louis XIII de Bourbon"
-    desc = "POLITICS_LOUIS_13_BOURBON_DESC"
-    picture = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
-    expire = "1660.1.1"
-    ideology = constitutional_monarchy
-    traits = {
-    }
-}
-create_country_leader = {
-    name = "Louis XIII de Bourbon"
-    desc = "POLITICS_LOUIS_13_BOURBON_DESC"
-    picture = "gfx/leaders/FRA/Portrait_France_Louis_XIII.dds"
-    expire = "1660.1.1"
-    ideology = monarchy_neutral
-    traits = {
-    }
-}
-
-create_corps_commander = {
-	name = "Vicomte de Turenne"
-	picture = "Portrait_France_Turenne.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	logistics_skill = 1
-	planning_skill = 1
-}

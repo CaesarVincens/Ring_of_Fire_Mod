@@ -1,19 +1,18 @@
-
-state={
-	id=217
-	name="STATE_217"
-	resources={
-		steel=5.000
-		tungsten=2.000
+state = {
+	id = 217
+	name = "STATE_217"
+	resources = {
+		steel = 5.000
+		tungsten = 2.000
 	}
 
-	history={
+	history = {
 		owner = KOR
 		victory_points = {
 			7125 9 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 0
 			air_base = 0
@@ -27,10 +26,11 @@ state={
 
 	}
 
-	provinces={
+	local_supplies = 5.0
+	provinces = {
 		1100 1148 4103 7021 7125 7175 7204 7221 9936 10036 10115 11912 11992 12011 
 	}
-	manpower=2840528
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 2840528
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }
