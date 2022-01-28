@@ -214,7 +214,7 @@
  POL_autonomy_for_support_RUT:0 "Owns the eastern Ruthenian lands (§Y[688.GetName]§!, §Y[689.GetName]§!, §Y[353.GetName]§!, and §Y[690.GetName]§!)"
  POL_abolish_sejm:0 "Abolish the Sejm"
  POL_abolish_sejm_desc:0 "With the support of the magnates"
- POL_abolish_sejm_tt:0 "We will no longer require approval from the Sejm to persue policies.\nThe szlachta will almost certainly form a §Ykonfederacja§! against this breech of their privileges. (NOT IMPLEMENTED YET)"
+ POL_abolish_sejm_tt:0 "We will no longer require approval from the Sejm to persue policies.\nThe szlachta will almost certainly form a §Ykonfederacja§! against this breech of their privileges. (PARTIALLY IMPLEMENTED)"
  POL_abolished_sejm:0 "We rule without the Sejm"
  POL_secure_sucession:0 "Secure the Sucession"
  POL_secure_sucession_desc:0 "King Sigismund has long held the goal of ensuring that his son Władysław inherits the throne of the Polish-Lithuanian Commonwealth. However, unlike nearly every other monarchy in Europe, the son does not simply inherit, but must be elected.\n\nStill, with the right assurances, bribes, and threats, we can bring the Szlachta around to our view."
