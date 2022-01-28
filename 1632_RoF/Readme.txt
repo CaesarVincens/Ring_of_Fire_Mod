@@ -14,7 +14,7 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
-Alpha 0.8.0 - 
+Alpha 0.8.0 - Jan. 27, 2022
 Updated to HoI4 1.11
 Reworked Polish states to match historical regions
 Polish focus tree with Sejm (Congress-esque) and Balance of Power mechanics
@@ -24,6 +24,7 @@ Added Mercenary hiring decisions, likely unbalanced, toggleable by game rule
 Updates to Ottoman focus tree, including a mechanic to integrate the starting vassals without Together for Victory
 Added Game Rules for most countries with focus trees to select paths, not all paths scripted yet.
 Added special projects for NUS, toggleable by game rule, created by Hampter
+You get a GiE, you get a GiE, and you get a GiE!
 
 Alpha 0.7.5 - Oct. 15, 2020
 Updated to HoI4 1.10

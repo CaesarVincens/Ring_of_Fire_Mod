@@ -33,11 +33,6 @@ POL_major_decisions = {
 			}
 		}
 	}
-	POL_test = {
-		complete_effect = {
-			complete_national_focus = POL_strengthen_king
-		}
-	}
 }
 
 POL_sejm = {
