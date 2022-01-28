@@ -1313,7 +1313,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1910
+		start_year = 1630
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1613 }
@@ -1388,8 +1388,11 @@ technologies = {
 			train_equipment_2
 		}
 
+		dependencies = {
+			infrastructure_tech_3 = 1
+		}
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1635
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1635 }
@@ -1430,6 +1433,7 @@ technologies = {
 
 		allow_branch = {
 			has_dlc = "No Step Back"
+			always = no
 		}
 
 		path = {

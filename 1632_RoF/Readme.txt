@@ -22,7 +22,7 @@ Reworked Russian civil war to use dynamic countries
 Updates to Russian and English focus trees making use of La Resistence updated layout mechanics
 Added Mercenary hiring decisions, likely unbalanced, toggleable by game rule
 Updates to Ottoman focus tree, including a mechanic to integrate the starting vassals without Together for Victory
-Added Game Rules for most countries with focus trees
+Added Game Rules for most countries with focus trees to select paths, not all paths scripted yet.
 Added special projects for NUS, toggleable by game rule, created by Hampter
 
 Alpha 0.7.5 - Oct. 15, 2020

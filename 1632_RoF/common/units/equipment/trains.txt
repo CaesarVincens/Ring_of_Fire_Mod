@@ -1,7 +1,7 @@
 equipments = {
 	#archetype
 	train_equipment = {
-		year = 1910
+		year = 1630
 
 		is_archetype = yes
 		is_buildable = no
@@ -22,7 +22,7 @@ equipments = {
 	}
 	# regular trains
 	train_equipment_1 = {
-		year = 1910
+		year = 1630
 
 		archetype = train_equipment
 		type = {
@@ -33,14 +33,14 @@ equipments = {
 
 		priority = 10
 
-		build_cost_ic = 70
+		build_cost_ic = 100
 		resources = {
 			steel = 1
 		}
 	}
 	# cheap trains
 	train_equipment_2 = {
-		year = 1940
+		year = 1635
 
 		archetype = train_equipment
 		parent = train_equipment_1
