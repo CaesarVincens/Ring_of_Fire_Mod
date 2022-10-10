@@ -845,7 +845,7 @@ country_event = {
 		name = war_justification.301.a
 		trigger = { has_government = constitutionalist }
 		add_political_power = -30
-		add_stability = -0.03
+		add_war_support = -0.05
 		add_popularity = {
 			ideology = constitutionalist
 			popularity = -0.05
@@ -856,7 +856,7 @@ country_event = {
 		name = war_justification.301.b
 		trigger = { has_government = liberal }
 		add_political_power = -30
-		add_stability = -0.03
+		add_war_support = -0.05
 		add_popularity = {
 			ideology = liberal
 			popularity = -0.05
@@ -867,7 +867,7 @@ country_event = {
 		name = war_justification.301.b
 		trigger = { has_government = radical }
 		add_political_power = -30
-		add_stability = -0.03
+		add_war_support = -0.05
 		add_popularity = {
 			ideology = radical
 			popularity = -0.05
@@ -878,6 +878,10 @@ country_event = {
 		name = war_justification.301.c
 		trigger = { has_government = neutrality }
 		add_political_power = -30
-		add_stability = -0.03
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
 	}
 }

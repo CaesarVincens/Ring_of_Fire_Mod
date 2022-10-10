@@ -13,6 +13,7 @@
  autonomy_wtt_imperial_protectorate:0 "Imperial Protectorate"
  autonomy_wtt_imperial_subject:1 "Imperial Subject"
  autonomy_collaboration_government:0 "Collaboration Government"
+ autonomy_personal_union:0 "Personal Union"
  AUTONOMY_CAN_TAKE_DESC:1 "$OWNER|UH$ can become a $NEXTLEVEL|H$"
  AUTONOMY_CANT_TAKE_DESC:1 "$OWNER|UH$ can not become a $NEXTLEVEL|H$ yet"
  AUTONOMY_CAN_LOSE_DESC:1 "$OWNER|UH$ can be reduced to a $PREVLEVEL|H$"
@@ -64,4 +65,5 @@
  CONSTRUCTION_MASTER_BUILDING_CANT_REDUCE:0 "§RWe are not allowed to reduce the level or cancel this construction.§!"
  CONSTRUCTION_INFO_MASTER:0 "This construction is built on the $WHO|H$ territory. If we don't use all factories, they can contribute using theirs."
  CONSTRUCTION_INFO_SUBJECT:0 "This construction is built for us by the $WHO|H$. If they don't use all factories, we can contribute using ours."
- 
+ autonomy_communist_satellite:0 "Satellite"
+ autonomy_occupation_zone:0 "Occupation Zone"
