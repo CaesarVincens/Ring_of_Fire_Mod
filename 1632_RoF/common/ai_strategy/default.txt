@@ -392,6 +392,7 @@ highered_armored_production = {
 
 slightly_naval_focused_nation = {
 	enable = {
+		always = yes
 	}
 
 	ai_strategy = {
