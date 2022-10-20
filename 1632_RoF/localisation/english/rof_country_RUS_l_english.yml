@@ -3,6 +3,9 @@
  ###decisions###
  ###############
  RUS_major_decisions:0 "Important Decisions"
+ RUS_commonwealth_opinion_balance:0 "[POL.GetAdjective] Relations"
+ RUS_pro_commonwealth:0 "Pro-[POL.GetAdjective]"
+ RUS_anti_commonwealth:0 "Anti-[POL.GetAdjective]"
  ######################
  ###ideas/characters###
  ######################

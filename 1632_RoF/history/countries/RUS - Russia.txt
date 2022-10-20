@@ -82,3 +82,7 @@ recruit_character = RUS_mikhail_shein
 recruit_character = RUS_artemi_izmailov
 recruit_character = RUS_filaret
 activate_advisor = RUS_filaret
+set_power_balance = {
+	id = RUS_commonwealth_opinion_balance
+	set_default = yes  # whether or not to reset the power balance to the initial value, default = no
+}
