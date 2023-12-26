@@ -47,17 +47,17 @@ country_event = {
 						traits = {
 							grand_vizier
 						}
-						allowed = { original_tag = TUR }
-						available = {
-							if = {
-								limit = {
-									has_country_flag = TUR_husrev_dismissed
-								}
-								NOT = {
-									has_country_flag = TUR_husrev_dismissed
-								}
-							}
-						}
+						#allowed = { original_tag = TUR }
+						#available = {
+						#	if = {
+						#		limit = {
+						#			has_country_flag = TUR_husrev_dismissed
+						#		}
+						#		NOT = {
+						#			has_country_flag = TUR_husrev_dismissed
+						#		}
+						#	}
+						#}
 					}
 					activate = yes
 				}
@@ -71,6 +71,11 @@ country_event = {
 		deactivate_advisor = TUR_husrev_pasha
 		activate_advisor = TUR_hafiz_ahmed_pasha
 		hidden_effect = {
+			TUR_husrev_pasha = {
+				remove_advisor_role = {
+					slot = political_advisor
+				}
+			}
 			country_event = {
 				id = RoF_TUR.1011
 				days = 120
@@ -290,6 +295,13 @@ country_event = {
 			add_days_mission_timeout = {
 				mission = TUR_coup_threat
 				days = 30
+			}
+		}
+		hidden_effect = {
+			TUR_husrev_pasha = {
+				remove_advisor_role = {
+					slot = political_advisor
+				}
 			}
 		}
 	}

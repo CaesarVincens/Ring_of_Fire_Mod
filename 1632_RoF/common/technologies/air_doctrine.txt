@@ -40,6 +40,14 @@ technologies = {
 		ai_will_do = {
 			factor = 10
 			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
+			modifier = {
 				factor = 0
 				NOT = { has_tech = aerial_research_tech }
 			}
@@ -80,6 +88,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -117,6 +133,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -159,6 +183,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -200,6 +232,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -241,6 +281,18 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -284,6 +336,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -326,6 +386,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -367,6 +435,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -408,6 +484,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -446,6 +530,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 3
+			}
 		}
 		
 		ai_research_weights = {
@@ -483,6 +575,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -525,6 +625,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 3
+			}
 		}
 		
 		ai_research_weights = {
@@ -558,6 +666,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -589,6 +705,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -636,6 +760,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 			modifier = {
 				factor = 0
 				NOT = { has_tech = aerial_research_tech }
@@ -678,6 +811,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -720,6 +861,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -761,7 +910,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 10
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -803,6 +960,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -839,6 +1004,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -889,6 +1062,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -927,6 +1108,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -968,6 +1157,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1005,6 +1202,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1042,6 +1247,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1126,7 +1339,9 @@ technologies = {
 
 	force_rotation = {
 		doctrine_name = "TITLE_OPERATIONAL_INTEGRITY"
-				
+		
+		xp_research_type = air
+		
 		xor = { formation_flying air_superiority }	
 
 		# EFFECT ########
@@ -1161,6 +1376,14 @@ technologies = {
 				factor = 0
 				NOT = { has_tech = aerial_research_tech }
 			}
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 5
+			}
 		}
 	}
 	
@@ -1193,6 +1416,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1231,6 +1462,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1269,6 +1508,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1311,6 +1558,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1355,6 +1610,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1393,6 +1656,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1418,7 +1689,7 @@ technologies = {
 		xp_research_type = air
 		xp_unlock_cost = 100
 		doctrine = yes	
-		research_cost = 2
+		research_cost = 3
 		
 		categories = {
 			air_doctrine
@@ -1433,6 +1704,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1473,6 +1752,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1511,6 +1798,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1550,6 +1845,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				ai_land_doctrine_tier_1_trigger = yes
+				factor = 2
+			}
+			modifier = {
+				ai_land_doctrine_tier_2_trigger = yes
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {

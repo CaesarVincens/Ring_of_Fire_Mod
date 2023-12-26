@@ -193,6 +193,107 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
+	picture = GFX_intelligence_agency_logo_tur
+	names = { "Millî Emniyet Hizmeti" }
+
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_gre
+	names = { "Diéfthynsi Eidikís Asfaleías tou Krátous" "I Eidikí" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_bul
+	names = { "Natsionalnata Razuznavatelna Sluzhba" }
+
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_agency_logo_eth_fetno_derash
+	names = { fetno_derash arbegnoch }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_crid
+	names = { crid black_lions }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_smie
+	names = { smie }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
+	names = { "Buero Ha" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
+	names = { "Federal Police" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_DEN_sipo
+	names = { "Sikkerhedspolitiet" }
+
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ICE_logreglan
+	names = { "Lögreglan" }
+
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
 	picture = GFX_intelligence_agency_logo_generic_1
 	names = { "Rooke" }
 	

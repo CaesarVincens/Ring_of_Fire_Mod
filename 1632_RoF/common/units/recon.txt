@@ -54,7 +54,12 @@ sub_units = {
 			firearm_equipment = 40
 			support_equipment = 10
 		}
-
+		
+		battalion_mult = {
+			category = category_artillery
+			soft_attack = 0.10
+		}
+		
 		forest = {
 			movement = 0.05
 		}

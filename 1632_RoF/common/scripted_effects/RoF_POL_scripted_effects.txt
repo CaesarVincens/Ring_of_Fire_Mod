@@ -57,7 +57,7 @@ POL_end_lifetime_appointments_effect = {
 						slot = political_advisor
 						idea_token = POL_jakub_zadzik
 						traits = { grand_chancellor POL_king_opponent }
-						allowed = { original_tag = POL }
+						#allowed = { original_tag = POL }
 					}
 					activate = yes
 				}
@@ -68,7 +68,7 @@ POL_end_lifetime_appointments_effect = {
 							slot = political_advisor
 							idea_token = POL_jakub_zadzik
 							traits = { grand_chancellor POL_king_opponent }
-							allowed = { original_tag = POL }
+							#allowed = { original_tag = POL }
 						}
 					}
 				}

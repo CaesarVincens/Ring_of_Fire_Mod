@@ -60,11 +60,11 @@ sabotage_arms_factory = {
 			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
 		}
 		else = {
-		damage_building = {
-			type = arms_factory
-			damage = 0.25
-		}
-	}
+			damage_building = {
+				type = arms_factory
+				damage = 0.25
+			}
+		}		
 	}
 
 	alert_text = building_is_sabotaged
@@ -101,11 +101,11 @@ sabotage_infrastructure = {
 			subtract_from_variable = { var = targeted_sabotage_infrastructure value = 1 }
 		}
 		else = {
-		damage_building = {
-			type = infrastructure
-			damage = 0.5
-		}
-	}
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+		}		
 	}
 
 	alert_text = building_is_sabotaged
@@ -146,11 +146,11 @@ sabotage_industrial_complex = {
 			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
 		}
 		else = {
-		damage_building = {
-			type = industrial_complex
-			damage = 0.25
+			damage_building = {
+				type = industrial_complex
+				damage = 0.25
+			}
 		}
-	}
 	}
 
 	alert_text = building_is_sabotaged
@@ -256,10 +256,6 @@ sabotage_synthetic_refinery = {
 #
 #	weight = {
 #		base = 1
-#		modifier = {
-#			has_variable = targeted_sabotage_resouces
-#			add = var:targeted_sabotage_resouces
-#		}
 #	}
 #
 #	effect = {

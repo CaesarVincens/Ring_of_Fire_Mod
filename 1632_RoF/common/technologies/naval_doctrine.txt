@@ -94,13 +94,13 @@ technologies = {
 		
 		# EFFECT #############
 		battleship = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		battle_cruiser = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		heavy_cruiser = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		light_cruiser = {
 			surface_detection = 0.10
@@ -159,13 +159,13 @@ technologies = {
 	battlefleet_concentration = {
 		# EFFECT #############
 		battleship = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 		battle_cruiser = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 		heavy_cruiser = {
-			max_organisation = 10
+			max_organisation = 5
 		}
 		strike_force_movement_org_loss = -0.2
 		########
@@ -193,6 +193,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -235,6 +243,22 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -250,11 +274,11 @@ technologies = {
 		
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 20
+			max_organisation = 5
 			sub_detection = 0.1
 		}
 		light_cruiser = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.2
 		}
 
@@ -284,6 +308,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -328,6 +360,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -369,6 +409,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -416,6 +464,18 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -429,7 +489,7 @@ technologies = {
 		
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.05
 		}
 		convoy_escort_efficiency = 0.05
@@ -459,6 +519,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -473,7 +542,7 @@ technologies = {
 		
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.05
 		}
 		convoy_escort_efficiency = 0.1
@@ -503,6 +572,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -546,6 +632,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -560,7 +663,7 @@ technologies = {
 		
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 20
+			max_organisation = 5
 			sub_detection = 0.1
 		}
 		light_cruiser = {
@@ -597,6 +700,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -684,6 +804,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -727,6 +855,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -764,6 +900,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -834,6 +978,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -879,6 +1031,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -922,6 +1083,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -967,6 +1145,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1010,6 +1205,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1064,6 +1276,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1079,14 +1308,12 @@ technologies = {
 		# EFFECT ##############		
 		light_cruiser = {
 			max_organisation = 10
-			surface_visibility = -0.10
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.10
 		}
 
 		heavy_cruiser = {
 			max_organisation = 10
-			surface_visibility = -0.10
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.10
 		}
@@ -1131,14 +1358,12 @@ technologies = {
 		# EFFECT ##############		
 		battle_cruiser = {
 			max_organisation = 20
-			surface_visibility = -0.20
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.15
 		}
 
 		battleship = {
 			max_organisation = 20
-			surface_visibility = -0.25
 			convoy_raiding_coordination = 0.5
 			surface_detection = 0.25
 		}
@@ -1169,6 +1394,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1217,6 +1450,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1258,6 +1499,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1294,6 +1543,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1338,6 +1595,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_navy_size = {
+					type = carrier
+					size < 1
+				}
+				factor = 0
+			}
 		}
 		
 		ai_research_weights = {
@@ -1352,7 +1616,7 @@ technologies = {
 		#same as convoy_sailing
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.05
 		}
 		convoy_escort_efficiency = 0.05
@@ -1523,7 +1787,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1568,7 +1840,16 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 1.25
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1615,6 +1896,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1658,6 +1952,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 4
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1705,6 +2016,30 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
+			modifier = {
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+				}
+				factor = 2
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 4
+			}
 		}
 		
 		ai_research_weights = {
@@ -1747,6 +2082,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1788,6 +2131,23 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 4
+			}
 		}
 		
 		ai_research_weights = {
@@ -1831,6 +2191,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -1871,6 +2239,22 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1913,6 +2297,22 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1948,6 +2348,22 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -1961,7 +2377,7 @@ technologies = {
 		#same as convoy_escorts
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.05
 		}
 		convoy_escort_efficiency = 0.1
@@ -1990,6 +2406,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
 		}
 		
 		ai_research_weights = {
@@ -2004,11 +2428,11 @@ technologies = {
 		
 		# EFFECT ##############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.05
 		}
 		light_cruiser = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.1
 		}
 		
@@ -2038,6 +2462,22 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -2052,7 +2492,7 @@ technologies = {
 		#same as convoy_sailing
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.05
 		}
 		convoy_escort_efficiency = 0.05
@@ -2081,6 +2521,22 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+			modifier = {
+				has_navy_experience > 120
+				factor = 2
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_1_trigger = yes }
+				factor = 0.5
+			}
+			modifier = {
+				not = { ai_air_doctrine_tier_2_trigger = yes }
+				factor = 0.75
+			}
 		}
 		
 		ai_research_weights = {
@@ -2095,11 +2551,11 @@ technologies = {
 		#same as integrated_convoy_defence
 		# EFFECT #############
 		destroyer = {
-			max_organisation = 20
+			max_organisation = 5
 			sub_detection = 0.10
 		}
 		light_cruiser = {
-			max_organisation = 10
+			max_organisation = 5
 			sub_detection = 0.15
 		}
 		carrier = {

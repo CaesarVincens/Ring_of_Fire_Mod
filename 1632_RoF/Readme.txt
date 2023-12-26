@@ -14,6 +14,9 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.9.0 - Dec. 26, 2023
+Update to HoI4 1.13
+
 Alpha 0.8.0 - Jan. 27, 2022
 Updated to HoI4 1.11
 Reworked Polish states to match historical regions
