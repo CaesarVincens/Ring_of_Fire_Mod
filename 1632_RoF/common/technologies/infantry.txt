@@ -56,29 +56,7 @@ technologies = {
 			}
 		}
 	}
-	tercio_formation_tech = {
-		enable_subunits = {
-			tercio_infantry
-			#merc_tercio_infantry
-		}
-		allow = {
-			has_tech = arquebus_weapons
-		}
-		research_cost = 1
-		start_year = 1550
-		
-		categories = {
-			cat_pike_weapons
-			infantry_weapons
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				has_tech = musket_tech
-			}
-		}
-	}
+
 	gulyay_gorod_tech = {
 		enable_subunits = {
 			gulyay_gorod
@@ -129,6 +107,30 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 10
+		}
+	}
+	
+	tercio_formation_tech = {
+		enable_subunits = {
+			tercio_infantry
+			#merc_tercio_infantry
+		}
+		allow = {
+			has_tech = arquebus_weapons
+		}
+		research_cost = 1
+		start_year = 1550
+		
+		categories = {
+			cat_pike_weapons
+			infantry_weapons
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_tech = musket_tech
+			}
 		}
 	}
 	

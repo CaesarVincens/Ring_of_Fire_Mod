@@ -6189,10 +6189,8 @@ generic_artillery_organization = {
 	}
 
 	equipment_type = {
-		artillery_equipment
-		anti_tank_equipment
-		anti_air_equipment
-		rocket_artillery_equipment
+		light_artillery_equipment
+		heavy_artillery_equipment
 	}
 
 	research_categories = {
@@ -6500,7 +6498,7 @@ generic_infantry_equipment_organization = {
 	}
 
 	equipment_type = {
-		infantry_equipment
+		firearm_equipment
 	}
 	research_categories = { infantry_weapons }
 
@@ -6785,7 +6783,7 @@ generic_support_equipment_organization = {
 		always = no # Archetype only - countries using it have their own verisons
 	}
 
-	equipment_type = { infantry_equipment support_equipment }
+	equipment_type = { firearm_equipment support_equipment }
 	research_categories = { infantry_weapons support_tech }
 
 	
@@ -7056,8 +7054,6 @@ generic_motorized_mechanized_organization = {
 
 	equipment_type = {
 		motorized_equipment
-		mechanized_equipment
-		motorized_rocket_equipment
 	}
 	
 	research_categories = {

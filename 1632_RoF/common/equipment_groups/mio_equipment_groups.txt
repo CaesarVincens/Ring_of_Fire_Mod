@@ -8,11 +8,30 @@
    ##    ##     ## ##   ### ##   ##     ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
    ##    ##     ## ##    ## ##    ##     ######   ##     ##  #######   #######  ##         ######  
 
+mio_cat_eq_steam_tank = {
+	equipment_type = {
+		steam_tank_equipment
+	}
+}
+
+mio_cat_eq_gas_tank = {
+	equipment_type = {
+		gas_tank_equipment
+	}
+}
+mio_cat_eq_all_tank = {
+	equipment_type = {
+		steam_tank_equipment
+		gas_tank_equipment
+	}
+}
 
 mio_cat_eq_all_light_tank = { #Includes (standalone) Amphibious Tank Chassis
 	equipment_type = {
 		light_tank_chassis
 		amphibious_tank_chassis
+		gas_tank_equipment
+		apc_equipment
 	}	
 }
 
@@ -20,6 +39,7 @@ mio_cat_eq_all_medium_tank = { #Includes Modern Tank Chassis
 	equipment_type = {
 		medium_tank_chassis
 		modern_tank_chassis
+		steam_tank_equipment
 	}
 }
 
@@ -58,18 +78,26 @@ mio_cat_eq_all_carrier = { #Includes all CV --- Used due to custom loc capabilit
 mio_cat_eq_all_cruiser = { #Includes all Cruiser (CA, CL, Coastal Defense, Torpedo Cruiser, Panzerschiff) --- Used due to custom loc capabilities
 	equipment_type = {
 		ship_hull_cruiser
+		heavy_frigate
+		steam_cruiser
 	}
 }
 
 mio_cat_eq_all_destroyer = { #Includes all Destroyers --- Used due to custom loc capabilities (loc for ship_hull_light just sucks)
 	equipment_type = {
 		ship_hull_light
+		steam_destroyer
+		light_frigate
 	}
 }
 
 mio_cat_eq_all_battleship = { #Includes all Battleships (BB, BC, SHBB, Pre-Dreadnought)
 	equipment_type = {
 		ship_hull_heavy
+		steam_battleship
+		man_of_war
+		ironclad
+		timberclad
 	}
 }
 
@@ -85,18 +113,22 @@ mio_cat_eq_all_small_plane = { #Includes all Small Aircraft (Fighter, CAS, Nav) 
 	equipment_type = {
 		small_plane_airframe
 		cv_small_plane_airframe
+		single_plane_equipment
 	}
 }
 
 mio_cat_eq_all_medium_plane = { #Includes all Medium Aircraft (Tactical Bomber, Heavy Fighter, Scout) --- Used due to custom loc capabilities
 	equipment_type = {
 		medium_plane_airframe
+		multi_plane_equipment
 	}
 }
 
 mio_cat_eq_all_large_plane = { #Includes all Heavy Aircraft (Strategic Bomber, Maritime Patrol) --- Used due to custom loc capabilities
 	equipment_type = {
 		large_plane_airframe
+		airship_equipment
+		light_airship_equipment
 	}
 }
 

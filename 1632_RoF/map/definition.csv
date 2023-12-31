@@ -2330,7 +2330,7 @@
 2329;14;37;248;sea;false;ocean;0
 2330;14;38;236;sea;false;ocean;0
 2331;14;40;244;sea;false;ocean;0
-2332;14;40;248;sea;false;lakes;0
+2332;14;40;248;sea;true;lakes;0
 2333;15;0;232;sea;true;ocean;0
 2334;15;2;240;sea;false;ocean;0
 2335;15;4;248;sea;true;ocean;0
@@ -2354,7 +2354,7 @@
 2353;15;36;244;sea;false;ocean;0
 2354;15;37;232;sea;false;ocean;0
 2355;15;38;240;sea;false;ocean;0
-2356;15;40;232;sea;false;lakes;0
+2356;15;40;232;sea;true;lakes;0
 2357;15;40;248;sea;false;ocean;0
 2358;16;0;236;sea;true;ocean;0
 2359;16;2;244;sea;true;ocean;0
@@ -13192,11 +13192,11 @@
 13191;167;56;148;lake;false;lakes;0
 13192;19;97;36;lake;false;lakes;0
 13193;30;167;209;sea;true;ocean;0
-13194;206;169;161;sea;false;lakes;0
+13194;206;169;161;sea;true;lakes;0
 13195;169;3;103;land;false;mountain;3
 13196;11;82;182;land;true;plains;2
 13197;224;93;214;land;false;desert;6
-13198;168;248;79;sea;false;lakes;0
+13198;168;248;79;sea;true;lakes;0
 13199;34;134;177;lake;false;lakes;0
 13200;198;232;204;lake;false;lakes;0
 13201;188;96;100;lake;false;lakes;0

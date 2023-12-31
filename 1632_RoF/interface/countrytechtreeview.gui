@@ -4178,7 +4178,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_armour_folder_small_item"
-		position = { x=5 y=5 }
+		position = { x=0 y=0 }
 		size = { width = 72 height = 72 }
 		clipping = no
 
@@ -4230,7 +4230,7 @@ guiTypes = {
 
 		iconType = {
 			name = "Icon"
-			position = { x=74 y=50 }
+			position = { x=85 y=50 }
 			spriteType = "GFX_technology_medium"
 			centerposition = yes
 			alwaystransparent = yes
@@ -4595,7 +4595,7 @@ guiTypes = {
 
 		iconType = {
 			name = "Icon"
-			position = { x=85 y=50 }
+			position = { x=90 y=50 }
 			spriteType = "GFX_technology_medium"
 			centerposition = yes
 			alwaystransparent = yes
@@ -4621,7 +4621,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "can_assign_design_team_icon"
-			position = { x=0 y=42 }
+			position = { x=5 y=55 }
 			spriteType = "GFX_design_team_icon"
 		}
 	}
