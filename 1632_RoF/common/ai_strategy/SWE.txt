@@ -22,9 +22,7 @@ SWE_unit_production = {
 	enable = {
 		original_tag = SWE
 	}
-	abort = {
-		always = no
-	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
@@ -126,6 +124,7 @@ SWE_area_priority = {
 	enable = {
 		original_tag = SWE
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -256,6 +255,7 @@ SWE_template_design = {
 		original_tag = SWE
 		date > 1635.1.1
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = template_prio

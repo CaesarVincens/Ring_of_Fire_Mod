@@ -233,10 +233,7 @@ characters = {
 			allowed = {
 				original_tag = POL
 			}
-			removal_cost = -1
-			#allowed_to_remove = {
-			#	has_country_flag = POL_promote_detractors
-			#}
+			can_be_fired = no
 			traits = {
 				grand_chancellor POL_king_opponent
 			}
@@ -269,13 +266,9 @@ characters = {
 			available = {
 				if = {
 					limit = {
-						NOT = {
-							has_idea = POL_jerzy_ossolinski
-						}
+						NOT = { has_idea = POL_jerzy_ossolinski }
 					}
-					NOT = {
-						has_idea_with_trait = grand_chancellor
-					}
+					NOT = { has_idea_with_trait = grand_chancellor }
 				}
 			}
 		}

@@ -47,19 +47,12 @@ country_event = {
 						traits = {
 							grand_vizier
 						}
-						#allowed = { original_tag = TUR }
-						#available = {
-						#	if = {
-						#		limit = {
-						#			has_country_flag = TUR_husrev_dismissed
-						#		}
-						#		NOT = {
-						#			has_country_flag = TUR_husrev_dismissed
-						#		}
-						#	}
-						#}
 					}
 					activate = yes
+				}
+				set_can_be_fired_in_advisor_role = {
+					slot = political_advisor
+					value = yes
 				}
 			}
 		}

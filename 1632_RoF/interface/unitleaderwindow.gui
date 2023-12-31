@@ -184,15 +184,15 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "show_assigned_text"
-			position = { x = 380 y = 10 }
+			position = { x = 325 y = 10 }
 			textureFile = ""
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
 			text = "SHOW_ACTIVE"
-			maxWidth = 100
+			maxWidth = 140
 			maxHeight = 20
 			fixedsize = yes
-			format = left
+			format = right
 		}
 		
 		checkboxType = {
@@ -319,7 +319,7 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 		
-		gridBoxType = {
+		gridBoxType = {    
 			name = "traits_grid"
 			position = { x = 126 y = 60 }
 			size = { width = 450 height = 50 }
@@ -327,7 +327,7 @@ guiTypes = {
 			max_slots_vertical = 1			
 			format = "UPPER_LEFT"
 		}
-
+		
 		iconType = {
 			name = "medal_collection"
 			spriteType = "GFX_medal_collection"

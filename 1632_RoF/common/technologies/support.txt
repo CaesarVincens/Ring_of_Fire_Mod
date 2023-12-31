@@ -23,7 +23,8 @@ technologies = {
 		path = {
 			leads_to_tech = tech_engineers
 			research_cost_coeff = 1
-		}
+		}	
+		
 		path = {
 			leads_to_tech = tech_recon
 			research_cost_coeff = 1
@@ -1405,11 +1406,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 0.5
 			
 			modifier = {
 				is_major = yes
-				factor = 2
+				factor = 1
 			}
 		}
 	}

@@ -47,31 +47,9 @@ lessen_POL_serfdom = {
 POL_end_lifetime_appointments_effect = {
 	hidden_effect = {
 		POL_jakub_zadzik = {
-			if = {
-				limit = {
-					is_character_slot = political_advisor
-				}
-				remove_advisor_role = { slot = political_advisor }
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						idea_token = POL_jakub_zadzik
-						traits = { grand_chancellor POL_king_opponent }
-						#allowed = { original_tag = POL }
-					}
-					activate = yes
-				}
-				else = {
-					remove_advisor_role = { slot = political_advisor }
-					add_advisor_role = {
-						advisor = {
-							slot = political_advisor
-							idea_token = POL_jakub_zadzik
-							traits = { grand_chancellor POL_king_opponent }
-							#allowed = { original_tag = POL }
-						}
-					}
-				}
+			set_can_be_fired_in_advisor_role = {
+				slot = political_advisor
+				value = yes
 			}
 		}
 	}

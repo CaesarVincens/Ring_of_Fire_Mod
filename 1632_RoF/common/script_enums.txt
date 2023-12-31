@@ -600,11 +600,11 @@ script_enum_equipment_bonus_type = {
 	apc_equipment_2
 	apc_equipment_3
 	gas_tank_equipment
+	gas_tank_equipment_0
 	gas_tank_equipment_1
 	gas_tank_equipment_2
 	gas_tank_equipment_3
 	steam_tank_equipment
-	steam_tank_equipment_0
 	steam_tank_equipment_1
 	steam_tank_equipment_2
 	steam_tank_equipment_3
@@ -653,14 +653,4 @@ script_enum_equipment_bonus_type = {
 	timberclad_2
 
 	## test
-	fighter_equipment
-	cv_fighter_equipment
-	CAS_equipment
-	cv_CAS_equipment
-	heavy_fighter_equipment
-	tac_bomber_equipment
-	scout_plane_equipment
-	strat_bomber_equipment
-	nav_bomber_equipment
-	cv_nav_bomber_equipment
 }

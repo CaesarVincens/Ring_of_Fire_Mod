@@ -141,6 +141,7 @@ default_unit_production = {
 			original_tag = POL
 		}
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
@@ -245,6 +246,7 @@ default_pp_spend_amount = {
 	enable = {
 		NOT = { original_tag = NUS original_tag = TUR }
 	}
+	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = pp_spend_amount
@@ -394,6 +396,7 @@ slightly_naval_focused_nation = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = unit_ratio
@@ -424,6 +427,7 @@ more_naval_focused_nation = {
 	enable = {
 		date > "1941.1.1" #Delaying it by a couple of years
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = unit_ratio
@@ -485,6 +489,7 @@ default_infrastructure_more = {
 		has_tech = infrastructure_tech_2
 		num_of_controlled_states > 20
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = infrastructure
@@ -496,6 +501,7 @@ default_area_priority = {
 	enable = {
 		NOT = { original_tag = NUS original_tag = SWE }
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -661,6 +667,7 @@ DEFAULT_template_design = {
 		}
 		date > 1635.1.1
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = template_prio
@@ -781,6 +788,7 @@ build_intelligence_agency_as_major = {
 			date > 1633.1.1
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
@@ -849,6 +857,7 @@ addintelligence_agency_normal_upgrade_prio = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = intelligence_agency_branch_desire_factor
@@ -920,6 +929,7 @@ put_garrisons_on_high_prio = {
 	enable = {
 		always = yes
 	}
+	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = garrison_reinforcement_priority

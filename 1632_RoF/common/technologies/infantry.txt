@@ -485,7 +485,9 @@ technologies = {
 		}
 		
 		on_research_complete_limit = {
-			NOT = { has_template_containing_unit = paratrooper }
+			NOT = {
+				has_template_containing_unit = paratrooper
+			}
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -496,6 +498,7 @@ technologies = {
 		
 		categories = {
 			para_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -514,7 +517,7 @@ technologies = {
 			leads_to_tech = paratroopers3
 			research_cost_coeff = 1
 		}
-
+		
 		research_cost = 1.5
 		start_year = 1662
 		folder = {
@@ -524,6 +527,7 @@ technologies = {
 		
 		categories = {
 			para_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -547,6 +551,7 @@ technologies = {
 		
 		categories = {
 			para_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -561,7 +566,9 @@ technologies = {
 		}
 		
 		on_research_complete_limit = {
-			NOT = { has_template_containing_unit = marine }
+			NOT = {
+				has_template_containing_unit = marine
+			}
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -584,7 +591,7 @@ technologies = {
 		
 		categories = {
 			marine_tech
-			infantry_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -602,7 +609,6 @@ technologies = {
 			leads_to_tech = marines3
 			research_cost_coeff = 1
 		}
-		
 
 		research_cost = 1.5
 		start_year = 1634
@@ -613,7 +619,7 @@ technologies = {
 		
 		categories = {
 			marine_tech
-			infantry_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -636,7 +642,7 @@ technologies = {
 		
 		categories = {
 			marine_tech
-			infantry_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -651,7 +657,9 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = { has_template_containing_unit = mountaineers }
+			NOT = {
+				has_template_containing_unit = mountaineers
+			}
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -675,6 +683,7 @@ technologies = {
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -693,7 +702,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 1.5
 		start_year = 1634
 		folder = {
@@ -704,6 +712,7 @@ technologies = {
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
@@ -711,8 +720,7 @@ technologies = {
 		}
 	}
 	
-	tech_mountaineers3 = {
-
+	tech_mountaineers3 = {	
 		mountaineers = {
 			max_organisation = 5
 		}
@@ -727,60 +735,13 @@ technologies = {
 		categories = {
 			infantry_tech
 			mountaineers_tech
+			cat_special_forces_generic
 		}
 		
 		ai_will_do = {
 			factor = 0.7
 		}
 	}
-	
-	motorised_infantry = {
-
-		enable_equipments = {
-			motorized_equipment_1
-		}
-		
-		research_cost = 2
-		start_year = 1631
-		folder = {
-			name = infantry_folder
-			position = { x = 0 y = @1631 }
-		}
-		
-		folder = {
-			name = support_folder
-			position = { x = 7 y = 9 }
-		}
-		
-		#sub_technologies = {
-		#	motorized_rocket_unit
-		#}
-		
-		categories = {
-			motorized_equipment
-			infantry_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				date > "1632.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1633.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				date > "1634.1.1"
-			}
-		}
-	}
-	
 	tech_special_forces = {
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.05
@@ -992,4 +953,53 @@ technologies = {
 		}
 	}
 
+	
+	motorised_infantry = {
+
+		enable_equipments = {
+			motorized_equipment_1
+		}
+		
+		research_cost = 2
+		start_year = 1631
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = @1631 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 7 y = 9 }
+		}
+		
+		#sub_technologies = {
+		#	motorized_rocket_unit
+		#}
+		
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+			infantry_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				date > "1632.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1633.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1634.1.1"
+			}
+		}
+	}
+	
 }

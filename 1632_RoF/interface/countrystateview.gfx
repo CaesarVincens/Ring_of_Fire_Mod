@@ -686,5 +686,12 @@ spriteTypes = {
 		name = "GFX_modifiers_ITA_established_mafia"
 		textureFile = "gfx/interface/state_modifiers/modifiers_ITA_established_mafia.dds"
 	}
-
+	spriteType = {
+		name = "GFX_modifiers_generic_resistance"
+		textureFile = "gfx/interface/state_modifiers/modifiers_generic_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_generic_construction"
+		textureFile = "gfx/interface/state_modifiers/modifiers_generic_construction.dds"
+	}
 }

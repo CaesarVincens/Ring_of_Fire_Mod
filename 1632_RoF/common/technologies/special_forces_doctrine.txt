@@ -40,10 +40,8 @@ technologies = {
 		research_cost = 2.25
 		
 		allow = {
-			AND = {
-				has_tech = tech_mountaineers
-				can_unlock_new_special_forces_tree = yes
-			}
+			has_tech = tech_mountaineers
+			can_unlock_new_special_forces_tree = yes
 		}
 		
 		on_research_complete = {
@@ -268,7 +266,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		artillery = {
+		category_artillery = {
 			battalion_mult = {
 				category = category_mountaineers
 				breakthrough = 0.15
@@ -489,11 +487,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 20
-			modifier = {
-				factor = 0
-				tag = USA
-				NOT = { has_tech = special_forces_paratroopers }
-			}
 			modifier = {
 				factor = 0
 				NOT = { ai_has_completed_naval_doctrine = yes }
@@ -854,12 +847,7 @@ technologies = {
 				breakthrough = 0.15
 			}
 		}
-		
-		
-		on_research_complete = {
-			add_ideas = GEN_cheaper_amphib
-		}
-		
+				
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -925,7 +913,7 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		
-		artillery = {
+		category_artillery = {
 			 battalion_mult = {
 				category = category_marines
 				defense = 0.05
@@ -986,7 +974,10 @@ technologies = {
 		#xor = { special_forces_mountaineers special_forces_marines } 
 	
 		paratroopers_special_forces_contribution_factor = -0.10
-		transport_plane = {
+		light_airship = {
+			air_defence = 0.20
+		}
+		airship = {
 			air_defence = 0.20
 		}
 		category_special_forces = {
@@ -994,11 +985,9 @@ technologies = {
 			soft_attack = 0.05
 		}
 		
-		allow = { 
-			AND = {
-				has_tech = paratroopers 
-				can_unlock_new_special_forces_tree = yes
-			}
+		allow = {
+			has_tech = paratroopers 
+			can_unlock_new_special_forces_tree = yes
 		}
 		
 		on_research_complete = {
@@ -1153,10 +1142,6 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 4.5
-		
-		enable_subunits = {
-			airborne_light_armor
-		}
 		
 		categories = {
 			special_forces_doctrine
