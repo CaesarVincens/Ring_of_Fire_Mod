@@ -1,0 +1,17 @@
+peace_ai_desires = {
+	FRA_LOR_puppet = {
+		peace_action_type = puppet
+		enable = {
+			ROOT = {
+				original_tag = FRA
+			}
+			FROM = {
+				original_tag = FRA
+			}
+			FROM.FROM = {
+				original_tag = LOR
+			}
+		}
+		ai_desire = 1000
+	}
+}

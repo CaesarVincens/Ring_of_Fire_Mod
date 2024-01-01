@@ -31,7 +31,7 @@ technologies = {
 			}
 			modifier = {
 				factor =  10
-				has_completed_focus = air_research
+				has_completed_focus = air_research_focus
 			}
 			modifier = {
 				factor =  10

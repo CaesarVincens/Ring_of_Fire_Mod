@@ -2,7 +2,7 @@
 	#     AIR TREE     #
 	####################
 	shared_focus = {
-		id = air_research
+		id = air_research_focus
 		icon = GFX_goal_generic_build_airforce
 		cost = 10.00
 		x = 1
@@ -108,14 +108,14 @@
 		icon = GFX_goal_generic_air_doctrine
 		cost = 10.00
 		prerequisite = {
-			focus = air_research
+			focus = air_research_focus
 		}
 		mutually_exclusive = {
 			focus = heavier_than_air
 		}
 		x = -1
 		y = 1
-		relative_position_id = air_research
+		relative_position_id = air_research_focus
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
@@ -134,14 +134,14 @@
 		icon = GFX_goal_generic_air_fighter
 		cost = 10.00
 		prerequisite = {
-			focus = air_research
+			focus = air_research_focus
 		}
 		mutually_exclusive = {
 			focus = lighter_than_air
 		}
 		x = 1
 		y = 1
-		relative_position_id = air_research
+		relative_position_id = air_research_focus
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
@@ -169,7 +169,7 @@
 		}
 		x = 1
 		y = 2
-		relative_position_id = air_research
+		relative_position_id = air_research_focus
 		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
 			add_tech_bonus = {
@@ -192,7 +192,7 @@
 		}
 		x = -1
 		y = 2
-		relative_position_id = air_research
+		relative_position_id = air_research_focus
 		search_filters = { FOCUS_FILTER_AIR }
 		completion_reward = {
 			add_tech_bonus = {
@@ -219,7 +219,7 @@
 		}
 		x = 0
 		y = 3
-		relative_position_id = air_research
+		relative_position_id = air_research_focus
 		#available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR }
 		complete_tooltip = {
@@ -758,7 +758,7 @@
 				name = heavy_art_bonus
 				bonus = 0.5
 				uses = 1
-				category = heavy_artillery
+				category = heavy_artillery_tech
 			}
 
 		}
@@ -824,7 +824,7 @@
 				name = light_art_bonus
 				bonus = 0.5
 				uses = 1
-				category = light_artillery
+				category = light_artillery_tech
 			}
 
 		}

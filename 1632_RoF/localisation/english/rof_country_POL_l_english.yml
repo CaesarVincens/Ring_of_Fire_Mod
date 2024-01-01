@@ -95,7 +95,7 @@
  POL_reduced_magnates_desc:0 "We have reduced the influence of the magnates, though they still have undue power in our country."
  POL_weakened_magnates:0 "Weakened Magnates"
  POL_integrated_magnates:0 "Integrated Magnates"
- POL_integrated_magnates:0 "We have integrated the magnates into the formal structure of the government. Now their power is not just from wealth, but also legal authority."
+ POL_integrated_magnates_desc:0 "We have integrated the magnates into the formal structure of the government. Now their power is not just from wealth, but also legal authority."
  POL_treaty_of_stary_targ:0 "Treaty of Stary Targ"
  POL_treaty_of_stary_targ_desc:0 "Signed with Sweden in 1629, the Treaty of Stary Targ guaranteed Sweden two-thirds of the tolls at Commonwealth ports for six years in addition to ceding the majority of Livonia to Sweden."
  POL_grain_exports:0 "Grain Exports"

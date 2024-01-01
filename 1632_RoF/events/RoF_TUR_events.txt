@@ -681,7 +681,7 @@ country_event = {
 country_event = {
 	id = RoF_TUR.160
 	title = RoF_TUR.160.t
-	picture = GFX_report_event_pol_flag
+	picture = GFX_report_event_murad
 	desc = RoF_TUR.160.d
 
 	is_triggered_only = yes
