@@ -48,7 +48,17 @@ characters = {
 			allowed = {
 				original_tag = TUR
 			}
-			removal_cost = -1
+			available = {
+				if = {
+					limit = {
+						has_country_flag = TUR_husrev_dismissed
+					}
+					NOT = {
+						has_country_flag = TUR_husrev_dismissed
+					}
+				}
+			}
+			can_be_fired = no
 			traits = {
 				powerful_vizier 
 			}

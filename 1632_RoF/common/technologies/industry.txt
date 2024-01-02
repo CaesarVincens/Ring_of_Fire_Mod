@@ -28,11 +28,12 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1500
+			factor = 50
 		}
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -70,6 +71,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -91,7 +93,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			factor = 15
 						
 			modifier = {
 				factor = 10
@@ -101,6 +103,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -133,7 +136,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 			
 			modifier = {
 				factor = 10
@@ -143,6 +146,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -164,7 +168,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 						
 			modifier = {
 				factor = 10
@@ -174,6 +178,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -195,7 +200,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 			
 			modifier = {
 				factor = 10
@@ -206,6 +211,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -223,7 +229,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1632
 		
 		folder = {
@@ -243,6 +249,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 	
@@ -250,7 +257,7 @@ technologies = {
 		
 		equipment_conversion_speed = 0.40
 
-		research_cost = 1.5
+		research_cost = 2
 		start_year = 1634
 		
 		folder = {
@@ -270,6 +277,7 @@ technologies = {
 		
 		categories = {
 			industry
+			cat_production
 		}
 	}
 
@@ -317,6 +325,11 @@ technologies = {
 		
 		categories = {
 			industry
+			concentrated_industry_category
+		}
+		
+		ai_research_weights = {
+			offensive = -1.0
 		}
 	}
 	
@@ -351,6 +364,11 @@ technologies = {
 		
 		categories = {
 			industry
+			concentrated_industry_category
+		}
+		
+		ai_research_weights = {
+			offensive = -1.0
 		}
 	}
 	
@@ -374,7 +392,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 			
 			modifier = {
 				factor = 10
@@ -384,6 +402,11 @@ technologies = {
 		
 		categories = {
 			industry
+			concentrated_industry_category
+		}
+		
+		ai_research_weights = {
+			offensive = -1.0
 		}
 	}
 	
@@ -407,7 +430,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 						
 			modifier = {
 				factor = 10
@@ -417,6 +440,11 @@ technologies = {
 		
 		categories = {
 			industry
+			concentrated_industry_category
+		}
+		
+		ai_research_weights = {
+			offensive = -1.0
 		}
 	}
 	
@@ -435,7 +463,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 4
 			
 			modifier = {
 				factor = 5
@@ -450,6 +478,11 @@ technologies = {
 		
 		categories = {
 			industry
+			concentrated_industry_category
+		}
+		
+		ai_research_weights = {
+			offensive = -1.0
 		}
 	}
 	
@@ -459,8 +492,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		equipment_conversion_speed = 0.20
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.15
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -500,6 +532,11 @@ technologies = {
 		
 		categories = {
 			industry
+			dispersed_industry_category
+		}
+		
+		ai_research_weights = {
+			defensive = -1.0
 		}
 	}
 	
@@ -509,7 +546,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -536,6 +573,11 @@ technologies = {
 		
 		categories = {
 			industry
+			dispersed_industry_category
+		}
+		
+		ai_research_weights = {
+			defensive = -1.0
 		}
 	}
 	
@@ -545,7 +587,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -562,7 +604,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 						
 			modifier = {
 				factor = 10
@@ -572,6 +614,11 @@ technologies = {
 		
 		categories = {
 			industry
+			dispersed_industry_category
+		}
+		
+		ai_research_weights = {
+			defensive = -1.0
 		}
 	}
 	
@@ -581,7 +628,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -598,7 +645,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 						
 			modifier = {
 				factor = 10
@@ -608,6 +655,11 @@ technologies = {
 		
 		categories = {
 			industry
+			dispersed_industry_category
+		}
+		
+		ai_research_weights = {
+			defensive = -1.0
 		}
 	}
 	
@@ -617,7 +669,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.10
 		global_building_slots_factor = 0.2
 		
 		
@@ -630,7 +682,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 15
 			
 			
 			modifier = {
@@ -641,6 +693,11 @@ technologies = {
 		
 		categories = {
 			industry
+			dispersed_industry_category
+		}
+		
+		ai_research_weights = {
+			defensive = -1.0
 		}
 	}
 	#####################################
@@ -839,6 +896,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -847,7 +905,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 			
 			modifier = {
 				factor = 5.0
@@ -903,7 +961,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 40
+			factor = 4
 			
 			modifier = {
 				factor = 10
@@ -926,6 +984,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -934,7 +993,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 			
 			modifier = {
 				factor = 5.0
@@ -991,7 +1050,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			factor = 10
 			
 			modifier = {
 				factor = 1.5
@@ -1000,7 +1059,7 @@ technologies = {
 			
 			modifier = {
 				factor = 0.5
-				NOT = { has_war = yes }
+				has_war = no
 			}
 			
 			modifier = {
@@ -1025,6 +1084,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -1033,7 +1093,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 			
 			modifier = {
 				factor = 5.0
@@ -1089,7 +1149,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 4
 			
 			modifier = {
 				factor = 10
@@ -1112,6 +1172,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -1120,7 +1181,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 			
 			modifier = {
 				factor = 5.0
@@ -1173,7 +1234,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 4
 			
 			modifier = {
 				factor = 10
@@ -1197,6 +1258,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -1205,7 +1267,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 2
 			
 			modifier = {
 				factor = 5.0
@@ -1232,6 +1294,4 @@ technologies = {
 			}
 		}
 	}			
-
-	
 }

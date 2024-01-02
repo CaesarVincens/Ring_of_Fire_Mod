@@ -15,7 +15,7 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research
+	shared_focus = air_research_focus
 
 	####################
 	#    NAVAL TREE    #

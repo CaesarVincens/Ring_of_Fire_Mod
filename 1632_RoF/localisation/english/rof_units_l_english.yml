@@ -7,8 +7,6 @@
  spear_infantry_desc:0 "Spearmen have been the core of many armies for centuries. They generally fight in close formations, using their spears both for attack and defense."
  tercio_infantry:0 "Tercio"
  tercio_infantry_desc:0 "Tercios expanded on the power of pike formations by adding firearms. Although the arquebusiers make up only a small percentage of the formation, their volleys add a great punch to the attack."
- spear_infantry:0 "Spearmen"
- spear_infantry_desc:0 "Spearmen have been the core of many armies for centuries. They generally fight in close formations, using their spears both for attack and defense."
  merc_tercio_infantry:0 "Mercenary Tercio"
  merc_tercio_infantry_desc:0 "A mercenary company that fights in a tercio formation. Such companies were common in the war-filled era of the 1630s."
  line_infantry:0 "Line Infantry"

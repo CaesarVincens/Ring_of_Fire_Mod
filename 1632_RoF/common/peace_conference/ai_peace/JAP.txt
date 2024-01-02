@@ -1,0 +1,3 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+

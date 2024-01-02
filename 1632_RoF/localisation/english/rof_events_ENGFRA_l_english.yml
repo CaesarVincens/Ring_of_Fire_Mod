@@ -45,9 +45,9 @@
  FRA_LOR.1.t:0 "Occupation of Lorraine"
  RoF_FRA.161.b:0 "To battle it is then."
  RoF_FRA.165.t:0 "Gaston in Lorraine"
- RoF_FRA.161.d:0 "Monsieur Gaston, brother and heir of King Louis of France, has gone haring off in Lorraine with an army, ostensibly on behalf of his wife and brother-in-law, who is Duke Charles of Lorraine. Of course, his presence only serves to disrupt our control of the dutchy."
- RoF_FRA.161.a:0 "We don't have the resources to stop him."
- RoF_FRA.161.b:0 "Do whatever it takes to stop him."
+ RoF_FRA.165.d:0 "Monsieur Gaston, brother and heir of King Louis of France, has gone haring off in Lorraine with an army, ostensibly on behalf of his wife and brother-in-law, who is Duke Charles of Lorraine. Of course, his presence only serves to disrupt our control of the dutchy."
+ RoF_FRA.165.a:0 "We don't have the resources to stop him."
+ RoF_FRA.165.b:0 "Do whatever it takes to stop him."
 
  RoF_ENG.101.t:0 "[SWE.GetNameDefCap] Responds to Our Offer"
  RoF_ENG.101.da:0 "[SWE.GetNameDefCap] has accepted our offer of an alliance for mutual aid"

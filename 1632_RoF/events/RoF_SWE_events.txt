@@ -102,7 +102,7 @@ country_event = {
 		add_tech_bonus = {
 			name = light_art_bonus
 			uses = 1
-			category = light_artillery
+			category = light_artillery_tech
 			bonus = 0.5
 		}
 		hidden_effect = {

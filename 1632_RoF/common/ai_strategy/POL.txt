@@ -139,6 +139,7 @@ default_unit_production = {
 	enable = {
 		original_tag = POL
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = infantry

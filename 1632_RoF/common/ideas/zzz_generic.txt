@@ -125,7 +125,7 @@ ideas = {
 				opinion_gain_monthly_same_ideology_factor = 0.25
 			}
 		}
-		royal_dictatorship_focus = {
+		royal_dictatorship_idea = {
 			
 			allowed = {
 				always = no

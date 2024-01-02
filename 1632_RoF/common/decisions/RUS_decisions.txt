@@ -101,6 +101,9 @@ RUS_major_decisions = {
 		}
 	}
 	RUS_test = {
+		visible = {
+			is_debug = yes
+		}
 		complete_effect = {
 			set_global_flag = white_sea_canal_built
 			set_technology = {

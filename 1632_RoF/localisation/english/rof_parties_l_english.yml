@@ -30,8 +30,6 @@
  conservatism_neutral_desc:0 "Considering rapid changes to society to be potentially harmful, conservatism espouses tradition and moderate reforms, sometimes advocating a return to old moral values."
  republican_neutral:0 "Republic"
  republican_neutral_desc:0 "Republics usually elect their ruler from the elite families of the country. Only a few republics in Europe gained any real power."
- democracy:0 "Democracy"
- democracy_desc:0 "Democracy gives control of the government to majority of the people, not reserving it for an elite."
  constitutional_monarchy:0 "Constitutional Monarchy"
  constitutional_monarchy_desc:0 "Constitutional monarchy is a form of monarchy in which the ruler must abide by a constitution."
  colony_neutral:0 "Colonial Government"

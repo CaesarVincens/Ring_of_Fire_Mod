@@ -5,7 +5,7 @@ Play an alternate history set in the middle of the Thirty Years war where a town
 Lead Developer: CaesarVincens
 Focus Tree Contributions: Principality of Lichenstein, King of Nords
 Other Contributions: Hampter
-Testers and Feedback: DPBR8, TheCapitan157, Dylan Hultman
+Testers and Feedback: DPBR8, TheCapitan157, Dylan Hultman, AngelBlue1852
 
 Many thanks to Idhrendur and the rest of the converter project team. Their tools let me convert my earlier work for EU4 to HoI4 with minimal hassle.
 
@@ -13,6 +13,13 @@ Paradox Forum page: https://forum.paradoxplaza.com/forum/index.php?threads/1632-
 Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
+
+Alpha 0.9.0 - Jan. 1, 2024
+Update to HoI4 1.13
+Basic MIOs included, awaiting further refinement
+Update various balance changes from vanilla
+A few flag fixes and many other minor fixes
+Many thanks to AngelBlue1852 for testing this version
 
 Alpha 0.8.0 - Jan. 27, 2022
 Updated to HoI4 1.11

@@ -5,8 +5,8 @@ technology_categories = {
 	firearms_weapons
 	cat_pike_weapons
 	up_time_weaponry
-	light_artillery
-	heavy_artillery
+	light_artillery_tech
+	heavy_artillery_tech
 	cavalry_tech
 	man_of_war_tech
 	frigate_tech

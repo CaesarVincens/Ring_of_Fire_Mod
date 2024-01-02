@@ -15,7 +15,7 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research
+	shared_focus = air_research_focus
 
 	####################
 	#    NAVAL TREE    #
@@ -730,7 +730,7 @@ focus_tree = {
 
 	focus = {
 		id = AUS_american_industry
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_american_investments
 		x = -1
 		y = 1
 		relative_position_id = AUS_hire_americans

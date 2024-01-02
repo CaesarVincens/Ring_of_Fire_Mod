@@ -2,7 +2,7 @@ technologies = {
 	electronic_mechanical_engineering = {
 
 		# small boost to research speed
-		research_speed_factor = 0.02
+		research_speed_factor = 0.03
 		
 		path = {
 			leads_to_tech = radio 
@@ -47,7 +47,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1.75
 		
 		folder = {
 			name = electronics_folder
@@ -60,11 +60,19 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			factor = 3
 			
 			modifier = {
-				factor = 5
+				factor = 6
 				has_war = yes
+			}
+			modifier = {
+				is_major = yes
+				factor = 2
+			}
+			modifier = {
+				factor = 5
+				date > "1635.8.1"
 			}
 		}
 		
@@ -80,13 +88,13 @@ technologies = {
 			building = radar_station
 			level = 1
 		}
-		
+		coordination_bonus = 0.01
 		path = {
 			leads_to_tech = decimetric_radar 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1.75
 		
 		folder = {
 			name = electronics_folder
@@ -94,7 +102,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		
 		categories = {
@@ -106,13 +114,13 @@ technologies = {
 	decimetric_radar = {
 
 		# can build radars/radar boost in air/sea combat depends on radar level
-		
+
 		path = {
 			leads_to_tech = improved_decimetric_radar 
 			research_cost_coeff = 1
 		}
-		
-		research_cost = 1.5
+		coordination_bonus = 0.01
+		research_cost = 1.25
 		start_year = 1633
 		
 		folder = {
@@ -121,7 +129,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
+			modifier = {
+				date < "1633.1.1"
+				factor = 0.5
+			}
 		}
 		
 		categories = {
@@ -142,13 +154,13 @@ technologies = {
 			building = radar_station
 			level = 3
 		}
-		
+		coordination_bonus = 0.01
 		path = {
 			leads_to_tech = centimetric_radar 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1.25
 		start_year = 1634
 		
 		folder = {
@@ -157,7 +169,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
+			modifier = {
+				date < "1633.1.1"
+				factor = 0.5
+			}
 		}
 		
 		categories = {
@@ -173,13 +189,16 @@ technologies = {
 			building = radar_station
 			level = 4
 		}
+		coordination_bonus = 0.01
+
+		static_anti_air_hit_chance_factor = 0.2
 		
 		path = {
 			leads_to_tech = improved_centimetric_radar 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 1.25
 		start_year = 1635
 		
 		folder = {
@@ -188,7 +207,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
+			modifier = {
+				date < "1635.1.1"
+				factor = 0.5
+			}
 		}
 		
 		categories = {
@@ -204,13 +227,16 @@ technologies = {
 			building = radar_station
 			level = 5
 		}
+		coordination_bonus = 0.01
+
+		static_anti_air_hit_chance_factor = 0.2
 		
 		path = {
 			leads_to_tech = advanced_centimetric_radar 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2.5
+		research_cost = 1.25
 		start_year = 1636
 		
 		folder = {
@@ -219,7 +245,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
+			modifier = {
+				date < "1636.1.1"
+				factor = 0.5
+			}
 		}
 		
 		categories = {
@@ -234,9 +264,12 @@ technologies = {
 		enable_building = {
 			building = radar_station
 			level = 6
-		}		
+		}
+		coordination_bonus = 0.01
 		
-		research_cost = 2.5
+		static_anti_air_hit_chance_factor = 0.2
+		
+		research_cost = 1.25
 		start_year = 1637
 		
 		folder = {
@@ -245,7 +278,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		
 		categories = {
@@ -257,7 +290,7 @@ technologies = {
 	mechanical_computing = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.04
 		
 		path = {
 			leads_to_tech = computing_machine 
@@ -272,7 +305,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 7
 			modifier = {
 				factor = 2
 				has_idea = modern_agrarian
@@ -288,7 +321,7 @@ technologies = {
 	computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.05
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -302,7 +335,6 @@ technologies = {
 			leads_to_tech = basic_decryption 
 			research_cost_coeff = 1
 		}
-		
 		research_cost = 2.5
 		start_year = 1633
 		
@@ -312,7 +344,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 6
 			
 			modifier = {
 				factor = 3
@@ -336,8 +368,7 @@ technologies = {
 	improved_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.05
-		
+		research_speed_factor = 0.08
 		path = {
 			leads_to_tech = advanced_computing_machine 
 			research_cost_coeff = 1
@@ -360,7 +391,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 3
 			
 			modifier = {
 				factor = 3
@@ -384,7 +415,7 @@ technologies = {
 	advanced_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.08
 		
 		path = {
 			leads_to_tech = advanced_encryption 
@@ -442,7 +473,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 1.75
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
 		}
 		
 		categories = {
@@ -455,12 +494,11 @@ technologies = {
 
 		# encryption 2
 		encryption = 1
-		
-		research_cost = 1
-		start_year = 1635
 		allow_branch = {
 			NOT = { has_dlc = "La Resistance" }
 		}
+		research_cost = 1
+		start_year = 1635
 
 		folder = {
 			name = electronics_folder
@@ -468,7 +506,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 1.75
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
 		}
 		
 		categories = {
@@ -481,12 +527,11 @@ technologies = {
 
 		# encryption 3
 		encryption = 1
-		
-		research_cost = 1
-		start_year = 1637
 		allow_branch = {
 			NOT = { has_dlc = "La Resistance" }
 		}
+		research_cost = 1
+		start_year = 1637
 
 		folder = {
 			name = electronics_folder
@@ -494,7 +539,15 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 1.75
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
 		}
 		
 		categories = {
@@ -507,12 +560,11 @@ technologies = {
 
 		# decryption 1
 		decryption = 1
-		
-		research_cost = 1.5
-		start_year = 1633
 		allow_branch = {
 			NOT = { has_dlc = "La Resistance" }
 		}
+		research_cost = 1.5
+		start_year = 1633
 
 		folder = {
 			name = electronics_folder
@@ -520,8 +572,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-		}
+			factor = 1.5
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}		}
 		
 		categories = {
 			electronics
@@ -533,20 +588,24 @@ technologies = {
 
 		# decryption 2
 		decryption = 1
-		
-		research_cost = 1.5
-		start_year = 1635
+
 		allow_branch = {
 			NOT = { has_dlc = "La Resistance" }
 		}
-
+		research_cost = 1.5
+		start_year = 1635
+		
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 10 }
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 1.5
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
 		}
 		
 		categories = {
@@ -559,12 +618,11 @@ technologies = {
 
 		# decryption 3
 		decryption = 1
-		
-		research_cost = 1.5
-		start_year = 1637
 		allow_branch = {
 			NOT = { has_dlc = "La Resistance" }
 		}
+		research_cost = 1.5
+		start_year = 1637
 
 		folder = {
 			name = electronics_folder
@@ -572,8 +630,11 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
-		}
+			factor = 1.5
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}		}
 		
 		categories = {
 			electronics

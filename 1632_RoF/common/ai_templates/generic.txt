@@ -442,6 +442,8 @@ jaegers_generic = {
 			field_hospital
 			logistics_company
 			anti_tank
+			jaeger_brigade
+			engineer
 		}
 	}
 }
@@ -534,6 +536,7 @@ mountaineers_generic = {
 			field_hospital
 			logistics_company
 			anti_tank
+			engineer
 		}
 	}
 }
@@ -621,6 +624,7 @@ marines_generic = {
 			marine
 			engineer
 			logistics_company
+			recon
 		}
 	}
 }

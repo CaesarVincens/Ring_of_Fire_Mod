@@ -12,7 +12,7 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research
+	shared_focus = air_research_focus
 
 	####################
 	#    NAVAL TREE    #
@@ -64,7 +64,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_jylland_construction
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_develop_denmark_silhouette
 		cost = 10
 		relative_position_id = DEN_continue_recovery
 		prerequisite = { focus = DEN_continue_recovery }
@@ -148,7 +148,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_norway_construction
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_develop_norway_silhouette
 		cost = 10
 		relative_position_id = DEN_continue_recovery
 		prerequisite = { focus = DEN_continue_recovery }
@@ -788,7 +788,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_exploit_greenland
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_DEN_prospecting_greenland
 		prerequisite = { focus = DEN_investigate_grantville }
 		prerequisite = { focus = DEN_norway_construction }
 		relative_position_id = DEN_norway_construction

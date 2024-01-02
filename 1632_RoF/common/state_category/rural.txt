@@ -3,5 +3,6 @@ state_categories={
 		local_building_slots = 2
 	
 		color = { 240 160 0 }
+
 	}
 }

@@ -22,9 +22,7 @@ NUS_unit_production = {
 	enable = {
 		original_tag = NUS
 	}
-	abort = {
-		always = no
-	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
@@ -126,7 +124,8 @@ NUS_pp_spend_amount = {
 	enable = {
 		original_tag = NUS
 	}
-	
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = pp_spend_amount
 		id = decision
@@ -147,6 +146,7 @@ NUS_area_priority = {
 	enable = {
 		original_tag = NUS
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -313,6 +313,7 @@ NUS_template_design = {
 		original_tag = NUS
 		date > 1635.1.1				
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = template_prio
@@ -372,6 +373,9 @@ USE_annex_germans = {
 	}
 	enable = {
 		is_german_tag = yes
+	}
+	abort = {
+		always = no
 	}
 	#abort_when_not_enabled = yes
 	target_array = global.german_tags

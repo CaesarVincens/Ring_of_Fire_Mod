@@ -25,8 +25,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_sov
 	names = { "NKVD" }
 	
-	default = { tag = SOV }
-	available = { original_tag = SOV }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -43,8 +43,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_ger
 	names = { "Abwehr" }
 	
-	default = { tag = GER }
-	available = { original_tag = GER }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -61,8 +61,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_ita
 	names = { "Servizio Informazioni Militare" }
 	
-	default = { tag = ITA }
-	available = { original_tag = ITA }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -79,8 +79,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_nor
 	names = { "E-tjenesten" }
 	
-	default = { tag = NOR }
-	available = { original_tag = NOR }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -88,8 +88,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_bel
 	names = { "ADIV" "SGRS" }
 	
-	default = { tag = BEL }
-	available = { original_tag = BEL }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -97,8 +97,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_hol
 	names = { "Bureau Inlichtingen" }
 	
-	default = { tag = HOL }
-	available = { original_tag = HOL}
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -106,8 +106,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_rom
 	names = { "Serviciul Special de Informatii" }
 		
-	default = { tag = ROM }
-	available = { original_tag = ROM }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -115,8 +115,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_prc
 	names = { "Intelligence Department Central Military Commission" }
 		
-	default = { tag = PRC }
-	available = { original_tag = PRC }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -133,8 +133,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_yug
 	names = { "OZNA" }
 		
-	default = { tag = YUG }
-	available = { original_tag = YUG }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -151,8 +151,8 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_spa
 	names = { "SIPM" }
 		
-	default = { tag = SPA }
-	available = { original_tag = SPA }
+	default = { always = yes }
+	available = { always = yes }
 }
 
 intelligence_agency = {
@@ -187,8 +187,109 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_fin
 	names = { "PE TIEDOS" }
 	
-	default = { tag = FIN }
+	default = { always = yes }
 	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_tur
+	names = { "Millî Emniyet Hizmeti" }
+
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_gre
+	names = { "Diéfthynsi Eidikís Asfaleías tou Krátous" "I Eidikí" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_bul
+	names = { "Natsionalnata Razuznavatelna Sluzhba" }
+
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_agency_logo_eth_fetno_derash
+	names = { fetno_derash arbegnoch }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_crid
+	names = { crid black_lions }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_smie
+	names = { smie }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
+	names = { "Buero Ha" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
+	names = { "Federal Police" }
+	
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_DEN_sipo
+	names = { "Sikkerhedspolitiet" }
+
+	available = { always = yes }
+	
+	default = { always = yes } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ICE_logreglan
+	names = { "Lögreglan" }
+
+	available = { always = yes }
+	
+	default = { always = yes } 
 }
 
 intelligence_agency = {

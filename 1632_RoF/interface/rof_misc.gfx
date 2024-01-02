@@ -19,5 +19,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_aqualator"
 		texturefile = "gfx/interface/decisions/decision_aqualator.dds"
-	}	
+	}
+
+	spriteType = {
+		name = "GFX_military_industrial_organization_firearm_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_infantry_offense.dds"
+	}
+
+	spriteType = {
+		name = "GFX_military_industrial_organization_light_artillery_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_anti_tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_military_industrial_organization_heavy_artillery_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_artillery.dds"
+	}
 }

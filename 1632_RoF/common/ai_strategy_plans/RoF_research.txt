@@ -37,7 +37,7 @@
 		apc_tech = 100
 
 		artillery = 100
-		light_artillery = 100
+		light_artillery_tech = 100
 		heavy_artillery = 100
 	}
 }

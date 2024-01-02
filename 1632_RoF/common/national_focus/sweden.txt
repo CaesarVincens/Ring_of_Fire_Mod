@@ -12,7 +12,7 @@ focus_tree = {
 	####################
 	#     AIR TREE     #
 	####################
-	shared_focus = air_research
+	shared_focus = air_research_focus
 
 	####################
 	#    NAVAL TREE    #
@@ -181,7 +181,7 @@ focus_tree = {
 				name = light_art_bonus
 				bonus = 0.5
 				uses = 1
-				category = light_artillery
+				category = light_artillery_tech
 			}
 		}
 

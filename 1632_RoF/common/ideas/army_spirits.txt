@@ -111,8 +111,7 @@ ideas = {
 			modifier = {
 				custom_modifier_tooltip = superior_firepower_academy_spirit_tt
 				trait_engineer_xp_gain_factor = 0.2
-				trait_fortress_buster_xp_gain_factor = 0.1
-				trait_scavenger_xp_gain_factor = 0.1
+				initiative_factor = 0.04
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -161,7 +160,7 @@ ideas = {
 				trait_engineer_xp_gain_factor = 0.25
 				unit_engineer_design_cost_factor = -1
 				dig_in_speed_factor = 0.1
-				railway_gun_bombardment_factor = 0.05
+				railway_gun_bombardment_factor = 0.20
 			}
 			ai_will_do = {
 				factor = 1
@@ -196,7 +195,8 @@ ideas = {
 			ledger = army
 			visible = { has_government = liberal }
 			modifier = {
-				army_advisor_cost_factor = -0.75
+				experience_gain_army_factor = 0.25
+				army_advisor_cost_factor = -0.5
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -274,13 +274,13 @@ ideas = {
 			visible = { has_tech = trench_warfare }
 			ledger = army
 			modifier = {
-				unit_marine_design_cost_factor = -1
-				unit_mountaineers_design_cost_factor = -1
-				unit_paratrooper_design_cost_factor = -1
-				naval_invasion_capacity = 10
+				unit_marine_design_cost_factor = -0.5
+				unit_mountaineers_design_cost_factor = -0.5
+				unit_paratrooper_design_cost_factor = -0.5
+				unit_jaeger_brigade_design_cost_factor = -0.5
+				special_forces_cap_flat = 24
 				extra_paratrooper_supply_grace = 24
 				extra_marine_supply_grace = 24
-				naval_invasion_planning_bonus_speed = 0.2
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -300,6 +300,19 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1.5
+			}
+		}
+
+		heritage_of_accomplishment = {
+			ledger = army
+			available = { has_dlc = "By Blood Alone" }
+			visible = { has_dlc = "By Blood Alone" }
+			modifier = {
+				grant_medal_cost_factor = -0.5
+				field_officer_promotion_penalty = -1.0
+			}
+			ai_will_do = {
+				factor = 1
 			}
 		}
 	}

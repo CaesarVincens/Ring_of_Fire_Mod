@@ -680,6 +680,32 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		}
 	}
 }
+
+DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			is_historical_focus_on = yes
+			tag = SXW
+			is_ai = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = SXW_NEUTRAL_TT
+			NOT = { has_country_flag = SXW_neutrality }
+		}
+	}
+	if = {
+		limit = {
+			is_historical_focus_on = yes
+			tag = KUR
+			is_ai = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = KUR_NEUTRAL_TT
+			NOT = { has_country_flag = KUR_neutrality }
+		}
+	}
+}
+
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	if = {
 		limit = {
@@ -717,27 +743,3 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	}
 }
 
-DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
-	if = {
-		limit = {
-			is_historical_focus_on = yes
-			tag = SXW
-			is_ai = yes
-		}
-		custom_trigger_tooltip = {
-			tooltip = SXW_NEUTRAL_TT
-			NOT = { has_country_flag = SXW_neutrality }
-		}
-	}
-	if = {
-		limit = {
-			is_historical_focus_on = yes
-			tag = KUR
-			is_ai = yes
-		}
-		custom_trigger_tooltip = {
-			tooltip = KUR_NEUTRAL_TT
-			NOT = { has_country_flag = KUR_neutrality }
-		}
-	}
-}

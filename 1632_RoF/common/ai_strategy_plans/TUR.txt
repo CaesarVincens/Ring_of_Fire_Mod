@@ -33,7 +33,7 @@ TUR_canon_focuses = {
 		TUR_special_weapons_focus
 		TUR_new_corps
 		TUR_baghdad_campaign #20
-		TUR_revan_feignt
+		TUR_revan_feint
 		TUR_civilian_production
 		TUR_industrialize_anatolia
 		TUR_industrialize_greece
