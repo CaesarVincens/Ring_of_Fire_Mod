@@ -298,6 +298,7 @@ thirty_years_war_decisions = {
 	}
 	test_tyw = {
 		visible = {
+			is_debug = yes
 			tag = SWE
 		}
 		complete_effect = {

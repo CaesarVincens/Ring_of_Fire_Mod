@@ -272,58 +272,71 @@ POL_sejm = {
 				political_power_daily > 1
 				has_political_power > 60
 			}
-			OR = {
-				AND = {
+			set_temp_variable = { power_check = 0.4 }
+			custom_trigger_tooltip = {
+				tooltip = POL_power_magnates_under_TT
+				check_variable = { power_magnates < power_check }
+			}
+			if = {
+				limit = {
 					set_temp_variable = { power_check = 0.3 }
 					custom_trigger_tooltip = {
 						tooltip = POL_power_magnates_under_TT
 						check_variable = { power_magnates < power_check }
-					}
-					sejm_low_support_trigger = yes
+					}					
 				}
-				AND = {
+				sejm_low_support_trigger = yes
+			}
+			else_if = {
+				limit = {
 					set_temp_variable = { power_check = 0.35 }
 					custom_trigger_tooltip = {
 						tooltip = POL_power_magnates_under_TT
 						check_variable = { power_magnates < power_check }
 					}
-					sejm_medium_support_trigger = yes
-				}
-				AND = {
-					set_temp_variable = { power_check = 0.4 }
 					custom_trigger_tooltip = {
-						tooltip = POL_power_magnates_under_TT
-						check_variable = { power_magnates < power_check }
+						tooltip = sejm_support_magnate_lower_TT
+						always = yes
 					}
-					sejm_high_support_trigger = yes
+				}
+			}
+			else = {
+				sejm_high_support_trigger = yes
+				custom_trigger_tooltip = {
+					tooltip = sejm_support_magnate_lower_TT
+					always = yes
 				}
 			}
 		}
 		cancel_trigger = {
-			OR = {
-				AND = {
-					set_temp_variable = { power_check = 0.3 }
-					custom_trigger_tooltip = {
-						tooltip = POL_power_magnates_over_TT
-						check_variable = { power_magnates > power_check }
-					}
-					sejm_low_support_trigger = no
+			NOT = {
+				set_temp_variable = { power_check = 0.4 }
+				custom_trigger_tooltip = {
+					tooltip = POL_power_magnates_under_TT
+					check_variable = { power_magnates < power_check }
 				}
-				AND = {
-					set_temp_variable = { power_check = 0.35 }
-					custom_trigger_tooltip = {
-						tooltip = POL_power_magnates_over_TT
-						check_variable = { power_magnates > power_check }
+				if = {
+					limit = {
+						set_temp_variable = { power_check = 0.3 }
+						custom_trigger_tooltip = {
+							tooltip = POL_power_magnates_under_TT
+							check_variable = { power_magnates < power_check }
+						}					
 					}
-					sejm_medium_support_trigger = no
+					sejm_low_support_trigger = yes
 				}
-				AND = {
-					set_temp_variable = { power_check = 0.4 }
-					custom_trigger_tooltip = {
-						tooltip = POL_power_magnates_over_TT
-						check_variable = { power_magnates > power_check }
+				else_if = {
+					limit = {
+						set_temp_variable = { power_check = 0.35 }
+						custom_trigger_tooltip = {
+							tooltip = POL_power_magnates_under_TT
+							check_variable = { power_magnates < power_check }
+						}
 					}
-					sejm_high_support_trigger = no
+					sejm_medium_support_trigger = yes
+				}
+				else = {
+					sejm_high_support_trigger = yes
 				}
 			}
 		}

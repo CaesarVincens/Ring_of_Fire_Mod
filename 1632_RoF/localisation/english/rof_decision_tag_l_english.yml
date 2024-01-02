@@ -93,6 +93,7 @@
  SPN_protect_maastricht_tooltip:0 "We must improve the fortifications for the city of Maastricht (minimum fort level 4)"
  SPN_protected_maastricht_tooltip:0 "The Dutch may still attempt to take the city"
  german_decisions:0 "Important Decisions"
+ thirty_years_war_decisions:0 "Important Decisions"
  WRZ_protect_wurzburg:0 "Protect Würzburg"
  WRZ_protect_wurzburg_desc:0 "Our scouts tell us that [SWE.GetLeader] is preparing to march on Würzburg. If we are to hold the city, we must improve it's defense to have even a chance."
  WRZ_protect_wurzburg_tooltip:0 "We must improve the fortifications for the city of Würzburg (minimum fort level 2)"

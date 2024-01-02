@@ -1,200 +1,200 @@
 ideas = {
 	country = {
-		absolutist_defeated={
-			removal_cost=-1
-			allowed={
-				always=no
+		absolutist_defeated = {
+			removal_cost = -1
+			allowed = {
+				always = no
 			}
-			picture=generic_democratic_drift_bonus
-			modifier={
-				stability_factor=0.1
-			}
-		}
-
-		absolutist_influence={
-			allowed={
-				always=no
-			}
-			allowed_civil_war={
-				has_government=absolutist
-			}
-			removal_cost=-1
-			picture=generic_democratic_drift_bonus
-			modifier={
-				absolutist_drift=0.1
-				absolutist_acceptance=85
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				stability_factor = 0.1
 			}
 		}
 
-		absolutist_revolutionaries={
-			removal_cost=-1
-			allowed={
-				always=no
+		absolutist_influence = {
+			allowed = {
+				always = no
 			}
-			picture=generic_fascism_drift_bonus
-			modifier={
-				stability_factor=-0.1
+			allowed_civil_war = {
+				has_government = absolutist
 			}
-		}
-
-		absolutist_partisans_recruiting={
-			allowed={
-				always=no
-			}
-			picture=generic_communism_drift_bonus
-			modifier={
-				conscription=-0.002
-				absolutist_drift=0.05
-			}
-			ai_will_do={
-				factor=0
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				absolutist_drift = 0.1
+				absolutist_acceptance = 85
 			}
 		}
 
-		constitutionalist_partisans_recruiting={
-			allowed={
-				always=no
+		absolutist_revolutionaries = {
+			removal_cost = -1
+			allowed = {
+				always = no
 			}
-			picture=generic_pp_unity_bonus
-			modifier={
-				conscription=-0.002
-				constitutionalist_drift=0.05
-			}
-			ai_will_do={
-				factor=0
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				stability_factor = -0.1
 			}
 		}
 
-		constitutionalist_revolutionaries={
-			removal_cost=-1
-			allowed={
-				always=no
+		absolutist_partisans_recruiting = {
+			allowed = {
+				always = no
 			}
-			picture=generic_pp_unity_bonus
-			modifier={
-				stability_factor=-0.1
+			picture = generic_communism_drift_bonus
+			modifier = {
+				conscription = -0.002
+				absolutist_drift = 0.05
 			}
-		}
-
-		collectivist_ethos_focus_democratic={
-			allowed={
-				always=no
-			}
-			allowed_civil_war={
-				#has_government=communism
-			}
-			removal_cost=-1
-			picture=generic_pp_unity_bonus
-			modifier={
-				liberal_drift=-0.02
+			ai_will_do = {
+				factor = 0
 			}
 		}
 
-		democratic_influence={
-			allowed={
-				always=no
+		constitutionalist_partisans_recruiting = {
+			allowed = {
+				always = no
 			}
-			allowed_civil_war={
-				has_government=liberal
+			picture = generic_pp_unity_bonus
+			modifier = {
+				conscription = -0.002
+				constitutionalist_drift = 0.05
 			}
-			removal_cost=-1
-			picture=generic_democratic_drift_bonus
-			modifier={
-				liberal_drift=0.1
-				liberal_acceptance=85
-			}
-		}
-
-		democratic_opposition_voicing_protests={
-			allowed={
-				always=no
-			}
-			picture=generic_democratic_drift_bonus
-			modifier={
-				political_power_factor=-0.5
-				liberal_drift=0.05
-			}
-			ai_will_do={
-				factor=0
+			ai_will_do = {
+				factor = 0
 			}
 		}
 
-		collectivist_ethos_focus_neutral={
-			allowed={
-				always=no
+		constitutionalist_revolutionaries = {
+			removal_cost = -1
+			allowed = {
+				always = no
 			}
-			allowed_civil_war={
-				#has_government=communism
-			}
-			removal_cost=-1
-			picture=generic_pp_unity_bonus
-			modifier={
-				neutrality_drift=-0.02
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = -0.1
 			}
 		}
 
-		radical_defeated={
-			removal_cost=-1
-			allowed={
-				always=no
+		collectivist_ethos_focus_democratic = {
+			allowed = {
+				always = no
 			}
-			picture=generic_democratic_drift_bonus
-			modifier={
-				stability_factor=0.1
+			allowed_civil_war = {
+				#has_government = communism
 			}
-		}
-
-		radical_influence={
-			allowed={
-				always=no
-			}
-			allowed_civil_war={
-				has_government=radical
-			}
-			removal_cost=-1
-			picture=generic_democratic_drift_bonus
-			modifier={
-				radical_drift=0.1
-				radical_acceptance=85
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				liberal_drift = -0.02
 			}
 		}
 
-		radicalism={
-			allowed={
-				always=no
+		democratic_influence = {
+			allowed = {
+				always = no
 			}
-			allowed_civil_war={
-				has_government=radical
+			allowed_civil_war = {
+				has_government = liberal
 			}
-			removal_cost=-1
-			picture=generic_infantry_bonus
-			modifier={
-				radical_drift=0.1
-			}
-		}
-
-		radical_revolutionaries={
-			removal_cost=-1
-			allowed={
-				always=no
-			}
-			picture=generic_fascism_drift_bonus
-			modifier={
-				stability_factor=-0.1
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				liberal_drift = 0.1
+				liberal_acceptance = 85
 			}
 		}
 
-		radical_partisans_recruiting={
-			allowed={
-				always=no
+		democratic_opposition_voicing_protests = {
+			allowed = {
+				always = no
 			}
-			picture=generic_communism_drift_bonus
-			modifier={
-				conscription=-0.002
-				radical_drift=0.05
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				political_power_factor = -0.5
+				liberal_drift = 0.05
 			}
-			ai_will_do={
-				factor=0
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		collectivist_ethos_focus_neutral = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				#has_government = communism
+			}
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			modifier = {
+				neutrality_drift = -0.02
+			}
+		}
+
+		radical_defeated = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		radical_influence = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = radical
+			}
+			removal_cost = -1
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				radical_drift = 0.1
+				radical_acceptance = 85
+			}
+		}
+
+		radicalism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = radical
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				radical_drift = 0.1
+			}
+		}
+
+		radical_revolutionaries = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		radical_partisans_recruiting = {
+			allowed = {
+				always = no
+			}
+			picture = generic_communism_drift_bonus
+			modifier = {
+				conscription = -0.002
+				radical_drift = 0.05
+			}
+			ai_will_do = {
+				factor = 0
 			}
 		}
 	}

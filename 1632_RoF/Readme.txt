@@ -18,7 +18,7 @@ Alpha 0.9.0 - Jan. 1, 2024
 Update to HoI4 1.13
 Basic MIOs included, awaiting further refinement
 Update various balance changes from vanilla
-A few flag fixes
+A few flag fixes and many other minor fixes
 Many thanks to AngelBlue1852 for testing this version
 
 Alpha 0.8.0 - Jan. 27, 2022

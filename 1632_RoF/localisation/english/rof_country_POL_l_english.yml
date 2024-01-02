@@ -41,6 +41,7 @@
  POL_power_king_over_TT_NOT:0 "The £pol_balance_king  §YKing§! has at most [?POL.power_check|%Y0] §Ypower§! (Currently: [?POL.power_king|%Y0])"
  POL_power_szlachta_under_TT:0 "The £faction_tur_unaligned §YSzlachta's§! have less than [?POL.power_check|%Y0] §Ypower§! (Currently: [?POL.power_szlachta|%Y0])"
  POL_power_szlacha_over_TT:0 "The £faction_tur_unaligned §YSzlachta§! have more than [?POL.power_check|%Y0] §Ypower§! (Currently: [?POL.power_szlachta|%Y0])"
+ sejm_support_magnate_lower_TT:0 "If the Magnates are weaker, fewer delegates will be required"
  sejm_low_support_trigger_tt:1 "Requires the support of at least §Y[?POL.sejm_low] Delegates§! (current: [?POL.sejm_support])\n"
  sejm_low_support_trigger_tt_NOT:1 "Does not have the support of at least §Y[?POL.sejm_low] Delegates§! (current: [?POL.sejm_support])\n"
  sejm_medium_support_trigger_tt:1 "Requires the support of at least §Y[?POL.sejm_medium] Delegates§! (current: [?POL.sejm_support])\n"
