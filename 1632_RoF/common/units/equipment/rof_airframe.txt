@@ -24,6 +24,20 @@ equipments = {
 			plane_reliability_upgrade
 		}
 
+		allow_mission_type = {
+			training
+			recon
+			air_superiority
+			interception
+			naval_patrol
+			cas
+			naval_bomber
+			port_strike
+			attack_logistics
+			naval_mines_planting
+			naval_mines_sweeping
+		}
+
 		air_superiority = 1
 		reliability = 0.8
 
@@ -69,6 +83,19 @@ equipments = {
 			plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+
+		allow_mission_type = {
+			training
+			cas
+			strategic_bomber
+			naval_bomber
+			port_strike
+			attack_logistics
+			naval_mines_planting
+			naval_mines_sweeping
+			air_supply
+			paradrop
 		}
 
 		air_superiority = 0.75
