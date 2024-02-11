@@ -14,6 +14,9 @@ Discord Link: https://discord.gg/VBqgExW
 
 Currently in Alpha; expect to find bugs and oddities
 
+Alpha 0.9.1 - Feb. 11, 2024
+Fixed air missions not being available, thanks to Grey Wolf for the bug report.
+
 Alpha 0.9.0 - Jan. 1, 2024
 Update to HoI4 1.13
 Basic MIOs included, awaiting further refinement
